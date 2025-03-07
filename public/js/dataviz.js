@@ -1,9 +1,17 @@
 class DataViz{
     constructor() {
-        this.component = document.querySelector('mge-dashboard')
+        this.component = null
     }
 
     async init() {
+        if (this.component)
+            this.component.remove()
+
+        this.component = document.createElement("mge-dashboard")
+        this.component.setAttribute("id", "visualization-content")
+
+        document.querySelector(".dashboard").appendChild(this.component)
+
         this.component.disableView('mge-annotation')
         this.component.disableView('mge-glyph-matrix')
         this.component.disableView('mge-query')

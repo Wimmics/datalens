@@ -122,7 +122,7 @@
                             </div>
                             
                             <!-- Visualization content goes here -->
-                            <mge-dashboard id="visualization-content"></mge-dashboard>
+                            <!-- <mge-dashboard id="visualization-content"></mge-dashboard> -->
                         </div>
                         
                     </div>
@@ -163,10 +163,9 @@
         await filterPanel.set()
 
         const dataviz = new DataViz()
-        await dataviz.init()
+        
+        document.querySelector("#btn-build-network").addEventListener('click', async () => {
 
-
-        document.querySelector("#btn-build-network").addEventListener('click', () => {
             let filters = { ...filterPanel.getSelectedFilters() }
             filters.source = document.querySelector('#source-select').value
             filters.target = document.querySelector('#target-select').value
@@ -179,6 +178,7 @@
                 dataviz.togglePlaceholder(`<i class="fa-solid fa-triangle-exclamation alert-icon"></i><br>"Dataset" cannot be both node and link. Please modify your selection`)
 
             else if (Object.keys(filters).length > 0 && Object.values(filters).some(arr => arr.length > 0)) {
+                await dataviz.init()
                 dataviz.set(filters)
             }
         })
