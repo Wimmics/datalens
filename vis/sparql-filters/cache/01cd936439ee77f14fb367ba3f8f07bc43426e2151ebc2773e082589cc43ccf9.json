@@ -1,0 +1,103 @@
+{
+  "head": {
+    "link": [],
+    "vars": [
+      "value",
+      "count"
+    ]
+  },
+  "results": {
+    "distinct": false,
+    "ordered": true,
+    "bindings": [
+      {
+        "value": {
+          "type": "literal",
+          "value": "Apache Parquet"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "179973"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "JSON"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "37573"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "Comma-Separated Values"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "23590"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "Image Folder"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "10567"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "Audio Folder"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "6666"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "Plain Text"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "4171"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "WebDataset"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1905"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "Apache Arrow"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "882"
+        }
+      }
+    ]
+  }
+}

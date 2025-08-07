@@ -1,0 +1,5397 @@
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix bflc: <http://id.loc.gov/ontologies/bflc/> .
+@prefix cs: <http://purl.org/vocab/changeset/schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ri: <http://id.loc.gov/ontologies/RecordInfo#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+
+# BEGIN /vocabulary/iso639-1/aa
+
+<http://id.loc.gov/vocabulary/iso639-1/aa> a skos:Concept ;
+skos:altLabel "Danakil-Sprache"@de,
+"Afar"@en,
+"afar"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/aa> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/aar>,
+<http://id.loc.gov/vocabulary/languages/aar> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "aa"^^xsd:string ;
+skos:prefLabel "Danakil-Sprache"@de,
+"Afar"@en,
+"afar"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "afar"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Afar"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Danakil-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/aa
+
+# BEGIN /vocabulary/iso639-1/ab
+
+<http://id.loc.gov/vocabulary/iso639-1/ab> a skos:Concept ;
+skos:altLabel "Abchasisch"@de,
+"Abkhazian"@en,
+"abkhaze"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ab> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/abk>,
+<http://id.loc.gov/vocabulary/languages/abk> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ab"^^xsd:string ;
+skos:prefLabel "Abchasisch"@de,
+"Abkhazian"@en,
+"abkhaze"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Abkhazian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Abchasisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "abkhaze"@fr ] .
+
+# END /vocabulary/iso639-1/ab
+
+# BEGIN /vocabulary/iso639-1/ae
+
+<http://id.loc.gov/vocabulary/iso639-1/ae> a skos:Concept ;
+skos:altLabel "Avestisch"@de,
+"Avestan"@en,
+"avestique"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ae> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ave>,
+<http://id.loc.gov/vocabulary/languages/ave> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ae"^^xsd:string ;
+skos:prefLabel "Avestisch"@de,
+"Avestan"@en,
+"avestique"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "avestique"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Avestisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Avestan"@en ] .
+
+# END /vocabulary/iso639-1/ae
+
+# BEGIN /vocabulary/iso639-1/af
+
+<http://id.loc.gov/vocabulary/iso639-1/af> a skos:Concept ;
+skos:altLabel "Afrikaans"@de,
+"Afrikaans"@en,
+"afrikaans"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/af> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/afr>,
+<http://id.loc.gov/vocabulary/languages/afr> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "af"^^xsd:string ;
+skos:prefLabel "Afrikaans"@de,
+"Afrikaans"@en,
+"afrikaans"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "afrikaans"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Afrikaans"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Afrikaans"@en ] .
+
+# END /vocabulary/iso639-1/af
+
+# BEGIN /vocabulary/iso639-1/ak
+
+<http://id.loc.gov/vocabulary/iso639-1/ak> a skos:Concept ;
+skos:altLabel "Akan-Sprache"@de,
+"Akan"@en,
+"akan"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1999-08-16T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ak> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/aka>,
+<http://id.loc.gov/vocabulary/languages/aka> ;
+skos:historyNote "This alpha-2 ISO 639-1 code was approved in 1999 and included in ISO 639-1: 2002. It was mistakenly missing in earlier versions of the tables on the ISO639-2 web site. As of January 2003, it has been included."@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ak"^^xsd:string ;
+skos:prefLabel "Akan-Sprache"@de,
+"Akan"@en,
+"akan"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Akan-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Akan"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "akan"@fr ] .
+
+# END /vocabulary/iso639-1/ak
+
+# BEGIN /vocabulary/iso639-1/am
+
+<http://id.loc.gov/vocabulary/iso639-1/am> a skos:Concept ;
+skos:altLabel "Amharisch"@de,
+"Amharic"@en,
+"amharique"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/am> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/amh>,
+<http://id.loc.gov/vocabulary/languages/amh> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "am"^^xsd:string ;
+skos:prefLabel "Amharisch"@de,
+"Amharic"@en,
+"amharique"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Amharic"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Amharisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "amharique"@fr ] .
+
+# END /vocabulary/iso639-1/am
+
+# BEGIN /vocabulary/iso639-1/an
+
+<http://id.loc.gov/vocabulary/iso639-1/an> a skos:Concept ;
+skos:altLabel "Aragonesisch"@de,
+"Aragonese"@en,
+"aragonais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2002-12-23T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/an> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/arg>,
+<http://id.loc.gov/vocabulary/languages/arg> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "an"^^xsd:string ;
+skos:prefLabel "Aragonesisch"@de,
+"Aragonese"@en,
+"aragonais"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "aragonais"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Aragonesisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Aragonese"@en ] .
+
+# END /vocabulary/iso639-1/an
+
+# BEGIN /vocabulary/iso639-1/ar
+
+<http://id.loc.gov/vocabulary/iso639-1/ar> a skos:Concept ;
+skos:altLabel "Arabisch"@de,
+"Arabic"@en,
+"arabe"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ar> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ara>,
+<http://id.loc.gov/vocabulary/languages/ara> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ar"^^xsd:string ;
+skos:prefLabel "Arabisch"@de,
+"Arabic"@en,
+"arabe"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Arabic"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "arabe"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Arabisch"@de ] .
+
+# END /vocabulary/iso639-1/ar
+
+# BEGIN /vocabulary/iso639-1/as
+
+<http://id.loc.gov/vocabulary/iso639-1/as> a skos:Concept ;
+skos:altLabel "Assamesisch"@de,
+"Assamese"@en,
+"assamais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/as> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/asm>,
+<http://id.loc.gov/vocabulary/languages/asm> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "as"^^xsd:string ;
+skos:prefLabel "Assamesisch"@de,
+"Assamese"@en,
+"assamais"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "assamais"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Assamesisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Assamese"@en ] .
+
+# END /vocabulary/iso639-1/as
+
+# BEGIN /vocabulary/iso639-1/av
+
+<http://id.loc.gov/vocabulary/iso639-1/av> a skos:Concept ;
+skos:altLabel "Awarisch"@de,
+"Avaric"@en,
+"avar"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1999-08-16T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/av> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ava>,
+<http://id.loc.gov/vocabulary/languages/ava> ;
+skos:historyNote "This alpha-2 ISO 639-1 code was approved in 1999 and included in ISO 639-1: 2002. It was mistakenly missing in earlier versions of the tables on the ISO639-2 web site. As of January 2003, it has been included."@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "av"^^xsd:string ;
+skos:prefLabel "Awarisch"@de,
+"Avaric"@en,
+"avar"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Avaric"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "avar"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Awarisch"@de ] .
+
+# END /vocabulary/iso639-1/av
+
+# BEGIN /vocabulary/iso639-1/ay
+
+<http://id.loc.gov/vocabulary/iso639-1/ay> a skos:Concept ;
+skos:altLabel "Aymará-Sprache"@de,
+"Aymara"@en,
+"aymara"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ay> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/aym>,
+<http://id.loc.gov/vocabulary/languages/aym> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ay"^^xsd:string ;
+skos:prefLabel "Aymará-Sprache"@de,
+"Aymara"@en,
+"aymara"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Aymará-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "aymara"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Aymara"@en ] .
+
+# END /vocabulary/iso639-1/ay
+
+# BEGIN /vocabulary/iso639-1/az
+
+<http://id.loc.gov/vocabulary/iso639-1/az> a skos:Concept ;
+skos:altLabel "Aserbeidschanisch"@de,
+"Azerbaijani"@en,
+"azéri"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/az> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/aze>,
+<http://id.loc.gov/vocabulary/languages/aze> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "az"^^xsd:string ;
+skos:prefLabel "Aserbeidschanisch"@de,
+"Azerbaijani"@en,
+"azéri"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "azéri"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Azerbaijani"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Aserbeidschanisch"@de ] .
+
+# END /vocabulary/iso639-1/az
+
+# BEGIN /vocabulary/iso639-1/ba
+
+<http://id.loc.gov/vocabulary/iso639-1/ba> a skos:Concept ;
+skos:altLabel "Baschkirisch"@de,
+"Bashkir"@en,
+"bachkir"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ba> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/bak>,
+<http://id.loc.gov/vocabulary/languages/bak> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ba"^^xsd:string ;
+skos:prefLabel "Baschkirisch"@de,
+"Bashkir"@en,
+"bachkir"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Bashkir"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "bachkir"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Baschkirisch"@de ] .
+
+# END /vocabulary/iso639-1/ba
+
+# BEGIN /vocabulary/iso639-1/be
+
+<http://id.loc.gov/vocabulary/iso639-1/be> a skos:Concept ;
+skos:altLabel "Weißrussisch"@de,
+"Belarusian"@en,
+"biélorusse"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/be> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/bel>,
+<http://id.loc.gov/vocabulary/languages/bel> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "be"^^xsd:string ;
+skos:prefLabel "Weißrussisch"@de,
+"Belarusian"@en,
+"biélorusse"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Belarusian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "biélorusse"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Weißrussisch"@de ] .
+
+# END /vocabulary/iso639-1/be
+
+# BEGIN /vocabulary/iso639-1/bg
+
+<http://id.loc.gov/vocabulary/iso639-1/bg> a skos:Concept ;
+skos:altLabel "Bulgarisch"@de,
+"Bulgarian"@en,
+"bulgare"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/bg> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/bul>,
+<http://id.loc.gov/vocabulary/languages/bul> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "bg"^^xsd:string ;
+skos:prefLabel "Bulgarisch"@de,
+"Bulgarian"@en,
+"bulgare"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Bulgarian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Bulgarisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "bulgare"@fr ] .
+
+# END /vocabulary/iso639-1/bg
+
+# BEGIN /vocabulary/iso639-1/bh
+
+<http://id.loc.gov/vocabulary/iso639-1/bh> a skos:Concept ;
+skos:altLabel "Bihari (Andere)"@de,
+"Bihari languages"@en,
+"langues biharis"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2009-09-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/bh> ],
+[ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/bh> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/bih>,
+<http://id.loc.gov/vocabulary/languages/bih> ;
+skos:historyNote "Changed from Bihari; bihari"@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "bh"^^xsd:string ;
+skos:prefLabel "Bihari (Andere)"@de,
+"Bihari languages"@en,
+"langues biharis"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "langues biharis"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Bihari languages"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Bihari (Andere)"@de ] .
+
+# END /vocabulary/iso639-1/bh
+
+# BEGIN /vocabulary/iso639-1/bi
+
+<http://id.loc.gov/vocabulary/iso639-1/bi> a skos:Concept ;
+skos:altLabel "Beach-la-mar"@de,
+"Bislama"@en,
+"bichlamar"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/bi> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/bis>,
+<http://id.loc.gov/vocabulary/languages/bis> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "bi"^^xsd:string ;
+skos:prefLabel "Beach-la-mar"@de,
+"Bislama"@en,
+"bichlamar"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "bichlamar"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Beach-la-mar"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Bislama"@en ] .
+
+# END /vocabulary/iso639-1/bi
+
+# BEGIN /vocabulary/iso639-1/bm
+
+<http://id.loc.gov/vocabulary/iso639-1/bm> a skos:Concept ;
+skos:altLabel "Bambara-Sprache"@de,
+"Bambara"@en,
+"bambara"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/bm> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/bam>,
+<http://id.loc.gov/vocabulary/languages/bam> ;
+skos:historyNote "This alpha-2 ISO 639-1 code was approved in 1999 and included in ISO 639-1: 2002. It was mistakenly missing in earlier versions of the tables on the ISO639-2 web site. As of January 2003, it has been included."@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "bm"^^xsd:string ;
+skos:prefLabel "Bambara-Sprache"@de,
+"Bambara"@en,
+"bambara"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Bambara"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Bambara-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "bambara"@fr ] .
+
+# END /vocabulary/iso639-1/bm
+
+# BEGIN /vocabulary/iso639-1/bn
+
+<http://id.loc.gov/vocabulary/iso639-1/bn> a skos:Concept ;
+skos:altLabel "Bengali"@de,
+"Bengali"@en,
+"bengali"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/bn> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ben>,
+<http://id.loc.gov/vocabulary/languages/ben> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "bn"^^xsd:string ;
+skos:prefLabel "Bengali"@de,
+"Bengali"@en,
+"bengali"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "bengali"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Bengali"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Bengali"@en ] .
+
+# END /vocabulary/iso639-1/bn
+
+# BEGIN /vocabulary/iso639-1/bo
+
+<http://id.loc.gov/vocabulary/iso639-1/bo> a skos:Concept ;
+skos:altLabel "Tibetisch"@de,
+"Tibetan"@en,
+"tibétain"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/bo> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/bod>,
+<http://id.loc.gov/vocabulary/iso639-2/tib>,
+<http://id.loc.gov/vocabulary/languages/tib> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "bo"^^xsd:string ;
+skos:prefLabel "Tibetisch"@de,
+"Tibetan"@en,
+"tibétain"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Tibetan"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Tibetisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "tibétain"@fr ] .
+
+# END /vocabulary/iso639-1/bo
+
+# BEGIN /vocabulary/iso639-1/br
+
+<http://id.loc.gov/vocabulary/iso639-1/br> a skos:Concept ;
+skos:altLabel "Bretonisch"@de,
+"Breton"@en,
+"breton"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/br> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/bre>,
+<http://id.loc.gov/vocabulary/languages/bre> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "br"^^xsd:string ;
+skos:prefLabel "Bretonisch"@de,
+"Breton"@en,
+"breton"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Breton"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "breton"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Bretonisch"@de ] .
+
+# END /vocabulary/iso639-1/br
+
+# BEGIN /vocabulary/iso639-1/bs
+
+<http://id.loc.gov/vocabulary/iso639-1/bs> a skos:Concept ;
+skos:altLabel "Bosnisch"@de,
+"Bosnian"@en,
+"bosniaque"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/bs> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/bos>,
+<http://id.loc.gov/vocabulary/languages/bos> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "bs"^^xsd:string ;
+skos:prefLabel "Bosnisch"@de,
+"Bosnian"@en,
+"bosniaque"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Bosnian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Bosnisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "bosniaque"@fr ] .
+
+# END /vocabulary/iso639-1/bs
+
+# BEGIN /vocabulary/iso639-1/ca
+
+<http://id.loc.gov/vocabulary/iso639-1/ca> a skos:Concept ;
+skos:altLabel "Katalanisch"@de,
+"Catalan"@en,
+"Valencian"@en,
+"catalan"@fr,
+"valencien"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ca> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/cat>,
+<http://id.loc.gov/vocabulary/languages/cat> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ca"^^xsd:string ;
+skos:prefLabel "Katalanisch"@de,
+"Catalan | Valencian"@en,
+"catalan | valencien"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "valencien"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Valencian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "catalan"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Katalanisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Catalan"@en ] .
+
+# END /vocabulary/iso639-1/ca
+
+# BEGIN /vocabulary/iso639-1/ce
+
+<http://id.loc.gov/vocabulary/iso639-1/ce> a skos:Concept ;
+skos:altLabel "Tschetschenisch"@de,
+"Chechen"@en,
+"tchétchène"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ce> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/che>,
+<http://id.loc.gov/vocabulary/languages/che> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ce"^^xsd:string ;
+skos:prefLabel "Tschetschenisch"@de,
+"Chechen"@en,
+"tchétchène"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Tschetschenisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Chechen"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "tchétchène"@fr ] .
+
+# END /vocabulary/iso639-1/ce
+
+# BEGIN /vocabulary/iso639-1/ch
+
+<http://id.loc.gov/vocabulary/iso639-1/ch> a skos:Concept ;
+skos:altLabel "Chamorro-Sprache"@de,
+"Chamorro"@en,
+"chamorro"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ch> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/cha>,
+<http://id.loc.gov/vocabulary/languages/cha> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ch"^^xsd:string ;
+skos:prefLabel "Chamorro-Sprache"@de,
+"Chamorro"@en,
+"chamorro"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Chamorro"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "chamorro"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Chamorro-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/ch
+
+# BEGIN /vocabulary/iso639-1/co
+
+<http://id.loc.gov/vocabulary/iso639-1/co> a skos:Concept ;
+skos:altLabel "Korsisch"@de,
+"Corsican"@en,
+"corse"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/co> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/cos>,
+<http://id.loc.gov/vocabulary/languages/cos> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "co"^^xsd:string ;
+skos:prefLabel "Korsisch"@de,
+"Corsican"@en,
+"corse"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Corsican"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "corse"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Korsisch"@de ] .
+
+# END /vocabulary/iso639-1/co
+
+# BEGIN /vocabulary/iso639-1/cr
+
+<http://id.loc.gov/vocabulary/iso639-1/cr> a skos:Concept ;
+skos:altLabel "Cree-Sprache"@de,
+"Cree"@en,
+"cree"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1999-08-16T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/cr> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/cre>,
+<http://id.loc.gov/vocabulary/languages/cre> ;
+skos:historyNote "This alpha-2 ISO 639-1 code was approved in 1999 and included in ISO 639-1: 2002. It was mistakenly missing in earlier versions of the tables on the ISO639-2 web site. As of January 2003, it has been included."@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "cr"^^xsd:string ;
+skos:prefLabel "Cree-Sprache"@de,
+"Cree"@en,
+"cree"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Cree"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Cree-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "cree"@fr ] .
+
+# END /vocabulary/iso639-1/cr
+
+# BEGIN /vocabulary/iso639-1/cs
+
+<http://id.loc.gov/vocabulary/iso639-1/cs> a skos:Concept ;
+skos:altLabel "Tschechisch"@de,
+"Czech"@en,
+"tchèque"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/cs> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ces>,
+<http://id.loc.gov/vocabulary/iso639-2/cze>,
+<http://id.loc.gov/vocabulary/languages/cze> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "cs"^^xsd:string ;
+skos:prefLabel "Tschechisch"@de,
+"Czech"@en,
+"tchèque"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Tschechisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "tchèque"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Czech"@en ] .
+
+# END /vocabulary/iso639-1/cs
+
+# BEGIN /vocabulary/iso639-1/cu
+
+<http://id.loc.gov/vocabulary/iso639-1/cu> a skos:Concept ;
+skos:altLabel "Kirchenslawisch"@de,
+"Church Slavic"@en,
+"Church Slavonic"@en,
+"Old Bulgarian"@en,
+"Old Church Slavonic"@en,
+"Old Slavonic"@en,
+"slavon d'église"@fr,
+"slavon liturgique"@fr,
+"vieux bulgare"@fr,
+"vieux slave"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/cu> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/chu>,
+<http://id.loc.gov/vocabulary/languages/chu> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "cu"^^xsd:string ;
+skos:prefLabel "Kirchenslawisch"@de,
+"Church Slavic | Old Slavonic | Church Slavonic | Old Bulgarian | Old Church Slavonic"@en,
+"slavon d'église | vieux slave | slavon liturgique | vieux bulgare"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Church Slavic"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "vieux slave"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Old Slavonic"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Old Church Slavonic"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "vieux bulgare"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "slavon d'église"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kirchenslawisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Old Bulgarian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "slavon liturgique"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Church Slavonic"@en ] .
+
+# END /vocabulary/iso639-1/cu
+
+# BEGIN /vocabulary/iso639-1/cv
+
+<http://id.loc.gov/vocabulary/iso639-1/cv> a skos:Concept ;
+skos:altLabel "Tschuwaschisch"@de,
+"Chuvash"@en,
+"tchouvache"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/cv> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/chv>,
+<http://id.loc.gov/vocabulary/languages/chv> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "cv"^^xsd:string ;
+skos:prefLabel "Tschuwaschisch"@de,
+"Chuvash"@en,
+"tchouvache"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "tchouvache"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Chuvash"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Tschuwaschisch"@de ] .
+
+# END /vocabulary/iso639-1/cv
+
+# BEGIN /vocabulary/iso639-1/cy
+
+<http://id.loc.gov/vocabulary/iso639-1/cy> a skos:Concept ;
+skos:altLabel "Kymrisch"@de,
+"Welsh"@en,
+"gallois"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/cy> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/cym>,
+<http://id.loc.gov/vocabulary/iso639-2/wel>,
+<http://id.loc.gov/vocabulary/languages/wel> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "cy"^^xsd:string ;
+skos:prefLabel "Kymrisch"@de,
+"Welsh"@en,
+"gallois"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Welsh"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "gallois"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kymrisch"@de ] .
+
+# END /vocabulary/iso639-1/cy
+
+# BEGIN /vocabulary/iso639-1/da
+
+<http://id.loc.gov/vocabulary/iso639-1/da> a skos:Concept ;
+skos:altLabel "Dänisch"@de,
+"Danish"@en,
+"danois"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/da> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/dan>,
+<http://id.loc.gov/vocabulary/languages/dan> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "da"^^xsd:string ;
+skos:prefLabel "Dänisch"@de,
+"Danish"@en,
+"danois"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Danish"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "danois"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Dänisch"@de ] .
+
+# END /vocabulary/iso639-1/da
+
+# BEGIN /vocabulary/iso639-1/de
+
+<http://id.loc.gov/vocabulary/iso639-1/de> a skos:Concept ;
+skos:altLabel "Deutsch"@de,
+"German"@en,
+"allemand"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/de> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/deu>,
+<http://id.loc.gov/vocabulary/iso639-2/ger>,
+<http://id.loc.gov/vocabulary/languages/ger> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "de"^^xsd:string ;
+skos:prefLabel "Deutsch"@de,
+"German"@en,
+"allemand"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "allemand"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Deutsch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "German"@en ] .
+
+# END /vocabulary/iso639-1/de
+
+# BEGIN /vocabulary/iso639-1/dv
+
+<http://id.loc.gov/vocabulary/iso639-1/dv> a skos:Concept ;
+skos:altLabel "Maledivisch"@de,
+"Dhivehi"@en,
+"Divehi"@en,
+"Maldivian"@en,
+"maldivien"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2006-06-07T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/dv> ],
+[ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1999-08-16T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/dv> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/div>,
+<http://id.loc.gov/vocabulary/languages/div> ;
+skos:historyNote "Dhivehi, Maldivian added"@en,
+"This alpha-2 ISO 639-1 code was approved in 1999 and included in ISO 639-1: 2002. It was mistakenly missing in earlier versions of the tables on the ISO639-2 web site. As of January 2003, it has been included. Dhivehi, Maldivian added 2006-06-07"@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "dv"^^xsd:string ;
+skos:prefLabel "Maledivisch"@de,
+"Divehi | Dhivehi | Maldivian"@en,
+"maldivien"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Dhivehi"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Divehi"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Maledivisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "maldivien"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Maldivian"@en ] .
+
+# END /vocabulary/iso639-1/dv
+
+# BEGIN /vocabulary/iso639-1/dz
+
+<http://id.loc.gov/vocabulary/iso639-1/dz> a skos:Concept ;
+skos:altLabel "Dzongkha"@de,
+"Dzongkha"@en,
+"dzongkha"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/dz> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/dzo>,
+<http://id.loc.gov/vocabulary/languages/dzo> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "dz"^^xsd:string ;
+skos:prefLabel "Dzongkha"@de,
+"Dzongkha"@en,
+"dzongkha"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "dzongkha"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Dzongkha"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Dzongkha"@de ] .
+
+# END /vocabulary/iso639-1/dz
+
+# BEGIN /vocabulary/iso639-1/ee
+
+<http://id.loc.gov/vocabulary/iso639-1/ee> a skos:Concept ;
+skos:altLabel "Ewe-Sprache"@de,
+"Ewe"@en,
+"éwé"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1999-08-16T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ee> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ewe>,
+<http://id.loc.gov/vocabulary/languages/ewe> ;
+skos:historyNote "This alpha-2 ISO 639-1 code was approved in 1999 and included in ISO 639-1: 2002. It was mistakenly missing in earlier versions of the tables on the ISO639-2 web site. As of January 2003, it has been included."@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ee"^^xsd:string ;
+skos:prefLabel "Ewe-Sprache"@de,
+"Ewe"@en,
+"éwé"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Ewe"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ewe-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "éwé"@fr ] .
+
+# END /vocabulary/iso639-1/ee
+
+# BEGIN /vocabulary/iso639-1/el
+
+<http://id.loc.gov/vocabulary/iso639-1/el> a skos:Concept ;
+skos:altLabel "Neugriechisch"@de,
+"Greek, Modern (1453-)"@en,
+"grec moderne (après 1453)"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/el> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ell>,
+<http://id.loc.gov/vocabulary/iso639-2/gre>,
+<http://id.loc.gov/vocabulary/languages/gre> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "el"^^xsd:string ;
+skos:prefLabel "Neugriechisch"@de,
+"Greek, Modern (1453-)"@en,
+"grec moderne (après 1453)"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Neugriechisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "grec moderne (après 1453)"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Greek, Modern (1453-)"@en ] .
+
+# END /vocabulary/iso639-1/el
+
+# BEGIN /vocabulary/iso639-1/en
+
+<http://id.loc.gov/vocabulary/iso639-1/en> a skos:Concept ;
+skos:altLabel "Englisch"@de,
+"English"@en,
+"anglais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/en> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/eng>,
+<http://id.loc.gov/vocabulary/languages/eng> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "en"^^xsd:string ;
+skos:prefLabel "Englisch"@de,
+"English"@en,
+"anglais"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "English"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "anglais"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Englisch"@de ] .
+
+# END /vocabulary/iso639-1/en
+
+# BEGIN /vocabulary/iso639-1/eo
+
+<http://id.loc.gov/vocabulary/iso639-1/eo> a skos:Concept ;
+skos:altLabel "Esperanto"@de,
+"Esperanto"@en,
+"espéranto"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/eo> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/epo>,
+<http://id.loc.gov/vocabulary/languages/epo> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "eo"^^xsd:string ;
+skos:prefLabel "Esperanto"@de,
+"Esperanto"@en,
+"espéranto"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Esperanto"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Esperanto"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "espéranto"@fr ] .
+
+# END /vocabulary/iso639-1/eo
+
+# BEGIN /vocabulary/iso639-1/es
+
+<http://id.loc.gov/vocabulary/iso639-1/es> a skos:Concept ;
+skos:altLabel "Spanisch"@de,
+"Castilian"@en,
+"Spanish"@en,
+"castillan"@fr,
+"espagnol"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/es> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/spa>,
+<http://id.loc.gov/vocabulary/languages/spa> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "es"^^xsd:string ;
+skos:prefLabel "Spanisch"@de,
+"Spanish | Castilian"@en,
+"espagnol | castillan"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Spanisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Castilian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Spanish"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "espagnol"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "castillan"@fr ] .
+
+# END /vocabulary/iso639-1/es
+
+# BEGIN /vocabulary/iso639-1/et
+
+<http://id.loc.gov/vocabulary/iso639-1/et> a skos:Concept ;
+skos:altLabel "Estnisch"@de,
+"Estonian"@en,
+"estonien"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/et> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/est>,
+<http://id.loc.gov/vocabulary/languages/est> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "et"^^xsd:string ;
+skos:prefLabel "Estnisch"@de,
+"Estonian"@en,
+"estonien"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Estnisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Estonian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "estonien"@fr ] .
+
+# END /vocabulary/iso639-1/et
+
+# BEGIN /vocabulary/iso639-1/eu
+
+<http://id.loc.gov/vocabulary/iso639-1/eu> a skos:Concept ;
+skos:altLabel "Baskisch"@de,
+"Basque"@en,
+"basque"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/eu> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/baq>,
+<http://id.loc.gov/vocabulary/iso639-2/eus>,
+<http://id.loc.gov/vocabulary/languages/baq> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "eu"^^xsd:string ;
+skos:prefLabel "Baskisch"@de,
+"Basque"@en,
+"basque"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Baskisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Basque"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "basque"@fr ] .
+
+# END /vocabulary/iso639-1/eu
+
+# BEGIN /vocabulary/iso639-1/fa
+
+<http://id.loc.gov/vocabulary/iso639-1/fa> a skos:Concept ;
+skos:altLabel "Persisch"@de,
+"Persian"@en,
+"persan"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/fa> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/fas>,
+<http://id.loc.gov/vocabulary/iso639-2/per>,
+<http://id.loc.gov/vocabulary/languages/per> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "fa"^^xsd:string ;
+skos:prefLabel "Persisch"@de,
+"Persian"@en,
+"persan"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Persian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "persan"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Persisch"@de ] .
+
+# END /vocabulary/iso639-1/fa
+
+# BEGIN /vocabulary/iso639-1/ff
+
+<http://id.loc.gov/vocabulary/iso639-1/ff> a skos:Concept ;
+skos:altLabel "Ful"@de,
+"Fulah"@en,
+"peul"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1999-08-16T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ff> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ful>,
+<http://id.loc.gov/vocabulary/languages/ful> ;
+skos:historyNote "This alpha-2 ISO 639-1 code was approved in 1999 and included in ISO 639-1: 2002. It was mistakenly missing in earlier versions of the tables on the ISO639-2 web site. As of January 2003, it has been included."@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ff"^^xsd:string ;
+skos:prefLabel "Ful"@de,
+"Fulah"@en,
+"peul"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "peul"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Fulah"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ful"@de ] .
+
+# END /vocabulary/iso639-1/ff
+
+# BEGIN /vocabulary/iso639-1/fi
+
+<http://id.loc.gov/vocabulary/iso639-1/fi> a skos:Concept ;
+skos:altLabel "Finnisch"@de,
+"Finnish"@en,
+"finnois"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/fi> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/fin>,
+<http://id.loc.gov/vocabulary/languages/fin> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "fi"^^xsd:string ;
+skos:prefLabel "Finnisch"@de,
+"Finnish"@en,
+"finnois"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "finnois"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Finnish"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Finnisch"@de ] .
+
+# END /vocabulary/iso639-1/fi
+
+# BEGIN /vocabulary/iso639-1/fj
+
+<http://id.loc.gov/vocabulary/iso639-1/fj> a skos:Concept ;
+skos:altLabel "Fidschi-Sprache"@de,
+"Fijian"@en,
+"fidjien"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/fj> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/fij>,
+<http://id.loc.gov/vocabulary/languages/fij> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "fj"^^xsd:string ;
+skos:prefLabel "Fidschi-Sprache"@de,
+"Fijian"@en,
+"fidjien"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Fijian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Fidschi-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "fidjien"@fr ] .
+
+# END /vocabulary/iso639-1/fj
+
+# BEGIN /vocabulary/iso639-1/fo
+
+<http://id.loc.gov/vocabulary/iso639-1/fo> a skos:Concept ;
+skos:altLabel "Färöisch"@de,
+"Faroese"@en,
+"féroïen"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/fo> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/fao>,
+<http://id.loc.gov/vocabulary/languages/fao> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "fo"^^xsd:string ;
+skos:prefLabel "Färöisch"@de,
+"Faroese"@en,
+"féroïen"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Färöisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Faroese"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "féroïen"@fr ] .
+
+# END /vocabulary/iso639-1/fo
+
+# BEGIN /vocabulary/iso639-1/fr
+
+<http://id.loc.gov/vocabulary/iso639-1/fr> a skos:Concept ;
+skos:altLabel "Französisch"@de,
+"French"@en,
+"français"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/fr> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/fra>,
+<http://id.loc.gov/vocabulary/iso639-2/fre>,
+<http://id.loc.gov/vocabulary/languages/fre> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "fr"^^xsd:string ;
+skos:prefLabel "Französisch"@de,
+"French"@en,
+"français"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Französisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "français"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "French"@en ] .
+
+# END /vocabulary/iso639-1/fr
+
+# BEGIN /vocabulary/iso639-1/fy
+
+<http://id.loc.gov/vocabulary/iso639-1/fy> a skos:Concept ;
+skos:altLabel "Friesisch"@de,
+"Western Frisian"@en,
+"frison occidental"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/fy> ],
+[ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2005-11-16T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/fy> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/fry>,
+<http://id.loc.gov/vocabulary/languages/fry> ;
+skos:historyNote "Previous usage of code has been for Western Frisian, although language name was \"Frisian\""@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "fy"^^xsd:string ;
+skos:prefLabel "Friesisch"@de,
+"Western Frisian"@en,
+"frison occidental"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Western Frisian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Friesisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "frison occidental"@fr ] .
+
+# END /vocabulary/iso639-1/fy
+
+# BEGIN /vocabulary/iso639-1/ga
+
+<http://id.loc.gov/vocabulary/iso639-1/ga> a skos:Concept ;
+skos:altLabel "Irisch"@de,
+"Irish"@en,
+"irlandais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ga> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/gle>,
+<http://id.loc.gov/vocabulary/languages/gle> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ga"^^xsd:string ;
+skos:prefLabel "Irisch"@de,
+"Irish"@en,
+"irlandais"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Irish"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "irlandais"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Irisch"@de ] .
+
+# END /vocabulary/iso639-1/ga
+
+# BEGIN /vocabulary/iso639-1/gd
+
+<http://id.loc.gov/vocabulary/iso639-1/gd> a skos:Concept ;
+skos:altLabel "Gälisch-Schottisch"@de,
+"Gaelic"@en,
+"Scottish Gaelic"@en,
+"gaélique"@fr,
+"gaélique écossais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/gd> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/gla>,
+<http://id.loc.gov/vocabulary/languages/gla> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "gd"^^xsd:string ;
+skos:prefLabel "Gälisch-Schottisch"@de,
+"Gaelic | Scottish Gaelic"@en,
+"gaélique | gaélique écossais"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "gaélique écossais"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Gälisch-Schottisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Gaelic"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Scottish Gaelic"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "gaélique"@fr ] .
+
+# END /vocabulary/iso639-1/gd
+
+# BEGIN /vocabulary/iso639-1/gl
+
+<http://id.loc.gov/vocabulary/iso639-1/gl> a skos:Concept ;
+skos:altLabel "Galicisch"@de,
+"Galician"@en,
+"galicien"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/gl> ],
+[ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2005-07-25T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/gl> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/glg>,
+<http://id.loc.gov/vocabulary/languages/glg> ;
+skos:historyNote "Incorrect form of English name (Gallegan) corrected"@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "gl"^^xsd:string ;
+skos:prefLabel "Galicisch"@de,
+"Galician"@en,
+"galicien"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Galicisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "galicien"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Galician"@en ] .
+
+# END /vocabulary/iso639-1/gl
+
+# BEGIN /vocabulary/iso639-1/gn
+
+<http://id.loc.gov/vocabulary/iso639-1/gn> a skos:Concept ;
+skos:altLabel "Guaraní-Sprache"@de,
+"Guarani"@en,
+"guarani"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/gn> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/grn>,
+<http://id.loc.gov/vocabulary/languages/grn> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "gn"^^xsd:string ;
+skos:prefLabel "Guaraní-Sprache"@de,
+"Guarani"@en,
+"guarani"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "guarani"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Guaraní-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Guarani"@en ] .
+
+# END /vocabulary/iso639-1/gn
+
+# BEGIN /vocabulary/iso639-1/gu
+
+<http://id.loc.gov/vocabulary/iso639-1/gu> a skos:Concept ;
+skos:altLabel "Gujarati-Sprache"@de,
+"Gujarati"@en,
+"goudjrati"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/gu> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/guj>,
+<http://id.loc.gov/vocabulary/languages/guj> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "gu"^^xsd:string ;
+skos:prefLabel "Gujarati-Sprache"@de,
+"Gujarati"@en,
+"goudjrati"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "goudjrati"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Gujarati"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Gujarati-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/gu
+
+# BEGIN /vocabulary/iso639-1/gv
+
+<http://id.loc.gov/vocabulary/iso639-1/gv> a skos:Concept ;
+skos:altLabel "Manx"@de,
+"Manx"@en,
+"mannois"@fr,
+"manx"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1998-08-10T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/gv> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/glv>,
+<http://id.loc.gov/vocabulary/languages/glv> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "gv"^^xsd:string ;
+skos:prefLabel "Manx"@de,
+"Manx"@en,
+"manx | mannois"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "mannois"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "manx"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Manx"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Manx"@en ] .
+
+# END /vocabulary/iso639-1/gv
+
+# BEGIN /vocabulary/iso639-1/ha
+
+<http://id.loc.gov/vocabulary/iso639-1/ha> a skos:Concept ;
+skos:altLabel "Haussa-Sprache"@de,
+"Hausa"@en,
+"haoussa"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ha> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/hau>,
+<http://id.loc.gov/vocabulary/languages/hau> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ha"^^xsd:string ;
+skos:prefLabel "Haussa-Sprache"@de,
+"Hausa"@en,
+"haoussa"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Haussa-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Hausa"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "haoussa"@fr ] .
+
+# END /vocabulary/iso639-1/ha
+
+# BEGIN /vocabulary/iso639-1/he
+
+<http://id.loc.gov/vocabulary/iso639-1/he> a skos:Concept ;
+skos:altLabel "Hebräisch"@de,
+"Hebrew"@en,
+"hébreu"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/he> ],
+[ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "1989-03-11T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/he> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/heb>,
+<http://id.loc.gov/vocabulary/languages/heb> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "he"^^xsd:string ;
+skos:prefLabel "Hebräisch"@de,
+"Hebrew"@en,
+"hébreu"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Hebrew"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Hebräisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "hébreu"@fr ] .
+
+# END /vocabulary/iso639-1/he
+
+# BEGIN /vocabulary/iso639-1/hi
+
+<http://id.loc.gov/vocabulary/iso639-1/hi> a skos:Concept ;
+skos:altLabel "Hindi"@de,
+"Hindi"@en,
+"hindi"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/hi> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/hin>,
+<http://id.loc.gov/vocabulary/languages/hin> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "hi"^^xsd:string ;
+skos:prefLabel "Hindi"@de,
+"Hindi"@en,
+"hindi"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Hindi"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "hindi"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Hindi"@de ] .
+
+# END /vocabulary/iso639-1/hi
+
+# BEGIN /vocabulary/iso639-1/ho
+
+<http://id.loc.gov/vocabulary/iso639-1/ho> a skos:Concept ;
+skos:altLabel "Hiri-Motu"@de,
+"Hiri Motu"@en,
+"hiri motu"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ho> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/hmo>,
+<http://id.loc.gov/vocabulary/languages/hmo> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ho"^^xsd:string ;
+skos:prefLabel "Hiri-Motu"@de,
+"Hiri Motu"@en,
+"hiri motu"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Hiri Motu"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Hiri-Motu"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "hiri motu"@fr ] .
+
+# END /vocabulary/iso639-1/ho
+
+# BEGIN /vocabulary/iso639-1/hr
+
+<http://id.loc.gov/vocabulary/iso639-1/hr> a skos:Concept ;
+skos:altLabel "Kroatisch"@de,
+"Croatian"@en,
+"croate"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2008-06-28T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/hr> ],
+[ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/hr> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/hrv>,
+<http://id.loc.gov/vocabulary/languages/hrv> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "hr"^^xsd:string ;
+skos:prefLabel "Kroatisch"@de,
+"Croatian"@en,
+"croate"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Kroatisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "croate"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Croatian"@en ] .
+
+# END /vocabulary/iso639-1/hr
+
+# BEGIN /vocabulary/iso639-1/ht
+
+<http://id.loc.gov/vocabulary/iso639-1/ht> a skos:Concept ;
+skos:altLabel "Haïtien (Haiti-Kreolisch)"@de,
+"Haitian"@en,
+"Haitian Creole"@en,
+"créole haïtien"@fr,
+"haïtien"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2003-02-26T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ht> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/hat>,
+<http://id.loc.gov/vocabulary/languages/hat> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ht"^^xsd:string ;
+skos:prefLabel "Haïtien (Haiti-Kreolisch)"@de,
+"Haitian | Haitian Creole"@en,
+"haïtien | créole haïtien"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "haïtien"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Haitian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Haitian Creole"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Haïtien (Haiti-Kreolisch)"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "créole haïtien"@fr ] .
+
+# END /vocabulary/iso639-1/ht
+
+# BEGIN /vocabulary/iso639-1/hu
+
+<http://id.loc.gov/vocabulary/iso639-1/hu> a skos:Concept ;
+skos:altLabel "Ungarisch"@de,
+"Hungarian"@en,
+"hongrois"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/hu> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/hun>,
+<http://id.loc.gov/vocabulary/languages/hun> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "hu"^^xsd:string ;
+skos:prefLabel "Ungarisch"@de,
+"Hungarian"@en,
+"hongrois"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "hongrois"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ungarisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Hungarian"@en ] .
+
+# END /vocabulary/iso639-1/hu
+
+# BEGIN /vocabulary/iso639-1/hy
+
+<http://id.loc.gov/vocabulary/iso639-1/hy> a skos:Concept ;
+skos:altLabel "Armenisch"@de,
+"Armenian"@en,
+"arménien"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/hy> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/arm>,
+<http://id.loc.gov/vocabulary/iso639-2/hye>,
+<http://id.loc.gov/vocabulary/languages/arm> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "hy"^^xsd:string ;
+skos:prefLabel "Armenisch"@de,
+"Armenian"@en,
+"arménien"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Armenian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Armenisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "arménien"@fr ] .
+
+# END /vocabulary/iso639-1/hy
+
+# BEGIN /vocabulary/iso639-1/hz
+
+<http://id.loc.gov/vocabulary/iso639-1/hz> a skos:Concept ;
+skos:altLabel "Herero-Sprache"@de,
+"Herero"@en,
+"herero"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/hz> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/her>,
+<http://id.loc.gov/vocabulary/languages/her> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "hz"^^xsd:string ;
+skos:prefLabel "Herero-Sprache"@de,
+"Herero"@en,
+"herero"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "herero"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Herero"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Herero-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/hz
+
+# BEGIN /vocabulary/iso639-1/ia
+
+<http://id.loc.gov/vocabulary/iso639-1/ia> a skos:Concept ;
+skos:altLabel "Interlingua"@de,
+"Interlingua (International Auxiliary Language Association)"@en,
+"interlingua (langue auxiliaire internationale)"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ia> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ina>,
+<http://id.loc.gov/vocabulary/languages/ina> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ia"^^xsd:string ;
+skos:prefLabel "Interlingua"@de,
+"Interlingua (International Auxiliary Language Association)"@en,
+"interlingua (langue auxiliaire internationale)"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Interlingua"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "interlingua (langue auxiliaire internationale)"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Interlingua (International Auxiliary Language Association)"@en ] .
+
+# END /vocabulary/iso639-1/ia
+
+# BEGIN /vocabulary/iso639-1/id
+
+<http://id.loc.gov/vocabulary/iso639-1/id> a skos:Concept ;
+skos:altLabel "Bahasa Indonesia"@de,
+"Indonesian"@en,
+"indonésien"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "1989-03-11T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/id> ],
+[ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/id> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ind>,
+<http://id.loc.gov/vocabulary/languages/ind> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "id"^^xsd:string ;
+skos:prefLabel "Bahasa Indonesia"@de,
+"Indonesian"@en,
+"indonésien"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "indonésien"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Indonesian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Bahasa Indonesia"@de ] .
+
+# END /vocabulary/iso639-1/id
+
+# BEGIN /vocabulary/iso639-1/ie
+
+<http://id.loc.gov/vocabulary/iso639-1/ie> a skos:Concept ;
+skos:altLabel "Interlingue"@de,
+"Interlingue"@en,
+"Occidental"@en,
+"interlingue"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2007-10-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ie> ],
+[ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ie> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ile>,
+<http://id.loc.gov/vocabulary/languages/ile> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ie"^^xsd:string ;
+skos:prefLabel "Interlingue"@de,
+"Interlingue | Occidental"@en,
+"interlingue"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Occidental"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Interlingue"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Interlingue"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "interlingue"@fr ] .
+
+# END /vocabulary/iso639-1/ie
+
+# BEGIN /vocabulary/iso639-1/ig
+
+<http://id.loc.gov/vocabulary/iso639-1/ig> a skos:Concept ;
+skos:altLabel "Ibo-Sprache"@de,
+"Igbo"@en,
+"igbo"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1999-08-16T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ig> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ibo>,
+<http://id.loc.gov/vocabulary/languages/ibo> ;
+skos:historyNote "This alpha-2 ISO 639-1 code was approved in 1999 and included in ISO 639-1: 2002. It was mistakenly missing in earlier versions of the tables on the ISO639-2 web site. As of January 2003, it has been included."@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ig"^^xsd:string ;
+skos:prefLabel "Ibo-Sprache"@de,
+"Igbo"@en,
+"igbo"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "igbo"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ibo-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Igbo"@en ] .
+
+# END /vocabulary/iso639-1/ig
+
+# BEGIN /vocabulary/iso639-1/ii
+
+<http://id.loc.gov/vocabulary/iso639-1/ii> a skos:Concept ;
+skos:altLabel "Lalo-Sprache"@de,
+"Nuosu"@en,
+"Sichuan Yi"@en,
+"yi de Sichuan"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2007-10-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ii> ],
+[ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2002-10-14T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ii> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/iii>,
+<http://id.loc.gov/vocabulary/languages/iii> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ii"^^xsd:string ;
+skos:prefLabel "Lalo-Sprache"@de,
+"Sichuan Yi | Nuosu"@en,
+"yi de Sichuan"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Nuosu"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Sichuan Yi"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "yi de Sichuan"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Lalo-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/ii
+
+# BEGIN /vocabulary/iso639-1/ik
+
+<http://id.loc.gov/vocabulary/iso639-1/ik> a skos:Concept ;
+skos:altLabel "Inupik"@de,
+"Inupiaq"@en,
+"inupiaq"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ik> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ipk>,
+<http://id.loc.gov/vocabulary/languages/ipk> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ik"^^xsd:string ;
+skos:prefLabel "Inupik"@de,
+"Inupiaq"@en,
+"inupiaq"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Inupik"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Inupiaq"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "inupiaq"@fr ] .
+
+# END /vocabulary/iso639-1/ik
+
+# BEGIN /vocabulary/iso639-1/in
+
+<http://id.loc.gov/vocabulary/iso639-1/id> a skos:Concept ;
+skos:prefLabel "Bahasa Indonesia"@de,
+"Indonesian"@en,
+"indonésien"@fr .
+
+<http://id.loc.gov/vocabulary/iso639-1/in> rdfs:seeAlso <http://id.loc.gov/vocabulary/iso639-1/id> ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "deprecated"^^xsd:string ;
+cs:createdDate "1989-03-11T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/in> ] ;
+skos:hiddenLabel "Bahasa Indonesia"@de,
+"Indonesian"@en,
+"indonésien"@fr ;
+skos:notation "in"^^xsd:string .
+
+# END /vocabulary/iso639-1/in
+
+# BEGIN /vocabulary/iso639-1/io
+
+<http://id.loc.gov/vocabulary/iso639-1/io> a skos:Concept ;
+skos:altLabel "Ido"@de,
+"Ido"@en,
+"ido"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2002-01-15T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/io> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ido>,
+<http://id.loc.gov/vocabulary/languages/ido> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "io"^^xsd:string ;
+skos:prefLabel "Ido"@de,
+"Ido"@en,
+"ido"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Ido"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ido"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "ido"@fr ] .
+
+# END /vocabulary/iso639-1/io
+
+# BEGIN /vocabulary/iso639-1/is
+
+<http://id.loc.gov/vocabulary/iso639-1/is> a skos:Concept ;
+skos:altLabel "Isländisch"@de,
+"Icelandic"@en,
+"islandais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/is> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ice>,
+<http://id.loc.gov/vocabulary/iso639-2/isl>,
+<http://id.loc.gov/vocabulary/languages/ice> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "is"^^xsd:string ;
+skos:prefLabel "Isländisch"@de,
+"Icelandic"@en,
+"islandais"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Isländisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Icelandic"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "islandais"@fr ] .
+
+# END /vocabulary/iso639-1/is
+
+# BEGIN /vocabulary/iso639-1/iso639-1_Language
+
+<http://id.loc.gov/vocabulary/iso639-1/iso639-1_Language> rdfs:label "ISO639-1 Language"@en .
+
+# END /vocabulary/iso639-1/iso639-1_Language
+
+# BEGIN /vocabulary/iso639-1/it
+
+<http://id.loc.gov/vocabulary/iso639-1/it> a skos:Concept ;
+skos:altLabel "Italienisch"@de,
+"Italian"@en,
+"italien"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/it> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ita>,
+<http://id.loc.gov/vocabulary/languages/ita> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "it"^^xsd:string ;
+skos:prefLabel "Italienisch"@de,
+"Italian"@en,
+"italien"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "italien"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Italian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Italienisch"@de ] .
+
+# END /vocabulary/iso639-1/it
+
+# BEGIN /vocabulary/iso639-1/iu
+
+<http://id.loc.gov/vocabulary/iso639-1/iu> a skos:Concept ;
+skos:altLabel "Inuktitut"@de,
+"Inuktitut"@en,
+"inuktitut"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1989-03-11T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/iu> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/iku>,
+<http://id.loc.gov/vocabulary/languages/iku> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "iu"^^xsd:string ;
+skos:prefLabel "Inuktitut"@de,
+"Inuktitut"@en,
+"inuktitut"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Inuktitut"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Inuktitut"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "inuktitut"@fr ] .
+
+# END /vocabulary/iso639-1/iu
+
+# BEGIN /vocabulary/iso639-1/iw
+
+<http://id.loc.gov/vocabulary/iso639-1/he> a skos:Concept ;
+skos:prefLabel "Hebräisch"@de,
+"Hebrew"@en,
+"hébreu"@fr .
+
+<http://id.loc.gov/vocabulary/iso639-1/iw> rdfs:seeAlso <http://id.loc.gov/vocabulary/iso639-1/he> ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "deprecated"^^xsd:string ;
+cs:createdDate "1989-03-11T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/iw> ] ;
+skos:hiddenLabel "Hebräisch"@de,
+"Hebrew"@en,
+"hébreu"@fr ;
+skos:historyNote "Withdrawn"@en ;
+skos:notation "iw"^^xsd:string .
+
+# END /vocabulary/iso639-1/iw
+
+# BEGIN /vocabulary/iso639-1/ja
+
+<http://id.loc.gov/vocabulary/iso639-1/ja> a skos:Concept ;
+skos:altLabel "Japanisch"@de,
+"Japanese"@en,
+"japonais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ja> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/jpn>,
+<http://id.loc.gov/vocabulary/languages/jpn> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ja"^^xsd:string ;
+skos:prefLabel "Japanisch"@de,
+"Japanese"@en,
+"japonais"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Japanese"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "japonais"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Japanisch"@de ] .
+
+# END /vocabulary/iso639-1/ja
+
+# BEGIN /vocabulary/iso639-1/ji
+
+<http://id.loc.gov/vocabulary/iso639-1/ji> rdfs:seeAlso <http://id.loc.gov/vocabulary/iso639-1/yi> ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "deprecated"^^xsd:string ;
+cs:createdDate "1989-03-11T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ji> ] ;
+skos:hiddenLabel "Jiddisch"@de,
+"Yiddish"@en,
+"yiddish"@fr ;
+skos:historyNote "Withdrawn"@en ;
+skos:notation "ji"^^xsd:string .
+
+<http://id.loc.gov/vocabulary/iso639-1/yi> a skos:Concept ;
+skos:prefLabel "Jiddisch"@de,
+"Yiddish"@en,
+"yiddish"@fr .
+
+# END /vocabulary/iso639-1/ji
+
+# BEGIN /vocabulary/iso639-1/jv
+
+<http://id.loc.gov/vocabulary/iso639-1/jv> a skos:Concept ;
+skos:altLabel "Javanisch"@de,
+"Javanese"@en,
+"javanais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2001-08-13T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/jv> ],
+[ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/jv> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/jav>,
+<http://id.loc.gov/vocabulary/languages/jav> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "jv"^^xsd:string ;
+skos:prefLabel "Javanisch"@de,
+"Javanese"@en,
+"javanais"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Javanese"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "javanais"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Javanisch"@de ] .
+
+# END /vocabulary/iso639-1/jv
+
+# BEGIN /vocabulary/iso639-1/jw
+
+<http://id.loc.gov/vocabulary/iso639-1/jv> a skos:Concept ;
+skos:prefLabel "Javanisch"@de,
+"Javanese"@en,
+"javanais"@fr .
+
+<http://id.loc.gov/vocabulary/iso639-1/jw> rdfs:seeAlso <http://id.loc.gov/vocabulary/iso639-1/jv> ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "deprecated"^^xsd:string ;
+cs:createdDate "2001-08-13T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/jw> ] ;
+skos:hiddenLabel "Javanisch"@de,
+"Javanese"@en,
+"javanais"@fr ;
+skos:historyNote "jw published in error; withdrawn in favor of jv."@en ;
+skos:notation "jw"^^xsd:string .
+
+# END /vocabulary/iso639-1/jw
+
+# BEGIN /vocabulary/iso639-1/ka
+
+<http://id.loc.gov/vocabulary/iso639-1/ka> a skos:Concept ;
+skos:altLabel "Georgisch"@de,
+"Georgian"@en,
+"géorgien"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ka> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/geo>,
+<http://id.loc.gov/vocabulary/iso639-2/kat>,
+<http://id.loc.gov/vocabulary/languages/geo> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ka"^^xsd:string ;
+skos:prefLabel "Georgisch"@de,
+"Georgian"@en,
+"géorgien"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Georgian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "géorgien"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Georgisch"@de ] .
+
+# END /vocabulary/iso639-1/ka
+
+# BEGIN /vocabulary/iso639-1/kg
+
+<http://id.loc.gov/vocabulary/iso639-1/kg> a skos:Concept ;
+skos:altLabel "Kongo-Sprache"@de,
+"Kongo"@en,
+"kongo"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1999-08-16T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/kg> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/kon>,
+<http://id.loc.gov/vocabulary/languages/kon> ;
+skos:historyNote "This alpha-2 ISO 639-1 code was approved in 1999 and included in ISO 639-1: 2002. It was mistakenly missing in earlier versions of the tables on the ISO639-2 web site. As of January 2003, it has been included."@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "kg"^^xsd:string ;
+skos:prefLabel "Kongo-Sprache"@de,
+"Kongo"@en,
+"kongo"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Kongo"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "kongo"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kongo-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/kg
+
+# BEGIN /vocabulary/iso639-1/ki
+
+<http://id.loc.gov/vocabulary/iso639-1/ki> a skos:Concept ;
+skos:altLabel "Kikuyu-Sprache"@de,
+"Gikuyu"@en,
+"Kikuyu"@en,
+"kikuyu"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ki> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/kik>,
+<http://id.loc.gov/vocabulary/languages/kik> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ki"^^xsd:string ;
+skos:prefLabel "Kikuyu-Sprache"@de,
+"Kikuyu | Gikuyu"@en,
+"kikuyu"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "kikuyu"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Gikuyu"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kikuyu"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kikuyu-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/ki
+
+# BEGIN /vocabulary/iso639-1/kj
+
+<http://id.loc.gov/vocabulary/iso639-1/kj> a skos:Concept ;
+skos:altLabel "Kwanyama-Sprache"@de,
+"Kuanyama"@en,
+"Kwanyama"@en,
+"kuanyama"@fr,
+"kwanyama"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/kj> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/kua>,
+<http://id.loc.gov/vocabulary/languages/kua> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "kj"^^xsd:string ;
+skos:prefLabel "Kwanyama-Sprache"@de,
+"Kuanyama | Kwanyama"@en,
+"kuanyama | kwanyama"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Kwanyama"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "kuanyama"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kuanyama"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "kwanyama"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kwanyama-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/kj
+
+# BEGIN /vocabulary/iso639-1/kk
+
+<http://id.loc.gov/vocabulary/iso639-1/kk> a skos:Concept ;
+skos:altLabel "Kasachisch"@de,
+"Kazakh"@en,
+"kazakh"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/kk> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/kaz>,
+<http://id.loc.gov/vocabulary/languages/kaz> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "kk"^^xsd:string ;
+skos:prefLabel "Kasachisch"@de,
+"Kazakh"@en,
+"kazakh"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Kazakh"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "kazakh"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kasachisch"@de ] .
+
+# END /vocabulary/iso639-1/kk
+
+# BEGIN /vocabulary/iso639-1/kl
+
+<http://id.loc.gov/vocabulary/iso639-1/kl> a skos:Concept ;
+skos:altLabel "Grönländisch"@de,
+"Greenlandic"@en,
+"Kalaallisut"@en,
+"groenlandais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/kl> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/kal>,
+<http://id.loc.gov/vocabulary/languages/kal> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "kl"^^xsd:string ;
+skos:prefLabel "Grönländisch"@de,
+"Kalaallisut | Greenlandic"@en,
+"groenlandais"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Grönländisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kalaallisut"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "groenlandais"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Greenlandic"@en ] .
+
+# END /vocabulary/iso639-1/kl
+
+# BEGIN /vocabulary/iso639-1/km
+
+<http://id.loc.gov/vocabulary/iso639-1/km> a skos:Concept ;
+skos:altLabel "Kambodschanisch"@de,
+"Central Khmer"@en,
+"khmer central"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2006-10-27T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/km> ],
+[ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/km> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/khm>,
+<http://id.loc.gov/vocabulary/languages/khm> ;
+skos:historyNote "Name changed from \"Khmer\""@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "km"^^xsd:string ;
+skos:prefLabel "Kambodschanisch"@de,
+"Central Khmer"@en,
+"khmer central"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "khmer central"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Central Khmer"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kambodschanisch"@de ] .
+
+# END /vocabulary/iso639-1/km
+
+# BEGIN /vocabulary/iso639-1/kn
+
+<http://id.loc.gov/vocabulary/iso639-1/kn> a skos:Concept ;
+skos:altLabel "Kannada"@de,
+"Kannada"@en,
+"kannada"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/kn> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/kan>,
+<http://id.loc.gov/vocabulary/languages/kan> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "kn"^^xsd:string ;
+skos:prefLabel "Kannada"@de,
+"Kannada"@en,
+"kannada"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "kannada"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kannada"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kannada"@en ] .
+
+# END /vocabulary/iso639-1/kn
+
+# BEGIN /vocabulary/iso639-1/ko
+
+<http://id.loc.gov/vocabulary/iso639-1/ko> a skos:Concept ;
+skos:altLabel "Koreanisch"@de,
+"Korean"@en,
+"coréen"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ko> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/kor>,
+<http://id.loc.gov/vocabulary/languages/kor> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ko"^^xsd:string ;
+skos:prefLabel "Koreanisch"@de,
+"Korean"@en,
+"coréen"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "coréen"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Korean"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Koreanisch"@de ] .
+
+# END /vocabulary/iso639-1/ko
+
+# BEGIN /vocabulary/iso639-1/kr
+
+<http://id.loc.gov/vocabulary/iso639-1/kr> a skos:Concept ;
+skos:altLabel "Kanuri-Sprache"@de,
+"Kanuri"@en,
+"kanouri"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1999-08-16T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/kr> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/kau>,
+<http://id.loc.gov/vocabulary/languages/kau> ;
+skos:historyNote "This alpha-2 ISO 639-1 code was approved in 1999 and included in ISO 639-1: 2002. It was mistakenly missing in earlier versions of the tables on the ISO639-2 web site. As of January 2003, it has been included."@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "kr"^^xsd:string ;
+skos:prefLabel "Kanuri-Sprache"@de,
+"Kanuri"@en,
+"kanouri"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "kanouri"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kanuri"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kanuri-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/kr
+
+# BEGIN /vocabulary/iso639-1/ks
+
+<http://id.loc.gov/vocabulary/iso639-1/ks> a skos:Concept ;
+skos:altLabel "Kaschmiri"@de,
+"Kashmiri"@en,
+"kashmiri"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ks> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/kas>,
+<http://id.loc.gov/vocabulary/languages/kas> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ks"^^xsd:string ;
+skos:prefLabel "Kaschmiri"@de,
+"Kashmiri"@en,
+"kashmiri"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Kaschmiri"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "kashmiri"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kashmiri"@en ] .
+
+# END /vocabulary/iso639-1/ks
+
+# BEGIN /vocabulary/iso639-1/ku
+
+<http://id.loc.gov/vocabulary/iso639-1/ku> a skos:Concept ;
+skos:altLabel "Kurdisch"@de,
+"Kurdish"@en,
+"kurde"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ku> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/kur>,
+<http://id.loc.gov/vocabulary/languages/kur> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ku"^^xsd:string ;
+skos:prefLabel "Kurdisch"@de,
+"Kurdish"@en,
+"kurde"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "kurde"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kurdisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kurdish"@en ] .
+
+# END /vocabulary/iso639-1/ku
+
+# BEGIN /vocabulary/iso639-1/kv
+
+<http://id.loc.gov/vocabulary/iso639-1/kv> a skos:Concept ;
+skos:altLabel "Komi-Sprache"@de,
+"Komi"@en,
+"kom"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/kv> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/kom>,
+<http://id.loc.gov/vocabulary/languages/kom> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "kv"^^xsd:string ;
+skos:prefLabel "Komi-Sprache"@de,
+"Komi"@en,
+"kom"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Komi"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "kom"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Komi-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/kv
+
+# BEGIN /vocabulary/iso639-1/kw
+
+<http://id.loc.gov/vocabulary/iso639-1/kw> a skos:Concept ;
+skos:altLabel "Kornisch"@de,
+"Cornish"@en,
+"cornique"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1998-08-10T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/kw> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/cor>,
+<http://id.loc.gov/vocabulary/languages/cor> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "kw"^^xsd:string ;
+skos:prefLabel "Kornisch"@de,
+"Cornish"@en,
+"cornique"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "cornique"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Cornish"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kornisch"@de ] .
+
+# END /vocabulary/iso639-1/kw
+
+# BEGIN /vocabulary/iso639-1/ky
+
+<http://id.loc.gov/vocabulary/iso639-1/ky> a skos:Concept ;
+skos:altLabel "Kirgisisch"@de,
+"Kirghiz"@en,
+"Kyrgyz"@en,
+"kirghiz"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ky> ],
+[ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2006-10-02T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ky> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/kir>,
+<http://id.loc.gov/vocabulary/languages/kir> ;
+skos:historyNote "Kyrgyz added"@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ky"^^xsd:string ;
+skos:prefLabel "Kirgisisch"@de,
+"Kirghiz | Kyrgyz"@en,
+"kirghiz"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "kirghiz"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kyrgyz"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kirghiz"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kirgisisch"@de ] .
+
+# END /vocabulary/iso639-1/ky
+
+# BEGIN /vocabulary/iso639-1/la
+
+<http://id.loc.gov/vocabulary/iso639-1/la> a skos:Concept ;
+skos:altLabel "Latein"@de,
+"Latin"@en,
+"latin"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/la> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/lat>,
+<http://id.loc.gov/vocabulary/languages/lat> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "la"^^xsd:string ;
+skos:prefLabel "Latein"@de,
+"Latin"@en,
+"latin"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Latein"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Latin"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "latin"@fr ] .
+
+# END /vocabulary/iso639-1/la
+
+# BEGIN /vocabulary/iso639-1/lb
+
+<http://id.loc.gov/vocabulary/iso639-1/lb> a skos:Concept ;
+skos:altLabel "Luxemburgisch"@de,
+"Letzeburgesch"@en,
+"Luxembourgish"@en,
+"luxembourgeois"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1998-08-10T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/lb> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ltz>,
+<http://id.loc.gov/vocabulary/languages/ltz> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "lb"^^xsd:string ;
+skos:prefLabel "Luxemburgisch"@de,
+"Luxembourgish | Letzeburgesch"@en,
+"luxembourgeois"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Luxemburgisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Letzeburgesch"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Luxembourgish"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "luxembourgeois"@fr ] .
+
+# END /vocabulary/iso639-1/lb
+
+# BEGIN /vocabulary/iso639-1/lg
+
+<http://id.loc.gov/vocabulary/iso639-1/lg> a skos:Concept ;
+skos:altLabel "Ganda-Sprache"@de,
+"Ganda"@en,
+"ganda"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1999-08-16T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/lg> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/lug>,
+<http://id.loc.gov/vocabulary/languages/lug> ;
+skos:historyNote "This alpha-2 ISO 639-1 code was approved in 1999 and included in ISO 639-1: 2002. It was mistakenly missing in earlier versions of the tables on the ISO639-2 web site. As of January 2003, it has been included."@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "lg"^^xsd:string ;
+skos:prefLabel "Ganda-Sprache"@de,
+"Ganda"@en,
+"ganda"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "ganda"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ganda"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ganda-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/lg
+
+# BEGIN /vocabulary/iso639-1/li
+
+<http://id.loc.gov/vocabulary/iso639-1/li> a skos:Concept ;
+skos:altLabel "Limburgisch"@de,
+"Limburgan"@en,
+"Limburger"@en,
+"Limburgish"@en,
+"limbourgeois"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2002-08-02T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/li> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/lim>,
+<http://id.loc.gov/vocabulary/languages/lim> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "li"^^xsd:string ;
+skos:prefLabel "Limburgisch"@de,
+"Limburgan | Limburger | Limburgish"@en,
+"limbourgeois"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Limburgish"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "limbourgeois"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Limburgan"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Limburger"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Limburgisch"@de ] .
+
+# END /vocabulary/iso639-1/li
+
+# BEGIN /vocabulary/iso639-1/ln
+
+<http://id.loc.gov/vocabulary/iso639-1/ln> a skos:Concept ;
+skos:altLabel "Lingala"@de,
+"Lingala"@en,
+"lingala"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ln> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/lin>,
+<http://id.loc.gov/vocabulary/languages/lin> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ln"^^xsd:string ;
+skos:prefLabel "Lingala"@de,
+"Lingala"@en,
+"lingala"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "lingala"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Lingala"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Lingala"@de ] .
+
+# END /vocabulary/iso639-1/ln
+
+# BEGIN /vocabulary/iso639-1/lo
+
+<http://id.loc.gov/vocabulary/iso639-1/lo> a skos:Concept ;
+skos:altLabel "Laotisch"@de,
+"Lao"@en,
+"lao"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/lo> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/lao>,
+<http://id.loc.gov/vocabulary/languages/lao> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "lo"^^xsd:string ;
+skos:prefLabel "Laotisch"@de,
+"Lao"@en,
+"lao"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Lao"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "lao"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Laotisch"@de ] .
+
+# END /vocabulary/iso639-1/lo
+
+# BEGIN /vocabulary/iso639-1/lt
+
+<http://id.loc.gov/vocabulary/iso639-1/lt> a skos:Concept ;
+skos:altLabel "Litauisch"@de,
+"Lithuanian"@en,
+"lituanien"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/lt> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/lit>,
+<http://id.loc.gov/vocabulary/languages/lit> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "lt"^^xsd:string ;
+skos:prefLabel "Litauisch"@de,
+"Lithuanian"@en,
+"lituanien"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Lithuanian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Litauisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "lituanien"@fr ] .
+
+# END /vocabulary/iso639-1/lt
+
+# BEGIN /vocabulary/iso639-1/lu
+
+<http://id.loc.gov/vocabulary/iso639-1/lu> a skos:Concept ;
+skos:altLabel "Luba-Katanga-Sprache"@de,
+"Luba-Katanga"@en,
+"luba-katanga"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1999-08-16T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/lu> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/lub>,
+<http://id.loc.gov/vocabulary/languages/lub> ;
+skos:historyNote "This alpha-2 ISO 639-1 code was approved in 1999 and included in ISO 639-1: 2002. It was mistakenly missing in earlier versions of the tables on the ISO639-2 web site. As of January 2003, it has been included."@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "lu"^^xsd:string ;
+skos:prefLabel "Luba-Katanga-Sprache"@de,
+"Luba-Katanga"@en,
+"luba-katanga"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Luba-Katanga"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "luba-katanga"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Luba-Katanga-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/lu
+
+# BEGIN /vocabulary/iso639-1/lv
+
+<http://id.loc.gov/vocabulary/iso639-1/lv> a skos:Concept ;
+skos:altLabel "Lettisch"@de,
+"Latvian"@en,
+"letton"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/lv> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/lav>,
+<http://id.loc.gov/vocabulary/languages/lav> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "lv"^^xsd:string ;
+skos:prefLabel "Lettisch"@de,
+"Latvian"@en,
+"letton"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Lettisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "letton"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Latvian"@en ] .
+
+# END /vocabulary/iso639-1/lv
+
+# BEGIN /vocabulary/iso639-1/mg
+
+<http://id.loc.gov/vocabulary/iso639-1/mg> a skos:Concept ;
+skos:altLabel "Malagassi-Sprache"@de,
+"Malagasy"@en,
+"malgache"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/mg> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/mlg>,
+<http://id.loc.gov/vocabulary/languages/mlg> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "mg"^^xsd:string ;
+skos:prefLabel "Malagassi-Sprache"@de,
+"Malagasy"@en,
+"malgache"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "malgache"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Malagasy"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Malagassi-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/mg
+
+# BEGIN /vocabulary/iso639-1/mh
+
+<http://id.loc.gov/vocabulary/iso639-1/mh> a skos:Concept ;
+skos:altLabel "Marschallesisch"@de,
+"Marshallese"@en,
+"marshall"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/mh> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/mah>,
+<http://id.loc.gov/vocabulary/languages/mah> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "mh"^^xsd:string ;
+skos:prefLabel "Marschallesisch"@de,
+"Marshallese"@en,
+"marshall"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Marshallese"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "marshall"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Marschallesisch"@de ] .
+
+# END /vocabulary/iso639-1/mh
+
+# BEGIN /vocabulary/iso639-1/mi
+
+<http://id.loc.gov/vocabulary/iso639-1/mi> a skos:Concept ;
+skos:altLabel "Maori-Sprache"@de,
+"Maori"@en,
+"maori"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/mi> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/mao>,
+<http://id.loc.gov/vocabulary/iso639-2/mri>,
+<http://id.loc.gov/vocabulary/languages/mao> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "mi"^^xsd:string ;
+skos:prefLabel "Maori-Sprache"@de,
+"Maori"@en,
+"maori"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "maori"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Maori-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Maori"@en ] .
+
+# END /vocabulary/iso639-1/mi
+
+# BEGIN /vocabulary/iso639-1/mk
+
+<http://id.loc.gov/vocabulary/iso639-1/mk> a skos:Concept ;
+skos:altLabel "Makedonisch"@de,
+"Macedonian"@en,
+"macédonien"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/mk> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/mac>,
+<http://id.loc.gov/vocabulary/iso639-2/mkd>,
+<http://id.loc.gov/vocabulary/languages/mac> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "mk"^^xsd:string ;
+skos:prefLabel "Makedonisch"@de,
+"Macedonian"@en,
+"macédonien"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Makedonisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Macedonian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "macédonien"@fr ] .
+
+# END /vocabulary/iso639-1/mk
+
+# BEGIN /vocabulary/iso639-1/ml
+
+<http://id.loc.gov/vocabulary/iso639-1/ml> a skos:Concept ;
+skos:altLabel "Malayalam"@de,
+"Malayalam"@en,
+"malayalam"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ml> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/mal>,
+<http://id.loc.gov/vocabulary/languages/mal> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ml"^^xsd:string ;
+skos:prefLabel "Malayalam"@de,
+"Malayalam"@en,
+"malayalam"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Malayalam"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "malayalam"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Malayalam"@en ] .
+
+# END /vocabulary/iso639-1/ml
+
+# BEGIN /vocabulary/iso639-1/mn
+
+<http://id.loc.gov/vocabulary/iso639-1/mn> a skos:Concept ;
+skos:altLabel "Mongolisch"@de,
+"Mongolian"@en,
+"mongol"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/mn> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/mon>,
+<http://id.loc.gov/vocabulary/languages/mon> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "mn"^^xsd:string ;
+skos:prefLabel "Mongolisch"@de,
+"Mongolian"@en,
+"mongol"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Mongolisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "mongol"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Mongolian"@en ] .
+
+# END /vocabulary/iso639-1/mn
+
+# BEGIN /vocabulary/iso639-1/mo
+
+<http://id.loc.gov/vocabulary/iso639-1/mo> skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "deprecated"^^xsd:string ;
+cs:createdDate "2008-11-03T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/mo> ] ;
+skos:hiddenLabel "Moldavian | Moldovan"@en,
+"moldave"@fr ;
+skos:historyNote "The identifiers mo and mol are deprecated, leaving ro and ron (639-2/T) and rum (639-2/B) the current language identifiers to be used for the variant of the Romanian language also known as Moldavian and Moldovan in English and moldave in French. The identifiers mo and mol will not be assigned to different items, and recordings using these identifiers will not be invalid."@en ;
+skos:notation "mo"^^xsd:string .
+
+# END /vocabulary/iso639-1/mo
+
+# BEGIN /vocabulary/iso639-1/mr
+
+<http://id.loc.gov/vocabulary/iso639-1/mr> a skos:Concept ;
+skos:altLabel "Marathi"@de,
+"Marathi"@en,
+"marathe"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/mr> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/mar>,
+<http://id.loc.gov/vocabulary/languages/mar> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "mr"^^xsd:string ;
+skos:prefLabel "Marathi"@de,
+"Marathi"@en,
+"marathe"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Marathi"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Marathi"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "marathe"@fr ] .
+
+# END /vocabulary/iso639-1/mr
+
+# BEGIN /vocabulary/iso639-1/ms
+
+<http://id.loc.gov/vocabulary/iso639-1/ms> a skos:Concept ;
+skos:altLabel "Malaiisch"@de,
+"Malay"@en,
+"malais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ms> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/may>,
+<http://id.loc.gov/vocabulary/iso639-2/msa>,
+<http://id.loc.gov/vocabulary/languages/may> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ms"^^xsd:string ;
+skos:prefLabel "Malaiisch"@de,
+"Malay"@en,
+"malais"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Malaiisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "malais"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Malay"@en ] .
+
+# END /vocabulary/iso639-1/ms
+
+# BEGIN /vocabulary/iso639-1/mt
+
+<http://id.loc.gov/vocabulary/iso639-1/mt> a skos:Concept ;
+skos:altLabel "Maltesisch"@de,
+"Maltese"@en,
+"maltais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/mt> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/mlt>,
+<http://id.loc.gov/vocabulary/languages/mlt> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "mt"^^xsd:string ;
+skos:prefLabel "Maltesisch"@de,
+"Maltese"@en,
+"maltais"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "maltais"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Maltesisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Maltese"@en ] .
+
+# END /vocabulary/iso639-1/mt
+
+# BEGIN /vocabulary/iso639-1/my
+
+<http://id.loc.gov/vocabulary/iso639-1/my> a skos:Concept ;
+skos:altLabel "Birmanisch"@de,
+"Burmese"@en,
+"birman"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/my> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/bur>,
+<http://id.loc.gov/vocabulary/iso639-2/mya>,
+<http://id.loc.gov/vocabulary/languages/bur> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "my"^^xsd:string ;
+skos:prefLabel "Birmanisch"@de,
+"Burmese"@en,
+"birman"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Birmanisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "birman"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Burmese"@en ] .
+
+# END /vocabulary/iso639-1/my
+
+# BEGIN /vocabulary/iso639-1/na
+
+<http://id.loc.gov/vocabulary/iso639-1/na> a skos:Concept ;
+skos:altLabel "Nauruanisch"@de,
+"Nauru"@en,
+"nauruan"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/na> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/nau>,
+<http://id.loc.gov/vocabulary/languages/nau> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "na"^^xsd:string ;
+skos:prefLabel "Nauruanisch"@de,
+"Nauru"@en,
+"nauruan"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Nauru"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Nauruanisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "nauruan"@fr ] .
+
+# END /vocabulary/iso639-1/na
+
+# BEGIN /vocabulary/iso639-1/nb
+
+<http://id.loc.gov/vocabulary/iso639-1/nb> a skos:Concept ;
+skos:altLabel "Bokmål"@de,
+"Bokmål, Norwegian"@en,
+"Norwegian Bokmål"@en,
+"norvégien bokmål"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/nb> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/nob>,
+<http://id.loc.gov/vocabulary/languages/nob> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "nb"^^xsd:string ;
+skos:prefLabel "Bokmål"@de,
+"Bokmål, Norwegian | Norwegian Bokmål"@en,
+"norvégien bokmål"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Bokmål"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Bokmål, Norwegian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Norwegian Bokmål"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "norvégien bokmål"@fr ] .
+
+# END /vocabulary/iso639-1/nb
+
+# BEGIN /vocabulary/iso639-1/nd
+
+<http://id.loc.gov/vocabulary/iso639-1/nd> a skos:Concept ;
+skos:altLabel "Ndebele-Sprache (Simbabwe)"@de,
+"Ndebele, North"@en,
+"North Ndebele"@en,
+"ndébélé du Nord"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2000-08-14T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/nd> ],
+[ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/nd> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/nde>,
+<http://id.loc.gov/vocabulary/languages/nde> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "nd"^^xsd:string ;
+skos:prefLabel "Ndebele-Sprache (Simbabwe)"@de,
+"Ndebele, North | North Ndebele"@en,
+"ndébélé du Nord"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "North Ndebele"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "ndébélé du Nord"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ndebele-Sprache (Simbabwe)"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ndebele, North"@en ] .
+
+# END /vocabulary/iso639-1/nd
+
+# BEGIN /vocabulary/iso639-1/ne
+
+<http://id.loc.gov/vocabulary/iso639-1/ne> a skos:Concept ;
+skos:altLabel "Nepali"@de,
+"Nepali"@en,
+"népalais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ne> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/nep>,
+<http://id.loc.gov/vocabulary/languages/nep> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ne"^^xsd:string ;
+skos:prefLabel "Nepali"@de,
+"Nepali"@en,
+"népalais"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Nepali"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "népalais"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Nepali"@de ] .
+
+# END /vocabulary/iso639-1/ne
+
+# BEGIN /vocabulary/iso639-1/ng
+
+<http://id.loc.gov/vocabulary/iso639-1/ng> a skos:Concept ;
+skos:altLabel "Ndonga"@de,
+"Ndonga"@en,
+"ndonga"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ng> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ndo>,
+<http://id.loc.gov/vocabulary/languages/ndo> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ng"^^xsd:string ;
+skos:prefLabel "Ndonga"@de,
+"Ndonga"@en,
+"ndonga"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "ndonga"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ndonga"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ndonga"@en ] .
+
+# END /vocabulary/iso639-1/ng
+
+# BEGIN /vocabulary/iso639-1/nl
+
+<http://id.loc.gov/vocabulary/iso639-1/nl> a skos:Concept ;
+skos:altLabel "Niederländisch"@de,
+"Dutch"@en,
+"Flemish"@en,
+"flamand"@fr,
+"néerlandais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/nl> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/dut>,
+<http://id.loc.gov/vocabulary/iso639-2/nld>,
+<http://id.loc.gov/vocabulary/languages/dut> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "nl"^^xsd:string ;
+skos:prefLabel "Niederländisch"@de,
+"Dutch | Flemish"@en,
+"néerlandais | flamand"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "flamand"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Dutch"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "néerlandais"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Niederländisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Flemish"@en ] .
+
+# END /vocabulary/iso639-1/nl
+
+# BEGIN /vocabulary/iso639-1/nn
+
+<http://id.loc.gov/vocabulary/iso639-1/nn> a skos:Concept ;
+skos:altLabel "Nynorsk"@de,
+"Norwegian Nynorsk"@en,
+"Nynorsk, Norwegian"@en,
+"norvégien nynorsk"@fr,
+"nynorsk, norvégien"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/nn> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/nno>,
+<http://id.loc.gov/vocabulary/languages/nno> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "nn"^^xsd:string ;
+skos:prefLabel "Nynorsk"@de,
+"Norwegian Nynorsk | Nynorsk, Norwegian"@en,
+"norvégien nynorsk | nynorsk, norvégien"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Nynorsk, Norwegian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Norwegian Nynorsk"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "nynorsk, norvégien"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Nynorsk"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "norvégien nynorsk"@fr ] .
+
+# END /vocabulary/iso639-1/nn
+
+# BEGIN /vocabulary/iso639-1/no
+
+<http://id.loc.gov/vocabulary/iso639-1/no> a skos:Concept ;
+skos:altLabel "Norwegisch"@de,
+"Norwegian"@en,
+"norvégien"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/no> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/nor>,
+<http://id.loc.gov/vocabulary/languages/nor> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "no"^^xsd:string ;
+skos:prefLabel "Norwegisch"@de,
+"Norwegian"@en,
+"norvégien"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "norvégien"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Norwegian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Norwegisch"@de ] .
+
+# END /vocabulary/iso639-1/no
+
+# BEGIN /vocabulary/iso639-1/nr
+
+<http://id.loc.gov/vocabulary/iso639-1/nr> a skos:Concept ;
+skos:altLabel "Ndebele-Sprache (Transvaal)"@de,
+"Ndebele, South"@en,
+"South Ndebele"@en,
+"ndébélé du Sud"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-08-14T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/nr> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/nbl>,
+<http://id.loc.gov/vocabulary/languages/nbl> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "nr"^^xsd:string ;
+skos:prefLabel "Ndebele-Sprache (Transvaal)"@de,
+"Ndebele, South | South Ndebele"@en,
+"ndébélé du Sud"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "South Ndebele"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ndebele, South"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ndebele-Sprache (Transvaal)"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "ndébélé du Sud"@fr ] .
+
+# END /vocabulary/iso639-1/nr
+
+# BEGIN /vocabulary/iso639-1/nv
+
+<http://id.loc.gov/vocabulary/iso639-1/nv> a skos:Concept ;
+skos:altLabel "Navajo-Sprache"@de,
+"Navaho"@en,
+"Navajo"@en,
+"navaho"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/nv> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/nav>,
+<http://id.loc.gov/vocabulary/languages/nav> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "nv"^^xsd:string ;
+skos:prefLabel "Navajo-Sprache"@de,
+"Navajo | Navaho"@en,
+"navaho"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Navajo-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Navaho"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "navaho"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Navajo"@en ] .
+
+# END /vocabulary/iso639-1/nv
+
+# BEGIN /vocabulary/iso639-1/ny
+
+<http://id.loc.gov/vocabulary/iso639-1/ny> a skos:Concept ;
+skos:altLabel "Nyanja-Sprache"@de,
+"Chewa"@en,
+"Chichewa"@en,
+"Nyanja"@en,
+"chewa"@fr,
+"chichewa"@fr,
+"nyanja"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ny> ],
+[ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ny> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/nya>,
+<http://id.loc.gov/vocabulary/languages/nya> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ny"^^xsd:string ;
+skos:prefLabel "Nyanja-Sprache"@de,
+"Chichewa | Chewa | Nyanja"@en,
+"chichewa | chewa | nyanja"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "nyanja"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Nyanja"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "chichewa"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "chewa"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Chichewa"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Nyanja-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Chewa"@en ] .
+
+# END /vocabulary/iso639-1/ny
+
+# BEGIN /vocabulary/iso639-1/oc
+
+<http://id.loc.gov/vocabulary/iso639-1/oc> a skos:Concept ;
+skos:altLabel "Okzitanisch"@de,
+"Occitan (post 1500)"@en,
+"occitan (après 1500)"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2008-07-08T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/oc> ],
+[ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/oc> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/oci>,
+<http://id.loc.gov/vocabulary/languages/oci> ;
+skos:historyNote "Provençal removed"@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "oc"^^xsd:string ;
+skos:prefLabel "Okzitanisch"@de,
+"Occitan (post 1500)"@en,
+"occitan (après 1500)"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "occitan (après 1500)"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Okzitanisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Occitan (post 1500)"@en ] .
+
+# END /vocabulary/iso639-1/oc
+
+# BEGIN /vocabulary/iso639-1/oj
+
+<http://id.loc.gov/vocabulary/iso639-1/oj> a skos:Concept ;
+skos:altLabel "Ojibwa-Sprache"@de,
+"Ojibwa"@en,
+"ojibwa"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1999-08-16T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/oj> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/oji>,
+<http://id.loc.gov/vocabulary/languages/oji> ;
+skos:historyNote "This alpha-2 ISO 639-1 code was approved in 1999 and included in ISO 639-1: 2002. It was mistakenly missing in earlier versions of the tables on the ISO639-2 web site. As of January 2003, it has been included."@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "oj"^^xsd:string ;
+skos:prefLabel "Ojibwa-Sprache"@de,
+"Ojibwa"@en,
+"ojibwa"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "ojibwa"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ojibwa-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ojibwa"@en ] .
+
+# END /vocabulary/iso639-1/oj
+
+# BEGIN /vocabulary/iso639-1/om
+
+<http://id.loc.gov/vocabulary/iso639-1/om> a skos:Concept ;
+skos:altLabel "Galla-Sprache"@de,
+"Oromo"@en,
+"galla"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/om> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/orm>,
+<http://id.loc.gov/vocabulary/languages/orm> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "om"^^xsd:string ;
+skos:prefLabel "Galla-Sprache"@de,
+"Oromo"@en,
+"galla"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "galla"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Oromo"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Galla-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/om
+
+# BEGIN /vocabulary/iso639-1/or
+
+<http://id.loc.gov/vocabulary/iso639-1/or> a skos:Concept ;
+skos:altLabel "Oriya-Sprache"@de,
+"Oriya"@en,
+"oriya"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/or> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ori>,
+<http://id.loc.gov/vocabulary/languages/ori> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "or"^^xsd:string ;
+skos:prefLabel "Oriya-Sprache"@de,
+"Oriya"@en,
+"oriya"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "oriya"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Oriya"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Oriya-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/or
+
+# BEGIN /vocabulary/iso639-1/os
+
+<http://id.loc.gov/vocabulary/iso639-1/os> a skos:Concept ;
+skos:altLabel "Ossetisch"@de,
+"Ossetian"@en,
+"Ossetic"@en,
+"ossète"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/os> ],
+[ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/os> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/oss>,
+<http://id.loc.gov/vocabulary/languages/oss> ;
+skos:historyNote "Ossetian added"@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "os"^^xsd:string ;
+skos:prefLabel "Ossetisch"@de,
+"Ossetian | Ossetic"@en,
+"ossète"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Ossetian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ossetisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "ossète"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ossetic"@en ] .
+
+# END /vocabulary/iso639-1/os
+
+# BEGIN /vocabulary/iso639-1/pa
+
+<http://id.loc.gov/vocabulary/iso639-1/pa> a skos:Concept ;
+skos:altLabel "Pandschabi-Sprache"@de,
+"Panjabi"@en,
+"Punjabi"@en,
+"pendjabi"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/pa> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/pan>,
+<http://id.loc.gov/vocabulary/languages/pan> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "pa"^^xsd:string ;
+skos:prefLabel "Pandschabi-Sprache"@de,
+"Panjabi | Punjabi"@en,
+"pendjabi"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "pendjabi"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Punjabi"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Pandschabi-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Panjabi"@en ] .
+
+# END /vocabulary/iso639-1/pa
+
+# BEGIN /vocabulary/iso639-1/pi
+
+<http://id.loc.gov/vocabulary/iso639-1/pi> a skos:Concept ;
+skos:altLabel "Pali"@de,
+"Pali"@en,
+"pali"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/pi> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/pli>,
+<http://id.loc.gov/vocabulary/languages/pli> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "pi"^^xsd:string ;
+skos:prefLabel "Pali"@de,
+"Pali"@en,
+"pali"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Pali"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Pali"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "pali"@fr ] .
+
+# END /vocabulary/iso639-1/pi
+
+# BEGIN /vocabulary/iso639-1/pl
+
+<http://id.loc.gov/vocabulary/iso639-1/pl> a skos:Concept ;
+skos:altLabel "Polnisch"@de,
+"Polish"@en,
+"polonais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/pl> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/pol>,
+<http://id.loc.gov/vocabulary/languages/pol> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "pl"^^xsd:string ;
+skos:prefLabel "Polnisch"@de,
+"Polish"@en,
+"polonais"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Polnisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "polonais"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Polish"@en ] .
+
+# END /vocabulary/iso639-1/pl
+
+# BEGIN /vocabulary/iso639-1/ps
+
+<http://id.loc.gov/vocabulary/iso639-1/ps> a skos:Concept ;
+skos:altLabel "Paschtu"@de,
+"Pashto"@en,
+"Pushto"@en,
+"pachto"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2007-12-17T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ps> ],
+[ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ps> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/pus>,
+<http://id.loc.gov/vocabulary/languages/pus> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ps"^^xsd:string ;
+skos:prefLabel "Paschtu"@de,
+"Pushto | Pashto"@en,
+"pachto"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "pachto"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Pashto"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Pushto"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Paschtu"@de ] .
+
+# END /vocabulary/iso639-1/ps
+
+# BEGIN /vocabulary/iso639-1/pt
+
+<http://id.loc.gov/vocabulary/iso639-1/pt> a skos:Concept ;
+skos:altLabel "Portugiesisch"@de,
+"Portuguese"@en,
+"portugais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/pt> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/por>,
+<http://id.loc.gov/vocabulary/languages/por> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "pt"^^xsd:string ;
+skos:prefLabel "Portugiesisch"@de,
+"Portuguese"@en,
+"portugais"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "portugais"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Portugiesisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Portuguese"@en ] .
+
+# END /vocabulary/iso639-1/pt
+
+# BEGIN /vocabulary/iso639-1/qu
+
+<http://id.loc.gov/vocabulary/iso639-1/qu> a skos:Concept ;
+skos:altLabel "Quechua-Sprache"@de,
+"Quechua"@en,
+"quechua"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/qu> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/que>,
+<http://id.loc.gov/vocabulary/languages/que> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "qu"^^xsd:string ;
+skos:prefLabel "Quechua-Sprache"@de,
+"Quechua"@en,
+"quechua"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "quechua"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Quechua"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Quechua-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/qu
+
+# BEGIN /vocabulary/iso639-1/rm
+
+<http://id.loc.gov/vocabulary/iso639-1/rm> a skos:Concept ;
+skos:altLabel "Rätoromanisch"@de,
+"Romansh"@en,
+"romanche"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2006-10-25T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/rm> ],
+[ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/rm> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/roh>,
+<http://id.loc.gov/vocabulary/languages/roh> ;
+skos:historyNote "Name changed from \"Raeto-Romance\""@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "rm"^^xsd:string ;
+skos:prefLabel "Rätoromanisch"@de,
+"Romansh"@en,
+"romanche"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Rätoromanisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "romanche"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Romansh"@en ] .
+
+# END /vocabulary/iso639-1/rm
+
+# BEGIN /vocabulary/iso639-1/rn
+
+<http://id.loc.gov/vocabulary/iso639-1/rn> a skos:Concept ;
+skos:altLabel "Rundi-Sprache"@de,
+"Rundi"@en,
+"rundi"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/rn> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/run>,
+<http://id.loc.gov/vocabulary/languages/run> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "rn"^^xsd:string ;
+skos:prefLabel "Rundi-Sprache"@de,
+"Rundi"@en,
+"rundi"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Rundi-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Rundi"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "rundi"@fr ] .
+
+# END /vocabulary/iso639-1/rn
+
+# BEGIN /vocabulary/iso639-1/ro
+
+<http://id.loc.gov/vocabulary/iso639-1/ro> a skos:Concept ;
+skos:altLabel "Rumänisch"@de,
+"Moldavian"@en,
+"Moldovan"@en,
+"Romanian"@en,
+"moldave"@fr,
+"roumain"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ro> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ron>,
+<http://id.loc.gov/vocabulary/iso639-2/rum>,
+<http://id.loc.gov/vocabulary/languages/rum> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ro"^^xsd:string ;
+skos:prefLabel "Rumänisch"@de,
+"Romanian | Moldavian | Moldovan"@en,
+"roumain | moldave"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Rumänisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Moldovan"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Romanian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Moldavian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "moldave"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "roumain"@fr ] .
+
+# END /vocabulary/iso639-1/ro
+
+# BEGIN /vocabulary/iso639-1/ru
+
+<http://id.loc.gov/vocabulary/iso639-1/ru> a skos:Concept ;
+skos:altLabel "Russisch"@de,
+"Russian"@en,
+"russe"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ru> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/rus>,
+<http://id.loc.gov/vocabulary/languages/rus> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ru"^^xsd:string ;
+skos:prefLabel "Russisch"@de,
+"Russian"@en,
+"russe"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "russe"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Russisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Russian"@en ] .
+
+# END /vocabulary/iso639-1/ru
+
+# BEGIN /vocabulary/iso639-1/rw
+
+<http://id.loc.gov/vocabulary/iso639-1/rw> a skos:Concept ;
+skos:altLabel "Rwanda-Sprache"@de,
+"Kinyarwanda"@en,
+"rwanda"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/rw> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/kin>,
+<http://id.loc.gov/vocabulary/languages/kin> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "rw"^^xsd:string ;
+skos:prefLabel "Rwanda-Sprache"@de,
+"Kinyarwanda"@en,
+"rwanda"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Rwanda-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "rwanda"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Kinyarwanda"@en ] .
+
+# END /vocabulary/iso639-1/rw
+
+# BEGIN /vocabulary/iso639-1/sa
+
+<http://id.loc.gov/vocabulary/iso639-1/sa> a skos:Concept ;
+skos:altLabel "Sanskrit"@de,
+"Sanskrit"@en,
+"sanskrit"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/sa> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/san>,
+<http://id.loc.gov/vocabulary/languages/san> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "sa"^^xsd:string ;
+skos:prefLabel "Sanskrit"@de,
+"Sanskrit"@en,
+"sanskrit"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Sanskrit"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Sanskrit"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "sanskrit"@fr ] .
+
+# END /vocabulary/iso639-1/sa
+
+# BEGIN /vocabulary/iso639-1/sc
+
+<http://id.loc.gov/vocabulary/iso639-1/sc> a skos:Concept ;
+skos:altLabel "Sardisch"@de,
+"Sardinian"@en,
+"sarde"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/sc> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/srd>,
+<http://id.loc.gov/vocabulary/languages/srd> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "sc"^^xsd:string ;
+skos:prefLabel "Sardisch"@de,
+"Sardinian"@en,
+"sarde"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "sarde"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Sardisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Sardinian"@en ] .
+
+# END /vocabulary/iso639-1/sc
+
+# BEGIN /vocabulary/iso639-1/sd
+
+<http://id.loc.gov/vocabulary/iso639-1/sd> a skos:Concept ;
+skos:altLabel "Sindhi-Sprache"@de,
+"Sindhi"@en,
+"sindhi"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/sd> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/snd>,
+<http://id.loc.gov/vocabulary/languages/snd> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "sd"^^xsd:string ;
+skos:prefLabel "Sindhi-Sprache"@de,
+"Sindhi"@en,
+"sindhi"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Sindhi-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "sindhi"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Sindhi"@en ] .
+
+# END /vocabulary/iso639-1/sd
+
+# BEGIN /vocabulary/iso639-1/se
+
+<http://id.loc.gov/vocabulary/iso639-1/se> a skos:Concept ;
+skos:altLabel "Nordsaamisch"@de,
+"Northern Sami"@en,
+"sami du Nord"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/se> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/sme>,
+<http://id.loc.gov/vocabulary/languages/sme> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "se"^^xsd:string ;
+skos:prefLabel "Nordsaamisch"@de,
+"Northern Sami"@en,
+"sami du Nord"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "sami du Nord"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Nordsaamisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Northern Sami"@en ] .
+
+# END /vocabulary/iso639-1/se
+
+# BEGIN /vocabulary/iso639-1/sg
+
+<http://id.loc.gov/vocabulary/iso639-1/sg> a skos:Concept ;
+skos:altLabel "Sango-Sprache"@de,
+"Sango"@en,
+"sango"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/sg> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/sag>,
+<http://id.loc.gov/vocabulary/languages/sag> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "sg"^^xsd:string ;
+skos:prefLabel "Sango-Sprache"@de,
+"Sango"@en,
+"sango"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "sango"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Sango-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Sango"@en ] .
+
+# END /vocabulary/iso639-1/sg
+
+# BEGIN /vocabulary/iso639-1/sh
+
+<http://id.loc.gov/vocabulary/iso639-1/sh> skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "deprecated"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/sh> ] ;
+skos:hiddenLabel "Serbo-Croatian"@en,
+"serbo-croate"@fr ;
+skos:historyNote "This code was deprecated in 2000 because there were separate language codes for each individual language represented (Serbian, Croatian, and then Bosnian was added). It was published in a revision of ISO 639-1, but never was included in ISO 639-2. It is considered a macrolanguage (general name for a cluster of closely related individual languages) in ISO 639-3. Its deprecated status was reaffirmed by the ISO 639 JAC in 2005."@en ;
+skos:notation "sh"^^xsd:string .
+
+# END /vocabulary/iso639-1/sh
+
+# BEGIN /vocabulary/iso639-1/si
+
+<http://id.loc.gov/vocabulary/iso639-1/si> a skos:Concept ;
+skos:altLabel "Singhalesisch"@de,
+"Sinhala"@en,
+"Sinhalese"@en,
+"singhalais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2004-10-19T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/si> ],
+[ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/si> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/sin>,
+<http://id.loc.gov/vocabulary/languages/sin> ;
+skos:historyNote "Sinhala added"@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "si"^^xsd:string ;
+skos:prefLabel "Singhalesisch"@de,
+"Sinhala | Sinhalese"@en,
+"singhalais"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Sinhalese"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Singhalesisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Sinhala"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "singhalais"@fr ] .
+
+# END /vocabulary/iso639-1/si
+
+# BEGIN /vocabulary/iso639-1/sk
+
+<http://id.loc.gov/vocabulary/iso639-1/sk> a skos:Concept ;
+skos:altLabel "Slowakisch"@de,
+"Slovak"@en,
+"slovaque"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/sk> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/slk>,
+<http://id.loc.gov/vocabulary/iso639-2/slo>,
+<http://id.loc.gov/vocabulary/languages/slo> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "sk"^^xsd:string ;
+skos:prefLabel "Slowakisch"@de,
+"Slovak"@en,
+"slovaque"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "slovaque"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Slowakisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Slovak"@en ] .
+
+# END /vocabulary/iso639-1/sk
+
+# BEGIN /vocabulary/iso639-1/sl
+
+<http://id.loc.gov/vocabulary/iso639-1/sl> a skos:Concept ;
+skos:altLabel "Slowenisch"@de,
+"Slovenian"@en,
+"slovène"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/sl> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/slv>,
+<http://id.loc.gov/vocabulary/languages/slv> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "sl"^^xsd:string ;
+skos:prefLabel "Slowenisch"@de,
+"Slovenian"@en,
+"slovène"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Slovenian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Slowenisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "slovène"@fr ] .
+
+# END /vocabulary/iso639-1/sl
+
+# BEGIN /vocabulary/iso639-1/sm
+
+<http://id.loc.gov/vocabulary/iso639-1/sm> a skos:Concept ;
+skos:altLabel "Samoanisch"@de,
+"Samoan"@en,
+"samoan"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/sm> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/smo>,
+<http://id.loc.gov/vocabulary/languages/smo> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "sm"^^xsd:string ;
+skos:prefLabel "Samoanisch"@de,
+"Samoan"@en,
+"samoan"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Samoan"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "samoan"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Samoanisch"@de ] .
+
+# END /vocabulary/iso639-1/sm
+
+# BEGIN /vocabulary/iso639-1/sn
+
+<http://id.loc.gov/vocabulary/iso639-1/sn> a skos:Concept ;
+skos:altLabel "Schona-Sprache"@de,
+"Shona"@en,
+"shona"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/sn> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/sna>,
+<http://id.loc.gov/vocabulary/languages/sna> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "sn"^^xsd:string ;
+skos:prefLabel "Schona-Sprache"@de,
+"Shona"@en,
+"shona"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Schona-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "shona"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Shona"@en ] .
+
+# END /vocabulary/iso639-1/sn
+
+# BEGIN /vocabulary/iso639-1/so
+
+<http://id.loc.gov/vocabulary/iso639-1/so> a skos:Concept ;
+skos:altLabel "Somali"@de,
+"Somali"@en,
+"somali"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/so> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/som>,
+<http://id.loc.gov/vocabulary/languages/som> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "so"^^xsd:string ;
+skos:prefLabel "Somali"@de,
+"Somali"@en,
+"somali"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "somali"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Somali"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Somali"@de ] .
+
+# END /vocabulary/iso639-1/so
+
+# BEGIN /vocabulary/iso639-1/sq
+
+<http://id.loc.gov/vocabulary/iso639-1/sq> a skos:Concept ;
+skos:altLabel "Albanisch"@de,
+"Albanian"@en,
+"albanais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/sq> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/alb>,
+<http://id.loc.gov/vocabulary/iso639-2/sqi>,
+<http://id.loc.gov/vocabulary/languages/alb> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "sq"^^xsd:string ;
+skos:prefLabel "Albanisch"@de,
+"Albanian"@en,
+"albanais"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Albanian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Albanisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "albanais"@fr ] .
+
+# END /vocabulary/iso639-1/sq
+
+# BEGIN /vocabulary/iso639-1/sr
+
+<http://id.loc.gov/vocabulary/iso639-1/sr> a skos:Concept ;
+skos:altLabel "Serbisch"@de,
+"Serbian"@en,
+"serbe"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/sr> ],
+[ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "2008-06-28T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/sr> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/srp>,
+<http://id.loc.gov/vocabulary/languages/srp> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "sr"^^xsd:string ;
+skos:prefLabel "Serbisch"@de,
+"Serbian"@en,
+"serbe"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Serbisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "serbe"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Serbian"@en ] .
+
+# END /vocabulary/iso639-1/sr
+
+# BEGIN /vocabulary/iso639-1/ss
+
+<http://id.loc.gov/vocabulary/iso639-1/ss> a skos:Concept ;
+skos:altLabel "Swasi-Sprache"@de,
+"Swati"@en,
+"swati"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ss> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ssw>,
+<http://id.loc.gov/vocabulary/languages/ssw> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ss"^^xsd:string ;
+skos:prefLabel "Swasi-Sprache"@de,
+"Swati"@en,
+"swati"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "swati"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Swati"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Swasi-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/ss
+
+# BEGIN /vocabulary/iso639-1/st
+
+<http://id.loc.gov/vocabulary/iso639-1/st> a skos:Concept ;
+skos:altLabel "Süd-Sotho-Sprache"@de,
+"Sotho, Southern"@en,
+"sotho du Sud"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/st> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/sot>,
+<http://id.loc.gov/vocabulary/languages/sot> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "st"^^xsd:string ;
+skos:prefLabel "Süd-Sotho-Sprache"@de,
+"Sotho, Southern"@en,
+"sotho du Sud"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Süd-Sotho-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Sotho, Southern"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "sotho du Sud"@fr ] .
+
+# END /vocabulary/iso639-1/st
+
+# BEGIN /vocabulary/iso639-1/su
+
+<http://id.loc.gov/vocabulary/iso639-1/su> a skos:Concept ;
+skos:altLabel "Sundanesisch"@de,
+"Sundanese"@en,
+"soundanais"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/su> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/sun>,
+<http://id.loc.gov/vocabulary/languages/sun> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "su"^^xsd:string ;
+skos:prefLabel "Sundanesisch"@de,
+"Sundanese"@en,
+"soundanais"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Sundanese"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "soundanais"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Sundanesisch"@de ] .
+
+# END /vocabulary/iso639-1/su
+
+# BEGIN /vocabulary/iso639-1/sv
+
+<http://id.loc.gov/vocabulary/iso639-1/sv> a skos:Concept ;
+skos:altLabel "Schwedisch"@de,
+"Swedish"@en,
+"suédois"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/sv> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/swe>,
+<http://id.loc.gov/vocabulary/languages/swe> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "sv"^^xsd:string ;
+skos:prefLabel "Schwedisch"@de,
+"Swedish"@en,
+"suédois"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Schwedisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Swedish"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "suédois"@fr ] .
+
+# END /vocabulary/iso639-1/sv
+
+# BEGIN /vocabulary/iso639-1/sw
+
+<http://id.loc.gov/vocabulary/iso639-1/sw> a skos:Concept ;
+skos:altLabel "Swahili"@de,
+"Swahili"@en,
+"swahili"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/sw> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/swa>,
+<http://id.loc.gov/vocabulary/languages/swa> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "sw"^^xsd:string ;
+skos:prefLabel "Swahili"@de,
+"Swahili"@en,
+"swahili"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Swahili"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "swahili"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Swahili"@de ] .
+
+# END /vocabulary/iso639-1/sw
+
+# BEGIN /vocabulary/iso639-1/ta
+
+<http://id.loc.gov/vocabulary/iso639-1/ta> a skos:Concept ;
+skos:altLabel "Tamil"@de,
+"Tamil"@en,
+"tamoul"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ta> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/tam>,
+<http://id.loc.gov/vocabulary/languages/tam> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ta"^^xsd:string ;
+skos:prefLabel "Tamil"@de,
+"Tamil"@en,
+"tamoul"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "tamoul"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Tamil"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Tamil"@de ] .
+
+# END /vocabulary/iso639-1/ta
+
+# BEGIN /vocabulary/iso639-1/te
+
+<http://id.loc.gov/vocabulary/iso639-1/te> a skos:Concept ;
+skos:altLabel "Telugu-Sprache"@de,
+"Telugu"@en,
+"télougou"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/te> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/tel>,
+<http://id.loc.gov/vocabulary/languages/tel> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "te"^^xsd:string ;
+skos:prefLabel "Telugu-Sprache"@de,
+"Telugu"@en,
+"télougou"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Telugu-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Telugu"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "télougou"@fr ] .
+
+# END /vocabulary/iso639-1/te
+
+# BEGIN /vocabulary/iso639-1/tg
+
+<http://id.loc.gov/vocabulary/iso639-1/tg> a skos:Concept ;
+skos:altLabel "Tadschikisch"@de,
+"Tajik"@en,
+"tadjik"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/tg> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/tgk>,
+<http://id.loc.gov/vocabulary/languages/tgk> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "tg"^^xsd:string ;
+skos:prefLabel "Tadschikisch"@de,
+"Tajik"@en,
+"tadjik"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "tadjik"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Tajik"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Tadschikisch"@de ] .
+
+# END /vocabulary/iso639-1/tg
+
+# BEGIN /vocabulary/iso639-1/th
+
+<http://id.loc.gov/vocabulary/iso639-1/th> a skos:Concept ;
+skos:altLabel "Thailändisch"@de,
+"Thai"@en,
+"thaï"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/th> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/tha>,
+<http://id.loc.gov/vocabulary/languages/tha> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "th"^^xsd:string ;
+skos:prefLabel "Thailändisch"@de,
+"Thai"@en,
+"thaï"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Thai"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "thaï"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Thailändisch"@de ] .
+
+# END /vocabulary/iso639-1/th
+
+# BEGIN /vocabulary/iso639-1/ti
+
+<http://id.loc.gov/vocabulary/iso639-1/ti> a skos:Concept ;
+skos:altLabel "Tigrinja-Sprache"@de,
+"Tigrinya"@en,
+"tigrigna"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ti> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/tir>,
+<http://id.loc.gov/vocabulary/languages/tir> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ti"^^xsd:string ;
+skos:prefLabel "Tigrinja-Sprache"@de,
+"Tigrinya"@en,
+"tigrigna"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Tigrinja-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "tigrigna"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Tigrinya"@en ] .
+
+# END /vocabulary/iso639-1/ti
+
+# BEGIN /vocabulary/iso639-1/tk
+
+<http://id.loc.gov/vocabulary/iso639-1/tk> a skos:Concept ;
+skos:altLabel "Turkmenisch"@de,
+"Turkmen"@en,
+"turkmène"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/tk> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/tuk>,
+<http://id.loc.gov/vocabulary/languages/tuk> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "tk"^^xsd:string ;
+skos:prefLabel "Turkmenisch"@de,
+"Turkmen"@en,
+"turkmène"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "turkmène"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Turkmenisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Turkmen"@en ] .
+
+# END /vocabulary/iso639-1/tk
+
+# BEGIN /vocabulary/iso639-1/tl
+
+<http://id.loc.gov/vocabulary/iso639-1/tl> a skos:Concept ;
+skos:altLabel "Tagalog"@de,
+"Tagalog"@en,
+"tagalog"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/tl> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/tgl>,
+<http://id.loc.gov/vocabulary/languages/tgl> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "tl"^^xsd:string ;
+skos:prefLabel "Tagalog"@de,
+"Tagalog"@en,
+"tagalog"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Tagalog"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Tagalog"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "tagalog"@fr ] .
+
+# END /vocabulary/iso639-1/tl
+
+# BEGIN /vocabulary/iso639-1/tn
+
+<http://id.loc.gov/vocabulary/iso639-1/tn> a skos:Concept ;
+skos:altLabel "Tswana-Sprache"@de,
+"Tswana"@en,
+"tswana"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/tn> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/tsn>,
+<http://id.loc.gov/vocabulary/languages/tsn> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "tn"^^xsd:string ;
+skos:prefLabel "Tswana-Sprache"@de,
+"Tswana"@en,
+"tswana"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Tswana"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Tswana-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "tswana"@fr ] .
+
+# END /vocabulary/iso639-1/tn
+
+# BEGIN /vocabulary/iso639-1/to
+
+<http://id.loc.gov/vocabulary/iso639-1/to> a skos:Concept ;
+skos:altLabel "Tongaisch"@de,
+"Tonga (Tonga Islands)"@en,
+"tongan (Îles Tonga)"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/to> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ton>,
+<http://id.loc.gov/vocabulary/languages/ton> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "to"^^xsd:string ;
+skos:prefLabel "Tongaisch"@de,
+"Tonga (Tonga Islands)"@en,
+"tongan (Îles Tonga)"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Tonga (Tonga Islands)"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "tongan (Îles Tonga)"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Tongaisch"@de ] .
+
+# END /vocabulary/iso639-1/to
+
+# BEGIN /vocabulary/iso639-1/tr
+
+<http://id.loc.gov/vocabulary/iso639-1/tr> a skos:Concept ;
+skos:altLabel "Türkisch"@de,
+"Turkish"@en,
+"turc"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/tr> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/tur>,
+<http://id.loc.gov/vocabulary/languages/tur> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "tr"^^xsd:string ;
+skos:prefLabel "Türkisch"@de,
+"Turkish"@en,
+"turc"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "turc"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Turkish"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Türkisch"@de ] .
+
+# END /vocabulary/iso639-1/tr
+
+# BEGIN /vocabulary/iso639-1/ts
+
+<http://id.loc.gov/vocabulary/iso639-1/ts> a skos:Concept ;
+skos:altLabel "Tsonga-Sprache"@de,
+"Tsonga"@en,
+"tsonga"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ts> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/tso>,
+<http://id.loc.gov/vocabulary/languages/tso> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ts"^^xsd:string ;
+skos:prefLabel "Tsonga-Sprache"@de,
+"Tsonga"@en,
+"tsonga"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Tsonga"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "tsonga"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Tsonga-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/ts
+
+# BEGIN /vocabulary/iso639-1/tt
+
+<http://id.loc.gov/vocabulary/iso639-1/tt> a skos:Concept ;
+skos:altLabel "Tatarisch"@de,
+"Tatar"@en,
+"tatar"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/tt> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/tat>,
+<http://id.loc.gov/vocabulary/languages/tat> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "tt"^^xsd:string ;
+skos:prefLabel "Tatarisch"@de,
+"Tatar"@en,
+"tatar"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Tatarisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Tatar"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "tatar"@fr ] .
+
+# END /vocabulary/iso639-1/tt
+
+# BEGIN /vocabulary/iso639-1/tw
+
+<http://id.loc.gov/vocabulary/iso639-1/tw> a skos:Concept ;
+skos:altLabel "Twi-Sprache"@de,
+"Twi"@en,
+"twi"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/tw> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/twi>,
+<http://id.loc.gov/vocabulary/languages/twi> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "tw"^^xsd:string ;
+skos:prefLabel "Twi-Sprache"@de,
+"Twi"@en,
+"twi"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Twi"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Twi-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "twi"@fr ] .
+
+# END /vocabulary/iso639-1/tw
+
+# BEGIN /vocabulary/iso639-1/ty
+
+<http://id.loc.gov/vocabulary/iso639-1/ty> a skos:Concept ;
+skos:altLabel "Tahitisch"@de,
+"Tahitian"@en,
+"tahitien"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2000-02-18T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ty> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/tah>,
+<http://id.loc.gov/vocabulary/languages/tah> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ty"^^xsd:string ;
+skos:prefLabel "Tahitisch"@de,
+"Tahitian"@en,
+"tahitien"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "tahitien"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Tahitian"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Tahitisch"@de ] .
+
+# END /vocabulary/iso639-1/ty
+
+# BEGIN /vocabulary/iso639-1/ug
+
+<http://id.loc.gov/vocabulary/iso639-1/ug> a skos:Concept ;
+skos:altLabel "Uigurisch"@de,
+"Uighur"@en,
+"Uyghur"@en,
+"ouïgour"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1989-03-11T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ug> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/uig>,
+<http://id.loc.gov/vocabulary/languages/uig> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ug"^^xsd:string ;
+skos:prefLabel "Uigurisch"@de,
+"Uighur | Uyghur"@en,
+"ouïgour"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Uyghur"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Uigurisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Uighur"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "ouïgour"@fr ] .
+
+# END /vocabulary/iso639-1/ug
+
+# BEGIN /vocabulary/iso639-1/uk
+
+<http://id.loc.gov/vocabulary/iso639-1/uk> a skos:Concept ;
+skos:altLabel "Ukrainisch"@de,
+"Ukrainian"@en,
+"ukrainien"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/uk> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ukr>,
+<http://id.loc.gov/vocabulary/languages/ukr> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "uk"^^xsd:string ;
+skos:prefLabel "Ukrainisch"@de,
+"Ukrainian"@en,
+"ukrainien"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "ukrainien"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ukrainisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Ukrainian"@en ] .
+
+# END /vocabulary/iso639-1/uk
+
+# BEGIN /vocabulary/iso639-1/ur
+
+<http://id.loc.gov/vocabulary/iso639-1/ur> a skos:Concept ;
+skos:altLabel "Urdu"@de,
+"Urdu"@en,
+"ourdou"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ur> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/urd>,
+<http://id.loc.gov/vocabulary/languages/urd> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ur"^^xsd:string ;
+skos:prefLabel "Urdu"@de,
+"Urdu"@en,
+"ourdou"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "ourdou"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Urdu"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Urdu"@en ] .
+
+# END /vocabulary/iso639-1/ur
+
+# BEGIN /vocabulary/iso639-1/uz
+
+<http://id.loc.gov/vocabulary/iso639-1/uz> a skos:Concept ;
+skos:altLabel "Usbekisch"@de,
+"Uzbek"@en,
+"ouszbek"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/uz> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/uzb>,
+<http://id.loc.gov/vocabulary/languages/uzb> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "uz"^^xsd:string ;
+skos:prefLabel "Usbekisch"@de,
+"Uzbek"@en,
+"ouszbek"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "ouszbek"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Uzbek"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Usbekisch"@de ] .
+
+# END /vocabulary/iso639-1/uz
+
+# BEGIN /vocabulary/iso639-1/ve
+
+<http://id.loc.gov/vocabulary/iso639-1/ve> a skos:Concept ;
+skos:altLabel "Venda-Sprache"@de,
+"Venda"@en,
+"venda"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1999-08-16T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/ve> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/ven>,
+<http://id.loc.gov/vocabulary/languages/ven> ;
+skos:historyNote "This alpha-2 ISO 639-1 code was approved in 1999 and included in ISO 639-1: 2002. It was mistakenly missing in earlier versions of the tables on the ISO639-2 web site. As of January 2003, it has been included."@en ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "ve"^^xsd:string ;
+skos:prefLabel "Venda-Sprache"@de,
+"Venda"@en,
+"venda"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Venda"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "venda"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Venda-Sprache"@de ] .
+
+# END /vocabulary/iso639-1/ve
+
+# BEGIN /vocabulary/iso639-1/vi
+
+<http://id.loc.gov/vocabulary/iso639-1/vi> a skos:Concept ;
+skos:altLabel "Vietnamesisch"@de,
+"Vietnamese"@en,
+"vietnamien"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/vi> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/vie>,
+<http://id.loc.gov/vocabulary/languages/vie> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "vi"^^xsd:string ;
+skos:prefLabel "Vietnamesisch"@de,
+"Vietnamese"@en,
+"vietnamien"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Vietnamese"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Vietnamesisch"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "vietnamien"@fr ] .
+
+# END /vocabulary/iso639-1/vi
+
+# BEGIN /vocabulary/iso639-1/vo
+
+<http://id.loc.gov/vocabulary/iso639-1/vo> a skos:Concept ;
+skos:altLabel "Volapük"@de,
+"Volapük"@en,
+"volapük"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/vo> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/vol>,
+<http://id.loc.gov/vocabulary/languages/vol> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "vo"^^xsd:string ;
+skos:prefLabel "Volapük"@de,
+"Volapük"@en,
+"volapük"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Volapük"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Volapük"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "volapük"@fr ] .
+
+# END /vocabulary/iso639-1/vo
+
+# BEGIN /vocabulary/iso639-1/wa
+
+<http://id.loc.gov/vocabulary/iso639-1/wa> a skos:Concept ;
+skos:altLabel "Wallonisch"@de,
+"Walloon"@en,
+"wallon"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "2002-01-29T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/wa> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/wln>,
+<http://id.loc.gov/vocabulary/languages/wln> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "wa"^^xsd:string ;
+skos:prefLabel "Wallonisch"@de,
+"Walloon"@en,
+"wallon"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "wallon"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Walloon"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Wallonisch"@de ] .
+
+# END /vocabulary/iso639-1/wa
+
+# BEGIN /vocabulary/iso639-1/wo
+
+<http://id.loc.gov/vocabulary/iso639-1/wo> a skos:Concept ;
+skos:altLabel "Wolof-Sprache"@de,
+"Wolof"@en,
+"wolof"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/wo> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/wol>,
+<http://id.loc.gov/vocabulary/languages/wol> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "wo"^^xsd:string ;
+skos:prefLabel "Wolof-Sprache"@de,
+"Wolof"@en,
+"wolof"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Wolof"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Wolof-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "wolof"@fr ] .
+
+# END /vocabulary/iso639-1/wo
+
+# BEGIN /vocabulary/iso639-1/xh
+
+<http://id.loc.gov/vocabulary/iso639-1/xh> a skos:Concept ;
+skos:altLabel "Xhosa-Sprache"@de,
+"Xhosa"@en,
+"xhosa"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/xh> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/xho>,
+<http://id.loc.gov/vocabulary/languages/xho> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "xh"^^xsd:string ;
+skos:prefLabel "Xhosa-Sprache"@de,
+"Xhosa"@en,
+"xhosa"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Xhosa-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Xhosa"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "xhosa"@fr ] .
+
+# END /vocabulary/iso639-1/xh
+
+# BEGIN /vocabulary/iso639-1/yi
+
+<http://id.loc.gov/vocabulary/iso639-1/yi> a skos:Concept ;
+skos:altLabel "Jiddisch"@de,
+"Yiddish"@en,
+"yiddish"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/yi> ],
+[ a cs:ChangeSet ;
+cs:changeReason "modified"^^xsd:string ;
+cs:createdDate "1989-03-11T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/yi> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/yid>,
+<http://id.loc.gov/vocabulary/languages/yid> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "yi"^^xsd:string ;
+skos:prefLabel "Jiddisch"@de,
+"Yiddish"@en,
+"yiddish"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "yiddish"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Yiddish"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Jiddisch"@de ] .
+
+# END /vocabulary/iso639-1/yi
+
+# BEGIN /vocabulary/iso639-1/yo
+
+<http://id.loc.gov/vocabulary/iso639-1/yo> a skos:Concept ;
+skos:altLabel "Yoruba-Sprache"@de,
+"Yoruba"@en,
+"yoruba"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/yo> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/yor>,
+<http://id.loc.gov/vocabulary/languages/yor> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "yo"^^xsd:string ;
+skos:prefLabel "Yoruba-Sprache"@de,
+"Yoruba"@en,
+"yoruba"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Yoruba-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "yoruba"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Yoruba"@en ] .
+
+# END /vocabulary/iso639-1/yo
+
+# BEGIN /vocabulary/iso639-1/za
+
+<http://id.loc.gov/vocabulary/iso639-1/za> a skos:Concept ;
+skos:altLabel "Zhuang"@de,
+"Chuang"@en,
+"Zhuang"@en,
+"chuang"@fr,
+"zhuang"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1989-03-11T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/za> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/zha>,
+<http://id.loc.gov/vocabulary/languages/zha> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "za"^^xsd:string ;
+skos:prefLabel "Zhuang"@de,
+"Zhuang | Chuang"@en,
+"zhuang | chuang"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Chuang"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "chuang"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "zhuang"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Zhuang"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Zhuang"@de ] .
+
+# END /vocabulary/iso639-1/za
+
+# BEGIN /vocabulary/iso639-1/zh
+
+<http://id.loc.gov/vocabulary/iso639-1/zh> a skos:Concept ;
+skos:altLabel "Chinesisch"@de,
+"Chinese"@en,
+"chinois"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/zh> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/chi>,
+<http://id.loc.gov/vocabulary/iso639-2/zho>,
+<http://id.loc.gov/vocabulary/languages/chi> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "zh"^^xsd:string ;
+skos:prefLabel "Chinesisch"@de,
+"Chinese"@en,
+"chinois"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "chinois"@fr ],
+[ a skosxl:Label ;
+skosxl:literalForm "Chinese"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "Chinesisch"@de ] .
+
+# END /vocabulary/iso639-1/zh
+
+# BEGIN /vocabulary/iso639-1/zu
+
+<http://id.loc.gov/vocabulary/iso639-1/zu> a skos:Concept ;
+skos:altLabel "Zulu-Sprache"@de,
+"Zulu"@en,
+"zoulou"@fr ;
+skos:changeNote [ a cs:ChangeSet ;
+cs:changeReason "new"^^xsd:string ;
+cs:createdDate "1970-01-01T00:00:00"^^xsd:dateTime ;
+cs:creatorName <http://id.loc.gov/vocabulary/organizations/dlc> ;
+cs:subjectOfChange <http://id.loc.gov/vocabulary/iso639-1/zu> ] ;
+skos:exactMatch <http://id.loc.gov/vocabulary/iso639-2/zul>,
+<http://id.loc.gov/vocabulary/languages/zul> ;
+skos:inScheme <http://id.loc.gov/vocabulary/iso639-1> ;
+skos:notation "zu"^^xsd:string ;
+skos:prefLabel "Zulu-Sprache"@de,
+"Zulu"@en,
+"zoulou"@fr ;
+skosxl:altLabel [ a skosxl:Label ;
+skosxl:literalForm "Zulu-Sprache"@de ],
+[ a skosxl:Label ;
+skosxl:literalForm "Zulu"@en ],
+[ a skosxl:Label ;
+skosxl:literalForm "zoulou"@fr ] .
+
+# END /vocabulary/iso639-1/zu
+

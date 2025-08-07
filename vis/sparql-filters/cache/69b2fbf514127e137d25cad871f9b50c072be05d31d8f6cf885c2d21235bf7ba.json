@@ -1,0 +1,851 @@
+{
+  "head": {
+    "link": [],
+    "vars": [
+      "value",
+      "count"
+    ]
+  },
+  "results": {
+    "distinct": false,
+    "ordered": true,
+    "bindings": [
+      {
+        "value": {
+          "type": "literal",
+          "value": "apache-2.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "26799"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "mit"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "26161"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "openrail"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "6487"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cc-by-4.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "5115"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "unknown"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2990"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "other"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2541"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cc-by-sa-4.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "2062"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cc-by-nc-4.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1801"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cc-by-nc-sa-4.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1727"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cc0-1.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1391"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cc"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1089"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cc-by-nc-nd-4.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "911"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "gpl-3.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "773"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "afl-3.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "772"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cc-by-sa-3.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "677"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "odc-by"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "642"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "gpl"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "487"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "creativeml-openrail-m"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "471"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "llama2"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "301"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cc-by-nd-4.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "230"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "wtfpl"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "226"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "llama3"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "222"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "unlicense"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "218"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "agpl-3.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "217"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cc-by-3.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "201"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "llama3.1"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "200"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cc-by-2.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "189"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "artistic-2.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "184"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "bsd"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "165"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "bigscience-openrail-m"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "161"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cc-by-nc-2.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "153"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "bsd-3-clause"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "151"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "llama3.2"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "119"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "odbl"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "115"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cc-by-nc-sa-3.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "104"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "pddl"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "95"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "gfdl"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "86"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cdla-permissive-2.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "83"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "gpl-2.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "80"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "c-uda"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "78"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cc-by-nc-3.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "78"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "openrail++"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "70"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "bigcode-openrail-m"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "67"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cdla-sharing-1.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "63"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cc-by-nc-nd-3.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "58"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "lgpl-3.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "58"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "bigscience-bloom-rail-1.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "58"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "llama3.3"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "57"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "bsd-2-clause"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "53"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cc-by-nc-sa-2.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "42"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "gemma"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "40"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "mpl-2.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "34"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "eupl-1.1"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "33"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "bsl-1.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "28"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cc-by-2.5"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "28"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "ecl-2.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "27"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "etalab-2.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "26"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "ms-pl"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "21"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "bsd-3-clause-clear"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "21"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "lgpl-lr"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "17"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "postgresql"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "17"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "lgpl"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "16"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "osl-3.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "12"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "cdla-permissive-1.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "10"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "lgpl-2.1"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "8"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "isc"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "7"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "zlib"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "6"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "ofl-1.1"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "6"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "apple-amlr"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "5"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "deepfloyd-if-license"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "5"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "ncsa"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "4"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "lppl-1.3c"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "4"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "epl-1.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "3"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "epl-2.0"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "3"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "apple-ascl"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "intel-research"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      }
+    ]
+  }
+}

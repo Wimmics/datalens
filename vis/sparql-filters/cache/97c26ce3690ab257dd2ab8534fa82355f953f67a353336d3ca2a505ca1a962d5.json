@@ -1,0 +1,774 @@
+{
+  "head": {
+    "link": [],
+    "vars": [
+      "value",
+      "count"
+    ]
+  },
+  "results": {
+    "distinct": false,
+    "ordered": true,
+    "bindings": [
+      {
+        "value": {
+          "type": "literal",
+          "value": "language-modeling"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1071"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "multi-class-classification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "782"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "extractive-qa"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "737"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "named-entity-recognition"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "721"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "document-retrieval"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "720"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "multi-label-classification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "682"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "topic-classification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "677"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "text-scoring"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "599"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "news-articles-summarization"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "545"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "sentiment-analysis"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "531"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "masked-language-modeling"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "261"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "open-domain-qa"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "238"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "multiple-choice-qa"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "233"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "natural-language-inference"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "220"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "sentiment-classification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "216"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "closed-domain-qa"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "164"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "visual-question-answering"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "106"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "semantic-similarity-scoring"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "75"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "multi-class-image-classification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "72"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "open-book-qa"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "67"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "fact-checking-retrieval"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "66"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "tabular-multi-class-classification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "66"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "closed-book-qa"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "66"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "tabular-multi-label-classification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "65"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "entity-linking-retrieval"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "65"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "parsing"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "63"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "semantic-similarity-classification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "62"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "image-captioning"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "57"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "dialogue-modeling"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "48"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "fact-checking"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "46"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "multi-input-text-classification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "45"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "hate-speech-detection"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "45"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "intent-classification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "45"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "part-of-speech"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "44"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "text-simplification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "36"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "dialogue-generation"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "34"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "sentiment-scoring"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "33"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "multivariate-time-series-forecasting"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "33"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "acceptability-classification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "28"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "abstractive-qa"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "28"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "semantic-segmentation"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "28"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "speaker-identification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "24"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "instance-segmentation"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "24"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "document-question-answering"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "21"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "multi-label-image-classification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "19"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "entity-linking-classification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "18"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "explanation-generation"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "17"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "slot-filling"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "16"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "conversational"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "15"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "open-domain-abstractive-qa"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "13"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "keyword-spotting"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "12"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "news-articles-headline-generation"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "12"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "word-sense-disambiguation"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "12"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "univariate-time-series-forecasting"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "12"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "lemmatization"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "11"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "coreference-resolution"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "11"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "tabular-single-column-regression"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "10"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "rdf-to-text"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "7"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "audio-emotion-recognition"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "6"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "task-planning"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "6"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "audio-language-identification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "6"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "face-detection"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "5"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "utterance-retrieval"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "5"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "multiple-choice-coreference-resolution"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "4"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "language-identification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "3"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "audio-intent-classification"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "3"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "grasping"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "3"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "image-inpainting"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      },
+      {
+        "value": {
+          "type": "literal",
+          "value": "panoptic-segmentation"
+        },
+        "count": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "value": "1"
+        }
+      }
+    ]
+  }
+}

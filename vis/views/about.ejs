@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataLens</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="/datalens/css/main.css" />
+  
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">DataLens</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/datalens">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/datalens/explorer">Explorer</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid mt-4">
+        <div class="container-fluid mt-4">
+            <div class="row">
+              
+              <div class="col-12">
+                <h2>Project Description</h2>
+                <p>
+                  This project is designed to empower researchers and data scientists by offering a seamless way to explore and discover valuable datasets from the Web. Leveraging a comprehensive collection of 211,894 datasets sourced from 
+                  <a href="https://huggingface.co/" target="_blank">HuggingFace</a> (as of June 2024), we provide an intuitive platform for uncovering insights within dataset metadata, such as common tasks and themes.
+                </p>
+                
+                <p>
+                  Our solution features MGExplorer (Menin et al., 2021), a powerful visualization tool that enables users to explore data through interconnected views. This innovative approach allows users to examine datasets from multiple perspectives and zoom in on the most relevant details with ease.
+                </p>
+          
+                
+                <!-- Centralized Image -->
+                <div class="text-center">
+                    <img src="/datalens/images/overview.png" alt="Illustrative Image" class="img-fluid rounded mb-4" style="width: 50%; display: block; margin: 0 auto;">
+                </div>
+
+                <p style="font-size: 10px;">Aline Menin, Ricardo Cava, Carla Maria Dal Sasso Freitas, Olivier Corby, Marco Winckler. Towards a Visual Approach for Representing Analytical Provenance in Exploration Processes. IV 2021 - 25th International Conference Information Visualisation, Jul 2021, Melbourne / Virtual, Australia. pp.21-28, (<a href="https://dx.doi.org/10.1109/IV53921.2021.00014">10.1109/IV53921.2021.00014.</a>). (<a href="https://hal.science/hal-03292172">hal-03292172</a>)</p>
+
+                <h3>How It Works</h3>
+                <p>
+                  To get started, users define the relationship network they wish to explore by selecting nodes, links, and thematic data. With dynamic filters, they can refine the dataset to remove irrelevant information. From there, MGExplorer's advanced visualization techniques make it simple to navigate through the network and uncover meaningful insights.
+                </p>
+          
+                <!-- GitHub Links -->
+                <h4>GitHub Links</h4>
+                The source code is available on <a href="https://github.com/amenin/datalens">GitHub</a> under an Apache 2.0 license.
+                
+                <!-- Contact Section -->
+                <h4>Contact</h4>
+                <p>
+                  For more information, reach out via email: 
+                  <a href="mailto:aline.menin@inria.fr">aline.menin@inria.fr</a>,
+                  <a href="mailto:anais.ollagnier@inria.fr">anais.ollagnier@inria.fr</a>
+                </p>
+              </div>
+              
+            </div>
+          </div>
+          
+    </div>
+
+  <!-- Footer Section -->
+  <footer class="bg-light text-center" style="height: 50px; display: flex; justify-content: center; align-items: center; gap: 15px;">
+    <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+      <img src="/datalens/images/logos/uca.png" alt="UCA" style="height: 20px;">
+      <img src="/datalens/images/logos/cnrs.png" alt="CNRS" style="height: 20px;">
+      <img src="/datalens/images/logos/inria.png" alt="Inria" style="height: 20px;">
+      <img src="/datalens/images/logos/i3s.png" alt="I3S" style="height: 20px;">
+      <img src="/datalens/images/logos/wimmics.png" alt="Wimmics" style="height: 20px;">
+    </div>
+    <p style="margin: 0; padding-left: 15px; line-height: 40px; font-size: 12px;">&copy; 2024 DataLens. All rights reserved.</p>
+  </footer>
+  
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

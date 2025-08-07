@@ -1,7 +1,3 @@
-data/**
-
-
-
 # Logs
 logs
 *.log
@@ -324,3 +320,16 @@ cython_debug/
 #.idea/
 
 
+# Server config files
+corese-server/config/**
+corese-server/log/**
+corese-server/corese-data/**
+
+virtuoso-server/virtuoso-data/**
+
+# Case study input and output data
+case-study/data/**
+
+# visualization files
+vis/node_modules/**
+vis/package-lock.json

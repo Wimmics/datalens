@@ -1,0 +1,35 @@
+
+{
+    "spo-query": "query1.rq",
+    "author-query": "query2.rq",
+    "bindings": {
+        "link": "BIND (?$key as ?p) .",
+        "source": "BIND (?$key as ?s) .",
+        "target": "BIND (?$key as ?o) .",
+        "theme": "BIND (?$key as ?type) ."
+    },
+    "dataset": "?dataset a dcat:Dataset ; dct:identifier ?label ; dct:issued ?issued ; dcat:landingPage ?url .",
+    "attrs": {
+        "taskCategory": "?dataset mluo:hasUsage [ mluo:hasTaskCategory [ rdfs:label ?$key ] ] .",
+        "task": "?dataset mluo:hasUsage [ mluo:hasTask [ rdfs:label ?$key ] ] .",
+        "modality": "?dataset mluo:hasModality [ skos:prefLabel ?$key ] .",
+        "license": "?dataset dcat:distribution [ dct:license [ rdfs:label ?$key ] ] .",
+        "format": "?dataset dcat:distribution [ dct:format [ rdfs:label ?$key ] ] .",
+        "language": "?dataset dct:language [ skos:prefLabel ?$key ] . FILTER langMatches(lang(?$key), \"en\")",
+        
+        "size": "?dataset mluo:rowsSize ?$key . ",
+        "issued": "?dataset dct:issued ?$key . ",
+        "modified": "?dataset dct:modified ?$key . ",
+        "downloadCount": "?dataset mluo:downloadCount ?$key . ",
+        "likesCount": "?dataset mluo:likesCount ?$key . "
+    },
+    "links": {
+        "taskCategory": "?taskCategory a mluo:TaskCategory ; rdfs:label ?label . ?dataset mluo:hasUsage [ mluo:hasTaskCategory ?taskCategory ] . ",
+        "task": "?task a mluo:Task ; rdfs:label ?label . ?dataset mluo:hasUsage [ mluo:hasTask ?task ] . ",
+        "modality": "?modality a mluo:Modality ; skos:prefLabel ?label . ?dataset mluo:hasModality ?modality . ",
+        "license": "?license a dct:LicenseDocument ; rdfs:label ?label . ?dataset dcat:distribution [ dct:license ?license ] . ",
+        "format": "?format a dct:MediaTypeOrExtent ; rdfs:label ?label . ?dataset dcat:distribution [ dct:format ?format ] . ",
+        "language": "?language a dct:Language ; skos:prefLabel ?label . FILTER langMatches(lang(?label), \"en\") . ?dataset dct:language ?language . "
+    }
+
+}
