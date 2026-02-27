@@ -10,9 +10,19 @@
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 
 @prefix mluo: <http://example.org/mluo/ontology#> .
-@prefix mluo_th: <http://example.org/mluo/thesaurus#> .
 
 # Name idea : MLUO : Machine Learning Usage Ontology
+
+mluo: a owl:Ontology ;
+    dcterms:title "Machine Learning Usage Ontology"@en ;
+    dcterms:creator "Aline MENIN", "Zachari ARNAUD" ;
+    dcterms:modified "2026-02-25" ;
+    dcterms:description "The MLUO defines concepts and relationships for datasets and machine learning models."@en ;
+    owl:versionInfo "1.0" ;
+    dcat:landingPage <https://github.com/amenin/datalens> ;
+    dcterms:license  <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dcterms:created "2026"^^xsd:gYear ;
+    dcterms:publisher "Inria", "University Côte d'Azur", "CNRS" .
 
 ## Annotations
 
@@ -133,75 +143,3 @@ mluo:paperswithcode_id a owl:ObjectProperty ;
 mluo:Modality a owl:Class ;
     rdfs:label "Modality"@en ;
     rdfs:comment "A type of data modality used in the context of machine learning."@en .
-
-
-
-
-
-
-## ------------- SKOS Thesaurus for Machine Learning Usage -----------------
-
-## Modality Scheme
-mluo_th:ModalityScheme a skos:ConceptScheme ;
-    skos:prefLabel "Dataset Modality Scheme"@en ;
-    skos:definition "A controlled vocabulary for describing the data modality of datasets used in machine learning."@en ;
-    skos:hasTopConcept 
-        mluo_th:3D,
-        mluo_th:Audio,
-        mluo_th:Document,
-        mluo_th:Geospatial,
-        mluo_th:Image,
-        mluo_th:Tabular,
-        mluo_th:Text,
-        mluo_th:TimeSeries,
-        mluo_th:Video .
-
-mluo_th:3D a skos:Concept, mluo:Modality ;
-    skos:prefLabel "3D"@en ;
-    skos:definition "Three-dimensional spatial data, such as point clouds or meshes."@en ;
-    skos:inScheme mluo_th:ModalityScheme .
-
-mluo_th:Audio a skos:Concept, mluo:Modality ;
-    skos:prefLabel "Audio"@en ;
-    skos:definition "Sound data, such as speech or environmental recordings."@en ;
-    skos:inScheme mluo_th:ModalityScheme .
-
-mluo_th:Document a skos:Concept, mluo:Modality ;
-    skos:prefLabel "Document"@en ;
-    skos:definition "Structured textual documents, such as PDFs or HTML pages."@en ;
-    skos:inScheme mluo_th:ModalityScheme .
-
-mluo_th:Geospatial a skos:Concept, mluo:Modality ;
-    skos:prefLabel "Geospatial"@en ;
-    skos:definition "Data with spatial/geographic components, such as GIS data."@en ;
-    skos:inScheme mluo_th:ModalityScheme .
-
-mluo_th:Image a skos:Concept, mluo:Modality ;
-    skos:prefLabel "Image"@en ;
-    skos:definition "Visual raster data, such as photographs or satellite imagery."@en ;
-    skos:inScheme mluo_th:ModalityScheme .
-
-mluo_th:Tabular a skos:Concept, mluo:Modality ;
-    skos:prefLabel "Tabular"@en ;
-    skos:definition "Structured data organized in rows and columns, such as spreadsheets or CSV files."@en ;
-    skos:inScheme mluo_th:ModalityScheme .
-
-mluo_th:Text a skos:Concept, mluo:Modality ;
-    skos:prefLabel "Text"@en ;
-    skos:definition "Unstructured or semi-structured plain text data."@en ;
-    skos:inScheme mluo_th:ModalityScheme .
-
-mluo_th:TimeSeries a skos:Concept, mluo:Modality ;
-    skos:prefLabel "Time-series"@en ;
-    skos:altLabel "Time series"@en ;
-    skos:definition "Sequential data indexed by time, such as sensor readings or stock prices."@en ;
-    skos:inScheme mluo_th:ModalityScheme .
-
-mluo_th:Video a skos:Concept, mluo:Modality ;
-    skos:prefLabel "Video"@en ;
-    skos:definition "Temporal sequences of images, optionally with audio."@en ;
-    skos:inScheme mluo_th:ModalityScheme .
-
-
-
-

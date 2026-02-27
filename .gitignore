@@ -330,6 +330,9 @@ virtuoso-server/virtuoso-data/**
 # Case study input and output data
 case-study/data/**
 
+ontology/do_not_commit/**
+artifacts/**
+
 # visualization files
 vis/node_modules/**
 vis/package-lock.json
