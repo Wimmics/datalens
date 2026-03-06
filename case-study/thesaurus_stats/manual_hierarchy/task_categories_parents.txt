@@ -1,0 +1,203 @@
+TASK CATEGORIES -> ALL PARENTS
+COUNT: 57
+
+text-generation: (Text Generation):
+  - generative-ia-tasks (Generative AI) | distance=1
+
+text-classification: (Text Classification):
+  - classification-tasks (Classification) | distance=1
+  - supervised-tasks (Supervised Learning) | distance=2
+
+question-answering: (Question Answering):
+  - conversational-tasks (Conversational AI) | distance=1
+  - nlp-tasks (Natural Language Processing) | distance=2
+
+text-to-image: (Text-to-Image):
+  - multimodal-tasks (Multimodal AI) | distance=1
+  - generative-ia-tasks (Generative AI) | distance=2
+
+translation: (Translation):
+  - nlp-tasks (Natural Language Processing) | distance=1
+
+image-classification: (Image Classification):
+  - classification-tasks (Classification) | distance=1
+  - supervised-tasks (Supervised Learning) | distance=2
+
+summarization: (Summarization):
+  - nlp-tasks (Natural Language Processing) | distance=1
+
+image-to-text: (Image-to-Text):
+  - multimodal-tasks (Multimodal AI) | distance=1
+  - generative-ia-tasks (Generative AI) | distance=2
+
+token-classification: (Token Classification):
+  - classification-tasks (Classification) | distance=1
+  - supervised-tasks (Supervised Learning) | distance=2
+
+automatic-speech-recognition: (Automatic Speech Recognition):
+  - nlp-tasks (Natural Language Processing) | distance=1
+
+feature-extraction: (Feature Extraction):
+  - feature-engineering-tasks (Feature Engineering) | distance=1
+
+tabular-classification: (Tabular Classification):
+  - classification-tasks (Classification) | distance=1
+  - supervised-tasks (Supervised Learning) | distance=2
+
+object-detection: (Object Detection):
+  - computer-vision-tasks (Computer Vision) | distance=1
+
+visual-question-answering: (Visual Question Answering):
+  - conversational-tasks (Conversational AI) | distance=1
+  - nlp-tasks (Natural Language Processing) | distance=2
+
+image-segmentation: (Image Segmentation):
+  - computer-vision-tasks (Computer Vision) | distance=1
+
+table-question-answering: (Table Question Answering):
+  - conversational-tasks (Conversational AI) | distance=1
+  - nlp-tasks (Natural Language Processing) | distance=2
+
+tabular-regression: (Tabular Regression):
+  - supervised-tasks (Supervised Learning) | distance=1
+
+text-to-speech: (Text-to-Speech):
+  - multimodal-tasks (Multimodal AI) | distance=1
+  - generative-ia-tasks (Generative AI) | distance=2
+
+sentence-similarity: (Sentence Similarity):
+  - nlp-tasks (Natural Language Processing) | distance=1
+
+fill-mask: (Fill-Mask):
+  - generative-ia-tasks (Generative AI) | distance=1
+
+zero-shot-classification: (Zero-Shot Classification):
+  - classification-tasks (Classification) | distance=1
+  - supervised-tasks (Supervised Learning) | distance=2
+
+audio-classification: (Audio Classification):
+  - classification-tasks (Classification) | distance=1
+  - supervised-tasks (Supervised Learning) | distance=2
+
+image-to-image: (Image-to-Image):
+  - multimodal-tasks (Multimodal AI) | distance=1
+  - generative-ia-tasks (Generative AI) | distance=2
+
+video-classification: (Video Classification):
+  - classification-tasks (Classification) | distance=1
+  - supervised-tasks (Supervised Learning) | distance=2
+
+image-text-to-text: (Image-Text-to-Text):
+  - multimodal-tasks (Multimodal AI) | distance=1
+  - generative-ia-tasks (Generative AI) | distance=2
+
+reinforcement-learning: (Reinforcement Learning):
+  - reinforcement-tasks (Reinforcement Learning) | distance=1
+
+audio-to-audio: (Audio-to-Audio):
+  - multimodal-tasks (Multimodal AI) | distance=1
+  - generative-ia-tasks (Generative AI) | distance=2
+
+image-feature-extraction: (Image Feature Extraction):
+  - feature-engineering-tasks (Feature Engineering) | distance=1
+
+zero-shot-image-classification: (Zero-Shot Image Classification):
+  - classification-tasks (Classification) | distance=1
+  - supervised-tasks (Supervised Learning) | distance=2
+
+video-text-to-text: (Video-Text-to-Text):
+  - multimodal-tasks (Multimodal AI) | distance=1
+  - generative-ia-tasks (Generative AI) | distance=2
+
+text-to-video: (Text-to-Video):
+  - multimodal-tasks (Multimodal AI) | distance=1
+  - generative-ia-tasks (Generative AI) | distance=2
+
+visual-document-retrieval: (Visual Document Retrieval):
+  - multimodal-tasks (Multimodal AI) | distance=1
+  - generative-ia-tasks (Generative AI) | distance=2
+
+text-ranking: (Text Ranking):
+  - nlp-tasks (Natural Language Processing) | distance=1
+
+image-to-3d: (Image-to-3D):
+  - multimodal-tasks (Multimodal AI) | distance=1
+  - generative-ia-tasks (Generative AI) | distance=2
+
+document-question-answering: (Document Question Answering):
+  - conversational-tasks (Conversational AI) | distance=1
+  - nlp-tasks (Natural Language Processing) | distance=2
+
+image-to-video: (Image-to-Video):
+  - multimodal-tasks (Multimodal AI) | distance=1
+  - generative-ia-tasks (Generative AI) | distance=2
+
+depth-estimation: (Depth Estimation):
+  - computer-vision-tasks (Computer Vision) | distance=1
+
+unconditional-image-generation: (Unconditional Image Generation):
+  - generative-ia-tasks (Generative AI) | distance=1
+
+text-to-3d: (Text-to-3D):
+  - multimodal-tasks (Multimodal AI) | distance=1
+  - generative-ia-tasks (Generative AI) | distance=2
+
+mask-generation: (Mask Generation):
+  - generative-ia-tasks (Generative AI) | distance=1
+
+any-to-any: (Any-to-Any):
+  - multimodal-tasks (Multimodal AI) | distance=1
+  - generative-ia-tasks (Generative AI) | distance=2
+
+audio-text-to-text: (Audio-Text-to-Text):
+  - multimodal-tasks (Multimodal AI) | distance=1
+  - generative-ia-tasks (Generative AI) | distance=2
+
+keypoint-detection: (Keypoint Detection):
+  - computer-vision-tasks (Computer Vision) | distance=1
+
+zero-shot-object-detection: (Zero-Shot Object Detection):
+  - computer-vision-tasks (Computer Vision) | distance=1
+
+image-text-to-image: (Image-Text-to-Image):
+  - multimodal-tasks (Multimodal AI) | distance=1
+  - generative-ia-tasks (Generative AI) | distance=2
+
+video-to-video: (Video-to-Video):
+  - multimodal-tasks (Multimodal AI) | distance=1
+  - generative-ia-tasks (Generative AI) | distance=2
+
+image-text-to-video: (Image-Text-to-Video):
+  - multimodal-tasks (Multimodal AI) | distance=1
+  - generative-ia-tasks (Generative AI) | distance=2
+
+robotics: (Robotics):
+  - NO_PARENT
+
+text-retrieval: (Text Retrieval):
+  - NO_PARENT
+
+other: (Other):
+  - NO_PARENT
+
+multiple-choice: (Multiple Choice):
+  - NO_PARENT
+
+time-series-forecasting: (Time Series Forecasting):
+  - NO_PARENT
+
+graph-ml: (Graph Ml):
+  - NO_PARENT
+
+text-to-audio: (Text To Audio):
+  - NO_PARENT
+
+table-to-text: (Table To Text):
+  - NO_PARENT
+
+voice-activity-detection: (Voice Activity Detection):
+  - NO_PARENT
+
+tabular-to-text: (Tabular To Text):
+  - NO_PARENT
+

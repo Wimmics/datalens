@@ -53,8 +53,6 @@ The `build-virtuoso-server.sh` script performs the following operations:
    - Registers all TTL files in the database
    - Loads RDF data into the graph: `http://example.org/data`
 
-**Obs.:** In the current version of the script, access to `/data` inside the container does not seem to work. Thus, the data loading part does not work as expected. For testing, manually load the `.ttl` files through the web interface `http://localhost:8890/conductor`, then Linked Data -> Quad Store Upload
-
 ## Configuration
 
 ### Docker Compose

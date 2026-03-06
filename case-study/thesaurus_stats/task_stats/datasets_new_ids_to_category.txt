@@ -1,0 +1,207 @@
+TASK ID -> TASK CATEGORY:
+language-modeling (1347 datasets):
+  text-generation: 1292 (95.92%) | reverse: 7.83%
+
+multi-class-classification (1049 datasets):
+  text-classification: 1004 (95.71%) | reverse: 8.68%
+
+named-entity-recognition (892 datasets):
+  token-classification: 864 (96.86%) | reverse: 35.70%
+
+extractive-qa (870 datasets):
+  question-answering: 863 (99.20%) | reverse: 8.33%
+  text-classification: 682 (78.39%) | reverse: 5.90%
+  text-generation: 677 (77.82%) | reverse: 4.10%
+
+topic-classification (861 datasets):
+  text-classification: 857 (99.54%) | reverse: 7.41%
+  text-generation: 691 (80.26%) | reverse: 4.19%
+  question-answering: 666 (77.35%) | reverse: 6.43%
+
+multi-label-classification (852 datasets):
+  text-classification: 846 (99.30%) | reverse: 7.31%
+  text-generation: 666 (78.17%) | reverse: 4.04%
+  question-answering: 663 (77.82%) | reverse: 6.40%
+
+document-retrieval (831 datasets):
+  text-retrieval: 805 (96.87%) | reverse: 27.97%
+
+sentiment-analysis (776 datasets):
+  text-classification: 770 (99.23%) | reverse: 6.66%
+  text-generation: 602 (77.58%) | reverse: 3.65%
+  summarization: 599 (77.19%) | reverse: 21.20%
+  token-classification: 597 (76.93%) | reverse: 24.67%
+  question-answering: 595 (76.68%) | reverse: 5.74%
+
+text-scoring (729 datasets):
+  text-classification: 719 (98.63%) | reverse: 6.22%
+  text-generation: 621 (85.19%) | reverse: 3.76%
+  question-answering: 606 (83.13%) | reverse: 5.85%
+  summarization: 598 (82.03%) | reverse: 21.17%
+  token-classification: 598 (82.03%) | reverse: 24.71%
+
+news-articles-summarization (655 datasets):
+  summarization: 650 (99.24%) | reverse: 23.01%
+  text-classification: 610 (93.13%) | reverse: 5.27%
+  text-generation: 601 (91.76%) | reverse: 3.64%
+  question-answering: 593 (90.53%) | reverse: 5.72%
+  token-classification: 592 (90.38%) | reverse: 24.46%
+
+sentiment-classification (446 datasets):
+  text-classification: 439 (98.43%) | reverse: 3.79%
+
+open-domain-qa (327 datasets):
+  question-answering: 316 (96.64%) | reverse: 3.05%
+
+masked-language-modeling (322 datasets):
+  fill-mask: 302 (93.79%) | reverse: 36.00%
+  text-generation: 295 (91.61%) | reverse: 1.79%
+
+natural-language-inference (273 datasets):
+  text-classification: 242 (88.64%) | reverse: 2.09%
+
+closed-domain-qa (202 datasets):
+  question-answering: 197 (97.52%) | reverse: 1.90%
+
+hate-speech-detection (177 datasets):
+  text-classification: 171 (96.61%) | reverse: 1.48%
+
+multi-class-image-classification (160 datasets):
+  image-classification: 160 (100.00%) | reverse: 5.26%
+
+sentiment-scoring (148 datasets):
+  text-classification: 144 (97.30%) | reverse: 1.24%
+
+semantic-similarity-classification (111 datasets):
+  text-classification: 94 (84.68%) | reverse: 0.81%
+
+tabular-multi-class-classification (96 datasets):
+  tabular-classification: 88 (91.67%) | reverse: 4.99%
+
+intent-classification (89 datasets):
+  text-classification: 84 (94.38%) | reverse: 0.73%
+
+image-captioning (88 datasets):
+  image-to-text: 82 (93.18%) | reverse: 3.25%
+
+fact-checking-retrieval (88 datasets):
+  text-retrieval: 85 (96.59%) | reverse: 2.95%
+
+visual-question-answering (85 datasets):
+  visual-question-answering: 70 (82.35%) | reverse: 4.70%
+
+fact-checking (76 datasets):
+  text-classification: 58 (76.32%) | reverse: 0.50%
+
+closed-book-qa (75 datasets):
+  question-answering: 74 (98.67%) | reverse: 0.71%
+  text-generation: 68 (90.67%) | reverse: 0.41%
+  multiple-choice: 62 (82.67%) | reverse: 8.00%
+  table-question-answering: 62 (82.67%) | reverse: 5.68%
+  tabular-classification: 62 (82.67%) | reverse: 3.51%
+  text-classification: 62 (82.67%) | reverse: 0.54%
+  zero-shot-classification: 62 (82.67%) | reverse: 7.56%
+
+open-book-qa (74 datasets):
+  question-answering: 73 (98.65%) | reverse: 0.70%
+  text-generation: 68 (91.89%) | reverse: 0.41%
+  multiple-choice: 62 (83.78%) | reverse: 8.00%
+  table-question-answering: 62 (83.78%) | reverse: 5.68%
+  tabular-classification: 62 (83.78%) | reverse: 3.51%
+  text-classification: 62 (83.78%) | reverse: 0.54%
+  zero-shot-classification: 62 (83.78%) | reverse: 7.56%
+
+semantic-segmentation (73 datasets):
+  image-segmentation: 68 (93.15%) | reverse: 6.18%
+
+entity-linking-retrieval (72 datasets):
+  text-retrieval: 70 (97.22%) | reverse: 2.43%
+
+tabular-multi-label-classification (66 datasets):
+  tabular-classification: 64 (96.97%) | reverse: 3.63%
+  text-classification: 64 (96.97%) | reverse: 0.55%
+  text-generation: 64 (96.97%) | reverse: 0.39%
+  multiple-choice: 62 (93.94%) | reverse: 8.00%
+  question-answering: 62 (93.94%) | reverse: 0.60%
+  table-question-answering: 62 (93.94%) | reverse: 5.68%
+  zero-shot-classification: 62 (93.94%) | reverse: 7.56%
+
+dialogue-modeling (63 datasets):
+  text-generation: 58 (92.06%) | reverse: 0.35%
+
+part-of-speech (60 datasets):
+  token-classification: 50 (83.33%) | reverse: 2.07%
+
+multi-input-text-classification (53 datasets):
+  text-classification: 52 (98.11%) | reverse: 0.45%
+
+acceptability-classification (50 datasets):
+  text-classification: 47 (94.00%) | reverse: 0.41%
+
+instance-segmentation (43 datasets):
+  image-segmentation: 34 (79.07%) | reverse: 3.09%
+
+multivariate-time-series-forecasting (41 datasets):
+  time-series-forecasting: 40 (97.56%) | reverse: 6.29%
+
+text2text-generation (37 datasets):
+  text-generation: 33 (89.19%) | reverse: 0.20%
+
+speaker-identification (35 datasets):
+  audio-classification: 30 (85.71%) | reverse: 3.76%
+  automatic-speech-recognition: 30 (85.71%) | reverse: 1.51%
+
+multi-label-image-classification (26 datasets):
+  image-classification: 25 (96.15%) | reverse: 0.82%
+
+entity-linking-classification (21 datasets):
+  text-classification: 18 (85.71%) | reverse: 0.16%
+
+univariate-time-series-forecasting (20 datasets):
+  time-series-forecasting: 19 (95.00%) | reverse: 2.99%
+
+language-identification (14 datasets):
+  text-classification: 13 (92.86%) | reverse: 0.11%
+
+audio-language-identification (12 datasets):
+  audio-classification: 10 (83.33%) | reverse: 1.25%
+
+news-articles-headline-generation (12 datasets):
+  summarization: 10 (83.33%) | reverse: 0.35%
+
+image-inpainting (12 datasets):
+  image-to-image: 12 (100.00%) | reverse: 1.55%
+
+coreference-resolution (11 datasets):
+  token-classification: 10 (90.91%) | reverse: 0.41%
+
+utterance-retrieval (11 datasets):
+  text-retrieval: 10 (90.91%) | reverse: 0.35%
+
+vehicle-detection (10 datasets):
+  object-detection: 10 (100.00%) | reverse: 0.67%
+
+audio-emotion-recognition (8 datasets):
+  audio-classification: 7 (87.50%) | reverse: 0.88%
+
+grasping (7 datasets):
+  robotics: 7 (100.00%) | reverse: 0.02%
+
+audio-intent-classification (5 datasets):
+  automatic-speech-recognition: 4 (80.00%) | reverse: 0.20%
+
+multiple-choice-coreference-resolution (5 datasets):
+  multiple-choice: 5 (100.00%) | reverse: 0.65%
+
+image-colorization (2 datasets):
+  image-to-image: 2 (100.00%) | reverse: 0.26%
+
+panoptic-segmentation (1 datasets):
+  image-segmentation: 1 (100.00%) | reverse: 0.09%
+  object-detection: 1 (100.00%) | reverse: 0.07%
+  other: 1 (100.00%) | reverse: 0.09%
+
+super-resolution (1 datasets):
+  image-segmentation: 1 (100.00%) | reverse: 0.09%
+  other: 1 (100.00%) | reverse: 0.09%
+

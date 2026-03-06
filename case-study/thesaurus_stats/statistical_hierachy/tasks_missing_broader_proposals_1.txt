@@ -1,0 +1,243 @@
+MISSING TASK IDS -> BROADER PROPOSALS
+Rules: use all categories with pct > 90%; if none, use top category only if pct > 80%.
+
+COUNT_TOTAL: 72
+COUNT_WITH_BROADER: 51
+COUNT_WITHOUT_BROADER: 21
+
+WITH_BROADER:
+
+language-modeling: (Language Modeling) | datasets=1347
+  - text-generation | pct=95.92% | pair_count=1292 | rule=pct>90
+
+multi-class-classification: (Multi Class Classification) | datasets=1049
+  - text-classification | pct=95.71% | pair_count=1004 | rule=pct>90
+
+named-entity-recognition: (Named Entity Recognition) | datasets=892
+  - token-classification | pct=96.86% | pair_count=864 | rule=pct>90
+
+extractive-qa: (Extractive Qa) | datasets=870
+  - question-answering | pct=99.20% | pair_count=863 | rule=pct>90
+
+topic-classification: (Topic Classification) | datasets=861
+  - text-classification | pct=99.54% | pair_count=857 | rule=pct>90
+
+multi-label-classification: (Multi Label Classification) | datasets=852
+  - text-classification | pct=99.30% | pair_count=846 | rule=pct>90
+
+document-retrieval: (Document Retrieval) | datasets=831
+  - text-retrieval | pct=96.87% | pair_count=805 | rule=pct>90
+
+sentiment-analysis: (Sentiment Analysis) | datasets=776
+  - text-classification | pct=99.23% | pair_count=770 | rule=pct>90
+
+text-scoring: (Text Scoring) | datasets=729
+  - text-classification | pct=98.63% | pair_count=719 | rule=pct>90
+
+news-articles-summarization: (News Articles Summarization) | datasets=655
+  - summarization | pct=99.24% | pair_count=650 | rule=pct>90
+  - text-classification | pct=93.13% | pair_count=610 | rule=pct>90
+  - text-generation | pct=91.76% | pair_count=601 | rule=pct>90
+  - question-answering | pct=90.53% | pair_count=593 | rule=pct>90
+  - token-classification | pct=90.38% | pair_count=592 | rule=pct>90
+
+sentiment-classification: (Sentiment Classification) | datasets=446
+  - text-classification | pct=98.43% | pair_count=439 | rule=pct>90
+
+open-domain-qa: (Open Domain Qa) | datasets=327
+  - question-answering | pct=96.64% | pair_count=316 | rule=pct>90
+
+masked-language-modeling: (Masked Language Modeling) | datasets=322
+  - fill-mask | pct=93.79% | pair_count=302 | rule=pct>90
+  - text-generation | pct=91.61% | pair_count=295 | rule=pct>90
+
+natural-language-inference: (Natural Language Inference) | datasets=273
+  - text-classification | pct=88.64% | pair_count=242 | rule=best_pct>80
+
+closed-domain-qa: (Closed Domain Qa) | datasets=202
+  - question-answering | pct=97.52% | pair_count=197 | rule=pct>90
+
+hate-speech-detection: (Hate Speech Detection) | datasets=177
+  - text-classification | pct=96.61% | pair_count=171 | rule=pct>90
+
+multi-class-image-classification: (Multi Class Image Classification) | datasets=160
+  - image-classification | pct=100.00% | pair_count=160 | rule=pct>90
+
+sentiment-scoring: (Sentiment Scoring) | datasets=148
+  - text-classification | pct=97.30% | pair_count=144 | rule=pct>90
+
+semantic-similarity-classification: (Semantic Similarity Classification) | datasets=111
+  - text-classification | pct=84.68% | pair_count=94 | rule=best_pct>80
+
+tabular-multi-class-classification: (Tabular Multi Class Classification) | datasets=96
+  - tabular-classification | pct=91.67% | pair_count=88 | rule=pct>90
+
+intent-classification: (Intent Classification) | datasets=89
+  - text-classification | pct=94.38% | pair_count=84 | rule=pct>90
+
+image-captioning: (Image Captioning) | datasets=88
+  - image-to-text | pct=93.18% | pair_count=82 | rule=pct>90
+
+fact-checking-retrieval: (Fact Checking Retrieval) | datasets=88
+  - text-retrieval | pct=96.59% | pair_count=85 | rule=pct>90
+
+closed-book-qa: (Closed Book Qa) | datasets=75
+  - question-answering | pct=98.67% | pair_count=74 | rule=pct>90
+  - text-generation | pct=90.67% | pair_count=68 | rule=pct>90
+
+open-book-qa: (Open Book Qa) | datasets=74
+  - question-answering | pct=98.65% | pair_count=73 | rule=pct>90
+  - text-generation | pct=91.89% | pair_count=68 | rule=pct>90
+
+semantic-segmentation: (Semantic Segmentation) | datasets=73
+  - image-segmentation | pct=93.15% | pair_count=68 | rule=pct>90
+
+entity-linking-retrieval: (Entity Linking Retrieval) | datasets=72
+  - text-retrieval | pct=97.22% | pair_count=70 | rule=pct>90
+
+tabular-multi-label-classification: (Tabular Multi Label Classification) | datasets=66
+  - tabular-classification | pct=96.97% | pair_count=64 | rule=pct>90
+  - text-classification | pct=96.97% | pair_count=64 | rule=pct>90
+  - text-generation | pct=96.97% | pair_count=64 | rule=pct>90
+  - multiple-choice | pct=93.94% | pair_count=62 | rule=pct>90
+  - question-answering | pct=93.94% | pair_count=62 | rule=pct>90
+  - table-question-answering | pct=93.94% | pair_count=62 | rule=pct>90
+  - zero-shot-classification | pct=93.94% | pair_count=62 | rule=pct>90
+
+dialogue-modeling: (Dialogue Modeling) | datasets=63
+  - text-generation | pct=92.06% | pair_count=58 | rule=pct>90
+
+part-of-speech: (Part Of Speech) | datasets=60
+  - token-classification | pct=83.33% | pair_count=50 | rule=best_pct>80
+
+multi-input-text-classification: (Multi Input Text Classification) | datasets=53
+  - text-classification | pct=98.11% | pair_count=52 | rule=pct>90
+
+acceptability-classification: (Acceptability Classification) | datasets=50
+  - text-classification | pct=94.00% | pair_count=47 | rule=pct>90
+
+multivariate-time-series-forecasting: (Multivariate Time Series Forecasting) | datasets=41
+  - time-series-forecasting | pct=97.56% | pair_count=40 | rule=pct>90
+
+text2text-generation: (Text2Text Generation) | datasets=37
+  - text-generation | pct=89.19% | pair_count=33 | rule=best_pct>80
+
+speaker-identification: (Speaker Identification) | datasets=35
+  - automatic-speech-recognition | pct=85.71% | pair_count=30 | rule=best_pct>80
+
+multi-label-image-classification: (Multi Label Image Classification) | datasets=26
+  - image-classification | pct=96.15% | pair_count=25 | rule=pct>90
+
+entity-linking-classification: (Entity Linking Classification) | datasets=21
+  - text-classification | pct=85.71% | pair_count=18 | rule=best_pct>80
+
+univariate-time-series-forecasting: (Univariate Time Series Forecasting) | datasets=20
+  - time-series-forecasting | pct=95.00% | pair_count=19 | rule=pct>90
+
+language-identification: (Language Identification) | datasets=14
+  - text-classification | pct=92.86% | pair_count=13 | rule=pct>90
+
+audio-language-identification: (Audio Language Identification) | datasets=12
+  - audio-classification | pct=83.33% | pair_count=10 | rule=best_pct>80
+
+news-articles-headline-generation: (News Articles Headline Generation) | datasets=12
+  - summarization | pct=83.33% | pair_count=10 | rule=best_pct>80
+
+image-inpainting: (Image Inpainting) | datasets=12
+  - image-to-image | pct=100.00% | pair_count=12 | rule=pct>90
+
+coreference-resolution: (Coreference Resolution) | datasets=11
+  - token-classification | pct=90.91% | pair_count=10 | rule=pct>90
+
+utterance-retrieval: (Utterance Retrieval) | datasets=11
+  - text-retrieval | pct=90.91% | pair_count=10 | rule=pct>90
+
+vehicle-detection: (Vehicle Detection) | datasets=10
+  - object-detection | pct=100.00% | pair_count=10 | rule=pct>90
+
+audio-emotion-recognition: (Audio Emotion Recognition) | datasets=8
+  - audio-classification | pct=87.50% | pair_count=7 | rule=best_pct>80
+
+grasping: (Grasping) | datasets=7
+  - robotics | pct=100.00% | pair_count=7 | rule=pct>90
+
+multiple-choice-coreference-resolution: (Multiple Choice Coreference Resolution) | datasets=5
+  - multiple-choice | pct=100.00% | pair_count=5 | rule=pct>90
+
+image-colorization: (Image Colorization) | datasets=2
+  - image-to-image | pct=100.00% | pair_count=2 | rule=pct>90
+
+panoptic-segmentation: (Panoptic Segmentation) | datasets=1
+  - image-segmentation | pct=100.00% | pair_count=1 | rule=pct>90
+  - object-detection | pct=100.00% | pair_count=1 | rule=pct>90
+  - other | pct=100.00% | pair_count=1 | rule=pct>90
+
+super-resolution: (Super Resolution) | datasets=1
+  - image-segmentation | pct=100.00% | pair_count=1 | rule=pct>90
+  - other | pct=100.00% | pair_count=1 | rule=pct>90
+
+WITHOUT_BROADER:
+
+multiple-choice-qa: (Multiple Choice Qa) | datasets=431
+  - NO_BROADER_CANDIDATE
+
+semantic-similarity-scoring: (Semantic Similarity Scoring) | datasets=142
+  - NO_BROADER_CANDIDATE
+
+fact-checking: (Fact Checking) | datasets=76
+  - NO_BROADER_CANDIDATE
+
+parsing: (Parsing) | datasets=69
+  - NO_BROADER_CANDIDATE
+
+dialogue-generation: (Dialogue Generation) | datasets=55
+  - NO_BROADER_CANDIDATE
+
+text-simplification: (Text Simplification) | datasets=46
+  - NO_BROADER_CANDIDATE
+
+instance-segmentation: (Instance Segmentation) | datasets=43
+  - NO_BROADER_CANDIDATE
+
+abstractive-qa: (Abstractive Qa) | datasets=35
+  - NO_BROADER_CANDIDATE
+
+conversational: (Conversational) | datasets=34
+  - NO_BROADER_CANDIDATE
+
+tabular-single-column-regression: (Tabular Single Column Regression) | datasets=32
+  - NO_BROADER_CANDIDATE
+
+keyword-spotting: (Keyword Spotting) | datasets=29
+  - NO_BROADER_CANDIDATE
+
+explanation-generation: (Explanation Generation) | datasets=24
+  - NO_BROADER_CANDIDATE
+
+slot-filling: (Slot Filling) | datasets=17
+  - NO_BROADER_CANDIDATE
+
+open-domain-abstractive-qa: (Open Domain Abstractive Qa) | datasets=16
+  - NO_BROADER_CANDIDATE
+
+lemmatization: (Lemmatization) | datasets=14
+  - NO_BROADER_CANDIDATE
+
+task-planning: (Task Planning) | datasets=14
+  - NO_BROADER_CANDIDATE
+
+word-sense-disambiguation: (Word Sense Disambiguation) | datasets=13
+  - NO_BROADER_CANDIDATE
+
+face-detection: (Face Detection) | datasets=10
+  - NO_BROADER_CANDIDATE
+
+rdf-to-text: (Rdf To Text) | datasets=7
+  - NO_BROADER_CANDIDATE
+
+audio-intent-classification: (Audio Intent Classification) | datasets=5
+  - NO_BROADER_CANDIDATE
+
+pose-estimation: (Pose Estimation) | datasets=4
+  - NO_BROADER_CANDIDATE
+

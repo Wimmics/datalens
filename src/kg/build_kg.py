@@ -9,7 +9,7 @@ import os
 import datetime
 from rdflib import Graph, Namespace, RDF, RDFS
 from rdflib.namespace import DCTERMS, FOAF, XSD, DCAT
-from src.parsers.huggingFace_parser import parse as huggingface_parse
+from src.parsers.huggingFace_new_parser import parse as huggingface_parse
 from src.kg.kg_generator import generate_kg
 import traceback
 
@@ -145,16 +145,34 @@ def run_batches(json_data, batch_count=10, output_dir="artifacts/kg/huggingface"
 
     save_errors(all_errors)
 
-def main():
+def main(choice=1):
     try:
         # JSON_PATH = "artifacts/data/huggingface_dataset.json"
         SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-        JSON_PATH = os.path.join(SCRIPT_DIR, "../../case-study/data/input/huggingface_dataset.json")
-        data = load_json(JSON_PATH)
-        run_batches(data, batch_count=10)
+
+        if choice == 0:
+            JSON_PATH = os.path.join(SCRIPT_DIR, "../../case-study/data/input/huggingface_dataset.json")
+            data = load_json(JSON_PATH)
+            run_batches(data, batch_count=10)
+
+        elif choice == 1:
+            JSON_PATH_NEW = os.path.join(SCRIPT_DIR, "../../case-study/data/input/datasets_new.json")
+            data_new = load_json(JSON_PATH_NEW)
+            run_batches(data_new, batch_count=10, output_dir="artifacts/kg/huggingface_new")
+
+        elif choice == 2:
+            JSON_PATH_ = os.path.join(SCRIPT_DIR, "../../case-study/test/dataset_new_extract.json")
+            data_ = load_json(JSON_PATH_)
+            run_batches(data_, batch_count=1, output_dir="case-study/test")
+
+        elif choice == 3:
+            JSON_PATH_NEW_NEW = os.path.join(SCRIPT_DIR, "../../case-study/data/input/datasets_new_new.json")
+            data_new_new = load_json(JSON_PATH_NEW_NEW)
+            run_batches(data_new_new, batch_count=10, output_dir="artifacts/kg/huggingface_new_new")
+
     except Exception as e:
         logging.error(f"Fatal error: {type(e).__name__}: {e}")
         raise CustomException(e, sys)
 
 if __name__ == "__main__":
-    main()
+    main(3)

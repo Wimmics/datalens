@@ -1,0 +1,162 @@
+TASK CATEGORIES -> MLUO THESAURUS:
+SUMMARY:
+FOUND: 47
+NOT_IN_HIERARCHY: 10
+IN_HIERARCHY_NOT_REACHING_TOPCONCEPT: 0
+NOT_FOUND: 0
+
+FOUND:
+text-generation: 16505
+text-classification: 11568
+question-answering: 10361
+text-to-image: 5477
+translation: 3890
+image-classification: 3042
+summarization: 2825
+image-to-text: 2526
+token-classification: 2420
+automatic-speech-recognition: 1983
+feature-extraction: 1939
+tabular-classification: 1765
+object-detection: 1491
+visual-question-answering: 1489
+image-segmentation: 1100
+table-question-answering: 1091
+tabular-regression: 1086
+text-to-speech: 1039
+sentence-similarity: 925
+fill-mask: 839
+zero-shot-classification: 820
+audio-classification: 798
+image-to-image: 775
+video-classification: 534
+image-text-to-text: 509
+reinforcement-learning: 472
+audio-to-audio: 311
+image-feature-extraction: 291
+zero-shot-image-classification: 291
+video-text-to-text: 265
+text-to-video: 223
+visual-document-retrieval: 217
+text-ranking: 191
+image-to-3d: 161
+document-question-answering: 158
+image-to-video: 137
+depth-estimation: 126
+unconditional-image-generation: 90
+text-to-3d: 74
+mask-generation: 54
+any-to-any: 51
+audio-text-to-text: 48
+keypoint-detection: 32
+zero-shot-object-detection: 31
+image-text-to-image: 19
+video-to-video: 13
+image-text-to-video: 7
+
+NOT_IN_HIERARCHY:
+robotics: 40290
+text-retrieval: 2878
+other: 1064
+multiple-choice: 775
+time-series-forecasting: 636
+graph-ml: 294
+text-to-audio: 241
+table-to-text: 83
+voice-activity-detection: 66
+tabular-to-text: 64
+
+IN_HIERARCHY_NOT_REACHING_TOPCONCEPT:
+
+NOT_FOUND:
+
+---
+
+TASK IDS -> MLUO THESAURUS:
+SUMMARY:
+FOUND: 36
+NOT_IN_HIERARCHY: 29
+IN_HIERARCHY_NOT_REACHING_TOPCONCEPT: 9
+NOT_FOUND: 0
+
+FOUND:
+language-modeling: 1347
+multi-class-classification: 1049
+named-entity-recognition: 892
+extractive-qa: 870
+topic-classification: 861
+multi-label-classification: 852
+sentiment-analysis: 776
+text-scoring: 729
+news-articles-summarization: 655
+sentiment-classification: 446
+open-domain-qa: 327
+masked-language-modeling: 322
+closed-domain-qa: 202
+hate-speech-detection: 177
+multi-class-image-classification: 160
+sentiment-scoring: 148
+tabular-multi-class-classification: 96
+intent-classification: 89
+image-captioning: 88
+visual-question-answering: 85
+closed-book-qa: 75
+open-book-qa: 74
+semantic-segmentation: 73
+tabular-multi-label-classification: 66
+dialogue-modeling: 63
+multi-input-text-classification: 53
+acceptability-classification: 50
+multi-label-image-classification: 26
+document-question-answering: 25
+language-identification: 14
+image-inpainting: 12
+coreference-resolution: 11
+vehicle-detection: 10
+image-colorization: 2
+panoptic-segmentation: 1
+super-resolution: 1
+
+NOT_IN_HIERARCHY:
+multiple-choice-qa: 431
+natural-language-inference: 273
+semantic-similarity-scoring: 142
+semantic-similarity-classification: 111
+fact-checking: 76
+parsing: 69
+part-of-speech: 60
+dialogue-generation: 55
+text-simplification: 46
+instance-segmentation: 43
+text2text-generation: 37
+abstractive-qa: 35
+speaker-identification: 35
+conversational: 34
+tabular-single-column-regression: 32
+keyword-spotting: 29
+explanation-generation: 24
+entity-linking-classification: 21
+slot-filling: 17
+open-domain-abstractive-qa: 16
+task-planning: 14
+word-sense-disambiguation: 13
+audio-language-identification: 12
+news-articles-headline-generation: 12
+face-detection: 10
+audio-emotion-recognition: 8
+rdf-to-text: 7
+audio-intent-classification: 5
+pose-estimation: 4
+
+IN_HIERARCHY_NOT_REACHING_TOPCONCEPT:
+document-retrieval: 831 | hierarchy: Document Retrieval > Text Retrieval
+fact-checking-retrieval: 88 | hierarchy: Fact Checking Retrieval > Text Retrieval
+entity-linking-retrieval: 72 | hierarchy: Entity Linking Retrieval > Text Retrieval
+multivariate-time-series-forecasting: 41 | hierarchy: Multivariate Time Series Forecasting > Time Series Forecasting
+univariate-time-series-forecasting: 20 | hierarchy: Univariate Time Series Forecasting > Time Series Forecasting
+lemmatization: 14 | hierarchy: Lemmatization > Part Of Speech
+utterance-retrieval: 11 | hierarchy: Utterance Retrieval > Text Retrieval
+grasping: 7 | hierarchy: Grasping > Robotics
+multiple-choice-coreference-resolution: 5 | hierarchy: Multiple Choice Coreference Resolution > Multiple Choice
+
+NOT_FOUND:

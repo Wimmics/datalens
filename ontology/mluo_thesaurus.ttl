@@ -670,3 +670,425 @@ mluo_th:image-to-3d a skos:Concept, mluo:Task ;
     skos:example "Library example: diffusers."@en ;
     skos:inScheme mluo_th:TaskScheme ;
     skos:broader mluo_th:multimodal-tasks .
+
+
+## Tasks not in API
+
+mluo_th:language-modeling a skos:Concept, mluo:Task ;
+    skos:prefLabel "Language Modeling"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-generation .
+
+mluo_th:multi-class-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multi Class Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:named-entity-recognition a skos:Concept, mluo:Task ;
+    skos:prefLabel "Named Entity Recognition"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:token-classification .
+
+mluo_th:extractive-qa a skos:Concept, mluo:Task ;
+    skos:prefLabel "Extractive Qa"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:question-answering .
+
+mluo_th:topic-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Topic Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification,
+        mluo_th:text-generation .
+
+mluo_th:multi-label-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multi Label Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:sentiment-analysis a skos:Concept, mluo:Task ;
+    skos:prefLabel "Sentiment Analysis"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:text-scoring a skos:Concept, mluo:Task ;
+    skos:prefLabel "Text Scoring"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:question-answering,
+        mluo_th:summarization,
+        mluo_th:text-classification,
+        mluo_th:text-generation,
+        mluo_th:token-classification .
+
+mluo_th:news-articles-summarization a skos:Concept, mluo:Task ;
+    skos:prefLabel "News Articles Summarization"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:extractive-qa,
+        mluo_th:language-modeling,
+        mluo_th:multi-class-classification,
+        mluo_th:multi-label-classification,
+        mluo_th:named-entity-recognition,
+        mluo_th:question-answering,
+        mluo_th:sentiment-analysis,
+        mluo_th:summarization,
+        mluo_th:text-classification,
+        mluo_th:text-generation,
+        mluo_th:token-classification,
+        mluo_th:topic-classification .
+
+mluo_th:sentiment-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Sentiment Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:open-domain-qa a skos:Concept, mluo:Task ;
+    skos:prefLabel "Open Domain Qa"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:question-answering .
+
+mluo_th:masked-language-modeling a skos:Concept, mluo:Task ;
+    skos:prefLabel "Masked Language Modeling"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:fill-mask,
+        mluo_th:language-modeling,
+        mluo_th:text-generation .
+
+mluo_th:closed-domain-qa a skos:Concept, mluo:Task ;
+    skos:prefLabel "Closed Domain Qa"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:question-answering .
+
+mluo_th:hate-speech-detection a skos:Concept, mluo:Task ;
+    skos:prefLabel "Hate Speech Detection"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:multi-class-image-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multi Class Image Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:image-classification .
+
+mluo_th:sentiment-scoring a skos:Concept, mluo:Task ;
+    skos:prefLabel "Sentiment Scoring"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:sentiment-analysis,
+        mluo_th:sentiment-classification,
+        mluo_th:text-classification .
+
+mluo_th:tabular-multi-class-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Tabular Multi Class Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:tabular-classification .
+
+mluo_th:intent-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Intent Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:image-captioning a skos:Concept, mluo:Task ;
+    skos:prefLabel "Image Captioning"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:image-to-text .
+
+mluo_th:closed-book-qa a skos:Concept, mluo:Task ;
+    skos:prefLabel "Closed Book Qa"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:closed-domain-qa,
+        mluo_th:extractive-qa,
+        mluo_th:question-answering,
+        mluo_th:text-generation .
+
+mluo_th:open-book-qa a skos:Concept, mluo:Task ;
+    skos:prefLabel "Open Book Qa"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:closed-domain-qa,
+        mluo_th:extractive-qa,
+        mluo_th:question-answering,
+        mluo_th:text-generation .
+
+mluo_th:semantic-segmentation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Semantic Segmentation"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:image-segmentation .
+
+mluo_th:tabular-multi-label-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Tabular Multi Label Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:closed-domain-qa,
+        mluo_th:extractive-qa,
+        mluo_th:language-modeling,
+        mluo_th:multi-class-classification,
+        mluo_th:multi-label-classification,
+        mluo_th:multiple-choice,
+        mluo_th:multiple-choice-qa,
+        mluo_th:natural-language-inference,
+        mluo_th:open-domain-qa,
+        mluo_th:question-answering,
+        mluo_th:table-question-answering,
+        mluo_th:tabular-classification,
+        mluo_th:tabular-multi-class-classification,
+        mluo_th:text-classification,
+        mluo_th:text-generation,
+        mluo_th:topic-classification,
+        mluo_th:zero-shot-classification .
+
+mluo_th:dialogue-modeling a skos:Concept, mluo:Task ;
+    skos:prefLabel "Dialogue Modeling"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-generation .
+
+mluo_th:multi-input-text-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multi Input Text Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:acceptability-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Acceptability Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:multi-label-image-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multi Label Image Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:image-classification .
+
+mluo_th:language-identification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Language Identification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:image-inpainting a skos:Concept, mluo:Task ;
+    skos:prefLabel "Image Inpainting"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:image-to-image .
+
+mluo_th:coreference-resolution a skos:Concept, mluo:Task ;
+    skos:prefLabel "Coreference Resolution"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:token-classification .
+
+mluo_th:vehicle-detection a skos:Concept, mluo:Task ;
+    skos:prefLabel "Vehicle Detection"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:object-detection .
+
+mluo_th:image-colorization a skos:Concept, mluo:Task ;
+    skos:prefLabel "Image Colorization"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:image-to-image .
+
+mluo_th:panoptic-segmentation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Panoptic Segmentation"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:image-segmentation,
+        mluo_th:instance-segmentation,
+        mluo_th:object-detection,
+        mluo_th:other,
+        mluo_th:semantic-segmentation .
+
+mluo_th:super-resolution a skos:Concept, mluo:Task ;
+    skos:prefLabel "Super Resolution"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:image-segmentation,
+        mluo_th:other,
+        mluo_th:semantic-segmentation .
+
+mluo_th:robotics a skos:Concept, mluo:Task ;
+    skos:prefLabel "Robotics"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:text-retrieval a skos:Concept, mluo:Task ;
+    skos:prefLabel "Text Retrieval"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:other a skos:Concept, mluo:Task ;
+    skos:prefLabel "Other"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:multiple-choice a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multiple Choice"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:time-series-forecasting a skos:Concept, mluo:Task ;
+    skos:prefLabel "Time Series Forecasting"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:graph-ml a skos:Concept, mluo:Task ;
+    skos:prefLabel "Graph Ml"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:text-to-audio a skos:Concept, mluo:Task ;
+    skos:prefLabel "Text To Audio"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:table-to-text a skos:Concept, mluo:Task ;
+    skos:prefLabel "Table To Text"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:voice-activity-detection a skos:Concept, mluo:Task ;
+    skos:prefLabel "Voice Activity Detection"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:tabular-to-text a skos:Concept, mluo:Task ;
+    skos:prefLabel "Tabular To Text"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:document-retrieval a skos:Concept, mluo:Task ;
+    skos:prefLabel "Document Retrieval"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-retrieval .
+
+mluo_th:multiple-choice-qa a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multiple Choice Qa"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:natural-language-inference a skos:Concept, mluo:Task ;
+    skos:prefLabel "Natural Language Inference"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:semantic-similarity-scoring a skos:Concept, mluo:Task ;
+    skos:prefLabel "Semantic Similarity Scoring"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:semantic-similarity-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Semantic Similarity Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:fact-checking-retrieval a skos:Concept, mluo:Task ;
+    skos:prefLabel "Fact Checking Retrieval"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-retrieval .
+
+mluo_th:fact-checking a skos:Concept, mluo:Task ;
+    skos:prefLabel "Fact Checking"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:entity-linking-retrieval a skos:Concept, mluo:Task ;
+    skos:prefLabel "Entity Linking Retrieval"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-retrieval .
+
+mluo_th:parsing a skos:Concept, mluo:Task ;
+    skos:prefLabel "Parsing"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:part-of-speech a skos:Concept, mluo:Task ;
+    skos:prefLabel "Part Of Speech"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:dialogue-generation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Dialogue Generation"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:text-simplification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Text Simplification"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:instance-segmentation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Instance Segmentation"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:multivariate-time-series-forecasting a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multivariate Time Series Forecasting"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:time-series-forecasting .
+
+mluo_th:text2text-generation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Text2text Generation"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:abstractive-qa a skos:Concept, mluo:Task ;
+    skos:prefLabel "Abstractive Qa"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:speaker-identification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Speaker Identification"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:conversational a skos:Concept, mluo:Task ;
+    skos:prefLabel "Conversational"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:tabular-single-column-regression a skos:Concept, mluo:Task ;
+    skos:prefLabel "Tabular Single Column Regression"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:keyword-spotting a skos:Concept, mluo:Task ;
+    skos:prefLabel "Keyword Spotting"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:explanation-generation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Explanation Generation"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:entity-linking-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Entity Linking Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:univariate-time-series-forecasting a skos:Concept, mluo:Task ;
+    skos:prefLabel "Univariate Time Series Forecasting"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:time-series-forecasting .
+
+mluo_th:slot-filling a skos:Concept, mluo:Task ;
+    skos:prefLabel "Slot Filling"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:open-domain-abstractive-qa a skos:Concept, mluo:Task ;
+    skos:prefLabel "Open Domain Abstractive Qa"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:lemmatization a skos:Concept, mluo:Task ;
+    skos:prefLabel "Lemmatization"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:part-of-speech .
+
+mluo_th:task-planning a skos:Concept, mluo:Task ;
+    skos:prefLabel "Task Planning"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:word-sense-disambiguation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Word Sense Disambiguation"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:audio-language-identification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Audio Language Identification"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:news-articles-headline-generation a skos:Concept, mluo:Task ;
+    skos:prefLabel "News Articles Headline Generation"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:utterance-retrieval a skos:Concept, mluo:Task ;
+    skos:prefLabel "Utterance Retrieval"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-retrieval .
+
+mluo_th:face-detection a skos:Concept, mluo:Task ;
+    skos:prefLabel "Face Detection"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:audio-emotion-recognition a skos:Concept, mluo:Task ;
+    skos:prefLabel "Audio Emotion Recognition"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:grasping a skos:Concept, mluo:Task ;
+    skos:prefLabel "Grasping"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:robotics .
+
+mluo_th:rdf-to-text a skos:Concept, mluo:Task ;
+    skos:prefLabel "Rdf To Text"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:audio-intent-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Audio Intent Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:multiple-choice-coreference-resolution a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multiple Choice Coreference Resolution"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multiple-choice .
+
+mluo_th:pose-estimation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Pose Estimation"@en ;
+    skos:inScheme mluo_th:TaskScheme .

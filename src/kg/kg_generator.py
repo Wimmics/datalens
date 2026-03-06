@@ -55,7 +55,7 @@ def hash_id(str):
     # Create SHA-256 hash of the string encoded as utf-8
     hash_obj = hashlib.sha256(str.encode('utf-8'))
     # Return first 8 characters of the hex digest (you can choose length)
-    return hash_obj.hexdigest()[:8]
+    return hash_obj.hexdigest()[:16]
     
 def add_license(g, distribution_uri, license_obj):
     license_name = license_obj.get("label", "Unknown License")

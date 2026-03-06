@@ -332,6 +332,7 @@ case-study/data/**
 
 ontology/do_not_commit/**
 artifacts/**
+*.json
 
 # visualization files
 vis/node_modules/**
