@@ -57,24 +57,6 @@ mluo:DatasetShape
   ] ;
   
   sh:property [
-    sh:path dcat:keyword ;
-    sh:minCount 0 ;
-    sh:severity sh:Info ;
-    sh:name "keyword"@en ;
-    sh:description "Les mots-clés facilitent la découverte"@en
-  ] ;
-  
-  sh:property [
-    sh:path mluo:hasUsage ;
-    sh:minCount 1 ;
-    sh:class mluo:Usage ;
-    sh:severity sh:Violation ;
-    sh:name "hasUsage"@en ;
-    sh:description "Chaque dataset doit avoir au moins une usage"@en ;
-    sh:message "Erreur: Dataset sans usage ML associée"@en
-  ] ;
-  
-  sh:property [
     sh:path dcat:distribution ;
     sh:class dcat:Distribution ;
     sh:severity sh:Warning ;
@@ -93,6 +75,16 @@ mluo:DatasetShape
   
   sh:property [
     sh:path mluo:downloadCount ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 0 ;
+    sh:severity sh:Warning ;
+    sh:name "downloadCount"@en ;
+    sh:description "Le nombre de téléchargements doit être un entier non-négatif"@en ;
+    sh:message "Attention: downloadCount doit être un entier >= 0"@en
+  ] ;
+
+  sh:property [
+    sh:path mluo:likesCount ;
     sh:datatype xsd:integer ;
     sh:minInclusive 0 ;
     sh:severity sh:Warning ;
@@ -152,96 +144,6 @@ mluo:UsageShape
     sh:hasValue mluo:Usage ;
     sh:severity sh:Violation ;
     sh:name "type"@en
-  ] .
-
-# ==========================
-# TASK SHAPES
-# ==========================
-
-mluo:TaskShape
-  a sh:NodeShape ;
-  sh:targetClass mluo:Task ;
-  sh:closed false ;
-  sh:name "Task Shape"@en ;
-  sh:description "Valide les contraintes pour les tasks ML"@en ;
-  
-  sh:property [
-    sh:path rdfs:label ;
-    sh:minCount 0 ;
-    sh:datatype xsd:string ;
-    sh:severity sh:Warning ;
-    sh:name "label"@en ;
-    sh:description "Il est recommandé de donner un label lisible à chaque Task"@en
-  ] ;
-  
-  sh:property [
-    sh:path rdf:type ;
-    sh:hasValue mluo:Task ;
-    sh:severity sh:Violation ;
-    sh:name "type"@en
-  ] ;
-  
-  # Vérifier que la tâche est référencée par au moins un usage
-  sh:sparql [
-    sh:message "Attention: Task non référencée par aucune Usage (orpheline)"@en ;
-    sh:severity sh:Info ;
-    sh:prefixes [
-      sh:prefix "mluo" ;
-      sh:namespace "http://example.org/mluo/ontology#"^^xsd:anyURI
-    ] ;
-    sh:select """
-      SELECT $this
-      WHERE {
-        FILTER NOT EXISTS {
-          ?usage mluo:hasTask $this .
-        }
-      }
-    """
-  ] .
-
-# ==========================
-# TASK CATEGORY SHAPES
-# ==========================
-
-mluo:TaskCategoryShape
-  a sh:NodeShape ;
-  sh:targetClass mluo:TaskCategory ;
-  sh:closed false ;
-  sh:name "TaskCategory Shape"@en ;
-  sh:description "Valide les contraintes pour les catégories de tasks"@en ;
-  
-  sh:property [
-    sh:path rdfs:label ;
-    sh:minCount 0 ;
-    sh:datatype xsd:string ;
-    sh:severity sh:Warning ;
-    sh:name "label"@en ;
-    sh:description "Il est recommandé de donner un label lisible à chaque TaskCategory"@en
-  ] ;
-  
-  sh:property [
-    sh:path rdf:type ;
-    sh:hasValue mluo:TaskCategory ;
-    sh:severity sh:Violation ;
-    sh:name "type"@en
-  ] ;
-  
-  # Vérifier que la catégorie est référencée par au moins un usage
-  sh:sparql [
-    sh:message "Attention: TaskCategory non référencée par aucune Usage (orpheline)"@en ;
-    sh:severity sh:Info ;
-    sh:prefixes [
-      sh:prefix "mluo" ;
-      sh:namespace "http://example.org/mluo/ontology#"^^xsd:anyURI
-    ] ;
-    sh:select """
-      SELECT $this
-      WHERE {
-        FILTER NOT EXISTS {
-          ?usage mluo:hasTaskCategory $this .
-        }
-      }
-    """
   ] .
 
 # ==========================
