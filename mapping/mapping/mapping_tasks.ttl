@@ -1,0 +1,122 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+
+@prefix mluo: <http://example.org/mluo/ontology#> .
+@prefix mluo_th: <http://example.org/mluo/thesaurus#> .
+
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xrr:    <http://i3s.unice.fr/xr2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+
+# ----------------------------------- Scheme
+
+<#SchemeFromEnrichedJSON>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.tasks_enriched.find({}, {_id:0})";
+        rml:iterator "$.task_categories.*";
+    ];
+    rr:subjectMap [ 
+        rr:template "http://example.org/mluo/thesaurus#{$.subTypeId}";
+        rr:termType rr:IRI;
+		rr:class skos:ConceptScheme;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:hasTopConcept ;
+        rr:objectMap [ rr:template "http://example.org/mluo/thesaurus#{$.id}"; rr:termType rr:IRI ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:prefLabel ;
+        rr:objectMap [ xrr:reference "$.subType"; rr:language "en" ];
+    ];
+    .
+
+# ----------------------------------- Task Category
+
+<#TaskCategory>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.tasks_enriched.find({}, {_id:0})";
+        rml:iterator "$.task_categories.*";
+    ];
+    rr:subjectMap [ 
+        rr:template "http://example.org/mluo/thesaurus#{$.id}";
+        rr:termType rr:IRI;
+		rr:class mluo:TaskCategory;
+		rr:class skos:Concept;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:prefLabel;
+        rr:objectMap [ xrr:reference "$.labelPref"; rr:language "en" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:definition;
+        rr:objectMap [ xrr:reference "$.summary"; rr:language "en" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dcterms:source;
+        rr:objectMap [ xrr:reference "$.source"; rr:termType rr:IRI ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:inScheme;
+        rr:objectMap [ rr:template "http://example.org/mluo/thesaurus#{$.subTypeId}"; rr:termType rr:IRI ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:topConceptOf;
+        rr:objectMap [ rr:template "http://example.org/mluo/thesaurus#{$.subTypeId}"; rr:termType rr:IRI ];
+    ];
+    .
+
+
+# ----------------------------------- Task Id
+
+<#TaskId>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.tasks_enriched.find({}, {_id:0})";
+        rml:iterator "$.task_ids[*]";
+    ];
+    rr:subjectMap [ 
+        rr:template "http://example.org/mluo/thesaurus#{$.label}";
+        rr:termType rr:IRI;
+		rr:class mluo:Task;
+		rr:class skos:Concept;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:prefLabel;
+        rr:objectMap [ xrr:reference "$.labelPref"; rr:language "en" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dcterms:source;
+        rr:objectMap [ xrr:reference "$.source"; rr:termType rr:IRI ];
+    ];
+    .
+
+# ----------------------------------- Task Id Related to Task Categories
+
+<#TaskIdRelatedTaskCategories>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.manual_hierarchy.find({}, {_id:0})";
+        rml:iterator "$.task_mapping[*]";
+    ];
+    rr:subjectMap [ 
+        rr:template "http://example.org/mluo/thesaurus#{$.task_id}";
+        rr:termType rr:IRI;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:broader;
+        rr:objectMap [ 
+            rr:template "http://example.org/mluo/thesaurus#{$.task_categories[*]}";
+            rr:termType rr:IRI;
+        ];
+    ];
+    .
