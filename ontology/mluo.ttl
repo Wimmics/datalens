@@ -57,6 +57,12 @@ mluo:hasTask a owl:ObjectProperty ;
     rdfs:domain mluo:Usage ;
     rdfs:range mluo:Task .
 
+mluo:hasTaskCategory a owl:ObjectProperty ;
+    rdfs:label "has ML task category"@en ;
+    rdfs:comment "Relates a usage to a category or type of machine learning task."@en ;
+    rdfs:domain mluo:Usage ;
+    rdfs:range mluo:TaskCategory .
+
 ## Machine Learning tasks
 # Use rdfs:label in the instance to name the task
 # TODO: A SKOS scheme should be defined for the tasks
