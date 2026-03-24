@@ -1,0 +1,360 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mluo: <http://example.org/mluo/ontology#> .
+@prefix mluo_th: <http://example.org/mluo/thesaurus#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# ============================================================================
+# SHACL SHAPES - Validation de Contraintes pour la Knowledge Graph
+# ============================================================================
+
+# ==========================
+# DATASET SHAPES
+# ==========================
+
+mluo:DatasetShape
+  a sh:NodeShape ;
+  sh:targetClass dcat:Dataset ;
+  sh:closed false ;
+  sh:severityLevel sh:Warning ;
+  sh:name "Dataset Shape"@en ;
+  sh:description "Valide les contraintes obligatoires et recommandées pour les datasets"@en ;
+  
+  # OBLIGATIONS (Severity: Violation)
+  sh:property [
+    sh:path dct:identifier ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:string ;
+    sh:severity sh:Violation ;
+    sh:name "identifier"@en ;
+    sh:description "Chaque dataset doit avoir exactement un identifiant unique"@en ;
+    sh:message "Erreur: Dataset sans identifiant ou avec identifiant dupliqué"@en
+  ] ;
+  
+  sh:property [
+    sh:path dct:title ;
+    sh:minCount 1 ;
+    sh:datatype xsd:string ;
+    sh:severity sh:Violation ;
+    sh:name "title"@en ;
+    sh:description "Chaque dataset doit avoir un titre"@en ;
+    sh:message "Erreur: Dataset sans titre"@en
+  ] ;
+  
+  # RECOMMANDATIONS (Severity: Warning)
+  sh:property [
+    sh:path dct:description ;
+    sh:minCount 1 ;
+    sh:datatype xsd:string ;
+    sh:severity sh:Warning ;
+    sh:name "description"@en ;
+    sh:description "Il est recommandé que chaque dataset ait une description"@en ;
+    sh:message "Attention: Description manquante pour le dataset"@en
+  ] ;
+  
+  sh:property [
+    sh:path dcat:keyword ;
+    sh:minCount 0 ;
+    sh:severity sh:Info ;
+    sh:name "keyword"@en ;
+    sh:description "Les mots-clés facilitent la découverte"@en
+  ] ;
+  
+  sh:property [
+    sh:path mluo:hasUsage ;
+    sh:minCount 1 ;
+    sh:class mluo:Usage ;
+    sh:severity sh:Violation ;
+    sh:name "hasUsage"@en ;
+    sh:description "Chaque dataset doit avoir au moins une usage"@en ;
+    sh:message "Erreur: Dataset sans usage ML associée"@en
+  ] ;
+  
+  sh:property [
+    sh:path dcat:distribution ;
+    sh:class dcat:Distribution ;
+    sh:severity sh:Warning ;
+    sh:name "distribution"@en ;
+    sh:description "Il est recommandé de spécifier les distributions (téléchargements) disponibles"@en
+  ] ;
+  
+  # CONTRAINTES DE TYPE
+  sh:property [
+    sh:path dct:issued ;
+    sh:datatype xsd:dateTime ;
+    sh:severity sh:Warning ;
+    sh:name "issued"@en ;
+    sh:description "La date de création devrait être au format ISO 8601"@en
+  ] ;
+  
+  sh:property [
+    sh:path mluo:downloadCount ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 0 ;
+    sh:severity sh:Warning ;
+    sh:name "downloadCount"@en ;
+    sh:description "Le nombre de téléchargements doit être un entier non-négatif"@en ;
+    sh:message "Attention: downloadCount doit être un entier >= 0"@en
+  ] ;
+  
+  sh:property [
+    sh:path mluo:isAvailable ;
+    sh:datatype xsd:boolean ;
+    sh:severity sh:Violation ;
+    sh:name "isAvailable"@en ;
+    sh:description "Le statut de disponibilité doit être booléen"@en
+  ] .
+
+# ==========================
+# USAGE SHAPES
+# ==========================
+
+mluo:UsageShape
+  a sh:NodeShape ;
+  sh:targetClass mluo:Usage ;
+  sh:closed false ;
+  sh:name "Usage Shape"@en ;
+  sh:description "Valide les contraintes pour les usages de datasets"@en ;
+  
+  # Une Usage doit avoir au moins une Task OU une TaskCategory
+  sh:or (
+    [ sh:path mluo:hasTask ; sh:minCount 1 ]
+    [ sh:path mluo:hasTaskCategory ; sh:minCount 1 ]
+  ) ;
+  
+  # Tous les hasTask doivent pointer vers des instances de Task
+  sh:property [
+    sh:path mluo:hasTask ;
+    sh:class mluo:Task ;
+    sh:severity sh:Violation ;
+    sh:name "hasTask"@en ;
+    sh:description "hasTask doit pointer vers une ressource de type Task"@en ;
+    sh:message "Erreur: hasTask ne pointe pas vers un Task valide"@en
+  ] ;
+  
+  # Tous les hasTaskCategory doivent pointer vers des instances de TaskCategory
+  sh:property [
+    sh:path mluo:hasTaskCategory ;
+    sh:class mluo:TaskCategory ;
+    sh:severity sh:Violation ;
+    sh:name "hasTaskCategory"@en ;
+    sh:description "hasTaskCategory doit pointer vers une ressource de type TaskCategory"@en ;
+    sh:message "Erreur: hasTaskCategory ne pointe pas vers une TaskCategory valide"@en
+  ] ;
+  
+  # Une Usage ne doit pas avoir d'autres propriétés critiques non documentées
+  sh:property [
+    sh:path rdf:type ;
+    sh:hasValue mluo:Usage ;
+    sh:severity sh:Violation ;
+    sh:name "type"@en
+  ] .
+
+# ==========================
+# TASK SHAPES
+# ==========================
+
+mluo:TaskShape
+  a sh:NodeShape ;
+  sh:targetClass mluo:Task ;
+  sh:closed false ;
+  sh:name "Task Shape"@en ;
+  sh:description "Valide les contraintes pour les tasks ML"@en ;
+  
+  sh:property [
+    sh:path rdfs:label ;
+    sh:minCount 0 ;
+    sh:datatype xsd:string ;
+    sh:severity sh:Warning ;
+    sh:name "label"@en ;
+    sh:description "Il est recommandé de donner un label lisible à chaque Task"@en
+  ] ;
+  
+  sh:property [
+    sh:path rdf:type ;
+    sh:hasValue mluo:Task ;
+    sh:severity sh:Violation ;
+    sh:name "type"@en
+  ] ;
+  
+  # Vérifier que la tâche est référencée par au moins un usage
+  sh:sparql [
+    sh:message "Attention: Task non référencée par aucune Usage (orpheline)"@en ;
+    sh:severity sh:Info ;
+    sh:prefixes [
+      sh:prefix "mluo" ;
+      sh:namespace "http://example.org/mluo/ontology#"^^xsd:anyURI
+    ] ;
+    sh:select """
+      SELECT $this
+      WHERE {
+        FILTER NOT EXISTS {
+          ?usage mluo:hasTask $this .
+        }
+      }
+    """
+  ] .
+
+# ==========================
+# TASK CATEGORY SHAPES
+# ==========================
+
+mluo:TaskCategoryShape
+  a sh:NodeShape ;
+  sh:targetClass mluo:TaskCategory ;
+  sh:closed false ;
+  sh:name "TaskCategory Shape"@en ;
+  sh:description "Valide les contraintes pour les catégories de tasks"@en ;
+  
+  sh:property [
+    sh:path rdfs:label ;
+    sh:minCount 0 ;
+    sh:datatype xsd:string ;
+    sh:severity sh:Warning ;
+    sh:name "label"@en ;
+    sh:description "Il est recommandé de donner un label lisible à chaque TaskCategory"@en
+  ] ;
+  
+  sh:property [
+    sh:path rdf:type ;
+    sh:hasValue mluo:TaskCategory ;
+    sh:severity sh:Violation ;
+    sh:name "type"@en
+  ] ;
+  
+  # Vérifier que la catégorie est référencée par au moins un usage
+  sh:sparql [
+    sh:message "Attention: TaskCategory non référencée par aucune Usage (orpheline)"@en ;
+    sh:severity sh:Info ;
+    sh:prefixes [
+      sh:prefix "mluo" ;
+      sh:namespace "http://example.org/mluo/ontology#"^^xsd:anyURI
+    ] ;
+    sh:select """
+      SELECT $this
+      WHERE {
+        FILTER NOT EXISTS {
+          ?usage mluo:hasTaskCategory $this .
+        }
+      }
+    """
+  ] .
+
+# ==========================
+# GRAPH-LEVEL CONSTRAINTS
+# ==========================
+
+# Contrainte: Pas de doublons de datasets avec le même identifiant
+mluo:UniqueDatasetIdentifierShape
+  a sh:NodeShape ;
+  sh:targetClass dcat:Dataset ;
+  sh:sparql [
+    sh:message "Erreur: Plusieurs datasets avec le même identifiant (violation d'unicité)"@en ;
+    sh:severity sh:Violation ;
+    sh:prefixes [
+      sh:prefix "dct" ;
+      sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI
+    ] ;
+    sh:select """
+      SELECT $this ?duplicate
+      WHERE {
+        $this dct:identifier ?id .
+        ?duplicate dct:identifier ?id .
+        FILTER ($this < ?duplicate)
+      }
+    """
+  ] .
+
+# Contrainte: Les structures d'usage doivent être bien formées
+mluo:UsageIntegrityShape
+  a sh:NodeShape ;
+  sh:targetClass mluo:Usage ;
+  sh:sparql [
+    sh:message "Erreur: Une Usage n'est pas référencée par aucun Dataset"@en ;
+    sh:severity sh:Violation ;
+    sh:prefixes [
+      sh:prefix "mluo" ;
+      sh:namespace "http://example.org/mluo/ontology#"^^xsd:anyURI
+      sh:prefix "dcat" ;
+      sh:namespace "http://www.w3.org/ns/dcat#"^^xsd:anyURI
+    ] ;
+    sh:select """
+      SELECT $this
+      WHERE {
+        FILTER NOT EXISTS {
+          ?dataset a dcat:Dataset ;
+                   mluo:hasUsage $this .
+        }
+      }
+    """
+  ] .
+
+# ==========================
+# SHAPE POUR VALIDER LA COHÉRENCE
+# ==========================
+
+mluo:CoherenceShape
+  a sh:NodeShape ;
+  sh:sparql [
+    sh:message "Attention: Task/TaskCategory apparaît dans plusieurs datasets avec des noms différents (potentiel problème de normalisation)"@en ;
+    sh:severity sh:Warning ;
+    sh:prefixes [
+      sh:prefix "rdfs" ;
+      sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI
+      sh:prefix "mluo" ;
+      sh:namespace "http://example.org/mluo/ontology#"^^xsd:anyURI
+    ] ;
+    sh:select """
+      SELECT ?concept (COUNT(DISTINCT ?label) AS ?label_count)
+      WHERE {
+        ?concept rdfs:label ?label .
+        {
+          ?usage mluo:hasTask ?concept .
+        } UNION {
+          ?usage mluo:hasTaskCategory ?concept .
+        }
+      }
+      GROUP BY ?concept
+      HAVING (COUNT(DISTINCT ?label) > 1)
+    """
+  ] .
+
+# ==========================
+# SHAPES POUR LES DISTRIBUTIONS
+# ==========================
+
+mluo:DistributionShape
+  a sh:NodeShape ;
+  sh:targetClass dcat:Distribution ;
+  sh:closed false ;
+  sh:name "Distribution Shape"@en ;
+  sh:description "Valide les propriétés des distributions de datasets"@en ;
+  
+  sh:property [
+    sh:path dcat:accessURL ;
+    sh:minCount 1 ;
+    sh:severity sh:Violation ;
+    sh:name "accessURL"@en ;
+    sh:description "Une distribution doit avoir une URL d'accès"@en ;
+    sh:message "Erreur: Distribution sans accessURL"@en
+  ] ;
+  
+  sh:property [
+    sh:path dct:format ;
+    sh:minCount 0 ;
+    sh:severity sh:Warning ;
+    sh:name "format"@en ;
+    sh:description "Il est recommandé de spécifier le format de la distribution"@en
+  ] ;
+  
+  sh:property [
+    sh:path dcat:mediaType ;
+    sh:minCount 0 ;
+    sh:severity sh:Info ;
+    sh:name "mediaType"@en ;
+    sh:description "Le type MIME peut aider à la détection du format"@en
+  ] .
