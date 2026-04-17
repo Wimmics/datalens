@@ -114,7 +114,7 @@ mluo:hasTask a owl:ObjectProperty ;
     rdfs:comment "Relates a dataset to a specific task or problem that a machine learning model is designed to solve."@en ;
     rdfs:domain  [ 
         a owl:Class ;
-        owl:unionOf (dcat:Dataset skos:ConceptScheme) 
+        owl:unionOf (dcat:Dataset mluo:Model) 
     ] ;
     rdfs:range mluo:TaskCategory .
 
@@ -123,7 +123,7 @@ mluo:hasTaskCategory a owl:ObjectProperty ;
     rdfs:comment "Relates a dataset to a category or type of machine learning task."@en ;
     rdfs:domain  [ 
         a owl:Class ;
-        owl:unionOf (dcat:Dataset skos:ConceptScheme) 
+        owl:unionOf (dcat:Dataset mluo:Model) 
     ] ;
     rdfs:range mluo:TaskCategory .
     
