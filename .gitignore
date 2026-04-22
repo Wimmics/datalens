@@ -331,7 +331,7 @@ virtuoso-server/virtuoso-data/**
 case-study/data/**
 
 ontology/do_not_commit/**
-artifacts/**
+old/**
 *.json
 
 # visualization files

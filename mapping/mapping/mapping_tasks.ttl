@@ -18,24 +18,51 @@
 
 # ----------------------------------- Scheme
 
-<#SchemeFromEnrichedJSON>
+<#TaskScheme>
     a rr:TriplesMap;
     xrr:logicalSource [
-        xrr:query "db.tasks_enriched.find({}, {_id:0})";
+        xrr:query "db.tasks.findOne({}, {_id:0})";
+        rml:iterator "$";
+    ];
+    rr:subjectMap [
+        rr:constant mluo_th:TaskScheme;
+        rr:termType rr:IRI;
+        rr:class skos:ConceptScheme;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:prefLabel;
+        rr:objectMap [ rr:constant "Machine Learning Task Scheme"; rr:language "en" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:definition;
+        rr:objectMap [ rr:constant "A controlled vocabulary for describing machine learning tasks."; rr:language "en" ];
+    ];
+    .
+
+# ----------------------------------- Collection
+
+<#Collection>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.tasks.find({}, {_id:0})";
         rml:iterator "$.task_categories.*";
     ];
     rr:subjectMap [ 
         rr:template "http://example.org/mluo/thesaurus#{$.subTypeId}";
         rr:termType rr:IRI;
-		rr:class skos:ConceptScheme;
+		rr:class skos:Collection;
     ];
     rr:predicateObjectMap [
-        rr:predicate skos:hasTopConcept ;
+        rr:predicate skos:member ;
         rr:objectMap [ rr:template "http://example.org/mluo/thesaurus#{$.id}"; rr:termType rr:IRI ];
     ];
     rr:predicateObjectMap [
         rr:predicate skos:prefLabel ;
         rr:objectMap [ xrr:reference "$.subType"; rr:language "en" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:inScheme;
+        rr:objectMap [ rr:constant mluo_th:TaskScheme; rr:termType rr:IRI ];
     ];
     .
 
@@ -44,7 +71,7 @@
 <#TaskCategory>
     a rr:TriplesMap;
     xrr:logicalSource [
-        xrr:query "db.tasks_enriched.find({}, {_id:0})";
+        xrr:query "db.tasks.find({}, {_id:0})";
         rml:iterator "$.task_categories.*";
     ];
     rr:subjectMap [ 
@@ -59,7 +86,11 @@
     ];
     rr:predicateObjectMap [
         rr:predicate skos:definition;
-        rr:objectMap [ xrr:reference "$.summary"; rr:language "en" ];
+        rr:objectMap [ xrr:reference "$.definition"; rr:language "en" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate owl:seeAlso;
+        rr:objectMap [ xrr:reference "$.seeAlso[*]"; rr:termType rr:IRI ];
     ];
     rr:predicateObjectMap [
         rr:predicate dcterms:source;
@@ -67,22 +98,33 @@
     ];
     rr:predicateObjectMap [
         rr:predicate skos:inScheme;
-        rr:objectMap [ rr:template "http://example.org/mluo/thesaurus#{$.subTypeId}"; rr:termType rr:IRI ];
+        rr:objectMap [ rr:constant mluo_th:TaskScheme; rr:termType rr:IRI ];
     ];
     rr:predicateObjectMap [
-        rr:predicate skos:topConceptOf;
-        rr:objectMap [ rr:template "http://example.org/mluo/thesaurus#{$.subTypeId}"; rr:termType rr:IRI ];
+        rr:predicate skos:example;
+        rr:objectMap [ rr:template "Dataset example: {$.datasets[0].description}"; rr:termType rr:Literal; rr:language "en" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:example;
+        rr:objectMap [ rr:template "Model example: {$.models[0].description}"; rr:termType rr:Literal; rr:language "en" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:example;
+        rr:objectMap [ rr:template "Demo example: {$.spaces[0].description}"; rr:termType rr:Literal; rr:language "en" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:example;
+        rr:objectMap [ rr:template "Library example: {$.libraries[0]}."; rr:termType rr:Literal; rr:language "en" ];
     ];
     .
-
 
 # ----------------------------------- Task Id
 
 <#TaskId>
     a rr:TriplesMap;
     xrr:logicalSource [
-        xrr:query "db.tasks_enriched.find({}, {_id:0})";
-        rml:iterator "$.task_ids[*]";
+        xrr:query "db.tasks.find({}, {_id:0})";
+        rml:iterator "$.task_ids[?(@.id != 'document-question-answering' || @.id != 'visual-question-answering')]";
     ];
     rr:subjectMap [ 
         rr:template "http://example.org/mluo/thesaurus#{$.label}";
@@ -97,6 +139,18 @@
     rr:predicateObjectMap [
         rr:predicate dcterms:source;
         rr:objectMap [ xrr:reference "$.source"; rr:termType rr:IRI ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:definition;
+        rr:objectMap [ xrr:reference "$.definition"; rr:language "en" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate owl:seeAlso;
+        rr:objectMap [ xrr:reference "$.seeAlso[*]"; rr:termType rr:IRI ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate skos:inScheme;
+        rr:objectMap [ rr:constant mluo_th:TaskScheme; rr:termType rr:IRI ];
     ];
     .
 
@@ -118,5 +172,6 @@
             rr:template "http://example.org/mluo/thesaurus#{$.task_categories[*]}";
             rr:termType rr:IRI;
         ];
-    ];
+    ]
     .
+

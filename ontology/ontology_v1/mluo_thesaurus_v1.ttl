@@ -1,0 +1,1094 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+
+@prefix mluo: <http://example.org/mluo/ontology#> .
+@prefix mluo_th: <http://example.org/mluo/thesaurus#> .
+
+# SKOS Thesaurus for Machine Learning Usage
+
+mluo_th: a owl:Ontology ;
+    dcterms:title "MLUO Thesaurus"@en ;
+    dcterms:creator "Aline MENIN", "Zachari ARNAUD" ;
+    dcterms:modified "2026-02-25" ;
+    dcterms:description "The MLUO Thesaurus provides controlled vocabulary for datasets and machine learning models."@en ;
+    owl:versionInfo "1.0" ;
+    dcat:landingPage <https://github.com/amenin/datalens> ;
+    dcterms:license  <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dcterms:created "2026"^^xsd:gYear ;
+    dcterms:publisher "Inria", "University Côte d'Azur", "CNRS" .
+
+## Modality Scheme
+mluo_th:ModalityScheme a skos:ConceptScheme ;
+    skos:prefLabel "Dataset Modality Scheme"@en ;
+    skos:definition "A controlled vocabulary for describing the data modality of datasets used in machine learning."@en ;
+    skos:hasTopConcept 
+        mluo_th:3D,
+        mluo_th:Audio,
+        mluo_th:Document,
+        mluo_th:Geospatial,
+        mluo_th:Image,
+        mluo_th:Tabular,
+        mluo_th:Text,
+        mluo_th:TimeSeries,
+        mluo_th:Video .
+
+mluo_th:3D a skos:Concept, mluo:Modality ;
+    skos:prefLabel "3D"@en ;
+    skos:definition "Three-dimensional spatial data, such as point clouds or meshes."@en ;
+    skos:inScheme mluo_th:ModalityScheme .
+
+mluo_th:Audio a skos:Concept, mluo:Modality ;
+    skos:prefLabel "Audio"@en ;
+    skos:definition "Sound data, such as speech or environmental recordings."@en ;
+    skos:inScheme mluo_th:ModalityScheme .
+
+mluo_th:Document a skos:Concept, mluo:Modality ;
+    skos:prefLabel "Document"@en ;
+    skos:definition "Structured textual documents, such as PDFs or HTML pages."@en ;
+    skos:inScheme mluo_th:ModalityScheme .
+
+mluo_th:Geospatial a skos:Concept, mluo:Modality ;
+    skos:prefLabel "Geospatial"@en ;
+    skos:definition "Data with spatial/geographic components, such as GIS data."@en ;
+    skos:inScheme mluo_th:ModalityScheme .
+
+mluo_th:Image a skos:Concept, mluo:Modality ;
+    skos:prefLabel "Image"@en ;
+    skos:definition "Visual raster data, such as photographs or satellite imagery."@en ;
+    skos:inScheme mluo_th:ModalityScheme .
+
+mluo_th:Tabular a skos:Concept, mluo:Modality ;
+    skos:prefLabel "Tabular"@en ;
+    skos:definition "Structured data organized in rows and columns, such as spreadsheets or CSV files."@en ;
+    skos:inScheme mluo_th:ModalityScheme .
+
+mluo_th:Text a skos:Concept, mluo:Modality ;
+    skos:prefLabel "Text"@en ;
+    skos:definition "Unstructured or semi-structured plain text data."@en ;
+    skos:inScheme mluo_th:ModalityScheme .
+
+mluo_th:TimeSeries a skos:Concept, mluo:Modality ;
+    skos:prefLabel "Time-series"@en ;
+    skos:altLabel "Time series"@en ;
+    skos:definition "Sequential data indexed by time, such as sensor readings or stock prices."@en ;
+    skos:inScheme mluo_th:ModalityScheme .
+
+mluo_th:Video a skos:Concept, mluo:Modality ;
+    skos:prefLabel "Video"@en ;
+    skos:definition "Temporal sequences of images, optionally with audio."@en ;
+    skos:inScheme mluo_th:ModalityScheme .
+
+## Task Scheme
+mluo_th:TaskScheme a skos:ConceptScheme ;
+    skos:prefLabel "Machine Learning Task Scheme"@en ;
+    skos:definition "A controlled vocabulary for describing machine learning tasks."@en ;
+    skos:hasTopConcept 
+        mluo_th:supervised-tasks,
+        mluo_th:computer-vision-tasks,
+        mluo_th:feature-engineering-tasks,
+        mluo_th:generative-ia-tasks,
+        mluo_th:nlp-tasks,
+        mluo_th:reinforcement-tasks .
+
+mluo_th:supervised-tasks a skos:Concept, mluo:TaskCategory ;
+    skos:prefLabel "Supervised Learning"@en ;
+    skos:definition "Supervised learning is a machine learning technique that uses labeled data sets to train artificial intelligence (AI) models to identify the underlying patterns and relationships. The goal of the learning process is to create a model that can predict correct outputs on new real-world data."@en ;
+    dcterms:source "<https://www.ibm.com/think/topics/machine-learning>"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:topConceptOf mluo_th:TaskScheme .
+
+mluo_th:classification-tasks a skos:Concept, mluo:TaskCategory ;
+    skos:prefLabel "Classification"@en ;
+    skos:definition "Classification in machine learning is a predictive modeling process by which machine learning models use classification algorithms to predict the correct label for input data."@en ;
+    dcterms:source "<https://www.ibm.com/think/topics/machine-learning>"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:supervised-tasks .
+
+mluo_th:computer-vision-tasks a skos:Concept, mluo:TaskCategory ;
+    skos:prefLabel "Computer Vision"@en ;
+    skos:definition "Computer vision is a subfield of artificial intelligence (AI) that equips machines with the ability to process, analyze and interpret visual inputs such as images and videos. It uses machine learning to help computers and other systems derive meaningful information from visual data."@en ;
+    dcterms:source "<https://www.ibm.com/think/topics/machine-learning>"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:topConceptOf mluo_th:TaskScheme .
+
+mluo_th:feature-engineering-tasks a skos:Concept, mluo:TaskCategory ;
+    skos:prefLabel "Feature Engineering"@en ;
+    skos:definition "Feature engineering preprocesses raw data into a machine-readable format. It optimizes ML model performance by transforming and selecting relevant features."@en ;
+    dcterms:source "<https://www.ibm.com/think/topics/machine-learning>"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:topConceptOf mluo_th:TaskScheme .
+
+mluo_th:generative-ia-tasks a skos:Concept, mluo:TaskCategory ;
+    skos:prefLabel "Generative AI"@en ;
+    skos:definition "Generative AI, sometimes called gen AI, is artificial intelligence (AI) that can create original content such as text, images, video, audio or software code in response to a user’s prompt or request."@en ;
+    dcterms:source "<https://www.ibm.com/think/topics/machine-learning>"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:topConceptOf mluo_th:TaskScheme .
+
+mluo_th:multimodal-tasks a skos:Concept, mluo:TaskCategory ;
+    skos:prefLabel "Multimodal AI"@en ;
+    skos:definition "Multimodal AI refers to machine learning models capable of processing and integrating information from multiple modalities or types of data. These modalities can include text, images, audio, video and other forms of sensory input."@en ;
+    dcterms:source "<https://www.ibm.com/think/topics/machine-learning>"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:generative-ia-tasks .
+
+mluo_th:nlp-tasks a skos:Concept, mluo:TaskCategory ;
+    skos:prefLabel "Natural Language Processing"@en ;
+    skos:definition "Natural language processing (NLP) is a subfield of computer science and artificial intelligence (AI) that uses machine learning to enable computers to understand and communicate with human language."@en ;
+    dcterms:source "<https://www.ibm.com/think/topics/machine-learning>"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:topConceptOf mluo_th:TaskScheme .
+
+mluo_th:conversational-tasks a skos:Concept, mluo:TaskCategory ;
+    skos:prefLabel "Conversational AI"@en ;
+    skos:definition "Conversational artificial intelligence (AI) refers to technologies, such as chatbots or virtual agents, that users can talk to. They use large volumes of data, machine learning and natural language processing to help imitate human interactions, recognizing speech and text inputs and translating their meanings across various languages."@en ;
+    dcterms:source "<https://www.ibm.com/think/topics/machine-learning>"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:nlp-tasks .
+
+mluo_th:reinforcement-tasks a skos:Concept, mluo:TaskCategory ;
+    skos:prefLabel "Reinforcement Learning"@en ;
+    skos:definition "Reinforcement learning (RL) is a type of machine learning process in which autonomous agents learn to make decisions by interacting with their environment."@en ;
+    dcterms:source "<https://www.ibm.com/think/topics/machine-learning>"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:topConceptOf mluo_th:TaskScheme .
+
+mluo_th:any-to-any a skos:Concept, mluo:Task ;
+    skos:prefLabel "Any-to-Any"@en ;
+    skos:definition "Any-to-any models can understand two or more modalities and output two or more modalities."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A dataset with multiple modality input and output pairs."@en ;
+    skos:example "Model example: Strong model that can take in video, audio, image, text and output text and natural speech."@en ;
+    skos:example "Demo example: An application to chat with an any-to-any (image & text) model."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multimodal-tasks .
+
+mluo_th:audio-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Audio Classification"@en ;
+    skos:definition "Audio classification is the task of assigning a label or class to a given audio. It can be used for recognizing which command a user is giving or the emotion of a statement, as well as identifying a speaker."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A benchmark of 10 different audio tasks."@en ;
+    skos:example "Model example: An easy-to-use model for command recognition."@en ;
+    skos:example "Demo example: An application that can classify music into different genre."@en ;
+    skos:example "Library example: speechbrain."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:classification-tasks .
+
+mluo_th:audio-to-audio a skos:Concept, mluo:Task ;
+    skos:prefLabel "Audio-to-Audio"@en ;
+    skos:definition "Audio-to-Audio is a family of tasks in which the input is an audio and the output is one or multiple generated audios. Some example tasks are speech enhancement and source separation."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: 512-element X-vector embeddings of speakers from CMU ARCTIC dataset."@en ;
+    skos:example "Model example: A speech enhancement model."@en ;
+    skos:example "Demo example: An application for speech separation."@en ;
+    skos:example "Library example: asteroid."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multimodal-tasks .
+
+mluo_th:audio-text-to-text a skos:Concept, mluo:Task ;
+    skos:prefLabel "Audio-Text-to-Text"@en ;
+    skos:definition "Audio-text-to-text models take both an audio clip and a text prompt as input, and generate natural language text as output. These models can answer questions about spoken content, summarize meetings, analyze music, or interpret speech beyond simple transcription. They are useful for applications that combine speech understanding with reasoning or conversation."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A dataset containing audio conversations with question–answer pairs."@en ;
+    skos:example "Model example: A lightweight model that has capabilities of taking both audio and text as inputs and generating responses."@en ;
+    skos:example "Demo example: A space that takes input as both audio and text and generates answers."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multimodal-tasks .
+
+mluo_th:automatic-speech-recognition a skos:Concept, mluo:Task ;
+    skos:prefLabel "Automatic Speech Recognition"@en ;
+    skos:definition "Automatic Speech Recognition (ASR), also known as Speech to Text (STT), is the task of transcribing a given audio to text. It has many applications, such as voice user interfaces."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: 31,175 hours of multilingual audio-text dataset in 108 languages."@en ;
+    skos:example "Model example: A powerful ASR model by OpenAI."@en ;
+    skos:example "Demo example: A powerful general-purpose speech recognition application."@en ;
+    skos:example "Library example: espnet."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:nlp-tasks .
+
+mluo_th:depth-estimation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Depth Estimation"@en ;
+    skos:definition "Depth estimation is the task of predicting depth of the objects present in an image."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: NYU Depth V2 Dataset: Video dataset containing both RGB and depth sensor data."@en ;
+    skos:example "Model example: Cutting-edge depth estimation model."@en ;
+    skos:example "Demo example: An application that predicts the depth of an image and then reconstruct the 3D model as voxels."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:computer-vision-tasks .
+
+mluo_th:document-question-answering a skos:Concept, mluo:Task ;
+    skos:prefLabel "Document Question Answering"@en ;
+    skos:definition "Document Question Answering (also known as Document Visual Question Answering) is the task of answering questions on document images. Document question answering models take a (document, question) pair as input and return an answer in natural language. Models usually rely on multi-modal features, combining text, position of words (bounding-boxes) and image."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: Largest document understanding dataset."@en ;
+    skos:example "Model example: A robust document question answering model."@en ;
+    skos:example "Demo example: A robust document question answering application."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:conversational-tasks .
+
+mluo_th:visual-document-retrieval a skos:Concept, mluo:Task ;
+    skos:prefLabel "Visual Document Retrieval"@en ;
+    skos:definition "Visual document retrieval is the task of searching for relevant image-based documents, such as PDFs. These models take a text query and multiple documents as input and return the top-most relevant documents and relevancy scores as output."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A large dataset used to train visual document retrieval models."@en ;
+    skos:example "Model example: Very accurate visual document retrieval model for multilingual queries and documents."@en ;
+    skos:example "Demo example: A leaderboard of visual document retrieval models."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multimodal-tasks .
+
+mluo_th:feature-extraction a skos:Concept, mluo:Task ;
+    skos:prefLabel "Feature Extraction"@en ;
+    skos:definition "Feature extraction is the task of extracting features learnt in a model."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: Wikipedia dataset containing cleaned articles of all languages. Can be used to train `feature-extraction` models."@en ;
+    skos:example "Model example: A powerful feature extraction model for natural language processing tasks."@en ;
+    skos:example "Demo example: A leaderboard to rank text feature extraction models based on a benchmark."@en ;
+    skos:example "Library example: sentence-transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:feature-engineering-tasks .
+
+mluo_th:fill-mask a skos:Concept, mluo:Task ;
+    skos:prefLabel "Fill-Mask"@en ;
+    skos:definition "Masked language modeling is the task of masking some of the words in a sentence and predicting which words should replace those masks. These models are useful when we want to get a statistical understanding of the language in which the model is trained in."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A common dataset that is used to train models for many languages."@en ;
+    skos:example "Model example: State-of-the-art masked language model."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:generative-ia-tasks .
+
+mluo_th:image-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Image Classification"@en ;
+    skos:definition "Image classification is the task of assigning a label or class to an entire image. Images are expected to have only one class for each image. Image classification models take an image as input and return a prediction about which class the image belongs to."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: Benchmark dataset used for image classification with images that belong to 100 classes."@en ;
+    skos:example "Model example: A strong image classification model."@en ;
+    skos:example "Demo example: A leaderboard to evaluate different image classification models."@en ;
+    skos:example "Library example: keras."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:classification-tasks .
+
+mluo_th:image-feature-extraction a skos:Concept, mluo:Task ;
+    skos:prefLabel "Image Feature Extraction"@en ;
+    skos:definition "Image feature extraction is the task of extracting features learnt in a computer vision model."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: ImageNet-1K is a image classification dataset in which images are used to train image-feature-extraction models."@en ;
+    skos:example "Model example: A powerful image feature extraction model."@en ;
+    skos:example "Demo example: A leaderboard to evaluate different image-feature-extraction models on classification performances"@en ;
+    skos:example "Library example: timm."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:feature-engineering-tasks .
+
+mluo_th:image-segmentation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Image Segmentation"@en ;
+    skos:definition "Image Segmentation divides an image into segments where each pixel in the image is mapped to an object. This task has multiple variants such as instance segmentation, panoptic segmentation and semantic segmentation."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: Scene segmentation dataset."@en ;
+    skos:example "Model example: Solid panoptic segmentation model trained on COCO."@en ;
+    skos:example "Demo example: A semantic segmentation application that can predict unseen instances out of the box."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:computer-vision-tasks .
+
+mluo_th:image-to-image a skos:Concept, mluo:Task ;
+    skos:prefLabel "Image-to-Image"@en ;
+    skos:definition "Image-to-image is the task of transforming an input image through a variety of possible manipulations and enhancements, such as super-resolution, image inpainting, colorization, and more."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: Synthetic dataset, for image relighting"@en ;
+    skos:example "Model example: An image-to-image model to improve image resolution."@en ;
+    skos:example "Demo example: Image editing application."@en ;
+    skos:example "Library example: diffusers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multimodal-tasks .
+
+mluo_th:image-text-to-text a skos:Concept, mluo:Task ;
+    skos:prefLabel "Image-Text-to-Text"@en ;
+    skos:definition "Image-text-to-text models take in an image and text prompt and output text. These models are also called vision-language models, or VLMs. The difference from image-to-text models is that these models take an additional text input, not restricting the model to certain use cases like image captioning, and may also be trained to accept a conversation as input."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: Instructions composed of image and text."@en ;
+    skos:example "Model example: Small and efficient yet powerful vision language model."@en ;
+    skos:example "Demo example: Leaderboard to evaluate vision language models."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multimodal-tasks .
+
+mluo_th:image-text-to-image a skos:Concept, mluo:Task ;
+    skos:prefLabel "Image-Text-to-Image"@en ;
+    skos:definition "Image-text-to-image models take an image and a text prompt as input and generate a new image based on the reference image and text instructions. These models are useful for image editing, style transfer, image variations, and guided image generation tasks."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Model example: A powerful model for image-text-to-image generation."@en ;
+    skos:example "Demo example: An application for image-text-to-image generation."@en ;
+    skos:example "Library example: diffusers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multimodal-tasks .
+
+mluo_th:image-text-to-video a skos:Concept, mluo:Task ;
+    skos:prefLabel "Image-Text-to-Video"@en ;
+    skos:definition "Image-text-to-video models take an reference image and a text instructions as and generate a video based on them. These models are useful for animating still images, creating dynamic content from static references, and generating videos with specific motion or transformation guidance."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Model example: A powerful model for image-text-to-video generation."@en ;
+    skos:example "Demo example: An application for image-text-to-video generation."@en ;
+    skos:example "Library example: diffusers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multimodal-tasks .
+
+mluo_th:image-to-text a skos:Concept, mluo:Task ;
+    skos:prefLabel "Image-to-Text"@en ;
+    skos:definition "Image to text models output a text from a given image. Image captioning or optical character recognition can be considered as the most common applications of image to text."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: Dataset from 12M image-text of Reddit"@en ;
+    skos:example "Model example: Strong OCR model."@en ;
+    skos:example "Demo example: SVG generator app from images."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multimodal-tasks .
+
+mluo_th:image-to-video a skos:Concept, mluo:Task ;
+    skos:prefLabel "Image-to-Video"@en ;
+    skos:definition "Image-to-video models take a still image as input and generate a video. These models can be guided by text prompts to influence the content and style of the output video."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A benchmark dataset for reference image controlled video generation."@en ;
+    skos:example "Model example: LTX-Video, a 13B parameter model for high quality video generation"@en ;
+    skos:example "Demo example: An application to generate videos fast."@en ;
+    skos:example "Library example: diffusers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multimodal-tasks .
+
+mluo_th:keypoint-detection a skos:Concept, mluo:Task ;
+    skos:prefLabel "Keypoint Detection"@en ;
+    skos:definition "Keypoint detection is the task of identifying meaningful distinctive points or features in an image."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A dataset of hand keypoints of over 500k examples."@en ;
+    skos:example "Model example: A robust keypoint detection model."@en ;
+    skos:example "Demo example: An application that detects hand keypoints in real-time."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:computer-vision-tasks .
+
+mluo_th:mask-generation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Mask Generation"@en ;
+    skos:definition "Mask generation is the task of generating masks that identify a specific object or region of interest in a given image. Masks are often used in segmentation tasks, where they provide a precise way to isolate the object of interest for further processing or analysis."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: Widely used benchmark dataset for multiple Vision tasks."@en ;
+    skos:example "Model example: Small yet powerful mask generation model."@en ;
+    skos:example "Demo example: An application that combines a mask generation model with a zero-shot object detection model for text-guided image segmentation."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:generative-ia-tasks .
+
+mluo_th:object-detection a skos:Concept, mluo:Task ;
+    skos:prefLabel "Object Detection"@en ;
+    skos:definition "Object Detection models allow users to identify objects of certain defined classes. Object detection models receive an image as input and output the images with bounding boxes and labels on detected objects."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: Widely used benchmark dataset for multiple vision tasks."@en ;
+    skos:example "Model example: Solid object detection model pre-trained on the COCO 2017 dataset."@en ;
+    skos:example "Demo example: Real-time object detection demo."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:computer-vision-tasks .
+
+mluo_th:video-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Video Classification"@en ;
+    skos:definition "Video classification is the task of assigning a label or class to an entire video. Videos are expected to have only one class for each video. Video classification models take a video as input and return a prediction about which class the video belongs to."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: Benchmark dataset used for video classification with videos that belong to 400 classes."@en ;
+    skos:example "Model example: Strong Video Classification model trained on the Kinetics 400 dataset."@en ;
+    skos:example "Demo example: An application that classifies video at different timestamps."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:classification-tasks .
+
+mluo_th:question-answering a skos:Concept, mluo:Task ;
+    skos:prefLabel "Question Answering"@en ;
+    skos:definition "Question Answering models can retrieve the answer to a question from a given text, which is useful for searching for an answer in a document. Some question answering models can generate answers without context!"@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A famous question answering dataset based on English articles from Wikipedia."@en ;
+    skos:example "Model example: A robust baseline model for most question answering domains."@en ;
+    skos:example "Demo example: An application that can answer a long question from Wikipedia."@en ;
+    skos:example "Library example: adapter-transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:conversational-tasks .
+
+mluo_th:reinforcement-learning a skos:Concept, mluo:Task ;
+    skos:prefLabel "Reinforcement Learning"@en ;
+    skos:definition "Reinforcement learning is the computational approach of learning from action by interacting with an environment through trial and error and receiving rewards (negative or positive) as feedback"@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A curation of widely used datasets for Data Driven Deep Reinforcement Learning (D4RL)"@en ;
+    skos:example "Model example: A Reinforcement Learning model trained on expert data from the Gym Hopper environment"@en ;
+    skos:example "Demo example: An application for a cute puppy agent learning to catch a stick."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:reinforcement-tasks .
+
+mluo_th:sentence-similarity a skos:Concept, mluo:Task ;
+    skos:prefLabel "Sentence Similarity"@en ;
+    skos:definition "Sentence Similarity is the task of determining how similar two texts are. Sentence similarity models convert input texts into vectors (embeddings) that capture semantic information and calculate how close (similar) they are between them. This task is particularly useful for information retrieval and clustering/grouping."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: Bing queries with relevant passages from various web sources."@en ;
+    skos:example "Model example: This model works well for sentences and paragraphs and can be used for clustering/grouping and semantic searches."@en ;
+    skos:example "Demo example: An application that leverages sentence similarity to answer questions from YouTube videos."@en ;
+    skos:example "Library example: sentence-transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:nlp-tasks .
+
+mluo_th:summarization a skos:Concept, mluo:Task ;
+    skos:prefLabel "Summarization"@en ;
+    skos:definition "Summarization is the task of producing a shorter version of a document while preserving its important information. Some models can extract text from the original input, while other models can generate entirely new text."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: News articles in five different languages along with their summaries. Widely used for benchmarking multilingual summarization models."@en ;
+    skos:example "Model example: A strong summarization model trained on English news articles. Excels at generating factual summaries."@en ;
+    skos:example "Demo example: An application that can summarize long paragraphs."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:nlp-tasks .
+
+mluo_th:table-question-answering a skos:Concept, mluo:Task ;
+    skos:prefLabel "Table Question Answering"@en ;
+    skos:definition "Table Question Answering (Table QA) is the answering a question about an information on a given table."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: The WikiTableQuestions dataset is a large-scale dataset for the task of question answering on semi-structured tables."@en ;
+    skos:example "Model example: A table question answering model that is capable of neural SQL execution, i.e., employ TAPEX to execute a SQL query on a given table."@en ;
+    skos:example "Demo example: An application that answers questions based on table CSV files."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:conversational-tasks .
+
+mluo_th:tabular-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Tabular Classification"@en ;
+    skos:definition "Tabular classification is the task of classifying a target category (a group) based on set of attributes."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A comprehensive curation of datasets covering all benchmarks."@en ;
+    skos:example "Model example: Breast cancer prediction model based on decision trees."@en ;
+    skos:example "Demo example: An application that can predict defective products on a production line."@en ;
+    skos:example "Library example: sklearn."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:classification-tasks .
+
+mluo_th:tabular-regression a skos:Concept, mluo:Task ;
+    skos:prefLabel "Tabular Regression"@en ;
+    skos:definition "Tabular regression is the task of predicting a numerical value given a set of attributes."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A comprehensive curation of datasets covering all benchmarks."@en ;
+    skos:example "Model example: Fish weight prediction based on length measurements and species."@en ;
+    skos:example "Demo example: An application that can predict weight of a fish based on set of attributes."@en ;
+    skos:example "Library example: sklearn."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:supervised-tasks .
+
+mluo_th:text-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Text Classification"@en ;
+    skos:definition "Text Classification is the task of assigning a label or class to a given text. Some use cases are sentiment analysis, natural language inference, and assessing grammatical correctness."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A widely used dataset used to benchmark multiple variants of text classification."@en ;
+    skos:example "Model example: A robust model trained for sentiment analysis."@en ;
+    skos:example "Demo example: An application that can classify financial sentiment."@en ;
+    skos:example "Library example: adapter-transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:classification-tasks .
+
+mluo_th:text-generation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Text Generation"@en ;
+    skos:definition "Generating text is the task of generating new text given another text. These models can, for example, fill in incomplete text or paraphrase."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: Multilingual dataset used to evaluate text generation models."@en ;
+    skos:example "Model example: A text-generation model trained to follow instructions."@en ;
+    skos:example "Demo example: An application that writes and executes code from text instructions and supports many models."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:generative-ia-tasks .
+
+mluo_th:text-ranking a skos:Concept, mluo:Task ;
+    skos:prefLabel "Text Ranking"@en ;
+    skos:definition "Text Ranking is the task of ranking a set of texts based on their relevance to a query. Text ranking models are trained on large datasets of queries and relevant documents to learn how to rank documents based on their relevance to the query. This task is particularly useful for search engines and information retrieval systems."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: Bing queries with relevant passages from various web sources."@en ;
+    skos:example "Model example: An extremely efficient text ranking model trained on a web search dataset."@en ;
+    skos:example "Library example: sentence-transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:nlp-tasks .
+
+mluo_th:text-to-image a skos:Concept, mluo:Task ;
+    skos:prefLabel "Text-to-Image"@en ;
+    skos:definition "Text-to-image is the task of generating images from input text. These pipelines can also be used to modify and edit images based on text prompts."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: RedCaps is a large-scale dataset of 12M image-text pairs collected from Reddit."@en ;
+    skos:example "Model example: One of the most powerful image generation models that can generate realistic outputs."@en ;
+    skos:example "Demo example: A powerful text-to-image application."@en ;
+    skos:example "Library example: diffusers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multimodal-tasks .
+
+mluo_th:text-to-speech a skos:Concept, mluo:Task ;
+    skos:prefLabel "Text-to-Speech"@en ;
+    skos:definition "Text-to-Speech (TTS) is the task of generating natural sounding speech given text input. TTS models can be extended to have a single model that generates speech for multiple speakers and multiple languages."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: 10K hours of multi-speaker English dataset."@en ;
+    skos:example "Model example: Small yet powerful TTS model."@en ;
+    skos:example "Demo example: An application for generate high quality speech in different languages."@en ;
+    skos:example "Library example: espnet."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multimodal-tasks .
+
+mluo_th:text-to-video a skos:Concept, mluo:Task ;
+    skos:prefLabel "Text-to-Video"@en ;
+    skos:definition "Text-to-video models can be used in any application that requires generating consistent sequence of images from text."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: Microsoft Research Video to Text is a large-scale dataset for open domain video captioning"@en ;
+    skos:example "Model example: A strong model for consistent video generation."@en ;
+    skos:example "Demo example: An application that generates video from text."@en ;
+    skos:example "Library example: diffusers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multimodal-tasks .
+
+mluo_th:token-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Token Classification"@en ;
+    skos:definition "Token classification is a natural language understanding task in which a label is assigned to some tokens in a text. Some popular token classification subtasks are Named Entity Recognition (NER) and Part-of-Speech (PoS) tagging. NER models could be trained to identify specific entities in a text, such as dates, individuals and places; and PoS tagging would identify, for example, which words in a text are verbs, nouns, and punctuation marks."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A widely used dataset useful to benchmark named entity recognition models."@en ;
+    skos:example "Model example: A robust performance model to identify people, locations, organizations and names of miscellaneous entities."@en ;
+    skos:example "Demo example: An application that can recognizes entities, extracts noun chunks and recognizes various linguistic features of each token."@en ;
+    skos:example "Library example: adapter-transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:classification-tasks .
+
+mluo_th:translation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Translation"@en ;
+    skos:definition "Translation is the task of converting text from one language to another."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A dataset of copyright-free books translated into 16 different languages."@en ;
+    skos:example "Model example: Very powerful model that can translate many languages between each other, especially low-resource languages."@en ;
+    skos:example "Demo example: An application that can translate between 100 languages."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:nlp-tasks .
+
+mluo_th:unconditional-image-generation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Unconditional Image Generation"@en ;
+    skos:definition "Unconditional image generation is the task of generating images with no condition in any context (like a prompt text or another image). Once trained, the model will create images that resemble its training data distribution."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: The CIFAR-100 dataset consists of 60000 32x32 colour images in 100 classes, with 600 images per class."@en ;
+    skos:example "Model example: High-quality image generation model trained on the CIFAR-10 dataset. It synthesizes images of the ten classes presented in the dataset using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics."@en ;
+    skos:example "Demo example: An application that can generate realistic faces."@en ;
+    skos:example "Library example: diffusers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:generative-ia-tasks .
+
+mluo_th:video-text-to-text a skos:Concept, mluo:Task ;
+    skos:prefLabel "Video-Text-to-Text"@en ;
+    skos:definition "Video-text-to-text models take in a video and a text prompt and output text. These models are also called video-language models."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: Multiple-choice questions and answers about videos."@en ;
+    skos:example "Model example: A robust video-text-to-text model."@en ;
+    skos:example "Demo example: An application to chat with a video-text-to-text model."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multimodal-tasks .
+
+mluo_th:video-to-video a skos:Concept, mluo:Task ;
+    skos:prefLabel "Video-to-Video"@en ;
+    skos:definition "Video-to-video models take one or more videos as input and generate new videos as output. They can enhance quality, interpolate frames, modify styles, or create new motion dynamics, enabling creative applications, video production, and research."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: Dataset with detailed annotations for training and benchmarking video instance editing."@en ;
+    skos:example "Model example: Model for editing outfits, character, and scenery in videos."@en ;
+    skos:example "Demo example: Interactive demo space for Lucy-Edit-Dev video editing."@en ;
+    skos:example "Library example: diffusers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multimodal-tasks .
+
+mluo_th:visual-question-answering a skos:Concept, mluo:Task ;
+    skos:prefLabel "Visual Question Answering"@en ;
+    skos:definition "Visual Question Answering is the task of answering open-ended questions based on an image. They output natural language responses to natural language questions."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A widely used dataset containing questions (with answers) about images."@en ;
+    skos:example "Model example: A visual question answering model trained to convert charts and plots to text."@en ;
+    skos:example "Demo example: An application that compares visual question answering models across different tasks."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:conversational-tasks .
+
+mluo_th:zero-shot-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Zero-Shot Classification"@en ;
+    skos:definition "Zero-shot text classification is a task in natural language processing where a model is trained on a set of labeled examples but is then able to classify new examples from previously unseen classes."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A widely used dataset used to benchmark multiple variants of text classification."@en ;
+    skos:example "Model example: Powerful zero-shot text classification model."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:classification-tasks .
+
+mluo_th:zero-shot-image-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Zero-Shot Image Classification"@en ;
+    skos:definition "Zero-shot image classification is the task of classifying previously unseen classes during training of a model."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Model example: Multilingual image classification model for 80 languages."@en ;
+    skos:example "Demo example: An application that leverages zero-shot image classification to find best captions to generate an image."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:classification-tasks .
+
+mluo_th:zero-shot-object-detection a skos:Concept, mluo:Task ;
+    skos:prefLabel "Zero-Shot Object Detection"@en ;
+    skos:definition "Zero-shot object detection is a computer vision task to detect objects and their classes in images, without any prior training or knowledge of the classes. Zero-shot object detection models receive an image as input, as well as a list of candidate classes, and output the bounding boxes and labels where the objects have been detected."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Model example: Solid zero-shot object detection model."@en ;
+    skos:example "Demo example: A demo to compare different zero-shot object detection models per output and latency."@en ;
+    skos:example "Library example: transformers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:computer-vision-tasks .
+
+mluo_th:text-to-3d a skos:Concept, mluo:Task ;
+    skos:prefLabel "Text-to-3D"@en ;
+    skos:definition "Text-to-3D models take in text input and produce 3D output."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A large dataset of over 10 million 3D objects."@en ;
+    skos:example "Model example: Text-to-3D mesh model by OpenAI"@en ;
+    skos:example "Demo example: Text-to-3D demo with mesh outputs."@en ;
+    skos:example "Library example: diffusers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multimodal-tasks .
+
+mluo_th:image-to-3d a skos:Concept, mluo:Task ;
+    skos:prefLabel "Image-to-3D"@en ;
+    skos:definition "Image-to-3D models take in image input and produce 3D output."@en ;
+    dcterms:source "<https://www.huggingface.co/api/tasks>"@en ;
+    skos:example "Dataset example: A large dataset of over 10 million 3D objects."@en ;
+    skos:example "Model example: Fast image-to-3D mesh model by Tencent."@en ;
+    skos:example "Demo example: Leaderboard to evaluate image-to-3D models."@en ;
+    skos:example "Library example: diffusers."@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multimodal-tasks .
+
+
+## Tasks not in API
+
+mluo_th:language-modeling a skos:Concept, mluo:Task ;
+    skos:prefLabel "Language Modeling"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-generation .
+
+mluo_th:multi-class-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multi Class Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:named-entity-recognition a skos:Concept, mluo:Task ;
+    skos:prefLabel "Named Entity Recognition"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:token-classification .
+
+mluo_th:extractive-qa a skos:Concept, mluo:Task ;
+    skos:prefLabel "Extractive Qa"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:question-answering .
+
+mluo_th:topic-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Topic Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification,
+        mluo_th:text-generation .
+
+mluo_th:multi-label-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multi Label Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:sentiment-analysis a skos:Concept, mluo:Task ;
+    skos:prefLabel "Sentiment Analysis"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:text-scoring a skos:Concept, mluo:Task ;
+    skos:prefLabel "Text Scoring"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:question-answering,
+        mluo_th:summarization,
+        mluo_th:text-classification,
+        mluo_th:text-generation,
+        mluo_th:token-classification .
+
+mluo_th:news-articles-summarization a skos:Concept, mluo:Task ;
+    skos:prefLabel "News Articles Summarization"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:extractive-qa,
+        mluo_th:language-modeling,
+        mluo_th:multi-class-classification,
+        mluo_th:multi-label-classification,
+        mluo_th:named-entity-recognition,
+        mluo_th:question-answering,
+        mluo_th:sentiment-analysis,
+        mluo_th:summarization,
+        mluo_th:text-classification,
+        mluo_th:text-generation,
+        mluo_th:token-classification,
+        mluo_th:topic-classification .
+
+mluo_th:sentiment-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Sentiment Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:open-domain-qa a skos:Concept, mluo:Task ;
+    skos:prefLabel "Open Domain Qa"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:question-answering .
+
+mluo_th:masked-language-modeling a skos:Concept, mluo:Task ;
+    skos:prefLabel "Masked Language Modeling"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:fill-mask,
+        mluo_th:language-modeling,
+        mluo_th:text-generation .
+
+mluo_th:closed-domain-qa a skos:Concept, mluo:Task ;
+    skos:prefLabel "Closed Domain Qa"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:question-answering .
+
+mluo_th:hate-speech-detection a skos:Concept, mluo:Task ;
+    skos:prefLabel "Hate Speech Detection"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:multi-class-image-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multi Class Image Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:image-classification .
+
+mluo_th:sentiment-scoring a skos:Concept, mluo:Task ;
+    skos:prefLabel "Sentiment Scoring"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:sentiment-analysis,
+        mluo_th:sentiment-classification,
+        mluo_th:text-classification .
+
+mluo_th:tabular-multi-class-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Tabular Multi Class Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:tabular-classification .
+
+mluo_th:intent-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Intent Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:image-captioning a skos:Concept, mluo:Task ;
+    skos:prefLabel "Image Captioning"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:image-to-text .
+
+mluo_th:closed-book-qa a skos:Concept, mluo:Task ;
+    skos:prefLabel "Closed Book Qa"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:closed-domain-qa,
+        mluo_th:extractive-qa,
+        mluo_th:question-answering,
+        mluo_th:text-generation .
+
+mluo_th:open-book-qa a skos:Concept, mluo:Task ;
+    skos:prefLabel "Open Book Qa"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:closed-domain-qa,
+        mluo_th:extractive-qa,
+        mluo_th:question-answering,
+        mluo_th:text-generation .
+
+mluo_th:semantic-segmentation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Semantic Segmentation"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:image-segmentation .
+
+mluo_th:tabular-multi-label-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Tabular Multi Label Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:closed-domain-qa,
+        mluo_th:extractive-qa,
+        mluo_th:language-modeling,
+        mluo_th:multi-class-classification,
+        mluo_th:multi-label-classification,
+        mluo_th:multiple-choice,
+        mluo_th:multiple-choice-qa,
+        mluo_th:natural-language-inference,
+        mluo_th:open-domain-qa,
+        mluo_th:question-answering,
+        mluo_th:table-question-answering,
+        mluo_th:tabular-classification,
+        mluo_th:tabular-multi-class-classification,
+        mluo_th:text-classification,
+        mluo_th:text-generation,
+        mluo_th:topic-classification,
+        mluo_th:zero-shot-classification .
+
+mluo_th:dialogue-modeling a skos:Concept, mluo:Task ;
+    skos:prefLabel "Dialogue Modeling"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-generation .
+
+mluo_th:multi-input-text-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multi Input Text Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:acceptability-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Acceptability Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:multi-label-image-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multi Label Image Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:image-classification .
+
+mluo_th:language-identification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Language Identification"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-classification .
+
+mluo_th:image-inpainting a skos:Concept, mluo:Task ;
+    skos:prefLabel "Image Inpainting"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:image-to-image .
+
+mluo_th:coreference-resolution a skos:Concept, mluo:Task ;
+    skos:prefLabel "Coreference Resolution"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:token-classification .
+
+mluo_th:vehicle-detection a skos:Concept, mluo:Task ;
+    skos:prefLabel "Vehicle Detection"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:object-detection .
+
+mluo_th:image-colorization a skos:Concept, mluo:Task ;
+    skos:prefLabel "Image Colorization"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:image-to-image .
+
+mluo_th:panoptic-segmentation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Panoptic Segmentation"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:image-segmentation,
+        mluo_th:instance-segmentation,
+        mluo_th:object-detection,
+        mluo_th:other,
+        mluo_th:semantic-segmentation .
+
+mluo_th:super-resolution a skos:Concept, mluo:Task ;
+    skos:prefLabel "Super Resolution"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:image-segmentation,
+        mluo_th:other,
+        mluo_th:semantic-segmentation .
+
+mluo_th:robotics a skos:Concept, mluo:Task ;
+    skos:prefLabel "Robotics"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:text-retrieval a skos:Concept, mluo:Task ;
+    skos:prefLabel "Text Retrieval"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:other a skos:Concept, mluo:Task ;
+    skos:prefLabel "Other"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:multiple-choice a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multiple Choice"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:time-series-forecasting a skos:Concept, mluo:Task ;
+    skos:prefLabel "Time Series Forecasting"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:graph-ml a skos:Concept, mluo:Task ;
+    skos:prefLabel "Graph Ml"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:text-to-audio a skos:Concept, mluo:Task ;
+    skos:prefLabel "Text To Audio"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:table-to-text a skos:Concept, mluo:Task ;
+    skos:prefLabel "Table To Text"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:voice-activity-detection a skos:Concept, mluo:Task ;
+    skos:prefLabel "Voice Activity Detection"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:tabular-to-text a skos:Concept, mluo:Task ;
+    skos:prefLabel "Tabular To Text"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:document-retrieval a skos:Concept, mluo:Task ;
+    skos:prefLabel "Document Retrieval"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-retrieval .
+
+mluo_th:multiple-choice-qa a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multiple Choice Qa"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:natural-language-inference a skos:Concept, mluo:Task ;
+    skos:prefLabel "Natural Language Inference"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:semantic-similarity-scoring a skos:Concept, mluo:Task ;
+    skos:prefLabel "Semantic Similarity Scoring"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:semantic-similarity-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Semantic Similarity Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:fact-checking-retrieval a skos:Concept, mluo:Task ;
+    skos:prefLabel "Fact Checking Retrieval"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-retrieval .
+
+mluo_th:fact-checking a skos:Concept, mluo:Task ;
+    skos:prefLabel "Fact Checking"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:entity-linking-retrieval a skos:Concept, mluo:Task ;
+    skos:prefLabel "Entity Linking Retrieval"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-retrieval .
+
+mluo_th:parsing a skos:Concept, mluo:Task ;
+    skos:prefLabel "Parsing"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:part-of-speech a skos:Concept, mluo:Task ;
+    skos:prefLabel "Part Of Speech"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:dialogue-generation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Dialogue Generation"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:text-simplification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Text Simplification"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:instance-segmentation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Instance Segmentation"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:multivariate-time-series-forecasting a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multivariate Time Series Forecasting"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:time-series-forecasting .
+
+mluo_th:text2text-generation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Text2text Generation"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:abstractive-qa a skos:Concept, mluo:Task ;
+    skos:prefLabel "Abstractive Qa"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:speaker-identification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Speaker Identification"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:conversational a skos:Concept, mluo:Task ;
+    skos:prefLabel "Conversational"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:tabular-single-column-regression a skos:Concept, mluo:Task ;
+    skos:prefLabel "Tabular Single Column Regression"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:keyword-spotting a skos:Concept, mluo:Task ;
+    skos:prefLabel "Keyword Spotting"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:explanation-generation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Explanation Generation"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:entity-linking-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Entity Linking Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:univariate-time-series-forecasting a skos:Concept, mluo:Task ;
+    skos:prefLabel "Univariate Time Series Forecasting"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:time-series-forecasting .
+
+mluo_th:slot-filling a skos:Concept, mluo:Task ;
+    skos:prefLabel "Slot Filling"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:open-domain-abstractive-qa a skos:Concept, mluo:Task ;
+    skos:prefLabel "Open Domain Abstractive Qa"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:lemmatization a skos:Concept, mluo:Task ;
+    skos:prefLabel "Lemmatization"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:part-of-speech .
+
+mluo_th:task-planning a skos:Concept, mluo:Task ;
+    skos:prefLabel "Task Planning"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:word-sense-disambiguation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Word Sense Disambiguation"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:audio-language-identification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Audio Language Identification"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:news-articles-headline-generation a skos:Concept, mluo:Task ;
+    skos:prefLabel "News Articles Headline Generation"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:utterance-retrieval a skos:Concept, mluo:Task ;
+    skos:prefLabel "Utterance Retrieval"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:text-retrieval .
+
+mluo_th:face-detection a skos:Concept, mluo:Task ;
+    skos:prefLabel "Face Detection"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:audio-emotion-recognition a skos:Concept, mluo:Task ;
+    skos:prefLabel "Audio Emotion Recognition"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:grasping a skos:Concept, mluo:Task ;
+    skos:prefLabel "Grasping"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:robotics .
+
+mluo_th:rdf-to-text a skos:Concept, mluo:Task ;
+    skos:prefLabel "Rdf To Text"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:audio-intent-classification a skos:Concept, mluo:Task ;
+    skos:prefLabel "Audio Intent Classification"@en ;
+    skos:inScheme mluo_th:TaskScheme .
+
+mluo_th:multiple-choice-coreference-resolution a skos:Concept, mluo:Task ;
+    skos:prefLabel "Multiple Choice Coreference Resolution"@en ;
+    skos:inScheme mluo_th:TaskScheme ;
+    skos:broader mluo_th:multiple-choice .
+
+mluo_th:pose-estimation a skos:Concept, mluo:Task ;
+    skos:prefLabel "Pose Estimation"@en ;
+    skos:inScheme mluo_th:TaskScheme .

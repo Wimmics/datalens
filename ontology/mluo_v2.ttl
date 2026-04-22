@@ -16,7 +16,7 @@
 mluo: a owl:Ontology ;
     dcterms:title "Machine Learning Usage Ontology"@en ;
     dcterms:creator "Aline MENIN", "Zachari ARNAUD" ;
-    dcterms:modified "2026-04-07" ;
+    dcterms:modified "2026-04-21" ;
     dcterms:description "The MLUO defines concepts and relationships for datasets and machine learning models."@en ;
     owl:versionInfo "1.0" ;
     dcat:landingPage <https://github.com/amenin/datalens> ;
@@ -153,6 +153,10 @@ mluo:Modality a owl:Class ;
     rdfs:label "Modality"@en ;
     rdfs:comment "A type of data modality used in the context of machine learning."@en .
 
+mluo:Library a owl:Class ;
+    rdfs:label "Library"@en ;
+    rdfs:comment "A machine learning library."@en .
+
 
 ## Machine Learning models
 
@@ -169,7 +173,7 @@ mluo:libraryName a owl:DatatypeProperty ;
     rdfs:label "library name"@en ;
     rdfs:comment "Primary machine learning library used by the model."@en ;
     rdfs:domain mluo:Model ;
-    rdfs:range xsd:string .
+    rdfs:range mluo:Library .
 
 mluo:modelArchitecture a owl:DatatypeProperty ;
     rdfs:label "model architecture"@en ;

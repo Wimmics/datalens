@@ -1,0 +1,193 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+
+@prefix mluo: <http://example.org/mluo/ontology#> .
+
+# Name idea : MLUO : Machine Learning Usage Ontology
+
+mluo: a owl:Ontology ;
+    dcterms:title "Machine Learning Usage Ontology"@en ;
+    dcterms:creator "Aline MENIN", "Zachari ARNAUD" ;
+    dcterms:modified "2026-03-26" ;
+    dcterms:description "The MLUO defines concepts and relationships for datasets and machine learning models."@en ;
+    owl:versionInfo "1.0" ;
+    dcat:landingPage <https://github.com/amenin/datalens> ;
+    dcterms:license  <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dcterms:created "2026"^^xsd:gYear ;
+    dcterms:publisher "Inria", "University Côte d'Azur", "CNRS" .
+
+## Annotations
+
+# oa:hasTarget -> dcat:Dataset
+mluo:Annotation a owl:Class ;
+    rdfs:subClassOf oa:Annotation ;
+    rdfs:label "Annotation"@en ;
+    rdfs:comment "A comment or note related to a dataset or a machine learning model."@en .
+
+mluo:annotationMethod a owl:DatatypeProperty ;
+    rdfs:label "annotation method"@en ;
+    rdfs:comment "The method or technique used to create an annotation for a dataset or a machine learning model."@en ;
+    rdfs:domain mluo:Annotation ;
+    rdfs:range rdfs:Literal .
+
+mluo:linguisticMethod a owl:DatatypeProperty ;
+    rdfs:label "linguistic method"@en ;
+    rdfs:comment "The linguistic creation method or approach used in the context of a dataset or a machine learning model."@en ;
+    rdfs:domain mluo:Annotation ;
+    rdfs:range rdfs:Literal .
+
+## Usage
+# TODO: A SKOS scheme should be defined for the usage
+# Use rdfs:label in the instance to name the usage
+mluo:Usage a owl:Class ;
+    rdfs:label "Usage"@en ;
+    rdfs:comment "A specific use case or application domain of a dataset in the context of machine learning."@en .
+
+mluo:hasTask a owl:ObjectProperty ;
+    rdfs:label "has ML task"@en ;
+    rdfs:comment "Relates a usage to a specific task or problem that a machine learning model is designed to solve."@en ;
+    rdfs:domain mluo:Usage ;
+    rdfs:range mluo:Task .
+
+mluo:hasTaskCategory a owl:ObjectProperty ;
+    rdfs:label "has ML task category"@en ;
+    rdfs:comment "Relates a usage to a category or type of machine learning task."@en ;
+    rdfs:domain mluo:Usage ;
+    rdfs:range mluo:TaskCategory .
+
+## Machine Learning tasks
+# Use rdfs:label in the instance to name the task
+# TODO: A SKOS scheme should be defined for the tasks
+mluo:Task a owl:Class ;
+    rdfs:label "Machine Learning Task"@en ;
+    rdfs:comment "A specific task or problem that a machine learning model is designed to solve."@en .
+
+mluo:TaskCategory a owl:Class ;
+    rdfs:label "Task Category"@en ;
+    rdfs:comment "A category or type of machine learning task, such as classification, regression, etc."@en .    
+
+
+# Other properties of dataset (not available at DCAT)
+mluo:isAvailable a owl:DatatypeProperty ;
+    rdfs:label "availability status"@en ;
+    rdfs:comment "The availability status of a dataset, indicating whether it is enabled or disabled."@en ;
+    rdfs:domain  [ 
+        a owl:Class ;
+        owl:unionOf (dcat:Dataset skos:ConceptScheme) 
+    ] ;
+    rdfs:range  xsd:boolean .
+
+mluo:downloadCount a owl:DatatypeProperty ;
+    rdfs:label "download count"@en ;
+    rdfs:comment "The number of times a dataset has been downloaded."@en ;
+    rdfs:domain  [ 
+        a owl:Class ;
+        owl:unionOf (dcat:Dataset skos:ConceptScheme) 
+    ] ;
+    rdfs:range xsd:integer .
+
+mluo:hasAcademicArticle a owl:ObjectProperty ;
+    rdfs:label "has scientific article"@en ;
+    rdfs:comment "Relates a dataset to a scholarly article or paper that describes it."@en ;
+    rdfs:domain  [ 
+        a owl:Class ;
+        owl:unionOf (dcat:Dataset skos:ConceptScheme) 
+    ] ;    rdfs:range mluo:AcademicArticle .
+
+mluo:hasUsage a owl:ObjectProperty ;
+    rdfs:label "has usage"@en ;
+    rdfs:comment "Relates a dataset to its specific usage in the context of machine learning."@en ;
+    rdfs:domain  [ 
+        a owl:Class ;
+        owl:unionOf (dcat:Dataset skos:ConceptScheme) 
+    ] ;    rdfs:range mluo:Usage .
+
+mluo:likesCount a owl:DatatypeProperty ;
+    rdfs:label "likes count"@en ;
+    rdfs:comment "The number of likes or positive feedback a dataset has received."@en ;
+    rdfs:domain  [ 
+        a owl:Class ;
+        owl:unionOf (dcat:Dataset skos:ConceptScheme) 
+    ] ;    rdfs:range xsd:integer .
+
+mluo:hasAnnotation a owl:ObjectProperty ;
+    rdfs:label "has annotation"@en ;
+    rdfs:comment "Relates a dataset to its annotations, which provide additional information or context."@en ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range mluo:Annotation .
+
+mluo:hasModality a owl:DatatypeProperty ;
+    rdfs:label "has modality"@en ;
+    rdfs:comment "Relates a usage to a specific modality or type of data used in the context of machine learning."@en ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range mluo:Modality . # instantiated by the thesaurus
+
+mluo:rowsSize a owl:DatatypeProperty ;
+    rdfs:label "rows size"@en ;
+    rdfs:comment "The number of rows in a dataset, according to HuggingFace definition."@en ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range rdfs:Literal .
+
+
+# Academic Article
+mluo:AcademicArticle a owl:Class ;
+    rdfs:label "Academic Article"@en ;
+    rdfs:comment "A scholarly article or paper that describes a dataset or its usage in the context of machine learning."@en ;
+    rdfs:subClassOf bibo:AcademicArticle .
+
+# Uses bibio:doi to indicate the DOI of the article
+mluo:arxiv a owl:ObjectProperty ;
+    rdfs:label "arXiv identifier"@en ;
+    rdfs:comment "The arXiv identifier of the academic article."@en ;
+    rdfs:domain mluo:AcademicArticle ;
+    rdfs:range xsd:string .
+
+mluo:paperswithcode_id a owl:ObjectProperty ;
+    rdfs:label "Papers with Code identifier"@en ;
+    rdfs:comment "The identifier of the academic article in the Papers with Code database."@en ;
+    rdfs:domain mluo:AcademicArticle ;
+    rdfs:range xsd:string .
+
+# Data modality
+# A modality is a type of data used in the context of machine learning, such as text, image, audio, etc.
+mluo:Modality a owl:Class ;
+    rdfs:label "Modality"@en ;
+    rdfs:comment "A type of data modality used in the context of machine learning."@en .
+
+
+## Machine Learning models
+
+@prefix mls: <http://www.w3.org/ns/mls#> .
+
+# La class Model peut provenir de mls ou de mluo
+
+mluo:Model a owl:Class ;
+    rdfs:label "Machine Learning Model"@en ;
+    rdfs:comment "A machine learning model published on a platform such as Hugging Face."@en ;
+    rdfs:subClassOf schema:SoftwareSourceCode .
+
+mluo:libraryName a owl:DatatypeProperty ;
+    rdfs:label "library name"@en ;
+    rdfs:comment "Primary machine learning library used by the model."@en ;
+    rdfs:domain mluo:MachineLearningModel ;
+    rdfs:range xsd:string .
+
+mluo:modelArchitecture a owl:DatatypeProperty ;
+    rdfs:label "model architecture"@en ;
+    rdfs:comment "The architecture declared by the model configuration."@en ;
+    rdfs:domain mluo:MachineLearningModel ;
+    rdfs:range xsd:string .
+
+mluo:trainedOnDataset a owl:ObjectProperty ;
+    rdfs:label "trained on dataset"@en ;
+    rdfs:comment "Relates a machine learning model to a dataset used for training or pretraining."@en ;
+    rdfs:domain mluo:Model ;
+    rdfs:range dcat:Dataset .

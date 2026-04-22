@@ -6,6 +6,7 @@
 
 - An ontology header (`owl:Ontology`) with metadata (title, creators, version, dates, license).
 - A **Modality Scheme** (`mluo_th:ModalityScheme`) with concepts of modalities such as `Text`, `Image`, `Audio`, etc.
+- A **Library Scheme** (`mluo_th:LibraryScheme`) with concepts of libraries such as `PyTorch`, `Scikit-learn`, `Transformers`, etc.
 - A **Task Scheme** (`mluo_th:TaskScheme`) with:
 	- task categories (`mluo:TaskCategory`),
 	- concrete tasks (`mluo:Task`),
@@ -14,13 +15,16 @@
 ## Source of concepts
 
 - **Ontology metadata**: the project.
-- **Modality concepts**: the project.
+- **Modality concepts**: based on Hugging Face modalities.
+- **Library concepts**: based on Hugging Face libraries (Hugging Face API).
 - **Task category concepts**: curated categories, with definitions sourced from IBM ML reference material (The 2026 Guide to Machine Learning).
 - **Task concepts**: based on Hugging Face task vocabulary and descriptions (Hugging Face API).
 - **Task examples** (`skos:example`): derived from task-related metadata (datasets, models, demos, libraries) on Hugging Face (Hugging Face API).
 
 The 2026 Guide to Machine Learning : https://www.ibm.com/think/topics/machine-learning  \
 Hugging Face API : https://www.huggingface.co/api/tasks
+https://huggingface.co/spaces/huggingface/openapi#tag/datasets/GET/api/datasets-tags-by-type
+https://huggingface.co/spaces/huggingface/openapi#tag/models/GET/api/models-tags-by-type
 
 ## Why this hierarchy
 

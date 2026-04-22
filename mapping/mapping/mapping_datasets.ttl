@@ -9,15 +9,6 @@
 @prefix mluo: <http://example.org/mluo/ontology#> .
 @prefix mluo_th: <http://example.org/mluo/thesaurus#> .
 
-# Simplified mapping of preprocessed Hugging Face datasets.
-# Expects collection documents preprocessed by preprocess_datasets.py:
-# - normalized tags
-# - task_ids[]
-# - task_categories[]
-# - modalities[]
-# - languages[]
-# - size_categories[]
-
 <#Dataset>
     a rr:TriplesMap;
     xrr:logicalSource [
@@ -30,7 +21,7 @@
     ];
     rr:predicateObjectMap [
         rr:predicate dcterms:identifier;
-        rr:objectMap [ xrr:reference "$.id" ];
+        rr:objectMap [ rr:template "{$.id}"];
     ];
     rr:predicateObjectMap [
         rr:predicate dcterms:description;
@@ -126,52 +117,52 @@
 <#DatasetRawTag>
     a rr:TriplesMap;
     xrr:logicalSource [
-        xrr:query "db.datasets_subjects.find({dataset_hash16:{$exists:true}, subject:{$exists:true,$ne:null}})";
+        xrr:query "db.{{collection}}.find({id:{$exists:true}, tags:{$exists:true,$ne:[]}})";
     ];
     rr:subjectMap [ rr:template "http://example.org/mluo/data#dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
-    rr:predicateObjectMap [ rr:predicate dcterms:subject; rr:objectMap [ xrr:reference "$.subject"; rr:termType rr:Literal ]; ];
+    rr:predicateObjectMap [ rr:predicate dcterms:subject; rr:objectMap [ xrr:reference "$.tags[*]"; rr:termType rr:Literal ]; ];
     .
 
 <#DatasetTaskCategory>
     a rr:TriplesMap;
     xrr:logicalSource [
-        xrr:query "db.datasets_task_categories.find({dataset_hash16:{$exists:true}, task_category:{$exists:true,$ne:null}})";
+        xrr:query "db.{{collection}}.find({id:{$exists:true}, task_categories:{$exists:true,$ne:[]}})";
     ];
     rr:subjectMap [ rr:template "http://example.org/mluo/data#dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
     rr:predicateObjectMap [
         rr:predicate dcat:theme;
-        rr:objectMap [ rr:template "http://example.org/mluo/thesaurus#{$.task_category}"; rr:termType rr:IRI ];
+        rr:objectMap [ rr:template "http://example.org/mluo/thesaurus#{$.task_categories[*]}"; rr:termType rr:IRI ];
     ];
     .
 
 <#DatasetTaskId>
     a rr:TriplesMap;
     xrr:logicalSource [
-        xrr:query "db.datasets_task_ids.find({dataset_hash16:{$exists:true}, task_id:{$exists:true,$ne:null}})";
+        xrr:query "db.{{collection}}.find({id:{$exists:true}, task_ids:{$exists:true,$ne:[]}})";
     ];
     rr:subjectMap [ rr:template "http://example.org/mluo/data#dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
     rr:predicateObjectMap [
         rr:predicate dcterms:subject;
-        rr:objectMap [ rr:template "http://example.org/mluo/thesaurus#{$.task_id}"; rr:termType rr:IRI ];
+        rr:objectMap [ rr:template "http://example.org/mluo/thesaurus#{$.task_ids[*]}"; rr:termType rr:IRI ];
     ];
     .
 
 <#DatasetModality>
     a rr:TriplesMap;
     xrr:logicalSource [
-        xrr:query "db.datasets_modalities.find({dataset_hash16:{$exists:true}, modality:{$exists:true,$ne:null}})";
+        xrr:query "db.{{collection}}.find({id:{$exists:true}, modalities:{$exists:true,$ne:[]}})";
     ];
     rr:subjectMap [ rr:template "http://example.org/mluo/data#dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
-    rr:predicateObjectMap [ rr:predicate mluo:hasModality; rr:objectMap [ rr:template "http://example.org/mluo/thesaurus#{$.modality}"; rr:termType rr:IRI ]; ];
+    rr:predicateObjectMap [ rr:predicate mluo:hasModality; rr:objectMap [ rr:template "http://example.org/mluo/thesaurus#{$.modalities[*]}"; rr:termType rr:IRI ]; ];
     .
 
 <#DatasetLanguage>
     a rr:TriplesMap;
     xrr:logicalSource [
-        xrr:query "db.datasets_languages.find({dataset_hash16:{$exists:true}, language:{$exists:true,$ne:null}})";
+        xrr:query "db.{{collection}}.find({id:{$exists:true}, languages:{$exists:true,$ne:[]}})";
     ];
     rr:subjectMap [ rr:template "http://example.org/mluo/data#dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
-    rr:predicateObjectMap [ rr:predicate dcterms:language; rr:objectMap [ xrr:reference "$.language"; rr:termType rr:Literal ]; ];
+    rr:predicateObjectMap [ rr:predicate dcterms:language; rr:objectMap [ xrr:reference "$.languages[*]"; rr:termType rr:Literal ]; ];
     .
 
 <#DatasetRowsSize>
@@ -213,24 +204,24 @@
 <#UsageTask>
     a rr:TriplesMap;
     xrr:logicalSource [
-        xrr:query "db.datasets_usage_tasks.find({usage_hash16:{$exists:true}, task_id:{$exists:true,$ne:null}})";
+        xrr:query "db.{{collection}}.find({id:{$exists:true}, usage_hash16:{$exists:true,$ne:null}, task_ids:{$exists:true,$ne:[]}})";
     ];
     rr:subjectMap [ rr:template "http://example.org/mluo/data#usage/{$.usage_hash16}"; rr:termType rr:IRI; ];
     rr:predicateObjectMap [
         rr:predicate mluo:hasTask;
-        rr:objectMap [ rr:template "http://example.org/mluo/thesaurus#{$.task_id}"; rr:termType rr:IRI ];
+        rr:objectMap [ rr:template "http://example.org/mluo/thesaurus#{$.task_ids[*]}"; rr:termType rr:IRI ];
     ];
     .
 
 <#UsageTaskCategory>
     a rr:TriplesMap;
     xrr:logicalSource [
-        xrr:query "db.datasets_usage_task_categories.find({usage_hash16:{$exists:true}, task_category:{$exists:true,$ne:null}})";
+        xrr:query "db.{{collection}}.find({id:{$exists:true}, usage_hash16:{$exists:true,$ne:null}, task_categories:{$exists:true,$ne:[]}})";
     ];
     rr:subjectMap [ rr:template "http://example.org/mluo/data#usage/{$.usage_hash16}"; rr:termType rr:IRI; ];
     rr:predicateObjectMap [
         rr:predicate mluo:hasTaskCategory;
-        rr:objectMap [ rr:template "http://example.org/mluo/thesaurus#{$.task_category}"; rr:termType rr:IRI ];
+        rr:objectMap [ rr:template "http://example.org/mluo/thesaurus#{$.task_categories[*]}"; rr:termType rr:IRI ];
     ];
     .
 

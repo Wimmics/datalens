@@ -21,6 +21,7 @@ SOURCE_BASE      = "https://huggingface.co/api/tasks"
 SOURCE_MODEL     = "https://huggingface.co/api/models-tags-by-type?type=pipeline_tag"
 SOURCE_DATASET   = "https://huggingface.co/api/datasets-tags-by-type?type=task_categories"
 SOURCE_TASK_IDS  = "https://huggingface.co/api/datasets-tags-by-type?type=task_ids"
+SOURCE_MANUAL    = "manual_definitions.json"
 
 SUBTYPE_LABELS = {
     "nlp": "Natural Language Processing",
@@ -80,11 +81,44 @@ def format_pref_label(value: str) -> str:
     return normalized
 
 
+def extract_see_also_urls(link_items: list[dict] | None) -> list[str]:
+    if not link_items:
+        return []
+    urls: list[str] = []
+    for item in link_items:
+        # Support both shapes:
+        # - {"type": "...", "seeAlso": "https://..."}
+        # - {"type": "...", "source": "https://..."}
+        url = item.get("seeAlso") or item.get("source")
+        if isinstance(url, str) and url.strip():
+            urls.append(url.strip())
+    return urls
+
+
+def apply_manual_enrichment(entry: dict, manual_entry: dict | None) -> None:
+    if not manual_entry:
+        if "definition" not in entry and "summary" in entry:
+            entry["definition"] = entry["summary"]
+        if "seeAlso" not in entry:
+            entry["seeAlso"] = []
+        return
+
+    definition = manual_entry.get("definition")
+    if isinstance(definition, str) and definition.strip():
+        entry["definition"] = definition.strip()
+    elif "definition" not in entry and "summary" in entry:
+        entry["definition"] = entry["summary"]
+
+    manual_links = manual_entry.get("references") or manual_entry.get("seeAlso")
+    entry["seeAlso"] = extract_see_also_urls(manual_links)
+
+
 def preprocess(
     base_path: Path,
     model_path: Path,
     dataset_path: Path,
     task_ids_path: Path,
+    manual_definitions_path: Path,
     output_path: Path,
 ) -> None:
     # --- Chargement des sources ---
@@ -96,6 +130,11 @@ def preprocess(
         dataset_data: dict = json.load(f)
     with open(task_ids_path, encoding="utf-8") as f:
         task_ids_data: dict = json.load(f)
+    with open(manual_definitions_path, encoding="utf-8-sig") as f:
+        manual_definitions: dict = json.load(f)
+
+    manual_task_categories: dict = manual_definitions.get("task_categories", {})
+    manual_task_ids: dict = manual_definitions.get("task_ids", {})
 
     # --- Tables de correspondance ---
     # model  : id (slug) → entrée complète
@@ -127,6 +166,7 @@ def preprocess(
 
         enriched["labelPref"] = format_pref_label(enriched.get("label", key))
         enriched["source"] = SOURCE_BASE
+        apply_manual_enrichment(enriched, manual_task_categories.get(key))
         result_task_categories[key] = enriched
 
     # --- Ajout des tâches présentes dans model mais absentes de la base ---
@@ -142,6 +182,7 @@ def preprocess(
                 "type":    item["type"],
                 "source":  SOURCE_MODEL,
             }
+            apply_manual_enrichment(result_task_categories[item["id"]], manual_task_categories.get(item["id"]))
             added_from_model.append(item["id"])
 
     # --- Ajout des tâches présentes dans dataset mais absentes de la base et du model ---
@@ -160,6 +201,7 @@ def preprocess(
                 "type":    "task_categories",
                 "source":  SOURCE_DATASET,
             }
+            apply_manual_enrichment(result_task_categories[task_id], manual_task_categories.get(task_id))
             added_from_dataset.append(task_id)
 
     # --- Enrichissement des task_ids (source + labelPref formaté) ---
@@ -168,6 +210,11 @@ def preprocess(
         task_id_entry = dict(item)
         task_id_entry["labelPref"] = format_pref_label(task_id_entry.get("label", ""))
         task_id_entry["source"] = SOURCE_TASK_IDS
+        label_key = task_id_entry.get("label", "")
+        if isinstance(label_key, str):
+            apply_manual_enrichment(task_id_entry, manual_task_ids.get(label_key))
+        else:
+            apply_manual_enrichment(task_id_entry, None)
         enriched_task_ids.append(task_id_entry)
 
     merged = {
@@ -198,5 +245,6 @@ if __name__ == "__main__":
         model_path=here / "task_categories_model.json",
         dataset_path=here / "task_categories_dataset.json",
         task_ids_path=here / "task_ids.json",
-        output_path=here / "tasks_enriched.json",
+        manual_definitions_path=here / SOURCE_MANUAL,
+        output_path=here / "tasks.json",
     )

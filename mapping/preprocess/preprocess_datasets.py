@@ -117,10 +117,6 @@ def normalize_size_category(value: str) -> str:
 def preprocess_document(document: dict[str, Any]) -> tuple[dict[str, Any], int]:
     cleaned = dict(document)
 
-    for field in ("id", "author", "paperswithcode_id"):
-        if field in cleaned:
-            cleaned[field] = normalize_string(cleaned.get(field))
-
     for field in ("private", "gated", "disabled"):
         if field in cleaned:
             cleaned[field] = normalize_boolean(cleaned.get(field))
@@ -142,19 +138,16 @@ def preprocess_document(document: dict[str, Any]) -> tuple[dict[str, Any], int]:
 
     removed_count = len(normalized_tags) - len(deduped_tags)
     cleaned["tags"] = adjusted_tags
-    cleaned["tags_repr"] = str(adjusted_tags) if adjusted_tags else None
 
     cleaned["task_ids"] = collect_tag_values(adjusted_tags, "task_ids:")
     cleaned["task_categories"] = collect_tag_values(adjusted_tags, "task_categories:")
-    cleaned["modalities"] = collect_tag_values(adjusted_tags, "modality:")
-    cleaned["modalities_pref"] = [canonicalize_modality(modality) for modality in cleaned["modalities"]]
+    cleaned["modalities"] = [
+        canonicalize_modality(modality)
+        for modality in collect_tag_values(adjusted_tags, "modality:")
+    ]
     cleaned["languages"] = collect_tag_values(adjusted_tags, "language:")
     cleaned["size_categories"] = [normalize_size_category(value) for value in collect_tag_values(adjusted_tags, "size_categories:")]
     cleaned["size_categories_repr"] = str(cleaned["size_categories"]) if cleaned["size_categories"] else None
-    cleaned["task_id_first"] = cleaned["task_ids"][0] if cleaned["task_ids"] else None
-    cleaned["task_category_first"] = cleaned["task_categories"][0] if cleaned["task_categories"] else None
-    cleaned["modality_first"] = cleaned["modalities_pref"][0] if cleaned["modalities_pref"] else None
-    cleaned["language_first"] = cleaned["languages"][0] if cleaned["languages"] else None
 
     usage_parts = []
     if cleaned["task_ids"]:
@@ -195,97 +188,10 @@ def preprocess_file(input_path: Path, output_path: Path) -> None:
     with output_path.open("w", encoding="utf-8") as file:
         json.dump(processed, file, ensure_ascii=False, indent=2)
 
-    exploded_modalities: list[dict[str, Any]] = []
-    exploded_subjects: list[dict[str, Any]] = []
-    exploded_languages: list[dict[str, Any]] = []
-    exploded_task_categories: list[dict[str, Any]] = []
-    exploded_task_ids: list[dict[str, Any]] = []
-    exploded_usage_tasks: list[dict[str, Any]] = []
-    exploded_usage_task_categories: list[dict[str, Any]] = []
-
-    for item in processed:
-        dataset_hash = item.get("dataset_hash16")
-        if not dataset_hash:
-            continue
-
-        for modality in item.get("modalities_pref", []):
-            exploded_modalities.append(
-                {
-                    "dataset_hash16": dataset_hash,
-                    "modality": modality,
-                }
-            )
-
-        for tag in item.get("tags", []):
-            exploded_subjects.append(
-                {
-                    "dataset_hash16": dataset_hash,
-                    "subject": tag,
-                }
-            )
-
-        for language in item.get("languages", []):
-            exploded_languages.append(
-                {
-                    "dataset_hash16": dataset_hash,
-                    "language": language,
-                }
-            )
-
-        for task_category in item.get("task_categories", []):
-            exploded_task_categories.append(
-                {
-                    "dataset_hash16": dataset_hash,
-                    "task_category": task_category,
-                }
-            )
-
-        for task_id in item.get("task_ids", []):
-            exploded_task_ids.append(
-                {
-                    "dataset_hash16": dataset_hash,
-                    "task_id": task_id,
-                }
-            )
-
-        usage_hash = item.get("usage_hash16")
-        if usage_hash:
-            for task_id in item.get("task_ids", []):
-                exploded_usage_tasks.append(
-                    {
-                        "usage_hash16": usage_hash,
-                        "task_id": task_id,
-                    }
-                )
-            for task_category in item.get("task_categories", []):
-                exploded_usage_task_categories.append(
-                    {
-                        "usage_hash16": usage_hash,
-                        "task_category": task_category,
-                    }
-                )
-
-    exploded_outputs = {
-        "datasets_modalities.json": exploded_modalities,
-        "datasets_subjects.json": exploded_subjects,
-        "datasets_languages.json": exploded_languages,
-        "datasets_task_categories.json": exploded_task_categories,
-        "datasets_task_ids.json": exploded_task_ids,
-        "datasets_usage_tasks.json": exploded_usage_tasks,
-        "datasets_usage_task_categories.json": exploded_usage_task_categories,
-    }
-
-    for filename, payload in exploded_outputs.items():
-        out_file = output_path.parent / filename
-        with out_file.open("w", encoding="utf-8") as file:
-            json.dump(payload, file, ensure_ascii=False, indent=2)
-
     print(f"Fichier écrit: {output_path}")
     print(f"Documents traités: {len(processed)}")
     print(f"Documents avec doublons supprimés: {docs_with_removed}")
     print(f"Total tags dupliqués supprimés: {total_removed}")
-    for filename, payload in exploded_outputs.items():
-        print(f"Fichier écrit: {output_path.parent / filename} ({len(payload)} enregistrements)")
 
 
 def parse_args() -> argparse.Namespace:

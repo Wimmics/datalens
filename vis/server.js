@@ -9,7 +9,12 @@ const os = require('os');
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 
-require('dotenv').config({ path: require('path').resolve(__dirname, '.env') });
+const envPath = path.resolve(__dirname, '.env');
+const dotenvResult = require('dotenv').config({ path: envPath });
+
+if (dotenvResult.error) {
+    console.warn(`Warning: .env file not found at ${envPath}. Falling back to defaults/OS env vars.`);
+}
 
 const app = express()
 // Pour accepter les connexions cross-domain (CORS)
@@ -28,10 +33,28 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const prefix = '/datalens'
 
+function resolvePort(rawPort, fallbackPort) {
+    if (rawPort === undefined || rawPort === null || rawPort === '') {
+        return fallbackPort;
+    }
+
+    const parsedPort = Number(rawPort);
+    if (!Number.isInteger(parsedPort) || parsedPort < 1 || parsedPort > 65535) {
+        console.warn(`Warning: invalid port value "${rawPort}". Using fallback port ${fallbackPort}.`);
+        return fallbackPort;
+    }
+
+    return parsedPort;
+}
+
 app.use(prefix, express.static(path.join(__dirname, 'public')))
 
 // Serve static files from 'node_modules' (optional: use a prefix to avoid conflicts)
 app.use(prefix + '/node_modules', express.static(path.join(__dirname, 'node_modules')));
+
+app.get('/', (req, res) => {
+    res.redirect(prefix);
+})
 
 
 app.get(prefix, (req, res) => {
@@ -129,7 +152,7 @@ app.get(prefix + "/sparql-filters/query-endpoint/:queryFile", async (req, res) =
 
     // Sanitize the filename to prevent command injection (basic check)
     if (!/^[\w.-]+$/.test(queryFile)) {
-        res.status(500).json({ error: 'Invalid query file name' })
+        return res.status(500).json({ error: 'Invalid query file name' })
     }
 
     let filtersFolder = process.env.SPARQL_FILTERS_PATH
@@ -191,7 +214,7 @@ app.get(prefix + "/sparql-filters/corese-query/:queryFile", async (req, res) => 
 
     // Sanitize the filename to prevent command injection (basic check)
     if (!/^[\w.-]+$/.test(queryFile)) {
-        res.status(500).json({ error: 'Invalid query file name' })
+        return res.status(500).json({ error: 'Invalid query file name' })
     }
 
     let filtersFolder = process.env.SPARQL_FILTERS_PATH
@@ -417,8 +440,9 @@ app.post(prefix + '/sparql-mge/query-endpoint', async (req, res) => {
 
 // Start HTTP
 try {
-    app.listen(process.env.PORT_HTTP, () => {
-        console.log(`✅ HTTP Server started on port ${process.env.PORT_HTTP}`);
+    const httpPort = resolvePort(process.env.PORT_HTTP, 3000);
+    app.listen(httpPort, () => {
+        console.log(`✅ HTTP Server started on port ${httpPort}`);
     });
 } catch (e) {
     console.error("⚠️ Could not start HTTP server:", e.message);
@@ -426,15 +450,30 @@ try {
 
 // Start HTTPS
 try {
-    const certPath = process.env.CERT_FOLDER;
-    const options = {
-        key: fs.readFileSync(path.join(certPath, process.env.CERT_KEY)),
-        cert: fs.readFileSync(path.join(certPath, process.env.CERT_CERT)),
-    };
+    const certFolder = process.env.CERT_FOLDER;
+    const certKey = process.env.CERT_KEY;
+    const certCert = process.env.CERT_CERT;
 
-    https.createServer(options, app).listen(process.env.PORT_HTTPS, () => {
-        console.log(`✅ HTTPS Server started on port ${process.env.PORT_HTTPS}`);
-    });
+    if (!certFolder || !certKey || !certCert) {
+        console.log('⚠️ HTTPS disabled: CERT_FOLDER, CERT_KEY, or CERT_CERT is not set.');
+    } else {
+        const keyPath = path.join(certFolder, certKey);
+        const certPath = path.join(certFolder, certCert);
+
+        if (!fs.existsSync(keyPath) || !fs.existsSync(certPath)) {
+            console.log(`⚠️ HTTPS disabled: certificate files not found (${keyPath}, ${certPath}).`);
+        } else {
+            const httpsPort = resolvePort(process.env.PORT_HTTPS, 3443);
+            const options = {
+                key: fs.readFileSync(keyPath),
+                cert: fs.readFileSync(certPath),
+            };
+
+            https.createServer(options, app).listen(httpsPort, () => {
+                console.log(`✅ HTTPS Server started on port ${httpsPort}`);
+            });
+        }
+    }
 } catch (e) {
     console.log("⚠️ Could not start HTTPS server:", e.message);
 }
