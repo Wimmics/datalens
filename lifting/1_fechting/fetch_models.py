@@ -3,6 +3,7 @@ import os
 from time import perf_counter, sleep
 from datetime import datetime, timezone
 from pathlib import Path
+import itertools
 from email.utils import parsedate_to_datetime
 
 from huggingface_hub import HfApi
@@ -16,25 +17,31 @@ except ImportError:
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 INPUT_DIR = BASE_DIR / "input"
-OUTPUT_FILE = INPUT_DIR / "datasets.json"
-CURSOR_FILE = INPUT_DIR / "datasets.cursor"
+OUTPUT_FILE = INPUT_DIR / "models_new.json"
+CURSOR_FILE = INPUT_DIR / "models_new.cursor"
 CHECKPOINT_EVERY = 200000
-RESTART_DELAY_SECONDS = 20
+RESTART_DELAY_SECONDS = 0
 RATE_LIMIT_DELAY_SECONDS = 120
-DATASET_SORT_KEY = "created_at"
+MAX_MODELS = 10000000
 
 
 def custom_serializer(obj):
     if isinstance(obj, datetime):
         return obj.isoformat()
-    raise TypeError(f"Type {type(obj)} not serializable")
+    to_dict = getattr(obj, "to_dict", None)
+    if callable(to_dict):
+        return to_dict()
+    if isinstance(obj, set):
+        return list(obj)
+    if hasattr(obj, "__dict__"):
+        return obj.__dict__
+    return str(obj)
 
 
 def save_json_file(items, output_file):
     INPUT_DIR.mkdir(parents=True, exist_ok=True)
-    items = sort_dataset_entries(items)
     with output_file.open("w", encoding="utf-8") as json_file:
-        json.dump(items, json_file, indent=4, default=custom_serializer)
+        json.dump(items, json_file, indent=4, default=custom_serializer, ensure_ascii=False)
 
 
 def load_cursor(cursor_file):
@@ -70,42 +77,17 @@ def retry_after_seconds(response):
         return max(0, int((retry_after_date - now).total_seconds()))
 
 
-def dataset_id_from_entry(entry):
+def model_id_from_entry(entry):
     if not isinstance(entry, dict):
         return None
     return entry.get("id") or entry.get("_id")
 
 
-def dataset_id_from_object(dataset):
-    return getattr(dataset, "id", None) or getattr(dataset, "_id", None)
+def model_id_from_object(model):
+    return getattr(model, "id", None) or getattr(model, "_id", None)
 
 
-def dataset_created_at_from_entry(entry):
-    if not isinstance(entry, dict):
-        return None
-
-    created_at = entry.get("created_at") or entry.get("createdAt")
-    if isinstance(created_at, datetime):
-        return created_at
-    if isinstance(created_at, str):
-        try:
-            return datetime.fromisoformat(created_at)
-        except ValueError:
-            return None
-    return None
-
-
-def dataset_sort_key(entry):
-    created_at = dataset_created_at_from_entry(entry) or datetime.min
-    dataset_id = dataset_id_from_entry(entry) or ""
-    return created_at, dataset_id
-
-
-def sort_dataset_entries(items):
-    return sorted(items, key=dataset_sort_key, reverse=True)
-
-
-def load_saved_datasets(output_file):
+def load_saved_models(output_file):
     if not output_file.exists():
         return [], set()
 
@@ -117,7 +99,7 @@ def load_saved_datasets(output_file):
 
     saved_ids = set()
     for entry in data:
-        entry_id = dataset_id_from_entry(entry)
+        entry_id = model_id_from_entry(entry)
         if entry_id:
             saved_ids.add(entry_id)
 
@@ -125,85 +107,88 @@ def load_saved_datasets(output_file):
 
 
 def fetch_one_run(hf_api, checkpoint_every):
+    models = hf_api.list_models()
+
     start_time = perf_counter()
-    datasets_list, saved_dataset_ids = load_saved_datasets(OUTPUT_FILE)
-    resumed_count = len(datasets_list)
+    models_list, saved_model_ids = load_saved_models(OUTPUT_FILE)
+    resumed_count = len(models_list)
     newly_added = 0
 
     if resumed_count > 0:
-        print(f"Resume mode: loaded {resumed_count} datasets from {OUTPUT_FILE}")
+        print(f"Resume mode: loaded {resumed_count} models from {OUTPUT_FILE}")
 
-    datasets = hf_api.list_datasets(sort=DATASET_SORT_KEY)
-
-    start_index = len(datasets_list)
+    start_index = len(models_list)
     cursor_value = load_cursor(CURSOR_FILE)
     if cursor_value is not None and cursor_value > start_index:
         start_index = cursor_value
         print(f"Resume cursor: starting at index {start_index}")
     if start_index > 0:
-        print(f"Skipping first {start_index} datasets to reach cursor...")
+        print(f"Skipping first {start_index} models to reach cursor...")
 
-    dataset_iterator = datasets
+    model_iterator = models
     if tqdm is not None and start_index > 0:
         skip_iterator = tqdm(
             range(start_index),
-            desc="Skipping datasets",
-            unit="dataset",
+            desc="Skipping models",
+            unit="model",
             initial=0,
             leave=False,
         )
         for _ in skip_iterator:
             try:
-                next(dataset_iterator)
+                next(model_iterator)
             except StopIteration:
                 return "completed", None
 
     if tqdm is not None:
-        dataset_iterator = tqdm(
-            dataset_iterator,
-            desc="Fetching datasets",
-            unit="dataset",
+        model_iterator = tqdm(
+            model_iterator,
+            desc="Fetching models",
+            unit="model",
             initial=0,
         )
 
+    last_cursor = start_index
     try:
-        last_cursor = start_index
-        for index, dataset in enumerate(dataset_iterator, start=1):
+        for index, model in enumerate(model_iterator, start=1):
             last_cursor = start_index + index
-            dataset_id = dataset_id_from_object(dataset)
-            if dataset_id and dataset_id in saved_dataset_ids:
+            if len(models_list) >= MAX_MODELS:
+                break
+                
+            model_id = model_id_from_object(model)
+            if model_id and model_id in saved_model_ids:
                 continue
 
-            datasets_list.append(dataset.__dict__)
-            if dataset_id:
-                saved_dataset_ids.add(dataset_id)
+            models_list.append(model.__dict__)
+            if model_id:
+                saved_model_ids.add(model_id)
             newly_added += 1
 
             if newly_added % checkpoint_every == 0:
-                save_json_file(datasets_list, OUTPUT_FILE)
+                save_json_file(models_list, OUTPUT_FILE)
                 save_cursor(CURSOR_FILE, last_cursor)
                 elapsed_seconds = perf_counter() - start_time
                 print(
-                    f"Checkpoint saved (+{newly_added} new, total={len(datasets_list)}, "
+                    f"Checkpoint saved (+{newly_added} new, total={len(models_list)}, "
                     f"elapsed={elapsed_seconds:.1f}s)."
                 )
                 continue
             elif tqdm is None and index % 100 == 0:
                 elapsed_seconds = perf_counter() - start_time
                 print(
-                    f"Scanned {index} datasets, added {newly_added} new "
-                    f"(total={len(datasets_list)}) in {elapsed_seconds:.1f}s"
+                    f"Scanned {index} models, added {newly_added} new "
+                    f"(total={len(models_list)}) in {elapsed_seconds:.1f}s"
                 )
     except HfHubHTTPError as exc:
         total_elapsed_seconds = perf_counter() - start_time
         status_code = exc.response.status_code if exc.response is not None else None
-        save_json_file(datasets_list, OUTPUT_FILE)
+        save_json_file(models_list, OUTPUT_FILE)
         save_cursor(CURSOR_FILE, last_cursor)
         if status_code == 429:
             retry_after = retry_after_seconds(exc.response)
             print(
-                f"Rate limit reached after adding {newly_added} datasets "
-                f"(total={len(datasets_list)}, elapsed={total_elapsed_seconds:.1f}s). "
+                f"Rate limit reached after adding {newly_added} models "
+                f"(total={len(models_list)}, elapsed={total_elapsed_seconds:.1f}s). "
                 f"Partial data saved to {OUTPUT_FILE}."
             )
             if retry_after is not None:
@@ -213,12 +198,20 @@ def fetch_one_run(hf_api, checkpoint_every):
 
     total_elapsed_seconds = perf_counter() - start_time
 
-    save_json_file(datasets_list, OUTPUT_FILE)
+    save_json_file(models_list, OUTPUT_FILE)
     save_cursor(CURSOR_FILE, last_cursor)
 
+    if len(models_list) >= MAX_MODELS:
+        print(
+            f"Limit of {MAX_MODELS} models reached: +{newly_added} new models "
+            f"(previous={resumed_count}, total={len(models_list)}), "
+            f"saved to {OUTPUT_FILE} (elapsed={total_elapsed_seconds:.1f}s)"
+        )
+        return "limit_reached", None
+    
     print(
-        f"Completed fetch: +{newly_added} new datasets "
-        f"(previous={resumed_count}, total={len(datasets_list)}), "
+        f"Completed fetch: +{newly_added} new models "
+        f"(previous={resumed_count}, total={len(models_list)}), "
         f"saved to {OUTPUT_FILE} (elapsed={total_elapsed_seconds:.1f}s)"
     )
     return "completed", None
@@ -258,7 +251,7 @@ def main():
     while True:
         print(f"Starting run #{run_number}")
         run_status, retry_after = fetch_one_run(hf_api, checkpoint_every)
-        if run_status == "completed":
+        if run_status == "completed" or run_status == "limit_reached":
             return
 
         if run_status == "rate_limited":

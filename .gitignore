@@ -333,6 +333,7 @@ case-study/data/**
 ontology/do_not_commit/**
 _old/**
 _other/**
+lifting/output/**
 *.json
 
 # visualization files

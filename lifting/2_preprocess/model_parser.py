@@ -9,7 +9,6 @@ from typing import Any
 
 SPACE_AROUND_COLON = re.compile(r"\s*:\s*")
 MULTI_SPACE = re.compile(r"\s+")
-SIZE_CATEGORY_UNITS = re.compile(r"(?<=\d)([kmbt])\b")
 LANGUAGE_2 = re.compile(r"^[a-z]{2}$")
 LANGUAGE_3 = re.compile(r"^[a-z]{3}$")
 LANGUAGE_BCP47 = re.compile(r"^[a-z]{2,3}(?:[-_][a-z0-9]{2,8})*$")
@@ -25,6 +24,7 @@ MODALITY_CANONICAL = {
     "timeseries": "TimeSeries",
     "time_series": "TimeSeries",
     "time-series": "TimeSeries",
+    "multimodal": "Multimodal",
 }
 
 SPDX_CANONICAL_IDS = {
@@ -32,79 +32,55 @@ SPDX_CANONICAL_IDS = {
     "afl-3.0": "AFL-3.0",
     "agpl-3.0": "AGPL-3.0-only",
     "artistic-2.0": "Artistic-2.0",
-    "bsl-1.0": "BSL-1.0",
     "bsd": "BSD-2-Clause",
     "bsd-2-clause": "BSD-2-Clause",
     "bsd-3-clause": "BSD-3-Clause",
     "bsd-3-clause-clear": "BSD-3-Clause",
     "cc": None,
     "cc-by-2.0": None,
-    "cc-by-2.5": None,
-    "cc-by-3.0": None,
     "cc-by-4.0": "CC-BY-4.0",
     "cc-by-nc-2.0": None,
     "cc-by-nc-3.0": None,
     "cc-by-nc-4.0": None,
-    "cc-by-nc-nd-3.0": None,
     "cc-by-nc-nd-4.0": None,
-    "cc-by-nc-sa-2.0": None,
-    "cc-by-nc-sa-3.0": None,
     "cc-by-nc-sa-4.0": None,
-    "cc-by-nd-4.0": None,
     "cc-by-sa-4.0": "CC-BY-SA-4.0",
-    "cc-by-sa-3.0": None,
     "cc0-1.0": "CC0-1.0",
-    "cdla-permissive-1.0": "CDLA-Permissive-1.0",
     "cdla-permissive-2.0": "CDLA-Permissive-2.0",
-    "cdla-sharing-1.0": "CDLA-Sharing-1.0",
     "ecl-2.0": "ECL-2.0",
-    "epl-1.0": "EPL-1.0",
-    "epl-2.0": "EPL-2.0",
-    "eupl-1.1": "EUPL-1.1",
-    "eupl-1.2": "EUPL-1.2",
-    "gfdl": "GFDL-1.3-or-later",
     "gpl": "GPL-3.0-only",
     "gpl-2.0": "GPL-2.0-only",
-    "gpl-2.0-only": "GPL-2.0-only",
     "gpl-3.0": "GPL-3.0-only",
-    "gpl-3.0-only": "GPL-3.0-only",
-    "isc": "ISC",
-    "lgpl": "LGPL-2.1-only",
     "lgpl-2.1": "LGPL-2.1-only",
-    "lgpl-2.1-only": "LGPL-2.1-only",
     "lgpl-3.0": "LGPL-3.0-only",
-    "lgpl-3.0-only": "LGPL-3.0-only",
-    "lppl-1.3c": "LPPL-1.3c",
     "mit": "MIT",
-    "mpl-2.0": "MPL-2.0",
-    "ncsa": "NCSA",
-    "odbl": "ODbL-1.0",
-    "odc-by": "ODC-By-1.0",
-    "ofl-1.1": "OFL-1.1",
-    "osl-3.0": "OSL-3.0",
     "pddl": "PDDL-1.0",
-    "postgresql": "PostgreSQL",
     "unlicense": "Unlicense",
     "wtfpl": "WTFPL",
-    "zlib": "Zlib",
 }
 
 FORMAT_IANA_MEDIA_TYPES = {
-    "agent-traces": None,
     "arrow": "application/vnd.apache.arrow.file",
-    "audiofolder": None,
     "json": "application/json",
     "csv": "text/csv",
-    "imagefolder": None,
-    "optimized-parquet": "application/vnd.apache.parquet",
     "parquet": "application/vnd.apache.parquet",
-    "soundfolder": None,
     "text": "text/plain",
-    "webdataset": None,
 }
 
 REGION_ALIAS_ALPHA2 = {
     "uk": "gb",
+}
+
+KNOWN_LIBRARY_TAGS = {
+    "transformers",
+    "vllm",
+    "diffusers",
+    "sentence-transformers",
+    "pytorch",
+    "tensorflow",
+    "keras",
+    "flax",
+    "mlx",
 }
 
 NS_LEXVO_ISO639_1 = "https://lexvo.org/id/iso639-1/"
@@ -113,24 +89,19 @@ NS_ISO3166 = "https://www.iso.org/obp/ui/#iso:code:3166:"
 NS_IANA_MEDIA_TYPES = "https://www.iana.org/assignments/media-types/"
 NS_SPDX_LICENSES = "https://spdx.org/licenses/"
 
+RESOURCE_BASE = "http://example.org/datalens_o/data#"
+
 CC_LICENSE_URIS = {
     "cc": "http://creativecommons.org/licenses/",
     "cc0-1.0": "http://creativecommons.org/publicdomain/zero/1.0/",
     "cc-by-2.0": "http://creativecommons.org/licenses/by/2.0/",
-    "cc-by-2.5": "http://creativecommons.org/licenses/by/2.5/",
-    "cc-by-3.0": "http://creativecommons.org/licenses/by/3.0/",
     "cc-by-4.0": "http://creativecommons.org/licenses/by/4.0/",
-    "cc-by-sa-3.0": "http://creativecommons.org/licenses/by-sa/3.0/",
     "cc-by-sa-4.0": "http://creativecommons.org/licenses/by-sa/4.0/",
     "cc-by-nc-2.0": "http://creativecommons.org/licenses/by-nc/2.0/",
     "cc-by-nc-3.0": "http://creativecommons.org/licenses/by-nc/3.0/",
     "cc-by-nc-4.0": "http://creativecommons.org/licenses/by-nc/4.0/",
-    "cc-by-nc-sa-2.0": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
-    "cc-by-nc-sa-3.0": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
     "cc-by-nc-sa-4.0": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
-    "cc-by-nc-nd-3.0": "http://creativecommons.org/licenses/by-nc-nd/3.0/",
     "cc-by-nc-nd-4.0": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
-    "cc-by-nd-4.0": "http://creativecommons.org/licenses/by-nd/4.0/",
 }
 
 
@@ -154,40 +125,6 @@ def normalize_boolean(value: Any) -> bool:
         if lowered in {"false", "0", "no", "n", "", "none", "null"}:
             return False
     return False
-
-
-def load_allowed_labels(file_name: str, root_key: str) -> set[str]:
-    path = Path(__file__).parent / file_name
-    if not path.exists():
-        return set()
-
-    try:
-        with path.open("r", encoding="utf-8") as file:
-            data = json.load(file)
-    except Exception:
-        return set()
-
-    labels: set[str] = set()
-    items = data.get(root_key, []) if isinstance(data, dict) else []
-    if not isinstance(items, list):
-        return set()
-
-    for item in items:
-        if not isinstance(item, dict):
-            continue
-        label = normalize_string(item.get("label"))
-        if label:
-            labels.add(label.lower())
-
-        identifier = normalize_string(item.get("id"))
-        if identifier and ":" in identifier:
-            labels.add(identifier.split(":", 1)[1].lower())
-
-    return labels
-
-
-LICENSE_LABELS = load_allowed_labels("license.json", "license")
-FORMAT_LABELS = load_allowed_labels("format.json", "format")
 
 
 def to_list(value: Any) -> list[str]:
@@ -225,27 +162,27 @@ def normalize_and_dedupe_tags(raw_tags: Any) -> tuple[list[str], int]:
         tag = normalize_string(item)
         if not tag:
             continue
-        normalized_tags.append(SPACE_AROUND_COLON.sub(":", tag).lower())
+        normalized_tags.append(SPACE_AROUND_COLON.sub(":", tag))
 
-    deduped_tags = dedupe(normalized_tags)
-    tags: list[str] = []
-    for tag in deduped_tags:
-        if tag.startswith("size_categories:"):
-            prefix, value = tag.split(":", 1)
-            normalized_size = SIZE_CATEGORY_UNITS.sub(lambda m: m.group(1).upper(), value)
-            tags.append(f"{prefix}:{normalized_size}")
-        else:
-            tags.append(tag)
+    seen_lower: set[str] = set()
+    deduped_tags: list[str] = []
+    for tag in normalized_tags:
+        key = tag.lower()
+        if key not in seen_lower:
+            seen_lower.add(key)
+            deduped_tags.append(tag)
 
     removed_count = len(normalized_tags) - len(deduped_tags)
-    return tags, removed_count
+    return deduped_tags, removed_count
 
 
 def get_tag_values(tags: list[str], prefix: str) -> list[str]:
     values: list[str] = []
+    normalized_prefix = prefix.lower()
     for tag in tags:
-        if tag.startswith(prefix):
-            value = normalize_string(tag.split(":", 1)[1])
+        lower_tag = tag.lower()
+        if lower_tag.startswith(normalized_prefix):
+            value = normalize_string(tag[len(prefix) :])
             if value:
                 values.append(value)
     return dedupe(values)
@@ -282,8 +219,6 @@ def build_uris(values: list[str], kind: str) -> list[str]:
                     uri = f"{NS_ISO3166}{alpha2.upper()}"
 
         elif kind == "format":
-            if FORMAT_LABELS and token not in FORMAT_LABELS:
-                continue
             if "/" in token:
                 uri = f"{NS_IANA_MEDIA_TYPES}{token}"
             else:
@@ -292,16 +227,11 @@ def build_uris(values: list[str], kind: str) -> list[str]:
                     uri = f"{NS_IANA_MEDIA_TYPES}{media_type}"
 
         elif kind == "license":
-            if LICENSE_LABELS and token not in LICENSE_LABELS:
-                continue
             if token not in {"unknown", "other"}:
                 if token in CC_LICENSE_URIS:
-                    uri = CC_LICENSE_URIS[token]
-                    uris.append(uri)
+                    uris.append(CC_LICENSE_URIS[token])
                     continue
                 spdx_id = SPDX_CANONICAL_IDS.get(token)
-                if not spdx_id and re.fullmatch(r"[a-z0-9][a-z0-9-.+]*", token):
-                    spdx_id = token.upper().replace(".0-ONLY", ".0-only")
                 if spdx_id:
                     uri = f"{NS_SPDX_LICENSES}{spdx_id}.html"
 
@@ -311,97 +241,209 @@ def build_uris(values: list[str], kind: str) -> list[str]:
     return dedupe(uris)
 
 
-def normalize_source_datasets(value: Any) -> list[str]:
-    if value == "original":
-        return []
+def model_id_to_iri(model_id: str | None) -> str | None:
+    normalized_id = normalize_string(model_id)
+    if not normalized_id:
+        return None
+    if normalized_id.startswith("http://") or normalized_id.startswith("https://"):
+        return normalized_id
+    model_hash = hash16(f"model:{normalized_id}")
+    return f"{RESOURCE_BASE}model/{model_hash}" if model_hash else None
 
-    sources: list[str] = []
-    for item in to_list(value):
-        if "|" in item:
-            source = normalize_string(item.split("|", 1)[1])
-            if source:
-                sources.append(source)
+
+def dataset_id_to_iri(dataset_id: str | None) -> str | None:
+    normalized_id = normalize_string(dataset_id)
+    if not normalized_id:
+        return None
+    if normalized_id.startswith("http://") or normalized_id.startswith("https://"):
+        return normalized_id
+    dataset_hash = hash16(f"dataset:{normalized_id}")
+    return f"{RESOURCE_BASE}dataset/{dataset_hash}" if dataset_hash else None
+
+
+def author_from_hf_id(resource_id: str | None) -> str | None:
+    normalized_id = normalize_string(resource_id)
+    if not normalized_id or "/" not in normalized_id:
+        return None
+    owner, _, _ = normalized_id.partition("/")
+    return normalize_string(owner)
+
+
+def first_or_none(values: list[str]) -> str | None:
+    return values[0] if values else None
+
+
+def infer_language_tokens(tags: list[str], explicit_values: list[str]) -> list[str]:
+    tokens: list[str] = []
+    for value in explicit_values:
+        candidate = value.lower().replace("_", "-")
+        primary = candidate.split("-", 1)[0]
+        if LANGUAGE_2.fullmatch(primary) or LANGUAGE_3.fullmatch(primary):
+            tokens.append(candidate)
+
+    for tag in tags:
+        if ":" in tag:
+            continue
+        candidate = tag.lower().replace("_", "-")
+        if LANGUAGE_2.fullmatch(candidate):
+            tokens.append(candidate)
+    return dedupe(tokens)
+
+
+def infer_modalities(tags: list[str], pipeline_tag: str | None, explicit_values: list[str]) -> list[str]:
+    raw: list[str] = list(explicit_values)
+
+    tag_to_modality = {
+        "audio": "Audio",
+        "image": "Image",
+        "video": "Video",
+        "text": "Text",
+        "tabular": "Tabular",
+        "timeseries": "TimeSeries",
+        "time-series": "TimeSeries",
+        "3d": "3D",
+        "multimodal": "Multimodal",
+    }
+    for tag in tags:
+        mapped = tag_to_modality.get(tag)
+        if mapped:
+            raw.append(mapped)
+
+    pipe = normalize_string(pipeline_tag)
+    if pipe:
+        p = pipe.lower()
+        if p.startswith("text") or p in {"conversational", "fill-mask", "token-classification"}:
+            raw.append("Text")
+        if p.startswith("image"):
+            raw.append("Image")
+        if p.startswith("audio") or "speech" in p:
+            raw.append("Audio")
+        if p == "text-to-speech":
+            raw.extend(["Text", "Audio"])
+        if p == "image-text-to-text":
+            raw.extend(["Image", "Text"])
+
+    return canonicalize_modalities(raw)
+
+
+def parse_base_model_tags(tags: list[str], parsed: dict[str, Any]) -> None:
+    plain_ids: list[str] = []
+    typed_ids: dict[str, list[str]] = {
+        "finetune": [],
+        "quantized": [],
+        "merge": [],
+        "adapter": [],
+    }
+
+    for tag in tags:
+        lower_tag = tag.lower()
+        if not lower_tag.startswith("base_model:"):
+            continue
+        payload = tag[len("base_model:") :]
+        if not payload:
+            continue
+
+        left, sep, right = payload.partition(":")
+        relation = left.lower()
+        if sep and relation in typed_ids and right:
+            typed_ids[relation].append(right)
         else:
-            sources.append(item)
-    return dedupe(sources)
+            plain_ids.append(payload)
+
+    finetuned_ids = dedupe(typed_ids["finetune"])
+    quantized_ids = dedupe(typed_ids["quantized"])
+    merged_ids = dedupe(typed_ids["merge"])
+    adapter_ids = dedupe(typed_ids["adapter"])
+    plain_ids = dedupe(plain_ids)
+
+    if plain_ids and not finetuned_ids:
+        # Fallback for entries that only expose "base_model:<id>".
+        finetuned_ids = plain_ids
+
+    parsed["finetuned_base_model"] = model_id_to_iri(first_or_none(finetuned_ids))
+    parsed["quantized_base_model"] = model_id_to_iri(first_or_none(quantized_ids))
+    parsed["merged_base_model"] = model_id_to_iri(first_or_none(merged_ids))
+    parsed["adapter_base_model"] = model_id_to_iri(first_or_none(adapter_ids))
+
+
+def compute_article_hash(pwc_id: str | None, dois: list[str], arxivs: list[str]) -> str | None:
+    if pwc_id:
+        return hash16(f"pwc:{pwc_id}")
+    if dois or arxivs:
+        payload = {"doi": sorted(dois), "arxiv": sorted(arxivs)}
+        return hash16(f"article:{json.dumps(payload, sort_keys=True, ensure_ascii=False)}")
+    return None
 
 
 def parse(json_obj: dict[str, Any]) -> tuple[dict[str, Any], int]:
     parsed = dict(json_obj)
 
-    parsed["id"] = normalize_string(parsed.get("id"))
-    parsed["author"] = normalize_string(parsed.get("author"))
+    parsed["id"] = normalize_string(parsed.get("id") or parsed.get("modelId"))
+    parsed["author"] = author_from_hf_id(parsed["id"]) or normalize_string(parsed.get("author"))
     parsed["description"] = normalize_string(parsed.get("description"))
     parsed["paperswithcode_id"] = normalize_string(parsed.get("paperswithcode_id"))
     parsed["private"] = normalize_boolean(parsed.get("private"))
     parsed["gated"] = normalize_boolean(parsed.get("gated"))
     parsed["disabled"] = normalize_boolean(parsed.get("disabled"))
+
     tags, removed_count = normalize_and_dedupe_tags(parsed.get("tags", []))
     parsed["tags"] = tags
 
-    task_ids = dedupe(get_tag_values(tags, "task_ids:") + to_list(parsed.get("task_ids")))
+    pipeline_tag = normalize_string(parsed.get("pipeline_tag"))
+
     task_categories = dedupe(get_tag_values(tags, "task_categories:") + to_list(parsed.get("task_categories")))
-    modality_values = get_tag_values(tags, "modality:") + to_list(parsed.get("modality")) + to_list(parsed.get("modalities"))
-    modalities = canonicalize_modalities(modality_values)
-    libraries = dedupe(get_tag_values(tags, "library:") + to_list(parsed.get("library")) + to_list(parsed.get("libraries")))
-    size_categories = dedupe(get_tag_values(tags, "size_categories:") + to_list(parsed.get("size_categories")))
+    if pipeline_tag:
+        task_categories.append(pipeline_tag)
+        task_categories = dedupe(task_categories)
 
-    languages = dedupe(
-        [v.lower().replace("_", "-") for v in (get_tag_values(tags, "language:") + to_list(parsed.get("language")) + to_list(parsed.get("languages")))]
-    )
-    regions = dedupe(
-        [v.lower() for v in (get_tag_values(tags, "region:") + to_list(parsed.get("region")) + to_list(parsed.get("regions")))]
-    )
-    formats = dedupe(
-        [v.lower() for v in (get_tag_values(tags, "format:") + to_list(parsed.get("format")) + to_list(parsed.get("formats")))]
-    )
-    licenses = dedupe(
-        [v.lower() for v in (get_tag_values(tags, "license:") + to_list(parsed.get("license")) + to_list(parsed.get("licenses")))]
-    )
-    dois = dedupe(get_tag_values(tags, "doi:") + to_list(parsed.get("doi")))
-    arxivs = dedupe(get_tag_values(tags, "arxiv:") + to_list(parsed.get("arxiv")))
-    linguistic_methods = dedupe(
-        get_tag_values(tags, "language_creators:") + to_list(parsed.get("language_creators"))
-    )
-    annotation_methods = dedupe(
-        get_tag_values(tags, "annotations_creators:") + to_list(parsed.get("annotations_creators"))
+    explicit_modalities = get_tag_values(tags, "modality:") + to_list(parsed.get("modality")) + to_list(parsed.get("modalities"))
+    modalities = infer_modalities(tags, pipeline_tag, explicit_modalities)
+
+    libraries = dedupe(
+        get_tag_values(tags, "library:")
+        + to_list(parsed.get("library"))
+        + to_list(parsed.get("library_name"))
+        + [tag for tag in tags if tag in KNOWN_LIBRARY_TAGS]
     )
 
-    annotation_value = parsed.get("annotation")
-    if isinstance(annotation_value, list):
-        annotation = normalize_string(" | ".join(to_list(annotation_value)))
-    else:
-        annotation = normalize_string(annotation_value)
+    region_tokens = dedupe(get_tag_values(tags, "region:") + to_list(parsed.get("region")) + to_list(parsed.get("regions")))
+    explicit_language_values = get_tag_values(tags, "language:") + to_list(parsed.get("language")) + to_list(parsed.get("languages"))
+    language_tokens = infer_language_tokens(tags, explicit_language_values)
 
-    parsed["task_ids"] = task_ids
+    format_tokens = dedupe(
+        get_tag_values(tags, "format:")
+        + to_list(parsed.get("format"))
+        + to_list(parsed.get("formats"))
+        + [tag for tag in tags if tag in {"json", "csv", "parquet", "arrow", "text", "webdataset", "audiofolder", "imagefolder"}]
+    )
+
+    license_tokens = dedupe(get_tag_values(tags, "license:") + to_list(parsed.get("license")) + to_list(parsed.get("licenses")))
+
+    dataset_ids = dedupe(get_tag_values(tags, "dataset:") + to_list(parsed.get("dataset")) + to_list(parsed.get("datasets")))
+    dataset_iris = dedupe([iri for iri in (dataset_id_to_iri(dataset_id) for dataset_id in dataset_ids) if iri])
+
+    parse_base_model_tags(tags, parsed)
+
     parsed["task_categories"] = task_categories
     parsed["modalities"] = modalities
     parsed["libraries"] = libraries
-    parsed["size_categories"] = size_categories
-    parsed["source_datasets_values"] = normalize_source_datasets(parsed.get("source_datasets"))
-    parsed["doi"] = dois
-    parsed["arxiv"] = arxivs
-    parsed["language_creators"] = linguistic_methods
-    parsed["annotations_creators"] = annotation_methods
-    parsed["language_uris"] = build_uris(languages, "language")
-    parsed["region_uris"] = build_uris(regions, "region")
-    parsed["format_uris"] = build_uris(formats, "format")
-    parsed["license_uris"] = build_uris(licenses, "license")
+    parsed["dataset"] = first_or_none(dataset_iris)
+    parsed["datasets"] = dataset_iris
+    parsed["language_uris"] = build_uris(language_tokens, "language")
+    parsed["region_uris"] = build_uris(region_tokens, "region")
+    parsed["format_uris"] = build_uris(format_tokens, "format")
+    parsed["license_uris"] = build_uris(license_tokens, "license")
 
-    annotation_hash_payload = {
-        "linguisticMethod": linguistic_methods,
-        "annotationMethod": annotation_methods,
-    }
-    has_annotation_data = bool(annotation or linguistic_methods or annotation_methods)
-    parsed["annotation_hash16"] = (
-        hash16(f"annotation:{json.dumps(annotation_hash_payload, sort_keys=True, ensure_ascii=False)}")
-        if has_annotation_data
-        else None
-    )
-    parsed["dataset_hash16"] = hash16(f"dataset:{parsed.get('id')}") if parsed.get("id") else None
+    parsed["doi"] = dedupe(get_tag_values(tags, "doi:") + to_list(parsed.get("doi")))
+    parsed["arxiv"] = dedupe(get_tag_values(tags, "arxiv:") + to_list(parsed.get("arxiv")))
+
+    parsed["model_hash16"] = hash16(f"model:{parsed.get('id')}") if parsed.get("id") else None
     parsed["distribution_hash16"] = hash16(f"distribution:{parsed.get('id')}") if parsed.get("id") else None
     parsed["creator_hash16"] = hash16(f"creator:{parsed.get('author')}") if parsed.get("author") else None
-    parsed["article_hash16"] = hash16(f"pwc:{parsed.get('paperswithcode_id')}") if parsed.get("paperswithcode_id") else None
+    parsed["article_hash16"] = compute_article_hash(parsed.get("paperswithcode_id"), parsed["doi"], parsed["arxiv"])
+
+    # Compatibility with current mapping_models.ttl dataset-named triples maps.
+    parsed["dataset_hash16"] = parsed["model_hash16"]
 
     return parsed, removed_count
 
@@ -438,21 +480,21 @@ def preprocess_file(input_path: Path, output_path: Path) -> None:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description=(
-            "Parser unifie pour les datasets Hugging Face: normalisation, enrichissement "
-            "thesaurus et generation des champs techniques pour XR2RML."
+            "Parser unifie pour les modeles Hugging Face: normalisation, enrichissement "
+            "et generation des champs techniques pour XR2RML."
         )
     )
     parser.add_argument(
         "--input",
         type=Path,
-        default=Path(__file__).parent / "datasets.json",
-        help="Fichier JSON source (par defaut: datasets.json)",
+        default=Path(__file__).parent / "models_new_extract.json",
+        help="Fichier JSON source (par defaut: models_new_extract.json)",
     )
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path(__file__).parent / "datasets_parsed.json",
-        help="Fichier JSON de sortie (par defaut: datasets_parsed.json)",
+        default=Path(__file__).parent / "models_parsed.json",
+        help="Fichier JSON de sortie (par defaut: models_parsed.json)",
     )
     parser.add_argument(
         "--in-place",
