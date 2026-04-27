@@ -24,7 +24,7 @@ cp -r "$ROOT_DIR/ontology/used-vocabularies"/* "$DATA_DIR"/
 cp "$ROOT_DIR/ontology/mluo.ttl" "$DATA_DIR"/
 
 echo "🧼 Cleaning Turtle files (removing invalid XML characters)..."
-for file in "$ROOT_DIR"/artifacts/kg/huggingface_new_new/*.ttl; do
+for file in "$ROOT_DIR"/lifting/output/*.ttl; do
   filename=$(basename "$file")
   # Remove ASCII control characters except tab (0x09), LF (0x0A), and CR (0x0D)
   tr -d '\000-\010\013\014\016-\037' < "$file" > "$DATA_DIR/$filename"

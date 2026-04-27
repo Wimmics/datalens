@@ -435,6 +435,38 @@ app.post(prefix + '/sparql-mge/query-endpoint', async (req, res) => {
     
 })
 
+// Proxy endpoint for Venus SPARQL queries (Copilot)
+app.get(prefix + '/venus-sparql', async (req, res) => {
+    const query = req.query.query;
+
+    if (!query) {
+        return res.status(400).json({ error: 'Missing query parameter' });
+    }
+
+    const endpointUrl = process.env.SPARQL_ENDPOINT_URL || 'http://localhost:8890/sparql';
+    const accept = req.headers.accept || 'application/sparql-results+json';
+
+    try {
+        const url = `${endpointUrl}?query=${encodeURIComponent(query)}`;
+        const response = await fetch(url, {
+            headers: {
+                Accept: accept
+            }
+        });
+
+        if (!response.ok) {
+            return res.status(response.status).json({ error: `SPARQL endpoint error: ${response.statusText}` });
+        }
+
+        const contentType = response.headers.get('content-type') || 'application/sparql-results+json';
+        const body = await response.text();
+        res.setHeader('Content-Type', contentType);
+        return res.status(200).send(body);
+    } catch (error) {
+        return res.status(500).json({ error: `Error fetching from SPARQL endpoint: ${error.message}` });
+    }
+})
+
 
 
 

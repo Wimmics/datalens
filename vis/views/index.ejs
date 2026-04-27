@@ -20,8 +20,13 @@
 
     <script src="https://cdn.jsdelivr.net/npm/simple-statistics@7.8.3/dist/simple-statistics.min.js"></script>
 
-    <script src="/datalens/js/filterpanel.js"></script>
-    <script src="/datalens/js/dataviz.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "@wimmics/venus-elements": "/datalens/node_modules/@wimmics/venus-elements/dist/index.js"
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -47,72 +52,18 @@
     </nav>
 
     <!-- Main Content -->
-    <!-- Main Content -->
     <div class="container-fluid mt-4">
-        <div class="d-flex" style="height: 90vh;">
-        <!-- Resizable Sidebar -->
-        <div id="resizable-sidebar" style="width: 300px; min-width: 250px; max-width: 600px;">
-            <div class="card h-100 d-flex flex-column gap-2">
-    
-            <!-- Top Card -->
-            <div class="card card-bottom" style="height: 30%; overflow-y: scroll;">
-                <div class="card-header">
-                Network Topology Editor
-                </div>
-                <div class="card-body d-flex align-items-center" style="gap: 10px;">
-                <div class="flex-grow-1">
-                    <div class="form-group">
-                    <label for="source-select">Source Node</label>
-                    <select class="form-control" id="source-select"></select>
-                    </div>
-                    <div class="form-group">
-                    <label for="target-select">Target Node</label>
-                    <select class="form-control" id="target-select"></select>
-                    </div>
-                    <div class="form-group">
-                    <label for="link-select">Link</label>
-                    <select class="form-control" id="link-select"></select>
-                    </div>
-                    <div class="form-group">
-                    <label for="theme-select">Thematic Variable</label>
-                    <select class="form-control" id="theme-select"></select>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-primary ml-3 align-self-stretch" id="btn-build-network">
-                    <i class="fas fa-play"></i>
-                </button>
-                </div>
-            </div>
-    
-            <!-- Bottom Card -->
-            <div class="card card-top" style="height: 70%;">
-                <div class="card-header">
-                Filtering Panel
-                </div>
-                <div class="card-body" id="filters-container" style="overflow-y: scroll;"></div>
-            </div>
-            </div>
-        </div>
-    
-        <!-- Resizer Handle -->
-        <div id="resizer" style="width: 5px; cursor: ew-resize; background: #ccc;"></div>
-    
-        <!-- Main Visualization Panel -->
-        <div class="flex-grow-1 ml-2">
-            <div class="card h-100">
+        <div class="card d-flex flex-column" style="height: 90vh;">
             <div class="card-header" id="viz-title">
-                Visualization
+                Dataset-task network from MLUO mapping
             </div>
-            <div class="card-body">
-                <div class="dashboard">
-                <div id="placeholder" class="placeholder-message hidden">
-                    Please select at least one filter.
-                </div>
-                <!-- <mge-dashboard id="visualization-content"></mge-dashboard> -->
-                </div>
+            <div id="graph-info" class="px-3 py-2 border-bottom bg-light" style="font-size: 14px;">
+                Loading graph summary...
             </div>
+            <div class="card-body p-0" style="flex: 1 1 auto; min-height: 0;">
+                <vis-graph id="venus-graph" width="100%" height="700" style="display: block; width: 100%; height: 100%; min-height: 500px;"></vis-graph>
+                <div id="venus-error" class="text-danger p-3" style="display: none;"></div>
             </div>
-        </div>
         </div>
     </div>    
   
@@ -134,74 +85,106 @@
 
 
 <script type="module">
-    // console.log( <%- JSON.stringify(locals) %> )
+    import "@wimmics/venus-elements";
 
-    import '/datalens/node_modules/mgexplorer/dist/mgexplorer/mgexplorer.esm.js';
+    const graph = document.querySelector("#venus-graph");
+    const errorBox = document.querySelector("#venus-error");
+    const infoBox = document.querySelector("#graph-info");
+    const endpoint = `${window.location.origin}/datalens/venus-sparql`;
 
-    // let locals = <%- JSON.stringify(locals) %>;
+    if (!graph) {
+        errorBox.style.display = "block";
+        errorBox.textContent = "VisGraph element not found in DOM.";
+        throw new Error("VisGraph element not found in DOM.");
+    }
 
+        graph.sparqlEndpoint = endpoint;
+    graph.sparqlQuery = `PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX mluo: <http://example.org/mluo/ontology#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-    document.addEventListener('DOMContentLoaded', async () => {
-
-        let savedFilters = window.sessionStorage.getItem('filters')
-
-        const filterPanel = new FilterPanel(savedFilters)
-        await filterPanel.set()
-
-        const dataviz = new DataViz()
-        await dataviz.init()
-        
-        document.querySelector("#btn-build-network").addEventListener('click', async () => {
-
-            let filters = { ...filterPanel.getSelectedFilters() }
-            filters.source = document.querySelector('#source-select').value
-            filters.target = document.querySelector('#target-select').value
-            filters.link = document.querySelector("#link-select").value
-            filters.theme = document.querySelector("#theme-select").value
-
-            window.sessionStorage.setItem('filters', JSON.stringify(filters))
-
-            console.log(filters)
-
-            if (filters.link === 'dataset' && (filters.source === 'dataset' || filters.target === 'dataset'))
-                dataviz.togglePlaceholder(`<i class="fa-solid fa-triangle-exclamation alert-icon"></i><br>"Dataset" cannot be both node and link. Please modify your selection`)
-
-            else if (Object.keys(filters).length > 0 && Object.values(filters).some(arr => arr.length > 0)) {
-                // await dataviz.reset()
-                dataviz.set(filters)
+SELECT
+  ?datasetId
+    ?task
+FROM <http://example.org/data>
+WHERE {
+        ?dataset a dcat:Dataset ;
+                         dcterms:identifier ?datasetId ;
+                         mluo:hasTask ?task .
+}
+LIMIT 1500
+`;
+    graph.encoding = {
+        "title": "Datasets connected by task",
+        "nodes": {
+            "field": ["datasetId", "task"],
+        },
+        "links": {
+            "field": {
+                "source": "datasetId",
+                "target": "task"
             }
-        })
-        
-    })
+        },
+        "interactions": { "nodeDetailsPanel": true }
+    };
 
-    // Resizable Sidebar Functionality
-    // This script allows the sidebar to be resized by dragging the resizer handle.
-    const resizer = document.getElementById('resizer');
-    const sidebar = document.getElementById('resizable-sidebar');
+    async function loadGraphSummary() {
+        const summaryQuery = `PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX mluo: <http://example.org/mluo/ontology#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-    let isResizing = false;
+SELECT
+  (COUNT(DISTINCT ?dataset) AS ?datasets)
+  (COUNT(DISTINCT ?task) AS ?tasks)
+  (COUNT(*) AS ?datasetTaskPairs)
+  (ROUND(AVG(?downloadValue)) AS ?avgDownloads)
+  (ROUND(AVG(?likesValue)) AS ?avgLikes)
+FROM <http://example.org/data>
+WHERE {
+  ?dataset a dcat:Dataset ;
+           mluo:hasTask ?task .
 
-    resizer.addEventListener('mousedown', function (e) {
-        isResizing = true;
-        document.body.style.cursor = 'ew-resize';
-    });
+  OPTIONAL { ?dataset mluo:downloadCount ?downloads }
+  OPTIONAL { ?dataset mluo:likesCount ?likes }
 
-    document.addEventListener('mousemove', function (e) {
-        if (!isResizing) return;
-        
-        const newWidth = e.clientX;
-        if (newWidth >= 250 && newWidth <= 600) {
-            sidebar.style.width = `${newWidth}px`;
+  BIND(IF(BOUND(?downloads), xsd:integer(?downloads), 0) AS ?downloadValue)
+  BIND(IF(BOUND(?likes), xsd:integer(?likes), 0) AS ?likesValue)
+}`;
+
+        const summaryUrl = `${endpoint}?query=${encodeURIComponent(summaryQuery)}`;
+        const response = await fetch(summaryUrl, {
+            headers: { Accept: "application/sparql-results+json" }
+        });
+
+        if (!response.ok) {
+            throw new Error(`Summary query failed: ${response.status} ${response.statusText}`);
         }
-    });
 
-    document.addEventListener('mouseup', function () {
-        isResizing = false;
-        document.body.style.cursor = '';
-    });
- 
+        const payload = await response.json();
+        const row = payload?.results?.bindings?.[0];
+        if (!row) {
+            infoBox.textContent = "No summary available for current graph.";
+            return;
+        }
 
-    
+        const datasets = row.datasets?.value ?? "0";
+        const tasks = row.tasks?.value ?? "0";
+        const pairs = row.datasetTaskPairs?.value ?? "0";
+        const avgDownloads = row.avgDownloads?.value ?? "0";
+        const avgLikes = row.avgLikes?.value ?? "0";
+
+        infoBox.innerHTML = `<strong>Summary:</strong> ${datasets} datasets, ${tasks} tasks, ${pairs} dataset-task links, avg downloads ${avgDownloads}, avg likes ${avgLikes}.`;
+    }
+
+    try {
+        await loadGraphSummary();
+        await graph.launch();
+    } catch (error) {
+        errorBox.style.display = "block";
+        errorBox.textContent = `Venus launch error: ${error?.message || error}`;
+        console.error("Venus launch error:", error);
+    }
 </script>
 
 </html>
