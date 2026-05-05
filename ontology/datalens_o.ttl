@@ -8,6 +8,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
 
 @prefix datalens_o: <http://example.org/datalens_o/ontology#> .
 
@@ -16,7 +18,7 @@
 datalens_o: a owl:Ontology ;
     dcterms:title "Datalens Ontology"@en ;
     dcterms:creator "Aline MENIN", "Zachari ARNAUD" ;
-    dcterms:modified "2026-04-22" ;
+    dcterms:modified "2026-04-28" ;
     dcterms:description "The Datalens Ontology defines concepts and relationships for datasets and machine learning models."@en ;
     owl:versionInfo "1.0" ;
     dcat:landingPage <https://github.com/amenin/datalens> ;
@@ -24,9 +26,29 @@ datalens_o: a owl:Ontology ;
     dcterms:created "2026"^^xsd:gYear ;
     dcterms:publisher "Inria", "University Côte d'Azur", "CNRS" .
 
-## Annotations
+## Concepts related to both datasets and models
+datalens_o:Task a owl:Class ;
+    rdfs:label "Machine Learning Task"@en ;
+    rdfs:comment "A specific task or problem that a machine learning model is designed to solve."@en .
 
-# oa:hasTarget -> dcat:Dataset
+datalens_o:TaskCategory a owl:Class ;
+    rdfs:label "Task Category"@en ;
+    rdfs:comment "A category or type of machine learning task, such as classification, regression, etc."@en . 
+
+datalens_o:Modality a owl:Class ;
+    rdfs:label "Modality"@en ;
+    rdfs:comment "A type of data modality used in the context of machine learning."@en .
+
+datalens_o:Library a owl:Class ;
+    rdfs:label "Library"@en ;
+    rdfs:comment "A machine learning library."@en .
+
+   
+## Concepts related to datasets
+datalens_o:SizeCategory a owl:Class ;
+    rdfs:label "Size Category"@en ;
+    rdfs:comment "Categories for the size of a dataset, according to HuggingFace definition."@en .
+
 datalens_o:Annotation a owl:Class ;
     rdfs:subClassOf oa:Annotation ;
     rdfs:label "Annotation"@en ;
@@ -44,19 +66,7 @@ datalens_o:linguisticMethod a owl:DatatypeProperty ;
     rdfs:domain datalens_o:Annotation ;
     rdfs:range rdfs:Literal .
 
-## Machine Learning tasks
-# Use rdfs:label in the instance to name the task
-# TODO: A SKOS scheme should be defined for the tasks
-datalens_o:Task a owl:Class ;
-    rdfs:label "Machine Learning Task"@en ;
-    rdfs:comment "A specific task or problem that a machine learning model is designed to solve."@en .
-
-datalens_o:TaskCategory a owl:Class ;
-    rdfs:label "Task Category"@en ;
-    rdfs:comment "A category or type of machine learning task, such as classification, regression, etc."@en .    
-
-
-# Other properties of dataset (not available at DCAT)
+## Properties for both datasets and models
 datalens_o:isAvailable a owl:DatatypeProperty ;
     rdfs:label "availability status"@en ;
     rdfs:comment "The availability status of a dataset or model, indicating whether it is enabled or disabled."@en ;
@@ -75,14 +85,6 @@ datalens_o:downloadCount a owl:DatatypeProperty ;
     ] ;
     rdfs:range xsd:integer .
 
-datalens_o:hasAcademicArticle a owl:ObjectProperty ;
-    rdfs:label "has scientific article"@en ;
-    rdfs:comment "Relates a dataset or model to a scholarly article or paper that describes it."@en ;
-    rdfs:domain  [ 
-        a owl:Class ;
-        owl:unionOf (dcat:Dataset datalens_o:Model) 
-    ] ;    rdfs:range datalens_o:AcademicArticle .
-
 datalens_o:likesCount a owl:DatatypeProperty ;
     rdfs:label "likes count"@en ;
     rdfs:comment "The number of likes or positive feedback a dataset or model has received."@en ;
@@ -91,23 +93,14 @@ datalens_o:likesCount a owl:DatatypeProperty ;
         owl:unionOf (dcat:Dataset datalens_o:Model) 
     ] ;    rdfs:range xsd:integer .
 
-datalens_o:hasAnnotation a owl:ObjectProperty ;
-    rdfs:label "has annotation"@en ;
-    rdfs:comment "Relates a dataset to its annotations, which provide additional information or context."@en ;
-    rdfs:domain dcat:Dataset ;
-    rdfs:range datalens_o:Annotation .
-
 datalens_o:hasModality a owl:DatatypeProperty ;
     rdfs:label "has modality"@en ;
     rdfs:comment "Relates a dataset to a specific modality or type of data used in the context of machine learning."@en ;
-    rdfs:domain dcat:Dataset ;
-    rdfs:range datalens_o:Modality . # instantiated by the thesaurus
-
-datalens_o:sizeCategories a owl:DatatypeProperty ;
-    rdfs:label "size categories"@en ;
-    rdfs:comment "Categories for the size of a dataset, according to HuggingFace definition."@en ;
-    rdfs:domain dcat:Dataset ;
-    rdfs:range rdfs:Literal .
+    rdfs:domain  [ 
+        a owl:Class ;
+        owl:unionOf (dcat:Dataset datalens_o:Model) 
+    ] ;
+    rdfs:range datalens_o:Modality .
 
 datalens_o:hasTask a owl:ObjectProperty ;
     rdfs:label "has ML task"@en ;
@@ -135,36 +128,28 @@ datalens_o:hasLibrary a owl:ObjectProperty ;
         owl:unionOf (dcat:Dataset datalens_o:Model) 
     ] ;
     rdfs:range datalens_o:Library .
-    
 
-# Academic Article
-datalens_o:AcademicArticle a owl:Class ;
-    rdfs:label "Academic Article"@en ;
-    rdfs:comment "A scholarly article or paper that describes a dataset or its usage in the context of machine learning."@en ;
-    rdfs:subClassOf bibo:AcademicArticle .
+datalens_o:hasAcademicArticle a owl:ObjectProperty ;
+    rdfs:label "has scientific article"@en ;
+    rdfs:comment "Relates a dataset or model to a scholarly article or paper that describes it."@en ;
+    rdfs:domain  [ 
+        a owl:Class ;
+        owl:unionOf (dcat:Dataset datalens_o:Model) 
+    ] ;    rdfs:range bibo:AcademicArticle .
 
-# Uses bibio:doi to indicate the DOI of the article
-datalens_o:arxiv a owl:ObjectProperty ;
-    rdfs:label "arXiv identifier"@en ;
-    rdfs:comment "The arXiv identifier of the academic article."@en ;
-    rdfs:domain datalens_o:AcademicArticle ;
-    rdfs:range xsd:string .
+## Properties specific to datasets
+datalens_o:hasAnnotation a owl:ObjectProperty ;
+    rdfs:label "has annotation"@en ;
+    rdfs:comment "Relates a dataset to its annotations, which provide additional information or context."@en ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range datalens_o:Annotation .
 
-datalens_o:paperswithcode_id a owl:ObjectProperty ;
-    rdfs:label "Papers with Code identifier"@en ;
-    rdfs:comment "The identifier of the academic article in the Papers with Code database."@en ;
-    rdfs:domain datalens_o:AcademicArticle ;
-    rdfs:range xsd:string .
+datalens_o:hasSize a owl:DatatypeProperty ;
+    rdfs:label "has size"@en ;
+    rdfs:comment "Relates a dataset to a size category"@en ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range datalens_o:SizeCategory .
 
-# Data modality
-# A modality is a type of data used in the context of machine learning, such as text, image, audio, etc.
-datalens_o:Modality a owl:Class ;
-    rdfs:label "Modality"@en ;
-    rdfs:comment "A type of data modality used in the context of machine learning."@en .
-
-datalens_o:Library a owl:Class ;
-    rdfs:label "Library"@en ;
-    rdfs:comment "A machine learning library."@en .
 
 
 ## Machine Learning models
@@ -188,43 +173,29 @@ datalens_o:ModelArchitecture a owl:Class ;
     rdfs:label "Model Architecture"@en ;
     rdfs:comment "The architecture of a machine learning model, such as transformer, convolutional neural network, etc."@en .
 
-datalens_o:trainedOnDataset a owl:ObjectProperty ;
-    rdfs:label "trained on dataset"@en ;
+datalens_o:wasTrainedOn a owl:ObjectProperty ;
+    rdfs:subClassOf prov:wasInfluencedBy ;
+    rdfs:label "was trained on"@en ;
     rdfs:comment "Relates a machine learning model to a dataset used for training or pretraining."@en ;
     rdfs:domain datalens_o:Model ;
     rdfs:range dcat:Dataset .
 
-datalens_o:hasBaseModel a owl:ObjectProperty ;
-    rdfs:label "has base model"@en ;
-    rdfs:comment "Relates a machine learning model to a base model that it is derived from or fine-tuned from."@en ;
-    rdfs:domain datalens_o:Model ;
-    rdfs:range datalens_o:Model .
+:fineTune a prov:Activity ;
+    rdfs:label "Fine-tune"@en ;
+    rdfs:comment "A transformation where a pre-trained model is further trained on a specific task or dataset."@en ;
+    rdfs:isDefinedBy datalens_o: .
 
-datalens_o:hasFineTunedBaseModel a owl:ObjectProperty ;
-    rdfs:subPropertyOf datalens_o:hasBaseModel ;
-    rdfs:label "has fine-tuned base model"@en ;
-    rdfs:comment "Relates a model to a base model from which it was obtained by fine-tuning."@en ;
-    rdfs:domain datalens_o:Model ;
-    rdfs:range datalens_o:Model .
+:quantize a prov:Activity ;
+    rdfs:label "Quantize"@en ;
+    rdfs:comment "A transformation where a pre-trained model is quantized to reduce its size and improve inference speed."@en ;
+    rdfs:isDefinedBy datalens_o: .
 
-datalens_o:hasQuantizedBaseModel a owl:ObjectProperty ;
-    rdfs:subPropertyOf datalens_o:hasBaseModel ;
-    rdfs:label "has quantized base model"@en ;
-    rdfs:comment "Relates a model to a base model that was quantized to produce it."@en ;
-    rdfs:domain datalens_o:Model ;
-    rdfs:range datalens_o:Model .
+:merge a prov:Activity ;
+    rdfs:label "Merge"@en ;
+    rdfs:comment "A transformation where multiple pre-trained models are combined into a single model."@en ;
+    rdfs:isDefinedBy datalens_o: .
 
-datalens_o:hasMergedBaseModel a owl:ObjectProperty ;
-    rdfs:subPropertyOf datalens_o:hasBaseModel ;
-    rdfs:label "has merged base model"@en ;
-    rdfs:comment "Relates a merged model to one of the base models used in the merge."@en ;
-    rdfs:domain datalens_o:Model ;
-    rdfs:range datalens_o:Model .
-
-datalens_o:hasAdapterBaseModel a owl:ObjectProperty ;
-    rdfs:subPropertyOf datalens_o:hasBaseModel ;
-    rdfs:label "has adapter base model"@en ;
-    rdfs:comment "Relates an adapter-based model to the base model on which the adapter is applied."@en ;
-    rdfs:domain datalens_o:Model ;
-    rdfs:range datalens_o:Model .
-
+:adapt a prov:Activity ;
+    rdfs:label "Adapt"@en ;
+    rdfs:comment "A transformation where a pre-trained model is adapted for a new task or domain."@en ;
+    rdfs:isDefinedBy datalens_o: .
