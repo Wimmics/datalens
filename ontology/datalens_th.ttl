@@ -92,8 +92,8 @@ datalens_th:Video a skos:Concept, datalens_o:Modality ;
 
 
 
-## Dataset Format Scheme
-datalens_th:DatasetFormatScheme
+## Format Scheme
+datalens_th:FormatScheme
       a       skos:ConceptScheme ;
       skos:definition "A controlled vocabulary for describing the formats of dataset and model resources."@en ;
       skos:prefLabel "Dataset Format Scheme"@en .

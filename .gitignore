@@ -334,6 +334,7 @@ ontology/do_not_commit/**
 _old/**
 _other/**
 lifting/output/**
+lifting/input/**
 *.json
 
 # visualization files

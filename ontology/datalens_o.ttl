@@ -67,14 +67,14 @@ datalens_o:linguisticMethod a owl:DatatypeProperty ;
     rdfs:range rdfs:Literal .
 
 ## Properties for both datasets and models
-datalens_o:isAvailable a owl:DatatypeProperty ;
-    rdfs:label "availability status"@en ;
-    rdfs:comment "The availability status of a dataset or model, indicating whether it is enabled or disabled."@en ;
-    rdfs:domain  [ 
-        a owl:Class ;
-        owl:unionOf (dcat:Dataset datalens_o:Model) 
-    ] ;
-    rdfs:range  xsd:boolean .
+# datalens_o:isAvailable a owl:DatatypeProperty ;
+#     rdfs:label "availability status"@en ;
+#     rdfs:comment "The availability status of a dataset or model, indicating whether it is enabled or disabled."@en ;
+#     rdfs:domain  [ 
+#         a owl:Class ;
+#         owl:unionOf (dcat:Dataset datalens_o:Model) 
+#     ] ;
+#     rdfs:range  xsd:boolean .
 
 datalens_o:downloadCount a owl:DatatypeProperty ;
     rdfs:label "download count"@en ;
