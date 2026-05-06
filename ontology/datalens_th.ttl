@@ -102,26 +102,26 @@ datalens_th:webdataset
       a       datalens_o:Format , skos:Concept ;
       skos:definition "A WebDataset file is a TAR archive containing a series of data files. WebDataset is designed for multimodal datasets, i.e. for image, audio and/or video datasets."@en ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-webdataset> ;
-      skos:inScheme datalens_th:DatasetFormatScheme ;
+      skos:inScheme datalens_th:FormatScheme ;
       skos:prefLabel "Web Dataset"@en .
 
 datalens_th:imagefolder
       a       datalens_o:Format , skos:Concept ;
       skos:definition "A folder-based organization where image files are grouped in directories."@en ;
-      skos:inScheme datalens_th:DatasetFormatScheme ;
+      skos:inScheme datalens_th:FormatScheme ;
       skos:prefLabel "Image Folder"@en .
 
 datalens_th:audiofolder
       a       datalens_o:Format , skos:Concept ;
       skos:definition "A folder-based organization where audio files are grouped in directories."@en ;
-      skos:inScheme datalens_th:DatasetFormatScheme ;
+      skos:inScheme datalens_th:FormatScheme ;
       skos:prefLabel "Audio Folder"@en .
 
 datalens_th:agent-traces
       a       datalens_o:Format , skos:Concept ;
       skos:definition "A trace-oriented format used to store execution logs and interaction traces for AI agents."@en ;
       skos:seeAlso <https://huggingface.co/changelog/agent-trace-viewer> ;
-      skos:inScheme datalens_th:DatasetFormatScheme ;
+      skos:inScheme datalens_th:FormatScheme ;
       skos:prefLabel "Traces"@en .
 
 datalens_th:arrow
@@ -129,7 +129,7 @@ datalens_th:arrow
       skos:definition "Apache Arrow defines a language-independent columnar memory format for flat and nested data, organized for efficient analytic operations on modern hardware like CPUs and GPUs."@en ;
       skos:exactMatch <https://www.iana.org/assignments/media-types/application/vnd.apache.arrow.file> ;
       skos:seeAlso <https://arrow.apache.org/> ;
-      skos:inScheme datalens_th:DatasetFormatScheme ;
+      skos:inScheme datalens_th:FormatScheme ;
       skos:prefLabel "Apache Arrow"@en .
 
 datalens_th:csv
@@ -137,15 +137,15 @@ datalens_th:csv
       skos:definition "Comma-separated values (CSV) is a plain text data format for storing tabular data where the fields of a record are separated by a comma and each record is a line."@en ;
       skos:exactMatch <https://www.iana.org/assignments/media-types/text/csv> ;
       skos:seeAlso <https://en.wikipedia.org/wiki/Comma-separated_values> ;
-      skos:inScheme datalens_th:DatasetFormatScheme ;
+      skos:inScheme datalens_th:FormatScheme ;
       skos:prefLabel "CSV"@en .
 
 datalens_th:json
       a       datalens_o:Format , skos:Concept ;
       skos:definition "JSON (JavaScript Object Notation) is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of name–value pairs and arrays."@en ;
       skos:exactMatch <https://www.iana.org/assignments/media-types/application/json> ;
-      skos:seeAlso <https://json.org/> <https://en.wikipedia.org/wiki/JSON>;
-      skos:inScheme datalens_th:DatasetFormatScheme ;
+      skos:seeAlso <https://json.org/>, <https://en.wikipedia.org/wiki/JSON>;
+      skos:inScheme datalens_th:FormatScheme ;
       skos:prefLabel "JSON"@en .
 
 datalens_th:parquet
@@ -153,15 +153,15 @@ datalens_th:parquet
       skos:definition "Apache Parquet is an open source, column-oriented data file format designed for efficient data storage and retrieval."@en ;
       skos:exactMatch <https://www.iana.org/assignments/media-types/application/vnd.apache.parquet> ;
       skos:seeAlso <https://parquet.apache.org/> ;
-      skos:inScheme datalens_th:DatasetFormatScheme ;
+      skos:inScheme datalens_th:FormatScheme ;
       skos:prefLabel "Apache Parquet"@en .
 
 datalens_th:optimized-parquet
       a       datalens_o:Format , skos:Concept ;
       skos:definition "Optimized Parquet is Hugging Face’s enhanced version of the standard Parquet columnar-storage format. It utilizes Content-Defined Chunking (CDC), which allows for faster deduped uploads and downloads of datasets."@en ;
       skos:closeMatch <https://www.iana.org/assignments/media-types/application/vnd.apache.parquet> ;
-      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-optimized-parquet> <https://parquet.apache.org/> <https://huggingface.co/docs/xet/chunking> ;
-      skos:inScheme datalens_th:DatasetFormatScheme ;
+      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-optimized-parquet>, <https://parquet.apache.org/>, <https://huggingface.co/docs/xet/chunking> ;
+      skos:inScheme datalens_th:FormatScheme ;
       skos:prefLabel "Optimized Apache Parquet"@en ;
       skos:related datalens_th:parquet .
 
@@ -170,7 +170,7 @@ datalens_th:text
       skos:definition "A text file is a kind of computer file that is structured as a sequence of lines of electronic text."@en ;
       skos:exactMatch <https://www.iana.org/assignments/media-types/text/plain> ;
       skos:seeAlso <https://en.wikipedia.org/wiki/Text_file> ;
-      skos:inScheme datalens_th:DatasetFormatScheme ;
+      skos:inScheme datalens_th:FormatScheme ;
       skos:prefLabel "Text"@en .
 
 
@@ -186,67 +186,67 @@ datalens_th:DatasetSizeScheme
 datalens_th:1
       a       datalens_o:SizeCategory , skos:Concept ;
       skos:inScheme datalens_th:DatasetSizeScheme ;
-      skos:prefLabel "< 1K"@en .
+      skos:prefLabel "< 1K"@en ;
       skos:definition "Less than 1,000 records"@en .
 
 datalens_th:1k
       a       datalens_o:SizeCategory , skos:Concept ;
       skos:inScheme datalens_th:DatasetSizeScheme ;
-      skos:prefLabel "1K - 10K"@en .
+      skos:prefLabel "1K - 10K"@en ;
       skos:definition "Between 1,000 and 10,000 records"@en .
 
 datalens_th:10k
       a       datalens_o:SizeCategory , skos:Concept ;
       skos:inScheme datalens_th:DatasetSizeScheme ;
-      skos:prefLabel "10K - 100K"@en .
+      skos:prefLabel "10K - 100K"@en ;
       skos:definition "Between 10,000 and 100,000 records"@en .
 
 datalens_th:100k
       a       datalens_o:SizeCategory , skos:Concept ;
       skos:inScheme datalens_th:DatasetSizeScheme ;
-      skos:prefLabel "100K - 1M"@en .
+      skos:prefLabel "100K - 1M"@en ;
       skos:definition "Between 100,000 and 1,000,000 records"@en .
 
 datalens_th:1m
       a       datalens_o:SizeCategory , skos:Concept ;
       skos:inScheme datalens_th:DatasetSizeScheme ;
-      skos:prefLabel "1M - 10M"@en .
+      skos:prefLabel "1M - 10M"@en ;
       skos:definition "Between 1,000,000 and 10,000,000 records"@en .
 
 datalens_th:10m
       a       datalens_o:SizeCategory , skos:Concept ;
       skos:inScheme datalens_th:DatasetSizeScheme ;
-      skos:prefLabel "10M - 100M"@en .
+      skos:prefLabel "10M - 100M"@en ;
       skos:definition "Between 10,000,000 and 100,000,000 records"@en .
 
 datalens_th:100m
       a       datalens_o:SizeCategory , skos:Concept ;
       skos:inScheme datalens_th:DatasetSizeScheme ;
-      skos:prefLabel "100M - 1B"@en .
+      skos:prefLabel "100M - 1B"@en ;
       skos:definition "Between 100,000,000 and 1,000,000,000 records"@en .
 
 datalens_th:1b
       a       datalens_o:SizeCategory , skos:Concept ;
       skos:inScheme datalens_th:DatasetSizeScheme ;
-      skos:prefLabel "1B - 10B"@en .
+      skos:prefLabel "1B - 10B"@en ;
       skos:definition "Between 1,000,000,000 and 10,000,000,000 records"@en .
 
 datalens_th:10b
       a       datalens_o:SizeCategory , skos:Concept ;
       skos:inScheme datalens_th:DatasetSizeScheme ;
-      skos:prefLabel "10B - 100B"@en .
+      skos:prefLabel "10B - 100B"@en ;
       skos:definition "Between 10,000,000,000 and 100,000,000,000 records"@en .
 
 datalens_th:100b
       a       datalens_o:SizeCategory , skos:Concept ;
       skos:inScheme datalens_th:DatasetSizeScheme ;
-      skos:prefLabel "100B - 1T"@en .
+      skos:prefLabel "100B - 1T"@en ;
       skos:definition "Between 100,000,000,000 and 1,000,000,000,000 records"@en .
 
 datalens_th:1t
       a       datalens_o:SizeCategory , skos:Concept ;
       skos:inScheme datalens_th:DatasetSizeScheme ;
-      skos:prefLabel "> 1T"@en .
+      skos:prefLabel "> 1T"@en ;
       skos:definition "More than 1,000,000,000,000 records"@en .
 
 
@@ -261,77 +261,77 @@ datalens_th:DatasetLibraryScheme
 
 datalens_th:datadesigner
       a       skos:Concept , datalens_o:Library ;
-      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-data-designer> <https://nvidia-nemo.github.io/DataDesigner/latest/> ;
+      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-data-designer>, <https://nvidia-nemo.github.io/DataDesigner/latest/> ;
       skos:definition "Data Designer is NVIDIA NeMo’s framework for generating high-quality synthetic datasets using LLMs. It enables you to create diverse data using statistical samplers, LLMs, or existing seed datasets."@en ;
       skos:inScheme datalens_th:DatasetLibraryScheme ;
       skos:prefLabel "NeMo Data Designer"@en .
 
 datalens_th:lance
       a       skos:Concept , datalens_o:Library ;
-      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-lance> <https://lance.org/> ;
+      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-lance>, <https://lance.org/> ;
       skos:definition "Lance is an open multimodal lakehouse table format for AI."@en ;
       skos:inScheme datalens_th:DatasetLibraryScheme ;
       skos:prefLabel "Lance"@en .
 
 datalens_th:datasets
       a       skos:Concept , datalens_o:Library ;
-      skos:seeAlso <https://huggingface.co/docs/datasets/index> <https://pypi.org/project/datasets/> ;
+      skos:seeAlso <https://huggingface.co/docs/datasets/index>, <https://pypi.org/project/datasets/> ;
       skos:definition "Datasets is a library for easily accessing and sharing AI datasets for Audio, Computer Vision, and Natural Language Processing (NLP) tasks."@en ;
       skos:inScheme datalens_th:DatasetLibraryScheme ;
       skos:prefLabel "Datasets"@en .
 
 datalens_th:webdataset
       a       skos:Concept , datalens_o:Library ;
-      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-webdataset> <https://pypi.org/project/webdataset/> ;
+      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-webdataset>, <https://pypi.org/project/webdataset/> ;
       skos:definition "WebDataset is a library for writing I/O pipelines for large datasets. Its sequential I/O and sharding features make it especially useful for streaming large-scale datasets to a DataLoader."@en ;
       skos:inScheme datalens_th:DatasetLibraryScheme ;
       skos:prefLabel "WebDataset"@en .
 
 datalens_th:polars
       a       skos:Concept , datalens_o:Library ;
-      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-polars> <https://pola.rs/> ;
+      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-polars>, <https://pola.rs/> ;
       skos:definition "Polars is an in-memory DataFrame library on top of an OLAP query engine."@en ;
       skos:inScheme datalens_th:DatasetLibraryScheme ;
       skos:prefLabel "Polars"@en .
 
 datalens_th:dask
       a       skos:Concept , datalens_o:Library ;
-      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-dask> <https://www.dask.org/> ;
+      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-dask>, <https://www.dask.org/> ;
       skos:definition "Dask is a parallel and distributed computing library that scales the existing Python and PyData ecosystem."@en ;
       skos:inScheme datalens_th:DatasetLibraryScheme ;
       skos:prefLabel "Dask"@en .
 
 datalens_th:pandas
       a       skos:Concept , datalens_o:Library ;
-      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-pandas> <https://pandas.pydata.org/> ;
+      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-pandas>, <https://pandas.pydata.org/> ;
       skos:definition "Pandas is a widely used Python data analysis toolkit."@en ;
       skos:inScheme datalens_th:DatasetLibraryScheme ;
       skos:prefLabel "pandas"@en .
 
 datalens_th:fiftyone
       a       skos:Concept , datalens_o:Library ;
-      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-fiftyone> <https://docs.voxel51.com/> ;
+      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-fiftyone>, <https://docs.voxel51.com/> ;
       skos:definition "FiftyOne is an open-source toolkit for curating, visualizing, and managing unstructured visual data."@en ;
       skos:inScheme datalens_th:DatasetLibraryScheme ;
       skos:prefLabel "FiftyOne"@en .
 
 datalens_th:distilabel
       a       skos:Concept , datalens_o:Library ;
-      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-distilabel> <https://distilabel.argilla.io/1.1.1/> ;
+      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-distilabel>, <https://distilabel.argilla.io/1.1.1/> ;
       skos:definition "Distilabel is a framework for synthetic data and AI feedback for engineers who need fast, reliable and scalable pipelines based on verified research papers."@en ;
       skos:inScheme datalens_th:DatasetLibraryScheme ;
       skos:prefLabel "Distilabel"@en .
 
 datalens_th:mlcroissant
       a       skos:Concept , datalens_o:Library ;
-      skos:seeAlso <https://huggingface.co/docs/dataset-viewer/en/mlcroissant> <https://pypi.org/project/mlcroissant/> ;
+      skos:seeAlso <https://huggingface.co/docs/dataset-viewer/en/mlcroissant>, <https://pypi.org/project/mlcroissant/> ;
       skos:definition "mlcroissant is a library to load datasets from Croissant metadata."@en ;
       skos:inScheme datalens_th:DatasetLibraryScheme ;
       skos:prefLabel "Croissant"@en .
 
 datalens_th:argilla
       a       skos:Concept , datalens_o:Library ;
-      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-argilla> <https://docs.argilla.io/latest/> ;
+      skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-argilla>, <https://docs.argilla.io/latest/> ;
       skos:definition "Argilla is a collaboration tool for AI engineers and domain experts who need to build high quality datasets for their projects."@en ;
       skos:inScheme datalens_th:DatasetLibraryScheme ;
       skos:prefLabel "Argilla"@en .
@@ -687,7 +687,7 @@ datalens_th:executorch
       skos:seeAlso <https://docs.pytorch.org/executorch/stable/index.html> ;
       skos:inScheme datalens_th:ModelLibraryScheme ;
       skos:prefLabel "ExecuTorch"@en .
-47/52
+
 datalens_th:tf
       a       skos:Concept , datalens_o:Library ;
       skos:definition "TensorFlow is an end-to-end open source platform for machine learning, developed by Google."@en ;
