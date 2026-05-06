@@ -12,13 +12,13 @@
 @prefix bibo:    <http://purl.org/ontology/bibo/> .
 @prefix dcat:    <http://www.w3.org/ns/dcat#> .
 
-@prefix datalens_o:    <http://ns.inria.fr/datalens/ontology#> .
-@prefix datalens_th:  <http://ns.inria.fr/datalens/thesaurus#> .
+@prefix dlo:    <http://ns.inria.fr/datalens/ontology/> .
+@prefix dlt:  <http://ns.inria.fr/datalens/thesaurus/> .
 
-datalens_th:
+dlt:
     dcterms:title "Datalens Thesaurus"@en ;
     dcterms:creator "Aline MENIN", "Zachari ARNAUD" ;
-    dcterms:modified "2026-04-24" ;
+    dcterms:modified "2026-05-06" ;
     dcterms:description "The Datalens Thesaurus provides controlled vocabulary for datasets and machine learning models."@en ;
     owl:versionInfo "1.0" ;
     dcat:landingPage <https://github.com/amenin/datalens> ;
@@ -27,150 +27,183 @@ datalens_th:
     dcterms:publisher "Inria", "University Côte d'Azur", "CNRS" .
 
 ## Modality Scheme
-datalens_th:ModalityScheme a skos:ConceptScheme ;
+dlt:ModalityScheme a skos:ConceptScheme ;
     skos:prefLabel "Dataset Modality Scheme"@en ;
     skos:definition "A controlled vocabulary for describing the data modality of datasets used in machine learning."@en ;
     skos:hasTopConcept 
-        datalens_th:3D,
-        datalens_th:Audio,
-        datalens_th:Document,
-        datalens_th:Geospatial,
-        datalens_th:Image,
-        datalens_th:Tabular,
-        datalens_th:Text,
-        datalens_th:TimeSeries,
-        datalens_th:Video .
+        dlt:3D,
+        dlt:Audio,
+        dlt:Document,
+        dlt:Geospatial,
+        dlt:Image,
+        dlt:Tabular,
+        dlt:Text,
+        dlt:TimeSeries,
+        dlt:Video .
 
-datalens_th:3D a skos:Concept, datalens_o:Modality ;
+dlt:3D a skos:Concept, dlo:Modality ;
     skos:prefLabel "3D"@en ;
     skos:definition "Three-dimensional spatial data, such as point clouds or meshes."@en ;
-    skos:inScheme datalens_th:ModalityScheme .
+    skos:inScheme dlt:ModalityScheme .
 
-datalens_th:Audio a skos:Concept, datalens_o:Modality ;
+dlt:Audio a skos:Concept, dlo:Modality ;
     skos:prefLabel "Audio"@en ;
     skos:definition "Sound data, such as speech or environmental recordings."@en ;
-    skos:inScheme datalens_th:ModalityScheme .
+    skos:inScheme dlt:ModalityScheme .
 
-datalens_th:Document a skos:Concept, datalens_o:Modality ;
+dlt:Document a skos:Concept, dlo:Modality ;
     skos:prefLabel "Document"@en ;
     skos:definition "Structured textual documents, such as PDFs or HTML pages."@en ;
-    skos:inScheme datalens_th:ModalityScheme .
+    skos:inScheme dlt:ModalityScheme .
 
-datalens_th:Geospatial a skos:Concept, datalens_o:Modality ;
+dlt:Geospatial a skos:Concept, dlo:Modality ;
     skos:prefLabel "Geospatial"@en ;
     skos:definition "Data with spatial/geographic components, such as GIS data."@en ;
-    skos:inScheme datalens_th:ModalityScheme .
+    skos:inScheme dlt:ModalityScheme .
 
-datalens_th:Image a skos:Concept, datalens_o:Modality ;
+dlt:Image a skos:Concept, dlo:Modality ;
     skos:prefLabel "Image"@en ;
     skos:definition "Visual raster data, such as photographs or satellite imagery."@en ;
-    skos:inScheme datalens_th:ModalityScheme .
+    skos:inScheme dlt:ModalityScheme .
 
-datalens_th:Tabular a skos:Concept, datalens_o:Modality ;
+dlt:Tabular a skos:Concept, dlo:Modality ;
     skos:prefLabel "Tabular"@en ;
     skos:definition "Structured data organized in rows and columns, such as spreadsheets or CSV files."@en ;
-    skos:inScheme datalens_th:ModalityScheme .
+    skos:inScheme dlt:ModalityScheme .
 
-datalens_th:Text a skos:Concept, datalens_o:Modality ;
+dlt:Text a skos:Concept, dlo:Modality ;
     skos:prefLabel "Text"@en ;
     skos:definition "Unstructured or semi-structured plain text data."@en ;
-    skos:inScheme datalens_th:ModalityScheme .
+    skos:inScheme dlt:ModalityScheme .
 
-datalens_th:TimeSeries a skos:Concept, datalens_o:Modality ;
+dlt:TimeSeries a skos:Concept, dlo:Modality ;
     skos:prefLabel "Time-series"@en ;
     skos:altLabel "Time series"@en ;
     skos:definition "Sequential data indexed by time, such as sensor readings or stock prices."@en ;
-    skos:inScheme datalens_th:ModalityScheme .
+    skos:inScheme dlt:ModalityScheme .
 
-datalens_th:Video a skos:Concept, datalens_o:Modality ;
+dlt:Video a skos:Concept, dlo:Modality ;
     skos:prefLabel "Video"@en ;
     skos:definition "Temporal sequences of images, optionally with audio."@en ;
-    skos:inScheme datalens_th:ModalityScheme .
+    skos:inScheme dlt:ModalityScheme .
 
+
+
+
+
+## Transformation Scheme
+dlt:TransformationScheme a skos:ConceptScheme ;
+    skos:prefLabel "Transformation Scheme"@en ;
+    skos:definition "A controlled vocabulary for describing the transformations applied to machine learning models."@en ;
+    skos:hasTopConcept
+            dlt:fineTune,
+            dlt:Quantize,
+            dlt:Merge,
+            dlt:Adapt .
+
+dlt:Finetune a dlo:Transformation ;
+    skos:label "Fine-tune"@en ;
+    skos:definition "A transformation where a pre-trained model is further trained on a specific task or dataset."@en ;
+    skos:inScheme dlt:TransformationScheme .
+
+dlt:Quantize a dlo:Transformation ;
+    skos:label "Quantize"@en ;
+    skos:definition "A transformation where a pre-trained model is quantized to reduce its size and improve inference speed."@en ;
+    skos:inScheme dlt:TransformationScheme .
+
+dlt:Merge a dlo:Transformation ;
+    skos:label "Merge"@en ;
+    skos:definition "A transformation where multiple pre-trained models are combined into a single model."@en ;
+    skos:inScheme dlt:TransformationScheme .
+
+dlt:Adapt a dlo:Transformation ;
+    skos:label "Adapt"@en ;
+    skos:definition "A transformation where a pre-trained model is adapted for a new task or domain."@en ;
+    skos:inScheme dlt:TransformationScheme .    
 
 
 
 
 
 ## Format Scheme
-datalens_th:FormatScheme
+dlt:FormatScheme
       a       skos:ConceptScheme ;
       skos:definition "A controlled vocabulary for describing the formats of dataset and model resources."@en ;
       skos:prefLabel "Dataset Format Scheme"@en .
 
-datalens_th:webdataset
-      a       datalens_o:Format , skos:Concept ;
+dlt:WebDataset
+      a       dlo:Format , skos:Concept ;
       skos:definition "A WebDataset file is a TAR archive containing a series of data files. WebDataset is designed for multimodal datasets, i.e. for image, audio and/or video datasets."@en ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-webdataset> ;
-      skos:inScheme datalens_th:FormatScheme ;
+      skos:inScheme dlt:FormatScheme ;
       skos:prefLabel "Web Dataset"@en .
 
-datalens_th:imagefolder
-      a       datalens_o:Format , skos:Concept ;
+dlt:ImageFolder
+      a       dlo:Format , skos:Concept ;
       skos:definition "A folder-based organization where image files are grouped in directories."@en ;
-      skos:inScheme datalens_th:FormatScheme ;
+      skos:inScheme dlt:FormatScheme ;
       skos:prefLabel "Image Folder"@en .
 
-datalens_th:audiofolder
-      a       datalens_o:Format , skos:Concept ;
+dlt:AudioFolder
+      a       dlo:Format , skos:Concept ;
       skos:definition "A folder-based organization where audio files are grouped in directories."@en ;
-      skos:inScheme datalens_th:FormatScheme ;
+      skos:inScheme dlt:FormatScheme ;
       skos:prefLabel "Audio Folder"@en .
 
-datalens_th:agent-traces
-      a       datalens_o:Format , skos:Concept ;
+dlt:AgentTraces
+      a       dlo:Format , skos:Concept ;
       skos:definition "A trace-oriented format used to store execution logs and interaction traces for AI agents."@en ;
       skos:seeAlso <https://huggingface.co/changelog/agent-trace-viewer> ;
-      skos:inScheme datalens_th:FormatScheme ;
+      skos:inScheme dlt:FormatScheme ;
       skos:prefLabel "Traces"@en .
 
-datalens_th:arrow
-      a       datalens_o:Format , skos:Concept ;
+dlt:Arrow
+      a       dlo:Format , skos:Concept ;
       skos:definition "Apache Arrow defines a language-independent columnar memory format for flat and nested data, organized for efficient analytic operations on modern hardware like CPUs and GPUs."@en ;
       skos:exactMatch <https://www.iana.org/assignments/media-types/application/vnd.apache.arrow.file> ;
       skos:seeAlso <https://arrow.apache.org/> ;
-      skos:inScheme datalens_th:FormatScheme ;
+      skos:inScheme dlt:FormatScheme ;
       skos:prefLabel "Apache Arrow"@en .
 
-datalens_th:csv
-      a       datalens_o:Format , skos:Concept ;
+dlt:CSV
+      a       dlo:Format , skos:Concept ;
       skos:definition "Comma-separated values (CSV) is a plain text data format for storing tabular data where the fields of a record are separated by a comma and each record is a line."@en ;
       skos:exactMatch <https://www.iana.org/assignments/media-types/text/csv> ;
       skos:seeAlso <https://en.wikipedia.org/wiki/Comma-separated_values> ;
-      skos:inScheme datalens_th:FormatScheme ;
+      skos:inScheme dlt:FormatScheme ;
       skos:prefLabel "CSV"@en .
 
-datalens_th:json
-      a       datalens_o:Format , skos:Concept ;
+dlt:JSON
+      a       dlo:Format , skos:Concept ;
       skos:definition "JSON (JavaScript Object Notation) is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of name–value pairs and arrays."@en ;
       skos:exactMatch <https://www.iana.org/assignments/media-types/application/json> ;
       skos:seeAlso <https://json.org/>, <https://en.wikipedia.org/wiki/JSON>;
-      skos:inScheme datalens_th:FormatScheme ;
+      skos:inScheme dlt:FormatScheme ;
       skos:prefLabel "JSON"@en .
 
-datalens_th:parquet
-      a       datalens_o:Format , skos:Concept ;
+dlt:Parquet
+      a       dlo:Format , skos:Concept ;
       skos:definition "Apache Parquet is an open source, column-oriented data file format designed for efficient data storage and retrieval."@en ;
       skos:exactMatch <https://www.iana.org/assignments/media-types/application/vnd.apache.parquet> ;
       skos:seeAlso <https://parquet.apache.org/> ;
-      skos:inScheme datalens_th:FormatScheme ;
+      skos:inScheme dlt:FormatScheme ;
       skos:prefLabel "Apache Parquet"@en .
 
-datalens_th:optimized-parquet
-      a       datalens_o:Format , skos:Concept ;
+dlt:OptimizedParquet
+      a       dlo:Format , skos:Concept ;
       skos:definition "Optimized Parquet is Hugging Face’s enhanced version of the standard Parquet columnar-storage format. It utilizes Content-Defined Chunking (CDC), which allows for faster deduped uploads and downloads of datasets."@en ;
       skos:closeMatch <https://www.iana.org/assignments/media-types/application/vnd.apache.parquet> ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-optimized-parquet>, <https://parquet.apache.org/>, <https://huggingface.co/docs/xet/chunking> ;
-      skos:inScheme datalens_th:FormatScheme ;
+      skos:inScheme dlt:FormatScheme ;
       skos:prefLabel "Optimized Apache Parquet"@en ;
-      skos:related datalens_th:parquet .
+      skos:related dlt:Parquet .
 
-datalens_th:text
-      a       datalens_o:Format , skos:Concept ;
+dlt:Text
+      a       dlo:Format , skos:Concept ;
       skos:definition "A text file is a kind of computer file that is structured as a sequence of lines of electronic text."@en ;
       skos:exactMatch <https://www.iana.org/assignments/media-types/text/plain> ;
       skos:seeAlso <https://en.wikipedia.org/wiki/Text_file> ;
-      skos:inScheme datalens_th:FormatScheme ;
+      skos:inScheme dlt:FormatScheme ;
       skos:prefLabel "Text"@en .
 
 
@@ -178,74 +211,74 @@ datalens_th:text
 
 
 ## Dataset Size Scheme
-datalens_th:DatasetSizeScheme
+dlt:DatasetSizeScheme
       a       skos:ConceptScheme ;
       skos:definition "A controlled vocabulary for describing the size of a dataset, according to HuggingFace definition."@en ;
       skos:prefLabel "Dataset Size Scheme"@en .
 
-datalens_th:1
-      a       datalens_o:SizeCategory , skos:Concept ;
-      skos:inScheme datalens_th:DatasetSizeScheme ;
+dlt:1
+      a       dlo:SizeCategory , skos:Concept ;
+      skos:inScheme dlt:DatasetSizeScheme ;
       skos:prefLabel "< 1K"@en ;
       skos:definition "Less than 1,000 records"@en .
 
-datalens_th:1k
-      a       datalens_o:SizeCategory , skos:Concept ;
-      skos:inScheme datalens_th:DatasetSizeScheme ;
+dlt:1k
+      a       dlo:SizeCategory , skos:Concept ;
+      skos:inScheme dlt:DatasetSizeScheme ;
       skos:prefLabel "1K - 10K"@en ;
       skos:definition "Between 1,000 and 10,000 records"@en .
 
-datalens_th:10k
-      a       datalens_o:SizeCategory , skos:Concept ;
-      skos:inScheme datalens_th:DatasetSizeScheme ;
+dlt:10k
+      a       dlo:SizeCategory , skos:Concept ;
+      skos:inScheme dlt:DatasetSizeScheme ;
       skos:prefLabel "10K - 100K"@en ;
       skos:definition "Between 10,000 and 100,000 records"@en .
 
-datalens_th:100k
-      a       datalens_o:SizeCategory , skos:Concept ;
-      skos:inScheme datalens_th:DatasetSizeScheme ;
+dlt:100k
+      a       dlo:SizeCategory , skos:Concept ;
+      skos:inScheme dlt:DatasetSizeScheme ;
       skos:prefLabel "100K - 1M"@en ;
       skos:definition "Between 100,000 and 1,000,000 records"@en .
 
-datalens_th:1m
-      a       datalens_o:SizeCategory , skos:Concept ;
-      skos:inScheme datalens_th:DatasetSizeScheme ;
+dlt:1m
+      a       dlo:SizeCategory , skos:Concept ;
+      skos:inScheme dlt:DatasetSizeScheme ;
       skos:prefLabel "1M - 10M"@en ;
       skos:definition "Between 1,000,000 and 10,000,000 records"@en .
 
-datalens_th:10m
-      a       datalens_o:SizeCategory , skos:Concept ;
-      skos:inScheme datalens_th:DatasetSizeScheme ;
+dlt:10m
+      a       dlo:SizeCategory , skos:Concept ;
+      skos:inScheme dlt:DatasetSizeScheme ;
       skos:prefLabel "10M - 100M"@en ;
       skos:definition "Between 10,000,000 and 100,000,000 records"@en .
 
-datalens_th:100m
-      a       datalens_o:SizeCategory , skos:Concept ;
-      skos:inScheme datalens_th:DatasetSizeScheme ;
+dlt:100m
+      a       dlo:SizeCategory , skos:Concept ;
+      skos:inScheme dlt:DatasetSizeScheme ;
       skos:prefLabel "100M - 1B"@en ;
       skos:definition "Between 100,000,000 and 1,000,000,000 records"@en .
 
-datalens_th:1b
-      a       datalens_o:SizeCategory , skos:Concept ;
-      skos:inScheme datalens_th:DatasetSizeScheme ;
+dlt:1b
+      a       dlo:SizeCategory , skos:Concept ;
+      skos:inScheme dlt:DatasetSizeScheme ;
       skos:prefLabel "1B - 10B"@en ;
       skos:definition "Between 1,000,000,000 and 10,000,000,000 records"@en .
 
-datalens_th:10b
-      a       datalens_o:SizeCategory , skos:Concept ;
-      skos:inScheme datalens_th:DatasetSizeScheme ;
+dlt:10b
+      a       dlo:SizeCategory , skos:Concept ;
+      skos:inScheme dlt:DatasetSizeScheme ;
       skos:prefLabel "10B - 100B"@en ;
       skos:definition "Between 10,000,000,000 and 100,000,000,000 records"@en .
 
-datalens_th:100b
-      a       datalens_o:SizeCategory , skos:Concept ;
-      skos:inScheme datalens_th:DatasetSizeScheme ;
+dlt:100b
+      a       dlo:SizeCategory , skos:Concept ;
+      skos:inScheme dlt:DatasetSizeScheme ;
       skos:prefLabel "100B - 1T"@en ;
       skos:definition "Between 100,000,000,000 and 1,000,000,000,000 records"@en .
 
-datalens_th:1t
-      a       datalens_o:SizeCategory , skos:Concept ;
-      skos:inScheme datalens_th:DatasetSizeScheme ;
+dlt:1t
+      a       dlo:SizeCategory , skos:Concept ;
+      skos:inScheme dlt:DatasetSizeScheme ;
       skos:prefLabel "> 1T"@en ;
       skos:definition "More than 1,000,000,000,000 records"@en .
 
@@ -254,86 +287,86 @@ datalens_th:1t
 
 
 ## Dataset Library Scheme
-datalens_th:DatasetLibraryScheme
+dlt:DatasetLibraryScheme
       a       skos:ConceptScheme ;
       skos:definition "A controlled vocabulary for describing the libraries of dataset resources."@en ;
       skos:prefLabel "Dataset Library Scheme"@en .
 
-datalens_th:datadesigner
-      a       skos:Concept , datalens_o:Library ;
+dlt:DataDesigner
+      a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-data-designer>, <https://nvidia-nemo.github.io/DataDesigner/latest/> ;
       skos:definition "Data Designer is NVIDIA NeMo’s framework for generating high-quality synthetic datasets using LLMs. It enables you to create diverse data using statistical samplers, LLMs, or existing seed datasets."@en ;
-      skos:inScheme datalens_th:DatasetLibraryScheme ;
+      skos:inScheme dlt:DatasetLibraryScheme ;
       skos:prefLabel "NeMo Data Designer"@en .
 
-datalens_th:lance
-      a       skos:Concept , datalens_o:Library ;
+dlt:Lance
+      a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-lance>, <https://lance.org/> ;
       skos:definition "Lance is an open multimodal lakehouse table format for AI."@en ;
-      skos:inScheme datalens_th:DatasetLibraryScheme ;
+      skos:inScheme dlt:DatasetLibraryScheme ;
       skos:prefLabel "Lance"@en .
 
-datalens_th:datasets
-      a       skos:Concept , datalens_o:Library ;
+dlt:Datasets
+      a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/datasets/index>, <https://pypi.org/project/datasets/> ;
       skos:definition "Datasets is a library for easily accessing and sharing AI datasets for Audio, Computer Vision, and Natural Language Processing (NLP) tasks."@en ;
-      skos:inScheme datalens_th:DatasetLibraryScheme ;
+      skos:inScheme dlt:DatasetLibraryScheme ;
       skos:prefLabel "Datasets"@en .
 
-datalens_th:webdataset
-      a       skos:Concept , datalens_o:Library ;
+dlt:WebDataset
+      a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-webdataset>, <https://pypi.org/project/webdataset/> ;
       skos:definition "WebDataset is a library for writing I/O pipelines for large datasets. Its sequential I/O and sharding features make it especially useful for streaming large-scale datasets to a DataLoader."@en ;
-      skos:inScheme datalens_th:DatasetLibraryScheme ;
+      skos:inScheme dlt:DatasetLibraryScheme ;
       skos:prefLabel "WebDataset"@en .
 
-datalens_th:polars
-      a       skos:Concept , datalens_o:Library ;
+dlt:Polars
+      a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-polars>, <https://pola.rs/> ;
       skos:definition "Polars is an in-memory DataFrame library on top of an OLAP query engine."@en ;
-      skos:inScheme datalens_th:DatasetLibraryScheme ;
+      skos:inScheme dlt:DatasetLibraryScheme ;
       skos:prefLabel "Polars"@en .
 
-datalens_th:dask
-      a       skos:Concept , datalens_o:Library ;
+dlt:Dask
+      a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-dask>, <https://www.dask.org/> ;
       skos:definition "Dask is a parallel and distributed computing library that scales the existing Python and PyData ecosystem."@en ;
-      skos:inScheme datalens_th:DatasetLibraryScheme ;
+      skos:inScheme dlt:DatasetLibraryScheme ;
       skos:prefLabel "Dask"@en .
 
-datalens_th:pandas
-      a       skos:Concept , datalens_o:Library ;
+dlt:Pandas
+      a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-pandas>, <https://pandas.pydata.org/> ;
       skos:definition "Pandas is a widely used Python data analysis toolkit."@en ;
-      skos:inScheme datalens_th:DatasetLibraryScheme ;
+      skos:inScheme dlt:DatasetLibraryScheme ;
       skos:prefLabel "pandas"@en .
 
-datalens_th:fiftyone
-      a       skos:Concept , datalens_o:Library ;
+dlt:FiftyOne
+      a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-fiftyone>, <https://docs.voxel51.com/> ;
       skos:definition "FiftyOne is an open-source toolkit for curating, visualizing, and managing unstructured visual data."@en ;
-      skos:inScheme datalens_th:DatasetLibraryScheme ;
+      skos:inScheme dlt:DatasetLibraryScheme ;
       skos:prefLabel "FiftyOne"@en .
 
-datalens_th:distilabel
-      a       skos:Concept , datalens_o:Library ;
+dlt:Distilabel
+      a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-distilabel>, <https://distilabel.argilla.io/1.1.1/> ;
       skos:definition "Distilabel is a framework for synthetic data and AI feedback for engineers who need fast, reliable and scalable pipelines based on verified research papers."@en ;
-      skos:inScheme datalens_th:DatasetLibraryScheme ;
+      skos:inScheme dlt:DatasetLibraryScheme ;
       skos:prefLabel "Distilabel"@en .
 
-datalens_th:mlcroissant
-      a       skos:Concept , datalens_o:Library ;
+dlt:MLCroissant
+      a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/dataset-viewer/en/mlcroissant>, <https://pypi.org/project/mlcroissant/> ;
       skos:definition "mlcroissant is a library to load datasets from Croissant metadata."@en ;
-      skos:inScheme datalens_th:DatasetLibraryScheme ;
+      skos:inScheme dlt:DatasetLibraryScheme ;
       skos:prefLabel "Croissant"@en .
 
-datalens_th:argilla
-      a       skos:Concept , datalens_o:Library ;
+dlt:Argilla
+      a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-argilla>, <https://docs.argilla.io/latest/> ;
       skos:definition "Argilla is a collaboration tool for AI engineers and domain experts who need to build high quality datasets for their projects."@en ;
-      skos:inScheme datalens_th:DatasetLibraryScheme ;
+      skos:inScheme dlt:DatasetLibraryScheme ;
       skos:prefLabel "Argilla"@en .
 
 
@@ -341,386 +374,386 @@ datalens_th:argilla
 
 
 ## Model Library Scheme
-datalens_th:ModelLibraryScheme
+dlt:ModelLibraryScheme
       a       skos:ConceptScheme ;
       skos:definition "A controlled vocabulary for describing the libraries of machine learning models."@en ;
       skos:prefLabel "Model Library Scheme"@en .
 
-datalens_th:pytorch
-      a       skos:Concept , datalens_o:Library ;
+dlt:Pytorch
+      a       skos:Concept , dlo:Library ;
       skos:definition "PyTorch is an optimized tensor library for deep learning using GPUs and CPUs."@en ;
       skos:seeAlso <https://pytorch.org/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "PyTorch"@en .
 
-datalens_th:sklearn
-      a       skos:Concept , datalens_o:Library ;
+dlt:Sklearn
+      a       skos:Concept , dlo:Library ;
       skos:definition "Scikit-learn is an open source machine learning library that supports supervised and unsupervised learning. It also provides various tools for model fitting, data preprocessing, model selection, model evaluation, and many other utilities."@en ;
       skos:seeAlso <https://scikit-learn.org/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Scikit-learn"@en .
 
-datalens_th:transformers-js
-      a       skos:Concept , datalens_o:Library ;
+dlt:TransformersJS
+      a       skos:Concept , dlo:Library ;
       skos:definition "Transformers.js is a JavaScript library for the Hugging Face Transformers library."@en ;
       skos:seeAlso <https://huggingface.co/docs/transformers.js/> ;
-      skos:relate datalens_th:transformers ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:relate dlt:Transformers ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Transformers.js"@en .
 
-datalens_th:transformers
-      a       skos:Concept , datalens_o:Library ;
+dlt:Transformers
+      a       skos:Concept , dlo:Library ;
       skos:definition "Transformer is a library maintained by Hugging Face and its community, for state-of-the-art Machine Learning for Pytorch, TensorFlow and JAX."@en ;
       skos:seeAlso <https://huggingface.co/docs/transformers/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Transformers"@en .
 
-datalens_th:allennlp
-      a       skos:Concept , datalens_o:Library ;
+dlt:Allennlp
+      a       skos:Concept , dlo:Library ;
       skos:definition "AllenNLP is an Apache 2.0 NLP research library, built on PyTorch, for developing state-of-the-art deep learning models on a wide variety of linguistic tasks."@en ;
       skos:seeAlso <https://docs.allennlp.org/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "AllenNLP"@en .
 
-datalens_th:stanza
-      a       skos:Concept , datalens_o:Library ;
+dlt:Stanza
+      a       skos:Concept , dlo:Library ;
       skos:definition "Stanza is a Python natural language analysis package. It provides a collection of tools for the linguistic analysis of many human languages."@en ;
       skos:seeAlso <https://stanfordnlp.github.io/stanza/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Stanza"@en .
 
-datalens_th:PaddleOCR
-      a       skos:Concept , datalens_o:Library ;
+dlt:PaddleOCR
+      a       skos:Concept , dlo:Library ;
       skos:definition "PaddleOCR is an OCR tool developed by PaddlePaddle, it converts PDF documents and images into structured, LLM-ready data (JSON/Markdown)."@en ;
       skos:seeAlso <https://www.paddleocr.ai/latest/en/index.html> ;
-      skos:relate datalens_th:paddlepaddle ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:relate dlt:Paddlepaddle ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "PaddleOCR"@en .
 
-datalens_th:adapter-transformers
-      a       skos:Concept , datalens_o:Library ;
+dlt:AdapterTransformers
+      a       skos:Concept , dlo:Library ;
       skos:definition "Adapters is an add-on library to Hugging Face Transformers for efficiently fine-tuning pre-trained language models using adapters and other parameter-efficient methods."@en ;
       skos:seeAlso <https://docs.adapterhub.ml/> ;
-      skos:relate datalens_th:transformers ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:relate dlt:Transformers ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Adapters"@en .
 
-datalens_th:rust
-      a       skos:Concept , datalens_o:Library ;
+dlt:Rust
+      a       skos:Concept , dlo:Library ;
       skos:definition "Rust is a fast, memory-safe, and productive programming language that can run on embedded devices, web services, and more."@en ;
       skos:seeAlso <https://www.rust-lang.org/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Rust"@en .
 
-datalens_th:keras-hub
-      a       skos:Concept , datalens_o:Library ;
+dlt:KerasHub
+      a       skos:Concept , dlo:Library ;
       skos:definition "KerasHub is a pretrained modeling library that aims to be simple, flexible, and fast."@en ;
       skos:seeAlso <https://keras.io/keras_hub/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "KerasHub"@en .
 
-datalens_th:sentence-transformers
-      a       skos:Concept , datalens_o:Library ;
+dlt:SentenceTransformers
+      a       skos:Concept , dlo:Library ;
       skos:definition "Sentence Transformers is a Python module for using and training state-of-the-art embedding and reranker models."@en ;
       skos:seeAlso <https://www.sbert.net/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Sentence Transformers"@en .
 
-datalens_th:speechbrain
-      a       skos:Concept , datalens_o:Library ;
+dlt:Speechbrain
+      a       skos:Concept , dlo:Library ;
       skos:definition "SpeechBrain is an open-source and all-in-one speech toolkit based on PyTorch."@en ;
       skos:seeAlso <https://speechbrain.readthedocs.io/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "SpeechBrain"@en .
 
-datalens_th:tflite
-      a       skos:Concept , datalens_o:Library ;
+dlt:LiteRT
+      a       skos:Concept , dlo:Library ;
       skos:definition "LiteRT, successor to TensorFlow Lite, is Google's On-device framework for high-performance ML & GenAI deployment on edge platforms, via efficient conversion, runtime, and optimization"@en ;
       skos:seeAlso <https://ai.google.dev/edge/litert> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "LiteRT"@en .
 
-datalens_th:espnet
-      a       skos:Concept , datalens_o:Library ;
+dlt:Espnet
+      a       skos:Concept , dlo:Library ;
       skos:definition "ESPnet is an end-to-end toolkit for speech processing, including automatic speech recognition, text to speech, speech enhancement, dirarization and other tasks."@en ;
       skos:seeAlso <https://espnet.github.io/espnet/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "ESPnet"@en .
 
-datalens_th:pyannote-audio
-      a       skos:Concept , datalens_o:Library ;
+dlt:PyannoteAudio
+      a       skos:Concept , dlo:Library ;
       skos:definition "PyAnnote.audio is an open-source toolkit written in Python for speaker diarization."@en ;
       skos:seeAlso <https://docs.pyannote.ai/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "PyAnnote.audio"@en .
 
-datalens_th:open_clip
-      a       skos:Concept , datalens_o:Library ;
+dlt:OpenClip
+      a       skos:Concept , dlo:Library ;
       skos:definition "OpenCLIP is an open-source implementation of OpenAI’s CLIP."@en ;
       skos:seeAlso <https://huggingface.co/docs/hub/open_clip> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "OpenCLIP"@en .
 
-datalens_th:peft
-      a       skos:Concept , datalens_o:Library ;
+dlt:Peft
+      a       skos:Concept , dlo:Library ;
       skos:definition "PEFT (Parameter-Efficient Fine-Tuning) is a library for efficiently adapting large pretrained models to various downstream applications without fine-tuning all of a model’s parameters because it is prohibitively costly."@en ;
       skos:seeAlso <https://huggingface.co/docs/peft/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "PEFT"@en .
 
-datalens_th:fasttext
-      a       skos:Concept , datalens_o:Library ;
+dlt:Fasttext
+      a       skos:Concept , dlo:Library ;
       skos:definition "FastText is an open-source, free, lightweight library that allows users to learn text representations and text classifiers."@en ;
       skos:seeAlso <https://fasttext.cc/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "FastText"@en .
 
-datalens_th:tensorboard
-      a       skos:Concept , datalens_o:Library ;
+dlt:Tensorboard
+      a       skos:Concept , dlo:Library ;
       skos:definition "TensorBoard provides tooling for tracking and visualizing metrics as well as visualizing models."@en ;
       skos:seeAlso <https://www.tensorflow.org/tensorboard> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "TensorBoard"@en .
 
-datalens_th:keras
-      a       skos:Concept , datalens_o:Library ;
+dlt:Keras
+      a       skos:Concept , dlo:Library ;
       skos:definition "Keras is an open-source multi-backend deep learning framework, with support for JAX, TensorFlow, and PyTorch."@en ;
       skos:seeAlso <https://keras.io/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Keras"@en .
 
-datalens_th:stable-baselines3
-      a       skos:Concept , datalens_o:Library ;
+dlt:StableBaselines3
+      a       skos:Concept , dlo:Library ;
       skos:definition "Stable Baselines3 is a set of reliable implementations of reinforcement learning algorithms in PyTorch."@en ;
       skos:seeAlso <https://stable-baselines3.readthedocs.io/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Stable Baselines3"@en .
 
-datalens_th:nemo
-      a       skos:Concept , datalens_o:Library ;
+dlt:Nemo
+      a       skos:Concept , dlo:Library ;
       skos:definition "NVIDIA NeMo Framework is a scalable and cloud-native generative AI framework built for researchers and developers working on Large Language Models, Multimodal, and Speech AI."@en ;
       skos:seeAlso <https://docs.nvidia.com/nemo-framework/user-guide/latest/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "NeMo"@en .
 
-datalens_th:asteroid
-      a       skos:Concept , datalens_o:Library ;
+dlt:Asteroid
+      a       skos:Concept , dlo:Library ;
       skos:definition "Asteroid is a Pytorch-based audio source separation toolkit that enables fast experimentation on common datasets."@en ;
       skos:seeAlso <https://asteroid-team.github.io/asteroid/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Asteroid"@en .
 
-datalens_th:optimum_graphcore
-      a       skos:Concept , datalens_o:Library ;
+dlt:OptimumGraphcore
+      a       skos:Concept , dlo:Library ;
       skos:definition "Optimum Graphcore is the interface between the Hugging Face Transformers library and Graphcore IPUs. It provides a set of tools enabling model parallelization and loading on IPUs, training and fine-tuning on all the tasks already supported by Transformers."@en ;
       skos:seeAlso <https://huggingface.co/docs/optimum/graphcore/index> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Graphcore"@en .
 
-datalens_th:tf-keras
-      a       skos:Concept , datalens_o:Library ;
+dlt:TFKeras
+      a       skos:Concept , dlo:Library ;
       skos:definition "tf-keras is the name given to Keras 2.x version."@en ;
       skos:seeAlso <https://huggingface.co/docs/hub/tf-keras> ;
-      skos:relate datalens_th:keras ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:relate dlt:Keras ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "TF-Keras"@en .
 
-datalens_th:span-marker
-      a       skos:Concept , datalens_o:Library ;
+dlt:SpanMarker
+      a       skos:Concept , dlo:Library ;
       skos:definition "SpanMarker is a framework for training powerful Named Entity Recognition models using familiar encoders such as BERT, RoBERTa and ELECTRA."@en ;
       skos:seeAlso <https://tomaarsen.github.io/SpanMarkerNER/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "SpanMarker"@en .
 
-datalens_th:paddlenlp
-      a       skos:Concept , datalens_o:Library ;
+dlt:PaddleNLP
+      a       skos:Concept , dlo:Library ;
       skos:definition "Leveraging the PaddlePaddle framework, PaddleNLP is a NLP library with pre-trained model zoo, supporting wide-range of NLP tasks from research to industrial applications."@en ;
       skos:seeAlso <https://paddlenlp.readthedocs.io/en/latest/> ;
-      skos:relate datalens_th:paddlepaddle ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:relate dlt:Paddlepaddle ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "PaddleNLP"@en .
 
-datalens_th:joblib
-      a       skos:Concept , datalens_o:Library ;
+dlt:Joblib
+      a       skos:Concept , dlo:Library ;
       skos:definition "Joblib is a set of tools to provide lightweight pipelining in Python."@en ;
       skos:seeAlso <https://joblib.readthedocs.io/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Joblib"@en .
 
-datalens_th:optimum_habana
-      a       skos:Concept , datalens_o:Library ;
+dlt:OptimumHabana
+      a       skos:Concept , dlo:Library ;
       skos:definition "Optimum for Intel Gaudi (optimum-habana) is the interface between the Transformers and Diffusers libraries and Intel Gaudi AI Accelerators (HPU). It provides a set of tools enabling easy model loading, training and inference on single and multi-HPU settings for different downstream tasks."@en ;
       skos:seeAlso <https://huggingface.co/docs/optimum-habana/index> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Habana"@en .
 
-datalens_th:univa
-      a       skos:Concept , datalens_o:Library ;
+dlt:Univa
+      a       skos:Concept , dlo:Library ;
       skos:definition "UniVA (Universal Video Agent) is an open-source, next-generation video generalist system that enables planning, composing, and producing videos through natural language instructions."@en ;
       skos:seeAlso <https://github.com/univa-agent/univa> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "UniVA"@en .
 
-datalens_th:dduf
-      a       skos:Concept , datalens_o:Library ;
+dlt:DDUF
+      a       skos:Concept , dlo:Library ;
       skos:definition "DDUF (DDUF’s Diffusion Unified Format) is a single-file format for diffusion models that aims to unify the different model distribution methods and weight-saving formats by packaging all model components into a single file."@en ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/dduf> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "DDUF"@en .
 
-datalens_th:openvino
-      a       skos:Concept , datalens_o:Library ;
+dlt:OpenVINO
+      a       skos:Concept , dlo:Library ;
       skos:definition "OpenVINO is an open-source toolkit for optimizing and deploying AI inference."@en ;
       skos:seeAlso <https://docs.openvino.ai/2026/index.html> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "OpenVINO"@en .
 
-datalens_th:gguf
-      a       skos:Concept , datalens_o:Library ;
+dlt:GGUF
+      a       skos:Concept , dlo:Library ;
       skos:definition "GGUF is a binary format that is designed for fast loading and saving of models, and for ease of reading"@en ;
       skos:seeAlso <https://github.com/ggml-org/ggml/blob/master/docs/gguf.md> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "GGUF"@en .
 
-datalens_th:flair
-      a       skos:Concept , datalens_o:Library ;
+dlt:Flair
+      a       skos:Concept , dlo:Library ;
       skos:definition "Flair is a simple framework for state-of-the-art NLP."@en ;
       skos:seeAlso <https://flairnlp.github.io/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Flair"@en .
 
-datalens_th:coreml
-      a       skos:Concept , datalens_o:Library ;
+dlt:CoreML
+      a       skos:Concept , dlo:Library ;
       skos:definition "Core ML is a framework for integrating machine learning models into Apple applications."@en ;
       skos:seeAlso <https://developer.apple.com/documentation/coreml> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Core ML"@en .
 
-datalens_th:setfit
-      a       skos:Concept , datalens_o:Library ;
+dlt:SetFit
+      a       skos:Concept , dlo:Library ;
       skos:definition " SetFit is a prompt-free framework for few-shot fine-tuning of Sentence Transformers."@en ;
       skos:seeAlso <https://huggingface.co/docs/setfit/> ;
-      skos:relate datalens_th:sentence-transformers ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:relate dlt:SentenceTransformers ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "SetFit"@en .
 
-datalens_th:onnx
-      a       skos:Concept , datalens_o:Library ;
+dlt:ONNX
+      a       skos:Concept , dlo:Library ;
       skos:definition "ONNX (Open Neural Network Exchange) is an open format built to represent machine learning models."@en ;
       skos:seeAlso <https://onnx.ai/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "ONNX"@en .
 
-datalens_th:jax
-      a       skos:Concept , datalens_o:Library ;
+dlt:Jax
+      a       skos:Concept , dlo:Library ;
       skos:definition "JAX is a Python library for accelerator-oriented array computation and program transformation, designed for high-performance numerical computing and large-scale machine learning."@en ;
       skos:seeAlso <https://docs.jax.dev/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "JAX"@en .
 
-datalens_th:spacy
-      a       skos:Concept , datalens_o:Library ;
+dlt:Spacy
+      a       skos:Concept , dlo:Library ;
       skos:definition "spaCy is an open-source library for advanced natural language processing in Python."@en ;
       skos:seeAlso <https://spacy.io/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "spaCy"@en .
 
-datalens_th:diffusers
-      a       skos:Concept , datalens_o:Library ;
+dlt:Diffusers
+      a       skos:Concept , dlo:Library ;
       skos:definition "Diffusers is a library of state-of-the-art pretrained diffusion models for generating videos, images, and audio."@en ;
       skos:seeAlso <https://huggingface.co/docs/diffusers/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Diffusers"@en .
 
-datalens_th:llamafile
-      a       skos:Concept , datalens_o:Library ;
+dlt:LlamaFile
+      a       skos:Concept , dlo:Library ;
       skos:definition "llamafile is a Mozilla Builders project that enables users to distribute and run LLMs with a single file."@en ;
       skos:seeAlso <https://docs.mozilla.ai/llamafile> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
-      skos:prefLabel "llamafile"@en .
+      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:prefLabel "LlamaFile"@en .
 
-datalens_th:sample-factory
-      a       skos:Concept , datalens_o:Library ;
+dlt:SampleFactory
+      a       skos:Concept , dlo:Library ;
       skos:definition "sample-factory is a codebase for high throughput asynchronous reinforcement learning."@en ;
       skos:seeAlso <https://www.samplefactory.dev/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
-      skos:prefLabel "sample-factory"@en .
+      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:prefLabel "Sample Factory"@en .
 
-datalens_th:fairseq
-      a       skos:Concept , datalens_o:Library ;
+dlt:Fairseq
+      a       skos:Concept , dlo:Library ;
       skos:definition "Fairseq is a sequence modeling toolkit that allows researchers and developers to train custom models for translation, summarization, language modeling, and other text generation tasks."@en ;
       skos:seeAlso <https://fairseq.readthedocs.io/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Fairseq"@en .
 
-datalens_th:timm
-      a       skos:Concept , datalens_o:Library ;
+dlt:Timm
+      a       skos:Concept , dlo:Library ;
       skos:definition "timm is a deep-learning library created by Ross Wightman and is a collection of SOTA computer vision models, layers, utilities, optimizers, schedulers, data-loaders, augmentations and also training/validating scripts with ability to reproduce ImageNet training results."@en ;
       skos:seeAlso <https://timm.fast.ai/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "timm"@en .
 
-datalens_th:paddlepaddle
-      a       skos:Concept , datalens_o:Library ;
+dlt:PaddlePaddle
+      a       skos:Concept , dlo:Library ;
       skos:definition "PaddlePaddle, short for PArallel Distributed Deep LEarning, is an open-source deep learning platform developed by Baidu."@en ;
       skos:seeAlso <https://www.paddlepaddle.org.cn/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "PaddlePaddle"@en .
 
-datalens_th:ml-agents
-      a       skos:Concept , datalens_o:Library ;
+dlt:MLAgents
+      a       skos:Concept , dlo:Library ;
       skos:definition "The Unity Machine Learning Agents Toolkit (ML-Agents Toolkit) is an open-source project that enables games and simulations to serve as environments for training intelligent agents."@en ;
       skos:seeAlso <https://docs.unity3d.com/Packages/com.unity.ml-agents@4.0/manual/index.html> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "ML Agents"@en .
 
-datalens_th:fastai
-      a       skos:Concept , datalens_o:Library ;
+dlt:FastAI
+      a       skos:Concept , dlo:Library ;
       skos:definition "fastai is an open-source Deep Learning library that leverages PyTorch and Python to provide high-level components to train fast and accurate neural networks with state-of-the-art outputs on text, vision, and tabular data."@en ;
       skos:seeAlso <https://docs.fast.ai/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "fastai"@en .
 
-datalens_th:executorch
-      a       skos:Concept , datalens_o:Library ;
+dlt:ExecuTorch
+      a       skos:Concept , dlo:Library ;
       skos:definition "ExecuTorch is PyTorch’s solution for training and inference on the Edge, providing portability, productivity, and performance for edge computing platforms."@en ;
       skos:seeAlso <https://docs.pytorch.org/executorch/stable/index.html> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "ExecuTorch"@en .
 
-datalens_th:tf
-      a       skos:Concept , datalens_o:Library ;
+dlt:TF
+      a       skos:Concept , dlo:Library ;
       skos:definition "TensorFlow is an end-to-end open source platform for machine learning, developed by Google."@en ;
       skos:seeAlso <https://www.tensorflow.org/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "TensorFlow"@en .
 
-datalens_th:mlx
-      a       skos:Concept , datalens_o:Library ;
+dlt:MLX
+      a       skos:Concept , dlo:Library ;
       skos:definition "MLX is a NumPy-like array framework designed for efficient and flexible machine learning on Apple silicon, by Apple machine learning research."@en ;
       skos:seeAlso <https://ml-explore.github.io/mlx> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "MLX"@en .
 
-datalens_th:unity-sentis
-      a       skos:Concept , datalens_o:Library ;
+dlt:UnitySentis
+      a       skos:Concept , dlo:Library ;
       skos:definition "Sentis is a neural network inference library for Unity."@en ;
       skos:seeAlso <https://docs.unity3d.com/Packages/com.unity.sentis@2.1/manual/index.html> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "unity-sentis"@en .
 
-datalens_th:safetensors
-      a       skos:Concept , datalens_o:Library ;
+dlt:Safetensors
+      a       skos:Concept , dlo:Library ;
       skos:definition "Safetensors is a new simple format for storing tensors safely (as opposed to pickle) and that is still fast (zero-copy)."@en ;
       skos:seeAlso <https://huggingface.co/docs/safetensors/index> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "Safetensors"@en .
 
-datalens_th:bertopic
-      a       skos:Concept , datalens_o:Library ;
+dlt:BERTopic
+      a       skos:Concept , dlo:Library ;
       skos:definition "BERTopic is a topic modeling framework that leverages Hugging Face transformers and c-TF-IDF to create dense clusters allowing for easily interpretable topics whilst keeping important words in the topic descriptions."@en ;
       skos:seeAlso <https://maartengr.github.io/BERTopic/> ;
-      skos:inScheme datalens_th:ModelLibraryScheme ;
+      skos:inScheme dlt:ModelLibraryScheme ;
       skos:prefLabel "BERTopic"@en .
 
 
@@ -728,1145 +761,1139 @@ datalens_th:bertopic
 
 
 ## Task Scheme
-datalens_th:TaskScheme
+dlt:TaskScheme
       a       skos:ConceptScheme ;
       skos:definition "A controlled vocabulary for describing machine learning tasks."@en ;
       skos:prefLabel "Machine Learning Task Scheme"@en .
 
 # ----------------------------------- Collections
 
-datalens_th:rl
+dlt:RL
       a       skos:Collection ;
-      skos:hasTopConcept datalens_th:robotics , datalens_th:reinforcement-learning ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:hasTopConcept dlt:Robotics , dlt:ReinforcementLearning ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Reinforcement Learning"@en .
 
-datalens_th:nlp
+dlt:NLP
       a       skos:Collection ;
-      skos:hasTopConcept datalens_th:fill-mask , datalens_th:summarization , datalens_th:question-answering , datalens_th:token-classification , datalens_th:sentence-similarity , datalens_th:translation , datalens_th:zero-shot-classification , datalens_th:text-classification , datalens_th:text-retrieval , datalens_th:text-generation , datalens_th:feature-extraction , datalens_th:multiple-choice , datalens_th:table-to-text , datalens_th:table-question-answering , datalens_th:text-ranking ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:hasTopConcept dlt:FillMask , dlt:Summarization , dlt:QuestionAnswering , dlt:TokenClassification , dlt:SentenceSimilarity , dlt:Translation , dlt:ZeroShotClassification , dlt:TextClassification , dlt:TextRetrieval , dlt:TextGeneration , dlt:FeatureExtraction , dlt:MultipleChoice , dlt:TableToText , dlt:TableQuestionAnswering , dlt:TextRanking ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Natural Language Processing"@en .
 
-datalens_th:tabular
+dlt:Tabular
       a       skos:Collection ;
-      skos:hasTopConcept datalens_th:tabular-to-text , datalens_th:tabular-regression , datalens_th:tabular-classification , datalens_th:time-series-forecasting ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:hasTopConcept dlt:TabularToText , dlt:TabularRegression , dlt:TabularClassification , dlt:TimeSeriesForecasting ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Tabular"@en .
 
-datalens_th:other
+dlt:CV
       a       skos:Collection ;
-      skos:hasTopConcept datalens_th:graph-ml ;
-      skos:inScheme datalens_th:TaskScheme ;
-      skos:prefLabel "Other"@en .
-
-datalens_th:cv
-      a       skos:Collection ;
-      skos:hasTopConcept datalens_th:image-to-image , datalens_th:object-detection , datalens_th:zero-shot-image-classification , datalens_th:image-feature-extraction , datalens_th:image-segmentation , datalens_th:text-to-3d , datalens_th:unconditional-image-generation , datalens_th:image-to-text , datalens_th:keypoint-detection , datalens_th:image-to-3d , datalens_th:text-to-video , datalens_th:zero-shot-object-detection , datalens_th:image-classification , datalens_th:mask-generation , datalens_th:depth-estimation , datalens_th:text-to-image , datalens_th:video-to-video , datalens_th:image-to-video , datalens_th:video-classification ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:hasTopConcept dlt:ImageToImage , dlt:ObjectDetection , dlt:ZeroShotImageClassification , dlt:ImageFeatureExtraction , dlt:ImageSegmentation , dlt:TextTo3D , dlt:UnconditionalImageGeneration , dlt:ImageToText , dlt:KeypointDetection , dlt:ImageTo3D , dlt:TextToVideo , dlt:ZeroShotObjectDetection , dlt:ImageClassification , dlt:MaskGeneration , dlt:DepthEstimation , dlt:TextToImage , dlt:VideoToVideo , dlt:ImageToVideo , dlt:VideoClassification ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Computer Vision"@en .
 
-datalens_th:multimodal
+dlt:Multimodal
       a       skos:Collection ;
-      skos:hasTopConcept datalens_th:visual-question-answering , datalens_th:visual-document-retrieval , datalens_th:document-question-answering , datalens_th:audio-text-to-text , datalens_th:image-text-to-image , datalens_th:any-to-any , datalens_th:video-text-to-text , datalens_th:image-text-to-video , datalens_th:image-text-to-text ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:hasTopConcept dlt:VisualQuestionAnswering , dlt:VisualDocumentRetrieval , dlt:DocumentQuestionAnswering , dlt:AudioTextToText , dlt:ImageTextToImage , dlt:AnyToAny , dlt:VideoTextToText , dlt:ImageTextToVideo , dlt:ImageTextToText ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Multimodal"@en .
 
-datalens_th:audio
+dlt:Audio
       a       skos:Collection ;
-      skos:hasTopConcept datalens_th:automatic-speech-recognition , datalens_th:audio-classification , datalens_th:text-to-audio , datalens_th:text-to-speech , datalens_th:audio-to-audio , datalens_th:voice-activity-detection ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:hasTopConcept dlt:AutomaticSpeechRecognition , dlt:AudioClassification , dlt:TextToAudio , dlt:TextToSpeech , dlt:AudioToAudio , dlt:VoiceActivityDetection ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Audio"@en .
 
 # ----------------------------------- Task Categories
 
-datalens_th:document-question-answering
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:DocumentQuestionAnswering
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Document Question Answering (also known as Document Visual Question Answering) is the task of answering questions on document images. Document question answering models take a (document, question) pair as input and return an answer in natural language. Models usually rely on multi-modal features, combining text, position of words (bounding-boxes) and image."@en ;
       skos:example "Dataset example: Largest document understanding dataset."@en , "Library example: transformers."@en , "Model example: A robust document question answering model."@en , "Demo example: A robust document question answering application."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Document Question Answering"@en .
 
-datalens_th:audio-classification
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:AudioClassification
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Audio classification is the task of assigning a label or class to a given audio. It can be used for recognizing which command a user is giving or the emotion of a statement, as well as identifying a speaker."@en ;
       skos:example "Library example: speechbrain."@en , "Demo example: An application that can classify music into different genre."@en , "Dataset example: A benchmark of 10 different audio tasks."@en , "Model example: An easy-to-use model for command recognition."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Audio Classification"@en .
 
-datalens_th:image-to-image
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:ImageToImage
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image-to-image is the task of transforming an input image through a variety of possible manipulations and enhancements, such as super-resolution, image inpainting, colorization, and more."@en ;
       skos:example "Library example: diffusers."@en , "Dataset example: Synthetic dataset, for image relighting"@en , "Demo example: Image editing application."@en , "Model example: An image-to-image model to improve image resolution."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Image-to-Image"@en .
 
-datalens_th:tabular-regression
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:TabularRegression
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Tabular regression is the task of predicting a numerical value given a set of attributes."@en ;
       skos:example "Model example: Fish weight prediction based on length measurements and species."@en , "Dataset example: A comprehensive curation of datasets covering all benchmarks."@en , "Demo example: An application that can predict weight of a fish based on set of attributes."@en , "Library example: sklearn."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Tabular Regression"@en .
 
-datalens_th:image-segmentation
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:ImageSegmentation
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image Segmentation divides an image into segments where each pixel in the image is mapped to an object. This task has multiple variants such as instance segmentation, panoptic segmentation and semantic segmentation."@en ;
       skos:example "Dataset example: Scene segmentation dataset."@en , "Demo example: A semantic segmentation application that can predict unseen instances out of the box."@en , "Model example: Solid panoptic segmentation model trained on COCO."@en , "Library example: transformers."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Image Segmentation"@en .
 
-datalens_th:unconditional-image-generation
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:UnconditionalImageGeneration
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Unconditional image generation is the task of generating images with no condition in any context (like a prompt text or another image). Once trained, the model will create images that resemble its training data distribution."@en ;
       skos:example "Library example: diffusers."@en , "Demo example: An application that can generate realistic faces."@en , "Dataset example: The CIFAR-100 dataset consists of 60000 32x32 colour images in 100 classes, with 600 images per class."@en , "Model example: High-quality image generation model trained on the CIFAR-10 dataset. It synthesizes images of the ten classes presented in the dataset using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Unconditional Image Generation"@en .
 
-datalens_th:image-to-text
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:ImageToText
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image to text models output a text from a given image. Image captioning or optical character recognition can be considered as the most common applications of image to text."@en ;
       skos:example "Library example: transformers."@en , "Model example: Strong OCR model."@en , "Dataset example: Dataset from 12M image-text of Reddit"@en , "Demo example: SVG generator app from images."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Image-to-Text"@en .
 
-datalens_th:any-to-any
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:AnyToAny
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Any-to-any models can understand two or more modalities and output two or more modalities."@en ;
       skos:example "Demo example: An application to chat with an any-to-any (image & text) model."@en , "Dataset example: A dataset with multiple modality input and output pairs."@en , "Model example: Strong model that can take in video, audio, image, text and output text and natural speech."@en , "Library example: transformers."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Any-to-Any"@en .
 
-datalens_th:zero-shot-classification
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:ZeroShotClassification
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Zero-shot text classification is a task in natural language processing where a model is trained on a set of labeled records but is then able to classify new records from previously unseen classes."@en ;
       skos:example "Dataset example: A widely used dataset used to benchmark multiple variants of text classification."@en , "Model example: Powerful zero-shot text classification model."@en , "Library example: transformers."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Zero Shot classification"@en .
 
-datalens_th:time-series-forecasting
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:TimeSeriesForecasting
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/models-tags-by-type?type=pipeline_tag> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Time_series> ;
       skos:definition "Time series forecasting is the task of predicting future values based on previously observed values."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Time Series Forecasting"@en .
 
-datalens_th:zero-shot-object-detection
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:ZeroShotObjectDetection
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Zero-shot object detection is a computer vision task to detect objects and their classes in images, without any prior training or knowledge of the classes. Zero-shot object detection models receive an image as input, as well as a list of candidate classes, and output the bounding boxes and labels where the objects have been detected."@en ;
       skos:example "Model example: Solid zero-shot object detection model."@en , "Demo example: A demo to compare different zero-shot object detection models per output and latency."@en , "Library example: transformers."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Zero Shot object detection"@en .
 
-datalens_th:robotics
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:Robotics
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/models-tags-by-type?type=pipeline_tag> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q170978> ;
       skos:definition "Robotics is the task of improving the perception, decision-making, and interaction capabilities of robots."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Robotics"@en .
 
-datalens_th:reinforcement-learning
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:ReinforcementLearning
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Reinforcement learning is the computational approach of learning from action by interacting with an environment through trial and error and receiving rewards (negative or positive) as feedback"@en ;
       skos:example "Dataset example: A curation of widely used datasets for Data Driven Deep Reinforcement Learning (D4RL)"@en , "Demo example: An application for a cute puppy agent learning to catch a stick."@en , "Model example: A Reinforcement Learning model trained on expert data from the Gym Hopper environment"@en , "Library example: transformers."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Reinforcement Learning"@en .
 
-datalens_th:mask-generation
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:MaskGeneration
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Mask generation is the task of generating masks that identify a specific object or region of interest in a given image. Masks are often used in segmentation tasks, where they provide a precise way to isolate the object of interest for further processing or analysis."@en ;
       skos:example "Model example: Small yet powerful mask generation model."@en , "Demo example: An application that combines a mask generation model with a zero-shot object detection model for text-guided image segmentation."@en , "Dataset example: Widely used benchmark dataset for multiple Vision tasks."@en , "Library example: transformers."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Mask Generation"@en .
 
-datalens_th:feature-extraction
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:FeatureExtraction
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Feature extraction is the task of extracting features learnt in a model."@en ;
       skos:example "Demo example: A leaderboard to rank text feature extraction models based on a benchmark."@en , "Model example: A powerful feature extraction model for natural language processing tasks."@en , "Dataset example: Wikipedia dataset containing cleaned articles of all languages. Can be used to train `feature-extraction` models."@en , "Library example: sentence-transformers."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Feature Extraction"@en .
 
-datalens_th:text-to-audio
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:TextToAudio
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/models-tags-by-type?type=pipeline_tag> ;
       owl:seeAlso <https://huggingface.co/tasks/text-to-speech> ;
       skos:definition "Text-to-audio, also known as text-to-speech (TTS), is the task of generating natural sounding speech given text input."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Text-to-Audio"@en .
 
-datalens_th:audio-to-audio
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:AudioToAudio
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Audio-to-Audio is a family of tasks in which the input is an audio and the output is one or multiple generated audios. Some example tasks are speech enhancement and source separation."@en ;
       skos:example "Demo example: An application for speech separation."@en , "Library example: asteroid."@en , "Model example: A speech enhancement model."@en , "Dataset example: 512-element X-vector embeddings of speakers from CMU ARCTIC dataset."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Audio-to-Audio"@en .
 
-datalens_th:image-to-video
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:ImageToVideo
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image-to-video models take a still image as input and generate a video. These models can be guided by text prompts to influence the content and style of the output video."@en ;
       skos:example "Library example: diffusers."@en , "Dataset example: A benchmark dataset for reference image controlled video generation."@en , "Demo example: An application to generate videos fast."@en , "Model example: LTX-Video, a 13B parameter model for high quality video generation"@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Image-to-Video"@en .
 
-datalens_th:video-classification
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:VideoClassification
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Video classification is the task of assigning a label or class to an entire video. Videos are expected to have only one class for each video. Video classification models take a video as input and return a prediction about which class the video belongs to."@en ;
       skos:example "Demo example: An application that classifies video at different timestamps."@en , "Dataset example: Benchmark dataset used for video classification with videos that belong to 400 classes."@en , "Library example: transformers."@en , "Model example: Strong Video Classification model trained on the Kinetics 400 dataset."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Video Classification"@en .
 
-datalens_th:tabular-to-text
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:TabularToText
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_categories> ;
       skos:definition "Tabular-to-text is the task of converting structured tabular data into fluent and coherent natural language text."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Tabular-to-Text"@en .
 
-datalens_th:fill-mask
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:FillMask
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Masked language modeling is the task of masking some of the words in a sentence and predicting which words should replace those masks. These models are useful when we want to get a statistical understanding of the language in which the model is trained in."@en ;
       skos:example "Dataset example: A common dataset that is used to train models for many languages."@en , "Model example: State-of-the-art masked language model."@en , "Library example: transformers."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Fill Mask"@en .
 
-datalens_th:object-detection
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:ObjectDetection
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Object Detection models allow users to identify objects of certain defined classes. Object detection models receive an image as input and output the images with bounding boxes and labels on detected objects."@en ;
       skos:example "Dataset example: Widely used benchmark dataset for multiple vision tasks."@en , "Model example: Solid object detection model pre-trained on the COCO 2017 dataset."@en , "Demo example: Real-time object detection demo."@en , "Library example: transformers."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Object Detection"@en .
 
-datalens_th:zero-shot-image-classification
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:ZeroShotImageClassification
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Zero-shot image classification is the task of classifying previously unseen classes during training of a model."@en ;
       skos:example "Model example: Multilingual image classification model for 80 languages."@en , "Library example: transformers."@en , "Demo example: An application that leverages zero-shot image classification to find best captions to generate an image."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Zero Shot image classification"@en .
 
-datalens_th:token-classification
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:TokenClassification
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Token classification is a natural language understanding task in which a label is assigned to some tokens in a text. Some popular token classification subtasks are Named Entity Recognition (NER) and Part-of-Speech (PoS) tagging. NER models could be trained to identify specific entities in a text, such as dates, individuals and places; and PoS tagging would identify, for example, which words in a text are verbs, nouns, and punctuation marks."@en ;
       skos:example "Dataset example: A widely used dataset useful to benchmark named entity recognition models."@en , "Demo example: An application that can recognizes entities, extracts noun chunks and recognizes various linguistic features of each token."@en , "Library example: adapter-transformers."@en , "Model example: A robust performance model to identify people, locations, organizations and names of miscellaneous entities."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Token Classification"@en .
 
-datalens_th:image-feature-extraction
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:ImageFeatureExtraction
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image feature extraction is the task of extracting features learnt in a computer vision model."@en ;
       skos:example "Model example: A powerful image feature extraction model."@en , "Dataset example: ImageNet-1K is a image classification dataset in which images are used to train image-feature-extraction models."@en , "Library example: timm."@en , "Demo example: A leaderboard to evaluate different image-feature-extraction models on classification performances"@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Image Feature Extraction"@en .
 
-datalens_th:text-to-video
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:TextToVideo
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Text-to-video models can be used in any application that requires generating consistent sequence of images from text."@en ;
       skos:example "Library example: diffusers."@en , "Demo example: An application that generates video from text."@en , "Dataset example: Microsoft Research Video to Text is a large-scale dataset for open domain video captioning"@en , "Model example: A strong model for consistent video generation."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Text-to-Video"@en .
 
-datalens_th:image-classification
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:ImageClassification
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image classification is the task of assigning a label or class to an entire image. Images are expected to have only one class for each image. Image classification models take an image as input and return a prediction about which class the image belongs to."@en ;
       skos:example "Demo example: A leaderboard to evaluate different image classification models."@en , "Model example: A strong image classification model."@en , "Library example: keras."@en , "Dataset example: Benchmark dataset used for image classification with images that belong to 100 classes."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Image Classification"@en .
 
-datalens_th:text-generation
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:TextGeneration
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Generating text is the task of generating new text given another text. These models can, for example, fill in incomplete text or paraphrase."@en ;
       skos:example "Model example: A text-generation model trained to follow instructions."@en , "Demo example: An application that writes and executes code from text instructions and supports many models."@en , "Dataset example: Multilingual dataset used to evaluate text generation models."@en , "Library example: transformers."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Text Generation"@en .
 
-datalens_th:tabular-classification
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:TabularClassification
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Tabular classification is the task of classifying a target category (a group) based on set of attributes."@en ;
       skos:example "Demo example: An application that can predict defective products on a production line."@en , "Dataset example: A comprehensive curation of datasets covering all benchmarks."@en , "Model example: Breast cancer prediction model based on decision trees."@en , "Library example: sklearn."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Tabular Classification"@en .
 
-datalens_th:multiple-choice
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:MultipleChoice
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_categories> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q28060611> , <https://www.wikidata.org/wiki/Q867668> , <https://huggingface.co/docs/transformers/tasks/multiple_choice> ;
       skos:definition "A multiple choice task is similar to question answering, except several candidate answers are provided along with a context and the model is trained to select the correct answer."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Multiple Choice"@en .
 
-datalens_th:image-text-to-text
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:ImageTextToText
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image-text-to-text models take in an image and text prompt and output text. These models are also called vision-language models, or VLMs. The difference from image-to-text models is that these models take an additional text input, not restricting the model to certain use cases like image captioning, and may also be trained to accept a conversation as input."@en ;
       skos:example "Model example: Small and efficient yet powerful vision language model."@en , "Demo example: Leaderboard to evaluate vision language models."@en , "Library example: transformers."@en , "Dataset example: Instructions composed of image and text."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Image Text-to-Text"@en .
 
-datalens_th:visual-question-answering
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:VisualQuestionAnswering
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Visual Question Answering is the task of answering open-ended questions based on an image. They output natural language responses to natural language questions."@en ;
       skos:example "Model example: A visual question answering model trained to convert charts and plots to text."@en , "Library example: transformers."@en , "Demo example: An application that compares visual question answering models across different tasks."@en , "Dataset example: A widely used dataset containing questions (with answers) about images."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Visual Question Answering"@en .
 
-datalens_th:summarization
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:Summarization
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Summarization is the task of producing a shorter version of a document while preserving its important information. Some models can extract text from the original input, while other models can generate entirely new text."@en ;
       skos:example "Model example: A strong summarization model trained on English news articles. Excels at generating factual summaries."@en , "Dataset example: News articles in five different languages along with their summaries. Widely used for benchmarking multilingual summarization models."@en , "Demo example: An application that can summarize long paragraphs."@en , "Library example: transformers."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Summarization"@en .
 
-datalens_th:image-text-to-image
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:ImageTextToImage
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image-text-to-image models take an image and a text prompt as input and generate a new image based on the reference image and text instructions. These models are useful for image editing, style transfer, image variations, and guided image generation tasks."@en ;
       skos:example "Demo example: An application for image-text-to-image generation."@en , "Library example: diffusers."@en , "Model example: A powerful model for image-text-to-image generation."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Image Text-to-Image"@en .
 
-datalens_th:sentence-similarity
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:SentenceSimilarity
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Sentence Similarity is the task of determining how similar two texts are. Sentence similarity models convert input texts into vectors (embeddings) that capture semantic information and calculate how close (similar) they are between them. This task is particularly useful for information retrieval and clustering/grouping."@en ;
       skos:example "Model example: This model works well for sentences and paragraphs and can be used for clustering/grouping and semantic searches."@en , "Dataset example: Bing queries with relevant passages from various web sources."@en , "Demo example: An application that leverages sentence similarity to answer questions from YouTube videos."@en , "Library example: sentence-transformers."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Sentence Similarity"@en .
 
-datalens_th:text-to-3d
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:TextTo3D
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Text-to-3D models take in text input and produce 3D output."@en ;
       skos:example "Library example: diffusers."@en , "Demo example: Text-to-3D demo with mesh outputs."@en , "Model example: Text-to-3D mesh model by OpenAI"@en , "Dataset example: A large dataset of over 10 million 3D objects."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Text-to-3D"@en .
 
-datalens_th:video-text-to-text
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:VideoTextToText
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Video-text-to-text models take in a video and a text prompt and output text. These models are also called video-language models."@en ;
       skos:example "Demo example: An application to chat with a video-text-to-text model."@en , "Model example: A robust video-text-to-text model."@en , "Library example: transformers."@en , "Dataset example: Multiple-choice questions and answers about videos."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Video Text-to-Text"@en .
 
-datalens_th:image-to-3d
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:ImageTo3D
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image-to-3D models take in image input and produce 3D output."@en ;
       skos:example "Model example: Fast image-to-3D mesh model by Tencent."@en , "Library example: diffusers."@en , "Demo example: Leaderboard to evaluate image-to-3D models."@en , "Dataset example: A large dataset of over 10 million 3D objects."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Image-to-3D"@en .
 
-datalens_th:visual-document-retrieval
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:VisualDocumentRetrieval
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Visual document retrieval is the task of searching for relevant image-based documents, such as PDFs. These models take a text query and multiple documents as input and return the top-most relevant documents and relevancy scores as output."@en ;
       skos:example "Model example: Very accurate visual document retrieval model for multilingual queries and documents."@en , "Dataset example: A large dataset used to train visual document retrieval models."@en , "Library example: transformers."@en , "Demo example: A leaderboard of visual document retrieval models."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Visual Document Retrieval"@en .
 
-datalens_th:automatic-speech-recognition
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:AutomaticSpeechRecognition
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Automatic Speech Recognition (ASR), also known as Speech to Text (STT), is the task of transcribing a given audio to text. It has many applications, such as voice user interfaces."@en ;
       skos:example "Demo example: A powerful general-purpose speech recognition application."@en , "Model example: A powerful ASR model by OpenAI."@en , "Dataset example: 31,175 hours of multilingual audio-text dataset in 108 languages."@en , "Library example: espnet."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Automatic Speech Recognition"@en .
 
-datalens_th:audio-text-to-text
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:AudioTextToText
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Audio-text-to-text models take both an audio clip and a text prompt as input, and generate natural language text as output. These models can answer questions about spoken content, summarize meetings, analyze music, or interpret speech beyond simple transcription. They are useful for applications that combine speech understanding with reasoning or conversation."@en ;
       skos:example "Dataset example: A dataset containing audio conversations with question–answer pairs."@en , "Library example: transformers."@en , "Demo example: A space that takes input as both audio and text and generates answers."@en , "Model example: A lightweight model that has capabilities of taking both audio and text as inputs and generating responses."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Audio Text-to-Text"@en .
 
-datalens_th:text-retrieval
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:TextRetrieval
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_categories> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q816826> ;
       skos:definition "Text retrieval is the task of obtaining information resources relevant to an information need from text."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Text Retrieval"@en .
 
-datalens_th:depth-estimation
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:DepthEstimation
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Depth estimation is the task of predicting depth of the objects present in an image."@en ;
       skos:example "Model example: Cutting-edge depth estimation model."@en , "Dataset example: NYU Depth V2 Dataset: Video dataset containing both RGB and depth sensor data."@en , "Library example: transformers."@en , "Demo example: An application that predicts the depth of an image and then reconstruct the 3D model as voxels."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Depth Estimation"@en .
 
-datalens_th:table-to-text
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:TableToText
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_categories> ;
       skos:definition "Table-to-text is the task of converting structured tabular data into fluent and coherent natural language text."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Table-to-Text"@en .
 
-datalens_th:image-text-to-video
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:ImageTextToVideo
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image-text-to-video models take an reference image and a text instructions as and generate a video based on them. These models are useful for animating still images, creating dynamic content from static references, and generating videos with specific motion or transformation guidance."@en ;
       skos:example "Library example: diffusers."@en , "Model example: A powerful model for image-text-to-video generation."@en , "Demo example: An application for image-text-to-video generation."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Image Text-to-Video"@en .
 
-datalens_th:table-question-answering
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:TableQuestionAnswering
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Table Question Answering (Table QA) is the answering a question about an information on a given table."@en ;
       skos:example "Demo example: An application that answers questions based on table CSV files."@en , "Dataset example: The WikiTableQuestions dataset is a large-scale dataset for the task of question answering on semi-structured tables."@en , "Library example: transformers."@en , "Model example: A table question answering model that is capable of neural SQL execution, i.e., employ TAPEX to execute a SQL query on a given table."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Table Question Answering"@en .
 
-datalens_th:question-answering
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:QuestionAnswering
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Question Answering models can retrieve the answer to a question from a given text, which is useful for searching for an answer in a document. Some question answering models can generate answers without context!"@en ;
       skos:example "Library example: adapter-transformers."@en , "Demo example: An application that can answer a long question from Wikipedia."@en , "Dataset example: A famous question answering dataset based on English articles from Wikipedia."@en , "Model example: A robust baseline model for most question answering domains."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Question Answering"@en .
 
-datalens_th:graph-ml
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:GraphML
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/models-tags-by-type?type=pipeline_tag> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q120799625> ;
       skos:definition "Graph machine learning is a machine learning approach for graph data."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Graph Machine Learning"@en .
 
-datalens_th:translation
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:Translation
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Translation is the task of converting text from one language to another."@en ;
       skos:example "Model example: Very powerful model that can translate many languages between each other, especially low-resource languages."@en , "Library example: transformers."@en , "Dataset example: A dataset of copyright-free books translated into 16 different languages."@en , "Demo example: An application that can translate between 100 languages."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Translation"@en .
 
-datalens_th:keypoint-detection
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:KeypointDetection
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Keypoint detection is the task of identifying meaningful distinctive points or features in an image."@en ;
       skos:example "Dataset example: A dataset of hand keypoints of over 500k records."@en , "Model example: A robust keypoint detection model."@en , "Library example: transformers."@en , "Demo example: An application that detects hand keypoints in real-time."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Keypoint Detection"@en .
 
-datalens_th:voice-activity-detection
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:VoiceActivityDetection
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/models-tags-by-type?type=pipeline_tag> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q1332614> ;
       skos:definition "Voice activity detection is the task of detecting the presence or absence of human speech."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Voice Activity Detection"@en .
 
-datalens_th:text-classification
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:TextClassification
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Text Classification is the task of assigning a label or class to a given text. Some use cases are sentiment analysis, natural language inference, and assessing grammatical correctness."@en ;
       skos:example "Model example: A robust model trained for sentiment analysis."@en , "Dataset example: A widely used dataset used to benchmark multiple variants of text classification."@en , "Library example: adapter-transformers."@en , "Demo example: An application that can classify financial sentiment."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Text Classification"@en .
 
-datalens_th:text-to-speech
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:TextToSpeech
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Text-to-Speech (TTS) is the task of generating natural sounding speech given text input. TTS models can be extended to have a single model that generates speech for multiple speakers and multiple languages."@en ;
       skos:example "Model example: Small yet powerful TTS model."@en , "Dataset example: 10K hours of multi-speaker English dataset."@en , "Demo example: An application for generate high quality speech in different languages."@en , "Library example: espnet."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Text-to-Speech"@en .
 
-datalens_th:text-to-image
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:TextToImage
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Text-to-image is the task of generating images from input text. These pipelines can also be used to modify and edit images based on text prompts."@en ;
       skos:example "Library example: diffusers."@en , "Dataset example: RedCaps is a large-scale dataset of 12M image-text pairs collected from Reddit."@en , "Model example: One of the most powerful image generation models that can generate realistic outputs."@en , "Demo example: A powerful text-to-image application."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Text-to-Image"@en .
 
-datalens_th:video-to-video
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:VideoToVideo
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Video-to-video models take one or more videos as input and generate new videos as output. They can enhance quality, interpolate frames, modify styles, or create new motion dynamics, enabling creative applications, video production, and research."@en ;
       skos:example "Dataset example: Dataset with detailed annotations for training and benchmarking video instance editing."@en , "Library example: diffusers."@en , "Model example: Model for editing outfits, character, and scenery in videos."@en , "Demo example: Interactive demo space for Lucy-Edit-Dev video editing."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Video-to-Video"@en .
 
-datalens_th:text-ranking
-      a       datalens_o:TaskCategory , skos:Concept ;
+dlt:TextRanking
+      a       dlo:TaskCategory , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Text Ranking is the task of ranking a set of texts based on their relevance to a query. Text ranking models are trained on large datasets of queries and relevant documents to learn how to rank documents based on their relevance to the query. This task is particularly useful for search engines and information retrieval systems."@en ;
       skos:example "Model example: An extremely efficient text ranking model trained on a web search dataset."@en , "Dataset example: Bing queries with relevant passages from various web sources."@en , "Library example: sentence-transformers."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Text Ranking"@en .
 
 # ----------------------------------- Task Ids
 
-datalens_th:named-entity-recognition
-      a       skos:Concept , datalens_o:Task ;
+dlt:NamedEntityRecognition
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q403574> ;
-      skos:broader datalens_th:token-classification ;
+      skos:broader dlt:TokenClassification ;
       skos:definition "Named entity recognition is the task of extracting named entity mentions in unstructured text into pre-defined categories."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Named Entity Recognition"@en .
 
-datalens_th:pose-estimation
-      a       skos:Concept , datalens_o:Task ;
+dlt:PoseEstimation
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:broader datalens_th:keypoint-detection ;
+      skos:broader dlt:KeypointDetection ;
       skos:definition "Pose estimation is the task of detecting and localizing keypoints on a human body, hand, or face in images and videos, outputting 2D or 3D coordinates."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Pose Estimation"@en .
 
-datalens_th:document-question-answering
-      a       skos:Concept , datalens_o:Task ;
+dlt:DocumentQuestionAnswering
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Document Question Answering"@en .
 
-datalens_th:open-domain-abstractive-qa
-      a       skos:Concept , datalens_o:Task ;
+dlt:OpenDomainAbstractiveQA
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/tasks/question-answering> , <https://huggingface.co/docs/transformers/tasks/question_answering> ;
-      skos:broader datalens_th:question-answering ;
+      skos:broader dlt:QuestionAnswering ;
       skos:definition "Open domain abstractive question answering is the task of generating an answer from context that correctly answers the question without being restricted to a specific domain."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Open Domain Abstractive QA"@en .
 
-datalens_th:entity-linking-retrieval
-      a       skos:Concept , datalens_o:Task ;
+dlt:EntityLinkingRetrieval
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Entity_linking> , <https://www.wikidata.org/wiki/Q816826> ;
-      skos:broader datalens_th:text-retrieval ;
+      skos:broader dlt:TextRetrieval ;
       skos:definition "Entity linking retrieval is the task of retrieving and linking mentions of entities in unstructured text to corresponding entries in a structured knowledge base."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Entity Linking Retrieval"@en .
 
-datalens_th:multi-class-image-classification
-      a       skos:Concept , datalens_o:Task ;
+dlt:MultiClassImageClassification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Multiclass_classification> ;
-      skos:broader datalens_th:image-classification ;
+      skos:broader dlt:ImageClassification ;
       skos:definition "Multi-class image classification is the task of classifying images into one of three or more classes."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Multi Class Image Classification"@en .
 
-datalens_th:explanation-generation
-      a       skos:Concept , datalens_o:Task ;
+dlt:ExplanationGeneration
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:broader datalens_th:text-generation ;
+      skos:broader dlt:TextGeneration ;
       skos:definition "Explanation generation is the task of generating explanations for machine learning model predictions."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Explanation Generation"@en .
 
-datalens_th:multi-input-text-classification
-      a       skos:Concept , datalens_o:Task ;
+dlt:MultiInputTextClassification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:broader datalens_th:text-classification ;
+      skos:broader dlt:TextClassification ;
       skos:definition "Multi-input text classification is the task of predicting one or more labels for a given example based on multiple separate text inputs provided simultaneously."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Multi Input Text Classification"@en .
 
-datalens_th:keyword-spotting
-      a       skos:Concept , datalens_o:Task ;
+dlt:KeywordSpotting
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Keyword_spotting> , <https://www.wikidata.org/wiki/Q6398558> ;
-      skos:broader datalens_th:automatic-speech-recognition ;
+      skos:broader dlt:AutomaticSpeechRecognition ;
       skos:definition "Keyword spotting is the task of identifying keywords in utterances."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Keyword Spotting"@en .
 
-datalens_th:dialogue-generation
-      a       skos:Concept , datalens_o:Task ;
+dlt:DialogueGeneration
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q121409940> ;
-      skos:broader datalens_th:text-generation ;
+      skos:broader dlt:TextGeneration ;
       skos:definition "Dialogue generation is the task of automatically generating dialogues."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Dialogue Generation"@en .
 
-datalens_th:tabular-multi-label-classification
-      a       skos:Concept , datalens_o:Task ;
+dlt:TabularMultiLabelClassification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/tasks/tabular-classification> , <https://www.wikidata.org/wiki/Q3553958> ;
-      skos:broader datalens_th:question-answering , datalens_th:text-classification , datalens_th:text-generation , datalens_th:tabular-classification , datalens_th:multiple-choice , datalens_th:zero-shot-classification , datalens_th:table-question-answering ;
+      skos:broader dlt:QuestionAnswering , dlt:TextClassification , dlt:TextGeneration , dlt:TabularClassification , dlt:MultipleChoice , dlt:ZeroShotClassification , dlt:TableQuestionAnswering ;
       skos:definition "Tabular multi-label classification is the task of assigning one or multiple labels to tabular data."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Tabular Multi Label Classification"@en .
 
-datalens_th:part-of-speech
-      a       skos:Concept , datalens_o:Task ;
+dlt:PartOfSpeech
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q82042> ;
-      skos:broader datalens_th:token-classification ;
+      skos:broader dlt:TokenClassification ;
       skos:definition "Part of speech is the task of identifying the grammatical category of each word in a sentence."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Part Of Speech"@en .
 
-datalens_th:language-modeling
-      a       skos:Concept , datalens_o:Task ;
+dlt:LanguageModeling
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Language_model> ;
-      skos:broader datalens_th:text-generation ;
+      skos:broader dlt:TextGeneration ;
       skos:definition "Language modeling is the task of predicting the next word in a sequence from a fixed size window of previous words."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Language Modeling"@en .
 
-datalens_th:multi-label-classification
-      a       skos:Concept , datalens_o:Task ;
+dlt:MultiLabelClassification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q3553958> ;
-      skos:broader datalens_th:text-classification ;
+      skos:broader dlt:TextClassification ;
       skos:definition "Multi-label classification is a variant of the classification problem where multiple labels may be assigned to each instance."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Multi Label Classification"@en .
 
-datalens_th:super-resolution
-      a       skos:Concept , datalens_o:Task ;
+dlt:SuperResolution
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q957423> ;
-      skos:broader datalens_th:other , datalens_th:image-segmentation ;
+      skos:broader dlt:ImageSegmentation ;
       skos:definition "Super resolution is the task of improving resolution of an imaging system beyond conventional limits."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Super Resolution"@en .
 
-datalens_th:univariate-time-series-forecasting
-      a       skos:Concept , datalens_o:Task ;
+dlt:UnivariateTimeSeriesForecasting
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Time_series> ;
-      skos:broader datalens_th:time-series-forecasting ;
+      skos:broader dlt:TimeSeriesForecasting ;
       skos:definition "Univariate time series forecasting is the task of making predictions for a single variable using available historical data points for that variable."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Univariate Time Series Forecasting"@en .
 
-datalens_th:entity-linking-classification
-      a       skos:Concept , datalens_o:Task ;
+dlt:EntityLinkingClassification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.ibm.com/think/topics/classification-machine-learning> , <https://en.wikipedia.org/wiki/Entity_linking> ;
-      skos:broader datalens_th:text-classification ;
+      skos:broader dlt:TextClassification ;
       skos:definition "Entity linking classification is the task of predicting the correct unique identity for entities mentioned in text."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Entity Linking Classification"@en .
 
-datalens_th:text-simplification
-      a       skos:Concept , datalens_o:Task ;
+dlt:TextSimplification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Text_simplification> , <https://www.wikidata.org/wiki/Q3484781> ;
-      skos:broader datalens_th:summarization ;
+      skos:broader dlt:Summarization ;
       skos:definition "Text simplification is the task of modifying, organizing, or categorizing existing text to make it easier to understand while retaining its original meaning."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Text Simplification"@en .
 
-datalens_th:natural-language-inference
-      a       skos:Concept , datalens_o:Task ;
+dlt:NaturalLanguageInference
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q29515364> ;
-      skos:broader datalens_th:text-classification ;
+      skos:broader dlt:TextClassification ;
       skos:definition "Natural language inference is the task of classifying a pair of premise and hypothesis sentences into three classes: contradiction, neutral, and entailment."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Natural Language Inference"@en .
 
-datalens_th:image-inpainting
-      a       skos:Concept , datalens_o:Task ;
+dlt:ImageInpainting
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q117021514> ;
-      skos:broader datalens_th:image-to-image ;
+      skos:broader dlt:ImageToImage ;
       skos:definition "Image inpainting is the task of filling erased or missing regions of an image."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Image Inpainting"@en .
 
-datalens_th:conversational
-      a       skos:Concept , datalens_o:Task ;
+dlt:Conversational
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.ibm.com/think/topics/conversational-ai> , <https://www.wikidata.org/wiki/Q116961403> ;
-      skos:broader datalens_th:text-generation ;
+      skos:broader dlt:TextGeneration ;
       skos:definition "Conversational models refer to technologies, such as chatbots or virtual agents, that users can talk to."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Conversational"@en .
 
-datalens_th:text-scoring
-      a       skos:Concept , datalens_o:Task ;
+dlt:TextScoring
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:broader datalens_th:text-classification ;
+      skos:broader dlt:TextClassification ;
       skos:definition "Text scoring is the task of assigning a numerical or categorical score to a piece of text to evaluate its quality, relevance, or readability."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Text Scoring"@en .
 
-datalens_th:hate-speech-detection
-      a       skos:Concept , datalens_o:Task ;
+dlt:HateSpeechDetection
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:broader datalens_th:text-classification ;
+      skos:broader dlt:TextClassification ;
       skos:definition "Hate speech detection is the task of detecting language used to express hatred, intolerance, or violence toward a particular group or individual based on characteristics such as race, ethnicity, nationality, religion, gender, or sexual orientation."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Hate Speech Detection"@en .
 
-datalens_th:dialogue-modeling
-      a       skos:Concept , datalens_o:Task ;
+dlt:DialogueModeling
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:broader datalens_th:text-generation ;
+      skos:broader dlt:TextGeneration ;
       skos:definition "Dialogue modeling is the task of organizing information in a conversation, where each event updates the current state of the dialogue based on the contents of the event."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Dialogue Modeling"@en .
 
-datalens_th:speaker-identification
-      a       skos:Concept , datalens_o:Task ;
+dlt:SpeakerIdentification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:broader datalens_th:automatic-speech-recognition ;
+      skos:broader dlt:AutomaticSpeechRecognition ;
       skos:definition "Speaker identification is the task of determining the identity of an unknown speaker by comparing voice patterns with a database of known patterns, typically in a 1:N match."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Speaker Identification"@en .
 
-datalens_th:closed-book-qa
-      a       skos:Concept , datalens_o:Task ;
+dlt:ClosedBookQA
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/tasks/question-answering> ;
-      skos:broader datalens_th:question-answering , datalens_th:text-generation ;
+      skos:broader dlt:QuestionAnswering , dlt:TextGeneration ;
       skos:definition "Closed book question answering is the task of generating an answer that correctly answers the question with no context provided."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Closed Book QA"@en .
 
-datalens_th:news-articles-summarization
-      a       skos:Concept , datalens_o:Task ;
+dlt:NewsArticlesSummarization
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/docs/transformers/tasks/summarization> ;
-      skos:broader datalens_th:summarization , datalens_th:question-answering , datalens_th:text-classification , datalens_th:text-generation , datalens_th:token-classification ;
+      skos:broader dlt:Summarization , dlt:QuestionAnswering , dlt:TextClassification , dlt:TextGeneration , dlt:TokenClassification ;
       skos:definition "News article summarization is the task of creating a shorter version of a news article that captures all the important information."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "News Articles Summarization"@en .
 
-datalens_th:coreference-resolution
-      a       skos:Concept , datalens_o:Task ;
+dlt:CoreferenceResolution
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q63087> ;
-      skos:broader datalens_th:token-classification ;
+      skos:broader dlt:TokenClassification ;
       skos:definition "Coreference resolution is the task of identifying relationships between words or phrases in text that refer to the same entity."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Coreference Resolution"@en .
 
-datalens_th:news-articles-headline-generation
-      a       skos:Concept , datalens_o:Task ;
+dlt:NewsArticlesHeadlineGeneration
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:broader datalens_th:summarization ;
+      skos:broader dlt:Summarization ;
       skos:definition "News articles headline generation is the task of generating a headline from the content of a news article."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "News Articles Headline Generation"@en .
 
-datalens_th:document-retrieval
-      a       skos:Concept , datalens_o:Task ;
+dlt:DocumentRetrieval
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q1638872> ;
-      skos:broader datalens_th:text-retrieval ;
+      skos:broader dlt:TextRetrieval ;
       skos:definition "Document retrieval is the task of matching some stated user query against a set of free-text records."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Document Retrieval"@en .
 
-datalens_th:semantic-similarity-scoring
-      a       skos:Concept , datalens_o:Task ;
+dlt:SemanticSimilarityScoring
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q2268914> , <https://en.wikipedia.org/wiki/Semantic_similarity> ;
-      skos:broader datalens_th:sentence-similarity ;
+      skos:broader dlt:SentenceSimilarity ;
       skos:definition "Semantic similarity scoring is the task of determining likeness in meaning between two linguistic elements, such as words or phrases, by assigning numeric scores."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Semantic Similarity Scoring"@en .
 
-datalens_th:parsing
-      a       skos:Concept , datalens_o:Task ;
+dlt:Parsing
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q194152> ;
-      skos:broader datalens_th:token-classification ;
+      skos:broader dlt:TokenClassification ;
       skos:definition "Parsing is the task of analyzing and breaking down input data into component parts to extract meaningful information."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Parsing"@en .
 
-datalens_th:lemmatization
-      a       skos:Concept , datalens_o:Task ;
+dlt:Lemmatization
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.ibm.com/think/topics/stemming-lemmatization> , <https://www.wikidata.org/wiki/Q2554325> ;
-      skos:broader datalens_th:token-classification ;
+      skos:broader dlt:TokenClassification ;
       skos:definition "Lemmatization is the task of reducing inflected forms of words across text to a common root word or dictionary form, also called a lemma."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Lemmatization"@en .
 
-datalens_th:multiple-choice-qa
-      a       skos:Concept , datalens_o:Task ;
+dlt:MultipleChoiceQA
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/docs/transformers/tasks/multiple_choice> ;
-      skos:broader datalens_th:question-answering , datalens_th:multiple-choice ;
+      skos:broader dlt:QuestionAnswering , dlt:MultipleChoice ;
       skos:definition "Multiple choice question answering is the task of selecting the correct answer that correctly answers the question among several candidate answers provided along with a context."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Multiple Choice QA"@en .
 
-datalens_th:multi-label-image-classification
-      a       skos:Concept , datalens_o:Task ;
+dlt:MultiLabelImageClassification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:broader datalens_th:image-classification ;
+      skos:broader dlt:ImageClassification ;
       skos:definition "Multi-label image classification is the task of assigning multiple relevant categories to an image."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Multi Label Image Classification"@en .
 
-datalens_th:sentiment-classification
-      a       skos:Concept , datalens_o:Task ;
+dlt:SentimentClassification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/blog/sentiment-analysis-python> , <https://en.wikipedia.org/wiki/Sentiment_analysis> ;
-      skos:broader datalens_th:text-classification ;
+      skos:broader dlt:TextClassification ;
       skos:definition "Sentiment classification is the task of tagging data according to sentiment using predetermined discrete categories or labels."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Sentiment Classification"@en .
 
-datalens_th:utterance-retrieval
-      a       skos:Concept , datalens_o:Task ;
+dlt:UtteranceRetrieval
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q816826> ;
-      skos:broader datalens_th:text-retrieval ;
+      skos:broader dlt:TextRetrieval ;
       skos:definition "Utterance retrieval is the task of obtaining information resources relevant to an information need from an utterance."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Utterance Retrieval"@en .
 
-datalens_th:panoptic-segmentation
-      a       skos:Concept , datalens_o:Task ;
+dlt:PanopticSegmentation
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q54806643> ;
-      skos:broader datalens_th:object-detection , datalens_th:image-segmentation ;
+      skos:broader dlt:ObjectDetection , dlt:ImageSegmentation ;
       skos:definition "Panoptic segmentation is the task of segmenting an image into constituent parts, including both background regions and countable objects."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Panoptic Segmentation"@en .
 
-datalens_th:slot-filling
-      a       skos:Concept , datalens_o:Task ;
+dlt:SlotFilling
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:broader datalens_th:token-classification ;
+      skos:broader dlt:TokenClassification ;
       skos:definition "Slot filling is the task of identifying meaningful slots in text."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Slot Filling"@en .
 
-datalens_th:image-captioning
-      a       skos:Concept , datalens_o:Task ;
+dlt:ImageCaptioning
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/docs/transformers/tasks/image_captioning> , <https://www.wikidata.org/wiki/Q39161486> ;
-      skos:broader datalens_th:image-to-text ;
+      skos:broader dlt:ImageToText ;
       skos:definition "Image captioning is the task of predicting a caption for a given image."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Image Captioning"@en .
 
-datalens_th:audio-language-identification
-      a       skos:Concept , datalens_o:Task ;
+dlt:AudioLanguageIdentification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q1050419> ;
-      skos:broader datalens_th:audio-classification ;
+      skos:broader dlt:AudioClassification ;
       skos:definition "Audio language identification is the task of determining language from an audio sample."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Audio Language Identification"@en .
 
-datalens_th:visual-question-answering
-      a       skos:Concept , datalens_o:Task ;
+dlt:VisualQuestionAnswering
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Visual Question Answering"@en .
 
-datalens_th:topic-classification
-      a       skos:Concept , datalens_o:Task ;
+dlt:TopicClassification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.ibm.com/think/topics/topic-modeling> ;
-      skos:broader datalens_th:text-classification ;
+      skos:broader dlt:TextClassification ;
       skos:definition "Topic classification is the task of assigning predicted labels representing a piece of text's overall primary set of topics to this piece of text."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Topic Classification"@en .
 
-datalens_th:multivariate-time-series-forecasting
-      a       skos:Concept , datalens_o:Task ;
+dlt:MultivariateTimeSeriesForecasting
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:broader datalens_th:time-series-forecasting ;
+      skos:broader dlt:TimeSeriesForecasting ;
       skos:definition "Multivariate time series forecasting is the task of predicting future values of multiple related variables by learning from their past behavior over time."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Multivariate Time Series Forecasting"@en .
 
-datalens_th:semantic-similarity-classification
-      a       skos:Concept , datalens_o:Task ;
+dlt:SemanticSimilarityClassification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q2268914> , <https://en.wikipedia.org/wiki/Semantic_similarity> ;
-      skos:broader datalens_th:text-classification ;
+      skos:broader dlt:TextClassification ;
       skos:definition "Semantic similarity classification is the task of determining likeness in meaning between two linguistic elements, such as words or phrases, using predetermined discrete categories or labels."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Semantic Similarity Classification"@en .
 
-datalens_th:audio-intent-classification
-      a       skos:Concept , datalens_o:Task ;
+dlt:AudioIntentClassification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:broader datalens_th:audio-classification ;
+      skos:broader dlt:AudioClassification ;
       skos:definition "Audio intent classification is the task of deducing the specific purpose or objective behind a user's input in a conversational context from audio."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Audio Intent Classification"@en .
 
-datalens_th:rdf-to-text
-      a       skos:Concept , datalens_o:Task ;
+dlt:RDFToText
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q133318892> ;
-      skos:broader datalens_th:graph-ml ;
+      skos:broader dlt:GraphMl ;
       skos:definition "RDF-to-text is the task of generating natural language from a triple representation in a knowledge graph."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "RDF-to-Text"@en .
 
-datalens_th:fact-checking
-      a       skos:Concept , datalens_o:Task ;
+dlt:FactChecking
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q59555084> ;
-      skos:broader datalens_th:text-classification ;
+      skos:broader dlt:TextClassification ;
       skos:definition "Fact checking is the task of verifying information in non-fictional text in order to determine its veracity and factual correctness."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Fact Checking"@en .
 
-datalens_th:sentiment-scoring
-      a       skos:Concept , datalens_o:Task ;
+dlt:SentimentScoring
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/blog/sentiment-analysis-python> , <https://en.wikipedia.org/wiki/Sentiment_analysis> ;
-      skos:broader datalens_th:text-classification ;
+      skos:broader dlt:TextClassification ;
       skos:definition "Sentiment scoring is the task of tagging data according to sentiment by assigning numeric scores."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Sentiment Scoring"@en .
 
-datalens_th:semantic-segmentation
-      a       skos:Concept , datalens_o:Task ;
+dlt:SemanticSegmentation
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.ibm.com/think/topics/semantic-segmentation> , <https://www.wikidata.org/wiki/Q120970636> ;
-      skos:broader datalens_th:image-segmentation ;
+      skos:broader dlt:ImageSegmentation ;
       skos:definition "Semantic segmentation is the task of assigning a class label to pixels."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Semantic Segmentation"@en .
 
-datalens_th:extractive-qa
-      a       skos:Concept , datalens_o:Task ;
+dlt:ExtractiveQA
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/docs/autotrain/en/extractive_qa> ;
-      skos:broader datalens_th:question-answering ;
+      skos:broader dlt:QuestionAnswering ;
       skos:definition "Extractive question answering is the task of extracting the answer to a question from a given context."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Extractive QA"@en .
 
-datalens_th:grasping
-      a       skos:Concept , datalens_o:Task ;
+dlt:Grasping
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q5597405> ;
-      skos:broader datalens_th:robotics ;
+      skos:broader dlt:Robotics ;
       skos:definition "Grasping is the task of automatically detecting and manipulating objects using robotic systems."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Grasping"@en .
 
-datalens_th:vehicle-detection
-      a       skos:Concept , datalens_o:Task ;
+dlt:VehicleDetection
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q2296025> ;
-      skos:broader datalens_th:object-detection ;
+      skos:broader dlt:ObjectDetection ;
       skos:definition "Vehicle detection is the task of detecting vehicles."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Vehicle Detection"@en .
 
-datalens_th:language-identification
-      a       skos:Concept , datalens_o:Task ;
+dlt:LanguageIdentification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q1050419> ;
-      skos:broader datalens_th:text-classification ;
+      skos:broader dlt:TextClassification ;
       skos:definition "Language identification is the task of determining language from a text sample."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Language Identification"@en .
 
-datalens_th:text2text-generation
-      a       skos:Concept , datalens_o:Task ;
+dlt:Text2TextGeneration
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:broader datalens_th:text-generation ;
+      skos:broader dlt:TextGeneration ;
       skos:definition "Text-to-text generation is the task of transforming input text into a different, task-specific output."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
-      skos:prefLabel "Text2text Generation"@en .
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Text2Text Generation"@en .
 
-datalens_th:open-domain-qa
-      a       skos:Concept , datalens_o:Task ;
+dlt:OpenDomainQA
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q121409954> , <https://huggingface.co/tasks/question-answering> ;
-      skos:broader datalens_th:question-answering ;
+      skos:broader dlt:QuestionAnswering ;
       skos:definition "Open domain question answering is the task of generating or extracting an answer from context that correctly answers the question without being restricted to a specific domain."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Open Domain QA"@en .
 
-datalens_th:fact-checking-retrieval
-      a       skos:Concept , datalens_o:Task ;
+dlt:FactCheckingRetrieval
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q59555084> , <https://www.wikidata.org/wiki/Q816826> ;
-      skos:broader datalens_th:text-retrieval ;
+      skos:broader dlt:TextRetrieval ;
       skos:definition "Fact checking retrieval is the task of verifying information in non-fictional text to determine veracity and factual correctness by obtaining relevant information resources from a collection."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Fact Checking Retrieval"@en .
 
-datalens_th:image-colorization
-      a       skos:Concept , datalens_o:Task ;
+dlt:ImageColorization
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:broader datalens_th:image-to-image ;
+      skos:broader dlt:ImageToImage ;
       skos:definition "Image colorization is the task of adding colors to grayscale images."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Image Colorization"@en .
 
-datalens_th:open-book-qa
-      a       skos:Concept , datalens_o:Task ;
+dlt:OpenBookQA
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/tasks/question-answering> ;
-      skos:broader datalens_th:question-answering , datalens_th:text-generation ;
+      skos:broader dlt:QuestionAnswering , dlt:TextGeneration ;
       skos:definition "Open book question answering is the task of generating an answer directly based on context that correctly answers the question."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Open Book QA"@en .
 
-datalens_th:task-planning
-      a       skos:Concept , datalens_o:Task ;
+dlt:TaskPlanning
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Automated_planning_and_scheduling> ;
-      skos:broader datalens_th:text-generation ;
+      skos:broader dlt:TextGeneration ;
       skos:definition "Task planning is the task of automatically planning and scheduling realization of strategies or action sequences, typically for execution by intelligent agents, autonomous robots, and unmanned vehicles."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Task Planning"@en .
 
-datalens_th:masked-language-modeling
-      a       skos:Concept , datalens_o:Task ;
+dlt:MaskedLanguageModeling
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q24868018> ;
-      skos:broader datalens_th:fill-mask , datalens_th:text-generation ;
+      skos:broader dlt:FillMask , dlt:TextGeneration ;
       skos:definition "Masked language modeling is the task of predicting a masked word in a sentence."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Masked Language Modeling"@en .
 
-datalens_th:abstractive-qa
-      a       skos:Concept , datalens_o:Task ;
+dlt:AbstractiveQA
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/docs/transformers/tasks/question_answering> ;
-      skos:broader datalens_th:question-answering ;
+      skos:broader dlt:QuestionAnswering ;
       skos:definition "Abstractive question answering is the task of generating an answer from context that correctly answers the question."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Abstractive QA"@en .
 
-datalens_th:instance-segmentation
-      a       skos:Concept , datalens_o:Task ;
+dlt:InstanceSegmentation
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q54556143> , <https://www.ibm.com/think/topics/instance-segmentation> ;
-      skos:broader datalens_th:object-detection , datalens_th:image-segmentation ;
+      skos:broader dlt:ObjectDetection , dlt:ImageSegmentation ;
       skos:definition "Instance segmentation is the task of predicting exact pixel-wise boundaries of each individual object instance in an image."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Instance Segmentation"@en .
 
-datalens_th:intent-classification
-      a       skos:Concept , datalens_o:Task ;
+dlt:IntentClassification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:broader datalens_th:text-classification ;
+      skos:broader dlt:TextClassification ;
       skos:definition "Intent classification is the task of deducing the specific purpose or objective behind a user's input in a conversational context."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Intent Classification"@en .
 
-datalens_th:sentiment-analysis
-      a       skos:Concept , datalens_o:Task ;
+dlt:SentimentAnalysis
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q2271421> ;
-      skos:broader datalens_th:text-classification ;
+      skos:broader dlt:TextClassification ;
       skos:definition "Sentiment analysis is the task of determining the emotional tone or sentiment behind a piece of text."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Sentiment Analysis"@en .
 
-datalens_th:word-sense-disambiguation
-      a       skos:Concept , datalens_o:Task ;
+dlt:WordSenseDisambiguation
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q48522> ;
-      skos:broader datalens_th:token-classification ;
+      skos:broader dlt:TokenClassification ;
       skos:definition "Word sense disambiguation is the task of identifying which sense of a word with multiple meanings is used in a sentence."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Word Sense Disambiguation"@en .
 
-datalens_th:multi-class-classification
-      a       skos:Concept , datalens_o:Task ;
+dlt:MultiClassClassification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q6934605> ;
-      skos:broader datalens_th:text-classification ;
+      skos:broader dlt:TextClassification ;
       skos:definition "Multi-class classification is the task of classifying instances into one of three or more classes."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Multi Class Classification"@en .
 
-datalens_th:acceptability-classification
-      a       skos:Concept , datalens_o:Task ;
+dlt:AcceptabilityClassification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
-      skos:broader datalens_th:text-classification ;
+      skos:broader dlt:TextClassification ;
       skos:definition "Acceptability classification is the task of predicting sentence acceptability based on grammatical correctness."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Acceptability Classification"@en .
 
-datalens_th:tabular-single-column-regression
-      a       skos:Concept , datalens_o:Task ;
+dlt:TabularSingleColumnRegression
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/tasks/tabular-regression> ;
-      skos:broader datalens_th:tabular-regression ;
+      skos:broader dlt:TabularRegression ;
       skos:definition "Tabular single column regression is the task of predicting a numerical value given a single column of data."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Tabular Single Column Regression"@en .
 
-datalens_th:closed-domain-qa
-      a       skos:Concept , datalens_o:Task ;
+dlt:ClosedDomainQA
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/tasks/question-answering> ;
-      skos:broader datalens_th:question-answering ;
+      skos:broader dlt:QuestionAnswering ;
       skos:definition "Closed domain question answering is the task of generating or extracting an answer from context that correctly answers the question while being restricted to a specific domain."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Closed Domain QA"@en .
 
-datalens_th:face-detection
-      a       skos:Concept , datalens_o:Task ;
+dlt:FaceDetection
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q11681085> ;
-      skos:broader datalens_th:object-detection ;
+      skos:broader dlt:ObjectDetection ;
       skos:definition "Face detection is the task of detecting presence and location of faces."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Face Detection"@en .
 
-datalens_th:multiple-choice-coreference-resolution
-      a       skos:Concept , datalens_o:Task ;
+dlt:MultipleChoiceCoreferenceResolution
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/docs/transformers/tasks/multiple_choice> ;
-      skos:broader datalens_th:multiple-choice ;
+      skos:broader dlt:MultipleChoice ;
       skos:definition "Multiple choice coreference resolution is the task of finding expressions that refer to the same entity in text among several candidate answers provided."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Multiple Choice Coreference Resolution"@en .
 
-datalens_th:audio-emotion-recognition
-      a       skos:Concept , datalens_o:Task ;
+dlt:AudioEmotionRecognition
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q1339090> ;
-      skos:broader datalens_th:audio-classification ;
+      skos:broader dlt:AudioClassification ;
       skos:definition "Audio emotion recognition is the task of identifying human emotion in an audio sample."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Audio Emotion Recognition"@en .
 
-datalens_th:tabular-multi-class-classification
-      a       skos:Concept , datalens_o:Task ;
+dlt:TabularMultiClassClassification
+      a       skos:Concept , dlo:Task ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Multiclass_classification> , <https://huggingface.co/tasks/tabular-classification> ;
-      skos:broader datalens_th:tabular-classification ;
+      skos:broader dlt:TabularClassification ;
       skos:definition "Tabular multi-class classification is the task of classifying tabular data into one of three or more classes."@en ;
-      skos:inScheme datalens_th:TaskScheme ;
+      skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Tabular Multi Class Classification"@en .

@@ -175,7 +175,7 @@
 #     ];
 #     rr:subjectMap [ rr:template "http://ns.inria.fr/datalens/data#model/{$.model_hash16}"; rr:termType rr:IRI; ];
 #     rr:predicateObjectMap [ rr:predicate datalens_o:isAvailable; rr:objectMap [ rr:constant "false"; rr:datatype xsd:boolean ]; ];
-    .
+#    .
 
 <#Derivation>
     a rr:TriplesMap;
@@ -194,7 +194,7 @@
     ];
     rr:predicateObjectMap [
         rr:predicate prov:hadActivity;
-        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data#{$.transformation_type}"; rr:termType rr:IRI ];
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus#{$.transformation_type}"; rr:termType rr:IRI ];
     ];
     .
 

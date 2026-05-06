@@ -11,14 +11,14 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
 
-@prefix datalens_o: <http://example.org/datalens_o/ontology#> .
+@prefix dlo: <http://ns.inria.fr/datalens/ontology/> .
 
-# Name idea : datalens_o : Datalens Ontology
+# Name idea : dlo : Datalens Ontology
 
-datalens_o: a owl:Ontology ;
+dlo: a owl:Ontology ;
     dcterms:title "Datalens Ontology"@en ;
     dcterms:creator "Aline MENIN", "Zachari ARNAUD" ;
-    dcterms:modified "2026-04-28" ;
+    dcterms:modified "2026-05-6" ;
     dcterms:description "The Datalens Ontology defines concepts and relationships for datasets and machine learning models."@en ;
     owl:versionInfo "1.0" ;
     dcat:landingPage <https://github.com/amenin/datalens> ;
@@ -27,128 +27,128 @@ datalens_o: a owl:Ontology ;
     dcterms:publisher "Inria", "University Côte d'Azur", "CNRS" .
 
 ## Concepts related to both datasets and models
-datalens_o:Task a owl:Class ;
-    rdfs:label "Machine Learning Task"@en ;
-    rdfs:comment "A specific task or problem that a machine learning model is designed to solve."@en .
+dlo:SubTask a owl:Class ;
+    rdfs:label "Machine Learning Sub-task"@en ;
+    rdfs:comment "A specific sub-task or problem that a machine learning model is designed to solve."@en .
 
-datalens_o:TaskCategory a owl:Class ;
-    rdfs:label "Task Category"@en ;
-    rdfs:comment "A category or type of machine learning task, such as classification, regression, etc."@en . 
+dlo:Task a owl:Class ;
+    rdfs:label "Task"@en ;
+    rdfs:comment "A machine learning task, such as text classification, linear regression, etc."@en . 
 
-datalens_o:Modality a owl:Class ;
+dlo:Modality a owl:Class ;
     rdfs:label "Modality"@en ;
     rdfs:comment "A type of data modality used in the context of machine learning."@en .
 
-datalens_o:Library a owl:Class ;
+dlo:Library a owl:Class ;
     rdfs:label "Library"@en ;
     rdfs:comment "A machine learning library."@en .
 
    
 ## Concepts related to datasets
-datalens_o:SizeCategory a owl:Class ;
+dlo:SizeCategory a owl:Class ;
     rdfs:label "Size Category"@en ;
     rdfs:comment "Categories for the size of a dataset, according to HuggingFace definition."@en .
 
-datalens_o:Annotation a owl:Class ;
+dlo:Annotation a owl:Class ;
     rdfs:subClassOf oa:Annotation ;
     rdfs:label "Annotation"@en ;
     rdfs:comment "A comment or note related to a dataset or a machine learning model."@en .
 
-datalens_o:annotationMethod a owl:DatatypeProperty ;
+dlo:annotationMethod a owl:DatatypeProperty ;
     rdfs:label "annotation method"@en ;
     rdfs:comment "The method or technique used to create an annotation for a dataset or a machine learning model."@en ;
-    rdfs:domain datalens_o:Annotation ;
+    rdfs:domain dlo:Annotation ;
     rdfs:range rdfs:Literal .
 
-datalens_o:linguisticMethod a owl:DatatypeProperty ;
+dlo:linguisticMethod a owl:DatatypeProperty ;
     rdfs:label "linguistic method"@en ;
     rdfs:comment "The linguistic creation method or approach used in the context of a dataset or a machine learning model."@en ;
-    rdfs:domain datalens_o:Annotation ;
+    rdfs:domain dlo:Annotation ;
     rdfs:range rdfs:Literal .
 
 ## Properties for both datasets and models
-# datalens_o:isAvailable a owl:DatatypeProperty ;
+# dlo:isAvailable a owl:DatatypeProperty ;
 #     rdfs:label "availability status"@en ;
 #     rdfs:comment "The availability status of a dataset or model, indicating whether it is enabled or disabled."@en ;
 #     rdfs:domain  [ 
 #         a owl:Class ;
-#         owl:unionOf (dcat:Dataset datalens_o:Model) 
+#         owl:unionOf (dcat:Dataset dlo:Model) 
 #     ] ;
 #     rdfs:range  xsd:boolean .
 
-datalens_o:downloadCount a owl:DatatypeProperty ;
+dlo:downloadCount a owl:DatatypeProperty ;
     rdfs:label "download count"@en ;
     rdfs:comment "The number of times a dataset or model has been downloaded."@en ;
     rdfs:domain  [ 
         a owl:Class ;
-        owl:unionOf (dcat:Dataset datalens_o:Model) 
+        owl:unionOf (dcat:Dataset dlo:Model) 
     ] ;
     rdfs:range xsd:integer .
 
-datalens_o:likesCount a owl:DatatypeProperty ;
+dlo:likesCount a owl:DatatypeProperty ;
     rdfs:label "likes count"@en ;
     rdfs:comment "The number of likes or positive feedback a dataset or model has received."@en ;
     rdfs:domain  [ 
         a owl:Class ;
-        owl:unionOf (dcat:Dataset datalens_o:Model) 
+        owl:unionOf (dcat:Dataset dlo:Model) 
     ] ;    rdfs:range xsd:integer .
 
-datalens_o:hasModality a owl:DatatypeProperty ;
+dlo:hasModality a owl:DatatypeProperty ;
     rdfs:label "has modality"@en ;
     rdfs:comment "Relates a dataset to a specific modality or type of data used in the context of machine learning."@en ;
     rdfs:domain  [ 
         a owl:Class ;
-        owl:unionOf (dcat:Dataset datalens_o:Model) 
+        owl:unionOf (dcat:Dataset dlo:Model) 
     ] ;
-    rdfs:range datalens_o:Modality .
+    rdfs:range dlo:Modality .
 
-datalens_o:hasTask a owl:ObjectProperty ;
+dlo:hasSubTask a owl:ObjectProperty ;
+    rdfs:label "has ML sub-task"@en ;
+    rdfs:comment "Relates a dataset or model to a specific sub-task."@en ;
+    rdfs:domain  [ 
+        a owl:Class ;
+        owl:unionOf (dcat:Dataset dlo:Model) 
+    ] ;
+    rdfs:range dlo:SubTask .
+
+dlo:hasTask a owl:ObjectProperty ;
     rdfs:label "has ML task"@en ;
-    rdfs:comment "Relates a dataset or model to a specific task or problem that a machine learning model is designed to solve."@en ;
+    rdfs:comment "Relates a dataset or model to a machine learning task."@en ;
     rdfs:domain  [ 
         a owl:Class ;
-        owl:unionOf (dcat:Dataset datalens_o:Model) 
+        owl:unionOf (dcat:Dataset dlo:Model) 
     ] ;
-    rdfs:range datalens_o:TaskCategory .
+    rdfs:range dlo:Task .
 
-datalens_o:hasTaskCategory a owl:ObjectProperty ;
-    rdfs:label "has ML task category"@en ;
-    rdfs:comment "Relates a dataset or model to a category or type of machine learning task."@en ;
-    rdfs:domain  [ 
-        a owl:Class ;
-        owl:unionOf (dcat:Dataset datalens_o:Model) 
-    ] ;
-    rdfs:range datalens_o:TaskCategory .
-
-datalens_o:hasLibrary a owl:ObjectProperty ;
+dlo:hasLibrary a owl:ObjectProperty ;
     rdfs:label "has library"@en ;
     rdfs:comment "Relates a dataset or model to a machine learning library."@en ;
     rdfs:domain  [ 
         a owl:Class ;
-        owl:unionOf (dcat:Dataset datalens_o:Model) 
+        owl:unionOf (dcat:Dataset dlo:Model) 
     ] ;
-    rdfs:range datalens_o:Library .
+    rdfs:range dlo:Library .
 
-datalens_o:hasAcademicArticle a owl:ObjectProperty ;
+dlo:hasAcademicArticle a owl:ObjectProperty ;
     rdfs:label "has scientific article"@en ;
     rdfs:comment "Relates a dataset or model to a scholarly article or paper that describes it."@en ;
     rdfs:domain  [ 
         a owl:Class ;
-        owl:unionOf (dcat:Dataset datalens_o:Model) 
+        owl:unionOf (dcat:Dataset dlo:Model) 
     ] ;    rdfs:range bibo:AcademicArticle .
 
 ## Properties specific to datasets
-datalens_o:hasAnnotation a owl:ObjectProperty ;
+dlo:hasAnnotation a owl:ObjectProperty ;
     rdfs:label "has annotation"@en ;
     rdfs:comment "Relates a dataset to its annotations, which provide additional information or context."@en ;
     rdfs:domain dcat:Dataset ;
-    rdfs:range datalens_o:Annotation .
+    rdfs:range dlo:Annotation .
 
-datalens_o:hasSize a owl:DatatypeProperty ;
+dlo:hasSize a owl:DatatypeProperty ;
     rdfs:label "has size"@en ;
     rdfs:comment "Relates a dataset to a size category"@en ;
     rdfs:domain dcat:Dataset ;
-    rdfs:range datalens_o:SizeCategory .
+    rdfs:range dlo:SizeCategory .
 
 
 
@@ -156,46 +156,31 @@ datalens_o:hasSize a owl:DatatypeProperty ;
 
 @prefix mls: <http://www.w3.org/ns/mls#> .
 
-# La class Model peut provenir de mls ou de datalens_o
+# La class Model peut provenir de mls ou de dlo
 
-datalens_o:Model a owl:Class ;
+dlo:Model a owl:Class ;
     rdfs:label "Machine Learning Model"@en ;
     rdfs:comment "A machine learning model published on a platform such as Hugging Face."@en ;
     rdfs:subClassOf schema:SoftwareSourceCode .
 
-datalens_o:hasModelArchitecture a owl:DatatypeProperty ;
+dlo:hasModelArchitecture a owl:DatatypeProperty ;
     rdfs:label "model architecture"@en ;
     rdfs:comment "The architecture declared by the model configuration."@en ;
-    rdfs:domain datalens_o:Model ;
-    rdfs:range datalens_o:ModelArchitecture .
+    rdfs:domain dlo:Model ;
+    rdfs:range dlo:ModelArchitecture .
 
-datalens_o:ModelArchitecture a owl:Class ;
+dlo:ModelArchitecture a owl:Class ;
     rdfs:label "Model Architecture"@en ;
     rdfs:comment "The architecture of a machine learning model, such as transformer, convolutional neural network, etc."@en .
 
-datalens_o:wasTrainedOn a owl:ObjectProperty ;
-    rdfs:subClassOf prov:wasInfluencedBy ;
+dlo:wasTrainedOn a owl:ObjectProperty ;
+    rdfs:subPropertyOf prov:wasInfluencedBy ;
     rdfs:label "was trained on"@en ;
     rdfs:comment "Relates a machine learning model to a dataset used for training or pretraining."@en ;
-    rdfs:domain datalens_o:Model ;
+    rdfs:domain dlo:Model ;
     rdfs:range dcat:Dataset .
 
-:fineTune a prov:Activity ;
-    rdfs:label "Fine-tune"@en ;
-    rdfs:comment "A transformation where a pre-trained model is further trained on a specific task or dataset."@en ;
-    rdfs:isDefinedBy datalens_o: .
-
-:quantize a prov:Activity ;
-    rdfs:label "Quantize"@en ;
-    rdfs:comment "A transformation where a pre-trained model is quantized to reduce its size and improve inference speed."@en ;
-    rdfs:isDefinedBy datalens_o: .
-
-:merge a prov:Activity ;
-    rdfs:label "Merge"@en ;
-    rdfs:comment "A transformation where multiple pre-trained models are combined into a single model."@en ;
-    rdfs:isDefinedBy datalens_o: .
-
-:adapt a prov:Activity ;
-    rdfs:label "Adapt"@en ;
-    rdfs:comment "A transformation where a pre-trained model is adapted for a new task or domain."@en ;
-    rdfs:isDefinedBy datalens_o: .
+dlo:Transformation a owl:Class ;
+    rdfs:subClassOf prov:Activity ;
+    rdfs:label "Model Transformation"@en ;
+    rdfs:comment "A transformation or modification applied to a machine learning model."@en .
