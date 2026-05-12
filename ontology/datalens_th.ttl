@@ -18,7 +18,7 @@
 dlt:
     dcterms:title "Datalens Thesaurus"@en ;
     dcterms:creator "Aline MENIN", "Zachari ARNAUD" ;
-    dcterms:modified "2026-05-06" ;
+    dcterms:modified "2026-05-11" ;
     dcterms:description "The Datalens Thesaurus provides controlled vocabulary for datasets and machine learning models."@en ;
     owl:versionInfo "1.0" ;
     dcat:landingPage <https://github.com/amenin/datalens> ;
@@ -770,44 +770,44 @@ dlt:TaskScheme
 
 dlt:RL
       a       skos:Collection ;
-      skos:hasTopConcept dlt:Robotics , dlt:ReinforcementLearning ;
+      skos:member dlt:Robotics , dlt:ReinforcementLearning ;
       skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Reinforcement Learning"@en .
 
 dlt:NLP
       a       skos:Collection ;
-      skos:hasTopConcept dlt:FillMask , dlt:Summarization , dlt:QuestionAnswering , dlt:TokenClassification , dlt:SentenceSimilarity , dlt:Translation , dlt:ZeroShotClassification , dlt:TextClassification , dlt:TextRetrieval , dlt:TextGeneration , dlt:FeatureExtraction , dlt:MultipleChoice , dlt:TableToText , dlt:TableQuestionAnswering , dlt:TextRanking ;
+      skos:member dlt:FillMask , dlt:Summarization , dlt:QuestionAnswering , dlt:TokenClassification , dlt:SentenceSimilarity , dlt:Translation , dlt:ZeroShotClassification , dlt:TextClassification , dlt:TextRetrieval , dlt:TextGeneration , dlt:FeatureExtraction , dlt:MultipleChoice , dlt:TableToText , dlt:TableQuestionAnswering , dlt:TextRanking ;
       skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Natural Language Processing"@en .
 
 dlt:Tabular
       a       skos:Collection ;
-      skos:hasTopConcept dlt:TabularToText , dlt:TabularRegression , dlt:TabularClassification , dlt:TimeSeriesForecasting ;
+      skos:member dlt:TabularToText , dlt:TabularRegression , dlt:TabularClassification , dlt:TimeSeriesForecasting ;
       skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Tabular"@en .
 
 dlt:CV
       a       skos:Collection ;
-      skos:hasTopConcept dlt:ImageToImage , dlt:ObjectDetection , dlt:ZeroShotImageClassification , dlt:ImageFeatureExtraction , dlt:ImageSegmentation , dlt:TextTo3D , dlt:UnconditionalImageGeneration , dlt:ImageToText , dlt:KeypointDetection , dlt:ImageTo3D , dlt:TextToVideo , dlt:ZeroShotObjectDetection , dlt:ImageClassification , dlt:MaskGeneration , dlt:DepthEstimation , dlt:TextToImage , dlt:VideoToVideo , dlt:ImageToVideo , dlt:VideoClassification ;
+      skos:member dlt:ImageToImage , dlt:ObjectDetection , dlt:ZeroShotImageClassification , dlt:ImageFeatureExtraction , dlt:ImageSegmentation , dlt:TextTo3D , dlt:UnconditionalImageGeneration , dlt:ImageToText , dlt:KeypointDetection , dlt:ImageTo3D , dlt:TextToVideo , dlt:ZeroShotObjectDetection , dlt:ImageClassification , dlt:MaskGeneration , dlt:DepthEstimation , dlt:TextToImage , dlt:VideoToVideo , dlt:ImageToVideo , dlt:VideoClassification ;
       skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Computer Vision"@en .
 
 dlt:Multimodal
       a       skos:Collection ;
-      skos:hasTopConcept dlt:VisualQuestionAnswering , dlt:VisualDocumentRetrieval , dlt:DocumentQuestionAnswering , dlt:AudioTextToText , dlt:ImageTextToImage , dlt:AnyToAny , dlt:VideoTextToText , dlt:ImageTextToVideo , dlt:ImageTextToText ;
+      skos:member dlt:VisualQuestionAnswering , dlt:VisualDocumentRetrieval , dlt:DocumentQuestionAnswering , dlt:AudioTextToText , dlt:ImageTextToImage , dlt:AnyToAny , dlt:VideoTextToText , dlt:ImageTextToVideo , dlt:ImageTextToText ;
       skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Multimodal"@en .
 
 dlt:Audio
       a       skos:Collection ;
-      skos:hasTopConcept dlt:AutomaticSpeechRecognition , dlt:AudioClassification , dlt:TextToAudio , dlt:TextToSpeech , dlt:AudioToAudio , dlt:VoiceActivityDetection ;
+      skos:member dlt:AutomaticSpeechRecognition , dlt:AudioClassification , dlt:TextToAudio , dlt:TextToSpeech , dlt:AudioToAudio , dlt:VoiceActivityDetection ;
       skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Audio"@en .
 
 # ----------------------------------- Task Categories
 
 dlt:DocumentQuestionAnswering
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Document Question Answering (also known as Document Visual Question Answering) is the task of answering questions on document images. Document question answering models take a (document, question) pair as input and return an answer in natural language. Models usually rely on multi-modal features, combining text, position of words (bounding-boxes) and image."@en ;
       skos:example "Dataset example: Largest document understanding dataset."@en , "Library example: transformers."@en , "Model example: A robust document question answering model."@en , "Demo example: A robust document question answering application."@en ;
@@ -815,7 +815,7 @@ dlt:DocumentQuestionAnswering
       skos:prefLabel "Document Question Answering"@en .
 
 dlt:AudioClassification
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Audio classification is the task of assigning a label or class to a given audio. It can be used for recognizing which command a user is giving or the emotion of a statement, as well as identifying a speaker."@en ;
       skos:example "Library example: speechbrain."@en , "Demo example: An application that can classify music into different genre."@en , "Dataset example: A benchmark of 10 different audio tasks."@en , "Model example: An easy-to-use model for command recognition."@en ;
@@ -823,7 +823,7 @@ dlt:AudioClassification
       skos:prefLabel "Audio Classification"@en .
 
 dlt:ImageToImage
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image-to-image is the task of transforming an input image through a variety of possible manipulations and enhancements, such as super-resolution, image inpainting, colorization, and more."@en ;
       skos:example "Library example: diffusers."@en , "Dataset example: Synthetic dataset, for image relighting"@en , "Demo example: Image editing application."@en , "Model example: An image-to-image model to improve image resolution."@en ;
@@ -831,7 +831,7 @@ dlt:ImageToImage
       skos:prefLabel "Image-to-Image"@en .
 
 dlt:TabularRegression
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Tabular regression is the task of predicting a numerical value given a set of attributes."@en ;
       skos:example "Model example: Fish weight prediction based on length measurements and species."@en , "Dataset example: A comprehensive curation of datasets covering all benchmarks."@en , "Demo example: An application that can predict weight of a fish based on set of attributes."@en , "Library example: sklearn."@en ;
@@ -839,7 +839,7 @@ dlt:TabularRegression
       skos:prefLabel "Tabular Regression"@en .
 
 dlt:ImageSegmentation
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image Segmentation divides an image into segments where each pixel in the image is mapped to an object. This task has multiple variants such as instance segmentation, panoptic segmentation and semantic segmentation."@en ;
       skos:example "Dataset example: Scene segmentation dataset."@en , "Demo example: A semantic segmentation application that can predict unseen instances out of the box."@en , "Model example: Solid panoptic segmentation model trained on COCO."@en , "Library example: transformers."@en ;
@@ -847,7 +847,7 @@ dlt:ImageSegmentation
       skos:prefLabel "Image Segmentation"@en .
 
 dlt:UnconditionalImageGeneration
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Unconditional image generation is the task of generating images with no condition in any context (like a prompt text or another image). Once trained, the model will create images that resemble its training data distribution."@en ;
       skos:example "Library example: diffusers."@en , "Demo example: An application that can generate realistic faces."@en , "Dataset example: The CIFAR-100 dataset consists of 60000 32x32 colour images in 100 classes, with 600 images per class."@en , "Model example: High-quality image generation model trained on the CIFAR-10 dataset. It synthesizes images of the ten classes presented in the dataset using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics."@en ;
@@ -855,7 +855,7 @@ dlt:UnconditionalImageGeneration
       skos:prefLabel "Unconditional Image Generation"@en .
 
 dlt:ImageToText
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image to text models output a text from a given image. Image captioning or optical character recognition can be considered as the most common applications of image to text."@en ;
       skos:example "Library example: transformers."@en , "Model example: Strong OCR model."@en , "Dataset example: Dataset from 12M image-text of Reddit"@en , "Demo example: SVG generator app from images."@en ;
@@ -863,7 +863,7 @@ dlt:ImageToText
       skos:prefLabel "Image-to-Text"@en .
 
 dlt:AnyToAny
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Any-to-any models can understand two or more modalities and output two or more modalities."@en ;
       skos:example "Demo example: An application to chat with an any-to-any (image & text) model."@en , "Dataset example: A dataset with multiple modality input and output pairs."@en , "Model example: Strong model that can take in video, audio, image, text and output text and natural speech."@en , "Library example: transformers."@en ;
@@ -871,7 +871,7 @@ dlt:AnyToAny
       skos:prefLabel "Any-to-Any"@en .
 
 dlt:ZeroShotClassification
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Zero-shot text classification is a task in natural language processing where a model is trained on a set of labeled records but is then able to classify new records from previously unseen classes."@en ;
       skos:example "Dataset example: A widely used dataset used to benchmark multiple variants of text classification."@en , "Model example: Powerful zero-shot text classification model."@en , "Library example: transformers."@en ;
@@ -879,7 +879,7 @@ dlt:ZeroShotClassification
       skos:prefLabel "Zero Shot classification"@en .
 
 dlt:TimeSeriesForecasting
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/models-tags-by-type?type=pipeline_tag> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Time_series> ;
       skos:definition "Time series forecasting is the task of predicting future values based on previously observed values."@en ;
@@ -887,7 +887,7 @@ dlt:TimeSeriesForecasting
       skos:prefLabel "Time Series Forecasting"@en .
 
 dlt:ZeroShotObjectDetection
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Zero-shot object detection is a computer vision task to detect objects and their classes in images, without any prior training or knowledge of the classes. Zero-shot object detection models receive an image as input, as well as a list of candidate classes, and output the bounding boxes and labels where the objects have been detected."@en ;
       skos:example "Model example: Solid zero-shot object detection model."@en , "Demo example: A demo to compare different zero-shot object detection models per output and latency."@en , "Library example: transformers."@en ;
@@ -895,7 +895,7 @@ dlt:ZeroShotObjectDetection
       skos:prefLabel "Zero Shot object detection"@en .
 
 dlt:Robotics
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/models-tags-by-type?type=pipeline_tag> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q170978> ;
       skos:definition "Robotics is the task of improving the perception, decision-making, and interaction capabilities of robots."@en ;
@@ -903,7 +903,7 @@ dlt:Robotics
       skos:prefLabel "Robotics"@en .
 
 dlt:ReinforcementLearning
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Reinforcement learning is the computational approach of learning from action by interacting with an environment through trial and error and receiving rewards (negative or positive) as feedback"@en ;
       skos:example "Dataset example: A curation of widely used datasets for Data Driven Deep Reinforcement Learning (D4RL)"@en , "Demo example: An application for a cute puppy agent learning to catch a stick."@en , "Model example: A Reinforcement Learning model trained on expert data from the Gym Hopper environment"@en , "Library example: transformers."@en ;
@@ -911,7 +911,7 @@ dlt:ReinforcementLearning
       skos:prefLabel "Reinforcement Learning"@en .
 
 dlt:MaskGeneration
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Mask generation is the task of generating masks that identify a specific object or region of interest in a given image. Masks are often used in segmentation tasks, where they provide a precise way to isolate the object of interest for further processing or analysis."@en ;
       skos:example "Model example: Small yet powerful mask generation model."@en , "Demo example: An application that combines a mask generation model with a zero-shot object detection model for text-guided image segmentation."@en , "Dataset example: Widely used benchmark dataset for multiple Vision tasks."@en , "Library example: transformers."@en ;
@@ -919,7 +919,7 @@ dlt:MaskGeneration
       skos:prefLabel "Mask Generation"@en .
 
 dlt:FeatureExtraction
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Feature extraction is the task of extracting features learnt in a model."@en ;
       skos:example "Demo example: A leaderboard to rank text feature extraction models based on a benchmark."@en , "Model example: A powerful feature extraction model for natural language processing tasks."@en , "Dataset example: Wikipedia dataset containing cleaned articles of all languages. Can be used to train `feature-extraction` models."@en , "Library example: sentence-transformers."@en ;
@@ -927,7 +927,7 @@ dlt:FeatureExtraction
       skos:prefLabel "Feature Extraction"@en .
 
 dlt:TextToAudio
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/models-tags-by-type?type=pipeline_tag> ;
       owl:seeAlso <https://huggingface.co/tasks/text-to-speech> ;
       skos:definition "Text-to-audio, also known as text-to-speech (TTS), is the task of generating natural sounding speech given text input."@en ;
@@ -935,7 +935,7 @@ dlt:TextToAudio
       skos:prefLabel "Text-to-Audio"@en .
 
 dlt:AudioToAudio
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Audio-to-Audio is a family of tasks in which the input is an audio and the output is one or multiple generated audios. Some example tasks are speech enhancement and source separation."@en ;
       skos:example "Demo example: An application for speech separation."@en , "Library example: asteroid."@en , "Model example: A speech enhancement model."@en , "Dataset example: 512-element X-vector embeddings of speakers from CMU ARCTIC dataset."@en ;
@@ -943,7 +943,7 @@ dlt:AudioToAudio
       skos:prefLabel "Audio-to-Audio"@en .
 
 dlt:ImageToVideo
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image-to-video models take a still image as input and generate a video. These models can be guided by text prompts to influence the content and style of the output video."@en ;
       skos:example "Library example: diffusers."@en , "Dataset example: A benchmark dataset for reference image controlled video generation."@en , "Demo example: An application to generate videos fast."@en , "Model example: LTX-Video, a 13B parameter model for high quality video generation"@en ;
@@ -951,7 +951,7 @@ dlt:ImageToVideo
       skos:prefLabel "Image-to-Video"@en .
 
 dlt:VideoClassification
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Video classification is the task of assigning a label or class to an entire video. Videos are expected to have only one class for each video. Video classification models take a video as input and return a prediction about which class the video belongs to."@en ;
       skos:example "Demo example: An application that classifies video at different timestamps."@en , "Dataset example: Benchmark dataset used for video classification with videos that belong to 400 classes."@en , "Library example: transformers."@en , "Model example: Strong Video Classification model trained on the Kinetics 400 dataset."@en ;
@@ -959,14 +959,14 @@ dlt:VideoClassification
       skos:prefLabel "Video Classification"@en .
 
 dlt:TabularToText
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_categories> ;
       skos:definition "Tabular-to-text is the task of converting structured tabular data into fluent and coherent natural language text."@en ;
       skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Tabular-to-Text"@en .
 
 dlt:FillMask
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Masked language modeling is the task of masking some of the words in a sentence and predicting which words should replace those masks. These models are useful when we want to get a statistical understanding of the language in which the model is trained in."@en ;
       skos:example "Dataset example: A common dataset that is used to train models for many languages."@en , "Model example: State-of-the-art masked language model."@en , "Library example: transformers."@en ;
@@ -974,7 +974,7 @@ dlt:FillMask
       skos:prefLabel "Fill Mask"@en .
 
 dlt:ObjectDetection
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Object Detection models allow users to identify objects of certain defined classes. Object detection models receive an image as input and output the images with bounding boxes and labels on detected objects."@en ;
       skos:example "Dataset example: Widely used benchmark dataset for multiple vision tasks."@en , "Model example: Solid object detection model pre-trained on the COCO 2017 dataset."@en , "Demo example: Real-time object detection demo."@en , "Library example: transformers."@en ;
@@ -982,7 +982,7 @@ dlt:ObjectDetection
       skos:prefLabel "Object Detection"@en .
 
 dlt:ZeroShotImageClassification
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Zero-shot image classification is the task of classifying previously unseen classes during training of a model."@en ;
       skos:example "Model example: Multilingual image classification model for 80 languages."@en , "Library example: transformers."@en , "Demo example: An application that leverages zero-shot image classification to find best captions to generate an image."@en ;
@@ -990,7 +990,7 @@ dlt:ZeroShotImageClassification
       skos:prefLabel "Zero Shot image classification"@en .
 
 dlt:TokenClassification
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Token classification is a natural language understanding task in which a label is assigned to some tokens in a text. Some popular token classification subtasks are Named Entity Recognition (NER) and Part-of-Speech (PoS) tagging. NER models could be trained to identify specific entities in a text, such as dates, individuals and places; and PoS tagging would identify, for example, which words in a text are verbs, nouns, and punctuation marks."@en ;
       skos:example "Dataset example: A widely used dataset useful to benchmark named entity recognition models."@en , "Demo example: An application that can recognizes entities, extracts noun chunks and recognizes various linguistic features of each token."@en , "Library example: adapter-transformers."@en , "Model example: A robust performance model to identify people, locations, organizations and names of miscellaneous entities."@en ;
@@ -998,7 +998,7 @@ dlt:TokenClassification
       skos:prefLabel "Token Classification"@en .
 
 dlt:ImageFeatureExtraction
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image feature extraction is the task of extracting features learnt in a computer vision model."@en ;
       skos:example "Model example: A powerful image feature extraction model."@en , "Dataset example: ImageNet-1K is a image classification dataset in which images are used to train image-feature-extraction models."@en , "Library example: timm."@en , "Demo example: A leaderboard to evaluate different image-feature-extraction models on classification performances"@en ;
@@ -1006,7 +1006,7 @@ dlt:ImageFeatureExtraction
       skos:prefLabel "Image Feature Extraction"@en .
 
 dlt:TextToVideo
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Text-to-video models can be used in any application that requires generating consistent sequence of images from text."@en ;
       skos:example "Library example: diffusers."@en , "Demo example: An application that generates video from text."@en , "Dataset example: Microsoft Research Video to Text is a large-scale dataset for open domain video captioning"@en , "Model example: A strong model for consistent video generation."@en ;
@@ -1014,7 +1014,7 @@ dlt:TextToVideo
       skos:prefLabel "Text-to-Video"@en .
 
 dlt:ImageClassification
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image classification is the task of assigning a label or class to an entire image. Images are expected to have only one class for each image. Image classification models take an image as input and return a prediction about which class the image belongs to."@en ;
       skos:example "Demo example: A leaderboard to evaluate different image classification models."@en , "Model example: A strong image classification model."@en , "Library example: keras."@en , "Dataset example: Benchmark dataset used for image classification with images that belong to 100 classes."@en ;
@@ -1022,7 +1022,7 @@ dlt:ImageClassification
       skos:prefLabel "Image Classification"@en .
 
 dlt:TextGeneration
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Generating text is the task of generating new text given another text. These models can, for example, fill in incomplete text or paraphrase."@en ;
       skos:example "Model example: A text-generation model trained to follow instructions."@en , "Demo example: An application that writes and executes code from text instructions and supports many models."@en , "Dataset example: Multilingual dataset used to evaluate text generation models."@en , "Library example: transformers."@en ;
@@ -1030,7 +1030,7 @@ dlt:TextGeneration
       skos:prefLabel "Text Generation"@en .
 
 dlt:TabularClassification
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Tabular classification is the task of classifying a target category (a group) based on set of attributes."@en ;
       skos:example "Demo example: An application that can predict defective products on a production line."@en , "Dataset example: A comprehensive curation of datasets covering all benchmarks."@en , "Model example: Breast cancer prediction model based on decision trees."@en , "Library example: sklearn."@en ;
@@ -1038,7 +1038,7 @@ dlt:TabularClassification
       skos:prefLabel "Tabular Classification"@en .
 
 dlt:MultipleChoice
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_categories> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q28060611> , <https://www.wikidata.org/wiki/Q867668> , <https://huggingface.co/docs/transformers/tasks/multiple_choice> ;
       skos:definition "A multiple choice task is similar to question answering, except several candidate answers are provided along with a context and the model is trained to select the correct answer."@en ;
@@ -1046,7 +1046,7 @@ dlt:MultipleChoice
       skos:prefLabel "Multiple Choice"@en .
 
 dlt:ImageTextToText
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image-text-to-text models take in an image and text prompt and output text. These models are also called vision-language models, or VLMs. The difference from image-to-text models is that these models take an additional text input, not restricting the model to certain use cases like image captioning, and may also be trained to accept a conversation as input."@en ;
       skos:example "Model example: Small and efficient yet powerful vision language model."@en , "Demo example: Leaderboard to evaluate vision language models."@en , "Library example: transformers."@en , "Dataset example: Instructions composed of image and text."@en ;
@@ -1054,7 +1054,7 @@ dlt:ImageTextToText
       skos:prefLabel "Image Text-to-Text"@en .
 
 dlt:VisualQuestionAnswering
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Visual Question Answering is the task of answering open-ended questions based on an image. They output natural language responses to natural language questions."@en ;
       skos:example "Model example: A visual question answering model trained to convert charts and plots to text."@en , "Library example: transformers."@en , "Demo example: An application that compares visual question answering models across different tasks."@en , "Dataset example: A widely used dataset containing questions (with answers) about images."@en ;
@@ -1062,7 +1062,7 @@ dlt:VisualQuestionAnswering
       skos:prefLabel "Visual Question Answering"@en .
 
 dlt:Summarization
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Summarization is the task of producing a shorter version of a document while preserving its important information. Some models can extract text from the original input, while other models can generate entirely new text."@en ;
       skos:example "Model example: A strong summarization model trained on English news articles. Excels at generating factual summaries."@en , "Dataset example: News articles in five different languages along with their summaries. Widely used for benchmarking multilingual summarization models."@en , "Demo example: An application that can summarize long paragraphs."@en , "Library example: transformers."@en ;
@@ -1070,7 +1070,7 @@ dlt:Summarization
       skos:prefLabel "Summarization"@en .
 
 dlt:ImageTextToImage
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image-text-to-image models take an image and a text prompt as input and generate a new image based on the reference image and text instructions. These models are useful for image editing, style transfer, image variations, and guided image generation tasks."@en ;
       skos:example "Demo example: An application for image-text-to-image generation."@en , "Library example: diffusers."@en , "Model example: A powerful model for image-text-to-image generation."@en ;
@@ -1078,7 +1078,7 @@ dlt:ImageTextToImage
       skos:prefLabel "Image Text-to-Image"@en .
 
 dlt:SentenceSimilarity
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Sentence Similarity is the task of determining how similar two texts are. Sentence similarity models convert input texts into vectors (embeddings) that capture semantic information and calculate how close (similar) they are between them. This task is particularly useful for information retrieval and clustering/grouping."@en ;
       skos:example "Model example: This model works well for sentences and paragraphs and can be used for clustering/grouping and semantic searches."@en , "Dataset example: Bing queries with relevant passages from various web sources."@en , "Demo example: An application that leverages sentence similarity to answer questions from YouTube videos."@en , "Library example: sentence-transformers."@en ;
@@ -1086,7 +1086,7 @@ dlt:SentenceSimilarity
       skos:prefLabel "Sentence Similarity"@en .
 
 dlt:TextTo3D
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Text-to-3D models take in text input and produce 3D output."@en ;
       skos:example "Library example: diffusers."@en , "Demo example: Text-to-3D demo with mesh outputs."@en , "Model example: Text-to-3D mesh model by OpenAI"@en , "Dataset example: A large dataset of over 10 million 3D objects."@en ;
@@ -1094,7 +1094,7 @@ dlt:TextTo3D
       skos:prefLabel "Text-to-3D"@en .
 
 dlt:VideoTextToText
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Video-text-to-text models take in a video and a text prompt and output text. These models are also called video-language models."@en ;
       skos:example "Demo example: An application to chat with a video-text-to-text model."@en , "Model example: A robust video-text-to-text model."@en , "Library example: transformers."@en , "Dataset example: Multiple-choice questions and answers about videos."@en ;
@@ -1102,7 +1102,7 @@ dlt:VideoTextToText
       skos:prefLabel "Video Text-to-Text"@en .
 
 dlt:ImageTo3D
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image-to-3D models take in image input and produce 3D output."@en ;
       skos:example "Model example: Fast image-to-3D mesh model by Tencent."@en , "Library example: diffusers."@en , "Demo example: Leaderboard to evaluate image-to-3D models."@en , "Dataset example: A large dataset of over 10 million 3D objects."@en ;
@@ -1110,7 +1110,7 @@ dlt:ImageTo3D
       skos:prefLabel "Image-to-3D"@en .
 
 dlt:VisualDocumentRetrieval
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Visual document retrieval is the task of searching for relevant image-based documents, such as PDFs. These models take a text query and multiple documents as input and return the top-most relevant documents and relevancy scores as output."@en ;
       skos:example "Model example: Very accurate visual document retrieval model for multilingual queries and documents."@en , "Dataset example: A large dataset used to train visual document retrieval models."@en , "Library example: transformers."@en , "Demo example: A leaderboard of visual document retrieval models."@en ;
@@ -1118,7 +1118,7 @@ dlt:VisualDocumentRetrieval
       skos:prefLabel "Visual Document Retrieval"@en .
 
 dlt:AutomaticSpeechRecognition
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Automatic Speech Recognition (ASR), also known as Speech to Text (STT), is the task of transcribing a given audio to text. It has many applications, such as voice user interfaces."@en ;
       skos:example "Demo example: A powerful general-purpose speech recognition application."@en , "Model example: A powerful ASR model by OpenAI."@en , "Dataset example: 31,175 hours of multilingual audio-text dataset in 108 languages."@en , "Library example: espnet."@en ;
@@ -1126,7 +1126,7 @@ dlt:AutomaticSpeechRecognition
       skos:prefLabel "Automatic Speech Recognition"@en .
 
 dlt:AudioTextToText
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Audio-text-to-text models take both an audio clip and a text prompt as input, and generate natural language text as output. These models can answer questions about spoken content, summarize meetings, analyze music, or interpret speech beyond simple transcription. They are useful for applications that combine speech understanding with reasoning or conversation."@en ;
       skos:example "Dataset example: A dataset containing audio conversations with question–answer pairs."@en , "Library example: transformers."@en , "Demo example: A space that takes input as both audio and text and generates answers."@en , "Model example: A lightweight model that has capabilities of taking both audio and text as inputs and generating responses."@en ;
@@ -1134,7 +1134,7 @@ dlt:AudioTextToText
       skos:prefLabel "Audio Text-to-Text"@en .
 
 dlt:TextRetrieval
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_categories> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q816826> ;
       skos:definition "Text retrieval is the task of obtaining information resources relevant to an information need from text."@en ;
@@ -1142,7 +1142,7 @@ dlt:TextRetrieval
       skos:prefLabel "Text Retrieval"@en .
 
 dlt:DepthEstimation
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Depth estimation is the task of predicting depth of the objects present in an image."@en ;
       skos:example "Model example: Cutting-edge depth estimation model."@en , "Dataset example: NYU Depth V2 Dataset: Video dataset containing both RGB and depth sensor data."@en , "Library example: transformers."@en , "Demo example: An application that predicts the depth of an image and then reconstruct the 3D model as voxels."@en ;
@@ -1150,14 +1150,14 @@ dlt:DepthEstimation
       skos:prefLabel "Depth Estimation"@en .
 
 dlt:TableToText
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_categories> ;
       skos:definition "Table-to-text is the task of converting structured tabular data into fluent and coherent natural language text."@en ;
       skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Table-to-Text"@en .
 
 dlt:ImageTextToVideo
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Image-text-to-video models take an reference image and a text instructions as and generate a video based on them. These models are useful for animating still images, creating dynamic content from static references, and generating videos with specific motion or transformation guidance."@en ;
       skos:example "Library example: diffusers."@en , "Model example: A powerful model for image-text-to-video generation."@en , "Demo example: An application for image-text-to-video generation."@en ;
@@ -1165,7 +1165,7 @@ dlt:ImageTextToVideo
       skos:prefLabel "Image Text-to-Video"@en .
 
 dlt:TableQuestionAnswering
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Table Question Answering (Table QA) is the answering a question about an information on a given table."@en ;
       skos:example "Demo example: An application that answers questions based on table CSV files."@en , "Dataset example: The WikiTableQuestions dataset is a large-scale dataset for the task of question answering on semi-structured tables."@en , "Library example: transformers."@en , "Model example: A table question answering model that is capable of neural SQL execution, i.e., employ TAPEX to execute a SQL query on a given table."@en ;
@@ -1173,7 +1173,7 @@ dlt:TableQuestionAnswering
       skos:prefLabel "Table Question Answering"@en .
 
 dlt:QuestionAnswering
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Question Answering models can retrieve the answer to a question from a given text, which is useful for searching for an answer in a document. Some question answering models can generate answers without context!"@en ;
       skos:example "Library example: adapter-transformers."@en , "Demo example: An application that can answer a long question from Wikipedia."@en , "Dataset example: A famous question answering dataset based on English articles from Wikipedia."@en , "Model example: A robust baseline model for most question answering domains."@en ;
@@ -1181,7 +1181,7 @@ dlt:QuestionAnswering
       skos:prefLabel "Question Answering"@en .
 
 dlt:GraphML
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/models-tags-by-type?type=pipeline_tag> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q120799625> ;
       skos:definition "Graph machine learning is a machine learning approach for graph data."@en ;
@@ -1189,7 +1189,7 @@ dlt:GraphML
       skos:prefLabel "Graph Machine Learning"@en .
 
 dlt:Translation
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Translation is the task of converting text from one language to another."@en ;
       skos:example "Model example: Very powerful model that can translate many languages between each other, especially low-resource languages."@en , "Library example: transformers."@en , "Dataset example: A dataset of copyright-free books translated into 16 different languages."@en , "Demo example: An application that can translate between 100 languages."@en ;
@@ -1197,7 +1197,7 @@ dlt:Translation
       skos:prefLabel "Translation"@en .
 
 dlt:KeypointDetection
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Keypoint detection is the task of identifying meaningful distinctive points or features in an image."@en ;
       skos:example "Dataset example: A dataset of hand keypoints of over 500k records."@en , "Model example: A robust keypoint detection model."@en , "Library example: transformers."@en , "Demo example: An application that detects hand keypoints in real-time."@en ;
@@ -1205,7 +1205,7 @@ dlt:KeypointDetection
       skos:prefLabel "Keypoint Detection"@en .
 
 dlt:VoiceActivityDetection
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/models-tags-by-type?type=pipeline_tag> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q1332614> ;
       skos:definition "Voice activity detection is the task of detecting the presence or absence of human speech."@en ;
@@ -1213,7 +1213,7 @@ dlt:VoiceActivityDetection
       skos:prefLabel "Voice Activity Detection"@en .
 
 dlt:TextClassification
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Text Classification is the task of assigning a label or class to a given text. Some use cases are sentiment analysis, natural language inference, and assessing grammatical correctness."@en ;
       skos:example "Model example: A robust model trained for sentiment analysis."@en , "Dataset example: A widely used dataset used to benchmark multiple variants of text classification."@en , "Library example: adapter-transformers."@en , "Demo example: An application that can classify financial sentiment."@en ;
@@ -1221,7 +1221,7 @@ dlt:TextClassification
       skos:prefLabel "Text Classification"@en .
 
 dlt:TextToSpeech
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Text-to-Speech (TTS) is the task of generating natural sounding speech given text input. TTS models can be extended to have a single model that generates speech for multiple speakers and multiple languages."@en ;
       skos:example "Model example: Small yet powerful TTS model."@en , "Dataset example: 10K hours of multi-speaker English dataset."@en , "Demo example: An application for generate high quality speech in different languages."@en , "Library example: espnet."@en ;
@@ -1229,7 +1229,7 @@ dlt:TextToSpeech
       skos:prefLabel "Text-to-Speech"@en .
 
 dlt:TextToImage
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Text-to-image is the task of generating images from input text. These pipelines can also be used to modify and edit images based on text prompts."@en ;
       skos:example "Library example: diffusers."@en , "Dataset example: RedCaps is a large-scale dataset of 12M image-text pairs collected from Reddit."@en , "Model example: One of the most powerful image generation models that can generate realistic outputs."@en , "Demo example: A powerful text-to-image application."@en ;
@@ -1237,7 +1237,7 @@ dlt:TextToImage
       skos:prefLabel "Text-to-Image"@en .
 
 dlt:VideoToVideo
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Video-to-video models take one or more videos as input and generate new videos as output. They can enhance quality, interpolate frames, modify styles, or create new motion dynamics, enabling creative applications, video production, and research."@en ;
       skos:example "Dataset example: Dataset with detailed annotations for training and benchmarking video instance editing."@en , "Library example: diffusers."@en , "Model example: Model for editing outfits, character, and scenery in videos."@en , "Demo example: Interactive demo space for Lucy-Edit-Dev video editing."@en ;
@@ -1245,7 +1245,7 @@ dlt:VideoToVideo
       skos:prefLabel "Video-to-Video"@en .
 
 dlt:TextRanking
-      a       dlo:TaskCategory , skos:Concept ;
+      a       dlo:Task , skos:Concept ;
       dcterms:source <https://huggingface.co/api/tasks> ;
       skos:definition "Text Ranking is the task of ranking a set of texts based on their relevance to a query. Text ranking models are trained on large datasets of queries and relevant documents to learn how to rank documents based on their relevance to the query. This task is particularly useful for search engines and information retrieval systems."@en ;
       skos:example "Model example: An extremely efficient text ranking model trained on a web search dataset."@en , "Dataset example: Bing queries with relevant passages from various web sources."@en , "Library example: sentence-transformers."@en ;
@@ -1255,7 +1255,7 @@ dlt:TextRanking
 # ----------------------------------- Task Ids
 
 dlt:NamedEntityRecognition
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q403574> ;
       skos:broader dlt:TokenClassification ;
@@ -1264,7 +1264,7 @@ dlt:NamedEntityRecognition
       skos:prefLabel "Named Entity Recognition"@en .
 
 dlt:PoseEstimation
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:broader dlt:KeypointDetection ;
       skos:definition "Pose estimation is the task of detecting and localizing keypoints on a human body, hand, or face in images and videos, outputting 2D or 3D coordinates."@en ;
@@ -1272,13 +1272,13 @@ dlt:PoseEstimation
       skos:prefLabel "Pose Estimation"@en .
 
 dlt:DocumentQuestionAnswering
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Document Question Answering"@en .
 
 dlt:OpenDomainAbstractiveQA
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/tasks/question-answering> , <https://huggingface.co/docs/transformers/tasks/question_answering> ;
       skos:broader dlt:QuestionAnswering ;
@@ -1287,7 +1287,7 @@ dlt:OpenDomainAbstractiveQA
       skos:prefLabel "Open Domain Abstractive QA"@en .
 
 dlt:EntityLinkingRetrieval
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Entity_linking> , <https://www.wikidata.org/wiki/Q816826> ;
       skos:broader dlt:TextRetrieval ;
@@ -1296,7 +1296,7 @@ dlt:EntityLinkingRetrieval
       skos:prefLabel "Entity Linking Retrieval"@en .
 
 dlt:MultiClassImageClassification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Multiclass_classification> ;
       skos:broader dlt:ImageClassification ;
@@ -1305,7 +1305,7 @@ dlt:MultiClassImageClassification
       skos:prefLabel "Multi Class Image Classification"@en .
 
 dlt:ExplanationGeneration
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:broader dlt:TextGeneration ;
       skos:definition "Explanation generation is the task of generating explanations for machine learning model predictions."@en ;
@@ -1313,7 +1313,7 @@ dlt:ExplanationGeneration
       skos:prefLabel "Explanation Generation"@en .
 
 dlt:MultiInputTextClassification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:broader dlt:TextClassification ;
       skos:definition "Multi-input text classification is the task of predicting one or more labels for a given example based on multiple separate text inputs provided simultaneously."@en ;
@@ -1321,7 +1321,7 @@ dlt:MultiInputTextClassification
       skos:prefLabel "Multi Input Text Classification"@en .
 
 dlt:KeywordSpotting
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Keyword_spotting> , <https://www.wikidata.org/wiki/Q6398558> ;
       skos:broader dlt:AutomaticSpeechRecognition ;
@@ -1330,7 +1330,7 @@ dlt:KeywordSpotting
       skos:prefLabel "Keyword Spotting"@en .
 
 dlt:DialogueGeneration
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q121409940> ;
       skos:broader dlt:TextGeneration ;
@@ -1339,7 +1339,7 @@ dlt:DialogueGeneration
       skos:prefLabel "Dialogue Generation"@en .
 
 dlt:TabularMultiLabelClassification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/tasks/tabular-classification> , <https://www.wikidata.org/wiki/Q3553958> ;
       skos:broader dlt:QuestionAnswering , dlt:TextClassification , dlt:TextGeneration , dlt:TabularClassification , dlt:MultipleChoice , dlt:ZeroShotClassification , dlt:TableQuestionAnswering ;
@@ -1348,7 +1348,7 @@ dlt:TabularMultiLabelClassification
       skos:prefLabel "Tabular Multi Label Classification"@en .
 
 dlt:PartOfSpeech
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q82042> ;
       skos:broader dlt:TokenClassification ;
@@ -1357,7 +1357,7 @@ dlt:PartOfSpeech
       skos:prefLabel "Part Of Speech"@en .
 
 dlt:LanguageModeling
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Language_model> ;
       skos:broader dlt:TextGeneration ;
@@ -1366,7 +1366,7 @@ dlt:LanguageModeling
       skos:prefLabel "Language Modeling"@en .
 
 dlt:MultiLabelClassification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q3553958> ;
       skos:broader dlt:TextClassification ;
@@ -1375,7 +1375,7 @@ dlt:MultiLabelClassification
       skos:prefLabel "Multi Label Classification"@en .
 
 dlt:SuperResolution
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q957423> ;
       skos:broader dlt:ImageSegmentation ;
@@ -1384,7 +1384,7 @@ dlt:SuperResolution
       skos:prefLabel "Super Resolution"@en .
 
 dlt:UnivariateTimeSeriesForecasting
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Time_series> ;
       skos:broader dlt:TimeSeriesForecasting ;
@@ -1393,7 +1393,7 @@ dlt:UnivariateTimeSeriesForecasting
       skos:prefLabel "Univariate Time Series Forecasting"@en .
 
 dlt:EntityLinkingClassification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.ibm.com/think/topics/classification-machine-learning> , <https://en.wikipedia.org/wiki/Entity_linking> ;
       skos:broader dlt:TextClassification ;
@@ -1402,7 +1402,7 @@ dlt:EntityLinkingClassification
       skos:prefLabel "Entity Linking Classification"@en .
 
 dlt:TextSimplification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Text_simplification> , <https://www.wikidata.org/wiki/Q3484781> ;
       skos:broader dlt:Summarization ;
@@ -1411,7 +1411,7 @@ dlt:TextSimplification
       skos:prefLabel "Text Simplification"@en .
 
 dlt:NaturalLanguageInference
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q29515364> ;
       skos:broader dlt:TextClassification ;
@@ -1420,7 +1420,7 @@ dlt:NaturalLanguageInference
       skos:prefLabel "Natural Language Inference"@en .
 
 dlt:ImageInpainting
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q117021514> ;
       skos:broader dlt:ImageToImage ;
@@ -1429,7 +1429,7 @@ dlt:ImageInpainting
       skos:prefLabel "Image Inpainting"@en .
 
 dlt:Conversational
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.ibm.com/think/topics/conversational-ai> , <https://www.wikidata.org/wiki/Q116961403> ;
       skos:broader dlt:TextGeneration ;
@@ -1438,7 +1438,7 @@ dlt:Conversational
       skos:prefLabel "Conversational"@en .
 
 dlt:TextScoring
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:broader dlt:TextClassification ;
       skos:definition "Text scoring is the task of assigning a numerical or categorical score to a piece of text to evaluate its quality, relevance, or readability."@en ;
@@ -1446,7 +1446,7 @@ dlt:TextScoring
       skos:prefLabel "Text Scoring"@en .
 
 dlt:HateSpeechDetection
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:broader dlt:TextClassification ;
       skos:definition "Hate speech detection is the task of detecting language used to express hatred, intolerance, or violence toward a particular group or individual based on characteristics such as race, ethnicity, nationality, religion, gender, or sexual orientation."@en ;
@@ -1454,7 +1454,7 @@ dlt:HateSpeechDetection
       skos:prefLabel "Hate Speech Detection"@en .
 
 dlt:DialogueModeling
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:broader dlt:TextGeneration ;
       skos:definition "Dialogue modeling is the task of organizing information in a conversation, where each event updates the current state of the dialogue based on the contents of the event."@en ;
@@ -1462,7 +1462,7 @@ dlt:DialogueModeling
       skos:prefLabel "Dialogue Modeling"@en .
 
 dlt:SpeakerIdentification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:broader dlt:AutomaticSpeechRecognition ;
       skos:definition "Speaker identification is the task of determining the identity of an unknown speaker by comparing voice patterns with a database of known patterns, typically in a 1:N match."@en ;
@@ -1470,7 +1470,7 @@ dlt:SpeakerIdentification
       skos:prefLabel "Speaker Identification"@en .
 
 dlt:ClosedBookQA
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/tasks/question-answering> ;
       skos:broader dlt:QuestionAnswering , dlt:TextGeneration ;
@@ -1479,7 +1479,7 @@ dlt:ClosedBookQA
       skos:prefLabel "Closed Book QA"@en .
 
 dlt:NewsArticlesSummarization
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/docs/transformers/tasks/summarization> ;
       skos:broader dlt:Summarization , dlt:QuestionAnswering , dlt:TextClassification , dlt:TextGeneration , dlt:TokenClassification ;
@@ -1488,7 +1488,7 @@ dlt:NewsArticlesSummarization
       skos:prefLabel "News Articles Summarization"@en .
 
 dlt:CoreferenceResolution
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q63087> ;
       skos:broader dlt:TokenClassification ;
@@ -1497,7 +1497,7 @@ dlt:CoreferenceResolution
       skos:prefLabel "Coreference Resolution"@en .
 
 dlt:NewsArticlesHeadlineGeneration
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:broader dlt:Summarization ;
       skos:definition "News articles headline generation is the task of generating a headline from the content of a news article."@en ;
@@ -1505,7 +1505,7 @@ dlt:NewsArticlesHeadlineGeneration
       skos:prefLabel "News Articles Headline Generation"@en .
 
 dlt:DocumentRetrieval
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q1638872> ;
       skos:broader dlt:TextRetrieval ;
@@ -1514,7 +1514,7 @@ dlt:DocumentRetrieval
       skos:prefLabel "Document Retrieval"@en .
 
 dlt:SemanticSimilarityScoring
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q2268914> , <https://en.wikipedia.org/wiki/Semantic_similarity> ;
       skos:broader dlt:SentenceSimilarity ;
@@ -1523,7 +1523,7 @@ dlt:SemanticSimilarityScoring
       skos:prefLabel "Semantic Similarity Scoring"@en .
 
 dlt:Parsing
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q194152> ;
       skos:broader dlt:TokenClassification ;
@@ -1532,7 +1532,7 @@ dlt:Parsing
       skos:prefLabel "Parsing"@en .
 
 dlt:Lemmatization
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.ibm.com/think/topics/stemming-lemmatization> , <https://www.wikidata.org/wiki/Q2554325> ;
       skos:broader dlt:TokenClassification ;
@@ -1541,7 +1541,7 @@ dlt:Lemmatization
       skos:prefLabel "Lemmatization"@en .
 
 dlt:MultipleChoiceQA
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/docs/transformers/tasks/multiple_choice> ;
       skos:broader dlt:QuestionAnswering , dlt:MultipleChoice ;
@@ -1550,7 +1550,7 @@ dlt:MultipleChoiceQA
       skos:prefLabel "Multiple Choice QA"@en .
 
 dlt:MultiLabelImageClassification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:broader dlt:ImageClassification ;
       skos:definition "Multi-label image classification is the task of assigning multiple relevant categories to an image."@en ;
@@ -1558,7 +1558,7 @@ dlt:MultiLabelImageClassification
       skos:prefLabel "Multi Label Image Classification"@en .
 
 dlt:SentimentClassification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/blog/sentiment-analysis-python> , <https://en.wikipedia.org/wiki/Sentiment_analysis> ;
       skos:broader dlt:TextClassification ;
@@ -1567,7 +1567,7 @@ dlt:SentimentClassification
       skos:prefLabel "Sentiment Classification"@en .
 
 dlt:UtteranceRetrieval
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q816826> ;
       skos:broader dlt:TextRetrieval ;
@@ -1576,7 +1576,7 @@ dlt:UtteranceRetrieval
       skos:prefLabel "Utterance Retrieval"@en .
 
 dlt:PanopticSegmentation
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q54806643> ;
       skos:broader dlt:ObjectDetection , dlt:ImageSegmentation ;
@@ -1585,7 +1585,7 @@ dlt:PanopticSegmentation
       skos:prefLabel "Panoptic Segmentation"@en .
 
 dlt:SlotFilling
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:broader dlt:TokenClassification ;
       skos:definition "Slot filling is the task of identifying meaningful slots in text."@en ;
@@ -1593,7 +1593,7 @@ dlt:SlotFilling
       skos:prefLabel "Slot Filling"@en .
 
 dlt:ImageCaptioning
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/docs/transformers/tasks/image_captioning> , <https://www.wikidata.org/wiki/Q39161486> ;
       skos:broader dlt:ImageToText ;
@@ -1602,7 +1602,7 @@ dlt:ImageCaptioning
       skos:prefLabel "Image Captioning"@en .
 
 dlt:AudioLanguageIdentification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q1050419> ;
       skos:broader dlt:AudioClassification ;
@@ -1611,13 +1611,13 @@ dlt:AudioLanguageIdentification
       skos:prefLabel "Audio Language Identification"@en .
 
 dlt:VisualQuestionAnswering
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Visual Question Answering"@en .
 
 dlt:TopicClassification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.ibm.com/think/topics/topic-modeling> ;
       skos:broader dlt:TextClassification ;
@@ -1626,7 +1626,7 @@ dlt:TopicClassification
       skos:prefLabel "Topic Classification"@en .
 
 dlt:MultivariateTimeSeriesForecasting
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:broader dlt:TimeSeriesForecasting ;
       skos:definition "Multivariate time series forecasting is the task of predicting future values of multiple related variables by learning from their past behavior over time."@en ;
@@ -1634,7 +1634,7 @@ dlt:MultivariateTimeSeriesForecasting
       skos:prefLabel "Multivariate Time Series Forecasting"@en .
 
 dlt:SemanticSimilarityClassification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q2268914> , <https://en.wikipedia.org/wiki/Semantic_similarity> ;
       skos:broader dlt:TextClassification ;
@@ -1643,7 +1643,7 @@ dlt:SemanticSimilarityClassification
       skos:prefLabel "Semantic Similarity Classification"@en .
 
 dlt:AudioIntentClassification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:broader dlt:AudioClassification ;
       skos:definition "Audio intent classification is the task of deducing the specific purpose or objective behind a user's input in a conversational context from audio."@en ;
@@ -1651,7 +1651,7 @@ dlt:AudioIntentClassification
       skos:prefLabel "Audio Intent Classification"@en .
 
 dlt:RDFToText
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q133318892> ;
       skos:broader dlt:GraphMl ;
@@ -1660,7 +1660,7 @@ dlt:RDFToText
       skos:prefLabel "RDF-to-Text"@en .
 
 dlt:FactChecking
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q59555084> ;
       skos:broader dlt:TextClassification ;
@@ -1669,7 +1669,7 @@ dlt:FactChecking
       skos:prefLabel "Fact Checking"@en .
 
 dlt:SentimentScoring
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/blog/sentiment-analysis-python> , <https://en.wikipedia.org/wiki/Sentiment_analysis> ;
       skos:broader dlt:TextClassification ;
@@ -1678,7 +1678,7 @@ dlt:SentimentScoring
       skos:prefLabel "Sentiment Scoring"@en .
 
 dlt:SemanticSegmentation
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.ibm.com/think/topics/semantic-segmentation> , <https://www.wikidata.org/wiki/Q120970636> ;
       skos:broader dlt:ImageSegmentation ;
@@ -1687,7 +1687,7 @@ dlt:SemanticSegmentation
       skos:prefLabel "Semantic Segmentation"@en .
 
 dlt:ExtractiveQA
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/docs/autotrain/en/extractive_qa> ;
       skos:broader dlt:QuestionAnswering ;
@@ -1696,7 +1696,7 @@ dlt:ExtractiveQA
       skos:prefLabel "Extractive QA"@en .
 
 dlt:Grasping
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q5597405> ;
       skos:broader dlt:Robotics ;
@@ -1705,7 +1705,7 @@ dlt:Grasping
       skos:prefLabel "Grasping"@en .
 
 dlt:VehicleDetection
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q2296025> ;
       skos:broader dlt:ObjectDetection ;
@@ -1714,7 +1714,7 @@ dlt:VehicleDetection
       skos:prefLabel "Vehicle Detection"@en .
 
 dlt:LanguageIdentification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q1050419> ;
       skos:broader dlt:TextClassification ;
@@ -1723,7 +1723,7 @@ dlt:LanguageIdentification
       skos:prefLabel "Language Identification"@en .
 
 dlt:Text2TextGeneration
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:broader dlt:TextGeneration ;
       skos:definition "Text-to-text generation is the task of transforming input text into a different, task-specific output."@en ;
@@ -1731,7 +1731,7 @@ dlt:Text2TextGeneration
       skos:prefLabel "Text2Text Generation"@en .
 
 dlt:OpenDomainQA
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q121409954> , <https://huggingface.co/tasks/question-answering> ;
       skos:broader dlt:QuestionAnswering ;
@@ -1740,7 +1740,7 @@ dlt:OpenDomainQA
       skos:prefLabel "Open Domain QA"@en .
 
 dlt:FactCheckingRetrieval
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q59555084> , <https://www.wikidata.org/wiki/Q816826> ;
       skos:broader dlt:TextRetrieval ;
@@ -1749,7 +1749,7 @@ dlt:FactCheckingRetrieval
       skos:prefLabel "Fact Checking Retrieval"@en .
 
 dlt:ImageColorization
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:broader dlt:ImageToImage ;
       skos:definition "Image colorization is the task of adding colors to grayscale images."@en ;
@@ -1757,7 +1757,7 @@ dlt:ImageColorization
       skos:prefLabel "Image Colorization"@en .
 
 dlt:OpenBookQA
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/tasks/question-answering> ;
       skos:broader dlt:QuestionAnswering , dlt:TextGeneration ;
@@ -1766,7 +1766,7 @@ dlt:OpenBookQA
       skos:prefLabel "Open Book QA"@en .
 
 dlt:TaskPlanning
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Automated_planning_and_scheduling> ;
       skos:broader dlt:TextGeneration ;
@@ -1775,7 +1775,7 @@ dlt:TaskPlanning
       skos:prefLabel "Task Planning"@en .
 
 dlt:MaskedLanguageModeling
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q24868018> ;
       skos:broader dlt:FillMask , dlt:TextGeneration ;
@@ -1784,7 +1784,7 @@ dlt:MaskedLanguageModeling
       skos:prefLabel "Masked Language Modeling"@en .
 
 dlt:AbstractiveQA
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/docs/transformers/tasks/question_answering> ;
       skos:broader dlt:QuestionAnswering ;
@@ -1793,7 +1793,7 @@ dlt:AbstractiveQA
       skos:prefLabel "Abstractive QA"@en .
 
 dlt:InstanceSegmentation
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q54556143> , <https://www.ibm.com/think/topics/instance-segmentation> ;
       skos:broader dlt:ObjectDetection , dlt:ImageSegmentation ;
@@ -1802,7 +1802,7 @@ dlt:InstanceSegmentation
       skos:prefLabel "Instance Segmentation"@en .
 
 dlt:IntentClassification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:broader dlt:TextClassification ;
       skos:definition "Intent classification is the task of deducing the specific purpose or objective behind a user's input in a conversational context."@en ;
@@ -1810,7 +1810,7 @@ dlt:IntentClassification
       skos:prefLabel "Intent Classification"@en .
 
 dlt:SentimentAnalysis
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q2271421> ;
       skos:broader dlt:TextClassification ;
@@ -1819,7 +1819,7 @@ dlt:SentimentAnalysis
       skos:prefLabel "Sentiment Analysis"@en .
 
 dlt:WordSenseDisambiguation
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q48522> ;
       skos:broader dlt:TokenClassification ;
@@ -1828,7 +1828,7 @@ dlt:WordSenseDisambiguation
       skos:prefLabel "Word Sense Disambiguation"@en .
 
 dlt:MultiClassClassification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q6934605> ;
       skos:broader dlt:TextClassification ;
@@ -1837,7 +1837,7 @@ dlt:MultiClassClassification
       skos:prefLabel "Multi Class Classification"@en .
 
 dlt:AcceptabilityClassification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       skos:broader dlt:TextClassification ;
       skos:definition "Acceptability classification is the task of predicting sentence acceptability based on grammatical correctness."@en ;
@@ -1845,7 +1845,7 @@ dlt:AcceptabilityClassification
       skos:prefLabel "Acceptability Classification"@en .
 
 dlt:TabularSingleColumnRegression
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/tasks/tabular-regression> ;
       skos:broader dlt:TabularRegression ;
@@ -1854,7 +1854,7 @@ dlt:TabularSingleColumnRegression
       skos:prefLabel "Tabular Single Column Regression"@en .
 
 dlt:ClosedDomainQA
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/tasks/question-answering> ;
       skos:broader dlt:QuestionAnswering ;
@@ -1863,7 +1863,7 @@ dlt:ClosedDomainQA
       skos:prefLabel "Closed Domain QA"@en .
 
 dlt:FaceDetection
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q11681085> ;
       skos:broader dlt:ObjectDetection ;
@@ -1872,7 +1872,7 @@ dlt:FaceDetection
       skos:prefLabel "Face Detection"@en .
 
 dlt:MultipleChoiceCoreferenceResolution
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://huggingface.co/docs/transformers/tasks/multiple_choice> ;
       skos:broader dlt:MultipleChoice ;
@@ -1881,7 +1881,7 @@ dlt:MultipleChoiceCoreferenceResolution
       skos:prefLabel "Multiple Choice Coreference Resolution"@en .
 
 dlt:AudioEmotionRecognition
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://www.wikidata.org/wiki/Q1339090> ;
       skos:broader dlt:AudioClassification ;
@@ -1890,7 +1890,7 @@ dlt:AudioEmotionRecognition
       skos:prefLabel "Audio Emotion Recognition"@en .
 
 dlt:TabularMultiClassClassification
-      a       skos:Concept , dlo:Task ;
+      a       skos:Concept , dlo:SubTask ;
       dcterms:source <https://huggingface.co/api/datasets-tags-by-type?type=task_ids> ;
       owl:seeAlso <https://en.wikipedia.org/wiki/Multiclass_classification> , <https://huggingface.co/tasks/tabular-classification> ;
       skos:broader dlt:TabularClassification ;

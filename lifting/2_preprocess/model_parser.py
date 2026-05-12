@@ -2,8 +2,9 @@ import argparse
 import json
 from pathlib import Path
 from typing import Any
+from .canonical_thesaurus import canonicalize, get_tag_alone
 from .parser_tools import (
-    build_uris, canonicalize_modalities, dedupe, fallback_model_libraries, get_tag_values, hash16, infer_language_tokens,
+    build_uris, dedupe, fallback_model_libraries, get_tag_with_prefix, hash16, infer_language_tokens,
     normalize_and_dedupe_tags, normalize_boolean, normalize_string, remove_consumed_tags, paper_url)
 
 BASE_MODEL_RELATIONS = {
@@ -20,10 +21,10 @@ BASE_MODEL_RELATIONS = {
 }
 
 DERIVATION_TYPES = {
-    "finetuned": "fineTune",
-    "quantized": "quantize",
-    "merged": "merge",
-    "adapter": "adapt",
+    "finetuned": "Finetune",
+    "quantized": "Quantize",
+    "merged": "Merge",
+    "adapter": "Adapt",
 }
 
 def author_from_hf_id(resource_id: str | None) -> str | None:
@@ -96,24 +97,25 @@ def parse(json_obj: dict[str, Any]) -> tuple[dict[str, Any], int]:
 
     tags, removed_count = normalize_and_dedupe_tags(parsed.get("tags", []))
 
-    region_tokens = dedupe(get_tag_values(tags, "region:"))
-    explicit_language_values = get_tag_values(tags, "language:")
+    region_tokens = get_tag_with_prefix(tags, "region:")
+    explicit_language_values = get_tag_with_prefix(tags, "language:")
     language_tokens = infer_language_tokens(tags, explicit_language_values)
-    license_tokens = dedupe(get_tag_values(tags, "license:"))
+    license_tokens = get_tag_with_prefix(tags, "license:")
 
     parsed["language_uris"] = build_uris(language_tokens, "language")
     parsed["region_uris"] = build_uris(region_tokens, "region")
     parsed["license_uris"] = build_uris(license_tokens, "license")
 
-    parsed["task_categories"] = normalize_string(parsed.get("pipeline_tag"))
-    parsed["modalities"] = canonicalize_modalities(dedupe(get_tag_values(tags, "modality:")))
-    (parsed["thesaurus_libraries"],parsed["fallback_instances"]) = fallback_model_libraries([parsed.get("library_name")] + dedupe(get_tag_values(tags, "library:")))
-    parsed["formats"] = dedupe(get_tag_values(tags, "format:"))
+    # Thesaurus
+    parsed["task_categories"] = canonicalize(get_tag_alone(tags, "task")+ [parsed.get("pipeline_tag")])
+    parsed["modalities"] = canonicalize(get_tag_with_prefix(tags, "modality:") + get_tag_alone(tags, "modality"), "modality")
+    (parsed["thesaurus_libraries"],parsed["fallback_instances"]) = fallback_model_libraries([parsed.get("library_name")] + get_tag_with_prefix(tags, "library:") + get_tag_alone(tags, "model_library"))
+    parsed["formats"] = canonicalize(get_tag_with_prefix(tags, "format:") + get_tag_alone(tags, "format"), "format")
 
-    doi_ids = dedupe(get_tag_values(tags, "doi:"))
-    arxiv_ids = dedupe(get_tag_values(tags, "arxiv:"))
+    doi_ids = get_tag_with_prefix(tags, "doi:")
+    arxiv_ids = get_tag_with_prefix(tags, "arxiv:")
     parsed["paperid"] = doi_ids if doi_ids else (arxiv_ids if arxiv_ids else None)    
-    parsed["doi"] = dedupe(get_tag_values(tags, "doi:"))
+    parsed["doi"] = get_tag_with_prefix(tags, "doi:")
     parsed["paperurl"] = paper_url(
         [
             *[f"doi:{value}" for value in doi_ids],
@@ -121,7 +123,7 @@ def parse(json_obj: dict[str, Any]) -> tuple[dict[str, Any], int]:
         ]
     )
 
-    dataset_ids = dedupe(get_tag_values(tags, "dataset:"))
+    dataset_ids = get_tag_with_prefix(tags, "dataset:")
     parsed["datasets_hash16"] = [hash16(dataset_id) for dataset_id in dataset_ids]
     source_models = parse_base_model_tags(tags)
     parsed["source_models"] = source_models
@@ -136,7 +138,7 @@ def parse(json_obj: dict[str, Any]) -> tuple[dict[str, Any], int]:
     paperid_values = parsed["paperid"] or []
     tags, consumed_removed_count = remove_consumed_tags(
         tags,
-        exact_tags=dedupe(language_tokens + parsed["formats"] + parsed["thesaurus_libraries"] + [parsed["task_categories"]] + paperid_values + dataset_ids),
+        exact_tags=dedupe(language_tokens + parsed["formats"] + parsed["thesaurus_libraries"] + parsed["task_categories"] + paperid_values + dataset_ids),
         prefixes=[
             "region:",
             "language:",

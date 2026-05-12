@@ -42,7 +42,7 @@ def split_json_into_batches(input_file: Path, output_dir: Path, batch_count: int
     return written_files
 
 
-def run_default_splits(input_root: Path) -> None:
+def run_default_splits(input_root: Path, dataset_batch_count: int, model_batch_count: int) -> None:
     datasets_file = input_root / "datasets.json"
     models_file = input_root / "models.json"
 
@@ -52,13 +52,13 @@ def run_default_splits(input_root: Path) -> None:
     dataset_files = split_json_into_batches(
         input_file=datasets_file,
         output_dir=datasets_out,
-        batch_count=4,
+        batch_count=dataset_batch_count,
         prefix="datasets",
     )
     model_files = split_json_into_batches(
         input_file=models_file,
         output_dir=models_out,
-        batch_count=12,
+        batch_count=model_batch_count,
         prefix="models",
     )
 
@@ -68,7 +68,7 @@ def run_default_splits(input_root: Path) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Split input/datasets.json into 4 batches and input/models.json into 12 batches."
+        description="Split input/datasets.json into 8 batches and input/models.json into 24 batches."
     )
     parser.add_argument(
         "--input-root",
@@ -76,9 +76,22 @@ def main() -> None:
         default=Path(__file__).resolve().parents[1] / "input",
         help="Path to the input folder (default: lifting/input)",
     )
+    parser.add_argument(
+        "--dataset-batch-count",
+        type=int,
+        default=8,
+        help="Number of batches to split datasets into (default: 8)",
+    )
+    parser.add_argument(
+        "--model-batch-count",
+        type=int,
+        default=24,
+        help="Number of batches to split models into (default: 24)",
+    )
+
     args = parser.parse_args()
 
-    run_default_splits(args.input_root)
+    run_default_splits(args.input_root, args.dataset_batch_count, args.model_batch_count)
 
 
 if __name__ == "__main__":

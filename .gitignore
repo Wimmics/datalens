@@ -331,10 +331,12 @@ virtuoso-server/virtuoso-data/**
 case-study/data/**
 
 ontology/do_not_commit/**
+ontology/used-vocabularies/**
 _old/**
 _other/**
 lifting/output/**
 lifting/input/**
+
 *.json
 
 # visualization files

@@ -11,47 +11,6 @@ LANGUAGE_3 = re.compile(r"^[a-z]{3}$")
 LANGUAGE_BCP47 = re.compile(r"^[a-z]{2,3}(?:[-_][a-z0-9]{2,8})*$")
 REGION_ALPHA2 = re.compile(r"^[a-z]{2}$")
 
-MODALITY_CANONICAL = {
-    "3d": "3D",
-    "text": "Text",
-    "tabular": "Tabular",
-    "image": "Image",
-    "audio": "Audio",
-    "video": "Video",
-    "timeseries": "TimeSeries",
-    "time_series": "TimeSeries",
-    "time-series": "TimeSeries",
-}
-
-SIZE_CATEGORY_CANONICAL = {
-    "n<1k": "1",
-    "<1k": "1",
-    "lt-1k": "1",
-    "size-lt-1k": "1",
-    "1k<n<10k": "1k",
-    "size-1k-to-10k": "1k",
-    "10k<n<100k": "10k",
-    "size-10k-to-100k": "10k",
-    "100k<n<1m": "100k",
-    "size-100k-to-1m": "100k",
-    "1m<n<10m": "1m",
-    "size-1m-to-10m": "1m",
-    "10m<n<100m": "10m",
-    "size-10m-to-100m": "10m",
-    "100m<n<1b": "100m",
-    "size-100m-to-1b": "100m",
-    "1b<n<10b": "1b",
-    "size-1b-to-10b": "1b",
-    "10b<n<100b": "10b",
-    "size-10b-to-100b": "10b",
-    "100b<n<1t": "100b",
-    "size-100b-to-1t": "100b",
-    "n>1t": "1t",
-    ">1t": "1t",
-    "gt-1t": "1t",
-    "size-gt-1t": "1t",
-}
-
 SPDX_CANONICAL_IDS = {
     "apache-2.0": "Apache-2.0",
     "afl-3.0": "AFL-3.0",
@@ -290,35 +249,15 @@ def remove_consumed_tags(
     return cleaned_tags, removed_count
 
 
-def get_tag_values(tags: list[str], prefix: str) -> list[str]:
+def get_tag_with_prefix(tags: list[str], prefix: str) -> list[str]:
     values: list[str] = []
     for tag in tags:
         if tag.startswith(prefix):
             value = normalize_string(tag.split(":", 1)[1])
             if value:
                 values.append(value)
+                tags.remove(tag)
     return dedupe(values)
-
-
-def canonicalize_modalities(values: list[str]) -> list[str]:
-    output: list[str] = []
-    for value in values:
-        key = value.lower().replace(" ", "").replace("_", "-")
-        canonical = MODALITY_CANONICAL.get(key, value.replace("_", "-").title().replace("-", ""))
-        output.append(canonical)
-    return dedupe(output)
-
-
-def canonicalize_size_categories(values: list[str]) -> list[str]:
-    output: list[str] = []
-    for value in values:
-        key = normalize_string(value)
-        if not key:
-            continue
-        normalized_key = key.lower().replace(" ", "")
-        canonical = SIZE_CATEGORY_CANONICAL.get(normalized_key, key)
-        output.append(canonical)
-    return dedupe(output)
 
 def fallback_model_libraries(values: list[str]) -> tuple[list[str], list[dict[str, Any]]]:
     thesaurus_libraries: list[str] = []
@@ -406,6 +345,8 @@ def infer_language_tokens(tags: list[str], explicit_values: list[str]) -> list[s
 def paper_url(paperids: list[str]) -> list[str]:
     urls: list[str] = []
     for paperid in paperids:
+        if not paperid:
+            continue
         if paperid.startswith("arxiv:"):
             arxiv_id = paperid.split(":", 1)[1]
             urls.append(f"https://arxiv.org/abs/{arxiv_id}")

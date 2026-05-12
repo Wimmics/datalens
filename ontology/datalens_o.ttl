@@ -18,7 +18,7 @@
 dlo: a owl:Ontology ;
     dcterms:title "Datalens Ontology"@en ;
     dcterms:creator "Aline MENIN", "Zachari ARNAUD" ;
-    dcterms:modified "2026-05-6" ;
+    dcterms:modified "2026-05-11" ;
     dcterms:description "The Datalens Ontology defines concepts and relationships for datasets and machine learning models."@en ;
     owl:versionInfo "1.0" ;
     dcat:landingPage <https://github.com/amenin/datalens> ;
@@ -26,7 +26,15 @@ dlo: a owl:Ontology ;
     dcterms:created "2026"^^xsd:gYear ;
     dcterms:publisher "Inria", "University Côte d'Azur", "CNRS" .
 
-## Concepts related to both datasets and models
+
+# Class MLResource
+
+dlo:MLResource a owl:Class ;
+    rdfs:label "Ressource"@en ;
+    rdfs:comment "A ressource like a dataset or a machine learning model."@en ;
+    rdfs:subClassOf prov:Entity .
+
+## Classes related to Ressource
 dlo:SubTask a owl:Class ;
     rdfs:label "Machine Learning Sub-task"@en ;
     rdfs:comment "A specific sub-task or problem that a machine learning model is designed to solve."@en .
@@ -43,8 +51,65 @@ dlo:Library a owl:Class ;
     rdfs:label "Library"@en ;
     rdfs:comment "A machine learning library."@en .
 
-   
-## Concepts related to datasets
+## Properties for Ressource
+dlo:downloadCount a owl:DatatypeProperty ;
+    rdfs:label "download count"@en ;
+    rdfs:comment "The number of times a resource has been downloaded."@en ;
+    rdfs:domain  dlo:Ressource;
+    rdfs:range xsd:integer .
+
+dlo:likesCount a owl:DatatypeProperty ;
+    rdfs:label "likes count"@en ;
+    rdfs:comment "The number of likes or positive feedback a resource has received."@en ;
+    rdfs:domain  dlo:Ressource;    
+    rdfs:range xsd:integer .
+
+dlo:hasModality a owl:DatatypeProperty ;
+    rdfs:label "has modality"@en ;
+    rdfs:comment "Relates a dataset to a specific modality or type of data used in the context of machine learning."@en ;
+    rdfs:domain  dlo:Ressource;
+    rdfs:range dlo:Modality .
+
+dlo:hasSubTask a owl:ObjectProperty ;
+    rdfs:label "has ML sub-task"@en ;
+    rdfs:comment "Relates a resource to a specific sub-task."@en ;
+    rdfs:domain  dlo:Ressource;
+    rdfs:range dlo:SubTask .
+
+dlo:hasTask a owl:ObjectProperty ;
+    rdfs:label "has ML task"@en ;
+    rdfs:comment "Relates a resource to a machine learning task."@en ;
+    rdfs:domain  dlo:Ressource;
+    rdfs:range dlo:Task .
+
+dlo:hasLibrary a owl:ObjectProperty ;
+    rdfs:label "has library"@en ;
+    rdfs:comment "Relates a resource to a machine learning library."@en ;
+    rdfs:domain  dlo:Ressource;
+    rdfs:range dlo:Library .
+
+dlo:hasAcademicArticle a owl:ObjectProperty ;
+    rdfs:label "has scientific article"@en ;
+    rdfs:comment "Relates a resource to a scholarly article or paper that describes it."@en ;
+    rdfs:domain  dlo:Ressource;    
+    rdfs:range bibo:AcademicArticle .
+
+# dlo:isAvailable a owl:DatatypeProperty ;
+#     rdfs:label "availability status"@en ;
+#     rdfs:comment "The availability status of a resource, indicating whether it is enabled or disabled."@en ;
+#     rdfs:domain  dlo:Ressource ;
+#     rdfs:range  xsd:boolean .
+
+
+# Class Dataset
+
+dlo:Dataset a owl:Class ;
+    rdfs:label "Dataset"@en ;
+    rdfs:comment "A dataset published on a platform such as Hugging Face."@en ;
+    rdfs:subClassOf dcat:Dataset ;
+    rdfs:subClassOf dlo:Ressource .
+
+## Classes related to datasets
 dlo:SizeCategory a owl:Class ;
     rdfs:label "Size Category"@en ;
     rdfs:comment "Categories for the size of a dataset, according to HuggingFace definition."@en .
@@ -54,6 +119,7 @@ dlo:Annotation a owl:Class ;
     rdfs:label "Annotation"@en ;
     rdfs:comment "A comment or note related to a dataset or a machine learning model."@en .
 
+### Properties for annotations
 dlo:annotationMethod a owl:DatatypeProperty ;
     rdfs:label "annotation method"@en ;
     rdfs:comment "The method or technique used to create an annotation for a dataset or a machine learning model."@en ;
@@ -66,121 +132,51 @@ dlo:linguisticMethod a owl:DatatypeProperty ;
     rdfs:domain dlo:Annotation ;
     rdfs:range rdfs:Literal .
 
-## Properties for both datasets and models
-# dlo:isAvailable a owl:DatatypeProperty ;
-#     rdfs:label "availability status"@en ;
-#     rdfs:comment "The availability status of a dataset or model, indicating whether it is enabled or disabled."@en ;
-#     rdfs:domain  [ 
-#         a owl:Class ;
-#         owl:unionOf (dcat:Dataset dlo:Model) 
-#     ] ;
-#     rdfs:range  xsd:boolean .
-
-dlo:downloadCount a owl:DatatypeProperty ;
-    rdfs:label "download count"@en ;
-    rdfs:comment "The number of times a dataset or model has been downloaded."@en ;
-    rdfs:domain  [ 
-        a owl:Class ;
-        owl:unionOf (dcat:Dataset dlo:Model) 
-    ] ;
-    rdfs:range xsd:integer .
-
-dlo:likesCount a owl:DatatypeProperty ;
-    rdfs:label "likes count"@en ;
-    rdfs:comment "The number of likes or positive feedback a dataset or model has received."@en ;
-    rdfs:domain  [ 
-        a owl:Class ;
-        owl:unionOf (dcat:Dataset dlo:Model) 
-    ] ;    rdfs:range xsd:integer .
-
-dlo:hasModality a owl:DatatypeProperty ;
-    rdfs:label "has modality"@en ;
-    rdfs:comment "Relates a dataset to a specific modality or type of data used in the context of machine learning."@en ;
-    rdfs:domain  [ 
-        a owl:Class ;
-        owl:unionOf (dcat:Dataset dlo:Model) 
-    ] ;
-    rdfs:range dlo:Modality .
-
-dlo:hasSubTask a owl:ObjectProperty ;
-    rdfs:label "has ML sub-task"@en ;
-    rdfs:comment "Relates a dataset or model to a specific sub-task."@en ;
-    rdfs:domain  [ 
-        a owl:Class ;
-        owl:unionOf (dcat:Dataset dlo:Model) 
-    ] ;
-    rdfs:range dlo:SubTask .
-
-dlo:hasTask a owl:ObjectProperty ;
-    rdfs:label "has ML task"@en ;
-    rdfs:comment "Relates a dataset or model to a machine learning task."@en ;
-    rdfs:domain  [ 
-        a owl:Class ;
-        owl:unionOf (dcat:Dataset dlo:Model) 
-    ] ;
-    rdfs:range dlo:Task .
-
-dlo:hasLibrary a owl:ObjectProperty ;
-    rdfs:label "has library"@en ;
-    rdfs:comment "Relates a dataset or model to a machine learning library."@en ;
-    rdfs:domain  [ 
-        a owl:Class ;
-        owl:unionOf (dcat:Dataset dlo:Model) 
-    ] ;
-    rdfs:range dlo:Library .
-
-dlo:hasAcademicArticle a owl:ObjectProperty ;
-    rdfs:label "has scientific article"@en ;
-    rdfs:comment "Relates a dataset or model to a scholarly article or paper that describes it."@en ;
-    rdfs:domain  [ 
-        a owl:Class ;
-        owl:unionOf (dcat:Dataset dlo:Model) 
-    ] ;    rdfs:range bibo:AcademicArticle .
-
-## Properties specific to datasets
+## Properties for datasets
 dlo:hasAnnotation a owl:ObjectProperty ;
     rdfs:label "has annotation"@en ;
     rdfs:comment "Relates a dataset to its annotations, which provide additional information or context."@en ;
-    rdfs:domain dcat:Dataset ;
+    rdfs:domain dlo:Dataset ;
     rdfs:range dlo:Annotation .
 
 dlo:hasSize a owl:DatatypeProperty ;
     rdfs:label "has size"@en ;
     rdfs:comment "Relates a dataset to a size category"@en ;
-    rdfs:domain dcat:Dataset ;
+    rdfs:domain dlo:Dataset ;
     rdfs:range dlo:SizeCategory .
 
 
+# Class Model
 
-## Machine Learning models
-
-@prefix mls: <http://www.w3.org/ns/mls#> .
-
-# La class Model peut provenir de mls ou de dlo
+## @prefix mls: <http://www.w3.org/ns/mls#> .
+## La class Model peut provenir de mls ou de dlo
 
 dlo:Model a owl:Class ;
     rdfs:label "Machine Learning Model"@en ;
     rdfs:comment "A machine learning model published on a platform such as Hugging Face."@en ;
-    rdfs:subClassOf schema:SoftwareSourceCode .
+    rdfs:subClassOf schema:SoftwareSourceCode ;
+    rdfs:subClassOf dlo:Ressource .
+
+## Classes related to models
+dlo:Transformation a owl:Class ;
+    rdfs:subClassOf prov:Activity ;
+    rdfs:label "Model Transformation"@en ;
+    rdfs:comment "A transformation or modification applied to a machine learning model."@en .
+
+dlo:ModelArchitecture a owl:Class ;
+    rdfs:label "Model Architecture"@en ;
+    rdfs:comment "The architecture of a machine learning model, such as transformer, convolutional neural network, etc."@en .
+
+## Properties for models
+dlo:wasTrainedOn a owl:ObjectProperty ;
+    rdfs:subPropertyOf prov:wasInfluencedBy ;
+    rdfs:label "was trained on"@en ;
+    rdfs:comment "Relates a machine learning model to a dataset used for training or pretraining."@en ;
+    rdfs:domain dlo:Model ;
+    rdfs:range dlo:Dataset .
 
 dlo:hasModelArchitecture a owl:DatatypeProperty ;
     rdfs:label "model architecture"@en ;
     rdfs:comment "The architecture declared by the model configuration."@en ;
     rdfs:domain dlo:Model ;
     rdfs:range dlo:ModelArchitecture .
-
-dlo:ModelArchitecture a owl:Class ;
-    rdfs:label "Model Architecture"@en ;
-    rdfs:comment "The architecture of a machine learning model, such as transformer, convolutional neural network, etc."@en .
-
-dlo:wasTrainedOn a owl:ObjectProperty ;
-    rdfs:subPropertyOf prov:wasInfluencedBy ;
-    rdfs:label "was trained on"@en ;
-    rdfs:comment "Relates a machine learning model to a dataset used for training or pretraining."@en ;
-    rdfs:domain dlo:Model ;
-    rdfs:range dcat:Dataset .
-
-dlo:Transformation a owl:Class ;
-    rdfs:subClassOf prov:Activity ;
-    rdfs:label "Model Transformation"@en ;
-    rdfs:comment "A transformation or modification applied to a machine learning model."@en .

@@ -2,23 +2,10 @@ import argparse
 import json
 from typing import Any
 from pathlib import Path
+from .canonical_thesaurus import canonicalize, get_tag_alone
 from .parser_tools import (
-    build_uris, canonicalize_modalities, canonicalize_size_categories, dedupe, get_tag_values, hash16, infer_language_tokens,
-    normalize_and_dedupe_tags, normalize_boolean, normalize_string, remove_consumed_tags, to_list, paper_url)
-
-def normalize_source_datasets(value: Any) -> list[str]:
-    if value == "original":
-        return []
-
-    sources: list[str] = []
-    for item in to_list(value):
-        if "|" in item:
-            source = normalize_string(item.split("|", 1)[1])
-            if source:
-                sources.append(source)
-        else:
-            sources.append(item)
-    return dedupe(sources)
+    build_uris, dedupe, get_tag_with_prefix, hash16, infer_language_tokens,
+    normalize_and_dedupe_tags, normalize_boolean, normalize_string, remove_consumed_tags, paper_url)
 
 
 def parse(json_obj: dict[str, Any]) -> tuple[dict[str, Any], int]:
@@ -31,40 +18,38 @@ def parse(json_obj: dict[str, Any]) -> tuple[dict[str, Any], int]:
 
     tags, removed_count = normalize_and_dedupe_tags(parsed.get("tags", []))
 
-    region_tokens = dedupe(get_tag_values(tags, "region:"))
-    explicit_language_values = get_tag_values(tags, "language:")
+    region_tokens = get_tag_with_prefix(tags, "region:")
+    explicit_language_values = get_tag_with_prefix(tags, "language:")
     language_tokens = infer_language_tokens(tags, explicit_language_values)
-    license_tokens = dedupe(get_tag_values(tags, "license:"))
+    license_tokens = get_tag_with_prefix(tags, "license:")
 
     parsed["language_uris"] = build_uris(language_tokens, "language")
     parsed["region_uris"] = build_uris(region_tokens, "region")
     parsed["license_uris"] = build_uris(license_tokens, "license")
 
-    parsed["task_categories"] = dedupe(get_tag_values(tags, "task_categories"))
-    parsed["task_ids"] = dedupe(get_tag_values(tags, "task_ids"))
-    parsed["modalities"] = canonicalize_modalities(dedupe(get_tag_values(tags, "modality:")))
-    parsed["libraries"] = dedupe(get_tag_values(tags, "library:"))
-    parsed["size_categories"] = canonicalize_size_categories(dedupe(get_tag_values(tags, "size_categories:")))
-    parsed["formats"] = dedupe(get_tag_values(tags, "format:"))
+    # Thesaurus
+    parsed["task_categories"] = canonicalize(get_tag_with_prefix(tags, "task_categories:") + get_tag_alone(tags, "task"), "task")
+    parsed["task_ids"] = canonicalize(get_tag_with_prefix(tags, "task_ids:") + get_tag_alone(tags, "subtask"), "subtask")
+    parsed["modalities"] = canonicalize(get_tag_with_prefix(tags, "modality:") + get_tag_alone(tags, "modality"), "modality")
+    parsed["libraries"] = canonicalize(get_tag_with_prefix(tags, "library:") + get_tag_alone(tags, "dataset_library"), "dataset_library")
+    parsed["size_categories"] = canonicalize(get_tag_with_prefix(tags, "size_categories:") + get_tag_alone(tags, "size_category"), "size_category")
+    parsed["formats"] = canonicalize(get_tag_with_prefix(tags, "format:") + get_tag_alone(tags, "format"), "format")
 
-
-    doi_ids = dedupe(get_tag_values(tags, "doi:"))
-    arxiv_ids = dedupe(get_tag_values(tags, "arxiv:"))
-    paperswithcode_id = [normalize_string(parsed.get("paperswithcode_id"))]
-    parsed["paperid"] = doi_ids if doi_ids else (arxiv_ids if arxiv_ids else (paperswithcode_id if paperswithcode_id else None))
+    doi_ids = get_tag_with_prefix(tags, "doi:")
+    arxiv_ids = get_tag_with_prefix(tags, "arxiv:")
+    paperswithcode_id = normalize_string(parsed.get("paperswithcode_id"))
+    parsed["paperid"] = doi_ids if doi_ids else (arxiv_ids if arxiv_ids else ([paperswithcode_id] if paperswithcode_id else None))
     parsed["doi"] = doi_ids
     parsed["paperurl"] = paper_url(
         [
             *[f"doi:{value}" for value in doi_ids],
             *[f"arxiv:{value}" for value in arxiv_ids],
-            *[f"paperswithcode_id:{value}" for value in paperswithcode_id],
+            *([f"paperswithcode_id:{paperswithcode_id}"] if paperswithcode_id else []),
         ]
     )
 
-    parsed["sources"] = normalize_source_datasets(parsed.get("source_datasets"))
-
-    linguistic_methods = dedupe(get_tag_values(tags, "language_creators:"))
-    annotation_methods = dedupe(get_tag_values(tags, "annotations_creators:"))
+    linguistic_methods = get_tag_with_prefix(tags, "language_creators:")
+    annotation_methods = get_tag_with_prefix(tags, "annotations_creators:")
     parsed["language_creators"] = linguistic_methods
     parsed["annotations_creators"] = annotation_methods
     annotation_hash_payload = {
@@ -78,11 +63,10 @@ def parse(json_obj: dict[str, Any]) -> tuple[dict[str, Any], int]:
         if has_annotation_data
         else None
     )
-
-    parsed["dataset_hash16"] = hash16({parsed.get('id')}) if parsed.get("id") else None
+    parsed["dataset_hash16"] = hash16(parsed.get('id')) if parsed.get("id") else None
     parsed["distribution_hash16"] = hash16({json.dumps({"formats": parsed["formats"]}, sort_keys=True, ensure_ascii=False)} 
                                            if parsed["formats"] else None)
-    parsed["creator_hash16"] = hash16({parsed.get('author')}) if parsed.get("author") else None
+    parsed["creator_hash16"] = hash16(parsed.get('author')) if parsed.get("author") else None
     parsed["article_hash16"] = hash16({json.dumps({"paperswithcode_id": paperswithcode_id, "doi": sorted(doi_ids), "arxiv": sorted(arxiv_ids)}, sort_keys=True, ensure_ascii=False)} 
                                       if paperswithcode_id or doi_ids or arxiv_ids else None)
 
