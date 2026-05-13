@@ -1,0 +1,253 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix xrr: <http://i3s.unice.fr/xr2rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix spdx: <https://spdx.org/licenses/> .
+@prefix cc: <http://creativecommons.org/licenses/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix lexvo:   <https://lexvo.org/id/iso639-1/> .
+@prefix lexvo3:  <https://lexvo.org/id/iso639-3/> .
+@prefix iso3166: <https://www.iso.org/obp/ui/#iso:code:3166:> .
+@prefix dlo:    <http://ns.inria.fr/datalens/ontology/> .
+@prefix dlt:  <http://ns.inria.fr/datalens/thesaurus/> .
+
+<#Dataset>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.{{collection}}.find({id:{$exists:true,$ne:null}})";
+    ];
+    rr:subjectMap [
+        rr:template "http://ns.inria.fr/datalens/data/dataset/{$.dataset_hash16}";
+        rr:termType rr:IRI;
+        rr:class dlo:Dataset;
+        rr:class prov:Entity;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dcterms:identifier;
+        rr:objectMap [ xrr:reference "$.id"];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dcterms:description;
+        rr:objectMap [ xrr:reference "$.description" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dcterms:issued;
+        rr:objectMap [ xrr:reference "$.created_at"; rr:datatype xsd:dateTime ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dcterms:modified;
+        rr:objectMap [ xrr:reference "$.last_modified"; rr:datatype xsd:dateTime ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dlo:downloadCount;
+        rr:objectMap [ xrr:reference "$.downloads"; rr:datatype xsd:integer ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dlo:likesCount;
+        rr:objectMap [ xrr:reference "$.likes"; rr:datatype xsd:integer ];
+    ];
+    rr:predicateObjectMap [ 
+        rr:predicate dcat:keyword; 
+        rr:objectMap [ xrr:reference "$.tags[*]"; rr:termType rr:Literal ]; 
+    ];
+
+    # Thesaurus externes
+    rr:predicateObjectMap [
+        rr:predicate dcterms:spatial;
+        rr:objectMap [ xrr:reference "$.region_uris[*]"; rr:termType rr:IRI ];
+    ];
+    rr:predicateObjectMap [ 
+        rr:predicate dcterms:language; 
+        rr:objectMap [ xrr:reference "$.language_uris[*]"; rr:termType rr:IRI ]; 
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dcterms:license;
+        rr:objectMap [ xrr:reference "$.license_uris[*]"; rr:termType rr:IRI ];
+    ];
+
+    # Thesaurus internes
+    rr:predicateObjectMap [
+        rr:predicate dlo:hasLibrary;
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.libraries[*]}"; rr:termType rr:IRI ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dlo:hasSubTask; 
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.task_ids[*]}"; rr:termType rr:IRI ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dlo:hasTask; 
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.task_categories[*]}"; rr:termType rr:IRI ];
+    ];
+    rr:predicateObjectMap [ 
+        rr:predicate dlo:hasModality; 
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.modalities[*]}"; rr:termType rr:IRI ]; 
+    ];
+    rr:predicateObjectMap [ 
+        rr:predicate dlo:hasSize; 
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.size_categories[*]}"; rr:termType rr:IRI ]; 
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate dcat:landingPage;
+        rr:objectMap [ rr:template "https://huggingface.co/datasets/{$.id}"; rr:termType rr:IRI ];
+    ];
+
+
+    # Liens vers d'autres ressources
+    rr:predicateObjectMap [
+        rr:predicate dcterms:creator;
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data/creator/{$.creator_hash16}"; rr:termType rr:IRI ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dcat:distribution;
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data/distribution/{$.distribution_hash16}"; rr:termType rr:IRI ];
+    ];    
+    rr:predicateObjectMap [
+        rr:predicate dlo:hasAcademicArticle;
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data/article/{$.article_hash16}"; rr:termType rr:IRI ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dcterms:publisher;
+        rr:objectMap [ rr:constant "http://ns.inria.fr/datalens/data/publisher/HuggingFace"; rr:termType rr:IRI ];
+    ];
+    .
+
+<#DatasetHasAnnotation>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.{{collection}}.find({id:{$exists:true,$ne:null}, annotation_hash16:{$exists:true,$ne:null}})";
+    ];
+    rr:subjectMap [ rr:template "http://ns.inria.fr/datalens/data/dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
+    rr:predicateObjectMap [
+        rr:predicate dlo:hasAnnotation;
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data/annotation/{$.annotation_hash16}"; rr:termType rr:IRI ];
+    ];
+    .
+
+<#DatasetAccessPublic>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.{{collection}}.find({id:{$exists:true}, private:false, gated:false})";
+    ];
+    rr:subjectMap [ rr:template "http://ns.inria.fr/datalens/data/dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
+    rr:predicateObjectMap [ rr:predicate dcterms:accessRights; rr:objectMap [ rr:constant "public"; rr:termType rr:Literal ]; ];
+    .
+
+<#DatasetAccessRestricted>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.{{collection}}.find({id:{$exists:true}, $or:[{private:true},{gated:true}]})";
+    ];
+    rr:subjectMap [ rr:template "http://ns.inria.fr/datalens/data/dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
+    rr:predicateObjectMap [ rr:predicate dcterms:accessRights; rr:objectMap [ rr:constant "restricted"; rr:termType rr:Literal ]; ];
+    .
+
+# <#DatasetAvailabilityTrue>
+#     a rr:TriplesMap;
+#     xrr:logicalSource [
+#         xrr:query "db.{{collection}}.find({id:{$exists:true}, disabled:false})";
+#     ];
+#     rr:subjectMap [ rr:template "http://ns.inria.fr/datalens/data/dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
+#     rr:predicateObjectMap [ rr:predicate dlo:isAvailable; rr:objectMap [ rr:constant "true"; rr:datatype xsd:boolean ]; ];
+#     .
+
+# <#DatasetAvailabilityFalse>
+#     a rr:TriplesMap;
+#     xrr:logicalSource [
+#         xrr:query "db.{{collection}}.find({id:{$exists:true}, disabled:true})";
+#     ];
+#     rr:subjectMap [ rr:template "http://ns.inria.fr/datalens/data/dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
+#     rr:predicateObjectMap [ rr:predicate dlo:isAvailable; rr:objectMap [ rr:constant "false"; rr:datatype xsd:boolean ]; ];
+#     .
+
+<#AcademicArticle>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.{{collection}}.find({id:{$exists:true,$ne:null}})";
+    ];
+    rr:subjectMap [
+        rr:template "http://ns.inria.fr/datalens/data/article/{$.article_hash16}";
+        rr:termType rr:IRI;
+        rr:class bibo:AcademicArticle;
+    ];
+    rr:predicateObjectMap [ 
+        rr:predicate dcterms:identifier; 
+        rr:objectMap [ xrr:reference "$.paperid[*]" ]; 
+    ];
+    rr:predicateObjectMap [ 
+        rr:predicate bibo:doi; 
+        rr:objectMap [ xrr:reference "$.doi[*]" ]; 
+    ];
+    rr:predicateObjectMap [ 
+        rr:predicate dcterms:publisher; 
+        rr:objectMap [ xrr:reference "$.paperurl[*]" ]; 
+    ];
+    .
+
+<#Annotation>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.{{collection}}.find({id:{$exists:true,$ne:null}})";
+    ];
+    rr:subjectMap [
+        rr:template "http://ns.inria.fr/datalens/data/annotation/{$.annotation_hash16}";
+        rr:termType rr:IRI;
+        rr:class dlo:Annotation;
+    ];
+    rr:predicateObjectMap [ 
+        rr:predicate dlo:annotationMethod; 
+        rr:objectMap [ xrr:reference "$.annotations_creators[*]" ]; 
+    ];
+    rr:predicateObjectMap [ 
+        rr:predicate dlo:linguisticMethod; 
+        rr:objectMap [ xrr:reference "$.language_creators[*]" ]; 
+    ];
+    .
+
+<#Distribution>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.{{collection}}.find({id:{$exists:true,$ne:null}})";
+    ];
+    rr:subjectMap [
+        rr:template "http://ns.inria.fr/datalens/data/distribution/{$.distribution_hash16}";
+        rr:termType rr:IRI;
+        rr:class dcat:Distribution;
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate dcterms:format;
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.formats[*]}"; rr:termType rr:IRI ];
+    ];
+    .
+
+<#Creator>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.{{collection}}.find({id:{$exists:true}, author:{$exists:true,$ne:null}})";
+    ];
+    rr:subjectMap [
+        rr:template "http://ns.inria.fr/datalens/data/creator/{$.creator_hash16}";
+        rr:termType rr:IRI;
+        rr:class foaf:Agent;
+    ];
+    rr:predicateObjectMap [ rr:predicate foaf:name; rr:objectMap [ xrr:reference "$.author" ]; ];
+    .
+
+<#Publisher>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.{{collection}}.findOne({id:{$exists:true}})";
+    ];
+    rr:subjectMap [
+        rr:constant "http://ns.inria.fr/datalens/data/publisher/HuggingFace";
+        rr:termType rr:IRI;
+        rr:class foaf:Organization;
+    ];
+    rr:predicateObjectMap [ rr:predicate foaf:name; rr:objectMap [ rr:constant "HuggingFace" ]; ];
+    .
+

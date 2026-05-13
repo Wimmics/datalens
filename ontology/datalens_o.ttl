@@ -10,10 +10,8 @@
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
-
 @prefix dlo: <http://ns.inria.fr/datalens/ontology/> .
 
-# Name idea : dlo : Datalens Ontology
 
 dlo: a owl:Ontology ;
     dcterms:title "Datalens Ontology"@en ;
