@@ -65,6 +65,8 @@ npm install
 npm run dev
 ```
 
+An interactive dashboard presenting the CQ visualizations is available [here](https://wimmics.github.io/datalens/).
+
 ## Directory Structure
 
 ```text
