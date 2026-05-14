@@ -334,8 +334,8 @@ ontology/do_not_commit/**
 ontology/used-vocabularies/**
 _old/**
 _other/**
-lifting/output/**
-lifting/input/**
+kg/output/**
+kg/input/**
 
 # Ignore all JSON
 *.json

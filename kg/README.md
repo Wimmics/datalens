@@ -26,13 +26,13 @@ For TTL files, after lifting:
 
 - [fix_identifiers.py](./processing/fix_identifiers.py): post-processes generated Turtle files to keep `dcterms:identifier` values aligned with Hugging Face landing page identifiers. This preserves identifiers containing double underscores and prevents identifier mismatches that would hinder traceability.
 
-### 3. Mapping
+### 3. Lifting
 
-The [mapping](./mapping/) folder contains the XR2RML mappings and execution script used to lift the processed JSON metadata into RDF/Turtle.
+The [lifting](./lifting/) folder contains the XR2RML mappings and execution script used to lift the processed JSON metadata into RDF/Turtle.
 
-- [mapping_datasets.ttl](./mapping/mapping_datasets.ttl): XR2RML mapping rules for dataset metadata. The mapping creates Datalens dataset resources and related entities such as distributions, creators, licenses, languages, regions, papers, tasks, subtasks, modalities, formats, and dataset libraries.
-- [mapping_models.ttl](./mapping/mapping_models.ttl): XR2RML mapping rules for model metadata. The mapping creates Datalens model resources and related entities such as distributions, creators, licenses, languages, regions, papers, tasks, modalities, model libraries, training datasets, source models, and derivation relationships.
-- [run.sh](./mapping/run.sh): orchestration script for the XR2RML Docker workspace. It processes dataset and model batches alternately, runs the JSON parsers, imports parsed batches into MongoDB, executes the XR2RML mappings, writes Turtle output to `xr2rml_output`, and runs the TTL identifier fixer.
+- [mapping_datasets.ttl](./lifting/mapping_datasets.ttl): XR2RML mapping rules for dataset metadata. The mapping creates Datalens dataset resources and related entities such as distributions, creators, licenses, languages, regions, papers, tasks, subtasks, modalities, formats, and dataset libraries.
+- [mapping_models.ttl](./lifting/mapping_models.ttl): XR2RML mapping rules for model metadata. The mapping creates Datalens model resources and related entities such as distributions, creators, licenses, languages, regions, papers, tasks, modalities, model libraries, training datasets, source models, and derivation relationships.
+- [run.sh](./lifting/run.sh): orchestration script for the XR2RML Docker workspace. It processes dataset and model batches alternately, runs the JSON parsers, imports parsed batches into MongoDB, executes the XR2RML mappings, writes Turtle output to `xr2rml_output`, and runs the TTL identifier fixer.
 
 ## Requirements
 
@@ -58,7 +58,7 @@ source .venv/bin/activate # Windows: .venv\Scripts\activate
 2. Install dependencies:
 
 ```sh
-pip install -r lifting/requirements.txt
+pip install -r kg/requirements.txt
 ```
 
 ## Usage
@@ -66,29 +66,29 @@ pip install -r lifting/requirements.txt
 1. Fetch datasets and models from Hugging Face:
 
 ```sh
-python lifting/fechting/fetch_hf.py --kind dataset
-python lifting/fechting/fetch_hf.py --kind model
+python kg/fechting/fetch_hf.py --kind dataset
+python kg/fechting/fetch_hf.py --kind model
 ```
 
 2. (Optional) Split fetched data into batches:
 
 ```sh
-python lifting/fechting/split_input_batches.py --kind both
+python kg/fechting/split_input_batches.py --kind both
 ```
 
 You can also split only one resource type:
 
 ```sh
-python lifting/fechting/split_input_batches.py --kind datasets
-python lifting/fechting/split_input_batches.py --kind models
+python kg/fechting/split_input_batches.py --kind datasets
+python kg/fechting/split_input_batches.py --kind models
 ```
 
 3. Prepare the XR2RML workspace:
 
-- Copy the generated batch folders from `lifting/input` into `xr2rml_docker/mongo_import`.
+- Copy the generated batch folders from `kg/input` into `xr2rml_docker/mongo_import`.
 - Copy the [processing](./processing/) folder into `xr2rml_docker/mongo_import`.
-- Copy [mapping_datasets.ttl](./mapping/mapping_datasets.ttl) and [mapping_models.ttl](./mapping/mapping_models.ttl) into `xr2rml_docker/xr2rml_config`.
-- Copy [run.sh](./mapping/run.sh) to the root of `xr2rml_docker`.
+- Copy [mapping_datasets.ttl](./lifting/mapping_datasets.ttl) and [mapping_models.ttl](./lifting/mapping_models.ttl) into `xr2rml_docker/xr2rml_config`.
+- Copy [run.sh](./lifting/run.sh) to the root of `xr2rml_docker`.
 
 4. Run the XR2RML lifting process:
 

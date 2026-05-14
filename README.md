@@ -1,137 +1,100 @@
-# DataLens
+# Datalens: Semantic Model and Knowledge Graph for ML Resources
 
-DataLens is a web-based platform that combines faceted search with advanced visualization techniques to enhance resource discovery and exploration. It supports network-based visualizations, where graph structures are dynamically adapted to suit specific analysis tasks. Additionally, DataLens implements a chained-views approach, allowing users to interact with data from multiple perspectives.
+Datalens provides a semantic model, knowledge graph construction pipeline, SPARQL competency questions, and interactive visualizations for exploring machine learning resources such as datasets and models.
 
-🌐 Live Demo: https://dataviz.i3s.unice.fr/datalens/
+The project focuses on describing resources published on platforms such as Hugging Face, aligning their metadata with controlled vocabularies, and enabling semantic exploration of tasks, modalities, licenses, provenance links, and popularity indicators.
 
-## Features
+## Overview
 
-- **Faceted Search**: Advanced filtering capabilities for efficient data exploration
-- **Network Visualizations**: Dynamic graph structures adapted for specific analysis tasks
-- **Chained Views**: Multi-perspective data interaction approach
-- **Knowledge Graph Integration**: RDF-based data storage and SPARQL querying
-- **Real-time Data Processing**: Automated data lifting and transformation pipelines
+Datalens provides an ontology and a thesaurus to:
 
-## 📁 Repository Structure
+- Model machine learning datasets and models as semantic resources
+- Describe resources with tasks, subtasks, modalities, formats, libraries, licenses, languages, regions, and scholarly references
+- Capture provenance relationships, including training-data links and model derivations
+- Build an RDF knowledge graph from Hugging Face metadata
+- Support competency-question analysis through SPARQL queries and Venus visualizations
 
-This repository is organized into several key components:
+The Datalens ontology namespace is `http://ns.inria.fr/datalens/ontology/`.
 
-### `/case-study/`
-Contains data and analysis for specific use cases:
-- `data/input/` - Raw input datasets
-- `data/output/` - Processed RDF data in Turtle format
-- `lifting/scripts/` - Data transformation and lifting scripts
+The Datalens thesaurus namespace is `http://ns.inria.fr/datalens/thesaurus/`.
 
-### `/corese-server/`
-Corese RDF server setup for SPARQL query processing:
-- Docker-based deployment configuration
-- Build scripts for containerized RDF processing
+The Datalens-based KG is publicly available through a SPARQL endpoint at: `http://graph.i3s.fr/repositories/datalens`.
 
-### `/ontology/`
-RDF ontologies and vocabularies:
-- `mluo.ttl` - Machine Learning Use-case Ontology (MLUO)
-- `used-vocabularies/` - Standard vocabularies (BIBO, DCAT3, DCTERMS, ISO639-1, PROV-O)
+## RDF Data Modeling
 
-### `/virtuoso-server/`
-OpenLink Virtuoso RDF database server:
-- Docker Compose setup for RDF triple store
-- Automated data loading and configuration
-- SPARQL endpoint for data querying
+The [ontology](ontology) directory contains the semantic model:
 
-### `/vis/`
-Web-based visualization interface:
-- `server.js` - Node.js backend server
-- `datatools.js` - Data processing utilities
-- `public/` - Frontend assets (CSS, JS, images)
-- `views/` - HTML templates and view components
-- `sparql-filters/` - SPARQL query templates for filtering
-- `sparql-mge/` - SPARQL queries for data extraction
-- `cache/` - Cached query results for performance
+- [datalens_o.ttl](ontology/datalens_o.ttl): OWL ontology for machine learning resources, including datasets, models, distributions, annotations, libraries, tasks, modalities, and provenance relationships.
+- [datalens_th.ttl](ontology/datalens_th.ttl): SKOS thesaurus with controlled vocabularies for tasks, subtasks, modalities, formats, size categories, libraries, and transformation types.
 
-### `/sparql-examples/`
-Example SPARQL queries for common operations:
-- Dataset counting and analysis queries
-- Sample queries for data exploration
+See [ontology/README.md](ontology/README.md) for a summary of the main classes and concept schemes.
 
-## 🚀 Getting Started
+## Knowledge Graph Construction
 
-### Prerequisites
-- Docker and Docker Compose
-- Node.js (for the visualization server)
-- Git
+The [kg](kg) directory contains the pipeline used to build the Datalens knowledge graph from Hugging Face metadata.
 
-### Quick Setup
+The pipeline:
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/amenin/datalens.git
-   cd datalens
-   ```
+- Fetches dataset and model metadata from the Hugging Face Hub API
+- Splits large JSON collections into batches
+- Normalizes tags and metadata fields
+- Aligns raw metadata values with Datalens thesaurus concepts
+- Generates stable identifiers for resources and related entities
+- Lifts processed JSON metadata to RDF/Turtle with XR2RML mappings
 
-2. **Start the RDF database:**
-   ```bash
-   cd virtuoso-server
-   ./build-virtuoso-server.sh
-   ```
+See [kg/README.md](kg/README.md) for requirements and execution details.
 
-3. **Start the visualization server:**
-   ```bash
-   cd vis
-   npm install
-   node server.js
-   ```
+## Competency Questions and Visualizations
 
-4. **Access the application:**
-   - Main interface: http://localhost:3000
-   - SPARQL endpoint: http://localhost:8890/sparql
+The [sparql-examples](sparql-examples) directory contains SPARQL implementations of the competency questions used to inspect the knowledge graph.
 
-## 🔧 Architecture
+The current competency questions cover:
 
-DataLens follows a modular architecture:
+- Datasets supporting a given machine learning task
+- Datasets supporting a task for a specific modality under constraints
+- Provenance relationships between models, datasets, and derived resources
+- Popularity indicators for datasets and models
 
-1. **Data Layer**: Virtuoso RDF database stores semantic data
-2. **Processing Layer**: Data lifting scripts convert raw data to RDF
-3. **Query Layer**: SPARQL endpoints provide data access
-4. **Visualization Layer**: Web interface with interactive visualizations
-5. **Ontology Layer**: MLUO and standard vocabularies define data semantics
+The [vis](vis) directory contains a Vite-based dashboard that uses [Venus elements](https://github.com/Wimmics/venus) to visualize those competency questions. Each visualization loads its query from the matching `.rq` file in [sparql-examples](sparql-examples), keeping the SPARQL examples and the dashboard coherent.
 
-## 📊 Data Pipeline
+To run the visualization dashboard:
 
-1. **Data Ingestion**: Raw datasets are processed through lifting scripts
-2. **RDF Conversion**: Data is transformed into RDF using MLUO ontology
-3. **Storage**: RDF triples are loaded into Virtuoso database
-4. **Querying**: SPARQL queries extract data for visualization
-5. **Visualization**: Interactive web interface presents data insights
-
-## 🛠️ Development
-
-### Adding New Data Sources
-TBA
-
-## 📚 Documentation
-
-- [Virtuoso Server Setup](virtuoso-server/README.md)
-- [Corese Server Configuration](corese-server/README.md)
-- [Ontology Documentation](ontology/)
-
-## 🎯 Use Cases
-
-DataLens is designed for:
-- **Machine Learning Dataset Discovery**: Find relevant datasets for ML tasks
-- **Research Data Exploration**: Navigate complex research datasets
-- **Knowledge Graph Visualization**: Explore semantic relationships
-- **Faceted Search Applications**: Build advanced filtering interfaces
-
-## 📄 Cite this work
-
-If you use DataLens in your research, please cite:
-
-```
-TBA - Paper reference to be added
+```sh
+cd vis
+npm install
+npm run dev
 ```
 
-## 📝 License
+## Directory Structure
 
-This project is licensed under the terms specified in the [LICENSE](LICENSE) file.
+```text
+datalens/
+├── ontology/              # OWL ontology and SKOS thesaurus
+│   ├── datalens_o.ttl
+│   ├── datalens_th.ttl
+│   └── README.md
+│
+├── kg/                    # Knowledge graph construction pipeline
+│   ├── fechting/          # Hugging Face metadata fetching and batching scripts
+│   ├── processing/        # Metadata normalization and cleanup scripts
+│   ├── lifting/           # XR2RML mappings and lifting orchestration
+│   ├── requirements.txt
+│   └── README.md
+│
+├── sparql-examples/       # Competency-question SPARQL queries
+│   ├── cq1.rq
+│   ├── cq2.rq
+│   ├── cq3.rq
+│   ├── cq4.rq
+│   └── README.md
+│
+└── vis/                   # Venus dashboard for CQ visualizations
+    ├── index.html
+    ├── css/
+    ├── js/
+    └── package.json
+```
 
+## License
 
+This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file.

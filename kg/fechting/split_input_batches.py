@@ -78,7 +78,7 @@ def main() -> None:
         "--input-root",
         type=Path,
         default=Path(__file__).resolve().parents[1] / "input",
-        help="Path to the input folder (default: lifting/input)",
+        help="Path to the input folder (default: kg/input)",
     )
     parser.add_argument(
         "--dataset-batch-count",
