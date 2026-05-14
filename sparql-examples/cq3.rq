@@ -1,6 +1,6 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dc: <http://purl.org/dc/terms/>
-PREFIX dlo: <http://ns.inria.fr/datalens/ontology/>
+PREFIX dlo: <http://[namespace]/datalens/ontology/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 SELECT * WHERE {
 

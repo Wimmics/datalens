@@ -1,7 +1,7 @@
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX dc: <http://purl.org/dc/terms/>
-PREFIX dlt: <http://ns.inria.fr/datalens/thesaurus/>
-PREFIX dlo: <http://ns.inria.fr/datalens/ontology/>
+PREFIX dlt: <http://[namespace]/datalens/thesaurus/>
+PREFIX dlo: <http://[namespace]/datalens/ontology/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX cc: <http://creativecommons.org/licenses/>
 PREFIX spdx: <https://spdx.org/licenses/>
