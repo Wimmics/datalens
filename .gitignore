@@ -337,7 +337,10 @@ _other/**
 lifting/output/**
 lifting/input/**
 
+# Ignore all JSON
 *.json
+# Except package.json
+!package.json
 
 # visualization files
 vis/node_modules/**
