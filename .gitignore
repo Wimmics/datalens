@@ -341,7 +341,8 @@ kg/input/**
 *.json
 # Except package.json
 !package.json
+!vis/package-lock.json
 
 # visualization files
 vis/node_modules/**
-vis/package-lock.json
+vis/dist/**
