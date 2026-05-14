@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Visualizations for HuggingFace-DLKG CQs",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "vite"
   },
   "keywords": [],
   "author": "",

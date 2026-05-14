@@ -1,39 +1,10 @@
 
 // Component configuration
+import sparqlQuery from "../../sparql-examples/cq3.rq?raw";
 
 const scatterplot = document.querySelector("#cq3-venus");
   scatterplot.sparqlEndpoint = "http://graph.i3s.unice.fr/repositories/datalens";
-  scatterplot.sparqlQuery = `PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX dc: <http://purl.org/dc/terms/>
-PREFIX dlo: <http://ns.inria.fr/datalens/ontology/>
-PREFIX prov: <http://www.w3.org/ns/prov#>
-SELECT * WHERE {
-
-    ?model a dlo:Model ;
-        dc:identifier ?modelName ;
-        dcat:landingPage ?modelUrl ;
-        ?rel ?resource ;
-    	dlo:downloadCount ?downloads .
-	
-    VALUES ?rel {
-        prov:wasDerivedFrom
-        dlo:wasTrainedOn
-    }
-    
-    ?rel rdfs:label ?relationship.
-    ?resource dc:identifier ?resourceName ;
-      a ?type .
-    
-    VALUES ?type {
-        dlo:Model
-        dlo:Dataset
-    }
-    
-    ?type rdfs:label ?resourceType .
-    
-    FILTER (?downloads > 10000)
-    
-}`;
+  scatterplot.sparqlQuery = sparqlQuery;
   scatterplot.encoding = {
   "title": "Provenance relationship between models and datasets.",
   "nodes": {

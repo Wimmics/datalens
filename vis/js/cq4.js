@@ -1,25 +1,10 @@
 
 // Component configuration
+import sparqlQuery from "../../sparql-examples/cq4.rq?raw";
 
 const scatterplot = document.querySelector("#cq4-venus");
   scatterplot.sparqlEndpoint = "http://graph.i3s.unice.fr/repositories/datalens";
-  scatterplot.sparqlQuery = `
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX dlo: <http://ns.inria.fr/datalens/ontology/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-SELECT * WHERE {
-    ?resource dlo:downloadCount ?downloads ;
-    dlo:likesCount ?likes .
-
-    ?resource dcat:landingPage ?url ;
-      dlo:hasModality [ skos:prefLabel ?modality ] ;
-    	a ?type .
-    
-    ?type rdfs:subClassOf dlo:Ressource ; rdfs:label ?resourceType .
-
-    FILTER (?downloads > 100 && ?likes < 9000)
-}  `;
+  scatterplot.sparqlQuery = sparqlQuery;
 
   scatterplot.encoding = {
   "title": "ML Resources Popularity",

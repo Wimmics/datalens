@@ -1,27 +1,10 @@
 
 // Component configuration
+import sparqlQuery from "../../sparql-examples/cq1.rq?raw";
 
 const scatterplot = document.querySelector("#cq1-venus");
   scatterplot.sparqlEndpoint = "http://graph.i3s.unice.fr/repositories/datalens";
-  scatterplot.sparqlQuery = `PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX : <http://example.org/datalens/data#>
-PREFIX dc: <http://purl.org/dc/terms/>
-PREFIX dlt: <http://ns.inria.fr/datalens/thesaurus/>
-PREFIX dlo: <http://ns.inria.fr/datalens/ontology/>
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
-
-SELECT * WHERE {
-    ?datasetURI a dlo:Dataset ;
-    	dlo:hasTask dlt:QuestionAnswering ;
-    	dc:identifier ?datasetName ;
-    	dc:description ?description ;
-    	dcat:landingPage ?url ;
-    	dlo:hasSubTask ?subtask .
-    
-    OPTIONAL { ?subtask skos:prefLabel ?subtaskName .
-    ?subtask skos:broader dlt:QuestionAnswering .}
-}
-`;
+  scatterplot.sparqlQuery = sparqlQuery;
   scatterplot.encoding = {
   "title": "Datasets for QA and subtasks",
   "nodes": {
