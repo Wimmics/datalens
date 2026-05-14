@@ -12,8 +12,8 @@
 @prefix lexvo:   <https://lexvo.org/id/iso639-1/> .
 @prefix lexvo3:  <https://lexvo.org/id/iso639-3/> .
 @prefix iso3166: <https://www.iso.org/obp/ui/#iso:code:3166:> .
-@prefix dlo:    <http://ns.inria.fr/datalens/ontology/> .
-@prefix dlt:  <http://ns.inria.fr/datalens/thesaurus/> .
+@prefix dlo:    <http://[namespace]/datalens/ontology/> .
+@prefix dlt:  <http://[namespace]/datalens/thesaurus/> .
 
 <#Dataset>
     a rr:TriplesMap;
@@ -21,7 +21,7 @@
         xrr:query "db.{{collection}}.find({id:{$exists:true,$ne:null}})";
     ];
     rr:subjectMap [
-        rr:template "http://ns.inria.fr/datalens/data/dataset/{$.dataset_hash16}";
+        rr:template "http://[namespace]/datalens/data/dataset/{$.dataset_hash16}";
         rr:termType rr:IRI;
         rr:class dlo:Dataset;
         rr:class prov:Entity;
@@ -72,23 +72,23 @@
     # Thesaurus internes
     rr:predicateObjectMap [
         rr:predicate dlo:hasLibrary;
-        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.libraries[*]}"; rr:termType rr:IRI ];
+        rr:objectMap [ rr:template "http://[namespace]/datalens/thesaurus/{$.libraries[*]}"; rr:termType rr:IRI ];
     ];
     rr:predicateObjectMap [
         rr:predicate dlo:hasSubTask; 
-        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.task_ids[*]}"; rr:termType rr:IRI ];
+        rr:objectMap [ rr:template "http://[namespace]/datalens/thesaurus/{$.task_ids[*]}"; rr:termType rr:IRI ];
     ];
     rr:predicateObjectMap [
         rr:predicate dlo:hasTask; 
-        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.task_categories[*]}"; rr:termType rr:IRI ];
+        rr:objectMap [ rr:template "http://[namespace]/datalens/thesaurus/{$.task_categories[*]}"; rr:termType rr:IRI ];
     ];
     rr:predicateObjectMap [ 
         rr:predicate dlo:hasModality; 
-        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.modalities[*]}"; rr:termType rr:IRI ]; 
+        rr:objectMap [ rr:template "http://[namespace]/datalens/thesaurus/{$.modalities[*]}"; rr:termType rr:IRI ]; 
     ];
     rr:predicateObjectMap [ 
         rr:predicate dlo:hasSize; 
-        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.size_categories[*]}"; rr:termType rr:IRI ]; 
+        rr:objectMap [ rr:template "http://[namespace]/datalens/thesaurus/{$.size_categories[*]}"; rr:termType rr:IRI ]; 
     ];
 
     rr:predicateObjectMap [
@@ -100,19 +100,19 @@
     # Liens vers d'autres ressources
     rr:predicateObjectMap [
         rr:predicate dcterms:creator;
-        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data/creator/{$.creator_hash16}"; rr:termType rr:IRI ];
+        rr:objectMap [ rr:template "http://[namespace]/datalens/data/creator/{$.creator_hash16}"; rr:termType rr:IRI ];
     ];
     rr:predicateObjectMap [
         rr:predicate dcat:distribution;
-        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data/distribution/{$.distribution_hash16}"; rr:termType rr:IRI ];
+        rr:objectMap [ rr:template "http://[namespace]/datalens/data/distribution/{$.distribution_hash16}"; rr:termType rr:IRI ];
     ];    
     rr:predicateObjectMap [
         rr:predicate dlo:hasAcademicArticle;
-        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data/article/{$.article_hash16}"; rr:termType rr:IRI ];
+        rr:objectMap [ rr:template "http://[namespace]/datalens/data/article/{$.article_hash16}"; rr:termType rr:IRI ];
     ];
     rr:predicateObjectMap [
         rr:predicate dcterms:publisher;
-        rr:objectMap [ rr:constant "http://ns.inria.fr/datalens/data/publisher/HuggingFace"; rr:termType rr:IRI ];
+        rr:objectMap [ rr:constant "http://[namespace]/datalens/data/publisher/HuggingFace"; rr:termType rr:IRI ];
     ];
     .
 
@@ -121,10 +121,10 @@
     xrr:logicalSource [
         xrr:query "db.{{collection}}.find({id:{$exists:true,$ne:null}, annotation_hash16:{$exists:true,$ne:null}})";
     ];
-    rr:subjectMap [ rr:template "http://ns.inria.fr/datalens/data/dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
+    rr:subjectMap [ rr:template "http://[namespace]/datalens/data/dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
     rr:predicateObjectMap [
         rr:predicate dlo:hasAnnotation;
-        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data/annotation/{$.annotation_hash16}"; rr:termType rr:IRI ];
+        rr:objectMap [ rr:template "http://[namespace]/datalens/data/annotation/{$.annotation_hash16}"; rr:termType rr:IRI ];
     ];
     .
 
@@ -133,7 +133,7 @@
     xrr:logicalSource [
         xrr:query "db.{{collection}}.find({id:{$exists:true}, private:false, gated:false})";
     ];
-    rr:subjectMap [ rr:template "http://ns.inria.fr/datalens/data/dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
+    rr:subjectMap [ rr:template "http://[namespace]/datalens/data/dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
     rr:predicateObjectMap [ rr:predicate dcterms:accessRights; rr:objectMap [ rr:constant "public"; rr:termType rr:Literal ]; ];
     .
 
@@ -142,7 +142,7 @@
     xrr:logicalSource [
         xrr:query "db.{{collection}}.find({id:{$exists:true}, $or:[{private:true},{gated:true}]})";
     ];
-    rr:subjectMap [ rr:template "http://ns.inria.fr/datalens/data/dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
+    rr:subjectMap [ rr:template "http://[namespace]/datalens/data/dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
     rr:predicateObjectMap [ rr:predicate dcterms:accessRights; rr:objectMap [ rr:constant "restricted"; rr:termType rr:Literal ]; ];
     .
 
@@ -151,7 +151,7 @@
 #     xrr:logicalSource [
 #         xrr:query "db.{{collection}}.find({id:{$exists:true}, disabled:false})";
 #     ];
-#     rr:subjectMap [ rr:template "http://ns.inria.fr/datalens/data/dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
+#     rr:subjectMap [ rr:template "http://[namespace]/datalens/data/dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
 #     rr:predicateObjectMap [ rr:predicate dlo:isAvailable; rr:objectMap [ rr:constant "true"; rr:datatype xsd:boolean ]; ];
 #     .
 
@@ -160,7 +160,7 @@
 #     xrr:logicalSource [
 #         xrr:query "db.{{collection}}.find({id:{$exists:true}, disabled:true})";
 #     ];
-#     rr:subjectMap [ rr:template "http://ns.inria.fr/datalens/data/dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
+#     rr:subjectMap [ rr:template "http://[namespace]/datalens/data/dataset/{$.dataset_hash16}"; rr:termType rr:IRI; ];
 #     rr:predicateObjectMap [ rr:predicate dlo:isAvailable; rr:objectMap [ rr:constant "false"; rr:datatype xsd:boolean ]; ];
 #     .
 
@@ -170,7 +170,7 @@
         xrr:query "db.{{collection}}.find({id:{$exists:true,$ne:null}})";
     ];
     rr:subjectMap [
-        rr:template "http://ns.inria.fr/datalens/data/article/{$.article_hash16}";
+        rr:template "http://[namespace]/datalens/data/article/{$.article_hash16}";
         rr:termType rr:IRI;
         rr:class bibo:AcademicArticle;
     ];
@@ -194,7 +194,7 @@
         xrr:query "db.{{collection}}.find({id:{$exists:true,$ne:null}})";
     ];
     rr:subjectMap [
-        rr:template "http://ns.inria.fr/datalens/data/annotation/{$.annotation_hash16}";
+        rr:template "http://[namespace]/datalens/data/annotation/{$.annotation_hash16}";
         rr:termType rr:IRI;
         rr:class dlo:Annotation;
     ];
@@ -214,14 +214,14 @@
         xrr:query "db.{{collection}}.find({id:{$exists:true,$ne:null}})";
     ];
     rr:subjectMap [
-        rr:template "http://ns.inria.fr/datalens/data/distribution/{$.distribution_hash16}";
+        rr:template "http://[namespace]/datalens/data/distribution/{$.distribution_hash16}";
         rr:termType rr:IRI;
         rr:class dcat:Distribution;
     ];
 
     rr:predicateObjectMap [
         rr:predicate dcterms:format;
-        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.formats[*]}"; rr:termType rr:IRI ];
+        rr:objectMap [ rr:template "http://[namespace]/datalens/thesaurus/{$.formats[*]}"; rr:termType rr:IRI ];
     ];
     .
 
@@ -231,7 +231,7 @@
         xrr:query "db.{{collection}}.find({id:{$exists:true}, author:{$exists:true,$ne:null}})";
     ];
     rr:subjectMap [
-        rr:template "http://ns.inria.fr/datalens/data/creator/{$.creator_hash16}";
+        rr:template "http://[namespace]/datalens/data/creator/{$.creator_hash16}";
         rr:termType rr:IRI;
         rr:class foaf:Agent;
     ];
@@ -244,7 +244,7 @@
         xrr:query "db.{{collection}}.findOne({id:{$exists:true}})";
     ];
     rr:subjectMap [
-        rr:constant "http://ns.inria.fr/datalens/data/publisher/HuggingFace";
+        rr:constant "http://[namespace]/datalens/data/publisher/HuggingFace";
         rr:termType rr:IRI;
         rr:class foaf:Organization;
     ];

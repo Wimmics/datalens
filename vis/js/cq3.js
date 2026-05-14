@@ -3,7 +3,7 @@
 import sparqlQuery from "../../sparql-examples/cq3.rq?raw";
 
 const scatterplot = document.querySelector("#cq3-venus");
-  scatterplot.sparqlEndpoint = "https://graph.i3s.unice.fr/repositories/datalens";
+  scatterplot.sparqlEndpoint = "https://[endpoint]/repositories/datalens";
   scatterplot.sparqlQuery = sparqlQuery;
   scatterplot.encoding = {
   "title": "Provenance relationship between models and datasets.",

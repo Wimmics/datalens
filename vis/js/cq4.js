@@ -3,7 +3,7 @@
 import sparqlQuery from "../../sparql-examples/cq4.rq?raw";
 
 const scatterplot = document.querySelector("#cq4-venus");
-  scatterplot.sparqlEndpoint = "https://graph.i3s.unice.fr/repositories/datalens";
+  scatterplot.sparqlEndpoint = "https://[endpoint]/repositories/datalens";
   scatterplot.sparqlQuery = sparqlQuery;
 
   scatterplot.encoding = {

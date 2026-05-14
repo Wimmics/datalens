@@ -3,7 +3,7 @@
 import sparqlQuery from "../../sparql-examples/cq2.rq?raw";
 
 const scatterplot = document.querySelector("#cq2-venus");
-  scatterplot.sparqlEndpoint = "https://graph.i3s.unice.fr/repositories/datalens";
+  scatterplot.sparqlEndpoint = "https://[endpoint]/repositories/datalens";
   scatterplot.sparqlQuery = sparqlQuery;
   scatterplot.encoding = {
   "title": "Licensed datasets for QA across modalities",

@@ -12,19 +12,10 @@
 @prefix bibo:    <http://purl.org/ontology/bibo/> .
 @prefix dcat:    <http://www.w3.org/ns/dcat#> .
 
-@prefix dlo:    <http://ns.inria.fr/datalens/ontology/> .
-@prefix dlt:  <http://ns.inria.fr/datalens/thesaurus/> .
+@prefix dlo:    <http://[namespace]/datalens/ontology/> .
+@prefix dlt:  <http://[namespace]/datalens/thesaurus/> .
 
-dlt:
-    dcterms:title "Datalens Thesaurus"@en ;
-    dcterms:creator "Aline MENIN", "Zachari ARNAUD" ;
-    dcterms:modified "2026-05-11" ;
-    dcterms:description "The Datalens Thesaurus provides controlled vocabulary for datasets and machine learning models."@en ;
-    owl:versionInfo "1.0" ;
-    dcat:landingPage <https://github.com/amenin/datalens> ;
-    dcterms:license  <https://www.apache.org/licenses/LICENSE-2.0> ;
-    dcterms:created "2026"^^xsd:gYear ;
-    dcterms:publisher "Inria", "University Côte d'Azur", "CNRS" .
+
 
 ## Modality Scheme
 dlt:ModalityScheme a skos:ConceptScheme ;

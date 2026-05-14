@@ -80,8 +80,8 @@ NS_LEXVO_ISO639_1 = "https://lexvo.org/id/iso639-1/"
 NS_LEXVO_ISO639_3 = "https://lexvo.org/id/iso639-3/"
 NS_ISO3166 = "https://www.iso.org/obp/ui/#iso:code:3166:"
 NS_SPDX_LICENSES = "https://spdx.org/licenses/"
-NS_DATALENS_THESAURUS = "http://ns.inria.fr/datalens/thesaurus#"
-NS_DATALENS_DATA_LIBRARY = "http://ns.inria.fr/datalens/data#library/"
+NS_DATALENS_THESAURUS = "http://[namespace]/datalens/thesaurus#"
+NS_DATALENS_DATA_LIBRARY = "http://[namespace]/datalens/data#library/"
 
 CC_LICENSE_URIS = {
     "cc0-1.0": "http://creativecommons.org/publicdomain/zero/1.0/",

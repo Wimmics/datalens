@@ -10,19 +10,7 @@
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
-@prefix dlo: <http://ns.inria.fr/datalens/ontology/> .
-
-
-dlo: a owl:Ontology ;
-    dcterms:title "Datalens Ontology"@en ;
-    dcterms:creator "Aline MENIN", "Zachari ARNAUD" ;
-    dcterms:modified "2026-05-11" ;
-    dcterms:description "The Datalens Ontology defines concepts and relationships for datasets and machine learning models."@en ;
-    owl:versionInfo "1.0" ;
-    dcat:landingPage <https://github.com/amenin/datalens> ;
-    dcterms:license  <https://www.apache.org/licenses/LICENSE-2.0> ;
-    dcterms:created "2026"^^xsd:gYear ;
-    dcterms:publisher "Inria", "University Côte d'Azur", "CNRS" .
+@prefix dlo: <http://[namespace]/datalens/ontology/> .
 
 
 # Class MLResource
