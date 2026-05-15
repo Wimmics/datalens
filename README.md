@@ -44,6 +44,12 @@ The pipeline:
 
 See [kg/README.md](kg/README.md) for requirements and execution details.
 
+## Expert Validation of SKOS thesaurus
+
+To validate the ML task hierarchy, we conducted an expert evaluation with IT researchers and developers. 
+
+See [expert-validation](./expert-validation/) for more details on the protocol and obtained results.
+
 ## Competency Questions and Visualizations
 
 The [sparql-examples](sparql-examples) directory contains SPARQL implementations of the competency questions used to inspect the knowledge graph.

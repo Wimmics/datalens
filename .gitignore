@@ -346,3 +346,8 @@ kg/input/**
 # visualization files
 vis/node_modules/**
 vis/dist/**
+
+
+# R scripts
+.RData
+.Rhistory
