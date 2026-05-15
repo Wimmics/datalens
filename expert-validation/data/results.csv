@@ -1,0 +1,265 @@
+participant_id,questionnaire_id,task,reported agreement,reported confidence level
+1,1,Subtask : multiple-choice-coreference-resolution - Task(s) : multiple-choice,Very relevant,Moderately confident
+2,1,Subtask : multiple-choice-coreference-resolution - Task(s) : multiple-choice,Very relevant,Moderately confident
+3,1,Subtask : multiple-choice-coreference-resolution - Task(s) : multiple-choice,Somewhat relevant,Not at all confident
+1,1,Subtask : multiple-choice-qa - Task(s) : question-answering,Very relevant,Very confident
+2,1,Subtask : multiple-choice-qa - Task(s) : question-answering,Very relevant,Moderately confident
+3,1,Subtask : multiple-choice-qa - Task(s) : question-answering,Extremely relevant,Extremely confident
+1,1,Subtask : multiple-choice-qa - Task(s) : multiple-choice,Very relevant,Very confident
+2,1,Subtask : multiple-choice-qa - Task(s) : multiple-choice,Very relevant,Moderately confident
+3,1,Subtask : multiple-choice-qa - Task(s) : multiple-choice,Extremely relevant,Extremely confident
+1,1,Subtask : multivariate-time-series-forecasting - Task(s) : time-series-forecasting,Very relevant,Very confident
+2,1,Subtask : multivariate-time-series-forecasting - Task(s) : time-series-forecasting,Extremely relevant,Moderately confident
+3,1,Subtask : multivariate-time-series-forecasting - Task(s) : time-series-forecasting,Extremely relevant,Extremely confident
+1,1,Subtask : named-entity-recognition - Task(s) : token-classification,Very relevant,Very confident
+2,1,Subtask : named-entity-recognition - Task(s) : token-classification,Somewhat relevant,Moderately confident
+3,1,Subtask : named-entity-recognition - Task(s) : token-classification,Very relevant,Very confident
+1,1,Subtask : natural-language-inference - Task(s) : text-classification,Very relevant,Moderately confident
+2,1,Subtask : natural-language-inference - Task(s) : text-classification,Very relevant,Moderately confident
+3,1,Subtask : natural-language-inference - Task(s) : text-classification,Somewhat relevant,Moderately confident
+1,1,Subtask : news-articles-headline-generation - Task(s) : summarization,Very relevant,Very confident
+2,1,Subtask : news-articles-headline-generation - Task(s) : summarization,Somewhat relevant,Moderately confident
+3,1,Subtask : news-articles-headline-generation - Task(s) : summarization,Extremely relevant,Very confident
+1,1,Subtask : open-book-qa - Task(s) : question-answering,Extremely relevant,Very confident
+2,1,Subtask : open-book-qa - Task(s) : question-answering,Very relevant,Moderately confident
+3,1,Subtask : open-book-qa - Task(s) : question-answering,Extremely relevant,Very confident
+1,1,Subtask : open-book-qa - Task(s) : text-generation,Very relevant,Very confident
+2,1,Subtask : open-book-qa - Task(s) : text-generation,Very relevant,Moderately confident
+3,1,Subtask : open-book-qa - Task(s) : text-generation,Slightly relevant,Very confident
+1,1,Subtask : open-domain-abstractive-qa - Task(s) : question-answering,Somewhat relevant,Not at all confident
+2,1,Subtask : open-domain-abstractive-qa - Task(s) : question-answering,Very relevant,Moderately confident
+3,1,Subtask : open-domain-abstractive-qa - Task(s) : question-answering,Extremely relevant,Very confident
+1,1,Subtask : open-domain-qa - Task(s) : question-answering,Very relevant,Very confident
+2,1,Subtask : open-domain-qa - Task(s) : question-answering,Very relevant,Moderately confident
+3,1,Subtask : open-domain-qa - Task(s) : question-answering,Extremely relevant,Extremely confident
+1,1,Subtask : panoptic-segmentation - Task(s) : image-segmentation,Somewhat relevant,Not at all confident
+2,1,Subtask : panoptic-segmentation - Task(s) : image-segmentation,Somewhat relevant,Moderately confident
+3,1,Subtask : panoptic-segmentation - Task(s) : image-segmentation,Extremely relevant,Moderately confident
+1,1,Subtask : panoptic-segmentation - Task(s) : object-detection,Somewhat relevant,Not at all confident
+2,1,Subtask : panoptic-segmentation - Task(s) : object-detection,Somewhat relevant,Moderately confident
+3,1,Subtask : panoptic-segmentation - Task(s) : object-detection,Somewhat relevant,Moderately confident
+1,1,Subtask : part-of-speech - Task(s) : token-classification,Very relevant,Very confident
+2,1,Subtask : part-of-speech - Task(s) : token-classification,Somewhat relevant,Moderately confident
+3,1,Subtask : part-of-speech - Task(s) : token-classification,Not at all relevant,Not at all confident
+1,1,Subtask : parsing - Task(s) : token-classification,Somewhat relevant,Moderately confident
+2,1,Subtask : parsing - Task(s) : token-classification,Very relevant,Moderately confident
+3,1,Subtask : parsing - Task(s) : token-classification,Very relevant,Very confident
+1,1,Subtask : pose-estimation - Task(s) : keypoint-detection,Extremely relevant,Very confident
+2,1,Subtask : pose-estimation - Task(s) : keypoint-detection,Somewhat relevant,Moderately confident
+3,1,Subtask : pose-estimation - Task(s) : keypoint-detection,Not at all relevant,Not at all confident
+1,1,Subtask : rdf-to-text - Task(s) : graph-ml,Somewhat relevant,Moderately confident
+2,1,Subtask : rdf-to-text - Task(s) : graph-ml,Very relevant,Moderately confident
+3,1,Subtask : rdf-to-text - Task(s) : graph-ml,Very relevant,Extremely confident
+1,1,Subtask : semantic-segmentation - Task(s) : image-segmentation,Extremely relevant,Extremely confident
+2,1,Subtask : semantic-segmentation - Task(s) : image-segmentation,Somewhat relevant,Moderately confident
+3,1,Subtask : semantic-segmentation - Task(s) : image-segmentation,Somewhat relevant,Moderately confident
+1,1,Subtask : semantic-similarity-classification - Task(s) : text-classification,Very relevant,Very confident
+2,1,Subtask : semantic-similarity-classification - Task(s) : text-classification,Somewhat relevant,Moderately confident
+3,1,Subtask : semantic-similarity-classification - Task(s) : text-classification,Extremely relevant,Extremely confident
+1,1,Subtask : semantic-similarity-scoring - Task(s) : sentence-similarity,Very relevant,Very confident
+2,1,Subtask : semantic-similarity-scoring - Task(s) : sentence-similarity,Very relevant,Moderately confident
+3,1,Subtask : semantic-similarity-scoring - Task(s) : sentence-similarity,Extremely relevant,Extremely confident
+1,1,Subtask : sentiment-analysis - Task(s) : text-classification,Very relevant,Very confident
+2,1,Subtask : sentiment-analysis - Task(s) : text-classification,Somewhat relevant,Moderately confident
+3,1,Subtask : sentiment-analysis - Task(s) : text-classification,Extremely relevant,Extremely confident
+1,1,Subtask : sentiment-classification - Task(s) : text-classification,Very relevant,Very confident
+2,1,Subtask : sentiment-classification - Task(s) : text-classification,Very relevant,Moderately confident
+3,1,Subtask : sentiment-classification - Task(s) : text-classification,Very relevant,Very confident
+1,1,Subtask : sentiment-scoring - Task(s) : text-classification,Very relevant,Very confident
+2,1,Subtask : sentiment-scoring - Task(s) : text-classification,Somewhat relevant,Moderately confident
+3,1,Subtask : sentiment-scoring - Task(s) : text-classification,Somewhat relevant,Moderately confident
+1,1,Subtask : slot-filling - Task(s) : token-classification,Very relevant,Very confident
+2,1,Subtask : slot-filling - Task(s) : token-classification,Somewhat relevant,Moderately confident
+3,1,Subtask : slot-filling - Task(s) : token-classification,Not at all relevant,Not at all confident
+1,1,Subtask : speaker-identification - Task(s) : automatic-speech-recognition,Extremely relevant,Very confident
+2,1,Subtask : speaker-identification - Task(s) : automatic-speech-recognition,Very relevant,Moderately confident
+3,1,Subtask : speaker-identification - Task(s) : automatic-speech-recognition,Very relevant,Very confident
+1,1,Subtask : super-resolution - Task(s) : image-segmentation,Somewhat relevant,Slightly confident
+2,1,Subtask : super-resolution - Task(s) : image-segmentation,Somewhat relevant,Moderately confident
+3,1,Subtask : super-resolution - Task(s) : image-segmentation,Somewhat relevant,Not at all confident
+1,1,Subtask : tabular-multi-class-classification - Task(s) : tabular-classification,Very relevant,Very confident
+2,1,Subtask : tabular-multi-class-classification - Task(s) : tabular-classification,Very relevant,Moderately confident
+3,1,Subtask : tabular-multi-class-classification - Task(s) : tabular-classification,Extremely relevant,Extremely confident
+1,1,Subtask : tabular-multi-label-classification - Task(s) : multiple-choice,Very relevant,Moderately confident
+2,1,Subtask : tabular-multi-label-classification - Task(s) : multiple-choice,Very relevant,Moderately confident
+3,1,Subtask : tabular-multi-label-classification - Task(s) : multiple-choice,Not at all relevant,Moderately confident
+1,1,Subtask : tabular-multi-label-classification - Task(s) : question-answering,Very relevant,Moderately confident
+2,1,Subtask : tabular-multi-label-classification - Task(s) : question-answering,Somewhat relevant,Moderately confident
+3,1,Subtask : tabular-multi-label-classification - Task(s) : question-answering,Slightly relevant,Moderately confident
+1,1,Subtask : tabular-multi-label-classification - Task(s) : table-question-answering,Very relevant,Moderately confident
+2,1,Subtask : tabular-multi-label-classification - Task(s) : table-question-answering,Somewhat relevant,Moderately confident
+3,1,Subtask : tabular-multi-label-classification - Task(s) : table-question-answering,Slightly relevant,Moderately confident
+1,1,Subtask : tabular-multi-label-classification - Task(s) : tabular-classification,Extremely relevant,Moderately confident
+2,1,Subtask : tabular-multi-label-classification - Task(s) : tabular-classification,Extremely relevant,Moderately confident
+3,1,Subtask : tabular-multi-label-classification - Task(s) : tabular-classification,Extremely relevant,Moderately confident
+1,1,Subtask : tabular-multi-label-classification - Task(s) : text-classification,Somewhat relevant,Moderately confident
+2,1,Subtask : tabular-multi-label-classification - Task(s) : text-classification,Very relevant,Moderately confident
+3,1,Subtask : tabular-multi-label-classification - Task(s) : text-classification,Somewhat relevant,Moderately confident
+1,1,Subtask : tabular-multi-label-classification - Task(s) : text-generation,Somewhat relevant,Moderately confident
+2,1,Subtask : tabular-multi-label-classification - Task(s) : text-generation,Slightly relevant,Moderately confident
+3,1,Subtask : tabular-multi-label-classification - Task(s) : text-generation,Slightly relevant,Moderately confident
+1,1,Subtask : tabular-multi-label-classification - Task(s) : zero-shot-classification,Somewhat relevant,Moderately confident
+2,1,Subtask : tabular-multi-label-classification - Task(s) : zero-shot-classification,Somewhat relevant,Moderately confident
+3,1,Subtask : tabular-multi-label-classification - Task(s) : zero-shot-classification,Extremely relevant,Moderately confident
+1,1,Subtask : tabular-single-column-regression - Task(s) : tabular-regression,Extremely relevant,Very confident
+2,1,Subtask : tabular-single-column-regression - Task(s) : tabular-regression,Very relevant,Moderately confident
+3,1,Subtask : tabular-single-column-regression - Task(s) : tabular-regression,Extremely relevant,Extremely confident
+1,1,Subtask : task-planning - Task(s) : text-generation,Somewhat relevant,Moderately confident
+2,1,Subtask : task-planning - Task(s) : text-generation,Somewhat relevant,Moderately confident
+3,1,Subtask : task-planning - Task(s) : text-generation,Not at all relevant,Moderately confident
+1,1,Subtask : text-simplification - Task(s) : summarization,Very relevant,Very confident
+2,1,Subtask : text-simplification - Task(s) : summarization,Extremely relevant,Moderately confident
+3,1,Subtask : text-simplification - Task(s) : summarization,Extremely relevant,Extremely confident
+1,1,Subtask : text-scoring - Task(s) : text-classification,Somewhat relevant,Very confident
+2,1,Subtask : text-scoring - Task(s) : text-classification,Very relevant,Moderately confident
+3,1,Subtask : text-scoring - Task(s) : text-classification,Somewhat relevant,Very confident
+1,1,Subtask : text2text-generation - Task(s) : text-generation,Very relevant,Very confident
+2,1,Subtask : text2text-generation - Task(s) : text-generation,Very relevant,Moderately confident
+3,1,Subtask : text2text-generation - Task(s) : text-generation,Extremely relevant,Extremely confident
+1,1,Subtask : topic-classification - Task(s) : text-classification,Very relevant,Very confident
+2,1,Subtask : topic-classification - Task(s) : text-classification,Very relevant,Moderately confident
+3,1,Subtask : topic-classification - Task(s) : text-classification,Extremely relevant,Extremely confident
+1,1,Subtask : univariate-time-series-forecasting - Task(s) : time-series-forecasting,Very relevant,Very confident
+2,1,Subtask : univariate-time-series-forecasting - Task(s) : time-series-forecasting,Very relevant,Moderately confident
+3,1,Subtask : univariate-time-series-forecasting - Task(s) : time-series-forecasting,Extremely relevant,Moderately confident
+1,1,Subtask : utterance-retrieval - Task(s) : text-retrieval,Very relevant,Moderately confident
+2,1,Subtask : utterance-retrieval - Task(s) : text-retrieval,Very relevant,Moderately confident
+3,1,Subtask : utterance-retrieval - Task(s) : text-retrieval,Not at all relevant,Moderately confident
+1,1,Subtask : vehicle-detection - Task(s) : object-detection,Extremely relevant,Extremely confident
+2,1,Subtask : vehicle-detection - Task(s) : object-detection,Extremely relevant,Moderately confident
+3,1,Subtask : vehicle-detection - Task(s) : object-detection,Extremely relevant,Very confident
+1,1,Subtask : word-sense-disambiguation - Task(s) : token-classification,Very relevant,Very confident
+2,1,Subtask : word-sense-disambiguation - Task(s) : token-classification,Somewhat relevant,Moderately confident
+3,1,Subtask : word-sense-disambiguation - Task(s) : token-classification,Somewhat relevant,Not at all confident
+1,1,Subtask : lemmatization - Task(s) : token-classification,Very relevant,Very confident
+2,1,Subtask : lemmatization - Task(s) : token-classification,Somewhat relevant,Moderately confident
+3,1,Subtask : lemmatization - Task(s) : token-classification,Not at all relevant,Not at all confident
+1,2,Subtask : news-articles-summarization - Task(s) : question-answering,Not at all relevant,Very confident
+2,2,Subtask : news-articles-summarization - Task(s) : question-answering,Slightly relevant,Very confident
+3,2,Subtask : news-articles-summarization - Task(s) : question-answering,Not at all relevant,Moderately confident
+1,2,Subtask : news-articles-summarization - Task(s) : summarization,Extremely relevant,Very confident
+2,2,Subtask : news-articles-summarization - Task(s) : summarization,Extremely relevant,Very confident
+3,2,Subtask : news-articles-summarization - Task(s) : summarization,Extremely relevant,Moderately confident
+1,2,Subtask : news-articles-summarization - Task(s) : text-classification,Slightly relevant,Very confident
+2,2,Subtask : news-articles-summarization - Task(s) : text-classification,Slightly relevant,Very confident
+3,2,Subtask : news-articles-summarization - Task(s) : text-classification,Somewhat relevant,Moderately confident
+1,2,Subtask : news-articles-summarization - Task(s) : text-generation,Very relevant,Very confident
+2,2,Subtask : news-articles-summarization - Task(s) : text-generation,Very relevant,Very confident
+3,2,Subtask : news-articles-summarization - Task(s) : text-generation,Very relevant,Moderately confident
+1,2,Subtask : news-articles-summarization - Task(s) : token-classification,Not at all relevant,Very confident
+2,2,Subtask : news-articles-summarization - Task(s) : token-classification,Not at all relevant,Very confident
+3,2,Subtask : news-articles-summarization - Task(s) : token-classification,Somewhat relevant,Moderately confident
+1,2,Subtask : abstractive-qa - Task(s) : question-answering,Extremely relevant,Very confident
+2,2,Subtask : abstractive-qa - Task(s) : question-answering,Somewhat relevant,Not at all confident
+3,2,Subtask : abstractive-qa - Task(s) : question-answering,Very relevant,Moderately confident
+1,2,Subtask : acceptability-classification - Task(s) : text-classification,Extremely relevant,Very confident
+2,2,Subtask : acceptability-classification - Task(s) : text-classification,Slightly relevant,Not at all confident
+3,2,Subtask : acceptability-classification - Task(s) : text-classification,Slightly relevant,Slightly confident
+1,2,Subtask : audio-emotion-recognition - Task(s) : audio-classification,Extremely relevant,Very confident
+2,2,Subtask : audio-emotion-recognition - Task(s) : audio-classification,Very relevant,Moderately confident
+3,2,Subtask : audio-emotion-recognition - Task(s) : audio-classification,Very relevant,Very confident
+1,2,Subtask : audio-intent-classification - Task(s) : audio-classification,Extremely relevant,Very confident
+2,2,Subtask : audio-intent-classification - Task(s) : audio-classification,Somewhat relevant,Not at all confident
+3,2,Subtask : audio-intent-classification - Task(s) : audio-classification,Very relevant,Very confident
+1,2,Subtask : audio-language-identification - Task(s) : audio-classification,Extremely relevant,Very confident
+2,2,Subtask : audio-language-identification - Task(s) : audio-classification,Very relevant,Very confident
+3,2,Subtask : audio-language-identification - Task(s) : audio-classification,Very relevant,Very confident
+1,2,Subtask : coreference-resolution - Task(s) : token-classification,Very relevant,Moderately confident
+2,2,Subtask : coreference-resolution - Task(s) : token-classification,Slightly relevant,Not at all confident
+3,2,Subtask : coreference-resolution - Task(s) : token-classification,Somewhat relevant,Slightly confident
+1,2,Subtask : closed-book-qa - Task(s) : question-answering,Extremely relevant,Moderately confident
+2,2,Subtask : closed-book-qa - Task(s) : question-answering,Extremely relevant,Very confident
+3,2,Subtask : closed-book-qa - Task(s) : question-answering,Extremely relevant,Very confident
+1,2,Subtask : closed-book-qa - Task(s) : text-generation,Somewhat relevant,Moderately confident
+2,2,Subtask : closed-book-qa - Task(s) : text-generation,Very relevant,Very confident
+3,2,Subtask : closed-book-qa - Task(s) : text-generation,Very relevant,Very confident
+1,2,Subtask : closed-domain-qa - Task(s) : question-answering,Extremely relevant,Very confident
+2,2,Subtask : closed-domain-qa - Task(s) : question-answering,Very relevant,Moderately confident
+3,2,Subtask : closed-domain-qa - Task(s) : question-answering,Very relevant,Very confident
+1,2,Subtask : conversational - Task(s) : text-generation,Very relevant,Slightly confident
+2,2,Subtask : conversational - Task(s) : text-generation,Very relevant,Moderately confident
+3,2,Subtask : conversational - Task(s) : text-generation,Somewhat relevant,Moderately confident
+1,2,Subtask : dialogue-generation - Task(s) : text-generation,Extremely relevant,Moderately confident
+2,2,Subtask : dialogue-generation - Task(s) : text-generation,Extremely relevant,Very confident
+3,2,Subtask : dialogue-generation - Task(s) : text-generation,Very relevant,Moderately confident
+1,2,Subtask : dialogue-modeling - Task(s) : text-generation,Very relevant,Not at all confident
+2,2,Subtask : dialogue-modeling - Task(s) : text-generation,Slightly relevant,Not at all confident
+3,2,Subtask : dialogue-modeling - Task(s) : text-generation,Somewhat relevant,Slightly confident
+1,2,Subtask : document-retrieval - Task(s) : text-retrieval,Somewhat relevant,Moderately confident
+2,2,Subtask : document-retrieval - Task(s) : text-retrieval,Somewhat relevant,Moderately confident
+3,2,Subtask : document-retrieval - Task(s) : text-retrieval,Very relevant,Very confident
+1,2,Subtask : entity-linking-classification - Task(s) : text-classification,Somewhat relevant,Not at all confident
+2,2,Subtask : entity-linking-classification - Task(s) : text-classification,Slightly relevant,Slightly confident
+3,2,Subtask : entity-linking-classification - Task(s) : text-classification,Somewhat relevant,Moderately confident
+1,2,Subtask : entity-linking-retrieval - Task(s) : text-retrieval,Slightly relevant,Moderately confident
+2,2,Subtask : entity-linking-retrieval - Task(s) : text-retrieval,Somewhat relevant,Slightly confident
+3,2,Subtask : entity-linking-retrieval - Task(s) : text-retrieval,Somewhat relevant,Moderately confident
+1,2,Subtask : explanation-generation - Task(s) : text-generation,Extremely relevant,Very confident
+2,2,Subtask : explanation-generation - Task(s) : text-generation,Extremely relevant,Very confident
+3,2,Subtask : explanation-generation - Task(s) : text-generation,Very relevant,Moderately confident
+1,2,Subtask : extractive-qa - Task(s) : question-answering,Extremely relevant,Very confident
+2,2,Subtask : extractive-qa - Task(s) : question-answering,Somewhat relevant,Not at all confident
+3,2,Subtask : extractive-qa - Task(s) : question-answering,Very relevant,Moderately confident
+1,2,Subtask : face-detection - Task(s) : object-detection,Very relevant,Very confident
+2,2,Subtask : face-detection - Task(s) : object-detection,Very relevant,Very confident
+3,2,Subtask : face-detection - Task(s) : object-detection,Somewhat relevant,Moderately confident
+1,2,Subtask : fact-checking - Task(s) : text-classification,Extremely relevant,Very confident
+2,2,Subtask : fact-checking - Task(s) : text-classification,Somewhat relevant,Moderately confident
+3,2,Subtask : fact-checking - Task(s) : text-classification,Somewhat relevant,Moderately confident
+1,2,Subtask : fact-checking-retrieval - Task(s) : text-retrieval,Extremely relevant,Very confident
+2,2,Subtask : fact-checking-retrieval - Task(s) : text-retrieval,Very relevant,Moderately confident
+3,2,Subtask : fact-checking-retrieval - Task(s) : text-retrieval,Very relevant,Moderately confident
+1,2,Subtask : grasping - Task(s) : robotics,Extremely relevant,Moderately confident
+2,2,Subtask : grasping - Task(s) : robotics,Somewhat relevant,Not at all confident
+3,2,Subtask : grasping - Task(s) : robotics,Very relevant,Slightly confident
+1,2,Subtask : hate-speech-detection - Task(s) : text-classification,Somewhat relevant,Moderately confident
+2,2,Subtask : hate-speech-detection - Task(s) : text-classification,Extremely relevant,Very confident
+3,2,Subtask : hate-speech-detection - Task(s) : text-classification,Extremely relevant,Very confident
+1,2,Subtask : image-captioning - Task(s) : image-to-text,Extremely relevant,Very confident
+2,2,Subtask : image-captioning - Task(s) : image-to-text,Very relevant,Very confident
+3,2,Subtask : image-captioning - Task(s) : image-to-text,Slightly relevant,Moderately confident
+1,2,Subtask : image-colorization - Task(s) : image-to-image,Extremely relevant,Very confident
+2,2,Subtask : image-colorization - Task(s) : image-to-image,Very relevant,Moderately confident
+3,2,Subtask : image-colorization - Task(s) : image-to-image,Somewhat relevant,Moderately confident
+1,2,Subtask : image-inpainting - Task(s) : image-to-image,Extremely relevant,Very confident
+2,2,Subtask : image-inpainting - Task(s) : image-to-image,Very relevant,Slightly confident
+3,2,Subtask : image-inpainting - Task(s) : image-to-image,Somewhat relevant,Moderately confident
+1,2,Subtask : instance-segmentation - Task(s) : image-segmentation,Very relevant,Slightly confident
+2,2,Subtask : instance-segmentation - Task(s) : image-segmentation,Very relevant,Slightly confident
+3,2,Subtask : instance-segmentation - Task(s) : image-segmentation,Very relevant,Very confident
+1,2,Subtask : instance-segmentation - Task(s) : object-detection,Very relevant,Slightly confident
+2,2,Subtask : instance-segmentation - Task(s) : object-detection,Somewhat relevant,Slightly confident
+3,2,Subtask : instance-segmentation - Task(s) : object-detection,Very relevant,Very confident
+1,2,Subtask : intent-classification - Task(s) : text-classification,Extremely relevant,Very confident
+2,2,Subtask : intent-classification - Task(s) : text-classification,Very relevant,Moderately confident
+3,2,Subtask : intent-classification - Task(s) : text-classification,Somewhat relevant,Moderately confident
+1,2,Subtask : keyword-spotting - Task(s) : automatic-speech-recognition,Somewhat relevant,Moderately confident
+2,2,Subtask : keyword-spotting - Task(s) : automatic-speech-recognition,Slightly relevant,Not at all confident
+3,2,Subtask : keyword-spotting - Task(s) : automatic-speech-recognition,Very relevant,Moderately confident
+1,2,Subtask : language-identification - Task(s) : text-classification,Extremely relevant,Very confident
+2,2,Subtask : language-identification - Task(s) : text-classification,Very relevant,Very confident
+3,2,Subtask : language-identification - Task(s) : text-classification,Somewhat relevant,Moderately confident
+1,2,Subtask : language-modeling - Task(s) : text-generation,Slightly relevant,Moderately confident
+2,2,Subtask : language-modeling - Task(s) : text-generation,Very relevant,Very confident
+3,2,Subtask : language-modeling - Task(s) : text-generation,Extremely relevant,Very confident
+1,2,Subtask : masked-language-modeling - Task(s) : fill-mask,Extremely relevant,Moderately confident
+2,2,Subtask : masked-language-modeling - Task(s) : fill-mask,Extremely relevant,Extremely confident
+3,2,Subtask : masked-language-modeling - Task(s) : fill-mask,Very relevant,Moderately confident
+1,2,Subtask : masked-language-modeling - Task(s) : text-generation,Slightly relevant,Moderately confident
+2,2,Subtask : masked-language-modeling - Task(s) : text-generation,Not at all relevant,Extremely confident
+3,2,Subtask : masked-language-modeling - Task(s) : text-generation,Very relevant,Moderately confident
+1,2,Subtask : multi-class-classification - Task(s) : text-classification,Somewhat relevant,Moderately confident
+2,2,Subtask : multi-class-classification - Task(s) : text-classification,Slightly relevant,Moderately confident
+3,2,Subtask : multi-class-classification - Task(s) : text-classification,Very relevant,Moderately confident
+1,2,Subtask : multi-class-image-classification - Task(s) : image-classification,Extremely relevant,Moderately confident
+2,2,Subtask : multi-class-image-classification - Task(s) : image-classification,Extremely relevant,Very confident
+3,2,Subtask : multi-class-image-classification - Task(s) : image-classification,Extremely relevant,Very confident
+1,2,Subtask : multi-input-text-classification - Task(s) : text-classification,Extremely relevant,Very confident
+2,2,Subtask : multi-input-text-classification - Task(s) : text-classification,Somewhat relevant,Slightly confident
+3,2,Subtask : multi-input-text-classification - Task(s) : text-classification,Extremely relevant,Very confident
+1,2,Subtask : multi-label-classification - Task(s) : text-classification,Somewhat relevant,Moderately confident
+2,2,Subtask : multi-label-classification - Task(s) : text-classification,Slightly relevant,Very confident
+3,2,Subtask : multi-label-classification - Task(s) : text-classification,Very relevant,Very confident
+1,2,Subtask : multi-label-image-classification - Task(s) : image-classification,Extremely relevant,Very confident
+2,2,Subtask : multi-label-image-classification - Task(s) : image-classification,Very relevant,Moderately confident
+3,2,Subtask : multi-label-image-classification - Task(s) : image-classification,Extremely relevant,Very confident
