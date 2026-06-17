@@ -15,13 +15,6 @@ MODALITY_CANONICAL = {
     'video': 'Video',
 }
 
-TRANSFORMATION_CANONICAL = {
-    'finetune': 'Finetune',
-    'quantize': 'Quantize',
-    'merge': 'Merge',
-    'adapt': 'Adapt',
-}
-
 FORMAT_CANONICAL = {
     'webdataset': 'WebDataset',
     'imagefolder': 'ImageFolder',
@@ -272,7 +265,6 @@ SUBTASK_CANONICAL = {
 
 CANONICALS = {
     "modality": MODALITY_CANONICAL,
-    "transformation": TRANSFORMATION_CANONICAL,
     "format": FORMAT_CANONICAL,
     "size_category": SIZE_CATEGORY_CANONICAL,
     "dataset_library": DATASET_LIBRARY_CANONICAL,

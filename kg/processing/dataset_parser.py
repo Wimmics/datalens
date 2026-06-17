@@ -4,11 +4,12 @@ from typing import Any
 from pathlib import Path
 from .canonical_thesaurus import canonicalize, get_tag_alone
 from .parser_tools import (
-    build_uris, dedupe, get_tag_with_prefix, hash16, infer_language_tokens,
-    normalize_and_dedupe_tags, normalize_boolean, normalize_string, remove_consumed_tags, paper_url)
+    build_uris, dedupe, get_tag_with_prefix, hash16, infer_language_tokens, to_list,
+    normalize_boolean, normalize_string, paper_url, split_hf_values
+)
 
 
-def parse(json_obj: dict[str, Any]) -> tuple[dict[str, Any], int]:
+def parse(json_obj: dict[str, Any]) -> dict[str, Any]:
     parsed = dict(json_obj)
 
     parsed["description"] = normalize_string(parsed.get("description"))
@@ -16,7 +17,7 @@ def parse(json_obj: dict[str, Any]) -> tuple[dict[str, Any], int]:
     parsed["gated"] = normalize_boolean(parsed.get("gated"))
     parsed["disabled"] = normalize_boolean(parsed.get("disabled"))
 
-    tags, removed_count = normalize_and_dedupe_tags(parsed.get("tags", []))
+    tags = dedupe(parsed.get("tags", []))
 
     region_tokens = get_tag_with_prefix(tags, "region:")
     explicit_language_values = get_tag_with_prefix(tags, "language:")
@@ -26,6 +27,22 @@ def parse(json_obj: dict[str, Any]) -> tuple[dict[str, Any], int]:
     parsed["language_uris"] = build_uris(language_tokens, "language")
     parsed["region_uris"] = build_uris(region_tokens, "region")
     parsed["license_uris"] = build_uris(license_tokens, "license")
+
+    source_dataset_values = to_list(parsed.get("source_dataset"))
+    source_dataset_values.extend(get_tag_with_prefix(tags, "source_datasets:"))
+    source_dataset_values.extend(get_tag_with_prefix(tags, "source_dataset:"))
+    source_dataset_hf, source_dataset_non_hf = split_hf_values(
+        source_dataset_values, kind="dataset"
+    )
+    parsed["source_dataset_hf"] = source_dataset_hf
+    parsed["source_dataset_non_hf_instances"] = [
+        {
+            "source_dataset_label": source_dataset_label,
+            "source_dataset_hash16": hash16(source_dataset_label),
+        }
+        for source_dataset_label in source_dataset_non_hf
+        if hash16(source_dataset_label)
+    ]
 
     # Thesaurus
     parsed["task_categories"] = canonicalize(get_tag_with_prefix(tags, "task_categories:") + get_tag_alone(tags, "task"), "task")
@@ -70,41 +87,9 @@ def parse(json_obj: dict[str, Any]) -> tuple[dict[str, Any], int]:
     parsed["article_hash16"] = hash16({json.dumps({"paperswithcode_id": paperswithcode_id, "doi": sorted(doi_ids), "arxiv": sorted(arxiv_ids)}, sort_keys=True, ensure_ascii=False)} 
                                       if paperswithcode_id or doi_ids or arxiv_ids else None)
 
-    paperid_values = parsed["paperid"] or []
-    tags, consumed_removed_count = remove_consumed_tags(
-        tags,
-        exact_tags=dedupe(
-            language_tokens
-            + license_tokens
-            + parsed["formats"]
-            + parsed["task_categories"]
-            + parsed["task_ids"]
-            + parsed["modalities"]
-            + parsed["libraries"]
-            + parsed["size_categories"]
-            + paperid_values
-            + linguistic_methods
-            + annotation_methods
-        ),
-        prefixes=[
-            "region:",
-            "language:",
-            "format:",
-            "license:",
-            "task_categories:",
-            "task_ids:",
-            "modality:",
-            "library:",
-            "size_categories:",
-            "doi:",
-            "arxiv:",
-            "language_creators:",
-            "annotations_creators:",
-        ],
-    )
     parsed["tags"] = tags
 
-    return parsed, removed_count + consumed_removed_count
+    return parsed
 
 
 def preprocess_file(input_path: Path, output_path: Path) -> None:
@@ -115,25 +100,18 @@ def preprocess_file(input_path: Path, output_path: Path) -> None:
         raise ValueError("Expected JSON to be a list of documents (JSON array).")
 
     processed: list[dict[str, Any]] = []
-    total_removed = 0
-    docs_with_removed = 0
 
     for item in data:
         if not isinstance(item, dict):
             continue
-        cleaned, removed = parse(item)
+        cleaned = parse(item)
         processed.append(cleaned)
-        total_removed += removed
-        if removed > 0:
-            docs_with_removed += 1
 
     with output_path.open("w", encoding="utf-8") as file:
         json.dump(processed, file, ensure_ascii=False, indent=2)
 
     print(f"File written: {output_path}")
     print(f"Documents processed: {len(processed)}")
-    print(f"Documents with duplicates removed: {docs_with_removed}")
-    print(f"Total duplicate tags removed: {total_removed}")
 
 
 if __name__ == "__main__":

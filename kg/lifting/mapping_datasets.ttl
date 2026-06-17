@@ -24,7 +24,6 @@
         rr:template "http://ns.inria.fr/datalens/data/dataset/{$.dataset_hash16}";
         rr:termType rr:IRI;
         rr:class dlo:Dataset;
-        rr:class prov:Entity;
     ];
     rr:predicateObjectMap [
         rr:predicate dcterms:identifier;
@@ -92,6 +91,15 @@
     ];
 
     rr:predicateObjectMap [
+        rr:predicate dlo:hasSourceDataset;
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data/dataset/{$.source_dataset_hash16[*]}"; rr:termType rr:IRI ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dlo:hasSourceDataset;
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data/dataset/{$.source_dataset_non_hf_instances[*].source_dataset_hash16}"; rr:termType rr:IRI ];
+    ];
+
+    rr:predicateObjectMap [
         rr:predicate dcat:landingPage;
         rr:objectMap [ rr:template "https://huggingface.co/datasets/{$.id}"; rr:termType rr:IRI ];
     ];
@@ -113,6 +121,23 @@
     rr:predicateObjectMap [
         rr:predicate dcterms:publisher;
         rr:objectMap [ rr:constant "http://ns.inria.fr/datalens/data/publisher/HuggingFace"; rr:termType rr:IRI ];
+    ];
+    .
+
+<#NonHuggingFaceSourceDataset>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.{{collection}}.find({id:{$exists:true,$ne:null}})";
+        rml:iterator "$.source_dataset_non_hf_instances[*]";
+    ];
+    rr:subjectMap [
+        rr:template "http://ns.inria.fr/datalens/data/dataset/{$.source_dataset_hash16}";
+        rr:termType rr:IRI;
+        rr:class dlo:Dataset;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dcterms:identifier;
+        rr:objectMap [ xrr:reference "$.source_dataset_label" ];
     ];
     .
 

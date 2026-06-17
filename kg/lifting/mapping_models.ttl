@@ -25,7 +25,6 @@
         rr:template "http://ns.inria.fr/datalens/data/model/{$.model_hash16}";
         rr:termType rr:IRI;
         rr:class dlo:Model;
-        rr:class prov:Entity;
     ];
     rr:predicateObjectMap [
         rr:predicate dcterms:identifier;
@@ -89,12 +88,25 @@
         rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data/dataset/{$.datasets_hash16[*]}"; rr:termType rr:IRI ];
     ];
     rr:predicateObjectMap [
+        rr:predicate dlo:wasTrainedOn;
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data/dataset/{$.datasets_non_hf_instances[*].dataset_hash16}"; rr:termType rr:IRI ];
+    ];
+    rr:predicateObjectMap [
         rr:predicate prov:wasDerivedFrom;
         rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data/model/{$.source_models[*].source_model_hash16[*]}"; rr:termType rr:IRI ];
     ];
     rr:predicateObjectMap [
+        rr:predicate prov:wasDerivedFrom;
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data/model/{$.source_model_non_hf_instances[*].source_model_hash16}"; rr:termType rr:IRI ];
+    ];
+    rr:predicateObjectMap [
         rr:predicate prov:qualifiedDerivation;
         rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data/derivation/{$.source_models[*].derivation_hash16}"; rr:termType rr:IRI ];
+    ];
+
+    rr:predicateObjectMap [
+        rr:predicate dlo:hasModelArchitecture;
+        rr:objectMap [ xrr:reference "$.config.architectures[*]"; rr:termType rr:Literal ];
     ];
 
     rr:predicateObjectMap [
@@ -265,6 +277,40 @@
     rr:predicateObjectMap [ 
         rr:predicate foaf:name; 
         rr:objectMap [ rr:constant "HuggingFace"; rr:termType rr:Literal]; 
+    ];
+    .
+
+<#NonHuggingFaceReferencedDataset>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.{{collection}}.find({id:{$exists:true,$ne:null}})";
+        rml:iterator "$.datasets_non_hf_instances[*]";
+    ];
+    rr:subjectMap [
+        rr:template "http://ns.inria.fr/datalens/data/dataset/{$.dataset_hash16}";
+        rr:termType rr:IRI;
+        rr:class dlo:Dataset;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dcterms:identifier;
+        rr:objectMap [ xrr:reference "$.dataset_label" ];
+    ];
+    .
+
+<#NonHuggingFaceReferencedModel>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.{{collection}}.find({id:{$exists:true,$ne:null}})";
+        rml:iterator "$.source_models_non_hf_instances[*]";
+    ];
+    rr:subjectMap [
+        rr:template "http://ns.inria.fr/datalens/data/model/{$.model_hash16}";
+        rr:termType rr:IRI;
+        rr:class dlo:Model;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dcterms:identifier;
+        rr:objectMap [ xrr:reference "$.model_label" ];
     ];
     .
 

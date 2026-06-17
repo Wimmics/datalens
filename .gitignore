@@ -319,23 +319,10 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-
-# Server config files
-corese-server/config/**
-corese-server/log/**
-corese-server/corese-data/**
-
-virtuoso-server/virtuoso-data/**
-
-# Case study input and output data
-case-study/data/**
+kg/fetching/db/**
 
 ontology/do_not_commit/**
 ontology/used-vocabularies/**
-_old/**
-_other/**
-kg/output/**
-kg/input/**
 
 # Ignore all JSON
 *.json

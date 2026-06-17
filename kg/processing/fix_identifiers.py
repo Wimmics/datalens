@@ -28,7 +28,6 @@ def fix_file(path: Path) -> int:
 
             current = m2.group(1)
             if current != id:
-                print(f"{path}: replacing line {j + 1}: '{current}' -> '{id}'")
                 lines[j] = lines[j].replace(current, id)
                 changed += 1
             break

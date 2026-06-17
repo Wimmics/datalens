@@ -1,5 +1,8 @@
 import hashlib
+import json
 import re
+from functools import lru_cache
+from pathlib import Path
 from typing import Any
 
 SPACE_AROUND_COLON = re.compile(r"\s*:\s*")
@@ -202,60 +205,25 @@ def hash16(value: Any) -> str | None:
         return None
     return hashlib.sha256(text.encode("utf-8")).hexdigest()[:16]
 
-def normalize_and_dedupe_tags(raw_tags: Any) -> tuple[list[str], int]:
-    if not isinstance(raw_tags, list):
-        return [], 0
-
-    normalized_tags: list[str] = []
-    for item in raw_tags:
-        tag = normalize_string(item)
-        if not tag:
-            continue
-        normalized_tags.append(SPACE_AROUND_COLON.sub(":", tag).lower())
-
-    deduped_tags = dedupe(normalized_tags)
-    tags: list[str] = []
-    for tag in deduped_tags:
-        if tag.startswith("size_categories:"):
-            prefix, value = tag.split(":", 1)
-            normalized_size = SIZE_CATEGORY_UNITS.sub(lambda m: m.group(1).upper(), value)
-            tags.append(f"{prefix}:{normalized_size}")
-        else:
-            tags.append(tag)
-
-    removed_count = len(normalized_tags) - len(deduped_tags)
-    return tags, removed_count
-
-
-def remove_consumed_tags(
-    tags: list[str],
-    *,
-    exact_tags: list[str] | None = None,
-    prefixes: list[str] | None = None,
-) -> tuple[list[str], int]:
-    exact_set = set(exact_tags or [])
-    prefix_values = tuple(prefixes or [])
-
-    cleaned_tags: list[str] = []
-    removed_count = 0
-    for tag in tags:
-        should_remove = tag in exact_set or any(tag.startswith(prefix) for prefix in prefix_values)
-        if should_remove:
-            removed_count += 1
-            continue
-        cleaned_tags.append(tag)
-
-    return cleaned_tags, removed_count
-
-
-def get_tag_with_prefix(tags: list[str], prefix: str) -> list[str]:
+def get_tag_with_prefix(tags: list[str], prefix: str, normalize: bool = True) -> list[str]:
     values: list[str] = []
-    for tag in tags:
+    to_remove: list[str] = []
+    # Iterate over a shallow copy to avoid skipping items when removing
+    for tag in list(tags):
         if tag.startswith(prefix):
-            value = normalize_string(tag.split(":", 1)[1])
+            value = tag.split(":", 1)[1]
+            if normalize:
+                value = normalize_string(value)
             if value:
                 values.append(value)
-                tags.remove(tag)
+            to_remove.append(tag)
+
+    for tag in to_remove:
+        try:
+            tags.remove(tag)
+        except ValueError:
+            pass
+
     return dedupe(values)
 
 def fallback_model_libraries(values: list[str]) -> tuple[list[str], list[dict[str, Any]]]:
@@ -338,6 +306,7 @@ def infer_language_tokens(tags: list[str], explicit_values: list[str]) -> list[s
             continue
         candidate = tag.lower().replace("_", "-")
         if LANGUAGE_2.fullmatch(candidate):
+            tags.remove(tag)
             tokens.append(candidate)
     return dedupe(tokens)
 
@@ -356,3 +325,114 @@ def paper_url(paperids: list[str]) -> list[str]:
             pwc_id = paperid.split(":", 1)[1]
             urls.append(f"https://paperswithcode.com/dataset/{pwc_id}")
     return dedupe(urls)
+
+
+# -- HuggingFace helpers (shared) -------------------------------------------------
+HUGGING_FACE_DATASETS_URL = re.compile(r"https?://huggingface\.co/datasets/([^\s?#/)]+(?:/[^\s?#/]+)?)", re.IGNORECASE)
+HUGGING_FACE_MODELS_URL = re.compile(r"https?://huggingface\.co/(?!datasets/)([^\s?#/]+/[^\s?#/]+)", re.IGNORECASE)
+HUGGING_FACE_ID = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
+
+# Values that must remain raw and not be interpreted as HF ids
+RAW_ONLY_HF_VALUES = {
+    "original",
+    "custom",
+    "generated",
+    "derived",
+    "unknown",
+    "none",
+    "found",
+    "modified",
+    "curated",
+    "parsed",
+    "crawled",
+    "third-party",
+    "external",
+    "internal",
+    "own",
+    "online",
+    "localdoc",
+    "personal",
+    "combination",
+    "n/a",
+    "na",
+    "other",
+}
+
+
+def normalize_hf_identifier(value: Any) -> str | None:
+    text = normalize_string(value)
+    if not text:
+        return None
+
+    # strip common decorators like 'extended/' or 'extended|'
+    if text.startswith("extended/"):
+        text = text[len("extended/"):]
+    elif text.startswith("extended|"):
+        text = text[len("extended|"):]
+
+    # Try dataset URL first to avoid parsing '/datasets/<id>' as a model id.
+    url_match = HUGGING_FACE_DATASETS_URL.search(text) or HUGGING_FACE_MODELS_URL.search(text)
+    if url_match:
+        text = url_match.group(1)
+
+    return text
+
+DATASET_IDS_PATH = Path(__file__).resolve().parent / "resources" / "datasets_ids.json"
+MODEL_IDS_PATH = Path(__file__).resolve().parent / "resources" / "models_ids.json"
+
+
+@lru_cache(maxsize=2)
+def _load_local_ids(kind_path: Path) -> set[str]:
+    try:
+        with kind_path.open("r", encoding="utf-8") as handle:
+            data = json.load(handle)
+    except (OSError, json.JSONDecodeError):
+        return set()
+
+    if not isinstance(data, list):
+        return set()
+
+    return {
+        normalized
+        for item in data
+        if isinstance(item, str)
+        if (normalized := normalize_string(item))
+    }
+
+
+def huggingface_exists(resource_id: str, kind: str) -> bool:
+    normalized_id = normalize_string(resource_id)
+    if not normalized_id:
+        return False
+
+    if kind == "dataset":
+        return normalized_id in _load_local_ids(DATASET_IDS_PATH)
+
+    if kind == "model":
+        return normalized_id in _load_local_ids(MODEL_IDS_PATH)
+
+    return False
+
+def split_hf_values(raw_values: list[str], kind: str = "dataset") -> tuple[list[str], list[str]]:
+    raw_deduped = dedupe([value for value in (normalize_string(item) for item in raw_values) if value])
+    hf_ids: list[str] = []
+    non_hf: list[str] = []
+
+    for raw_value in raw_deduped:
+        candidate = normalize_hf_identifier(raw_value)
+        if not candidate:
+            continue
+
+        if candidate.lower() in RAW_ONLY_HF_VALUES:
+            continue
+
+        if not HUGGING_FACE_ID.fullmatch(candidate):
+            non_hf.append(candidate)
+            continue
+
+        if huggingface_exists(candidate, kind=kind):
+            hf_ids.append(candidate)
+        else:
+            non_hf.append(candidate)
+
+    return dedupe(hf_ids), dedupe(non_hf)

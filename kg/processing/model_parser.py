@@ -4,8 +4,9 @@ from pathlib import Path
 from typing import Any
 from .canonical_thesaurus import canonicalize, get_tag_alone
 from .parser_tools import (
-    build_uris, dedupe, fallback_model_libraries, get_tag_with_prefix, hash16, infer_language_tokens,
-    normalize_and_dedupe_tags, normalize_boolean, normalize_string, remove_consumed_tags, paper_url)
+    build_uris, dedupe, fallback_model_libraries, get_tag_with_prefix, hash16, infer_language_tokens, 
+    normalize_boolean, normalize_string, paper_url, split_hf_values
+)
 
 BASE_MODEL_RELATIONS = {
     "finetune": "finetuned",
@@ -36,34 +37,42 @@ def author_from_hf_id(resource_id: str | None) -> str | None:
 
 def parse_base_model_tags(
     tags: list[str],
-) -> list[dict[str, Any]]:
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     prefix = "base_model:"
     grouped_ids: dict[str, list[str]] = {key: [] for key in DERIVATION_TYPES}
 
-    for tag in tags:
+    for tag in list(tags):
         if not tag.lower().startswith(prefix):
             continue
         payload = tag[len(prefix) :]
+        tags.remove(tag)      
         if not payload:
             continue
-
-        left, sep, right = payload.partition(":")
-        group = BASE_MODEL_RELATIONS.get(left.lower()) if sep else None
-        if group and right:
-            grouped_ids[group].append(right)
+        transformation, sep, model = payload.partition(":")
+        group = BASE_MODEL_RELATIONS.get(transformation.lower()) if sep else None
+        if group and model:
+            grouped_ids[group].append(model)
 
     grouped_ids = {key: dedupe(values) for key, values in grouped_ids.items()}
+    _, models_non_hf = split_hf_values(
+        [model_id for group in grouped_ids.values() for model_id in group],
+        kind="model"
+    )
+
+    source_models_non_hf_instances = [
+        {"model_label": label, "model_hash16": hash16(label)}
+        for label in models_non_hf
+        if hash16(label)
+    ]
 
     source_models: list[dict[str, Any]] = []
-    seen_source_models: set[str] = set()
 
     def add_derivation(transformation_type: str, source_hashes: list[str], seed: str) -> None:
         if not source_hashes or not seed:
             return
         derivation_hash = hash16(f"{transformation_type}:{seed}")
-        if not derivation_hash or derivation_hash in seen_source_models:
+        if not derivation_hash:
             return
-        seen_source_models.add(derivation_hash)
         source_models.append(
             {
                 "source_model_hash16": source_hashes,
@@ -84,10 +93,10 @@ def parse_base_model_tags(
             if source_hash:
                 add_derivation(transformation_type, [source_hash], source_model_id)
 
-    return source_models
+    return source_models, source_models_non_hf_instances
 
 
-def parse(json_obj: dict[str, Any]) -> tuple[dict[str, Any], int]:
+def parse(json_obj: dict[str, Any]) -> dict[str, Any]:
     parsed = dict(json_obj)
 
     parsed["author"] = author_from_hf_id(parsed["id"])
@@ -95,7 +104,7 @@ def parse(json_obj: dict[str, Any]) -> tuple[dict[str, Any], int]:
     parsed["gated"] = normalize_boolean(parsed.get("gated"))
     parsed["disabled"] = normalize_boolean(parsed.get("disabled"))
 
-    tags, removed_count = normalize_and_dedupe_tags(parsed.get("tags", []))
+    tags = dedupe(parsed.get("tags", []))
 
     region_tokens = get_tag_with_prefix(tags, "region:")
     explicit_language_values = get_tag_with_prefix(tags, "language:")
@@ -107,7 +116,7 @@ def parse(json_obj: dict[str, Any]) -> tuple[dict[str, Any], int]:
     parsed["license_uris"] = build_uris(license_tokens, "license")
 
     # Thesaurus
-    parsed["task_categories"] = canonicalize(get_tag_alone(tags, "task")+ [parsed.get("pipeline_tag")])
+    parsed["task_categories"] = canonicalize(get_tag_alone(tags, "task") + [parsed.get("pipeline_tag")])
     parsed["modalities"] = canonicalize(get_tag_with_prefix(tags, "modality:") + get_tag_alone(tags, "modality"), "modality")
     (parsed["thesaurus_libraries"],parsed["fallback_instances"]) = fallback_model_libraries([parsed.get("library_name")] + get_tag_with_prefix(tags, "library:") + get_tag_alone(tags, "model_library"))
     parsed["formats"] = canonicalize(get_tag_with_prefix(tags, "format:") + get_tag_alone(tags, "format"), "format")
@@ -123,10 +132,19 @@ def parse(json_obj: dict[str, Any]) -> tuple[dict[str, Any], int]:
         ]
     )
 
-    dataset_ids = get_tag_with_prefix(tags, "dataset:")
-    parsed["datasets_hash16"] = [hash16(dataset_id) for dataset_id in dataset_ids]
-    source_models = parse_base_model_tags(tags)
+    dataset_ids = get_tag_with_prefix(tags, "dataset:", normalize=False)
+    datasets_hf, datasets_non_hf = split_hf_values(dataset_ids, kind="dataset")
+    parsed["datasets_hf"] = datasets_hf
+    parsed["datasets_non_hf_instances"] = [
+        {"dataset_label": label, "dataset_hash16": hash16(label)}
+        for label in datasets_non_hf
+        if hash16(label)
+    ]
+
+# A modifier
+    source_models, source_models_non_hf_instances = parse_base_model_tags(tags)
     parsed["source_models"] = source_models
+    parsed["source_models_non_hf_instances"] = source_models_non_hf_instances
 
     parsed["article_hash16"] = hash16({json.dumps({"doi": sorted(doi_ids), "arxiv": sorted(arxiv_ids)}, sort_keys=True, ensure_ascii=False)} 
                                       if doi_ids or arxiv_ids else None)
@@ -135,26 +153,9 @@ def parse(json_obj: dict[str, Any]) -> tuple[dict[str, Any], int]:
                                            if parsed["formats"] else None)
     parsed["creator_hash16"] = hash16(parsed.get("author")) if parsed.get("author") else None
 
-    paperid_values = parsed["paperid"] or []
-    tags, consumed_removed_count = remove_consumed_tags(
-        tags,
-        exact_tags=dedupe(language_tokens + parsed["formats"] + parsed["thesaurus_libraries"] + parsed["task_categories"] + paperid_values + dataset_ids),
-        prefixes=[
-            "region:",
-            "language:",
-            "format:",
-            "license:",
-            "modality:",
-            "library:",
-            "doi:",
-            "arxiv:",
-            "dataset:",
-            "base_model:",
-        ],
-    )
     parsed["tags"] = tags
 
-    return parsed, removed_count + consumed_removed_count
+    return parsed
 
 
 def preprocess_file(input_path: Path, output_path: Path) -> None:
@@ -165,25 +166,18 @@ def preprocess_file(input_path: Path, output_path: Path) -> None:
         raise ValueError("Expected JSON to be a list of documents (JSON array).")
 
     processed: list[dict[str, Any]] = []
-    total_removed = 0
-    docs_with_removed = 0
 
     for item in data:
         if not isinstance(item, dict):
             continue
-        cleaned, removed = parse(item)
+        cleaned = parse(item)
         processed.append(cleaned)
-        total_removed += removed
-        if removed > 0:
-            docs_with_removed += 1
 
     with output_path.open("w", encoding="utf-8") as file:
         json.dump(processed, file, ensure_ascii=False, indent=2)
 
     print(f"File written: {output_path}")
     print(f"Documents processed: {len(processed)}")
-    print(f"Documents with duplicates removed: {docs_with_removed}")
-    print(f"Total duplicate tags removed: {total_removed}")
 
 
 if __name__ == "__main__":
