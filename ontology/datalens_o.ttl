@@ -16,7 +16,7 @@
 dlo: a owl:Ontology ;
     dcterms:title "Datalens Ontology"@en ;
     dcterms:creator "Aline MENIN", "Zachari ARNAUD" ;
-    dcterms:modified "2026-05-18" ;
+    dcterms:modified "2026-06-22" ;
     dcterms:description "The Datalens Ontology defines concepts and relationships for datasets and machine learning models."@en ;
     owl:versionInfo "1.0" ;
     dcat:landingPage <https://github.com/amenin/datalens> ;
