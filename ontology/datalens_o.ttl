@@ -153,9 +153,6 @@ dlo:hasSize a owl:ObjectProperty ;
 
 # Class Model
 
-## @prefix mls: <http://www.w3.org/ns/mls#> .
-## La class Model peut provenir de mls ou de dlo
-
 dlo:Model a owl:Class ;
     rdfs:label "Machine Learning Model"@en ;
     rdfs:comment "A machine learning model published on a platform such as Hugging Face."@en ;
@@ -168,9 +165,23 @@ dlo:Transformation a owl:Class ;
     rdfs:label "Model Transformation"@en ;
     rdfs:comment "A transformation or modification applied to a machine learning model."@en .
 
-dlo:ModelArchitecture a owl:Class ;
-    rdfs:label "Model Architecture"@en ;
-    rdfs:comment "The architecture of a machine learning model, such as GPT-3, BERT, etc."@en .
+dlo:ModelConfiguration a owl:Class ;
+    rdfs:label "Model Configuration"@en ;
+    rdfs:comment "The configuration of a machine learning model."@en .
+
+### Properties for model configuration
+
+dlo:hasModelArchitecture a owl:DatatypeProperty ;
+    rdfs:label "model architecture"@en ;
+    rdfs:comment "The architecture of the model, such as BERTForSequenceClassification, Qwen3ForCausalLM, etc."@en ;
+    rdfs:domain dlo:ModelConfiguration ;
+    rdfs:range rdfs:Literal .
+
+dlo:isModelType a owl:DatatypeProperty ;
+    rdfs:label "is model type"@en ;
+    rdfs:comment "The type of the model, such as BERT, Qwen3, etc."@en ;
+    rdfs:domain dlo:ModelConfiguration ;
+    rdfs:range rdfs:Literal .
 
 ## Properties for models
 dlo:wasTrainedOn a owl:ObjectProperty ;
@@ -180,11 +191,11 @@ dlo:wasTrainedOn a owl:ObjectProperty ;
     rdfs:domain dlo:Model ;
     rdfs:range dlo:Dataset .
 
-dlo:hasModelArchitecture a owl:ObjectProperty ;
-    rdfs:label "model architecture"@en ;
-    rdfs:comment "The architecture declared by the model configuration."@en ;
+dlo:hasModelConfiguration a owl:ObjectProperty ;
+    rdfs:label "has model configuration"@en ;
+    rdfs:comment "The configuration of the model."@en ;
     rdfs:domain dlo:Model ;
-    rdfs:range dlo:ModelArchitecture .
+    rdfs:range dlo:ModelConfiguration .
 
 # Class alignments
 
@@ -197,5 +208,5 @@ dlo:Modality rdfs:subClassOf mlso:DataModality .
 # Property alignments
 
 dlo:wasTrainedOn rdfs:subPropertyOf mlso:trainedOn .
-dlo:hasAcademicArticle rdfs:subPropertyOf mlso:hasScientificReference .
+dlo:hasAcademicArticle rdf:closeMatch mlso:hasScientificReference .
 dlo:hasModality rdfs:subPropertyOf mlso:hasModality .

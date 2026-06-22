@@ -1,2 +1,4 @@
 huggingface_hub>=0.23.0
 tqdm>=4.66.0
+pycountry>=26.2.16
+requests>=2.34.2
