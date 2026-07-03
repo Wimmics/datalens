@@ -10,7 +10,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/Robotics"
+          "value": "http://[anonymous]/datalens/thesaurus/Robotics"
         },
         "label": {
           "xml:lang": "en",
@@ -21,7 +21,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/ReinforcementLearning"
+          "value": "http://[anonymous]/datalens/thesaurus/ReinforcementLearning"
         },
         "label": {
           "xml:lang": "en",
@@ -32,7 +32,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/FillMask"
+          "value": "http://[anonymous]/datalens/thesaurus/FillMask"
         },
         "label": {
           "xml:lang": "en",
@@ -43,7 +43,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/Summarization"
+          "value": "http://[anonymous]/datalens/thesaurus/Summarization"
         },
         "label": {
           "xml:lang": "en",
@@ -54,7 +54,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/QuestionAnswering"
+          "value": "http://[anonymous]/datalens/thesaurus/QuestionAnswering"
         },
         "label": {
           "xml:lang": "en",
@@ -65,7 +65,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/TokenClassification"
+          "value": "http://[anonymous]/datalens/thesaurus/TokenClassification"
         },
         "label": {
           "xml:lang": "en",
@@ -76,7 +76,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/SentenceSimilarity"
+          "value": "http://[anonymous]/datalens/thesaurus/SentenceSimilarity"
         },
         "label": {
           "xml:lang": "en",
@@ -87,7 +87,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/Translation"
+          "value": "http://[anonymous]/datalens/thesaurus/Translation"
         },
         "label": {
           "xml:lang": "en",
@@ -98,7 +98,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/ZeroShotClassification"
+          "value": "http://[anonymous]/datalens/thesaurus/ZeroShotClassification"
         },
         "label": {
           "xml:lang": "en",
@@ -109,7 +109,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/TextClassification"
+          "value": "http://[anonymous]/datalens/thesaurus/TextClassification"
         },
         "label": {
           "xml:lang": "en",
@@ -120,7 +120,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/TextRetrieval"
+          "value": "http://[anonymous]/datalens/thesaurus/TextRetrieval"
         },
         "label": {
           "xml:lang": "en",
@@ -131,7 +131,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/TextGeneration"
+          "value": "http://[anonymous]/datalens/thesaurus/TextGeneration"
         },
         "label": {
           "xml:lang": "en",
@@ -142,7 +142,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/FeatureExtraction"
+          "value": "http://[anonymous]/datalens/thesaurus/FeatureExtraction"
         },
         "label": {
           "xml:lang": "en",
@@ -153,7 +153,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/MultipleChoice"
+          "value": "http://[anonymous]/datalens/thesaurus/MultipleChoice"
         },
         "label": {
           "xml:lang": "en",
@@ -164,7 +164,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/TableToText"
+          "value": "http://[anonymous]/datalens/thesaurus/TableToText"
         },
         "label": {
           "xml:lang": "en",
@@ -175,7 +175,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/TableQuestionAnswering"
+          "value": "http://[anonymous]/datalens/thesaurus/TableQuestionAnswering"
         },
         "label": {
           "xml:lang": "en",
@@ -186,7 +186,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/TextRanking"
+          "value": "http://[anonymous]/datalens/thesaurus/TextRanking"
         },
         "label": {
           "xml:lang": "en",
@@ -197,7 +197,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/TabularToText"
+          "value": "http://[anonymous]/datalens/thesaurus/TabularToText"
         },
         "label": {
           "xml:lang": "en",
@@ -208,7 +208,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/TabularRegression"
+          "value": "http://[anonymous]/datalens/thesaurus/TabularRegression"
         },
         "label": {
           "xml:lang": "en",
@@ -219,7 +219,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/TabularClassification"
+          "value": "http://[anonymous]/datalens/thesaurus/TabularClassification"
         },
         "label": {
           "xml:lang": "en",
@@ -230,7 +230,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/TimeSeriesForecasting"
+          "value": "http://[anonymous]/datalens/thesaurus/TimeSeriesForecasting"
         },
         "label": {
           "xml:lang": "en",
@@ -241,7 +241,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/ImageToImage"
+          "value": "http://[anonymous]/datalens/thesaurus/ImageToImage"
         },
         "label": {
           "xml:lang": "en",
@@ -252,7 +252,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/ObjectDetection"
+          "value": "http://[anonymous]/datalens/thesaurus/ObjectDetection"
         },
         "label": {
           "xml:lang": "en",
@@ -263,7 +263,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/ZeroShotImageClassification"
+          "value": "http://[anonymous]/datalens/thesaurus/ZeroShotImageClassification"
         },
         "label": {
           "xml:lang": "en",
@@ -274,7 +274,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/ImageFeatureExtraction"
+          "value": "http://[anonymous]/datalens/thesaurus/ImageFeatureExtraction"
         },
         "label": {
           "xml:lang": "en",
@@ -285,7 +285,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/ImageSegmentation"
+          "value": "http://[anonymous]/datalens/thesaurus/ImageSegmentation"
         },
         "label": {
           "xml:lang": "en",
@@ -296,7 +296,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/TextTo3D"
+          "value": "http://[anonymous]/datalens/thesaurus/TextTo3D"
         },
         "label": {
           "xml:lang": "en",
@@ -307,7 +307,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/UnconditionalImageGeneration"
+          "value": "http://[anonymous]/datalens/thesaurus/UnconditionalImageGeneration"
         },
         "label": {
           "xml:lang": "en",
@@ -318,7 +318,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/ImageToText"
+          "value": "http://[anonymous]/datalens/thesaurus/ImageToText"
         },
         "label": {
           "xml:lang": "en",
@@ -329,7 +329,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/KeypointDetection"
+          "value": "http://[anonymous]/datalens/thesaurus/KeypointDetection"
         },
         "label": {
           "xml:lang": "en",
@@ -340,7 +340,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/ImageTo3D"
+          "value": "http://[anonymous]/datalens/thesaurus/ImageTo3D"
         },
         "label": {
           "xml:lang": "en",
@@ -351,7 +351,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/TextToVideo"
+          "value": "http://[anonymous]/datalens/thesaurus/TextToVideo"
         },
         "label": {
           "xml:lang": "en",
@@ -362,7 +362,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/ZeroShotObjectDetection"
+          "value": "http://[anonymous]/datalens/thesaurus/ZeroShotObjectDetection"
         },
         "label": {
           "xml:lang": "en",
@@ -373,7 +373,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/ImageClassification"
+          "value": "http://[anonymous]/datalens/thesaurus/ImageClassification"
         },
         "label": {
           "xml:lang": "en",
@@ -384,7 +384,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/MaskGeneration"
+          "value": "http://[anonymous]/datalens/thesaurus/MaskGeneration"
         },
         "label": {
           "xml:lang": "en",
@@ -395,7 +395,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/DepthEstimation"
+          "value": "http://[anonymous]/datalens/thesaurus/DepthEstimation"
         },
         "label": {
           "xml:lang": "en",
@@ -406,7 +406,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/TextToImage"
+          "value": "http://[anonymous]/datalens/thesaurus/TextToImage"
         },
         "label": {
           "xml:lang": "en",
@@ -417,7 +417,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/VideoToVideo"
+          "value": "http://[anonymous]/datalens/thesaurus/VideoToVideo"
         },
         "label": {
           "xml:lang": "en",
@@ -428,7 +428,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/ImageToVideo"
+          "value": "http://[anonymous]/datalens/thesaurus/ImageToVideo"
         },
         "label": {
           "xml:lang": "en",
@@ -439,7 +439,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/VideoClassification"
+          "value": "http://[anonymous]/datalens/thesaurus/VideoClassification"
         },
         "label": {
           "xml:lang": "en",
@@ -450,7 +450,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/VisualQuestionAnswering"
+          "value": "http://[anonymous]/datalens/thesaurus/VisualQuestionAnswering"
         },
         "label": {
           "xml:lang": "en",
@@ -461,7 +461,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/VisualDocumentRetrieval"
+          "value": "http://[anonymous]/datalens/thesaurus/VisualDocumentRetrieval"
         },
         "label": {
           "xml:lang": "en",
@@ -472,7 +472,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/DocumentQuestionAnswering"
+          "value": "http://[anonymous]/datalens/thesaurus/DocumentQuestionAnswering"
         },
         "label": {
           "xml:lang": "en",
@@ -483,7 +483,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/AudioTextToText"
+          "value": "http://[anonymous]/datalens/thesaurus/AudioTextToText"
         },
         "label": {
           "xml:lang": "en",
@@ -494,7 +494,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/ImageTextToImage"
+          "value": "http://[anonymous]/datalens/thesaurus/ImageTextToImage"
         },
         "label": {
           "xml:lang": "en",
@@ -505,7 +505,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/AnyToAny"
+          "value": "http://[anonymous]/datalens/thesaurus/AnyToAny"
         },
         "label": {
           "xml:lang": "en",
@@ -516,7 +516,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/VideoTextToText"
+          "value": "http://[anonymous]/datalens/thesaurus/VideoTextToText"
         },
         "label": {
           "xml:lang": "en",
@@ -527,7 +527,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/ImageTextToVideo"
+          "value": "http://[anonymous]/datalens/thesaurus/ImageTextToVideo"
         },
         "label": {
           "xml:lang": "en",
@@ -538,7 +538,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/ImageTextToText"
+          "value": "http://[anonymous]/datalens/thesaurus/ImageTextToText"
         },
         "label": {
           "xml:lang": "en",
@@ -549,7 +549,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/AutomaticSpeechRecognition"
+          "value": "http://[anonymous]/datalens/thesaurus/AutomaticSpeechRecognition"
         },
         "label": {
           "xml:lang": "en",
@@ -560,7 +560,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/AudioClassification"
+          "value": "http://[anonymous]/datalens/thesaurus/AudioClassification"
         },
         "label": {
           "xml:lang": "en",
@@ -571,7 +571,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/TextToAudio"
+          "value": "http://[anonymous]/datalens/thesaurus/TextToAudio"
         },
         "label": {
           "xml:lang": "en",
@@ -582,7 +582,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/TextToSpeech"
+          "value": "http://[anonymous]/datalens/thesaurus/TextToSpeech"
         },
         "label": {
           "xml:lang": "en",
@@ -593,7 +593,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/AudioToAudio"
+          "value": "http://[anonymous]/datalens/thesaurus/AudioToAudio"
         },
         "label": {
           "xml:lang": "en",
@@ -604,7 +604,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/VoiceActivityDetection"
+          "value": "http://[anonymous]/datalens/thesaurus/VoiceActivityDetection"
         },
         "label": {
           "xml:lang": "en",
@@ -615,7 +615,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/thesaurus/GraphML"
+          "value": "http://[anonymous]/datalens/thesaurus/GraphML"
         },
         "label": {
           "xml:lang": "en",

@@ -24,7 +24,7 @@ const { values } = parseArgs({
 
 console.log(values)
 
-const ENDPOINT_URL = "https://graph.i3s.unice.fr/repositories/datalens";
+const ENDPOINT_URL = "https://[anonymous]/repositories/datalens";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

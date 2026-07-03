@@ -1,6 +1,6 @@
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX dlo: <http://ns.inria.fr/datalens/ontology/>
-PREFIX dlt: <http://ns.inria.fr/datalens/thesaurus/>
+PREFIX dlo: <http://[anonymous]/datalens/ontology/>
+PREFIX dlt: <http://[anonymous]/datalens/thesaurus/>
 select distinct ?value ?label where {
     ?value a dlo:Task ;
     	skos:prefLabel ?label .

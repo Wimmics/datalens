@@ -1,8 +1,8 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dc: <http://purl.org/dc/terms/>
-PREFIX dlo: <http://ns.inria.fr/datalens/ontology/>
+PREFIX dlo: <http://[anonymous]/datalens/ontology/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX dlt: <http://ns.inria.fr/datalens/thesaurus/>
+PREFIX dlt: <http://[anonymous]/datalens/thesaurus/>
 SELECT * WHERE {
 
     ?model a $type ;

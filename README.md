@@ -14,9 +14,9 @@ Datalens provides an ontology and a thesaurus to:
 - Build an RDF knowledge graph from Hugging Face metadata
 - Support competency-question analysis through SPARQL queries and Venus visualizations
 
-The Datalens ontology namespace is `http://ns.inria.fr/datalens/ontology/`.
+The Datalens ontology namespace is `http://[anonymous]/datalens/ontology/`.
 
-The Datalens thesaurus namespace is `http://ns.inria.fr/datalens/thesaurus/`.
+The Datalens thesaurus namespace is `http://[anonymous]/datalens/thesaurus/`.
 
 The Datalens-based KG is publicly available through a SPARQL endpoint at: `http://graph.i3s.fr/repositories/datalens`.
 
@@ -61,7 +61,7 @@ The current competency questions cover:
 - Provenance relationships between models, datasets, and derived resources
 - Popularity indicators for datasets and models
 
-The [vis](vis) directory contains a Vite-based dashboard that uses [Venus elements](https://github.com/Wimmics/venus) to visualize those competency questions. Each visualization loads its query from the matching `.rq` file in [sparql-examples](sparql-examples), keeping the SPARQL examples and the dashboard coherent.
+The [vis](vis) directory contains a Vite-based dashboard that uses [Venus elements](https://github.com/[anonymous]/venus) to visualize those competency questions. Each visualization loads its query from the matching `.rq` file in [sparql-examples](sparql-examples), keeping the SPARQL examples and the dashboard coherent.
 
 To run the visualization dashboard:
 
@@ -71,7 +71,7 @@ npm install
 npm run dev
 ```
 
-An interactive dashboard presenting the CQ visualizations is available [here](https://wimmics.github.io/datalens/).
+An interactive dashboard presenting the CQ visualizations is available [here](https://[anonymous].github.io/datalens/).
 
 ## Directory Structure
 

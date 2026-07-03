@@ -2,8 +2,8 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX dlt: <http://ns.inria.fr/datalens/thesaurus/>
-PREFIX dlo: <http://ns.inria.fr/datalens/ontology/>
+PREFIX dlt: <http://[anonymous]/datalens/thesaurus/>
+PREFIX dlo: <http://[anonymous]/datalens/ontology/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 SELECT DISTINCT *

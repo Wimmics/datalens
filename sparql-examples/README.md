@@ -15,8 +15,8 @@ These queries are implemented via an interactive interface featuring VENUS-based
 ```sparql
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX dc: <http://purl.org/dc/terms/>
-PREFIX dlt: <http://ns.inria.fr/datalens/thesaurus/>
-PREFIX dlo: <http://ns.inria.fr/datalens/ontology/>
+PREFIX dlt: <http://[anonymous]/datalens/thesaurus/>
+PREFIX dlo: <http://[anonymous]/datalens/ontology/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX cc: <http://creativecommons.org/licenses/>
 PREFIX spdx: <https://spdx.org/licenses/>
@@ -58,8 +58,8 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX dlt: <http://ns.inria.fr/datalens/thesaurus/>
-PREFIX dlo: <http://ns.inria.fr/datalens/ontology/>
+PREFIX dlt: <http://[anonymous]/datalens/thesaurus/>
+PREFIX dlo: <http://[anonymous]/datalens/ontology/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 SELECT DISTINCT *
@@ -105,7 +105,7 @@ WHERE {
 ```sparql
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dc: <http://purl.org/dc/terms/>
-PREFIX dlo: <http://ns.inria.fr/datalens/ontology/>
+PREFIX dlo: <http://[anonymous]/datalens/ontology/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 SELECT * WHERE {
 
@@ -147,7 +147,7 @@ SELECT * WHERE {
 
 ```sparql
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX dlo: <http://ns.inria.fr/datalens/ontology/>
+PREFIX dlo: <http://[anonymous]/datalens/ontology/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 SELECT * WHERE {
@@ -169,7 +169,7 @@ SELECT * WHERE {
 These queries can be executed against the Datalens SPARQL endpoint:
 
 ```text
-http://graph.i3s.unice.fr/repositories/datalens
+http://[anonymous]/repositories/datalens
 ```
 
 Use a SPARQL client, the RDF triplestore, or the visualizations in `vis/` to run and explore the results.

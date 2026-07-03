@@ -22,8 +22,8 @@ export function queryResolver(cq, options = {}) {
     for (let key of Object.keys(options)) {
         if (!options[key]) continue
 
-        let value = options[key].replace("http://ns.inria.fr/datalens/ontology/", "dlo:")
-            .replace("http://ns.inria.fr/datalens/thesaurus/", "dlt:")
+        let value = options[key].replace("http://[anonymous]/datalens/ontology/", "dlo:")
+            .replace("http://[anonymous]/datalens/thesaurus/", "dlt:")
 
         query = query.replace(`$${key}`, value)
     }
@@ -33,19 +33,19 @@ export function queryResolver(cq, options = {}) {
 
 const defaults = {
     cq1: {
-        "resource-type": "http://ns.inria.fr/datalens/ontology/Dataset",
-        task: "http://ns.inria.fr/datalens/thesaurus/QuestionAnswering",
-        modality: "http://ns.inria.fr/datalens/thesaurus/Audio"
+        "resource-type": "http://[anonymous]/datalens/ontology/Dataset",
+        task: "http://[anonymous]/datalens/thesaurus/QuestionAnswering",
+        modality: "http://[anonymous]/datalens/thesaurus/Audio"
     },
     cq2: {
-        task: "http://ns.inria.fr/datalens/thesaurus/QuestionAnswering" 
+        task: "http://[anonymous]/datalens/thesaurus/QuestionAnswering" 
     },
     cq3: {
-        "resource-type": "http://ns.inria.fr/datalens/ontology/Model",
-        modality: "http://ns.inria.fr/datalens/thesaurus/Audio"
+        "resource-type": "http://[anonymous]/datalens/ontology/Model",
+        modality: "http://[anonymous]/datalens/thesaurus/Audio"
     },
     cq4:{
-        modality: "http://ns.inria.fr/datalens/thesaurus/Audio"
+        modality: "http://[anonymous]/datalens/thesaurus/Audio"
     }
 }
 

@@ -10,7 +10,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/ontology/Model"
+          "value": "http://[anonymous]/datalens/ontology/Model"
         },
         "label": {
           "xml:lang": "en",
@@ -21,7 +21,7 @@
       {
         "value": {
           "type": "uri",
-          "value": "http://ns.inria.fr/datalens/ontology/Dataset"
+          "value": "http://[anonymous]/datalens/ontology/Dataset"
         },
         "label": {
           "xml:lang": "en",
