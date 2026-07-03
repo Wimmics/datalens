@@ -320,16 +320,6 @@ cython_debug/
 #.idea/
 
 
-# Server config files
-corese-server/config/**
-corese-server/log/**
-corese-server/corese-data/**
-
-virtuoso-server/virtuoso-data/**
-
-# Case study input and output data
-case-study/data/**
-
 ontology/do_not_commit/**
 ontology/used-vocabularies/**
 _old/**
@@ -338,7 +328,7 @@ kg/output/**
 kg/input/**
 
 # Ignore all JSON
-*.json
+vis/data/cache/*.json
 # Except package.json
 !package.json
 !vis/package-lock.json

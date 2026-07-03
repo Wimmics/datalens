@@ -47,6 +47,20 @@
         <div class="venus-panel bg-white border rounded-2 p-3">
           <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
             <h2 class="h5 mb-0">CQ1</h2>
+            <div class="filter-group">
+            <label for="cq1-resource-type" class="filter-label">Resource type</label>
+                <select class="form-select form-select-sm filter-select" id="cq1-resource-type"></select>
+            </div>
+
+            <div class="filter-group">
+                <label for="cq1-task" class="filter-label">Task</label>
+                <select class="form-select form-select-sm filter-select" id="cq1-task"></select>
+            </div>
+
+            <div class="filter-group">
+                <label for="cq1-modality" class="filter-label">Modality</label>
+                <select class="form-select form-select-sm filter-select" id="cq1-modality"></select>
+            </div>
             <button
               class="btn btn-sm btn-outline-secondary query-button"
               type="button"
@@ -59,7 +73,7 @@
               <i class="bi bi-code-slash" aria-hidden="true"></i>
             </button>
           </div>
-          <venus-graph width="100%" class="venus-container" id="cq1-venus"></venus-graph>
+          <venus-graph width="100%" class="venus-container" id="cq1-venus" sparqlEndpoint="https://graph.i3s.unice.fr/repositories/datalens"></venus-graph>
         </div>
       </section>
 
@@ -67,6 +81,11 @@
         <div class="venus-panel bg-white border rounded-2 p-3">
           <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
             <h2 class="h5 mb-0">CQ2</h2>
+            <div class="filter-group">
+                <label for="cq2-task" class="filter-label">Task</label>
+                <select class="form-select form-select-sm filter-select" id="cq2-task"></select>
+            </div>
+
             <button
               class="btn btn-sm btn-outline-secondary query-button"
               type="button"
@@ -79,7 +98,7 @@
               <i class="bi bi-code-slash" aria-hidden="true"></i>
             </button>
           </div>
-          <venus-graph width="100%" class="venus-container" id="cq2-venus"></venus-graph>
+          <venus-graph width="100%" class="venus-container" id="cq2-venus" sparqlEndpoint="https://graph.i3s.unice.fr/repositories/datalens"></venus-graph>
         </div>
       </section>
 
@@ -87,6 +106,15 @@
         <div class="venus-panel bg-white border rounded-2 p-3">
           <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
             <h2 class="h5 mb-0">CQ3</h2>
+
+            <div class="filter-group">
+                <label for="cq3-resource-type" class="filter-label">Resource Type</label>
+                <select class="form-select form-select-sm filter-select" id="cq3-resource-type"></select>
+            </div>
+            <div class="filter-group">
+                <label for="cq3-modality" class="filter-label">Modality</label>
+                <select class="form-select form-select-sm filter-select" id="cq3-modality"></select>
+            </div>
             <button
               class="btn btn-sm btn-outline-secondary query-button"
               type="button"
@@ -99,7 +127,7 @@
               <i class="bi bi-code-slash" aria-hidden="true"></i>
             </button>
           </div>
-          <venus-graph width="100%" class="venus-container" id="cq3-venus"></venus-graph>
+          <venus-graph width="100%" class="venus-container" id="cq3-venus" sparqlEndpoint="https://graph.i3s.unice.fr/repositories/datalens"></venus-graph>
         </div>
       </section>
 
@@ -107,6 +135,10 @@
         <div class="venus-panel bg-white border rounded-2 p-3">
           <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
             <h2 class="h5 mb-0">CQ4</h2>
+            <div class="filter-group">
+                <label for="cq4-modality" class="filter-label">Modality</label>
+                <select class="form-select form-select-sm filter-select" id="cq4-modality"></select>
+            </div>
             <button
               class="btn btn-sm btn-outline-secondary query-button"
               type="button"
@@ -119,7 +151,7 @@
               <i class="bi bi-code-slash" aria-hidden="true"></i>
             </button>
           </div>
-          <venus-scatterplot width="100%" class="venus-container" id="cq4-venus"></venus-scatterplot>
+          <venus-scatterplot width="100%" class="venus-container" id="cq4-venus" sparqlEndpoint="https://graph.i3s.unice.fr/repositories/datalens"></venus-scatterplot>
         </div>
       </section>
     </div>
@@ -159,7 +191,12 @@
   <script type="module" src="./js/cq2.js"></script>
   <script type="module" src="./js/cq3.js"></script>
   <script type="module" src="./js/cq4.js"></script>
-  <script>
+
+  <script type="module">
+    import { setFilters, queryResolver } from "./js/utils.js";
+
+    setFilters();
+
     const queryModal = document.querySelector("#sparqlQueryModal");
     const queryModalTitle = document.querySelector("#sparqlQueryModalLabel");
     const queryModalCode = document.querySelector("#sparqlQueryCode");

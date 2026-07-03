@@ -12,7 +12,8 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "@wimmics/venus-elements": "^1.0.3",
+    "@wimmics/venus": "^1.0.1",
+    "parseArgs": "^0.0.2",
     "vite": "^8.0.12"
   }
 }

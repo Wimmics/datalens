@@ -1,5 +1,5 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX dlo: <http://[namespace]/datalens/ontology/>
+PREFIX dlo: <http://ns.inria.fr/datalens/ontology/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX dlt: <http://ns.inria.fr/datalens/thesaurus/>
@@ -9,7 +9,7 @@ SELECT * WHERE {
     dlo:likesCount ?likes .
 
     ?resource dcat:landingPage ?url ;
-      dlo:hasModality dlt:Audio ;
+      dlo:hasModality $modality ;
     	a ?type .
     
     ?type rdfs:label ?resourceType .

@@ -2,43 +2,62 @@
 // Component configuration
 import sparqlQuery from "../../sparql-examples/cq2.rq?raw";
 
-const scatterplot = document.querySelector("#cq2-venus");
-  scatterplot.sparqlEndpoint = "https://[endpoint]/repositories/datalens";
-  scatterplot.sparqlQuery = sparqlQuery;
-  scatterplot.encoding = {
-  "title": "Licensed datasets for QA across modalities",
-  "nodes": {
-    "field": [
-      "datasetURI",
-      "licenseName"
-    ],
-    "tooltip": {"title": "value"},
-    "color": {
-        "field": "type",
-        "scale": {"range": "Category10" }, 
-        "legend": { "display": false}   
-    },
-    "size": {
-      "field": "links",
-      "scale": {
-        "type": "linear",
-        "range": [ 20, 55 ]
-      },
-      "legend": {
-        "title": "Links Count",
-        "position": "top-left",
-        "display": false
-      }
-    }
-  },
-  "links": {
-    "field": {
-      "source": "datasetURI",
-      "target": "licenseName"
-    }
-  },
-  "interactions": {
-    "nodeDetailsPanel": true
-  },
-};
-  await scatterplot.launch();
+const venusChart = document.querySelector("#cq2-venus");
+venusChart.sparqlQuery = sparqlQuery
+venusChart.encoding = {
+	"title": "ML Task Ecossystem",
+	"nodes": {
+		"source": {
+			"field": "resourceName",
+			"labels": { "display": false, "field": "resourceName" },
+			"color": { "value": "gray" },
+				"size": {
+				"metric": "degree",
+				"scale": {
+					"type": "linear",
+					"range": [
+						20,
+						55
+					]
+				},
+				"legend": {
+					"display": false
+				}
+			}
+		},
+		"target": {
+			"field": "relation",
+			labels: { field: "relationName"},
+			"color": { 
+				"field": "pLabel",
+				"scale": {"range": "Set3"},
+				"legend": {
+					"title": "Features",
+					"position": "top-right"
+				}
+			},
+			"size": {
+				"metric": "degree",
+				"scale": {
+					"type": "linear",
+					"range": [
+						20,
+						55
+					]
+				},
+				"legend": {
+					"display": false
+				}
+			}
+		},
+		
+	},
+	"links": {
+		"type": "semantic",
+		"relation": { "field": "pLabel"},
+		"labels": { "display": false, "field": "pLabel" },
+		"color": { "value": "#ccc" }    
+	}
+}
+
+await venusChart.launch();

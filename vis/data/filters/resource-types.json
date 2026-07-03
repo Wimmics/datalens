@@ -1,0 +1,34 @@
+{
+  "head": {
+    "vars": [
+      "value",
+      "label"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/ontology/Model"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Model"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/ontology/Dataset"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Dataset"
+        }
+      }
+    ]
+  }
+}
