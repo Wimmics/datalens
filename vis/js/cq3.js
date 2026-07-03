@@ -2,49 +2,51 @@
 // Component configuration
 import sparqlQuery from "../../sparql-examples/cq3.rq?raw";
 
-const scatterplot = document.querySelector("#cq3-venus");
-  scatterplot.sparqlEndpoint = "https://graph.i3s.unice.fr/repositories/datalens";
-  scatterplot.sparqlQuery = sparqlQuery;
-  scatterplot.encoding = {
-  "title": "Provenance relationship between models and datasets.",
-  "nodes": {
-    "field": [
-      "model",
-      "resource"
-    ],
-    "tooltip": {"title": "value"},
-    "color": {
-        "field": "resourceType",
-        "scale": {"range": "Category10" },
-        "legend" : { "position": "top-right" }
-    },
-    "size": {
-      "field": "links",
-      "scale": {
-        "type": "linear",
-        "range": [ 20, 55 ]
-      },
-      "legend": {
-        "title": "Links Count",
-        "position": "top-left",
-        "display": false
-      }
-    }
-  },
-  "links": {
-    "field": {
-      "source": "model",
-      "target": "resource"
-    },
-    "color": {
-        "field": "relationship",
-        "scale": {"range": "Set1" },
-        "legend" : { "position": "top-right" }
-    },
-    "width": {"value": 3}
-  },
-  "interactions": {
-    "nodeDetailsPanel": true
-  },
+const venusChart = document.querySelector("#cq3-venus");
+
+venusChart.sparqlQuery = sparqlQuery
+	
+venusChart.encoding = {
+	"title": "Provenance relationship between ML resources.",
+	"nodes": {
+		source: {
+			field: "model",
+			color: { value: "orange" },
+			labels: { display:true, field: "modelName" }
+		},
+		target: {
+			field: "resource",
+			labels: { display: true, field: "resourceName"},
+			"color": {
+				"field": "resourceType",
+				"scale": {"range": "Category10" },
+				"legend" : { "position": "top-right" }
+			}
+		},
+		"size": {
+			metric: "degree",
+			"scale": {
+				"type": "linear",
+				"range": [ 20, 55 ]
+			},
+			"legend": {
+				position: "top-right"
+			}
+		}
+	},
+	"links": {
+		type: "semantic",
+		relation: { field: "relationship"},
+		color: {
+			field: "relationship",
+			scale: {
+				range: "Set3"
+			},
+			legend: {
+				position: "top-right"
+			}
+		},
+		size: { value: 4}
+	}
 };
-  await scatterplot.launch();
+await venusChart.launch();

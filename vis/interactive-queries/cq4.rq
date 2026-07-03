@@ -9,7 +9,7 @@ SELECT * WHERE {
     dlo:likesCount ?likes .
 
     ?resource dcat:landingPage ?url ;
-      dlo:hasModality dlt:Audio ;
+      dlo:hasModality $modality ;
     	a ?type .
     
     ?type rdfs:label ?resourceType .

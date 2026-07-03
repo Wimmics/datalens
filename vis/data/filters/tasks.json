@@ -1,0 +1,628 @@
+{
+  "head": {
+    "vars": [
+      "value",
+      "label"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/Robotics"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Robotics"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/ReinforcementLearning"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Reinforcement Learning"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/FillMask"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Fill Mask"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/Summarization"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Summarization"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/QuestionAnswering"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Question Answering"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/TokenClassification"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Token Classification"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/SentenceSimilarity"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Sentence Similarity"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/Translation"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Translation"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/ZeroShotClassification"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Zero Shot classification"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/TextClassification"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Text Classification"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/TextRetrieval"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Text Retrieval"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/TextGeneration"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Text Generation"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/FeatureExtraction"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Feature Extraction"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/MultipleChoice"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Multiple Choice"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/TableToText"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Table-to-Text"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/TableQuestionAnswering"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Table Question Answering"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/TextRanking"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Text Ranking"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/TabularToText"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Tabular-to-Text"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/TabularRegression"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Tabular Regression"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/TabularClassification"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Tabular Classification"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/TimeSeriesForecasting"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Time Series Forecasting"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/ImageToImage"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Image-to-Image"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/ObjectDetection"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Object Detection"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/ZeroShotImageClassification"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Zero Shot image classification"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/ImageFeatureExtraction"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Image Feature Extraction"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/ImageSegmentation"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Image Segmentation"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/TextTo3D"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Text-to-3D"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/UnconditionalImageGeneration"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Unconditional Image Generation"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/ImageToText"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Image-to-Text"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/KeypointDetection"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Keypoint Detection"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/ImageTo3D"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Image-to-3D"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/TextToVideo"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Text-to-Video"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/ZeroShotObjectDetection"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Zero Shot object detection"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/ImageClassification"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Image Classification"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/MaskGeneration"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Mask Generation"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/DepthEstimation"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Depth Estimation"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/TextToImage"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Text-to-Image"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/VideoToVideo"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Video-to-Video"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/ImageToVideo"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Image-to-Video"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/VideoClassification"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Video Classification"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/VisualQuestionAnswering"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Visual Question Answering"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/VisualDocumentRetrieval"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Visual Document Retrieval"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/DocumentQuestionAnswering"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Document Question Answering"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/AudioTextToText"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Audio Text-to-Text"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/ImageTextToImage"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Image Text-to-Image"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/AnyToAny"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Any-to-Any"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/VideoTextToText"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Video Text-to-Text"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/ImageTextToVideo"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Image Text-to-Video"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/ImageTextToText"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Image Text-to-Text"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/AutomaticSpeechRecognition"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Automatic Speech Recognition"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/AudioClassification"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Audio Classification"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/TextToAudio"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Text-to-Audio"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/TextToSpeech"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Text-to-Speech"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/AudioToAudio"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Audio-to-Audio"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/VoiceActivityDetection"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Voice Activity Detection"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/GraphML"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Graph Machine Learning"
+        }
+      }
+    ]
+  }
+}

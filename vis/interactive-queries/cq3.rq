@@ -5,8 +5,8 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX dlt: <http://ns.inria.fr/datalens/thesaurus/>
 SELECT * WHERE {
 
-    ?model a dlo:Model ;
-        dlo:hasModality dlt:Audio ;
+    ?model a $type ;
+        dlo:hasModality $modality ;
         dc:identifier ?modelName ;
         dcat:landingPage ?modelUrl ;
         ?rel ?resource ;

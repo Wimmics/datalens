@@ -8,9 +8,9 @@ PREFIX spdx: <https://spdx.org/licenses/>
 
 SELECT * WHERE {
     # Filters
-    ?datasetURI a dlo:Dataset ;
-    	dlo:hasTask dlt:QuestionAnswering ;
-    	dlo:hasModality dlt:Audio ;
+    ?datasetURI a $type ;
+    	dlo:hasTask $task ;
+    	dlo:hasModality $modality ;
     	dc:license ?license .
     
     # Descriptive information

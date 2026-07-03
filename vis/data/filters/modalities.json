@@ -1,0 +1,111 @@
+{
+  "head": {
+    "vars": [
+      "value",
+      "label"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/3D"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "3D"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/Audio"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Audio"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/Document"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Document"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/Geospatial"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Geospatial"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/Image"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Image"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/Tabular"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Tabular"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/Text"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Text"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/TimeSeries"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Time-series"
+        }
+      },
+      {
+        "value": {
+          "type": "uri",
+          "value": "http://ns.inria.fr/datalens/thesaurus/Video"
+        },
+        "label": {
+          "xml:lang": "en",
+          "type": "literal",
+          "value": "Video"
+        }
+      }
+    ]
+  }
+}

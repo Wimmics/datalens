@@ -1,41 +1,12 @@
 # Implementation of Competency Questions
 
-This directory contains SPARQL queries that implement key competency questions (CQ) for exploring machine learning resources with the Datalens ontology.
+This directory contains SPARQL queries used to demonstrate the potential of the Datalens (DL) approach to support semantic discovery and exploration of machine learning (ML) resources using the DL-based Hugging Face KG. 
 
-The queries are used by the Venus visualizations in `vis/js`.
+These queries are implemented via an interactive interface featuring VENUS-based visualizations in `vis/js`. 
 
-### CQ 1: Which datasets support a given task?
+### CQ 1: Which datasets support a given task for a particular data modality under specific constraints?
 
-[cq1.rq](cq1.rq) retrieves datasets related to question answering and links them to their subtasks:
-
-- Retrieves dataset identifiers, descriptions, and landing pages
-- Selects datasets associated with the `QuestionAnswering` (QA) task
-- Finds subtasks broader than QA by navigating the hierarchical SKOS thesaurus
-
-```sparql
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX : <http://example.org/datalens/data#>
-PREFIX dc: <http://purl.org/dc/terms/>
-PREFIX dlt: <http://ns.inria.fr/datalens/thesaurus/>
-PREFIX dlo: <http://ns.inria.fr/datalens/ontology/>
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
-
-SELECT * WHERE {
-    ?datasetURI a dlo:Dataset ;
-    	dlo:hasTask dlt:QuestionAnswering ;
-    	dc:identifier ?datasetName ;
-    	dc:description ?description ;
-    	dcat:landingPage ?url ;
-    	dlo:hasSubTask ?subtask .
-    
-    OPTIONAL { ?subtask skos:prefLabel ?subtaskName .
-    ?subtask skos:broader dlt:QuestionAnswering .}
-}
-```
-
-### CQ 2: Which datasets support a given task for a particular data modality under specific constraints?
-
-[cq2.rq](cq2.rq) retrieves licensed audio datasets for QA:
+[cq1.rq](cq1.rq) retrieves licensed audio datasets for QA:
 
 - Filters datasets by task and modality
 - Retrieves dataset identifiers, descriptions, source URLs, and licenses
@@ -71,6 +42,54 @@ SELECT * WHERE {
         STR(cc:),
         ""
     ) as ?licenseName)
+}
+```
+
+### CQ 2: Which datasets, models, libraries, and publications constitute the ecosystem surrounding a given ML task?
+
+[cq2.rq](cq2.rq) retrieves the ecosystem of resources associated with a given ML task:
+
+- Filters resources by task and minimum download count
+- Retrieves datasets, models, libraries, publications, and related resources
+- Extracts semantic relationships (e.g., training data, provenance, modality, license) together with their human-readable labels for visualization
+
+```sparql
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX dlt: <http://ns.inria.fr/datalens/thesaurus/>
+PREFIX dlo: <http://ns.inria.fr/datalens/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT *
+WHERE {
+    ?resource dlo:hasTask dlt:QuestionAnswering ;
+    	dcterms:identifier ?resourceName ;
+    	dlo:downloadCount ?downloads .
+           
+    VALUES ?p {
+        dlo:hasLibrary
+        dlo:hasAcademicArticle
+        dcterms:license
+        dlo:hasTask
+        dlo:hasSubTask
+        dlo:hasModality
+        prov:wasDerivedFrom
+        dlo:wasTrainedOn
+    }
+
+    ?resource ?p ?relation .
+    { ?relation rdfs:label ?relationName }
+    UNION
+    { ?relation skos:prefLabel ?relationName }
+    UNION
+    { ?relation dcterms:identifier ?relationName }
+    
+    ?p rdfs:label ?pLabel .
+    FILTER(LANGMATCHES(LANG(?pLabel), "en"))
+    
+    FILTER (?downloads > 10000)
 }
 ```
 
@@ -153,4 +172,4 @@ These queries can be executed against the Datalens SPARQL endpoint:
 http://graph.i3s.unice.fr/repositories/datalens
 ```
 
-Use a SPARQL client, RDF store interface, or the Venus visualizations in `vis/` to run and inspect the results.
+Use a SPARQL client, the RDF triplestore, or the visualizations in `vis/` to run and explore the results.

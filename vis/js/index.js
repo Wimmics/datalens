@@ -1,1 +1,1 @@
-import "@wimmics/venus-elements";
+import "@wimmics/venus";
