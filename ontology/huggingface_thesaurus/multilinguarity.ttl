@@ -1,0 +1,718 @@
+dlt:MultilingualityScheme a skos:ConceptScheme ;
+    skos:prefLabel "Multilinguality"@en ;
+    skos:definition "Controlled vocabulary for the 'Multilinguality' prefix values found across models and datasets."@en .
+
+dlt:Monolingual a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Monolingual"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Multilingual a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Multilingual"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Translation a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Translation"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Translated a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Translated"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Unknown a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Unknown"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Bilingual a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Bilingual"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:No a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "No"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:OtherLanguageLearner a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Other Language Learner"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:OtherProgrammingLanguages a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Other Programming Languages"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:AfZA a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Af ZA"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:AmET a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Am ET"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:ArSA a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Ar SA"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:AzAZ a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Az AZ"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:BnBD a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Bn BD"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:CaES a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Ca ES"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:CyGB a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Cy GB"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:DaDK a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Da DK"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:DeDE a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "De DE"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:ElGR a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "El GR"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnUS a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En US"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EsES a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Es ES"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:FaIR a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Fa IR"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:FiFI a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Fi FI"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:FrFR a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Fr FR"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:HeIL a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "He IL"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:HiIN a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Hi IN"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:HuHU a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Hu HU"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:HyAM a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Hy AM"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:IdID a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Id ID"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:IsIS a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Is IS"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:ItIT a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "It IT"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:JaJP a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Ja JP"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:JvID a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Jv ID"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:KaGE a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Ka GE"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:KmKH a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Km KH"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:KnIN a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Kn IN"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:KoKR a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Ko KR"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:LvLV a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Lv LV"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:MlIN a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Ml IN"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:MnMN a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Mn MN"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:MsMY a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Ms MY"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:MyMM a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "My MM"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:NbNO a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Nb NO"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:NlNL a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Nl NL"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:PlPL a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Pl PL"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:PtPT a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Pt PT"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:RoRO a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Ro RO"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:RuRU a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Ru RU"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:SlSL a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Sl SL"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:SqAL a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Sq AL"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:SvSE a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Sv SE"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:SwKE a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Sw KE"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:TaIN a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Ta IN"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:TeIN a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Te IN"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:ThTH a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Th TH"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:TlPH a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Tl PH"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:TrTR a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Tr TR"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:UrPK a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Ur PK"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:ViVN a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Vi VN"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:ZhCN a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Zh CN"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:ZhTW a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Zh TW"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:CodeSwitching a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Code Switching"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:OtherMyMultilinguality a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Other My Multilinguality"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:En a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:MultiprogrammingLanguages a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Multiprogramming Languages"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:MostlyEnglishWithTraceMultilingual a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Mostly English With Trace Multilingual"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Transliteration a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Transliteration"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Monolingual2 a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Monolingual"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:TranslationSubsets a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Translation Subsets"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:CrossLingual a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Cross Lingual"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:HighlyMultilingual a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Highly Multilingual"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:NotApplicable a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Not Applicable"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:TranslationPair a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Translation Pair"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:MultiScript a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Multi Script"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Other a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Other"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:NotMultilingual a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Not Multilingual"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Multilin a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Multilin"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:MultiParallel a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Multi Parallel"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Yes a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Yes"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Aligned a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Aligned"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:2Languages a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "2 Languages"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:De a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "De"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Pt a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Pt"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Es a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Es"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:It a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "It"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Fr a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Fr"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:OtherMusic a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Other Music"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Muonolingual a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Muonolingual"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Fa a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Fa"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Multili a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Multili"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:NA a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "N/a"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Russian a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Russian"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Zh a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Zh"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:MultiLingual a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Multi Lingual"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:OtherEnglishBasedCreole a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Other English Based Creole"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:OtherEnPython a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Other En Python"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:OtherEnProlog a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Other En Prolog"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Ar a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Ar"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Ja a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Ja"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Hi a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Hi"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Momolingual a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Momolingual"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:OtherIconclassMetadata a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Other Iconclass Metadata"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Bg a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Bg"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Cs a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Cs"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Da a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Da"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:El a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "El"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Et a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Et"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Fi a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Fi"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Hu a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Hu"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Lt a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Lt"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Lv a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Lv"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Mt a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Mt"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Nl a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Nl"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Pl a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Pl"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Ro a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Ro"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Sk a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Sk"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Sl a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Sl"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:Sv a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Sv"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnSv a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Sv"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnPl a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Pl"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnHu a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Hu"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnLt a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Lt"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnSk a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Sk"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnGa a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Ga"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnFr a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Fr"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnCs a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Cs"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnEl a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En El"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnIt a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En It"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnLv a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Lv"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnDa a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Da"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnNl a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Nl"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnBg a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Bg"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnIs a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Is"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnRo a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Ro"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnNo a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En No"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnPt a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Pt"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnEs a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Es"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnEt a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Et"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnMt a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Mt"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnSl a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Sl"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnFi a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En Fi"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:EnDe a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "En De"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .
+
+dlt:OtherCrystallography a skos:Concept, dlo:Multilinguality ;
+    skos:prefLabel "Other Crystallography"@en ;
+    skos:topConceptOf dlt:MultilingualityScheme ;
+    skos:inScheme dlt:MultilingualityScheme .

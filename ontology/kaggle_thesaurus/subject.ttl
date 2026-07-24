@@ -1,0 +1,940 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dlo: <http://ns.inria.fr/datalens/ontology/> .
+@prefix dlt: <http://ns.inria.fr/datalens/thesaurus/> .
+
+dlt:SubjectScheme a skos:ConceptScheme ;
+    skos:prefLabel "Subject"@en ;
+    skos:definition "Controlled vocabulary for the 'Subject' tag category."@en .
+
+dlt:ScienceAndTechnology a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Science And Technology"@en ;
+    skos:topConceptOf dlt:SubjectScheme ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Internet a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Internet"@en ;
+    skos:broader dlt:ScienceAndTechnology ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:WebSites a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Websites"@en ;
+    skos:definition "Websites, like this one, are collections of content that can be found under a specific address. These datasets include information on individual websites or collections of websites."@en ;
+    skos:broader dlt:Internet ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:SearchEngines a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Search Engines"@en ;
+    skos:broader dlt:Internet ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:MobileWeb a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Mobile And Wireless"@en ;
+    skos:broader dlt:Internet ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:EmailAndMessaging a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Email And Messaging"@en ;
+    skos:broader dlt:Internet ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:OnlineCommunities a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Online Communities"@en ;
+    skos:broader dlt:Internet ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:SocialNetworks a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Social Networks"@en ;
+    skos:broader dlt:OnlineCommunities ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Research a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Research"@en ;
+    skos:definition "Research is our endeavor to systematically increase our knowledge about the world. Whether it's undertaken by greats like Einstein or underpaid graduate students, you'll find the fruits of their labor in this tag plus the kernels that make their work reproducible."@en ;
+    skos:broader dlt:ScienceAndTechnology ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Biotechnology a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Biotechnology"@en ;
+    skos:definition "Biotechnology is the use of living systems and organisms to develop or make products."@en ;
+    skos:broader dlt:ScienceAndTechnology ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Energy a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Energy"@en ;
+    skos:definition "We've got solar, we've got coal, and we've even got nuclear energy data. According to the law of conservation of energy it can't be created or destroyed, but here our catalog of energy-related datasets and kernels continues to grow."@en ;
+    skos:broader dlt:ScienceAndTechnology ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:RenewableEnergy a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Renewable Energy"@en ;
+    skos:broader dlt:Energy ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Electricity a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Electricity"@en ;
+    skos:broader dlt:Energy ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:OilAndGas a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Oil And Gas"@en ;
+    skos:broader dlt:Energy ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Engineering a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Engineering"@en ;
+    skos:broader dlt:ScienceAndTechnology ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Manufacturing a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Manufacturing"@en ;
+    skos:definition "Manufacturing is the production of merchandise for use or sale using labour and machines, tools, chemical and biological processing, or formulation."@en ;
+    skos:broader dlt:Engineering ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Robotics a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Robotics"@en ;
+    skos:definition "Hopefully more Wall-E than Skynet."@en ;
+    skos:broader dlt:Engineering ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:ComputerScience a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Computer Science"@en ;
+    skos:broader dlt:ScienceAndTechnology ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:ArtificialIntelligence a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Artificial Intelligence"@en ;
+    skos:definition "This tag has datasets and kernels where people come together and use cutting-edge research to train models on pictures of cats."@en ;
+    skos:broader dlt:ComputerScience ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Programming a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Programming"@en ;
+    skos:definition "The programming tag contains datsets and kernels from coder surveys, revision histories, and bug triaging."@en ;
+    skos:broader dlt:ComputerScience ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Python a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Python"@en ;
+    skos:broader dlt:Programming ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:R a skos:Concept, dlo:Subject ;
+    skos:prefLabel "R"@en ;
+    skos:broader dlt:Programming ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:SQL a skos:Concept, dlo:Subject ;
+    skos:prefLabel "SQL"@en ;
+    skos:broader dlt:Programming ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Software a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Software"@en ;
+    skos:broader dlt:ComputerScience ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Accelerators a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Accelerators"@en ;
+    skos:broader dlt:ComputerScience ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:TPU a skos:Concept, dlo:Subject ;
+    skos:prefLabel "TPU"@en ;
+    skos:definition "A powerful computer chip built specifically for accelerating machine learning workloads in a fast and scalable manner. It is designed to massively parallelize ML tasks that would not normally fit on GPU."@en ;
+    skos:broader dlt:Accelerators ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:GPU a skos:Concept, dlo:Subject ;
+    skos:prefLabel "GPU"@en ;
+    skos:definition "A generalized processor that excels at small-to-medium-scale matrix operations. It is traditionally used for training machine learning models on very large datasets."@en ;
+    skos:broader dlt:Accelerators ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Electronics a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Electronics"@en ;
+    skos:definition "Electronics is the science of controlling electrical energy electrically, in which the electrons have a fundamental role."@en ;
+    skos:broader dlt:ScienceAndTechnology ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Transport a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Transportation"@en ;
+    skos:definition "Most of the various modes of transport are all covered in this tag. Not all though because so far there are no kernels or datasets about teleportation."@en ;
+    skos:broader dlt:ScienceAndTechnology ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Automobiles a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Automobiles And Vehicles"@en ;
+    skos:definition "The automobile tag is everything about cars. Analyze insurance rates or how far you can go on one gallon of petrol."@en ;
+    skos:broader dlt:Transport ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Aviation a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Aviation"@en ;
+    skos:definition "When you think of aviation, are you filled with wonder and excitement for human flight? In this tag, you can find code and data related to flight delays, bird strikes, and crashing."@en ;
+    skos:broader dlt:Transport ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Cycling a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Cycling"@en ;
+    skos:definition "Walking is so 18th century. Cycling is a very advanced 19th-century technology that helps you get from A to B faster and easier."@en ;
+    skos:broader dlt:Transport ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:RailTransport a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Rail Transport"@en ;
+    skos:definition "Rail transport is a fancier way to say trains."@en ;
+    skos:broader dlt:Transport ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:WaterTransport a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Water Transport"@en ;
+    skos:broader dlt:Transport ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:PeopleAndSociety a skos:Concept, dlo:Subject ;
+    skos:prefLabel "People And Society"@en ;
+    skos:topConceptOf dlt:SubjectScheme ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Education a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Education"@en ;
+    skos:broader dlt:PeopleAndSociety ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:UniversitiesAndColleges a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Universities And Colleges"@en ;
+    skos:definition "This tag contains all kinds of information about which colleges are good and how much money people make after attending classes there."@en ;
+    skos:broader dlt:Education ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:PrimaryAndSecondarySchoolingK12 a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Primary And Secondary Schools"@en ;
+    skos:broader dlt:Education ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:StandardizedAndAdmissionsTests a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Standardized Testing"@en ;
+    skos:broader dlt:Education ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:People a skos:Concept, dlo:Subject ;
+    skos:prefLabel "People"@en ;
+    skos:definition "This tag is for collections of information about, you guessed it, people."@en ;
+    skos:broader dlt:PeopleAndSociety ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Gender a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Gender"@en ;
+    skos:definition "Gender is the range of characteristics pertaining to, and differentiating between, masculinity and femininity."@en ;
+    skos:broader dlt:People ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Clothing a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Clothing And Accessories"@en ;
+    skos:definition "The datasets and kernels in this fashionable tag include clothes, shoes, and jewelry."@en ;
+    skos:broader dlt:People ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:MakeUpAndCosmetics a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Make Up And Cosmetics"@en ;
+    skos:broader dlt:People ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:HolidaysAndSeasonalEvents a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Holidays And Cultural Events"@en ;
+    skos:broader dlt:People ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Shopping a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Retail And Shopping"@en ;
+    skos:broader dlt:People ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:JobsAndCareer a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Jobs And Career"@en ;
+    skos:broader dlt:PeopleAndSociety ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Employment a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Employment"@en ;
+    skos:definition "Where does it pay to attend college? What impacts employee satisfaction and what makes them quit their jobs? Explore these questions and others in kernels and datasets with this tag."@en ;
+    skos:broader dlt:JobsAndCareer ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Income a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Income"@en ;
+    skos:definition "This tag contains datasets and kernels related to various incomes and salaries. Explore census-like data that covers city-level income down to individuals."@en ;
+    skos:broader dlt:JobsAndCareer ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Business a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Business"@en ;
+    skos:broader dlt:PeopleAndSociety ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:RealEstate a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Real Estate"@en ;
+    skos:broader dlt:Business ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Housing a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Housing"@en ;
+    skos:definition "Explore datasets, kernels, and competitions related to housing markets in this tag."@en ;
+    skos:broader dlt:RealEstate ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Finance a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Finance"@en ;
+    skos:definition "The finance tag covers datasets and kernels about money and investing. If you need to test some new cryptocurrency investment strategies or ward off those pesky credit card fraud enthusiasts, then you've come to the right place."@en ;
+    skos:broader dlt:Business ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Lending a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Lending"@en ;
+    skos:broader dlt:Finance ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Banking a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Banking"@en ;
+    skos:definition "Banks keep the financial system interesting by failing en masse every couple of generations."@en ;
+    skos:broader dlt:Finance ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Crowdfunding a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Crowdfunding"@en ;
+    skos:broader dlt:Finance ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Insurance a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Insurance"@en ;
+    skos:broader dlt:Finance ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Investing a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Investing"@en ;
+    skos:broader dlt:Finance ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:CurrenciesAndForeignExchange a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Currencies And Foreign Exchange"@en ;
+    skos:broader dlt:Finance ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Marketing a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Marketing"@en ;
+    skos:definition "Marketing is the activity of connecting consumers to products and services. Find datasets, kernels, and competitions related to marketing in this tag."@en ;
+    skos:broader dlt:Business ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:ProductReviewsAndPriceComparisons a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Ratings And Reviews"@en ;
+    skos:broader dlt:Business ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:ECommerceServices a skos:Concept, dlo:Subject ;
+    skos:prefLabel "E Commerce Services"@en ;
+    skos:broader dlt:Business ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Travel a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Travel"@en ;
+    skos:broader dlt:Business ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:HotelsAndAccommodations a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Hotels And Accommodations"@en ;
+    skos:broader dlt:Travel ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:SocialScience a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Social Science"@en ;
+    skos:broader dlt:PeopleAndSociety ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:History a skos:Concept, dlo:Subject ;
+    skos:prefLabel "History"@en ;
+    skos:definition "History is generally the study of past events that have shaped the world. Here on Kaggle, you'll find historical records and analyses on topics like Bitcoin data, UFO sightings, and sports tournaments."@en ;
+    skos:broader dlt:SocialScience ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Politics a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Politics"@en ;
+    skos:definition "Politics datasets and kernels cover topics you can use to explore the decision making that goes into the governance of groups of people all around the world."@en ;
+    skos:broader dlt:SocialScience ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Demographics a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Demographics"@en ;
+    skos:definition "Demographics cover different aspects of life: youth, religion, housing, employment, taxes and mortality. This tag contains census data that describe various populations and communities."@en ;
+    skos:broader dlt:SocialScience ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Mortality a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Mortality"@en ;
+    skos:definition "Mortality is the state of being mortal, or susceptible to death; the opposite of immortality."@en ;
+    skos:broader dlt:Demographics ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Economics a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Economics"@en ;
+    skos:definition "The economics tag contains resources for analyzing the production, consumption, and transfer of wealth."@en ;
+    skos:broader dlt:SocialScience ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:InternationalRelations a skos:Concept, dlo:Subject ;
+    skos:prefLabel "International Relations"@en ;
+    skos:definition "You'll find a variety of datasets and kernels in this tag concerning multiple nations and their demographics, economics, and trade."@en ;
+    skos:broader dlt:SocialScience ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Linguistics a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Linguistics"@en ;
+    skos:definition "The linguistics tag contains datasets and kernels that you can use for text analytics, sentiment analyses, and making clever jokes like this: Let me tell you a little about myself. It's a reflexive pronoun that means \"me.\""@en ;
+    skos:broader dlt:SocialScience ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Psychology a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Psychology"@en ;
+    skos:definition "Psychology is the study of how we use our brains (or don't) to interact with others. Humans are complicated and maybe data science can help us understand ourselves."@en ;
+    skos:broader dlt:SocialScience ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:UrbanPlanning a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Urban Planning"@en ;
+    skos:broader dlt:SocialScience ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:ReligionAndBeliefSystems a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Religion And Belief Systems"@en ;
+    skos:broader dlt:PeopleAndSociety ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Law a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Law"@en ;
+    skos:broader dlt:PeopleAndSociety ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Government a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Government"@en ;
+    skos:broader dlt:Law ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Crime a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Crime"@en ;
+    skos:definition "A crime is an unlawful act punishable by a state or other authority. Explore datasets, kernels, and competitions related to white collar crime, global terrorism, and more in this tag."@en ;
+    skos:broader dlt:Government ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Military a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Military"@en ;
+    skos:definition "Datasets and kernels based on historical battles and other military activities including drone attaccks, bombings, and veteran suicides."@en ;
+    skos:broader dlt:Government ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:PublicSafety a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Public Safety"@en ;
+    skos:broader dlt:Government ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:News a skos:Concept, dlo:Subject ;
+    skos:prefLabel "News"@en ;
+    skos:broader dlt:PeopleAndSociety ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:SocialIssuesAndAdvocacy a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Social Issues And Advocacy"@en ;
+    skos:broader dlt:PeopleAndSociety ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:HumanRightsAndLiberties a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Human Rights"@en ;
+    skos:broader dlt:SocialIssuesAndAdvocacy ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:RacialEquality a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Racial Equity"@en ;
+    skos:definition "Equal treatment, rights, and opportunity for all races regardless of the color of your skin"@en ;
+    skos:broader dlt:SocialIssuesAndAdvocacy ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:MlEthics a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Ml Ethics"@en ;
+    skos:definition "A study of the ethical implications of machine learning algorithms, such as unintended biases and discriminatory outputs"@en ;
+    skos:broader dlt:SocialIssuesAndAdvocacy ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:CultureAndHumanities a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Culture And Humanities"@en ;
+    skos:definition "What is it to be human? What activities and patterns of behavior define us and our societies? This tag will help you tackle these questions."@en ;
+    skos:topConceptOf dlt:SubjectScheme ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Languages a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Languages"@en ;
+    skos:definition "Language is a method of communication that consists of using words arranged into meaningful patterns. This is a good place to find natural language processing datasets and kernels to study languages and train your chat bots."@en ;
+    skos:broader dlt:CultureAndHumanities ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:PopularCulture a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Popular Culture"@en ;
+    skos:definition "Popular culture datasets and kernels are associated with topics like TV shows, movies, music, and video games. The greatest screenwriters come here to train their AI to write movie scripts."@en ;
+    skos:broader dlt:CultureAndHumanities ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:GamesAndToys a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Games"@en ;
+    skos:definition "One of the hallmarks of intelligence is the use of games and toys to occupy free time and develop intellectually. Often stored in Mom's basement."@en ;
+    skos:broader dlt:CultureAndHumanities ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:BoardGames a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Board Games"@en ;
+    skos:definition "A board game is a tabletop game that involves counters or pieces moved or placed on a pre-marked surface or \"board\", according to a set of rules."@en ;
+    skos:broader dlt:GamesAndToys ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:CardGames a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Card Games"@en ;
+    skos:definition "A card game is any game using playing cards as the primary device with which the game is played, be they traditional or game-specific. Countless card games exist, including families of related games (such as poker)."@en ;
+    skos:broader dlt:GamesAndToys ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Puzzles a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Puzzles"@en ;
+    skos:definition "A puzzle is a game, problem, or toy that tests a person's ingenuity or knowledge. In a puzzle, the solver is expected to put pieces together in a logical way, in order to arrive at the correct solution of the puzzle."@en ;
+    skos:broader dlt:GamesAndToys ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:VideoGames a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Video Games"@en ;
+    skos:definition "Video games were originally created to prevent people from going to college and getting good jobs. That back-fired and now we have data centers full of GPUs training models to tell the difference between cats and dogs. All thanks to gamers."@en ;
+    skos:broader dlt:GamesAndToys ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:SimulationGames a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Simulations"@en ;
+    skos:broader dlt:VideoGames ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Gambling a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Gambling"@en ;
+    skos:broader dlt:GamesAndToys ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:HealthAndFitness a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Health And Fitness"@en ;
+    skos:topConceptOf dlt:SubjectScheme ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Food a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Food"@en ;
+    skos:broader dlt:HealthAndFitness ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Alcohol a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Alcohol"@en ;
+    skos:definition "Here's to alcohol: the cause of, and solution to, all of life's problems. -- Homer J. Simpson"@en ;
+    skos:broader dlt:Food ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:CookingAndRecipes a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Cooking And Recipes"@en ;
+    skos:broader dlt:Food ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Restaurants a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Restaurants"@en ;
+    skos:broader dlt:Food ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Exercise a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Exercise"@en ;
+    skos:broader dlt:HealthAndFitness ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Sports a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Sports"@en ;
+    skos:broader dlt:Exercise ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:AssociationFootball a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Football"@en ;
+    skos:definition "Some call it association football, some call it soccer, most call it sport ball. Come analyze the teams and players of the beautiful game."@en ;
+    skos:broader dlt:Sports ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:AutoRacing a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Auto Racing"@en ;
+    skos:broader dlt:Sports ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Baseball a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Baseball"@en ;
+    skos:definition "Baseball is a bat-and-ball game played between two teams of nine players each who take turns batting and fielding."@en ;
+    skos:broader dlt:Sports ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Basketball a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Basketball"@en ;
+    skos:definition "Basketball is one of the world's most popular and widely viewed sports. Analyze Kobe Bryant's shot selections and peruse our annual March Mania competitions."@en ;
+    skos:broader dlt:Sports ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Cricket a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Cricket"@en ;
+    skos:definition "Cricket is a sport, but I don't see any reason why there shouldn't be a dataset about crickets here, too."@en ;
+    skos:broader dlt:Sports ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Golf a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Golf"@en ;
+    skos:definition "Golf is a club and ball sport in which players use various clubs to hit balls into a series of holes on a course in as few strokes as possible."@en ;
+    skos:broader dlt:Sports ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:IceHockey a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Hockey"@en ;
+    skos:broader dlt:Sports ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Tennis a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Tennis"@en ;
+    skos:definition "Tennis is a racket sport that enjoys worldwide popularity among athletes, recreational players, and sports analytics junkies."@en ;
+    skos:broader dlt:Sports ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:WaterSports a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Water Sports"@en ;
+    skos:broader dlt:Sports ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:MartialArts a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Martial Arts"@en ;
+    skos:broader dlt:Sports ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Volleyball a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Volleyball"@en ;
+    skos:broader dlt:Sports ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Running a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Running"@en ;
+    skos:definition "Running will get you nowhere in data science because you have to stand still to analyze data. So let the runners run and let the analysts analyze the runners. The only time a data scientist needs to run is when they're running a model."@en ;
+    skos:broader dlt:Exercise ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Gymnastics a skos:Concept, dlo:HealthAndFitness ;
+    skos:prefLabel "Gymnastics"@en ;
+    skos:definition "Gymnastics is a sport practiced by men and women that requires balance, strength, flexibility, agility, coordination, endurance and control."@en ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Health a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Health"@en ;
+    skos:broader dlt:HealthAndFitness ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:HealthConditions a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Health Conditions"@en ;
+    skos:broader dlt:Health ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:MentalHealth a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Mental Health"@en ;
+    skos:definition "Mental health is a level of psychological well-being, or an absence of mental illness."@en ;
+    skos:broader dlt:HealthConditions ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Diseases a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Diseases"@en ;
+    skos:definition "Datasets and kernels related to various diseases. Make sure you wear goggles and gloves before touching these datasets. Also wash your hands."@en ;
+    skos:broader dlt:HealthConditions ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Covid19 a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Covid 19"@en ;
+    skos:definition "COVID-19 is a disease that is caused by the SARS-CoV-2 virus. In 2020 there was a global COVID-19 pandemic."@en ;
+    skos:broader dlt:Diseases ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Cancer a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Cancer"@en ;
+    skos:broader dlt:HealthConditions ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Diabetes a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Diabetes"@en ;
+    skos:broader dlt:HealthConditions ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:HeartAndHypertension a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Heart Conditions"@en ;
+    skos:broader dlt:HealthConditions ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Healthcare a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Healthcare"@en ;
+    skos:definition "AI in healthcare is a growing interest. One of the major problems is simply converting research into an application. Should be easy, right?"@en ;
+    skos:broader dlt:Health ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Dentistry a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Dentistry"@en ;
+    skos:definition "Dentistry is a branch of medicine that consists of the study, diagnosis, prevention, and treatment of diseases, disorders and conditions of the oral cavity."@en ;
+    skos:broader dlt:Healthcare ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:DrugsAndMedications a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Drugs And Medications"@en ;
+    skos:broader dlt:Healthcare ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:HospitalsAndTreatmentCenters a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Hospitals And Treatment Centers"@en ;
+    skos:broader dlt:Healthcare ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Nutrition a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Nutrition"@en ;
+    skos:definition "Nutrition is the science that interprets the interaction of nutrients and other substances in food in relation to maintenance, growth, reproduction, health and disease of an organism. In this tag you'll find the most nutrtitious datasets and kernels."@en ;
+    skos:broader dlt:Health ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:PublicHealth a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Public Health"@en ;
+    skos:definition "This tag contains datasets and kernels on things that affect the general health of the public. They include foodborne illness, dengue fever, immunization records, and all the other things that mean you have to get a shot at the doctor's office."@en ;
+    skos:broader dlt:Health ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Neuroscience a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Neuroscience"@en ;
+    skos:definition "Neuroscience, sometimes called neurobiology, is the scientific study of the nervous system."@en ;
+    skos:broader dlt:Health ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Medicine a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Medicine"@en ;
+    skos:definition "Medicine is the science and practice of the diagnosis, treatment, and prevention of disease. We recommend you take two datasets and analyze them in the morning. If that doesn't work, analyze one dataset every four hours."@en ;
+    skos:broader dlt:Health ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:VisionCare a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Eyes And Vision"@en ;
+    skos:broader dlt:Health ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:EyesAndVision a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Ears And Hearing"@en ;
+    skos:broader dlt:Health ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:ArtsAndEntertainment a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Arts And Entertainment"@en ;
+    skos:definition "Activities that holds the attention and interest of an audience, or gives pleasure and delight. It can be an idea or a task, but is more likely to be one of the activities or events that have developed over thousands of years specifically for the purpose of keeping an audience's attention."@en ;
+    skos:topConceptOf dlt:SubjectScheme ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Celebrity a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Celebrities"@en ;
+    skos:definition "Celebrity is the fame and public attention we give to superstars of popular culture like the Kardashian family and Jeff Dean."@en ;
+    skos:broader dlt:ArtsAndEntertainment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Literature a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Literature"@en ;
+    skos:definition "This tag is your digital library for varius copora such as Southern Literature, Paranormal Romance novels, and Urban Dictionary spelling variations."@en ;
+    skos:broader dlt:ArtsAndEntertainment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Museums a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Museums"@en ;
+    skos:definition "Fun place to hang on a Saturday afternoon and think deep thoughts about deep things. Find datasets and kernels related to various museum collections here."@en ;
+    skos:broader dlt:ArtsAndEntertainment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Dance a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Dance"@en ;
+    skos:broader dlt:ArtsAndEntertainment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Film a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Movies And Tv Shows"@en ;
+    skos:definition "Grab a bucket of popcorn and come analyze these movie ratings. The world must know which blockbuster film is the blockbuster film of all time!"@en ;
+    skos:broader dlt:ArtsAndEntertainment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Music a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Music"@en ;
+    skos:definition "With all the music data out there, it's hard to believe someone hasn't trained robots to perform on stage yet. Or have they?"@en ;
+    skos:broader dlt:ArtsAndEntertainment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:VisualArts a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Art"@en ;
+    skos:broader dlt:ArtsAndEntertainment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Philosophy a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Philosophy"@en ;
+    skos:broader dlt:ArtsAndEntertainment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:ComicsAndAnimation a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Comics And Animation"@en ;
+    skos:broader dlt:ArtsAndEntertainment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:AnimeAndManga a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Anime And Manga"@en ;
+    skos:broader dlt:ComicsAndAnimation ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:EarthAndNature a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Earth And Nature"@en ;
+    skos:topConceptOf dlt:SubjectScheme ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Environment a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Environment"@en ;
+    skos:broader dlt:EarthAndNature ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:BodiesOfWater a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Water Bodies"@en ;
+    skos:definition "Lakes, oceans, rivers, streams, and infamous puddles."@en ;
+    skos:broader dlt:Environment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Cities a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Cities And Urban Areas"@en ;
+    skos:definition "In this tag you will find datasets and kernels about various cities around the world."@en ;
+    skos:broader dlt:Environment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Deserts a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Deserts"@en ;
+    skos:broader dlt:Environment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Mountains a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Mountains"@en ;
+    skos:definition "From the Appalachians to Zwiselbacher Rosskogel, this tag has all the info you need about mountains."@en ;
+    skos:broader dlt:Environment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Pollution a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Pollution"@en ;
+    skos:definition "Pollution is the introduction of contaminants into the natural environment that cause adverse change."@en ;
+    skos:broader dlt:Environment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:NaturalDisasters a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Natural Disasters"@en ;
+    skos:broader dlt:Environment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Weather a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Weather And Climate"@en ;
+    skos:definition "Weather datasets and kernels come in all wind speeds and directions. You have weather data about hurricanes and other inclement phenomena, hourly readings, and general weather for various cities."@en ;
+    skos:broader dlt:Environment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Agriculture a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Agriculture"@en ;
+    skos:definition "You could be well on your way to creating the next big precision agriculture company with the resources in this tag. At the very least, you can use Weekly Corn Prices to make more informed decisions about your purchases at the store."@en ;
+    skos:broader dlt:Environment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Forestry a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Forestry"@en ;
+    skos:definition "Forestry is the management of forests. Whether this means planting trees or cutting them down depends a lot on who owns the forest."@en ;
+    skos:broader dlt:Environment ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Biology a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Biology"@en ;
+    skos:broader dlt:EarthAndNature ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:HumanGenetics a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Genetics"@en ;
+    skos:definition "Human genetics encompasses a variety of overlapping fields including: classical genetics, cytogenetics, molecular genetics, biochemical genetics, genomics, population genetics, developmental genetics, clinical genetics, and genetic counseling."@en ;
+    skos:broader dlt:Biology ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:EarthSciences a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Earth Science"@en ;
+    skos:definition "Geology, geography and oceanography. If it's on the Earth and not a plant or animal, this the tag for it."@en ;
+    skos:broader dlt:EarthAndNature ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:AtmosphericSciences a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Atmospheric Science"@en ;
+    skos:broader dlt:EarthSciences ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Geography a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Geography"@en ;
+    skos:definition "The geography tag contains datasets and kernels that showcase geospatial analysis and mapping."@en ;
+    skos:broader dlt:EarthSciences ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Geology a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Geology"@en ;
+    skos:definition "Geology is an earth science concerned with the solid Earth, the rocks of which it is composed, and the processes by which they change over time"@en ;
+    skos:broader dlt:EarthSciences ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Animals a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Animals"@en ;
+    skos:definition "The animals tag is as diverse as a rainforest. Is there a correlation between animal bites and NYC rat sightings? We're not sure. But the data is here and the world needs to know."@en ;
+    skos:broader dlt:EarthAndNature ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:FishAndAquaria a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Fish And Aquaria"@en ;
+    skos:broader dlt:Animals ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Plants a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Plants"@en ;
+    skos:definition "Datasets don't grow on trees but you will find plant-related datasets and kernels here."@en ;
+    skos:broader dlt:EarthAndNature ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:PhysicalSciences a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Physical Science"@en ;
+    skos:definition "Physical science is a branch of natural science that studies non-living systems, in contrast to life science."@en ;
+    skos:broader dlt:EarthAndNature ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Astronomy a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Astronomy"@en ;
+    skos:definition "There are lots of fun datasets here for you to analyze, and who knows, maybe you'll find a habitable planet hidden in the data that no one else saw. Then you could have a planet named after you!"@en ;
+    skos:broader dlt:PhysicalSciences ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Chemistry a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Chemistry"@en ;
+    skos:definition "Chemistry addresses topics such as how atoms and molecules interact via chemical bonds to form new chemical compounds."@en ;
+    skos:broader dlt:PhysicalSciences ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Physics a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Physics"@en ;
+    skos:definition "Physics is the natural science that involves the study of matter and its motion and behavior through space and time, along with related concepts such as energy and force."@en ;
+    skos:broader dlt:PhysicalSciences ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:Mathematics a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Mathematics"@en ;
+    skos:topConceptOf dlt:SubjectScheme ;
+    skos:inScheme dlt:SubjectScheme .
+
+dlt:CyberSecurity a skos:Concept, dlo:Subject ;
+    skos:prefLabel "Cyber Security"@en ;
+    skos:topConceptOf dlt:SubjectScheme ;
+    skos:inScheme dlt:SubjectScheme .

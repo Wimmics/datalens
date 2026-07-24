@@ -1,0 +1,46 @@
+tag_kaggle,officiel_kaggle,chemin_kaggle,occurrence_kaggle,couverture_kaggle,tag_huggingface,occurrence_huggingface
+tabular,True,data type > tabular,14854,2.12%,tabular,96759
+image,True,data type > image,9697,1.38%,image,68173
+text,True,data type > text,9216,1.31%,text,418982
+news,True,subject > people and society > news,3708,0.53%,news,1
+law,True,subject > people and society > law,2611,0.37%,law,6
+government,True,subject > people and society > law > government,2504,0.36%,government,2
+pandas,True,packages > pandas,1679,0.24%,pandas,338635
+synthetic,True,data type > synthetic,1579,0.23%,synthetic,7
+art,True,subject > arts and entertainment > art,1168,0.17%,art,3
+audio,True,data type > audio,1068,0.15%,audio,27413
+video,True,data type > video data,987,0.14%,video,17220
+africa,True,geography and places > africa,495,0.07%,africa,1
+sql,True,subject > science and technology > computer science > programming > sql,476,0.07%,sql,2
+json,True,packages > json,367,0.05%,json,62130
+robotics,True,subject > science and technology > engineering > robotics,315,0.04%,robotics,6198
+gan,True,technique > neural networks > gan,295,0.04%,gan,38
+rnn,True,technique > neural networks > rnn,206,0.03%,rnn,1
+russian,True,language > russian,193,0.03%,russian,1
+translation,True,task > translation,164,0.02%,translation,3742
+image-to-text,True,task > image-to-text,160,0.02%,image-to-text,2605
+pca,True,technique > pca,117,0.02%,pca,5
+summarization,True,task > summarization,110,0.02%,summarization,2743
+multilingual,True,language > multilingual,104,0.01%,multilingual,2751
+dnn,True,technique > neural networks > dnn,99,0.01%,dnn,6
+other,True,task > other,84,0.01%,other,2276
+tpu,True,subject > science and technology > computer science > accelerators > tpu,82,0.01%,tpu,11
+image-to-image,True,task > image-to-image,82,0.01%,image-to-image,827
+text-to-speech,True,task > text-to-speech,71,0.01%,text-to-speech,1205
+knn,True,technique > knn,65,0.01%,knn,9
+text-to-image,True,task > text-to-image,59,0.01%,text-to-image,5419
+math,True,task > evaluation > math,48,0.01%,math,1
+audio-to-audio,True,task > audio-to-audio,21,0.00%,audio-to-audio,338
+vae,True,architecture > vae,20,0.00%,vae,1
+pil,True,packages > PIL,18,0.00%,pil,6
+os,True,packages > os,16,0.00%,os,59
+vit,True,architecture > vit,14,0.00%,vit,1
+sam,True,architecture > sam,7,0.00%,sam,3
+twi,True,language > twi,5,0.00%,twi,78
+sys,True,packages > sys,3,0.00%,sys,5
+ssd,True,architecture > ssd,2,0.00%,ssd,16
+mit,True,architecture > mit,2,0.00%,mit,51532
+lao,True,language > lao,2,0.00%,lao,86
+opt,True,architecture > opt,1,0.00%,opt,1
+ewe,True,language > ewe,1,0.00%,ewe,67
+bit,True,architecture > bit,1,0.00%,bit,6

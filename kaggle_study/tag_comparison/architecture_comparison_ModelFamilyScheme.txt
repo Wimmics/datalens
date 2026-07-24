@@ -1,0 +1,217 @@
+Comparaison des tags de la catégorie architecture avec ModelFamilyScheme
+Nombre de tags : 209
+Nombre de concepts : 7236
+Nombre de tags correspondants : 57
+Couverture des tags : 27.27%
+Correspondances
+albert -> ALBERT
+bart -> BART
+bert -> BERT
+biggan -> Biggan
+bit -> Bit
+conformer -> Conformer
+convmixer -> Convmixer
+convnext -> Conv Next
+deberta-v3 -> Deberta V 3
+deit -> Deit
+densenet -> Densenet
+distilbert -> DistilBERT
+efficientnet -> Efficientnet
+efficientnet-b0 -> Efficient Net B 0
+efficientnet-b3 -> Efficientnet B 3
+efficientnet-b4 -> Efficientnet B 4
+efficientnet-v2 -> Efficientnetv 2
+efficientnetv2 -> Efficientnetv 2
+faster-r-cnn -> Fasterrcnn
+fnet -> Fnet
+gpt2 -> GPT-2
+inception-resnet-v2 -> Inception Resnet V 2
+inception-v3 -> Inceptionv 3
+mask-r-cnn -> Maskrcnn
+mit -> Mit
+mobilebert -> Mobilebert
+mobilenet -> Mobilenet
+mobilenet-v1 -> Mobile Net V 1
+mobilenet-v2 -> Mobile Net V 2
+mobilenet-v3 -> Mobilenetv 3
+mobilenetv3 -> Mobilenetv 3
+mobilevit -> Mobilevit
+opt -> Opt
+resnet -> Res Net
+resnet50-v2 -> Res Net 50 V 2
+resnetv2 -> Resnet V 2
+retinanet -> Retinanet
+roberta -> Roberta
+s3d -> S 3 D
+sam -> Sam
+segformer -> Segformer
+softmax -> Softmax
+swin-transformer -> Swin Transformer
+t5 -> T 5
+tacotron-2 -> Tacotron 2
+transformer -> Transformer
+unet -> Unet++
+vae -> VAE
+video-swin-transformer -> Video Swin Transformer
+vision-transformer -> Vision Transformer
+vit -> Vi T
+wav2vec2 -> Wav 2 Vec 2
+whisper -> Whisper
+xlm-roberta -> Xlm Roberta
+yolo -> Yolo
+yolov5 -> Yolov 5
+yolov8 -> YOLOv 8
+
+Tags absents
+1x1-convolution
+amoebanet-a-n18-f448
+anti-alias-downsampling
+attention-dropout
+auxiliary-classifier
+average-pooling
+batch-normalization
+big-transfer
+bigan
+bigbigan
+biggan-deep
+blur-pooling
+bottleneck-residual-block
+cait
+centernet
+condconv
+convolution
+cspdarknet
+dan
+deeplab-mobilenetv2-ade20k-train
+deeplab-mobilenetv2-coco-voc-trainval
+deeplab-mobilenetv2-dm05-coco-voc-trainval
+deeplab-mobilenetv3-large-cityscapes-trainfine
+deeplab-xception65-ade20k-train
+deeplab-xception65-cityscapes-trainfine
+deeplab-xception65-coco-voc-trainaug
+deeplabv3plus
+delf
+dense-block
+dense-connections
+depthwise-separable-convolution
+dla-bottleneck-residual-block
+dla-residual-block
+dpn-block
+dropout
+efficient-channel-attention
+efficientdet
+efficientnet-b1
+efficientnet-b2
+efficientnet-b5
+efficientnet-b6
+efficientnet-b7
+elmo
+fastdepth
+fbnet-block
+fcos
+fsaf
+gelu
+global-average-pooling
+group-normalization
+grouped-convolution
+hard-swish
+hrnet-v2-w48
+i3d
+inception-a
+inception-b
+inception-c
+inception-resnet-v2-a
+inception-resnet-v2-b
+inception-resnet-v2-c
+inception-v1
+inception-v2
+inception-v3-module
+inception-v4
+inplace-abn
+inverted-residual-block
+keywordspottingnet
+layer-normalization
+leaky-relu
+max-pooling
+maxim
+midas
+mish
+mixconv
+mlp-mixer
+mobilebert-edgetpu-small
+mobilebert-uncased-l-24-h-128-b-512-a-4-f-4-opt
+mosaic
+movinet
+multi-band-melgan
+multi-head-attention
+multiple
+nasnet-a-large
+nasnet-a-mobile
+nnclr
+nnlm
+one-shot-aggregation
+pnasnet-5-large
+progressive-gan
+reduction-a
+reduction-b
+regnetx
+regnety
+relu
+relu6
+reqa
+res2net-block
+res2next-block
+residual-block
+residual-connection
+resnet-152
+resnet-cifar
+resnet-v1-101
+resnet-v1-152
+resnet-v1-200
+resnet-v1-50
+resnet-v2-101
+resnet-v2-152
+resnet-v2-50
+resnet101-v2
+resnet101x3-v2
+resnet152x4-v2
+resnet19
+resnet50x3-v2
+resnetv1
+resnext-block
+s3d-g
+scaled-dot-product-attention
+selecsls-block
+selective-kernel
+silero-stt
+split-attention
+squeeze-and-excitation-block
+ssd
+ssd-mobilenet-v1
+ssd-mobilenet-v2
+ssd-mobilenet-v2-fpn
+ssd-spaghettinet-edgetpu-large
+swish
+swivel
+tanh-activation
+tnt
+transformer-in-transformer
+transformer-xl
+tridentnet
+tsm-resnet50
+tsm-resnet50x2
+tvn-1
+tvn-2
+tvn-3
+tvn-mobile-1
+ulmfit
+vgg-style
+videoflow
+vitdet
+wae
+weight-standardization
+wide-residual-block
+wide-resnet-40-8
+word2vec-skip-gram
+wrn-106
+xcit

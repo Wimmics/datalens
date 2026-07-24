@@ -78,7 +78,6 @@ dlt:Text a skos:Concept, dlo:Modality ;
 
 dlt:TimeSeries a skos:Concept, dlo:Modality ;
     skos:prefLabel "Time-series"@en ;
-    skos:altLabel "Time series"@en ;
     skos:definition "Sequential data indexed by time, such as sensor readings or stock prices."@en ;
     skos:inScheme dlt:ModalityScheme .
 
@@ -101,25 +100,25 @@ dlt:TransformationScheme a skos:ConceptScheme ;
             dlt:Merge,
             dlt:Adapt .
 
-dlt:Finetune a dlo:Transformation ;
-    skos:label "Fine-tune"@en ;
+dlt:Finetune a dlo:Transformation , skos:Concept ;
+    skos:prefLabel "Fine-tune"@en ;
     skos:definition "A transformation where a pre-trained model is further trained on a specific task or dataset."@en ;
     skos:inScheme dlt:TransformationScheme .
 
-dlt:Quantize a dlo:Transformation ;
-    skos:label "Quantize"@en ;
+dlt:Quantize a dlo:Transformation , skos:Concept ;
+    skos:prefLabel "Quantize"@en ;
     skos:definition "A transformation where a pre-trained model is quantized to reduce its size and improve inference speed."@en ;
     skos:inScheme dlt:TransformationScheme .
 
-dlt:Merge a dlo:Transformation ;
-    skos:label "Merge"@en ;
+dlt:Merge a dlo:Transformation , skos:Concept ;
+    skos:prefLabel "Merge"@en ;
     skos:definition "A transformation where multiple pre-trained models are combined into a single model."@en ;
     skos:inScheme dlt:TransformationScheme .
 
-dlt:Adapt a dlo:Transformation ;
-    skos:label "Adapt"@en ;
+dlt:Adapt a dlo:Transformation , skos:Concept ;
+    skos:prefLabel "Adapt"@en ;
     skos:definition "A transformation where a pre-trained model is adapted for a new task or domain."@en ;
-    skos:inScheme dlt:TransformationScheme .    
+    skos:inScheme dlt:TransformationScheme .   
 
 
 
@@ -131,12 +130,12 @@ dlt:FormatScheme
       skos:definition "A controlled vocabulary for describing the formats of dataset and model resources."@en ;
       skos:prefLabel "Dataset Format Scheme"@en .
 
-dlt:WebDataset
+dlt:WebDatasetFormat
       a       dlo:Format , skos:Concept ;
       skos:definition "A WebDataset file is a TAR archive containing a series of data files. WebDataset is designed for multimodal datasets, i.e. for image, audio and/or video datasets."@en ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-webdataset> ;
       skos:inScheme dlt:FormatScheme ;
-      skos:prefLabel "Web Dataset"@en .
+      skos:prefLabel "WebDataset Format"@en .
 
 dlt:ImageFolder
       a       dlo:Format , skos:Concept ;
@@ -155,7 +154,7 @@ dlt:AgentTraces
       skos:definition "A trace-oriented format used to store execution logs and interaction traces for AI agents."@en ;
       skos:seeAlso <https://huggingface.co/changelog/agent-trace-viewer> ;
       skos:inScheme dlt:FormatScheme ;
-      skos:prefLabel "Traces"@en .
+      skos:prefLabel "Agent Traces"@en .
 
 dlt:Arrow
       a       dlo:Format , skos:Concept ;
@@ -286,111 +285,112 @@ dlt:1t
 
 
 
-## Dataset Library Scheme
-dlt:DatasetLibraryScheme
+## Library Scheme
+dlt:LibraryScheme
       a       skos:ConceptScheme ;
-      skos:definition "A controlled vocabulary for describing the libraries of dataset resources."@en ;
-      skos:prefLabel "Dataset Library Scheme"@en .
+      skos:definition "A controlled vocabulary for describing the libraries of machine learning resources."@en ;
+      skos:prefLabel "Library Scheme"@en .
+
+dlt:DatasetLibraries a skos:Collection ;
+      skos:prefLabel "Dataset Libraries"@en ;
+      skos:member dlt:DataDesigner, dlt:Lance, dlt:Datasets, dlt:WebDataset, dlt:Polars, dlt:Dask, dlt:Pandas, dlt:FiftyOne, dlt:Distilabel, dlt:MLCroissant, dlt:Argilla .
 
 dlt:DataDesigner
       a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-data-designer>, <https://nvidia-nemo.github.io/DataDesigner/latest/> ;
       skos:definition "Data Designer is NVIDIA NeMo’s framework for generating high-quality synthetic datasets using LLMs. It enables you to create diverse data using statistical samplers, LLMs, or existing seed datasets."@en ;
-      skos:inScheme dlt:DatasetLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "NeMo Data Designer"@en .
 
 dlt:Lance
       a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-lance>, <https://lance.org/> ;
       skos:definition "Lance is an open multimodal lakehouse table format for AI."@en ;
-      skos:inScheme dlt:DatasetLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Lance"@en .
 
 dlt:Datasets
       a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/datasets/index>, <https://pypi.org/project/datasets/> ;
       skos:definition "Datasets is a library for easily accessing and sharing AI datasets for Audio, Computer Vision, and Natural Language Processing (NLP) tasks."@en ;
-      skos:inScheme dlt:DatasetLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Datasets"@en .
 
 dlt:WebDataset
       a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-webdataset>, <https://pypi.org/project/webdataset/> ;
       skos:definition "WebDataset is a library for writing I/O pipelines for large datasets. Its sequential I/O and sharding features make it especially useful for streaming large-scale datasets to a DataLoader."@en ;
-      skos:inScheme dlt:DatasetLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "WebDataset"@en .
 
 dlt:Polars
       a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-polars>, <https://pola.rs/> ;
       skos:definition "Polars is an in-memory DataFrame library on top of an OLAP query engine."@en ;
-      skos:inScheme dlt:DatasetLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Polars"@en .
 
 dlt:Dask
       a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-dask>, <https://www.dask.org/> ;
       skos:definition "Dask is a parallel and distributed computing library that scales the existing Python and PyData ecosystem."@en ;
-      skos:inScheme dlt:DatasetLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Dask"@en .
 
 dlt:Pandas
       a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-pandas>, <https://pandas.pydata.org/> ;
       skos:definition "Pandas is a widely used Python data analysis toolkit."@en ;
-      skos:inScheme dlt:DatasetLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "pandas"@en .
 
 dlt:FiftyOne
       a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-fiftyone>, <https://docs.voxel51.com/> ;
       skos:definition "FiftyOne is an open-source toolkit for curating, visualizing, and managing unstructured visual data."@en ;
-      skos:inScheme dlt:DatasetLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "FiftyOne"@en .
 
 dlt:Distilabel
       a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-distilabel>, <https://distilabel.argilla.io/1.1.1/> ;
       skos:definition "Distilabel is a framework for synthetic data and AI feedback for engineers who need fast, reliable and scalable pipelines based on verified research papers."@en ;
-      skos:inScheme dlt:DatasetLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Distilabel"@en .
 
 dlt:MLCroissant
       a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/dataset-viewer/en/mlcroissant>, <https://pypi.org/project/mlcroissant/> ;
       skos:definition "mlcroissant is a library to load datasets from Croissant metadata."@en ;
-      skos:inScheme dlt:DatasetLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Croissant"@en .
 
 dlt:Argilla
       a       skos:Concept , dlo:Library ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/datasets-argilla>, <https://docs.argilla.io/latest/> ;
       skos:definition "Argilla is a collaboration tool for AI engineers and domain experts who need to build high quality datasets for their projects."@en ;
-      skos:inScheme dlt:DatasetLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Argilla"@en .
 
-
-
-
-
-## Model Library Scheme
-dlt:ModelLibraryScheme
-      a       skos:ConceptScheme ;
-      skos:definition "A controlled vocabulary for describing the libraries of machine learning models."@en ;
-      skos:prefLabel "Model Library Scheme"@en .
+dlt:ModelLibraries  a skos:Collection ;
+      skos:prefLabel "Model Libraries"@en ;
+      skos:member dlt:Pytorch, dlt:Sklearn, dlt:TransformersJS, dlt:Transformers, dlt:AllenNLP, dlt:Stanza, dlt:PaddleOCR, dlt:AdapterTransformers, dlt:Rust, dlt:KerasHub, dlt:SentenceTransformers, dlt:Speechbrain, 
+      dlt:LiteRT, dlt:Espnet, dlt:PyannoteAudio, dlt:OpenClip, dlt:Peft, dlt:Fasttext, dlt:Tensorboard, dlt:Keras, dlt:StableBaselines3, dlt:Nemo, dlt:Asteroid, dlt:OptimumGraphcore, dlt:TFKeras, dlt:SpanMarker, 
+      dlt:PaddleNLP, dlt:Joblib, dlt:OptimumHabana, dlt:Univa, dlt:DDUF, dlt:OpenVINO, dlt:GGUF, dlt:Flair, dlt:CoreML, dlt:SetFit, dlt:ONNX, dlt:Jax, dlt:Spacy, dlt:Diffusers, dlt:LlamaFile, dlt:SampleFactory, 
+      dlt:Fairseq, dlt:Timm, dlt:PaddlePaddle, dlt:MLAgents, dlt:FastAI, dlt:ExecuTorch, dlt:TF, dlt:MLX, dlt:UnitySentis, dlt:Safetensors, dlt:BERTopic .
 
 dlt:Pytorch
       a       skos:Concept , dlo:Library ;
       skos:definition "PyTorch is an optimized tensor library for deep learning using GPUs and CPUs."@en ;
       skos:seeAlso <https://pytorch.org/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "PyTorch"@en .
 
 dlt:Sklearn
       a       skos:Concept , dlo:Library ;
       skos:definition "Scikit-learn is an open source machine learning library that supports supervised and unsupervised learning. It also provides various tools for model fitting, data preprocessing, model selection, model evaluation, and many other utilities."@en ;
       skos:seeAlso <https://scikit-learn.org/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Scikit-learn"@en .
 
 dlt:TransformersJS
@@ -398,28 +398,28 @@ dlt:TransformersJS
       skos:definition "Transformers.js is a JavaScript library for the Hugging Face Transformers library."@en ;
       skos:seeAlso <https://huggingface.co/docs/transformers.js/> ;
       skos:relate dlt:Transformers ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Transformers.js"@en .
 
 dlt:Transformers
       a       skos:Concept , dlo:Library ;
       skos:definition "Transformer is a library maintained by Hugging Face and its community, for state-of-the-art Machine Learning for Pytorch, TensorFlow and JAX."@en ;
       skos:seeAlso <https://huggingface.co/docs/transformers/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Transformers"@en .
 
-dlt:Allennlp
+dlt:AllenNLP
       a       skos:Concept , dlo:Library ;
       skos:definition "AllenNLP is an Apache 2.0 NLP research library, built on PyTorch, for developing state-of-the-art deep learning models on a wide variety of linguistic tasks."@en ;
       skos:seeAlso <https://docs.allennlp.org/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "AllenNLP"@en .
 
 dlt:Stanza
       a       skos:Concept , dlo:Library ;
       skos:definition "Stanza is a Python natural language analysis package. It provides a collection of tools for the linguistic analysis of many human languages."@en ;
       skos:seeAlso <https://stanfordnlp.github.io/stanza/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Stanza"@en .
 
 dlt:PaddleOCR
@@ -427,7 +427,7 @@ dlt:PaddleOCR
       skos:definition "PaddleOCR is an OCR tool developed by PaddlePaddle, it converts PDF documents and images into structured, LLM-ready data (JSON/Markdown)."@en ;
       skos:seeAlso <https://www.paddleocr.ai/latest/en/index.html> ;
       skos:relate dlt:Paddlepaddle ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "PaddleOCR"@en .
 
 dlt:AdapterTransformers
@@ -435,119 +435,119 @@ dlt:AdapterTransformers
       skos:definition "Adapters is an add-on library to Hugging Face Transformers for efficiently fine-tuning pre-trained language models using adapters and other parameter-efficient methods."@en ;
       skos:seeAlso <https://docs.adapterhub.ml/> ;
       skos:relate dlt:Transformers ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Adapters"@en .
 
 dlt:Rust
       a       skos:Concept , dlo:Library ;
       skos:definition "Rust is a fast, memory-safe, and productive programming language that can run on embedded devices, web services, and more."@en ;
       skos:seeAlso <https://www.rust-lang.org/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Rust"@en .
 
 dlt:KerasHub
       a       skos:Concept , dlo:Library ;
       skos:definition "KerasHub is a pretrained modeling library that aims to be simple, flexible, and fast."@en ;
       skos:seeAlso <https://keras.io/keras_hub/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "KerasHub"@en .
 
 dlt:SentenceTransformers
       a       skos:Concept , dlo:Library ;
       skos:definition "Sentence Transformers is a Python module for using and training state-of-the-art embedding and reranker models."@en ;
       skos:seeAlso <https://www.sbert.net/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Sentence Transformers"@en .
 
 dlt:Speechbrain
       a       skos:Concept , dlo:Library ;
       skos:definition "SpeechBrain is an open-source and all-in-one speech toolkit based on PyTorch."@en ;
       skos:seeAlso <https://speechbrain.readthedocs.io/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "SpeechBrain"@en .
 
 dlt:LiteRT
       a       skos:Concept , dlo:Library ;
       skos:definition "LiteRT, successor to TensorFlow Lite, is Google's On-device framework for high-performance ML & GenAI deployment on edge platforms, via efficient conversion, runtime, and optimization"@en ;
       skos:seeAlso <https://ai.google.dev/edge/litert> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "LiteRT"@en .
 
 dlt:Espnet
       a       skos:Concept , dlo:Library ;
       skos:definition "ESPnet is an end-to-end toolkit for speech processing, including automatic speech recognition, text to speech, speech enhancement, dirarization and other tasks."@en ;
       skos:seeAlso <https://espnet.github.io/espnet/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "ESPnet"@en .
 
 dlt:PyannoteAudio
       a       skos:Concept , dlo:Library ;
       skos:definition "PyAnnote.audio is an open-source toolkit written in Python for speaker diarization."@en ;
       skos:seeAlso <https://docs.pyannote.ai/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "PyAnnote.audio"@en .
 
 dlt:OpenClip
       a       skos:Concept , dlo:Library ;
       skos:definition "OpenCLIP is an open-source implementation of OpenAI’s CLIP."@en ;
       skos:seeAlso <https://huggingface.co/docs/hub/open_clip> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "OpenCLIP"@en .
 
 dlt:Peft
       a       skos:Concept , dlo:Library ;
       skos:definition "PEFT (Parameter-Efficient Fine-Tuning) is a library for efficiently adapting large pretrained models to various downstream applications without fine-tuning all of a model’s parameters because it is prohibitively costly."@en ;
       skos:seeAlso <https://huggingface.co/docs/peft/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "PEFT"@en .
 
 dlt:Fasttext
       a       skos:Concept , dlo:Library ;
       skos:definition "FastText is an open-source, free, lightweight library that allows users to learn text representations and text classifiers."@en ;
       skos:seeAlso <https://fasttext.cc/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "FastText"@en .
 
 dlt:Tensorboard
       a       skos:Concept , dlo:Library ;
       skos:definition "TensorBoard provides tooling for tracking and visualizing metrics as well as visualizing models."@en ;
       skos:seeAlso <https://www.tensorflow.org/tensorboard> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "TensorBoard"@en .
 
 dlt:Keras
       a       skos:Concept , dlo:Library ;
       skos:definition "Keras is an open-source multi-backend deep learning framework, with support for JAX, TensorFlow, and PyTorch."@en ;
       skos:seeAlso <https://keras.io/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Keras"@en .
 
 dlt:StableBaselines3
       a       skos:Concept , dlo:Library ;
       skos:definition "Stable Baselines3 is a set of reliable implementations of reinforcement learning algorithms in PyTorch."@en ;
       skos:seeAlso <https://stable-baselines3.readthedocs.io/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Stable Baselines3"@en .
 
 dlt:Nemo
       a       skos:Concept , dlo:Library ;
       skos:definition "NVIDIA NeMo Framework is a scalable and cloud-native generative AI framework built for researchers and developers working on Large Language Models, Multimodal, and Speech AI."@en ;
       skos:seeAlso <https://docs.nvidia.com/nemo-framework/user-guide/latest/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "NeMo"@en .
 
 dlt:Asteroid
       a       skos:Concept , dlo:Library ;
       skos:definition "Asteroid is a Pytorch-based audio source separation toolkit that enables fast experimentation on common datasets."@en ;
       skos:seeAlso <https://asteroid-team.github.io/asteroid/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Asteroid"@en .
 
 dlt:OptimumGraphcore
       a       skos:Concept , dlo:Library ;
       skos:definition "Optimum Graphcore is the interface between the Hugging Face Transformers library and Graphcore IPUs. It provides a set of tools enabling model parallelization and loading on IPUs, training and fine-tuning on all the tasks already supported by Transformers."@en ;
       skos:seeAlso <https://huggingface.co/docs/optimum/graphcore/index> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Graphcore"@en .
 
 dlt:TFKeras
@@ -555,14 +555,14 @@ dlt:TFKeras
       skos:definition "tf-keras is the name given to Keras 2.x version."@en ;
       skos:seeAlso <https://huggingface.co/docs/hub/tf-keras> ;
       skos:relate dlt:Keras ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "TF-Keras"@en .
 
 dlt:SpanMarker
       a       skos:Concept , dlo:Library ;
       skos:definition "SpanMarker is a framework for training powerful Named Entity Recognition models using familiar encoders such as BERT, RoBERTa and ELECTRA."@en ;
       skos:seeAlso <https://tomaarsen.github.io/SpanMarkerNER/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "SpanMarker"@en .
 
 dlt:PaddleNLP
@@ -570,63 +570,63 @@ dlt:PaddleNLP
       skos:definition "Leveraging the PaddlePaddle framework, PaddleNLP is a NLP library with pre-trained model zoo, supporting wide-range of NLP tasks from research to industrial applications."@en ;
       skos:seeAlso <https://paddlenlp.readthedocs.io/en/latest/> ;
       skos:relate dlt:Paddlepaddle ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "PaddleNLP"@en .
 
 dlt:Joblib
       a       skos:Concept , dlo:Library ;
       skos:definition "Joblib is a set of tools to provide lightweight pipelining in Python."@en ;
       skos:seeAlso <https://joblib.readthedocs.io/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Joblib"@en .
 
 dlt:OptimumHabana
       a       skos:Concept , dlo:Library ;
       skos:definition "Optimum for Intel Gaudi (optimum-habana) is the interface between the Transformers and Diffusers libraries and Intel Gaudi AI Accelerators (HPU). It provides a set of tools enabling easy model loading, training and inference on single and multi-HPU settings for different downstream tasks."@en ;
       skos:seeAlso <https://huggingface.co/docs/optimum-habana/index> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Habana"@en .
 
 dlt:Univa
       a       skos:Concept , dlo:Library ;
       skos:definition "UniVA (Universal Video Agent) is an open-source, next-generation video generalist system that enables planning, composing, and producing videos through natural language instructions."@en ;
       skos:seeAlso <https://github.com/univa-agent/univa> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "UniVA"@en .
 
 dlt:DDUF
       a       skos:Concept , dlo:Library ;
       skos:definition "DDUF (DDUF’s Diffusion Unified Format) is a single-file format for diffusion models that aims to unify the different model distribution methods and weight-saving formats by packaging all model components into a single file."@en ;
       skos:seeAlso <https://huggingface.co/docs/hub/en/dduf> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "DDUF"@en .
 
 dlt:OpenVINO
       a       skos:Concept , dlo:Library ;
       skos:definition "OpenVINO is an open-source toolkit for optimizing and deploying AI inference."@en ;
       skos:seeAlso <https://docs.openvino.ai/2026/index.html> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "OpenVINO"@en .
 
 dlt:GGUF
       a       skos:Concept , dlo:Library ;
       skos:definition "GGUF is a binary format that is designed for fast loading and saving of models, and for ease of reading"@en ;
       skos:seeAlso <https://github.com/ggml-org/ggml/blob/master/docs/gguf.md> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "GGUF"@en .
 
 dlt:Flair
       a       skos:Concept , dlo:Library ;
       skos:definition "Flair is a simple framework for state-of-the-art NLP."@en ;
       skos:seeAlso <https://flairnlp.github.io/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Flair"@en .
 
 dlt:CoreML
       a       skos:Concept , dlo:Library ;
       skos:definition "Core ML is a framework for integrating machine learning models into Apple applications."@en ;
       skos:seeAlso <https://developer.apple.com/documentation/coreml> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Core ML"@en .
 
 dlt:SetFit
@@ -634,126 +634,126 @@ dlt:SetFit
       skos:definition " SetFit is a prompt-free framework for few-shot fine-tuning of Sentence Transformers."@en ;
       skos:seeAlso <https://huggingface.co/docs/setfit/> ;
       skos:relate dlt:SentenceTransformers ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "SetFit"@en .
 
 dlt:ONNX
       a       skos:Concept , dlo:Library ;
       skos:definition "ONNX (Open Neural Network Exchange) is an open format built to represent machine learning models."@en ;
       skos:seeAlso <https://onnx.ai/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "ONNX"@en .
 
 dlt:Jax
       a       skos:Concept , dlo:Library ;
       skos:definition "JAX is a Python library for accelerator-oriented array computation and program transformation, designed for high-performance numerical computing and large-scale machine learning."@en ;
       skos:seeAlso <https://docs.jax.dev/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "JAX"@en .
 
 dlt:Spacy
       a       skos:Concept , dlo:Library ;
       skos:definition "spaCy is an open-source library for advanced natural language processing in Python."@en ;
       skos:seeAlso <https://spacy.io/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "spaCy"@en .
 
 dlt:Diffusers
       a       skos:Concept , dlo:Library ;
       skos:definition "Diffusers is a library of state-of-the-art pretrained diffusion models for generating videos, images, and audio."@en ;
       skos:seeAlso <https://huggingface.co/docs/diffusers/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Diffusers"@en .
 
 dlt:LlamaFile
       a       skos:Concept , dlo:Library ;
       skos:definition "llamafile is a Mozilla Builders project that enables users to distribute and run LLMs with a single file."@en ;
       skos:seeAlso <https://docs.mozilla.ai/llamafile> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "LlamaFile"@en .
 
 dlt:SampleFactory
       a       skos:Concept , dlo:Library ;
       skos:definition "sample-factory is a codebase for high throughput asynchronous reinforcement learning."@en ;
       skos:seeAlso <https://www.samplefactory.dev/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Sample Factory"@en .
 
 dlt:Fairseq
       a       skos:Concept , dlo:Library ;
       skos:definition "Fairseq is a sequence modeling toolkit that allows researchers and developers to train custom models for translation, summarization, language modeling, and other text generation tasks."@en ;
       skos:seeAlso <https://fairseq.readthedocs.io/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Fairseq"@en .
 
 dlt:Timm
       a       skos:Concept , dlo:Library ;
       skos:definition "timm is a deep-learning library created by Ross Wightman and is a collection of SOTA computer vision models, layers, utilities, optimizers, schedulers, data-loaders, augmentations and also training/validating scripts with ability to reproduce ImageNet training results."@en ;
       skos:seeAlso <https://timm.fast.ai/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "timm"@en .
 
 dlt:PaddlePaddle
       a       skos:Concept , dlo:Library ;
       skos:definition "PaddlePaddle, short for PArallel Distributed Deep LEarning, is an open-source deep learning platform developed by Baidu."@en ;
       skos:seeAlso <https://www.paddlepaddle.org.cn/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "PaddlePaddle"@en .
 
 dlt:MLAgents
       a       skos:Concept , dlo:Library ;
       skos:definition "The Unity Machine Learning Agents Toolkit (ML-Agents Toolkit) is an open-source project that enables games and simulations to serve as environments for training intelligent agents."@en ;
       skos:seeAlso <https://docs.unity3d.com/Packages/com.unity.ml-agents@4.0/manual/index.html> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "ML Agents"@en .
 
 dlt:FastAI
       a       skos:Concept , dlo:Library ;
       skos:definition "fastai is an open-source Deep Learning library that leverages PyTorch and Python to provide high-level components to train fast and accurate neural networks with state-of-the-art outputs on text, vision, and tabular data."@en ;
       skos:seeAlso <https://docs.fast.ai/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "fastai"@en .
 
 dlt:ExecuTorch
       a       skos:Concept , dlo:Library ;
       skos:definition "ExecuTorch is PyTorch’s solution for training and inference on the Edge, providing portability, productivity, and performance for edge computing platforms."@en ;
       skos:seeAlso <https://docs.pytorch.org/executorch/stable/index.html> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "ExecuTorch"@en .
 
 dlt:TF
       a       skos:Concept , dlo:Library ;
       skos:definition "TensorFlow is an end-to-end open source platform for machine learning, developed by Google."@en ;
       skos:seeAlso <https://www.tensorflow.org/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "TensorFlow"@en .
 
 dlt:MLX
       a       skos:Concept , dlo:Library ;
       skos:definition "MLX is a NumPy-like array framework designed for efficient and flexible machine learning on Apple silicon, by Apple machine learning research."@en ;
       skos:seeAlso <https://ml-explore.github.io/mlx> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "MLX"@en .
 
 dlt:UnitySentis
       a       skos:Concept , dlo:Library ;
       skos:definition "Sentis is a neural network inference library for Unity."@en ;
       skos:seeAlso <https://docs.unity3d.com/Packages/com.unity.sentis@2.1/manual/index.html> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "unity-sentis"@en .
 
 dlt:Safetensors
       a       skos:Concept , dlo:Library ;
       skos:definition "Safetensors is a new simple format for storing tensors safely (as opposed to pickle) and that is still fast (zero-copy)."@en ;
       skos:seeAlso <https://huggingface.co/docs/safetensors/index> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "Safetensors"@en .
 
 dlt:BERTopic
       a       skos:Concept , dlo:Library ;
       skos:definition "BERTopic is a topic modeling framework that leverages Hugging Face transformers and c-TF-IDF to create dense clusters allowing for easily interpretable topics whilst keeping important words in the topic descriptions."@en ;
       skos:seeAlso <https://maartengr.github.io/BERTopic/> ;
-      skos:inScheme dlt:ModelLibraryScheme ;
+      skos:inScheme dlt:LibraryScheme ;
       skos:prefLabel "BERTopic"@en .
 
 
@@ -769,40 +769,40 @@ dlt:TaskScheme
 # ----------------------------------- Collections
 
 dlt:RL
-      a       skos:Collection ;
+      a        skos:Collection;      
       skos:member dlt:Robotics , dlt:ReinforcementLearning ;
       skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Reinforcement Learning"@en .
 
 dlt:NLP
-      a       skos:Collection ;
+      a       skos:Collection;
       skos:member dlt:FillMask , dlt:Summarization , dlt:QuestionAnswering , dlt:TokenClassification , dlt:SentenceSimilarity , dlt:Translation , dlt:ZeroShotClassification , dlt:TextClassification , dlt:TextRetrieval , dlt:TextGeneration , dlt:FeatureExtraction , dlt:MultipleChoice , dlt:TableToText , dlt:TableQuestionAnswering , dlt:TextRanking ;
       skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Natural Language Processing"@en .
 
-dlt:Tabular
-      a       skos:Collection ;
+dlt:TabularLearning
+      a       skos:Collection;
       skos:member dlt:TabularToText , dlt:TabularRegression , dlt:TabularClassification , dlt:TimeSeriesForecasting ;
       skos:inScheme dlt:TaskScheme ;
-      skos:prefLabel "Tabular"@en .
+      skos:prefLabel "Tabular Learning"@en .
 
 dlt:CV
-      a       skos:Collection ;
+      a       skos:Collection;
       skos:member dlt:ImageToImage , dlt:ObjectDetection , dlt:ZeroShotImageClassification , dlt:ImageFeatureExtraction , dlt:ImageSegmentation , dlt:TextTo3D , dlt:UnconditionalImageGeneration , dlt:ImageToText , dlt:KeypointDetection , dlt:ImageTo3D , dlt:TextToVideo , dlt:ZeroShotObjectDetection , dlt:ImageClassification , dlt:MaskGeneration , dlt:DepthEstimation , dlt:TextToImage , dlt:VideoToVideo , dlt:ImageToVideo , dlt:VideoClassification ;
       skos:inScheme dlt:TaskScheme ;
       skos:prefLabel "Computer Vision"@en .
 
-dlt:Multimodal
-      a       skos:Collection ;
+dlt:MultimodalLearning
+      a       skos:Collection;
       skos:member dlt:VisualQuestionAnswering , dlt:VisualDocumentRetrieval , dlt:DocumentQuestionAnswering , dlt:AudioTextToText , dlt:ImageTextToImage , dlt:AnyToAny , dlt:VideoTextToText , dlt:ImageTextToVideo , dlt:ImageTextToText ;
       skos:inScheme dlt:TaskScheme ;
-      skos:prefLabel "Multimodal"@en .
+      skos:prefLabel "Multimodal Learning"@en .
 
-dlt:Audio
-      a       skos:Collection ;
+dlt:AudioProcessing
+      a       skos:Collection;
       skos:member dlt:AutomaticSpeechRecognition , dlt:AudioClassification , dlt:TextToAudio , dlt:TextToSpeech , dlt:AudioToAudio , dlt:VoiceActivityDetection ;
       skos:inScheme dlt:TaskScheme ;
-      skos:prefLabel "Audio"@en .
+      skos:prefLabel "Audio Processing"@en .
 
 # ----------------------------------- Task Categories
 

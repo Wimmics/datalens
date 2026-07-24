@@ -1,0 +1,1049 @@
+dlt:ArchitectureScheme a skos:ConceptScheme ;
+    skos:prefLabel "Architecture"@en ;
+    skos:definition "Controlled vocabulary for the 'Architecture' tag category."@en .
+
+dlt:AmoebanetAN18F448 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Amoebanet A N 18 F 448"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Bert a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Bert"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:BigTransfer a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Big Transfer"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Bigan a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Bigan"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Bigbigan a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Bigbigan"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Biggan a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Biggan"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:BigganDeep a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Biggan Deep"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Cait a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Cait"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Centernet a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Centernet"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Conformer a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Conformer"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Convmixer a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Convmixer"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Convnext a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Convnext"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Dan a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Dan"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:DeeplabMobilenetv2Ade20KTrain a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Deeplab Mobilenetv 2 Ade 20 K Train"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:DeeplabMobilenetv2CocoVocTrainval a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Deeplab Mobilenetv 2 Coco Voc Trainval"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:DeeplabMobilenetv2Dm05CocoVocTrainval a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Deeplab Mobilenetv 2 Dm 05 Coco Voc Trainval"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:DeeplabMobilenetv3LargeCityscapesTrainfine a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Deeplab Mobilenetv 3 Large Cityscapes Trainfine"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:DeeplabXception65Ade20KTrain a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Deeplab Xception 65 Ade 20 K Train"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:DeeplabXception65CityscapesTrainfine a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Deeplab Xception 65 Cityscapes Trainfine"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:DeeplabXception65CocoVocTrainaug a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Deeplab Xception 65 Coco Voc Trainaug"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Deit a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Deit"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Delf a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Delf"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Efficientdet a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Efficientdet"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:EfficientnetV2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Efficientnet V 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:EfficientnetB0 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Efficientnet B 0"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:EfficientnetB1 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Efficientnet B 1"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:EfficientnetB2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Efficientnet B 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:EfficientnetB3 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Efficientnet B 3"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:EfficientnetB4 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Efficientnet B 4"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:EfficientnetB5 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Efficientnet B 5"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:EfficientnetB6 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Efficientnet B 6"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:EfficientnetB7 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Efficientnet B 7"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Elmo a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Elmo"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Fastdepth a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Fastdepth"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:FasterRCnn a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Faster R Cnn"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Fcos a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Fcos"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Fsaf a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Fsaf"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:I3D a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "I 3 D"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:InceptionResnetV2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Inception Resnet V 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:InceptionV1 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Inception V 1"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:InceptionV2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Inception V 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:InceptionV3 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Inception V 3"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:InceptionV4 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Inception V 4"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Keywordspottingnet a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Keywordspottingnet"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:MaskRCnn a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Mask R Cnn"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Midas a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Midas"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:MlpMixer a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Mlp Mixer"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Mobilebert a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Mobilebert"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:MobilebertEdgetpuSmall a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Mobilebert Edgetpu Small"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:MobilebertUncasedL24H128B512A4F4Opt a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Mobilebert Uncased L 24 H 128 B 512 A 4 F 4 Opt"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Mobilenet a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Mobilenet"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:MobilenetV1 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Mobilenet V 1"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:MobilenetV2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Mobilenet V 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:MobilenetV3 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Mobilenet V 3"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Movinet a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Movinet"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:MultiBandMelgan a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Multi Band Melgan"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:NasnetALarge a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Nasnet A Large"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:NasnetAMobile a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Nasnet A Mobile"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Nnclr a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Nnclr"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Nnlm a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Nnlm"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Pnasnet5Large a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Pnasnet 5 Large"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:ProgressiveGan a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Progressive Gan"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Regnetx a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Regnetx"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Regnety a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Regnety"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Reqa a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Reqa"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Resnet a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnet"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:ResnetCifar a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnet Cifar"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:ResnetV1101 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnet V 1 101"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:ResnetV1152 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnet V 1 152"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:ResnetV1200 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnet V 1 200"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:ResnetV150 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnet V 1 50"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:ResnetV2101 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnet V 2 101"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:ResnetV2152 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnet V 2 152"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:ResnetV250 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnet V 2 50"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Resnet152 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnet 152"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Resnet101V2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnet 101 V 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Resnet101X3V2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnet 101 X 3 V 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Resnet152X4V2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnet 152 X 4 V 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Resnet19 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnet 19"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Resnet50V2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnet 50 V 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Resnet50X3V2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnet 50 X 3 V 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Retinanet a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Retinanet"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:S3D a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "S 3 D"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:S3DG a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "S 3 D G"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:SileroStt a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Silero Stt"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Ssd a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Ssd"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:SsdMobilenetV1 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Ssd Mobilenet V 1"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:SsdMobilenetV2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Ssd Mobilenet V 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:SsdMobilenetV2Fpn a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Ssd Mobilenet V 2 Fpn"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:SsdSpaghettinetEdgetpuLarge a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Ssd Spaghettinet Edgetpu Large"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:SwinTransformer a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Swin Transformer"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Swivel a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Swivel"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Tacotron2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Tacotron 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Transformer a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Transformer"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:TransformerInTransformer a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Transformer In Transformer"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:TransformerXl a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Transformer Xl"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Tridentnet a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Tridentnet"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:TsmResnet50 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Tsm Resnet 50"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:TsmResnet50X2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Tsm Resnet 50 X 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Tvn1 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Tvn 1"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Tvn2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Tvn 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Tvn3 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Tvn 3"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:TvnMobile1 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Tvn Mobile 1"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Ulmfit a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Ulmfit"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Unet a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Unet"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Vae a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Vae"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:VggStyle a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Vgg Style"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Videoflow a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Videoflow"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:VisionTransformer a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Vision Transformer"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Wae a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Wae"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Wav2Vec2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Wav 2 Vec 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:WideResnet408 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Wide Resnet 40 8"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Word2VecSkipGram a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Word 2 Vec Skip Gram"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Wrn106 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Wrn 106"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Xcit a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Xcit"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Yolo a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Yolo"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Yolov5 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Yolov 5"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Bit a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Bit"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Efficientnet a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Efficientnet"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:HrnetV2W48 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Hrnet V 2 W 48"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Maxim a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Maxim"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Mobilevit a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Mobilevit"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Mosaic a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Mosaic"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Multiple a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Multiple"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Tnt a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Tnt"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:VideoSwinTransformer a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Video Swin Transformer"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Vit a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Vit"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:1X1Convolution a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "1 X 1 Convolution"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:AntiAliasDownsampling a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Anti Alias Downsampling"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:AttentionDropout a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Attention Dropout"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:AuxiliaryClassifier a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Auxiliary Classifier"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:AveragePooling a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Average Pooling"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:BatchNormalization a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Batch Normalization"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:BlurPooling a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Blur Pooling"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:BottleneckResidualBlock a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Bottleneck Residual Block"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Condconv a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Condconv"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Convolution a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Convolution"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:DlaBottleneckResidualBlock a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Dla Bottleneck Residual Block"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:DlaResidualBlock a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Dla Residual Block"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:DpnBlock a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Dpn Block"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:DenseBlock a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Dense Block"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:DenseConnections a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Dense Connections"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:DepthwiseSeparableConvolution a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Depthwise Separable Convolution"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Dropout a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Dropout"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:EfficientChannelAttention a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Efficient Channel Attention"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:FbnetBlock a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Fbnet Block"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Gelu a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Gelu"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:GlobalAveragePooling a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Global Average Pooling"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:GroupNormalization a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Group Normalization"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:GroupedConvolution a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Grouped Convolution"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:HardSwish a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Hard Swish"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:InplaceAbn a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Inplace Abn"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:InceptionA a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Inception A"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:InceptionB a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Inception B"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:InceptionC a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Inception C"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:InceptionResnetV2A a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Inception Resnet V 2 A"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:InceptionResnetV2B a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Inception Resnet V 2 B"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:InceptionResnetV2C a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Inception Resnet V 2 C"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:InceptionV3Module a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Inception V 3 Module"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:InvertedResidualBlock a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Inverted Residual Block"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:LayerNormalization a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Layer Normalization"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:LeakyRelu a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Leaky Relu"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:MaxPooling a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Max Pooling"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Mish a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Mish"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Mixconv a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Mixconv"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:MultiHeadAttention a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Multi Head Attention"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:OneShotAggregation a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "One Shot Aggregation"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Relu6 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Relu 6"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Relu a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Relu"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:ReductionA a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Reduction A"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:ReductionB a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Reduction B"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Res2NextBlock a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Res 2 Next Block"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Res2NetBlock a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Res 2 Net Block"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:ResnextBlock a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnext Block"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:ResidualBlock a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Residual Block"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:ResidualConnection a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Residual Connection"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:ScaledDotProductAttention a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Scaled Dot Product Attention"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:SelecslsBlock a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Selecsls Block"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:SelectiveKernel a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Selective Kernel"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Softmax a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Softmax"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:SplitAttention a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Split Attention"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:SqueezeAndExcitationBlock a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Squeeze And Excitation Block"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Swish a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Swish"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:TanhActivation a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Tanh Activation"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:WeightStandardization a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Weight Standardization"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:WideResidualBlock a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Wide Residual Block"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Albert a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Albert"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:DebertaV3 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Deberta V 3"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Distilbert a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Distilbert"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Fnet a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Fnet"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Gpt2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Gpt 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Opt a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Opt"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Roberta a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Roberta"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:XlmRoberta a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Xlm Roberta"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Cspdarknet a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Cspdarknet"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Densenet a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Densenet"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Efficientnetv2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Efficientnetv 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Mobilenetv3 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Mobilenetv 3"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Resnetv1 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnetv 1"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Resnetv2 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Resnetv 2"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Yolov8 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Yolov 8"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Mit a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Mit"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Bart a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Bart"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:T5 a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "T 5"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Whisper a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Whisper"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Deeplabv3Plus a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Deeplabv 3 Plus"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Vitdet a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Vitdet"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Segformer a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Segformer"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+
+dlt:Sam a skos:Concept, dlo:Architecture ;
+    skos:prefLabel "Sam"@en ;
+    skos:topConceptOf dlt:ArchitectureScheme ;
+    skos:inScheme dlt:ArchitectureScheme .
+

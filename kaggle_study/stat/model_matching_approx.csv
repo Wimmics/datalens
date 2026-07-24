@@ -1,0 +1,244 @@
+tag_kaggle,officiel_kaggle,chemin_kaggle,occurrence_kaggle,couverture_kaggle,tag_huggingface,occurrence_huggingface,similarite
+english,True,language > english,515,1.24%,english,2,1.0
+english,True,language > english,515,1.24%,inglish,3,0.857
+english,True,language > english,515,1.24%,hinglish,2,0.8
+pytorch,True,packages > pytorch,417,1.00%,pytorch,1,1.0
+pytorch,True,packages > pytorch,417,1.00%,torch,1,0.833
+text,True,data type > text,395,0.95%,text,4,1.0
+text,True,data type > text,395,0.95%,text8,1,0.889
+image classification,True,task > image-classification,325,0.78%,text-classification,2,0.811
+image classification,True,task > image-classification,325,0.78%,classification,4,0.848
+image classification,True,task > image-classification,325,0.78%,patent-classification,3,0.821
+image classification,True,task > image-classification,325,0.78%,garbage-classification,1,0.85
+image classification,True,task > image-classification,325,0.78%,garbage-classification-v2,1,0.81
+image classification,True,task > image-classification,325,0.78%,iris_classification,1,0.811
+image classification,True,task > image-classification,325,0.78%,shoe-classification,1,0.811
+image classification,True,task > image-classification,325,0.78%,sms-name-classification,1,0.85
+image classification,True,task > image-classification,325,0.78%,sms-travel-classification,1,0.81
+classification,True,task > classification,310,0.74%,classification/news,3,0.875
+classification,True,task > classification,310,0.74%,text-classification,2,0.875
+classification,True,task > classification,310,0.74%,pokemon-classification,12,0.8
+classification,True,task > classification,310,0.74%,classification,4,1.0
+classification,True,task > classification,310,0.74%,patent-classification,3,0.824
+classification,True,task > classification,310,0.74%,speech_classification,3,0.824
+classification,True,task > classification,310,0.74%,token_classification_v2,3,0.8
+classification,True,task > classification,310,0.74%,audio_classification,1,0.848
+classification,True,task > classification,310,0.74%,garbage-classification,1,0.8
+classification,True,task > classification,310,0.74%,iris_classification,1,0.875
+classification,True,task > classification,310,0.74%,shoe-classification,1,0.875
+classification,True,task > classification,310,0.74%,sms-name-classification,1,0.8
+classification,True,task > classification,310,0.74%,token-classification,1,0.848
+transformers,True,packages > transformers,274,0.66%,transformer,1,0.957
+transformers,True,packages > transformers,274,0.66%,transformers_lora,1,0.857
+artificial intelligence,True,subject > science and technology > computer science > artificial intelligence,220,0.53%,us-artificial-intelligence/algemap,1,0.83
+keras,True,packages > keras,181,0.43%,keras,2,1.0
+tensorflow,True,packages > tensorflow,172,0.41%,tensorflow,1,1.0
+object detection,True,task > object-detection,155,0.37%,gun-object-detection,4,0.909
+object detection,True,task > object-detection,155,0.37%,custom-object-detection,2,0.833
+object detection,True,task > object-detection,155,0.37%,nfl-object-detection,1,0.909
+pandas,True,packages > pandas,152,0.36%,pandas,2,1.0
+pandas,True,packages > pandas,152,0.36%,panda,1,0.909
+transformer,True,architecture > transformer,149,0.36%,transformer,1,1.0
+transformer,True,architecture > transformer,149,0.36%,transformers_lora,1,0.815
+numpy,True,packages > numpy,128,0.31%,numpy,2,1.0
+text classification,True,task > text-classification,125,0.30%,text-classification,2,1.0
+text classification,True,task > text-classification,125,0.30%,classification,4,0.875
+text classification,True,task > text-classification,125,0.30%,patent-classification,3,0.895
+text classification,True,task > text-classification,125,0.30%,token_classification_v2,3,0.821
+text classification,True,task > text-classification,125,0.30%,ccdv/patent-classification,2,0.81
+text classification,True,task > text-classification,125,0.30%,c-mteb/tnews-classification,1,0.81
+text classification,True,task > text-classification,125,0.30%,shoe-classification,1,0.833
+text classification,True,task > text-classification,125,0.30%,token-classification,1,0.865
+binary classification,True,task > binary-classification,97,0.23%,classification,4,0.824
+binary classification,True,task > binary-classification,97,0.23%,iris_classification,1,0.842
+binary classification,True,task > binary-classification,97,0.23%,synapti/nci-binary-classification,1,0.8
+image segmentation,True,task > image-segmentation,94,0.23%,image-segmentation,1,1.0
+healthcare,True,subject > health and fitness > health > healthcare,84,0.20%,p1604/healthcare,1,0.8
+hugging face,True,packages > hugging face,76,0.18%,huggingface/c4,2,0.917
+hugging face,True,packages > hugging face,76,0.18%,huggingface,2,1.0
+multimodal,True,data type > multimodal data,72,0.17%,multi-modal,1,1.0
+yolo,True,architecture > yolo,70,0.17%,yolov5,1,0.8
+audio,True,data type > audio,67,0.16%,audio,4,1.0
+multiclass classification,True,task > multiclass classification,66,0.16%,imnim/multiclass-email-classification,2,0.828
+yolov8,True,architecture > yolov8,63,0.15%,yolov8n,14,0.923
+yolov8,True,architecture > yolov8,63,0.15%,yolov5,1,0.833
+india,True,geography and places > asia > india,57,0.14%,hindi,2,0.8
+question answering,True,task > question-answering,54,0.13%,question-answering,1,1.0
+health,True,subject > health and fitness > health,53,0.13%,ehealth_kd,7,0.8
+health,True,subject > health and fitness > health,53,0.13%,health,1,1.0
+logistic regression,True,task > logistic regression,45,0.11%,hemg/logistic_regression_model,1,0.8
+segmentation,True,task > segmentation,42,0.10%,image-segmentation,1,0.828
+agriculture,True,subject > earth and nature > environment > agriculture,42,0.10%,argricultureqa,1,0.88
+resnet,True,architecture > resnet,40,0.10%,rvenet,1,0.833
+resnet,True,architecture > resnet,40,0.10%,renet,1,0.909
+chinese,True,language > chinese,38,0.09%,hc3-chinese,2,0.824
+audio classification,True,task > audio-classification,38,0.09%,classification,4,0.848
+audio classification,True,task > audio-classification,38,0.09%,kaludi/data-food-classification,2,0.809
+audio classification,True,task > audio-classification,38,0.09%,audio_classification,1,1.0
+audio classification,True,task > audio-classification,38,0.09%,iris_classification,1,0.811
+audio classification,True,task > audio-classification,38,0.09%,shoe-classification,1,0.811
+finance,True,subject > people and society > business > finance,37,0.09%,finance,2,1.0
+text conversation,True,task > text-conversation,36,0.09%,conversations,1,0.828
+turkish,True,language > turkish,35,0.08%,turkish_ner,11,0.824
+turkish,True,language > turkish,35,0.08%,turkish,1,1.0
+medicine,True,subject > health and fitness > health > medicine,34,0.08%,medicine,7,1.0
+translation,True,task > translation,33,0.08%,bible-translation,1,0.815
+translation,True,task > translation,33,0.08%,translation,1,1.0
+other,True,task > other,32,0.08%,other,99378,1.0
+other,True,task > other,32,0.08%,others,11,0.909
+education,True,subject > people and society > education,32,0.08%,medication,1,0.842
+multilabel classification,True,task > multilabel-classification,30,0.07%,jvaquet/multilabel-classification-bert,6,0.814
+multilabel classification,True,task > multilabel-classification,30,0.07%,sms-travel-classification,1,0.809
+multilabel classification,True,task > multilabel-classification,30,0.07%,tshasan/multi-label-web-classification,1,0.828
+image augmentation,True,task > image-augmentation,29,0.07%,image-segmentation,1,0.882
+arabic,True,language > arabic,28,0.07%,arabic,1,1.0
+arabic,True,language > arabic,28,0.07%,arab,1,0.8
+africa,True,geography and places > africa,27,0.06%,afriqa,1,0.833
+animals,True,subject > earth and nature > animals,26,0.06%,animal3d,1,0.8
+animals,True,subject > earth and nature > animals,26,0.06%,animals10,1,0.875
+diseases,True,subject > health and fitness > health > health conditions > diseases,26,0.06%,disease,1,0.933
+diseases,True,subject > health and fitness > health > health conditions > diseases,26,0.06%,wl-disease,1,0.824
+vision transformer,True,architecture > vision-transformer,25,0.06%,tttarun/vision_transformer,2,0.829
+research,True,subject > science and technology > research,25,0.06%,h-research,53,0.941
+video classification,True,task > video-classification,23,0.06%,text-classification,2,0.811
+video classification,True,task > video-classification,23,0.06%,pokemon-classification,12,0.8
+video classification,True,task > video-classification,23,0.06%,classification,4,0.848
+video classification,True,task > video-classification,23,0.06%,audio_classification,1,0.842
+video classification,True,task > video-classification,23,0.06%,iris_classification,1,0.811
+video classification,True,task > video-classification,23,0.06%,shoe-classification,1,0.811
+synthetic,True,data type > synthetic,23,0.06%,synthetic,46,1.0
+synthetic,True,data type > synthetic,23,0.06%,dp_synthetic,2,0.9
+synthetic,True,data type > synthetic,23,0.06%,synthetic-code,1,0.818
+synthetic,True,data type > synthetic,23,0.06%,synthetic-data,1,0.818
+synthetic,True,data type > synthetic,23,0.06%,synthetic-logs,1,0.818
+synthetic,True,data type > synthetic,23,0.06%,synthetic-qa,1,0.9
+os,True,packages > os,22,0.05%,oas,1,0.8
+gan,True,technique > neural networks > gan,21,0.05%,gn,1,0.8
+software,True,subject > science and technology > computer science > software,21,0.05%,jirasoftware,6,0.8
+multilingual,True,language > multilingual,20,0.05%,multilingual_90m.zip,1,0.8
+multilingual,True,language > multilingual,20,0.05%,multilingual-speech,1,0.8
+token classification,True,task > token-classification,20,0.05%,text-classification,2,0.865
+token classification,True,task > token-classification,20,0.05%,pokemon-classification,12,0.9
+token classification,True,task > token-classification,20,0.05%,classification,4,0.848
+token classification,True,task > token-classification,20,0.05%,patent-classification,3,0.872
+token classification,True,task > token-classification,20,0.05%,token_classification_v2,3,0.95
+token classification,True,task > token-classification,20,0.05%,custom-intent-classification,1,0.8
+token classification,True,task > token-classification,20,0.05%,shoe-classification,1,0.865
+token classification,True,task > token-classification,20,0.05%,token-classification,1,1.0
+token classification,True,task > token-classification,20,0.05%,toxic_comment_classification,1,0.8
+ensembling,True,technique > ensembling,20,0.05%,ensembl,3,0.824
+hindi,True,language > hindi,19,0.05%,hindi,2,1.0
+hindi,True,language > hindi,19,0.05%,hindawi,1,0.833
+banking,True,subject > people and society > business > finance > banking,19,0.05%,banking77,60,0.875
+banking,True,subject > people and society > business > finance > banking,19,0.05%,brbanking,2,0.875
+french,True,language > french,17,0.04%,french_qa,1,0.857
+pil,True,packages > PIL,17,0.04%,pile,2,0.857
+cancer,True,subject > health and fitness > health > health conditions > cancer,17,0.04%,caner,12,0.909
+german,True,language > german,16,0.04%,germa_ner,1,0.857
+automatic speech recognition,True,task > automatic-speech-recognition,16,0.04%,automatic-speech-recognition,1,1.0
+audio event classification,True,task > audio-event-classification,15,0.04%,patent-classification,3,0.818
+audio event classification,True,task > audio-event-classification,15,0.04%,audio_classification,1,0.884
+nltk,True,packages > nltk,15,0.04%,nltk,1,1.0
+art,True,subject > arts and entertainment > art,15,0.04%,art,9,1.0
+art,True,subject > arts and entertainment > art,15,0.04%,dart,8,0.857
+art,True,subject > arts and entertainment > art,15,0.04%,at,1,0.8
+art,True,subject > arts and entertainment > art,15,0.04%,cart,1,0.857
+art,True,subject > arts and entertainment > art,15,0.04%,rt,19,0.8
+catboost,True,packages > catboost,15,0.04%,chatbot,1,0.8
+evaluation,True,task > evaluation,15,0.04%,evaluation,1,1.0
+evaluation,True,task > evaluation,15,0.04%,rag-evaluation,1,0.87
+math,True,task > evaluation > math,15,0.04%,math,1,1.0
+math,True,task > evaluation > math,15,0.04%,mathqa,1,0.8
+image text detection,True,task > image-text-detection,14,0.03%,diabetes_detection,4,0.8
+efficientnet-b0,True,architecture > efficientnet-b0,14,0.03%,google/efficientnet-b0,58,0.824
+benchmark,True,technique > benchmark,14,0.03%,stsbenchmark,2,0.857
+wandb,True,packages > wandb,14,0.03%,ewa-db,1,0.8
+tabular classification,True,task > tabular-classification,14,0.03%,classification,4,0.8
+tabular classification,True,task > tabular-classification,14,0.03%,audio_classification,1,0.8
+vietnamese,True,language > vietnamese,13,0.03%,mt_eng_vietnamese,19,0.8
+vietnamese,True,language > vietnamese,13,0.03%,vietnamese,1,1.0
+korean,True,language > korean,13,0.03%,korean-qa,1,0.857
+pose detection,True,task > pose-detection,13,0.03%,plane-detection,1,0.815
+tamil,True,language > tamil,13,0.03%,tamil,1,1.0
+summarization,True,task > summarization,12,0.03%,pubmed-summarization,23,0.812
+summarization,True,task > summarization,12,0.03%,arxiv-summarization,10,0.839
+summarization,True,task > summarization,12,0.03%,bills-summarization,2,0.839
+summarization,True,task > summarization,12,0.03%,legal_summarization,2,0.839
+summarization,True,task > summarization,12,0.03%,text-summatization,1,0.8
+summarization,True,task > summarization,12,0.03%,summarization,10,1.0
+genetics,True,subject > earth and nature > biology > genetics,12,0.03%,generic,1,0.8
+public health,True,subject > health and fitness > health > public health,12,0.03%,publichealthqa,6,0.923
+thai,True,language > thai,11,0.03%,thai,1,1.0
+yolov5,True,architecture > yolov5,11,0.03%,yolov5v6n,4,0.8
+yolov5,True,architecture > yolov5,11,0.03%,yolov5,1,1.0
+json,True,packages > json,11,0.03%,json,26,1.0
+diabetes,True,subject > health and fitness > health > health conditions > diabetes,11,0.03%,uci-diabetes,1,0.842
+music,True,subject > arts and entertainment > music,10,0.02%,must-c,3,0.8
+people,True,subject > people and society > people,10,0.02%,people,2,1.0
+gpt2,True,architecture > gpt2,9,0.02%,gpt-2,1,1.0
+canada,True,geography and places > north america > canada,9,0.02%,canard,1,0.833
+literature,True,subject > arts and entertainment > literature,9,0.02%,vn-literature,1,0.909
+simulations,True,subject > culture and humanities > games > video games > simulations,9,0.02%,simulation,1,0.952
+text segmentation,True,task > text-segmentation,8,0.02%,pothole-segmentation,1,0.8
+news,True,subject > people and society > news,8,0.02%,ag-news,1,0.8
+news,True,subject > people and society > news,8,0.02%,news,17,1.0
+news,True,subject > people and society > news,8,0.02%,newsqa,1,0.8
+news,True,subject > people and society > news,8,0.02%,cc_news,7,0.8
+news,True,subject > people and society > news,8,0.02%,tnews,1,0.889
+transportation,True,subject > science and technology > transportation,8,0.02%,translation,1,0.8
+real estate,True,subject > people and society > business > real estate,7,0.02%,real-estate,1,1.0
+sports,True,subject > health and fitness > exercise > sports,7,0.02%,sportsmot,2,0.8
+sports,True,subject > health and fitness > exercise > sports,7,0.02%,sports,1,1.0
+sports,True,subject > health and fitness > exercise > sports,7,0.02%,sort,1,0.8
+text-to-speech,True,task > text-to-speech,7,0.02%,text-to-speech,1,1.0
+zero-shot text classification,True,task > zero-shot-text-classification,6,0.01%,text-classification,2,0.818
+zero-shot text classification,True,task > zero-shot-text-classification,6,0.01%,rbojja/zero-shot-intent-classification,1,0.833
+zero-shot text classification,True,task > zero-shot-text-classification,6,0.01%,shoe-classification,1,0.818
+efficientnet-b3,True,architecture > efficientnet-b3,6,0.01%,google/efficientnet-b3,9,0.824
+persian,True,language > persian,5,0.01%,persian_qa,4,0.875
+persian,True,language > persian,5,0.01%,persian-nlp,1,0.824
+marathi,True,language > marathi,5,0.01%,marathi,1,1.0
+bart,True,architecture > bart,5,0.01%,art,9,0.857
+bart,True,architecture > bart,5,0.01%,bat,1,0.857
+whisper,True,architecture > whisper,5,0.01%,whisper,3,1.0
+chemistry,True,subject > earth and nature > physical science > chemistry,5,0.01%,chemistry,1,1.0
+efficientnet-b7,True,architecture > efficientnet-b7,4,0.01%,google/efficientnet-b7,3,0.824
+politics,True,subject > people and society > social science > politics,4,0.01%,politic-it,1,0.824
+albanian,True,language > albanian,4,0.01%,cv_albanian,1,0.889
+insurance,True,subject > people and society > business > finance > insurance,4,0.01%,insuranceqa,5,0.9
+restaurants,True,subject > health and fitness > food > restaurants,4,0.01%,mit_restaurant,5,0.833
+restaurants,True,subject > health and fitness > food > restaurants,4,0.01%,restaurant-data,3,0.8
+restaurants,True,subject > health and fitness > food > restaurants,4,0.01%,mit_restaurants,1,0.88
+restaurants,True,subject > health and fitness > food > restaurants,4,0.01%,restaurant14,1,0.87
+restaurants,True,subject > health and fitness > food > restaurants,4,0.01%,restaurant16,1,0.87
+malayalam,True,language > malayalam,3,0.01%,malayalam,1,1.0
+mit,True,architecture > mit,3,0.01%,mt,1,0.8
+mit,True,architecture > mit,3,0.01%,mit,161037,1.0
+swahili,True,language > swahili,3,0.01%,swahili,29,1.0
+spacy,True,packages > spaCy,3,0.01%,spacy,1,1.0
+spacy,True,packages > spaCy,3,0.01%,spray,1,0.8
+video games,True,subject > culture and humanities > games > video games,3,0.01%,video_game,2,0.947
+re,True,packages > re,3,0.01%,pre,13,0.8
+re,True,packages > re,3,0.01%,rte,9,0.8
+re,True,packages > re,3,0.01%,sre,1,0.8
+re,True,packages > re,3,0.01%,red,1,0.8
+re,True,packages > re,3,0.01%,ref,1,0.8
+swin transformer,True,architecture > swin-transformer,3,0.01%,transformer,1,0.846
+irish,True,language > irish,3,0.01%,iris,2,0.889
+multiple,True,architecture > multiple,3,0.01%,multi-pie,1,0.875
+sql,True,subject > science and technology > computer science > programming > sql,3,0.01%,sql,3,1.0
+latvian,True,language > latvian,2,0.00%,latin,1,0.833
+oriya,True,language > oriya,2,0.00%,origa,1,0.8
+fnet,True,architecture > fnet,2,0.00%,mfnet,1,0.889
+ganda,True,language > ganda,2,0.00%,panda,1,0.8
+gender,True,subject > people and society > people > gender,2,0.00%,agender,2,0.923
+electronics,True,subject > science and technology > electronics,2,0.00%,electronic,5,0.952
+f=448),False,,2,0.00%,448,1,0.857
+caret,True,packages > caret,2,0.00%,cart,1,0.889
+ssd,True,architecture > ssd,1,0.00%,sd,4,0.8
+r,True,subject > science and technology > computer science > programming > r,1,0.00%,r,5,1.0
+nutrition,True,subject > health and fitness > health > nutrition,1,0.00%,nutrition5k,1,0.9
+dance,True,subject > arts and entertainment > dance,1,0.00%,dane,1,0.889
+travel,True,subject > people and society > business > travel,1,0.00%,travel,1,1.0
+travel,True,subject > people and society > business > travel,1,0.00%,travel_50,1,0.857
+knitr,True,packages > knitr,1,0.00%,nli_tr,22,0.8

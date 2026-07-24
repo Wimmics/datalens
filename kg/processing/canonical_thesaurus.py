@@ -1,5 +1,6 @@
 import re
-from .parser_tools import dedupe, normalize_string
+from typing import Any
+from .parser_tools import dedupe, hash16, normalize_string
 
 MODALITY_CANONICAL = {
     '3d': '3D',
@@ -61,7 +62,7 @@ DATASET_LIBRARY_CANONICAL = {
     'datadesigner': 'DataDesigner',
     'lance': 'Lance',
     'datasets': 'Datasets',
-    'webdataset': 'WebDataset',
+    'webdataset': 'WebDatasetFormat',
     'polars': 'Polars',
     'dask': 'Dask',
     'pandas': 'Pandas',
@@ -76,7 +77,7 @@ MODEL_LIBRARY_CANONICAL = {
     'sklearn': 'Sklearn',
     'transformers.js': 'TransformersJS',
     'transformers': 'Transformers',
-    'allennlp': 'Allennlp',
+    'allennlp': 'AllenNLP',
     'stanza': 'Stanza',
     'PaddleOCR': 'PaddleOCR',
     'adapter-transformers': 'AdapterTransformers',
@@ -292,7 +293,6 @@ def _canonical_lookup(value: str, canonical: str) -> str | None:
     return mapping.get(camel_key) or mapping.get(re.sub(r"[-_\s]", "", camel_key))
 
 def canonicalize(values: list[str], canonical: str | None = None) -> list[str]:
-    canonical = canonical or "task"
     output: list[str] = []
     for value in values:
         canonical_localname = _canonical_lookup(value, canonical)
@@ -302,7 +302,7 @@ def canonicalize(values: list[str], canonical: str | None = None) -> list[str]:
 
     return dedupe(output)
 
-def get_tag_alone(tags: list[str], canonical: str) -> list[str]:
+def get_canonical_tag_alone(tags: list[str], canonical: str) -> list[str]:
     values: list[str] = []
     mapping = CANONICALS.get(canonical, {})
     if not mapping:
@@ -329,3 +329,40 @@ def get_tag_alone(tags: list[str], canonical: str) -> list[str]:
             tags.remove(tag)
 
     return dedupe(values)
+
+def fallback_model_libraries(values: list[str]) -> tuple[list[str], list[dict[str, Any]]]:
+    thesaurus_libraries: list[str] = []
+    fallback_instances: list[dict[str, Any]] = []
+    seen_fallback_hashes: set[str] = set()
+    mapping = CANONICALS.get("model_library", {})
+    if not mapping:
+        return []
+
+    known_keys = set(mapping.keys())
+    
+    if not isinstance(values, list):
+        return [], []
+    
+    for value in values:
+        token = normalize_string(value)
+        if not token:
+            continue
+
+        normalized = token.lower()
+        if normalized in known_keys:
+            thesaurus_libraries.append(normalized)
+            continue
+
+        library_hash = hash16(normalized)
+        if not library_hash or library_hash in seen_fallback_hashes:
+            continue
+
+        seen_fallback_hashes.add(library_hash)
+        fallback_instances.append(
+            {
+                "library_hash16": library_hash,
+                "library_label": token,
+            }
+        )
+
+    return dedupe(thesaurus_libraries), fallback_instances

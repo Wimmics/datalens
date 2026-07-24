@@ -1,10 +1,10 @@
 import argparse
 import json
-from typing import Any
 from pathlib import Path
-from .canonical_thesaurus import canonicalize, get_tag_alone
+from typing import Any
+from .canonical_thesaurus import canonicalize, get_canonical_tag_alone
 from .parser_tools import (
-    build_uris, dedupe, get_tag_with_prefix, hash16, infer_language_tokens, to_list,
+    build_uris, dedupe, get_tag_alone, get_tag_with_prefix, hash16,
     normalize_boolean, normalize_string, paper_url, split_hf_values
 )
 
@@ -20,17 +20,14 @@ def parse(json_obj: dict[str, Any]) -> dict[str, Any]:
     tags = dedupe(parsed.get("tags", []))
 
     region_tokens = get_tag_with_prefix(tags, "region:")
-    explicit_language_values = get_tag_with_prefix(tags, "language:")
-    language_tokens = infer_language_tokens(tags, explicit_language_values)
-    license_tokens = get_tag_with_prefix(tags, "license:")
+    language_tokens = get_tag_with_prefix(tags, "language:") + get_tag_alone(tags, "language")
+    license_tokens = get_tag_with_prefix(tags, "license:") + get_tag_alone(tags, "license")
 
-    parsed["language_uris"] = build_uris(language_tokens, "language")
     parsed["region_uris"] = build_uris(region_tokens, "region")
+    parsed["language_uris"] = build_uris(language_tokens, "language")
     parsed["license_uris"] = build_uris(license_tokens, "license")
 
-    source_dataset_values = to_list(parsed.get("source_dataset"))
-    source_dataset_values.extend(get_tag_with_prefix(tags, "source_datasets:"))
-    source_dataset_values.extend(get_tag_with_prefix(tags, "source_dataset:"))
+    source_dataset_values = get_tag_with_prefix(tags, "source_datasets:")
     source_dataset_hf, source_dataset_non_hf = split_hf_values(
         source_dataset_values, kind="dataset"
     )
@@ -45,12 +42,12 @@ def parse(json_obj: dict[str, Any]) -> dict[str, Any]:
     ]
 
     # Thesaurus
-    parsed["task_categories"] = canonicalize(get_tag_with_prefix(tags, "task_categories:") + get_tag_alone(tags, "task"), "task")
-    parsed["task_ids"] = canonicalize(get_tag_with_prefix(tags, "task_ids:") + get_tag_alone(tags, "subtask"), "subtask")
-    parsed["modalities"] = canonicalize(get_tag_with_prefix(tags, "modality:") + get_tag_alone(tags, "modality"), "modality")
-    parsed["libraries"] = canonicalize(get_tag_with_prefix(tags, "library:") + get_tag_alone(tags, "dataset_library"), "dataset_library")
-    parsed["size_categories"] = canonicalize(get_tag_with_prefix(tags, "size_categories:") + get_tag_alone(tags, "size_category"), "size_category")
-    parsed["formats"] = canonicalize(get_tag_with_prefix(tags, "format:") + get_tag_alone(tags, "format"), "format")
+    parsed["task_categories"] = canonicalize(get_tag_with_prefix(tags, "task_categories:") + get_canonical_tag_alone(tags, "task"), "task")
+    parsed["task_ids"] = canonicalize(get_tag_with_prefix(tags, "task_ids:") + get_canonical_tag_alone(tags, "subtask"), "subtask")
+    parsed["modalities"] = canonicalize(get_tag_with_prefix(tags, "modality:") + get_canonical_tag_alone(tags, "modality"), "modality")
+    parsed["libraries"] = canonicalize(get_tag_with_prefix(tags, "library:") + get_canonical_tag_alone(tags, "dataset_library"), "dataset_library")
+    parsed["size_categories"] = canonicalize(get_tag_with_prefix(tags, "size_categories:") + get_canonical_tag_alone(tags, "size_category"), "size_category")
+    parsed["formats"] = canonicalize(get_tag_with_prefix(tags, "format:") + get_canonical_tag_alone(tags, "format"), "format")
 
     doi_ids = get_tag_with_prefix(tags, "doi:")
     arxiv_ids = get_tag_with_prefix(tags, "arxiv:")

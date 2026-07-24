@@ -1,0 +1,65 @@
+Comparaison des tags de la catégorie packages avec LibraryScheme
+Nombre de tags : 57
+Nombre de concepts : 64
+Nombre de tags correspondants : 6
+Couverture des tags : 10.53%
+Correspondances
+keras -> Keras
+pandas -> pandas
+pytorch -> PyTorch
+spaCy -> spaCy
+tensorflow -> TensorFlow
+transformers -> Transformers
+
+Tags absents
+IPython
+PIL
+RColorBrewer
+caret
+catboost
+corrplot
+cv2
+d3js
+datetime
+doParallel
+dplyr
+forcats
+foreach
+gc
+ggplot2
+ggthemes
+glob
+gridExtra
+hugging face
+json
+jsonlite
+knitr
+leaflet
+lightgbm
+lubridate
+matplotlib
+nltk
+numpy
+os
+pathlib
+plotly
+plyr
+randomForest
+rapids
+re
+readr
+reshape2
+rpart
+scipy
+seaborn
+sklearn
+stringr
+sys
+tabpfn
+tibble
+tidyr
+tidyverse
+torchvision
+tqdm
+wandb
+xgboost

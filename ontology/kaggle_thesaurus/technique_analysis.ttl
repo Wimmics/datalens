@@ -1,0 +1,228 @@
+dlt:AnalysisScheme a skos:ConceptScheme ;
+    skos:prefLabel "Analysis"@en ;
+    skos:definition "Controlled vocabulary for the 'Analysis' tag category."@en .
+
+dlt:DataCleaning a skos:Concept, dlo:Analysis ;
+    skos:prefLabel "Data Cleaning"@en ;
+    skos:topConceptOf dlt:AnalysisScheme ;
+    skos:inScheme dlt:AnalysisScheme .
+
+dlt:SignalProcessing a skos:Concept, dlo:Analysis ;
+    skos:prefLabel "Signal Processing"@en ;
+    skos:topConceptOf dlt:AnalysisScheme ;
+    skos:inScheme dlt:AnalysisScheme .
+
+dlt:Nlp a skos:Concept, dlo:Analysis ;
+    skos:prefLabel "Nlp"@en ;
+    skos:definition "Natural Language Processing gives a computer program the ability to extract meaning human language. Applications include sentiment analysis, translation, and speech recognition."@en ;
+    skos:topConceptOf dlt:AnalysisScheme ;
+    skos:inScheme dlt:AnalysisScheme .
+
+dlt:TextMining a skos:Concept, dlo:Analysis ;
+    skos:prefLabel "Text Mining"@en ;
+    skos:topConceptOf dlt:AnalysisScheme ;
+    skos:inScheme dlt:AnalysisScheme .
+
+dlt:GeospatialAnalysis a skos:Concept, dlo:Analysis ;
+    skos:prefLabel "Geospatial Analysis"@en ;
+    skos:topConceptOf dlt:AnalysisScheme ;
+    skos:inScheme dlt:AnalysisScheme .
+
+dlt:StatisticalAnalysis a skos:Concept, dlo:Analysis ;
+    skos:prefLabel "Statistical Analysis"@en ;
+    skos:topConceptOf dlt:AnalysisScheme ;
+    skos:inScheme dlt:AnalysisScheme .
+
+dlt:SurveyAnalysis a skos:Concept, dlo:Analysis ;
+    skos:prefLabel "Survey Analysis"@en ;
+    skos:topConceptOf dlt:AnalysisScheme ;
+    skos:inScheme dlt:AnalysisScheme .
+
+dlt:TechniqueScheme a skos:ConceptScheme ;
+    skos:prefLabel "Technique"@en ;
+    skos:definition "Controlled vocabulary for the 'Technique' tag category."@en .
+
+dlt:BayesianStatistics a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Bayesian Statistics"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:Sampling a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Sampling"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:Eda a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Exploratory Data Analysis"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:ImageProcessing a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Computer Vision"@en ;
+    skos:definition "Teaching a machine to interpret real-world images and videos. Applications include detecting objects, capturing motion, and restoring images."@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:DataVisualization a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Data Visualization"@en ;
+    skos:definition "The art of depicting data in a visual format. Using charts and graphs, it is easier to observe patterns, relationships, and outliers."@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:TimeSeriesAnalysis a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Time Series Analysis"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:MarketingAnalytics a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Data Analytics"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:Ensembling a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Ensembling"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:FeatureEngineering a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Feature Engineering"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:OutlierAnalysis a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Outlier Analysis"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:DimensionalityReduction a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Dimensionality Reduction"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:DeepLearning a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Deep Learning"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:RecommenderSystems a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Recommender Systems"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:ModelComparison a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Model Comparison"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:GradientBoosting a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Gradient Boosting"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:RandomForest a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Random Forest"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:NaiveBayes a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Naive Bayes"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:NeuralNetworks a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Neural Networks"@en ;
+    skos:definition "Machine learning algorithms inspired by the structure of a human brain and its system of neurons. Common network types include CNN, RNN, and LSTM."@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:Lstm a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Lstm"@en ;
+    skos:broader dlt:NeuralNetworks ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:ArchitectureGan a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Gan"@en ;
+    skos:broader dlt:NeuralNetworks ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:Dnn a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Dnn"@en ;
+    skos:broader dlt:NeuralNetworks ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:ArchitectureCnn a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Cnn"@en ;
+    skos:broader dlt:NeuralNetworks ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:ArchitectureRnn a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Rnn"@en ;
+    skos:broader dlt:NeuralNetworks ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:KMeans a skos:Concept, dlo:Technique ;
+    skos:prefLabel "K Means"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:Pca a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Pca"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:Svm a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Svm"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:DecisionTree a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Decision Tree"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:AdversarialLearning a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Adversarial Learning"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:TransferLearning a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Transfer Learning"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:Optimization a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Optimization"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:ModelExplainability a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Model Explainability"@en ;
+    skos:definition "Some see machine learning models as \"black boxes\" that are difficult to interpret and explain. For this challenge, you're encouraged to use concepts such as feature importance, perturbation importance, and partial dependence plots to explain the predictions of an ML model."@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:Automl a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Automl"@en ;
+    skos:definition "The process of automating the end to end workflow of machine learning in order to make it more accessible for non-experts."@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:DataStorytelling a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Data Storytelling"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:Knn a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Knn"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:GraphNeuralNetwork a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Graph Neural Network"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .
+
+dlt:Benchmark a skos:Concept, dlo:Technique ;
+    skos:prefLabel "Benchmark"@en ;
+    skos:topConceptOf dlt:TechniqueScheme ;
+    skos:inScheme dlt:TechniqueScheme .

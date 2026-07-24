@@ -2,9 +2,9 @@ import argparse
 import json
 from pathlib import Path
 from typing import Any
-from .canonical_thesaurus import canonicalize, get_tag_alone
+from .canonical_thesaurus import canonicalize, get_canonical_tag_alone, fallback_model_libraries
 from .parser_tools import (
-    build_uris, dedupe, fallback_model_libraries, get_tag_with_prefix, hash16, infer_language_tokens, 
+    build_uris, dedupe, get_tag_alone, get_tag_with_prefix, hash16,
     normalize_boolean, normalize_string, paper_url, split_hf_values
 )
 
@@ -107,19 +107,18 @@ def parse(json_obj: dict[str, Any]) -> dict[str, Any]:
     tags = dedupe(parsed.get("tags", []))
 
     region_tokens = get_tag_with_prefix(tags, "region:")
-    explicit_language_values = get_tag_with_prefix(tags, "language:")
-    language_tokens = infer_language_tokens(tags, explicit_language_values)
-    license_tokens = get_tag_with_prefix(tags, "license:")
+    language_tokens = get_tag_with_prefix(tags, "language:") + get_tag_alone(tags, "language")
+    license_tokens = get_tag_with_prefix(tags, "license:") + get_tag_alone(tags, "license")
 
-    parsed["language_uris"] = build_uris(language_tokens, "language")
     parsed["region_uris"] = build_uris(region_tokens, "region")
+    parsed["language_uris"] = build_uris(language_tokens, "language")
     parsed["license_uris"] = build_uris(license_tokens, "license")
 
     # Thesaurus
-    parsed["task_categories"] = canonicalize(get_tag_alone(tags, "task") + [parsed.get("pipeline_tag")])
-    parsed["modalities"] = canonicalize(get_tag_with_prefix(tags, "modality:") + get_tag_alone(tags, "modality"), "modality")
-    (parsed["thesaurus_libraries"],parsed["fallback_instances"]) = fallback_model_libraries([parsed.get("library_name")] + get_tag_with_prefix(tags, "library:") + get_tag_alone(tags, "model_library"))
-    parsed["formats"] = canonicalize(get_tag_with_prefix(tags, "format:") + get_tag_alone(tags, "format"), "format")
+    parsed["task_categories"] = canonicalize(get_canonical_tag_alone(tags, "task") + [parsed.get("pipeline_tag")])
+    parsed["modalities"] = canonicalize(get_tag_with_prefix(tags, "modality:") + get_canonical_tag_alone(tags, "modality"), "modality")
+    (parsed["thesaurus_libraries"],parsed["fallback_instances"]) = fallback_model_libraries([parsed.get("library_name")] + get_tag_with_prefix(tags, "library:") + get_canonical_tag_alone(tags, "model_library"))
+    parsed["formats"] = canonicalize(get_tag_with_prefix(tags, "format:") + get_canonical_tag_alone(tags, "format"), "format")
 
     doi_ids = get_tag_with_prefix(tags, "doi:")
     arxiv_ids = get_tag_with_prefix(tags, "arxiv:")
@@ -141,7 +140,6 @@ def parse(json_obj: dict[str, Any]) -> dict[str, Any]:
         if hash16(label)
     ]
 
-# A modifier
     source_models, source_models_non_hf_instances = parse_base_model_tags(tags)
     parsed["source_models"] = source_models
     parsed["source_models_non_hf_instances"] = source_models_non_hf_instances
@@ -152,6 +150,8 @@ def parse(json_obj: dict[str, Any]) -> dict[str, Any]:
     parsed["distribution_hash16"] = hash16({json.dumps({"formats": parsed["formats"]}, sort_keys=True, ensure_ascii=False)} 
                                            if parsed["formats"] else None)
     parsed["creator_hash16"] = hash16(parsed.get("author")) if parsed.get("author") else None
+    parsed["config_hash16"] = hash16({json.dumps({"architectures": (parsed.get("config") or {}).get("architectures"), "model_type": (parsed.get("config") or {}).get("model_type")}, sort_keys=True, ensure_ascii=False)} 
+                                      if (parsed.get("config") or {}).get("architectures") else None)
 
     parsed["tags"] = tags
 

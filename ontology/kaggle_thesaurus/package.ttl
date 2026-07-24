@@ -1,0 +1,282 @@
+dlt:PackagesScheme a skos:ConceptScheme ;
+    skos:prefLabel "Packages"@en ;
+    skos:definition "Controlled vocabulary for the 'Packages' tag category."@en .
+
+dlt:Xgboost a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Xgboost"@en ;
+    skos:definition "A library that implements the gradient boosting framework onto a wide range of problems including regression and classification. It is optimized for speed and efficiency."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Torchvision a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Torchvision"@en ;
+    skos:definition "A PyTorch library providing datasets, pretrained model architectures, and image transformations for computer vision tasks."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Seaborn a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Seaborn"@en ;
+    skos:definition "A Python data visualization library built on Matplotlib, providing high-level functions to create statistical graphics for exploring data and communicating model results."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Sklearn a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Sklearn"@en ;
+    skos:definition "A Python library providing simple and efficient tools for classical machine learning, including classification, regression, clustering, and model evaluation."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:HuggingFace a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Hugging Face"@en ;
+    skos:definition "An ecosystem of libraries and pretrained models, most notably Transformers, for natural language processing and other deep learning tasks."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:RapidsAi a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Rapids"@en ;
+    skos:definition "A suite of open-source libraries that use GPU acceleration to speed up data science and machine learning workflows, such as data processing and model training."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Caret a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Caret"@en ;
+    skos:definition "An R package (Classification And REgression Training) providing a unified interface for training, tuning, and evaluating a wide range of machine learning models."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Cv2 a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Cv 2"@en ;
+    skos:definition "The Python interface to OpenCV, a library providing algorithms and tools for image and video processing, widely used in computer vision tasks."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Lightgbm a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Lightgbm"@en ;
+    skos:definition "A gradient boosting framework based on tree learning algorithms, designed for high performance and low memory usage on large datasets."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Catboost a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Catboost"@en ;
+    skos:definition "A gradient boosting library that handles categorical features natively, while providing strong out-of-the-box predictive performance."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:RandomForest2 a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Random Forest"@en ;
+    skos:definition "An R package implementing the random forest algorithm, an ensemble method that combines multiple decision trees for classification and regression."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Rpart a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Rpart"@en ;
+    skos:definition "An R package implementing recursive partitioning for building classification and regression trees."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Nltk a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Nltk"@en ;
+    skos:definition "A Python library providing tools and resources for natural language processing, such as tokenization, part-of-speech tagging, and text classification."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Wandb a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Wandb"@en ;
+    skos:definition "A platform for tracking, visualizing, and comparing machine learning experiments, including metrics, hyperparameters, and model artifacts."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Numpy a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Numpy"@en ;
+    skos:definition "A Python library providing support for multidimensional arrays and efficient numerical computation, forming the basis of most scientific and machine learning workflows."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Scipy a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Scipy"@en ;
+    skos:definition "A Python library built on Numpy that provides algorithms for scientific and technical computing, such as optimization, statistics, and linear algebra, commonly used in data science pipelines."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Matplotlib a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Matplotlib"@en ;
+    skos:definition "A Python library for creating static, animated, and interactive visualizations, widely used to explore data and present machine learning results."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Plotly a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Plotly"@en ;
+    skos:definition "A library for building interactive, publication-quality visualizations and dashboards, commonly used to explore data and communicate model results."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:PIL a skos:Concept, dlo:Packages ;
+    skos:prefLabel "PIL"@en ;
+    skos:definition "A Python library (Python Imaging Library, distributed as Pillow) for opening, manipulating, and saving image files, commonly used to prepare image data for computer vision models."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+    
+
+
+
+dlt:Corrplot a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Corrplot"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Datetime a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Datetime"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:DoParallel a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Do Parallel"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Dplyr a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Dplyr"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Forcats a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Forcats"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Foreach a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Foreach"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Gc a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Gc"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Ggplot2 a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Ggplot 2"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Ggthemes a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Ggthemes"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Glob a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Glob"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:GridExtra a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Grid Extra"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:IPython a skos:Concept, dlo:Packages ;
+    skos:prefLabel "IPython"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Json a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Json"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Jsonlite a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Jsonlite"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Knitr a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Knitr"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Leaflet a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Leaflet"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Lubridate a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Lubridate"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Os a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Os"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Pathlib a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Pathlib"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Plyr a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Plyr"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:RColorBrewer a skos:Concept, dlo:Packages ;
+    skos:prefLabel "RColor Brewer"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Re a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Re"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Readr a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Readr"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Reshape2 a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Reshape 2"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Stringr a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Stringr"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Sys a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Sys"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Tibble a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Tibble"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Tidyr a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Tidyr"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Tidyverse a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Tidyverse"@en ;
+    skos:definition "A collection of R packages essential for data science. It includes ggplot2, dplyr, tidyr, readr, purrr, tibble, stringr, and forcats."@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Tqdm a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Tqdm"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:D3Js a skos:Concept, dlo:Packages ;
+    skos:prefLabel "D 3 Js"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .
+
+dlt:Tabpfn a skos:Concept, dlo:Packages ;
+    skos:prefLabel "Tabpfn"@en ;
+    skos:definition "A foundation model for tabular data"@en ;
+    skos:topConceptOf dlt:PackagesScheme ;
+    skos:inScheme dlt:PackagesScheme .

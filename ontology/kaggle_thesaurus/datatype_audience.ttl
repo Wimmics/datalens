@@ -1,0 +1,55 @@
+dlt:DataTypeScheme a skos:ConceptScheme ;
+    skos:prefLabel "Data Type"@en ;
+    skos:definition "Controlled vocabulary for the 'Data Type' tag category."@en .
+
+dlt:CategoricalData a skos:Concept, dlo:DataType ;
+    skos:prefLabel "Categorical"@en ;
+    skos:definition "Data whose values fall into a fixed set of discrete, non-numeric categories, such as breed, color, or a yes/no attribute."@en ;
+    skos:topConceptOf dlt:DataTypeScheme ;
+    skos:inScheme dlt:DataTypeScheme .
+
+dlt:BigQuery a skos:Concept, dlo:DataType ;
+    skos:prefLabel "BigQuery"@en ;
+    skos:definition "Data hosted and queried through Google BigQuery, a serverless cloud data warehouse."@en ;
+    skos:topConceptOf dlt:DataTypeScheme ;
+    skos:inScheme dlt:DataTypeScheme .
+
+dlt:MultimodalData a skos:Concept, dlo:DataType ;
+    skos:prefLabel "Multimodal Data"@en ;
+    skos:definition "Data combining multiple modalities, such as text, image, or audio, that are jointly used or processed."@en ;
+    skos:topConceptOf dlt:DataTypeScheme ;
+    skos:inScheme dlt:DataTypeScheme .
+
+dlt:GraphData a skos:Concept, dlo:DataType ;
+    skos:prefLabel "Graph"@en ;
+    skos:definition "Data represented as nodes and edges describing entities and the relationships between them, such as social networks or knowledge graphs."@en ;
+    skos:topConceptOf dlt:DataTypeScheme ;
+    skos:inScheme dlt:DataTypeScheme .
+
+dlt:SyntheticData a skos:Concept, dlo:DataType ;
+    skos:prefLabel "Synthetic"@en ;
+    skos:definition "Artificially generated data produced by simulation or generative models rather than collected from real-world events."@en ;
+    skos:topConceptOf dlt:DataTypeScheme ;
+    skos:inScheme dlt:DataTypeScheme .
+
+dlt:AudienceScheme a skos:ConceptScheme ;
+    skos:prefLabel "Audience"@en ;
+    skos:definition "Controlled vocabulary for the 'Audience' tag category."@en .
+
+dlt:Beginner a skos:Concept, dlo:Audience ;
+    skos:prefLabel "Beginner"@en ;
+    skos:definition "Content aimed at people new to data science, covering foundational concepts and introductory projects."@en ;
+    skos:topConceptOf dlt:AudienceScheme ;
+    skos:inScheme dlt:AudienceScheme .
+
+dlt:Intermediate a skos:Concept, dlo:Audience ;
+    skos:prefLabel "Intermediate"@en ;
+    skos:definition "Content aimed at practitioners already familiar with the fundamentals, covering more advanced techniques and applied projects."@en ;
+    skos:topConceptOf dlt:AudienceScheme ;
+    skos:inScheme dlt:AudienceScheme .
+
+dlt:Advanced a skos:Concept, dlo:Audience ;
+    skos:prefLabel "Advanced"@en ;
+    skos:definition "Content aimed at experienced practitioners, covering complex methods, research-oriented topics, or state-of-the-art techniques."@en ;
+    skos:topConceptOf dlt:AudienceScheme ;
+    skos:inScheme dlt:AudienceScheme .

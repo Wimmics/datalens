@@ -1,0 +1,694 @@
+dlt:LossScheme a skos:ConceptScheme ;
+    skos:prefLabel "Loss"@en ;
+    skos:definition "Controlled vocabulary for the 'Loss' prefix values found across models and datasets."@en .
+
+dlt:MultipleNegativesRankingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Multiple Negatives Ranking Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MatryoshkaLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Matryoshka Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:TripletLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Triplet Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CosineSimilarityLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Cosine Similarity Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CachedMultipleNegativesRankingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Cached Multiple Negatives Ranking Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CoSENTLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Co SENTLoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:BinaryCrossEntropyLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Binary Cross Entropy Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:ContrastiveLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Contrastive Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:AttributeTripletLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Attribute Triplet Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:SoftmaxLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Softmax Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:SpladeLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Splade Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MultipleNegativesSymmetricRankingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Multiple Negatives Symmetric Ranking Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:FlopsLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Flops Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:OnlineContrastiveLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Online Contrastive Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:SparseMultipleNegativesRankingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Sparse Multiple Negatives Ranking Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CachedGISTEmbedLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Cached GISTEmbed Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:Contrastive a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Contrastive"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MSELoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "MSELoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:GISTEmbedLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "GISTEmbed Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:OrdinalProxyContrastiveLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Ordinal Proxy Contrastive Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:BatchAllTripletLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Batch All Triplet Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:Distillation a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Distillation"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:DenoisingAutoEncoderLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Denoising Auto Encoder Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:LambdaLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Lambda Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MarginMSELoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Margin MSELoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:BatchSemiHardTripletLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Batch Semi Hard Triplet Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CrossEntropyLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Cross Entropy Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CSRLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "CSRLoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:ListNetLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "List Net Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:AnglELoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Angl ELoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CachedContrastive a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Cached Contrastive"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:AdaptiveLayerLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Adaptive Layer Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:SparseMarginMSELoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Sparse Margin MSELoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:RankNetLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Rank Net Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:Matryoshka2DLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Matryoshka 2 D Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:ContrastiveTensionLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Contrastive Tension Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CachedMultipleNegativesSymmetricRankingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Cached Multiple Negatives Symmetric Ranking Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:LSRLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "LSRLoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CategoricalContrastiveLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Categorical Contrastive Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MaskedCachedMultipleNegativesRankingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Masked Cached Multiple Negatives Ranking Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:PListMLELoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "PList MLELoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:SparseDistillKLDivLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Sparse Distill KLDiv Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:XTRPrimeQA a skos:Concept, dlo:Loss ;
+    skos:prefLabel "XTRPrime QA"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:SparseDistillKLDivMarginMSELoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Sparse Distill KLDiv Margin MSELoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CustomBatchAllTripletLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Custom Batch All Triplet Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:ListMLELoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "List MLELoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MultipleNegativesBidirectionalRankingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Multiple Negatives Bidirectional Ranking Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:PrecomputedDistillationLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Precomputed Distillation Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:SparseCosineSimilarityLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Sparse Cosine Similarity Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CustomTripletLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Custom Triplet Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:BatchHardTripletLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Batch Hard Triplet Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:HierarchyTransformerLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Hierarchy Transformer Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MegaBatchMarginLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Mega Batch Margin Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CustomContrastiveLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Custom Contrastive Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:FitMixinLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Fit Mixin Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CachedMultipleNegativesBidirectionalRankingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Cached Multiple Negatives Bidirectional Ranking Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:LoggingMultipleNegativesRankingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Logging Multiple Negatives Ranking Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:BPRLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "BPRLoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:Infonce a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Infonce"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:ModifiedMatryoshkaLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Modified Matryoshka Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:ArcFaceInBatchLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Arc Face In Batch Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:BatchHardSoftMarginTripletLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Batch Hard Soft Margin Triplet Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:DistillationTripletLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Distillation Triplet Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:ADRMSELoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "ADRMSELoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:QuantizationAwareLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Quantization Aware Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:SpladeMixedTopKLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Splade Mixed Top KLoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:SpladeColbertTopKLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Splade Colbert Top KLoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:DistillKLDivLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Distill KLDiv Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:WeightedMultipleNegativesRankingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Weighted Multiple Negatives Ranking Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:DualMarginContrastiveLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Dual Margin Contrastive Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CachedInfonce a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Cached Infonce"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MarginDistillationLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Margin Distillation Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:LoggingBAS a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Logging BAS"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MultiLabelBCEWithLogitsLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Multi Label BCEWith Logits Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:EmbedDistillLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Embed Distill Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:PatchedCachedGISTEmbedLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Patched Cached GISTEmbed Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:EpochLossWrapper a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Epoch Loss Wrapper"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:LossLogger a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Loss Logger"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CachedSpladeLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Cached Splade Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:TrackingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Tracking Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:InfoNCEGORLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Info NCEGORLoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:ContrastiveTensionLossInBatchNegatives a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Contrastive Tension Loss In Batch Negatives"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:SymmetricLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Symmetric Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:LoggableMNRL a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Loggable MNRL"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:TanimotoSentLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Tanimoto Sent Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:LoggingTripletLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Logging Triplet Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MultipleNegativesSymmetricMarginLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Multiple Negatives Symmetric Margin Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:SparseMarginMSEPPPLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Sparse Margin MSEPPPLoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:DualThresholdEnforcedMNRL1 a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Dual Threshold Enforced MNRL 1"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:RZTKMultipleNegativesRankingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "RZTKMultiple Negatives Ranking Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:RZTKMatryoshka2DLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "RZTKMatryoshka 2 D Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:ReasoningGuidedRankingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Reasoning Guided Ranking Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:ModifiedGISTEmbedLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Modified GISTEmbed Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:StarbucksLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Starbucks Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MultiPositiveContrastiveLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Multi Positive Contrastive Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MaskedDenoisingAutoEncoderLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Masked Denoising Auto Encoder Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MSEEmbeddingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "MSEEmbedding Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MultiVectorDistillKLDivLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Multi Vector Distill KLDiv Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CombinedMarginMSEMNRLLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Combined Margin MSEMNRLLoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MNRLTripletAuxWithPairBCELoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "MNRLTriplet Aux With Pair BCELoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:TripletMNRLCombinedLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Triplet MNRLCombined Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MyCachedMultipleNegativesRankingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "My Cached Multiple Negatives Ranking Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:OptimizedContrastiveDistillationLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Optimized Contrastive Distillation Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:SplitHeadContrastiveDistillationLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Split Head Contrastive Distillation Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:NormalizedMultipleNegativesRankingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Normalized Multiple Negatives Ranking Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MultiLabelCrossEntropyLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Multi Label Cross Entropy Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:InfoCELoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Info CELoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:DPOLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "DPOLoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:LoggedMultipleNegativesRankingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Logged Multiple Negatives Ranking Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CombinedDistillationLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Combined Distillation Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:ContradictionMarginLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Contradiction Margin Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:GlobalOrthogonalRegularizationLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Global Orthogonal Regularization Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MatryoshkaColBERTLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Matryoshka Col BERTLoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:PairwiseMarginLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Pairwise Margin Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:DotProductBCELoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Dot Product BCELoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:InterWordNegativeLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Inter Word Negative Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:PerDatasetLossLogger a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Per Dataset Loss Logger"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:ContrastiveLossWithInBatchAndHardNegatives a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Contrastive Loss With In Batch And Hard Negatives"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:SparseLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Sparse Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:ConcatenatedTripletLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Concatenated Triplet Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:WeightedCosineSimilarityLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Weighted Cosine Similarity Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:BCEWithLogitsLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "BCEWith Logits Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:NPairLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "NPair Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:LoggingMNR a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Logging MNR"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MaskedSpladeLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Masked Splade Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:TripletLossWithLogging a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Triplet Loss With Logging"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CustomMarginTripletLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Custom Margin Triplet Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MultipleNegativesTripletCombinedLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Multiple Negatives Triplet Combined Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MultipleNegativesRankingLossSelf a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Multiple Negatives Ranking Loss Self"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CosineMSELoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Cosine MSELoss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:ApproxDiscountedRankMSE a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Approx Discounted Rank MSE"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:TemperatureScaledCosineSimilarityLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Temperature Scaled Cosine Similarity Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:AMSoftmaxLossNLI a skos:Concept, dlo:Loss ;
+    skos:prefLabel "AMSoftmax Loss NLI"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:DebiasedMultipleNegativesRankingLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Debiased Multiple Negatives Ranking Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:MultipleNegativesRankingLossWithLogging a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Multiple Negatives Ranking Loss With Logging"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:WeightedDenoisingAutoEncoderLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Weighted Denoising Auto Encoder Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:CosineSimilarityTripleEncoderLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Cosine Similarity Triple Encoder Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+
+dlt:ImprovedContrastiveLoss a skos:Concept, dlo:Loss ;
+    skos:prefLabel "Improved Contrastive Loss"@en ;
+    skos:topConceptOf dlt:LossScheme ;
+    skos:inScheme dlt:LossScheme .
+

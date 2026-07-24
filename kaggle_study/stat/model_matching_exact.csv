@@ -1,0 +1,44 @@
+tag_kaggle,officiel_kaggle,chemin_kaggle,occurrence_kaggle,couverture_kaggle,tag_huggingface,occurrence_huggingface
+english,True,language > english,515,1.24%,english,2
+pytorch,True,packages > pytorch,417,1.00%,pytorch,1
+text,True,data type > text,395,0.95%,text,4
+classification,True,task > classification,310,0.74%,classification,4
+keras,True,packages > keras,181,0.43%,keras,2
+tensorflow,True,packages > tensorflow,172,0.41%,tensorflow,1
+pandas,True,packages > pandas,152,0.36%,pandas,2
+transformer,True,architecture > transformer,149,0.36%,transformer,1
+numpy,True,packages > numpy,128,0.31%,numpy,2
+audio,True,data type > audio,67,0.16%,audio,4
+health,True,subject > health and fitness > health,53,0.13%,health,1
+finance,True,subject > people and society > business > finance,37,0.09%,finance,2
+turkish,True,language > turkish,35,0.08%,turkish,1
+medicine,True,subject > health and fitness > health > medicine,34,0.08%,medicine,7
+translation,True,task > translation,33,0.08%,translation,1
+other,True,task > other,32,0.08%,other,99378
+arabic,True,language > arabic,28,0.07%,arabic,1
+synthetic,True,data type > synthetic,23,0.06%,synthetic,46
+hindi,True,language > hindi,19,0.05%,hindi,2
+nltk,True,packages > nltk,15,0.04%,nltk,1
+art,True,subject > arts and entertainment > art,15,0.04%,art,9
+evaluation,True,task > evaluation,15,0.04%,evaluation,1
+math,True,task > evaluation > math,15,0.04%,math,1
+vietnamese,True,language > vietnamese,13,0.03%,vietnamese,1
+tamil,True,language > tamil,13,0.03%,tamil,1
+summarization,True,task > summarization,12,0.03%,summarization,10
+thai,True,language > thai,11,0.03%,thai,1
+yolov5,True,architecture > yolov5,11,0.03%,yolov5,1
+json,True,packages > json,11,0.03%,json,26
+people,True,subject > people and society > people,10,0.02%,people,2
+news,True,subject > people and society > news,8,0.02%,news,17
+sports,True,subject > health and fitness > exercise > sports,7,0.02%,sports,1
+text-to-speech,True,task > text-to-speech,7,0.02%,text-to-speech,1
+marathi,True,language > marathi,5,0.01%,marathi,1
+whisper,True,architecture > whisper,5,0.01%,whisper,3
+chemistry,True,subject > earth and nature > physical science > chemistry,5,0.01%,chemistry,1
+malayalam,True,language > malayalam,3,0.01%,malayalam,1
+mit,True,architecture > mit,3,0.01%,mit,161037
+swahili,True,language > swahili,3,0.01%,swahili,29
+spacy,True,packages > spaCy,3,0.01%,spacy,1
+sql,True,subject > science and technology > computer science > programming > sql,3,0.01%,sql,3
+r,True,subject > science and technology > computer science > programming > r,1,0.00%,r,5
+travel,True,subject > people and society > business > travel,1,0.00%,travel,1

@@ -1,0 +1,51 @@
+kaggle_tag	hf_count	kaggle_path
+art	3	subject > arts and entertainment > art
+africa	1	geography and places > africa
+government	2	subject > people and society > law > government
+law	6	subject > people and society > law
+robotics	6198	subject > science and technology > engineering > robotics
+pca	5	technique > pca
+gan	38	technique > neural networks > gan
+dnn	6	technique > neural networks > dnn
+rnn	1	technique > neural networks > rnn
+tabular	96759	data type > tabular
+image	68173	data type > image
+text	418982	data type > text
+video	17220	data type > video data
+audio	27413	data type > audio
+news	1	subject > people and society > news
+tpu	11	subject > science and technology > computer science > accelerators > tpu
+json	62130	packages > json
+os	59	packages > os
+pandas	338635	packages > pandas
+PIL	6	packages > PIL
+sys	5	packages > sys
+sql	2	subject > science and technology > computer science > programming > sql
+audio-to-audio	338	task > audio-to-audio
+image-to-image	827	task > image-to-image
+text-to-image	5419	task > text-to-image
+text-to-speech	1205	task > text-to-speech
+summarization	2743	task > summarization
+translation	3742	task > translation
+dan	135	architecture > dan
+other	2276	task > other
+ssd	16	architecture > ssd
+vae	1	architecture > vae
+wae	4	architecture > wae
+ewe	67	language > ewe
+ido	21	language > ido
+komi	1	language > komi
+lao	86	language > lao
+russian	1	language > russian
+twi	78	language > twi
+multilingual	2751	language > multilingual
+bit	6	architecture > bit
+tnt	11	architecture > tnt
+vit	1	architecture > vit
+knn	9	technique > knn
+image-to-text	2605	task > image-to-text
+opt	1	architecture > opt
+mit	51532	architecture > mit
+sam	3	architecture > sam
+synthetic	1	data type > synthetic
+math	1	task > evaluation > math

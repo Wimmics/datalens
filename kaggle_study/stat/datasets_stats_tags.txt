@@ -1,0 +1,2535 @@
+Nombre total de datasets : 701396
+============================================================
+
+Tag : pre-trained model
+Occurrence : 40654
+Couverture : 5.80%
+------------------------------------------------------------
+Tag : business
+Occurrence : 28249
+Couverture : 4.03%
+------------------------------------------------------------
+Tag : earth and nature
+Occurrence : 17499
+Couverture : 2.49%
+------------------------------------------------------------
+Tag : tabular
+Occurrence : 14854
+Couverture : 2.12%
+------------------------------------------------------------
+Tag : computer science
+Occurrence : 12560
+Couverture : 1.79%
+------------------------------------------------------------
+Tag : arts and entertainment
+Occurrence : 11841
+Couverture : 1.69%
+------------------------------------------------------------
+Tag : data analytics
+Occurrence : 11666
+Couverture : 1.66%
+------------------------------------------------------------
+Tag : beginner
+Occurrence : 9949
+Couverture : 1.42%
+------------------------------------------------------------
+Tag : image
+Occurrence : 9697
+Couverture : 1.38%
+------------------------------------------------------------
+Tag : data visualization
+Occurrence : 9668
+Couverture : 1.38%
+------------------------------------------------------------
+Tag : education
+Occurrence : 9639
+Couverture : 1.37%
+------------------------------------------------------------
+Tag : text
+Occurrence : 9216
+Couverture : 1.31%
+------------------------------------------------------------
+Tag : health
+Occurrence : 8128
+Couverture : 1.16%
+------------------------------------------------------------
+Tag : finance
+Occurrence : 7491
+Couverture : 1.07%
+------------------------------------------------------------
+Tag : movies and tv shows
+Occurrence : 7226
+Couverture : 1.03%
+------------------------------------------------------------
+Tag : classification
+Occurrence : 7098
+Couverture : 1.01%
+------------------------------------------------------------
+Tag : exploratory data analysis
+Occurrence : 6897
+Couverture : 0.98%
+------------------------------------------------------------
+Tag : intermediate
+Occurrence : 6088
+Couverture : 0.87%
+------------------------------------------------------------
+Tag : computer vision
+Occurrence : 6084
+Couverture : 0.87%
+------------------------------------------------------------
+Tag : nlp
+Occurrence : 6001
+Couverture : 0.86%
+------------------------------------------------------------
+Tag : investing
+Occurrence : 5848
+Couverture : 0.83%
+------------------------------------------------------------
+Tag : data cleaning
+Occurrence : 5827
+Couverture : 0.83%
+------------------------------------------------------------
+Tag : deep learning
+Occurrence : 5368
+Couverture : 0.77%
+------------------------------------------------------------
+Tag : internet
+Occurrence : 4907
+Couverture : 0.70%
+------------------------------------------------------------
+Tag : biology
+Occurrence : 4897
+Couverture : 0.70%
+------------------------------------------------------------
+Tag : english
+Occurrence : 4615
+Couverture : 0.66%
+------------------------------------------------------------
+Tag : music
+Occurrence : 4482
+Couverture : 0.64%
+------------------------------------------------------------
+Tag : artificial intelligence
+Occurrence : 4326
+Couverture : 0.62%
+------------------------------------------------------------
+Tag : time series analysis
+Occurrence : 4130
+Couverture : 0.59%
+------------------------------------------------------------
+Tag : sports
+Occurrence : 4061
+Couverture : 0.58%
+------------------------------------------------------------
+Tag : automobiles and vehicles
+Occurrence : 3901
+Couverture : 0.56%
+------------------------------------------------------------
+Tag : news
+Occurrence : 3708
+Couverture : 0.53%
+------------------------------------------------------------
+Tag : cancer
+Occurrence : 3662
+Couverture : 0.52%
+------------------------------------------------------------
+Tag : economics
+Occurrence : 3588
+Couverture : 0.51%
+------------------------------------------------------------
+Tag : categorical
+Occurrence : 3270
+Couverture : 0.47%
+------------------------------------------------------------
+Tag : software
+Occurrence : 3232
+Couverture : 0.46%
+------------------------------------------------------------
+Tag : online communities
+Occurrence : 3228
+Couverture : 0.46%
+------------------------------------------------------------
+Tag : health conditions
+Occurrence : 3216
+Couverture : 0.46%
+------------------------------------------------------------
+Tag : social science
+Occurrence : 3189
+Couverture : 0.45%
+------------------------------------------------------------
+Tag : programming
+Occurrence : 3151
+Couverture : 0.45%
+------------------------------------------------------------
+Tag : games
+Occurrence : 3064
+Couverture : 0.44%
+------------------------------------------------------------
+Tag : india
+Occurrence : 3008
+Couverture : 0.43%
+------------------------------------------------------------
+Tag : currencies and foreign exchange
+Occurrence : 2973
+Couverture : 0.42%
+------------------------------------------------------------
+Tag : food
+Occurrence : 2912
+Couverture : 0.42%
+------------------------------------------------------------
+Tag : transportation
+Occurrence : 2848
+Couverture : 0.41%
+------------------------------------------------------------
+Tag : united states
+Occurrence : 2762
+Couverture : 0.39%
+------------------------------------------------------------
+Tag : retail and shopping
+Occurrence : 2738
+Couverture : 0.39%
+------------------------------------------------------------
+Tag : universities and colleges
+Occurrence : 2726
+Couverture : 0.39%
+------------------------------------------------------------
+Tag : regression
+Occurrence : 2652
+Couverture : 0.38%
+------------------------------------------------------------
+Tag : healthcare
+Occurrence : 2620
+Couverture : 0.37%
+------------------------------------------------------------
+Tag : law
+Occurrence : 2611
+Couverture : 0.37%
+------------------------------------------------------------
+Tag : research
+Occurrence : 2525
+Couverture : 0.36%
+------------------------------------------------------------
+Tag : government
+Occurrence : 2504
+Couverture : 0.36%
+------------------------------------------------------------
+Tag : video games
+Occurrence : 2494
+Couverture : 0.36%
+------------------------------------------------------------
+Tag : clothing and accessories
+Occurrence : 2462
+Couverture : 0.35%
+------------------------------------------------------------
+Tag : image classification
+Occurrence : 2448
+Couverture : 0.35%
+------------------------------------------------------------
+Tag : football
+Occurrence : 2315
+Couverture : 0.33%
+------------------------------------------------------------
+Tag : social networks
+Occurrence : 2306
+Couverture : 0.33%
+------------------------------------------------------------
+Tag : travel
+Occurrence : 2292
+Couverture : 0.33%
+------------------------------------------------------------
+Tag : energy
+Occurrence : 2240
+Couverture : 0.32%
+------------------------------------------------------------
+Tag : exercise
+Occurrence : 2176
+Couverture : 0.31%
+------------------------------------------------------------
+Tag : advanced
+Occurrence : 2173
+Couverture : 0.31%
+------------------------------------------------------------
+Tag : banking
+Occurrence : 2120
+Couverture : 0.30%
+------------------------------------------------------------
+Tag : politics
+Occurrence : 2117
+Couverture : 0.30%
+------------------------------------------------------------
+Tag : global
+Occurrence : 1988
+Couverture : 0.28%
+------------------------------------------------------------
+Tag : python
+Occurrence : 1942
+Couverture : 0.28%
+------------------------------------------------------------
+Tag : public health
+Occurrence : 1921
+Couverture : 0.27%
+------------------------------------------------------------
+Tag : science and technology
+Occurrence : 1857
+Couverture : 0.26%
+------------------------------------------------------------
+Tag : e-commerce services
+Occurrence : 1850
+Couverture : 0.26%
+------------------------------------------------------------
+Tag : binary classification
+Occurrence : 1836
+Couverture : 0.26%
+------------------------------------------------------------
+Tag : religion and belief systems
+Occurrence : 1823
+Couverture : 0.26%
+------------------------------------------------------------
+Tag : covid19
+Occurrence : 1806
+Couverture : 0.26%
+------------------------------------------------------------
+Tag : agriculture
+Occurrence : 1736
+Couverture : 0.25%
+------------------------------------------------------------
+Tag : real estate
+Occurrence : 1717
+Couverture : 0.24%
+------------------------------------------------------------
+Tag : literature
+Occurrence : 1706
+Couverture : 0.24%
+------------------------------------------------------------
+Tag : pandas
+Occurrence : 1679
+Couverture : 0.24%
+------------------------------------------------------------
+Tag : ratings and reviews
+Occurrence : 1664
+Couverture : 0.24%
+------------------------------------------------------------
+Tag : cricket
+Occurrence : 1613
+Couverture : 0.23%
+------------------------------------------------------------
+Tag : multiclass classification
+Occurrence : 1607
+Couverture : 0.23%
+------------------------------------------------------------
+Tag : synthetic
+Occurrence : 1579
+Couverture : 0.23%
+------------------------------------------------------------
+Tag : weather and climate
+Occurrence : 1562
+Couverture : 0.22%
+------------------------------------------------------------
+Tag : environment
+Occurrence : 1557
+Couverture : 0.22%
+------------------------------------------------------------
+Tag : crime
+Occurrence : 1554
+Couverture : 0.22%
+------------------------------------------------------------
+Tag : heart conditions
+Occurrence : 1546
+Couverture : 0.22%
+------------------------------------------------------------
+Tag : europe
+Occurrence : 1530
+Couverture : 0.22%
+------------------------------------------------------------
+Tag : electronics
+Occurrence : 1501
+Couverture : 0.21%
+------------------------------------------------------------
+Tag : asia
+Occurrence : 1445
+Couverture : 0.21%
+------------------------------------------------------------
+Tag : cnn
+Occurrence : 1444
+Couverture : 0.21%
+------------------------------------------------------------
+Tag : data storytelling
+Occurrence : 1435
+Couverture : 0.20%
+------------------------------------------------------------
+Tag : public safety
+Occurrence : 1411
+Couverture : 0.20%
+------------------------------------------------------------
+Tag : earth science
+Occurrence : 1399
+Couverture : 0.20%
+------------------------------------------------------------
+Tag : animals
+Occurrence : 1371
+Couverture : 0.20%
+------------------------------------------------------------
+Tag : standardized testing
+Occurrence : 1363
+Couverture : 0.19%
+------------------------------------------------------------
+Tag : restaurants
+Occurrence : 1276
+Couverture : 0.18%
+------------------------------------------------------------
+Tag : medicine
+Occurrence : 1264
+Couverture : 0.18%
+------------------------------------------------------------
+Tag : object detection
+Occurrence : 1257
+Couverture : 0.18%
+------------------------------------------------------------
+Tag : statistical analysis
+Occurrence : 1252
+Couverture : 0.18%
+------------------------------------------------------------
+Tag : social issues and advocacy
+Occurrence : 1237
+Couverture : 0.18%
+------------------------------------------------------------
+Tag : feature engineering
+Occurrence : 1229
+Couverture : 0.18%
+------------------------------------------------------------
+Tag : text mining
+Occurrence : 1210
+Couverture : 0.17%
+------------------------------------------------------------
+Tag : anime and manga
+Occurrence : 1188
+Couverture : 0.17%
+------------------------------------------------------------
+Tag : art
+Occurrence : 1168
+Couverture : 0.17%
+------------------------------------------------------------
+Tag : jobs and career
+Occurrence : 1140
+Couverture : 0.16%
+------------------------------------------------------------
+Tag : diseases
+Occurrence : 1101
+Couverture : 0.16%
+------------------------------------------------------------
+Tag : demographics
+Occurrence : 1089
+Couverture : 0.16%
+------------------------------------------------------------
+Tag : geospatial analysis
+Occurrence : 1085
+Couverture : 0.15%
+------------------------------------------------------------
+Tag : clustering
+Occurrence : 1076
+Couverture : 0.15%
+------------------------------------------------------------
+Tag : audio
+Occurrence : 1068
+Couverture : 0.15%
+------------------------------------------------------------
+Tag : cities and urban areas
+Occurrence : 1054
+Couverture : 0.15%
+------------------------------------------------------------
+Tag : mental health
+Occurrence : 1041
+Couverture : 0.15%
+------------------------------------------------------------
+Tag : cycling
+Occurrence : 1039
+Couverture : 0.15%
+------------------------------------------------------------
+Tag : text classification
+Occurrence : 1036
+Couverture : 0.15%
+------------------------------------------------------------
+Tag : email and messaging
+Occurrence : 1023
+Couverture : 0.15%
+------------------------------------------------------------
+Tag : geography
+Occurrence : 1018
+Couverture : 0.15%
+------------------------------------------------------------
+Tag : diabetes
+Occurrence : 1007
+Couverture : 0.14%
+------------------------------------------------------------
+Tag : people and society
+Occurrence : 1003
+Couverture : 0.14%
+------------------------------------------------------------
+Tag : history
+Occurrence : 1000
+Couverture : 0.14%
+------------------------------------------------------------
+Tag : housing
+Occurrence : 993
+Couverture : 0.14%
+------------------------------------------------------------
+Tag : video
+Occurrence : 987
+Couverture : 0.14%
+------------------------------------------------------------
+Tag : hotels and accommodations
+Occurrence : 985
+Couverture : 0.14%
+------------------------------------------------------------
+Tag : socrata
+Occurrence : 955
+Couverture : 0.14%
+------------------------------------------------------------
+Tag : recommender systems
+Occurrence : 937
+Couverture : 0.13%
+------------------------------------------------------------
+Tag : linear regression
+Occurrence : 909
+Couverture : 0.13%
+------------------------------------------------------------
+Tag : people
+Occurrence : 907
+Couverture : 0.13%
+------------------------------------------------------------
+Tag : languages
+Occurrence : 898
+Couverture : 0.13%
+------------------------------------------------------------
+Tag : renewable energy
+Occurrence : 888
+Couverture : 0.13%
+------------------------------------------------------------
+Tag : basketball
+Occurrence : 870
+Couverture : 0.12%
+------------------------------------------------------------
+Tag : neural networks
+Occurrence : 868
+Couverture : 0.12%
+------------------------------------------------------------
+Tag : alcohol
+Occurrence : 864
+Couverture : 0.12%
+------------------------------------------------------------
+Tag : atmospheric science
+Occurrence : 851
+Couverture : 0.12%
+------------------------------------------------------------
+Tag : image segmentation
+Occurrence : 848
+Couverture : 0.12%
+------------------------------------------------------------
+Tag : employment
+Occurrence : 847
+Couverture : 0.12%
+------------------------------------------------------------
+Tag : insurance
+Occurrence : 842
+Couverture : 0.12%
+------------------------------------------------------------
+Tag : electricity
+Occurrence : 841
+Couverture : 0.12%
+------------------------------------------------------------
+Tag : eyes and vision
+Occurrence : 813
+Couverture : 0.12%
+------------------------------------------------------------
+Tag : brazil
+Occurrence : 807
+Couverture : 0.12%
+------------------------------------------------------------
+Tag : marketing
+Occurrence : 800
+Couverture : 0.11%
+------------------------------------------------------------
+Tag : astronomy
+Occurrence : 784
+Couverture : 0.11%
+------------------------------------------------------------
+Tag : linguistics
+Occurrence : 780
+Couverture : 0.11%
+------------------------------------------------------------
+Tag : psychology
+Occurrence : 775
+Couverture : 0.11%
+------------------------------------------------------------
+Tag : cooking and recipes
+Occurrence : 743
+Couverture : 0.11%
+------------------------------------------------------------
+Tag : multimodal
+Occurrence : 742
+Couverture : 0.11%
+------------------------------------------------------------
+Tag : drugs and medications
+Occurrence : 711
+Couverture : 0.10%
+------------------------------------------------------------
+Tag : automl
+Occurrence : 711
+Couverture : 0.10%
+------------------------------------------------------------
+Tag : military
+Occurrence : 694
+Couverture : 0.10%
+------------------------------------------------------------
+Tag : lending
+Occurrence : 664
+Couverture : 0.09%
+------------------------------------------------------------
+Tag : tensorflow
+Occurrence : 646
+Couverture : 0.09%
+------------------------------------------------------------
+Tag : cyber security
+Occurrence : 628
+Couverture : 0.09%
+------------------------------------------------------------
+Tag : primary and secondary schools
+Occurrence : 617
+Couverture : 0.09%
+------------------------------------------------------------
+Tag : geology
+Occurrence : 615
+Couverture : 0.09%
+------------------------------------------------------------
+Tag : engineering
+Occurrence : 611
+Couverture : 0.09%
+------------------------------------------------------------
+Tag : oil and gas
+Occurrence : 602
+Couverture : 0.09%
+------------------------------------------------------------
+Tag : graph
+Occurrence : 589
+Couverture : 0.08%
+------------------------------------------------------------
+Tag : pytorch
+Occurrence : 581
+Couverture : 0.08%
+------------------------------------------------------------
+Tag : benchmark
+Occurrence : 580
+Couverture : 0.08%
+------------------------------------------------------------
+Tag : mobile and wireless
+Occurrence : 575
+Couverture : 0.08%
+------------------------------------------------------------
+Tag : nutrition
+Occurrence : 570
+Couverture : 0.08%
+------------------------------------------------------------
+Tag : health and fitness
+Occurrence : 564
+Couverture : 0.08%
+------------------------------------------------------------
+Tag : ml ethics
+Occurrence : 546
+Couverture : 0.08%
+------------------------------------------------------------
+Tag : lstm
+Occurrence : 540
+Couverture : 0.08%
+------------------------------------------------------------
+Tag : transfer learning
+Occurrence : 535
+Couverture : 0.08%
+------------------------------------------------------------
+Tag : physics
+Occurrence : 527
+Couverture : 0.08%
+------------------------------------------------------------
+Tag : websites
+Occurrence : 514
+Couverture : 0.07%
+------------------------------------------------------------
+Tag : manufacturing
+Occurrence : 514
+Couverture : 0.07%
+------------------------------------------------------------
+Tag : pollution
+Occurrence : 507
+Couverture : 0.07%
+------------------------------------------------------------
+Tag : random forest
+Occurrence : 503
+Couverture : 0.07%
+------------------------------------------------------------
+Tag : text generation
+Occurrence : 502
+Couverture : 0.07%
+------------------------------------------------------------
+Tag : africa
+Occurrence : 495
+Couverture : 0.07%
+------------------------------------------------------------
+Tag : matplotlib
+Occurrence : 495
+Couverture : 0.07%
+------------------------------------------------------------
+Tag : neuroscience
+Occurrence : 490
+Couverture : 0.07%
+------------------------------------------------------------
+Tag : biotechnology
+Occurrence : 478
+Couverture : 0.07%
+------------------------------------------------------------
+Tag : sql
+Occurrence : 476
+Couverture : 0.07%
+------------------------------------------------------------
+Tag : numpy
+Occurrence : 473
+Couverture : 0.07%
+------------------------------------------------------------
+Tag : chemistry
+Occurrence : 459
+Couverture : 0.07%
+------------------------------------------------------------
+Tag : popular culture
+Occurrence : 457
+Couverture : 0.07%
+------------------------------------------------------------
+Tag : bigquery
+Occurrence : 455
+Couverture : 0.06%
+------------------------------------------------------------
+Tag : yolo
+Occurrence : 448
+Couverture : 0.06%
+------------------------------------------------------------
+Tag : genetics
+Occurrence : 447
+Couverture : 0.06%
+------------------------------------------------------------
+Tag : plants
+Occurrence : 447
+Couverture : 0.06%
+------------------------------------------------------------
+Tag : transformers
+Occurrence : 431
+Couverture : 0.06%
+------------------------------------------------------------
+Tag : sklearn
+Occurrence : 423
+Couverture : 0.06%
+------------------------------------------------------------
+Tag : hospitals and treatment centers
+Occurrence : 421
+Couverture : 0.06%
+------------------------------------------------------------
+Tag : income
+Occurrence : 418
+Couverture : 0.06%
+------------------------------------------------------------
+Tag : aviation
+Occurrence : 418
+Couverture : 0.06%
+------------------------------------------------------------
+Tag : decision tree
+Occurrence : 417
+Couverture : 0.06%
+------------------------------------------------------------
+Tag : survey analysis
+Occurrence : 414
+Couverture : 0.06%
+------------------------------------------------------------
+Tag : culture and humanities
+Occurrence : 410
+Couverture : 0.06%
+------------------------------------------------------------
+Tag : logistic regression
+Occurrence : 410
+Couverture : 0.06%
+------------------------------------------------------------
+Tag : simulations
+Occurrence : 409
+Couverture : 0.06%
+------------------------------------------------------------
+Tag : baseball
+Occurrence : 399
+Couverture : 0.06%
+------------------------------------------------------------
+Tag : indonesian
+Occurrence : 392
+Couverture : 0.06%
+------------------------------------------------------------
+Tag : feature extraction
+Occurrence : 376
+Couverture : 0.05%
+------------------------------------------------------------
+Tag : comics and animation
+Occurrence : 369
+Couverture : 0.05%
+------------------------------------------------------------
+Tag : json
+Occurrence : 367
+Couverture : 0.05%
+------------------------------------------------------------
+Tag : natural disasters
+Occurrence : 364
+Couverture : 0.05%
+------------------------------------------------------------
+Tag : north america
+Occurrence : 342
+Couverture : 0.05%
+------------------------------------------------------------
+Tag : signal processing
+Occurrence : 342
+Couverture : 0.05%
+------------------------------------------------------------
+Tag : board games
+Occurrence : 334
+Couverture : 0.05%
+------------------------------------------------------------
+Tag : r
+Occurrence : 334
+Couverture : 0.05%
+------------------------------------------------------------
+Tag : model comparison
+Occurrence : 323
+Couverture : 0.05%
+------------------------------------------------------------
+Tag : datetime
+Occurrence : 322
+Couverture : 0.05%
+------------------------------------------------------------
+Tag : china
+Occurrence : 316
+Couverture : 0.05%
+------------------------------------------------------------
+Tag : gambling
+Occurrence : 315
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : robotics
+Occurrence : 315
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : keras
+Occurrence : 315
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : multilabel classification
+Occurrence : 314
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : text pre-processing
+Occurrence : 313
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : russia
+Occurrence : 312
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : segmentation
+Occurrence : 312
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : celebrities
+Occurrence : 310
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : question answering
+Occurrence : 308
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : forestry
+Occurrence : 307
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : audio classification
+Occurrence : 307
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : gender
+Occurrence : 296
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : gan
+Occurrence : 295
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : auto racing
+Occurrence : 294
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : optimization
+Occurrence : 286
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : arabic
+Occurrence : 285
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : holidays and cultural events
+Occurrence : 283
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : yolov8
+Occurrence : 274
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : dentistry
+Occurrence : 259
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : two sigma x kaggle finance data repo
+Occurrence : 256
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : canada
+Occurrence : 255
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : spanish
+Occurrence : 252
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : image generator
+Occurrence : 251
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : water bodies
+Occurrence : 250
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : south america
+Occurrence : 249
+Couverture : 0.04%
+------------------------------------------------------------
+Tag : urban planning
+Occurrence : 245
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : tidyverse
+Occurrence : 245
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : middle east
+Occurrence : 245
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : seaborn
+Occurrence : 245
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : cv2
+Occurrence : 244
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : mathematics
+Occurrence : 241
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : gpu
+Occurrence : 237
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : australia
+Occurrence : 235
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : ggplot2
+Occurrence : 235
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : xgboost
+Occurrence : 229
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : nltk
+Occurrence : 224
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : international relations
+Occurrence : 220
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : fish and aquaria
+Occurrence : 214
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : puzzles
+Occurrence : 208
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : rnn
+Occurrence : 206
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : portuguese
+Occurrence : 206
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : k-means
+Occurrence : 205
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : turkish
+Occurrence : 205
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : martial arts
+Occurrence : 202
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : image augmentation
+Occurrence : 201
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : bengali
+Occurrence : 201
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : rail transport
+Occurrence : 197
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : russian
+Occurrence : 193
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : japan
+Occurrence : 188
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : automatic speech recognition
+Occurrence : 178
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : video classification
+Occurrence : 177
+Couverture : 0.03%
+------------------------------------------------------------
+Tag : chinese
+Occurrence : 169
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : make-up and cosmetics
+Occurrence : 168
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : mortality
+Occurrence : 168
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : card games
+Occurrence : 164
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : translation
+Occurrence : 164
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : image-to-text
+Occurrence : 160
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : tabular classification
+Occurrence : 160
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : text-to-text generation
+Occurrence : 158
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : human rights
+Occurrence : 156
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : hockey
+Occurrence : 156
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : svm
+Occurrence : 156
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : image text recognition
+Occurrence : 156
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : bert
+Occurrence : 155
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : reinforcement learning
+Occurrence : 154
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : ensembling
+Occurrence : 154
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : french
+Occurrence : 153
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : gradient boosting
+Occurrence : 137
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : model explainability
+Occurrence : 136
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : dplyr
+Occurrence : 134
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : mexico
+Occurrence : 133
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : bayesian statistics
+Occurrence : 133
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : adversarial learning
+Occurrence : 131
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : evaluation
+Occurrence : 131
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : ipython
+Occurrence : 129
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : water transport
+Occurrence : 126
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : plotly
+Occurrence : 125
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : retrieval/ranking
+Occurrence : 125
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : search engines
+Occurrence : 122
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : vietnamese
+Occurrence : 118
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : philosophy
+Occurrence : 117
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : pca
+Occurrence : 117
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : retrieval question answering
+Occurrence : 117
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : hugging face
+Occurrence : 114
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : naive bayes
+Occurrence : 113
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : sampling
+Occurrence : 113
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : summarization
+Occurrence : 110
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : korea
+Occurrence : 109
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : running
+Occurrence : 107
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : hindi
+Occurrence : 107
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : outlier analysis
+Occurrence : 106
+Couverture : 0.02%
+------------------------------------------------------------
+Tag : multilingual
+Occurrence : 104
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : general knowledge and reasoning
+Occurrence : 104
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : speech-to-text
+Occurrence : 102
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : dimensionality reduction
+Occurrence : 101
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : dnn
+Occurrence : 99
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : text conversation
+Occurrence : 96
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : graph neural network
+Occurrence : 96
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : transformer
+Occurrence : 93
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : coding
+Occurrence : 92
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : persian
+Occurrence : 91
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : german
+Occurrence : 90
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : museums
+Occurrence : 89
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : geography and places
+Occurrence : 89
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : golf
+Occurrence : 88
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : image text detection
+Occurrence : 86
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : other
+Occurrence : 84
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : yolov5
+Occurrence : 83
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : tpu
+Occurrence : 82
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : image-to-image
+Occurrence : 82
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : physical science
+Occurrence : 81
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : tennis
+Occurrence : 79
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : pose detection
+Occurrence : 73
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : dance
+Occurrence : 71
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : spacy
+Occurrence : 71
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : text-to-speech
+Occurrence : 71
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : sentence similarity
+Occurrence : 69
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : ukrainian
+Occurrence : 67
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : knn
+Occurrence : 65
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : randomforest
+Occurrence : 61
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : japanese
+Occurrence : 61
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : nepali
+Occurrence : 61
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : lightgbm
+Occurrence : 60
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : benchmark dataset
+Occurrence : 59
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : torchvision
+Occurrence : 59
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : image super resolution
+Occurrence : 59
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : token classification
+Occurrence : 59
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : text-to-image
+Occurrence : 59
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : speech synthesis
+Occurrence : 57
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : accelerators
+Occurrence : 56
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : oceania
+Occurrence : 56
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : denoising
+Occurrence : 55
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : urdu
+Occurrence : 55
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : audio synthesis
+Occurrence : 54
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : italian
+Occurrence : 54
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : volleyball
+Occurrence : 52
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : racial equity
+Occurrence : 51
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : unet
+Occurrence : 51
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : audio event classification
+Occurrence : 50
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : crowdfunding
+Occurrence : 48
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : math
+Occurrence : 48
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : water sports
+Occurrence : 47
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : tamil
+Occurrence : 46
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : scipy
+Occurrence : 46
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : image style transfer
+Occurrence : 44
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : catboost
+Occurrence : 42
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : convolution
+Occurrence : 41
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : vision transformer
+Occurrence : 41
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : forcats
+Occurrence : 40
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : data type
+Occurrence : 40
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : mountains
+Occurrence : 39
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : text segmentation
+Occurrence : 39
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : korean
+Occurrence : 39
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : image depth estimation
+Occurrence : 39
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : image feature vector
+Occurrence : 38
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : chinese (taiwan)
+Occurrence : 36
+Couverture : 0.01%
+------------------------------------------------------------
+Tag : video generation
+Occurrence : 35
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : resnet
+Occurrence : 35
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : polish
+Occurrence : 33
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : lubridate
+Occurrence : 32
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : aesthetic quality
+Occurrence : 31
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : thai
+Occurrence : 31
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : multitask classification
+Occurrence : 31
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : video text
+Occurrence : 29
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : distance
+Occurrence : 28
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : gpt2
+Occurrence : 28
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : dutch
+Occurrence : 26
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : deserts
+Occurrence : 24
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : antarctica
+Occurrence : 22
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : vgg-style
+Occurrence : 22
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : telugu
+Occurrence : 21
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : mobilenet v2
+Occurrence : 21
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : audio-to-audio
+Occurrence : 21
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : gymnastics
+Occurrence : 20
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : efficientnet
+Occurrence : 20
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : kannada
+Occurrence : 20
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : re
+Occurrence : 20
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : vae
+Occurrence : 20
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : corrplot
+Occurrence : 19
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : tidyr
+Occurrence : 19
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : batch normalization
+Occurrence : 19
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : pil
+Occurrence : 18
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : sinhala
+Occurrence : 18
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : burmese
+Occurrence : 18
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : zero-shot text classification
+Occurrence : 17
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : text sequence alignment
+Occurrence : 17
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : image classification logits
+Occurrence : 16
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : os
+Occurrence : 16
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : word2vec skip-gram
+Occurrence : 16
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : marathi
+Occurrence : 16
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : multilingual and cross-lingual capabilities
+Occurrence : 16
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : bulgarian
+Occurrence : 15
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : uzbek
+Occurrence : 15
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : sanskrit
+Occurrence : 15
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : azerbaijani
+Occurrence : 15
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : vit
+Occurrence : 14
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : efficientnet-b0
+Occurrence : 14
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : attention dropout
+Occurrence : 14
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : densenet
+Occurrence : 14
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : learn
+Occurrence : 13
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : readr
+Occurrence : 13
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : malayalam
+Occurrence : 13
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : serbian
+Occurrence : 13
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : kazakh
+Occurrence : 13
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : faster r-cnn
+Occurrence : 13
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : roberta
+Occurrence : 13
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : romanian
+Occurrence : 13
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : danish
+Occurrence : 12
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : estonian
+Occurrence : 12
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : czech
+Occurrence : 12
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : image extrapolation
+Occurrence : 12
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : video audio text
+Occurrence : 12
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : pashto
+Occurrence : 11
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : pushto
+Occurrence : 11
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : swedish
+Occurrence : 11
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : gujarati
+Occurrence : 11
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : sindhi
+Occurrence : 11
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : game arena
+Occurrence : 11
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : jsonlite
+Occurrence : 10
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : yoruba
+Occurrence : 10
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : doparallel
+Occurrence : 10
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : multiple
+Occurrence : 10
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : whisper
+Occurrence : 10
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : greenland
+Occurrence : 9
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : armenian
+Occurrence : 9
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : malay
+Occurrence : 9
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : mask r-cnn
+Occurrence : 9
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : movinet
+Occurrence : 9
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : hungarian
+Occurrence : 9
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : hebrew
+Occurrence : 9
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : dehazing
+Occurrence : 9
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : finnish
+Occurrence : 9
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : distilbert
+Occurrence : 9
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : leaflet
+Occurrence : 8
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : imagenet 2012 classification
+Occurrence : 8
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : dropout
+Occurrence : 8
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : irish
+Occurrence : 8
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : swahili
+Occurrence : 8
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : deblurring
+Occurrence : 8
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : amharic
+Occurrence : 8
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : audio command detection
+Occurrence : 8
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : scaled dot-product attention
+Occurrence : 8
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : albanian
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : caret
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : inception v3
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : biggan
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : text fill-mask
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : assamese
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : mobilenet
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : 1x1 convolution
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : efficientnet v2
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : afrikaans
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : deeplabv3plus
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : tagalog
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : greek
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : ears and hearing
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : deberta-v3
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : sam
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : georgian
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : hausa
+Occurrence : 7
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : mlp-mixer
+Occurrence : 6
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : ggthemes
+Occurrence : 6
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : belarusian
+Occurrence : 6
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : croatian
+Occurrence : 6
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : kurdish
+Occurrence : 6
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : biggan-deep
+Occurrence : 6
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : punjabi
+Occurrence : 6
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : igbo
+Occurrence : 6
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : global average pooling
+Occurrence : 6
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : albert
+Occurrence : 6
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : t5
+Occurrence : 6
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : wav2vec2
+Occurrence : 6
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : norwegian
+Occurrence : 6
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : factuality and grounding
+Occurrence : 6
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : hmm
+Occurrence : 5
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : tqdm
+Occurrence : 5
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : tibble
+Occurrence : 5
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : deeplab (mobilenetv2_dm05_coco_voc_trainval)
+Occurrence : 5
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : auxiliary classifier
+Occurrence : 5
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : wandb
+Occurrence : 5
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : twi
+Occurrence : 5
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : resnet50-v2
+Occurrence : 5
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : d3js
+Occurrence : 5
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : weight standardization
+Occurrence : 5
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : bart
+Occurrence : 5
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : auto-updating data
+Occurrence : 4
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : stringr
+Occurrence : 4
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : glob
+Occurrence : 4
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : sinhalese
+Occurrence : 4
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : chichewa
+Occurrence : 4
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : luxembourgish
+Occurrence : 4
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : somali
+Occurrence : 4
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : multi-head attention
+Occurrence : 4
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : deeplab (mobilenetv3_large_cityscapes_trainfine)
+Occurrence : 4
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : castilian
+Occurrence : 4
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : gridextra
+Occurrence : 4
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : rapids
+Occurrence : 4
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : efficientnet-b7
+Occurrence : 4
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : xlm-roberta
+Occurrence : 4
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : resnet cifar
+Occurrence : 4
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : convnext
+Occurrence : 4
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : swin transformer
+Occurrence : 4
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : admin
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : frame interpolation
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : dailychallenge
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : subject
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : pathlib
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : sys
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : rcolorbrewer
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : audience
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : catalan
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : oromo
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : bigan
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : latin
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : i3d
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : slovak
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : retinanet
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : javanese
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : average pooling
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : mobilenet v3
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : resnet v2 50
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : bosnian
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : video-swin-transformer
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : slovenian
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : deit
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : mongolian
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : plyr
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : knitr
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : oriya
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : sundanese
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : deeplab (mobilenetv2_ade20k_train)
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : efficientnet-b3
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : segformer
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : keywordspottingnet
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : tatar
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : paralinguistic classification
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : amoebanet-a (n=18
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : f=448)
+Occurrence : 3
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : malagasy
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : resnet v1 101
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : kirghiz
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : pitch extraction
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : ssd
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : language
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : aragonese
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : relu
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : leaky relu
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : technique
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : mobilebert edgetpu small
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : moldovan
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : mobilenetv3
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : interlingue
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : occidental
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : fastdepth
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : depthwise separable convolution
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : tibetan
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : centernet
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : panjabi
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : mit
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : lao
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : softmax
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : galician
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : quechua
+Occurrence : 2
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : reshape2
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : kashmiri
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : kyrgyz
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : ganda
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : inception v1
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : dzongkha
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : elmo
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : residual block
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : packages
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : deeplab (mobilenetv2_coco_voc_trainval)
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : central khmer
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : scottish gaelic
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : efficientnet-b4
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : resnet-152
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : bigbigan
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : resnetv2
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : xcit
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : gc
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : efficientnetv2
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : efficientnet-b2
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : norwegian nynorsk
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : norwegian bokmål
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : group normalization
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : bambara
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : opt
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : nauru
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : nasnet-a (large)
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : inception resnet v2
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : tvn-1
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : tvn-mobile-1
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : big transfer
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : anti-alias downsampling
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : resnet v1 50
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : resnet v2 101
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : divehi
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : tacotron 2
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : text-to-mel
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : tsonga
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : resnet v1 152
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : silero-stt
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : inception v2
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : resnet19
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : mosaic
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : wolof
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : layer normalization
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : kinyarwanda
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : blur pooling
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : one-shot aggregation
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : dense connections
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : ewe
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : efficientdet
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : selective kernel
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : inception-resnet-v2-a
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : icelandic
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : conformer
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : condconv
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : tigrinya
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : foreach
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : lithuanian
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : bit
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : architecture
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : ulmfit
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : guarani
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : aymara
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : moldavian
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : shona
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : abkhazian
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------
+Tag : deeplab (xception65_ade20k_train)
+Occurrence : 1
+Couverture : 0.00%
+------------------------------------------------------------

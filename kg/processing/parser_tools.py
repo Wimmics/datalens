@@ -5,159 +5,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
-SPACE_AROUND_COLON = re.compile(r"\s*:\s*")
 MULTI_SPACE = re.compile(r"\s+")
-SIZE_CATEGORY_UNITS = re.compile(r"(?<=\d)([kmbt])\b")
-LANGUAGE_2 = re.compile(r"^[a-z]{2}$")
-LANGUAGE_3 = re.compile(r"^[a-z]{3}$")
-LANGUAGE_BCP47 = re.compile(r"^[a-z]{2,3}(?:[-_][a-z0-9]{2,8})*$")
-REGION_ALPHA2 = re.compile(r"^[a-z]{2}$")
-
-SPDX_CANONICAL_IDS = {
-    "apache-2.0": "Apache-2.0",
-    "afl-3.0": "AFL-3.0",
-    "agpl-3.0": "AGPL-3.0-only",
-    "artistic-2.0": "Artistic-2.0",
-    "bsl-1.0": "BSL-1.0",
-    "bsd": "BSD-2-Clause",
-    "bsd-2-clause": "BSD-2-Clause",
-    "bsd-3-clause": "BSD-3-Clause",
-    "bsd-3-clause-clear": "BSD-3-Clause",
-    "cc": None,
-    "cc-by-2.0": None,
-    "cc-by-2.5": None,
-    "cc-by-3.0": None,
-    "cc-by-4.0": "CC-BY-4.0",
-    "cc-by-nc-2.0": None,
-    "cc-by-nc-3.0": None,
-    "cc-by-nc-4.0": None,
-    "cc-by-nc-nd-3.0": None,
-    "cc-by-nc-nd-4.0": None,
-    "cc-by-nc-sa-2.0": None,
-    "cc-by-nc-sa-3.0": None,
-    "cc-by-nc-sa-4.0": None,
-    "cc-by-nd-4.0": None,
-    "cc-by-sa-4.0": "CC-BY-SA-4.0",
-    "cc-by-sa-3.0": None,
-    "cc0-1.0": "CC0-1.0",
-    "cdla-permissive-1.0": "CDLA-Permissive-1.0",
-    "cdla-permissive-2.0": "CDLA-Permissive-2.0",
-    "cdla-sharing-1.0": "CDLA-Sharing-1.0",
-    "ecl-2.0": "ECL-2.0",
-    "epl-1.0": "EPL-1.0",
-    "epl-2.0": "EPL-2.0",
-    "eupl-1.1": "EUPL-1.1",
-    "eupl-1.2": "EUPL-1.2",
-    "gfdl": "GFDL-1.3-or-later",
-    "gpl": "GPL-3.0-only",
-    "gpl-2.0": "GPL-2.0-only",
-    "gpl-2.0-only": "GPL-2.0-only",
-    "gpl-3.0": "GPL-3.0-only",
-    "gpl-3.0-only": "GPL-3.0-only",
-    "isc": "ISC",
-    "lgpl": "LGPL-2.1-only",
-    "lgpl-2.1": "LGPL-2.1-only",
-    "lgpl-2.1-only": "LGPL-2.1-only",
-    "lgpl-3.0": "LGPL-3.0-only",
-    "lgpl-3.0-only": "LGPL-3.0-only",
-    "lppl-1.3c": "LPPL-1.3c",
-    "mit": "MIT",
-    "mpl-2.0": "MPL-2.0",
-    "ncsa": "NCSA",
-    "odbl": "ODbL-1.0",
-    "odc-by": "ODC-By-1.0",
-    "ofl-1.1": "OFL-1.1",
-    "osl-3.0": "OSL-3.0",
-    "pddl": "PDDL-1.0",
-    "postgresql": "PostgreSQL",
-    "unlicense": "Unlicense",
-    "wtfpl": "WTFPL",
-    "zlib": "Zlib",
-}
-
-REGION_ALIAS_ALPHA2 = {
-    "uk": "gb",
-}
-
-NS_LEXVO_ISO639_1 = "https://lexvo.org/id/iso639-1/"
-NS_LEXVO_ISO639_3 = "https://lexvo.org/id/iso639-3/"
-NS_ISO3166 = "https://www.iso.org/obp/ui/#iso:code:3166:"
-NS_SPDX_LICENSES = "https://spdx.org/licenses/"
-NS_DATALENS_THESAURUS = "http://ns.inria.fr/datalens/thesaurus#"
-NS_DATALENS_DATA_LIBRARY = "http://ns.inria.fr/datalens/data#library/"
-
-CC_LICENSE_URIS = {
-    "cc0-1.0": "http://creativecommons.org/publicdomain/zero/1.0/",
-    "cc-by-2.0": "http://creativecommons.org/licenses/by/2.0/",
-    "cc-by-2.5": "http://creativecommons.org/licenses/by/2.5/",
-    "cc-by-3.0": "http://creativecommons.org/licenses/by/3.0/",
-    "cc-by-4.0": "http://creativecommons.org/licenses/by/4.0/",
-    "cc-by-sa-3.0": "http://creativecommons.org/licenses/by-sa/3.0/",
-    "cc-by-sa-4.0": "http://creativecommons.org/licenses/by-sa/4.0/",
-    "cc-by-nc-2.0": "http://creativecommons.org/licenses/by-nc/2.0/",
-    "cc-by-nc-3.0": "http://creativecommons.org/licenses/by-nc/3.0/",
-    "cc-by-nc-4.0": "http://creativecommons.org/licenses/by-nc/4.0/",
-    "cc-by-nc-sa-2.0": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
-    "cc-by-nc-sa-3.0": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
-    "cc-by-nc-sa-4.0": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
-    "cc-by-nc-nd-3.0": "http://creativecommons.org/licenses/by-nc-nd/3.0/",
-    "cc-by-nc-nd-4.0": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
-    "cc-by-nd-4.0": "http://creativecommons.org/licenses/by-nd/4.0/",
-}
-
-MODEL_LIBRARY_TAGS = {
-	"adapter-transformers",
-	"allennlp",
-	"asteroid",
-	"bertopic",
-	"coreml",
-	"diffusers",
-	"executorch",
-	"fairseq",
-	"fastai",
-	"fasttext",
-	"flair",
-	"gguf",
-	"jax",
-	"joblib",
-	"keras",
-	"keras-hub",
-	"llamafile",
-	"mlx",
-	"ml-agents",
-	"nemo",
-	"onnx",
-	"open_clip",
-	"openvino",
-	"optimum-graphcore",
-	"optimum-habana",
-	"paddleocr",
-	"paddlenlp",
-	"paddlepaddle",
-	"peft",
-	"pyannote-audio",
-	"pytorch",
-	"sample-factory",
-	"safetensors",
-	"sentence-transformers",
-	"setfit",
-	"sklearn",
-	"spacy",
-	"span-marker",
-	"speechbrain",
-	"stable-baselines3",
-	"stanza",
-	"tensorboard",
-	"tf",
-	"tf-keras",
-	"tflite",
-	"timm",
-	"transformers",
-	"transformers-js",
-	"univa",
-	"unity-sentis",
-	"webdataset",
-}
 
 def normalize_string(value: Any) -> str | None:
     if value is None:
@@ -226,90 +74,6 @@ def get_tag_with_prefix(tags: list[str], prefix: str, normalize: bool = True) ->
 
     return dedupe(values)
 
-def fallback_model_libraries(values: list[str]) -> tuple[list[str], list[dict[str, Any]]]:
-    thesaurus_libraries: list[str] = []
-    fallback_instances: list[dict[str, Any]] = []
-    seen_fallback_hashes: set[str] = set()
-    
-    if not isinstance(values, list):
-        return [], []
-    
-    for value in values:
-        token = normalize_string(value)
-        if not token:
-            continue
-
-        normalized = token.lower()
-        if normalized in MODEL_LIBRARY_TAGS:
-            thesaurus_libraries.append(normalized)
-            continue
-
-        library_hash = hash16(normalized)
-        if not library_hash or library_hash in seen_fallback_hashes:
-            continue
-
-        seen_fallback_hashes.add(library_hash)
-        fallback_instances.append(
-            {
-                "library_hash16": library_hash,
-                "library_label": token,
-            }
-        )
-
-    return dedupe(thesaurus_libraries), fallback_instances
-
-def build_uris(values: list[str], kind: str) -> list[str]:
-    uris: list[str] = []
-    for value in values:
-        token = value.lower()
-        uri = None
-
-        if kind == "language":
-            token = token.replace("_", "-")
-            if LANGUAGE_BCP47.fullmatch(token):
-                primary = token.split("-", 1)[0]
-                if LANGUAGE_2.fullmatch(primary):
-                    uri = f"{NS_LEXVO_ISO639_1}{primary}"
-                elif LANGUAGE_3.fullmatch(primary):
-                    uri = f"{NS_LEXVO_ISO639_3}{primary}"
-
-        elif kind == "region":
-            if token not in {"unknown", "other"}:
-                alpha2 = REGION_ALIAS_ALPHA2.get(token, token)
-                if REGION_ALPHA2.fullmatch(alpha2):
-                    uri = f"{NS_ISO3166}{alpha2.upper()}"
-
-        elif kind == "license":
-            if token not in {"unknown", "other"}:
-                if token in CC_LICENSE_URIS:
-                    uris.append(CC_LICENSE_URIS[token])
-                    continue
-                spdx_id = SPDX_CANONICAL_IDS.get(token)
-                if spdx_id:
-                    uri = f"{NS_SPDX_LICENSES}{spdx_id}.html"
-
-        if uri:
-            uris.append(uri)
-
-    return dedupe(uris)
-
-def infer_language_tokens(tags: list[str], explicit_values: list[str]) -> list[str]:
-    tokens: list[str] = []
-    for value in explicit_values:
-        candidate = value.lower().replace("_", "-")
-        primary = candidate.split("-", 1)[0]
-        if LANGUAGE_2.fullmatch(primary) or LANGUAGE_3.fullmatch(primary):
-            tokens.append(candidate)
-
-    for tag in tags:
-        if ":" in tag:
-            continue
-        candidate = tag.lower().replace("_", "-")
-        if LANGUAGE_2.fullmatch(candidate):
-            tags.remove(tag)
-            tokens.append(candidate)
-    return dedupe(tokens)
-
 def paper_url(paperids: list[str]) -> list[str]:
     urls: list[str] = []
     for paperid in paperids:
@@ -327,10 +91,13 @@ def paper_url(paperids: list[str]) -> list[str]:
     return dedupe(urls)
 
 
-# -- HuggingFace helpers (shared) -------------------------------------------------
+# Resource existence checks
+
 HUGGING_FACE_DATASETS_URL = re.compile(r"https?://huggingface\.co/datasets/([^\s?#/)]+(?:/[^\s?#/]+)?)", re.IGNORECASE)
 HUGGING_FACE_MODELS_URL = re.compile(r"https?://huggingface\.co/(?!datasets/)([^\s?#/]+/[^\s?#/]+)", re.IGNORECASE)
 HUGGING_FACE_ID = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
+DATASET_IDS_PATH = Path(__file__).resolve().parent / "resources" / "dataset_ids.json"
+MODEL_IDS_PATH = Path(__file__).resolve().parent / "resources" / "model_ids.json"
 
 # Values that must remain raw and not be interpreted as HF ids
 RAW_ONLY_HF_VALUES = {
@@ -376,10 +143,6 @@ def normalize_hf_identifier(value: Any) -> str | None:
         text = url_match.group(1)
 
     return text
-
-DATASET_IDS_PATH = Path(__file__).resolve().parent / "resources" / "datasets_ids.json"
-MODEL_IDS_PATH = Path(__file__).resolve().parent / "resources" / "models_ids.json"
-
 
 @lru_cache(maxsize=2)
 def _load_local_ids(kind_path: Path) -> set[str]:
@@ -436,3 +199,239 @@ def split_hf_values(raw_values: list[str], kind: str = "dataset") -> tuple[list[
             non_hf.append(candidate)
 
     return dedupe(hf_ids), dedupe(non_hf)
+
+# External URIs
+
+from functools import cache
+import requests
+import pycountry
+
+LANGUAGE_2 = re.compile(r"^[a-z]{2}$")
+LANGUAGE_3 = re.compile(r"^[a-z]{3}$")
+LANGUAGE_BCP47 = re.compile(r"^[a-z]{2,3}(?:[-_][a-z0-9]{2,8})*$")
+REGION_ALPHA2 = re.compile(r"^[a-z]{2}$")
+
+SPDX_CANONICAL_IDS = {
+    "apache-2.0": "Apache-2.0",
+    "afl-3.0": "AFL-3.0",
+    "agpl-3.0": "AGPL-3.0-only",
+    "artistic-2.0": "Artistic-2.0",
+    "bsl-1.0": "BSL-1.0",
+    "bsd": "BSD-2-Clause",
+    "bsd-2-clause": "BSD-2-Clause",
+    "bsd-3-clause": "BSD-3-Clause",
+    "bsd-3-clause-clear": "BSD-3-Clause",
+    "cdla-permissive-1.0": "CDLA-Permissive-1.0",
+    "cdla-permissive-2.0": "CDLA-Permissive-2.0",
+    "cdla-sharing-1.0": "CDLA-Sharing-1.0",
+    "ecl-2.0": "ECL-2.0",
+    "epl-1.0": "EPL-1.0",
+    "epl-2.0": "EPL-2.0",
+    "eupl-1.1": "EUPL-1.1",
+    "eupl-1.2": "EUPL-1.2",
+    "gfdl": "GFDL-1.3-or-later",
+    "gpl": "GPL-3.0-only",
+    "gpl-2.0": "GPL-2.0-only",
+    "gpl-2.0-only": "GPL-2.0-only",
+    "gpl-3.0": "GPL-3.0-only",
+    "gpl-3.0-only": "GPL-3.0-only",
+    "isc": "ISC",
+    "lgpl": "LGPL-2.1-only",
+    "lgpl-2.1": "LGPL-2.1-only",
+    "lgpl-2.1-only": "LGPL-2.1-only",
+    "lgpl-3.0": "LGPL-3.0-only",
+    "lgpl-3.0-only": "LGPL-3.0-only",
+    "lppl-1.3c": "LPPL-1.3c",
+    "mit": "MIT",
+    "mpl-2.0": "MPL-2.0",
+    "ncsa": "NCSA",
+    "odbl": "ODbL-1.0",
+    "odc-by": "ODC-By-1.0",
+    "ofl-1.1": "OFL-1.1",
+    "osl-3.0": "OSL-3.0",
+    "pddl": "PDDL-1.0",
+    "postgresql": "PostgreSQL",
+    "unlicense": "Unlicense",
+    "wtfpl": "WTFPL",
+    "zlib": "Zlib",
+}
+
+CC_LICENSE_URIS = {
+    "cc0-1.0": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "cc-by-2.0": "http://creativecommons.org/licenses/by/2.0/",
+    "cc-by-2.5": "http://creativecommons.org/licenses/by/2.5/",
+    "cc-by-3.0": "http://creativecommons.org/licenses/by/3.0/",
+    "cc-by-4.0": "http://creativecommons.org/licenses/by/4.0/",
+    "cc-by-sa-3.0": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "cc-by-sa-4.0": "http://creativecommons.org/licenses/by-sa/4.0/",
+    "cc-by-nc-2.0": "http://creativecommons.org/licenses/by-nc/2.0/",
+    "cc-by-nc-3.0": "http://creativecommons.org/licenses/by-nc/3.0/",
+    "cc-by-nc-4.0": "http://creativecommons.org/licenses/by-nc/4.0/",
+    "cc-by-nc-sa-2.0": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+    "cc-by-nc-sa-3.0": "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+    "cc-by-nc-sa-4.0": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "cc-by-nc-nd-3.0": "http://creativecommons.org/licenses/by-nc-nd/3.0/",
+    "cc-by-nc-nd-4.0": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "cc-by-nd-4.0": "http://creativecommons.org/licenses/by-nd/4.0/",
+}
+
+CONTINENTS = {
+    "af": "6255146",  # Africa
+    "as": "6255147",  # Asia
+    "eu": "6255148",  # Europe
+    "na": "6255149",  # North America
+    "sa": "6255150",  # South America
+    "oc": "6255151",  # Oceania
+    "an": "6255152",  # Antarctica
+}
+
+AMBIGUOUS_LANGUAGE_TAGS = {
+    "eu",   # Europe / basque
+    "id",   # identifier / indonesian
+}
+
+NS_LEXVO_ISO639_1 = "https://lexvo.org/id/iso639-1/"
+NS_LEXVO_ISO639_3 = "https://lexvo.org/id/iso639-3/"
+NS_ISO3166 = "https://www.iso.org/obp/ui/#iso:code:3166:"
+NS_SPDX_LICENSES = "https://spdx.org/licenses/"
+NS_GEONAMES = "http://sws.geonames.org/"
+
+
+@cache
+def iso639_1_codes() -> set[str]:
+    return {
+        lang.alpha_2.lower()
+        for lang in pycountry.languages
+        if hasattr(lang, "alpha_2")
+    }
+
+@cache
+def iso639_3_codes() -> set[str]:
+    return {
+        lang.alpha_3.lower()
+        for lang in pycountry.languages
+        if hasattr(lang, "alpha_3")
+    }
+
+@cache
+def geonames_codes() -> dict[str, str]:
+    mapping: dict[str, str] = {}
+
+    # Pays (ISO)
+    url = (
+        "https://download.geonames.org/export/dump/"
+        "countryInfo.txt"
+    )
+
+    response = requests.get(url, timeout=30)
+    response.raise_for_status()
+
+    for line in response.text.splitlines():
+        if not line or line.startswith("#"):
+            continue
+
+        cols = line.split("\t")
+
+        if len(cols) <= 16:
+            continue
+
+        iso = cols[0].strip().lower()
+        geoname_id = cols[16].strip()
+
+        if iso and geoname_id:
+            mapping[iso] = (
+                f"{NS_GEONAMES}{geoname_id}/"
+            )
+
+    # Continents (GeoNames)
+    for name, geoname_id in CONTINENTS.items():
+        mapping[name] = (
+            f"{NS_GEONAMES}{geoname_id}/"
+        )
+
+    return mapping
+
+def get_tag_alone(tags: list[str], kind) -> list[str]:
+    tokens: list[str] = []
+
+    if kind == "language":
+        test = test = (iso639_1_codes() | iso639_3_codes()) - AMBIGUOUS_LANGUAGE_TAGS
+    elif kind == "license":
+        test = SPDX_CANONICAL_IDS.keys() | CC_LICENSE_URIS.keys()
+    else:
+        raise ValueError(f"Unsupported kind: {kind}")
+
+    for tag in tags:
+        if ":" in tag:
+            continue
+        candidate = tag.lower().replace("_", "-")
+        if candidate in test:
+            tokens.append(candidate)
+    
+    tags[:] = [tag for tag in tags if tag.lower().replace("_", "-") not in tokens]
+    return dedupe(tokens)
+
+
+def region_uri(token: str) -> str | None:
+    token = token.strip().lower()
+
+    if token in {"unknown", "other"}:
+        return None
+
+    return geonames_codes().get(token)
+
+
+def language_uri(token: str) -> str | None:
+    token = token.strip().lower().replace("_", "-")
+
+    if not LANGUAGE_BCP47.fullmatch(token):
+        return None
+
+    primary = token.split("-", 1)[0]
+
+    if len(primary) == 2 and primary in iso639_1_codes():
+        return f"{NS_LEXVO_ISO639_1}{primary}"
+
+    if len(primary) == 3 and primary in iso639_3_codes():
+        return f"{NS_LEXVO_ISO639_3}{primary}"
+
+    return None
+
+
+def license_uri(token: str) -> str | None:
+    token = token.strip().lower()
+
+    if token in {"unknown", "other"}:
+        return None
+
+    if token in CC_LICENSE_URIS:
+        return CC_LICENSE_URIS[token]
+
+    spdx_id = SPDX_CANONICAL_IDS.get(token)
+
+    if spdx_id:
+        return f"{NS_SPDX_LICENSES}{spdx_id}"
+
+    return None
+
+
+def build_uris(values: list[str], kind: str) -> list[str]:
+    builders = {
+        "language": language_uri,
+        "region": region_uri,
+        "license": license_uri,
+    }
+
+    builder = builders.get(kind)
+
+    if builder is None:
+        raise ValueError(f"Unsupported kind: {kind}")
+
+    uris = [
+        uri
+        for value in values
+        if (uri := builder(value)) is not None
+    ]
+
+    return dedupe(uris)
+

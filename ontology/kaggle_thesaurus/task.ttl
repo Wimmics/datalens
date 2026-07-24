@@ -1,0 +1,384 @@
+dlt:TaskScheme a skos:ConceptScheme ;
+    skos:prefLabel "Task"@en ;
+    skos:definition "Controlled vocabulary for the 'Task' tag category."@en .
+
+dlt:Classification a skos:Concept, dlo:Task ;
+    skos:prefLabel "Classification"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:Clustering a skos:Concept, dlo:Task ;
+    skos:prefLabel "Clustering"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ReinforcementLearning a skos:Concept, dlo:Task ;
+    skos:prefLabel "Reinforcement Learning"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:LogisticRegression a skos:Concept, dlo:Task ;
+    skos:prefLabel "Logistic Regression"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:LinearRegression a skos:Concept, dlo:Task ;
+    skos:prefLabel "Linear Regression"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:BinaryClassification a skos:Concept, dlo:Task ;
+    skos:prefLabel "Binary Classification"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:MulticlassClassification a skos:Concept, dlo:Task ;
+    skos:prefLabel "Multiclass Classification"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:Regression a skos:Concept, dlo:Task ;
+    skos:prefLabel "Regression"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:MultilabelClassification a skos:Concept, dlo:Task ;
+    skos:prefLabel "Multilabel Classification"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:AudioCommandDetection a skos:Concept, dlo:Task ;
+    skos:prefLabel "Audio Command Detection"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:AudioSynthesis a skos:Concept, dlo:Task ;
+    skos:prefLabel "Audio Synthesis"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:AudioToAudio a skos:Concept, dlo:Task ;
+    skos:prefLabel "Audio To Audio"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:AutomaticSpeechRecognition a skos:Concept, dlo:Task ;
+    skos:prefLabel "Automatic Speech Recognition"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:AudioClassification a skos:Concept, dlo:Task ;
+    skos:prefLabel "Audio Classification"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:AudioEventClassification a skos:Concept, dlo:Task ;
+    skos:prefLabel "Audio Event Classification"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ImageClassification a skos:Concept, dlo:Task ;
+    skos:prefLabel "Image Classification"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ImageClassificationLogits a skos:Concept, dlo:Task ;
+    skos:prefLabel "Image Classification Logits"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:MultitaskClassification a skos:Concept, dlo:Task ;
+    skos:prefLabel "Multitask Classification"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ParalinguisticClassification a skos:Concept, dlo:Task ;
+    skos:prefLabel "Paralinguistic Classification"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:TabularClassification a skos:Concept, dlo:Task ;
+    skos:prefLabel "Tabular Classification"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:TextClassification a skos:Concept, dlo:Task ;
+    skos:prefLabel "Text Classification"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:TokenClassification a skos:Concept, dlo:Task ;
+    skos:prefLabel "Token Classification"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ZeroShotTextClassification a skos:Concept, dlo:Task ;
+    skos:prefLabel "Zero Shot Text Classification"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:FeatureExtraction a skos:Concept, dlo:Task ;
+    skos:prefLabel "Feature Extraction"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:TextFillMask a skos:Concept, dlo:Task ;
+    skos:prefLabel "Text Fill Mask"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:TextGeneration a skos:Concept, dlo:Task ;
+    skos:prefLabel "Text Generation"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:VideoGeneration a skos:Concept, dlo:Task ;
+    skos:prefLabel "Video Generation"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ImageAugmentation a skos:Concept, dlo:Task ;
+    skos:prefLabel "Image Augmentation"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ImageDepthEstimation a skos:Concept, dlo:Task ;
+    skos:prefLabel "Image Depth Estimation"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ImageExtrapolation a skos:Concept, dlo:Task ;
+    skos:prefLabel "Image Extrapolation"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ImageFeatureVector a skos:Concept, dlo:Task ;
+    skos:prefLabel "Image Feature Vector"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ImageGenerator a skos:Concept, dlo:Task ;
+    skos:prefLabel "Image Generator"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ImageStyleTransfer a skos:Concept, dlo:Task ;
+    skos:prefLabel "Image Style Transfer"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ImageSuperResolution a skos:Concept, dlo:Task ;
+    skos:prefLabel "Image Super Resolution"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ImageTextDetection a skos:Concept, dlo:Task ;
+    skos:prefLabel "Image Text Detection"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ImageTextRecognition a skos:Concept, dlo:Task ;
+    skos:prefLabel "Image Text Recognition"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ImageToImage a skos:Concept, dlo:Task ;
+    skos:prefLabel "Image To Image"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:TextToImage a skos:Concept, dlo:Task ;
+    skos:prefLabel "Text To Image"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:TextToSpeech a skos:Concept, dlo:Task ;
+    skos:prefLabel "Text To Speech"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:TextToTextGeneration a skos:Concept, dlo:Task ;
+    skos:prefLabel "Text To Text Generation"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:PitchExtraction a skos:Concept, dlo:Task ;
+    skos:prefLabel "Pitch Extraction"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:PoseDetection a skos:Concept, dlo:Task ;
+    skos:prefLabel "Pose Detection"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:TextPreProcessing a skos:Concept, dlo:Task ;
+    skos:prefLabel "Text Pre Processing"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:QuestionAnswering a skos:Concept, dlo:Task ;
+    skos:prefLabel "Question Answering"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:RetrievalQuestionAnswering a skos:Concept, dlo:Task ;
+    skos:prefLabel "Retrieval Question Answering"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ImageSegmentation a skos:Concept, dlo:Task ;
+    skos:prefLabel "Image Segmentation"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:TextSegmentation a skos:Concept, dlo:Task ;
+    skos:prefLabel "Text Segmentation"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:SentenceSimilarity a skos:Concept, dlo:Task ;
+    skos:prefLabel "Sentence Similarity"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:SpeechSynthesis a skos:Concept, dlo:Task ;
+    skos:prefLabel "Speech Synthesis"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:SpeechToText a skos:Concept, dlo:Task ;
+    skos:prefLabel "Speech To Text"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:Summarization a skos:Concept, dlo:Task ;
+    skos:prefLabel "Summarization"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:TextConversation a skos:Concept, dlo:Task ;
+    skos:prefLabel "Text Conversation"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:TextSequenceAlignment a skos:Concept, dlo:Task ;
+    skos:prefLabel "Text Sequence Alignment"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:TextToMel a skos:Concept, dlo:Task ;
+    skos:prefLabel "Text To Mel"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:Translation a skos:Concept, dlo:Task ;
+    skos:prefLabel "Translation"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:VideoAudioText a skos:Concept, dlo:Task ;
+    skos:prefLabel "Video Audio Text"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:VideoText a skos:Concept, dlo:Task ;
+    skos:prefLabel "Video Text"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:Other a skos:Concept, dlo:Task ;
+    skos:prefLabel "Other"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:AestheticQuality a skos:Concept, dlo:Task ;
+    skos:prefLabel "Aesthetic Quality"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:Deblurring a skos:Concept, dlo:Task ;
+    skos:prefLabel "Deblurring"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:Dehazing a skos:Concept, dlo:Task ;
+    skos:prefLabel "Dehazing"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:Denoising a skos:Concept, dlo:Task ;
+    skos:prefLabel "Denoising"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:FrameInterpolation a skos:Concept, dlo:Task ;
+    skos:prefLabel "Frame Interpolation"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ObjectDetection a skos:Concept, dlo:Task ;
+    skos:prefLabel "Object Detection"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:VideoClassification a skos:Concept, dlo:Task ;
+    skos:prefLabel "Video Classification"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:ImageToText a skos:Concept, dlo:Task ;
+    skos:prefLabel "Image To Text"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:Segmentation a skos:Concept, dlo:Task ;
+    skos:prefLabel "Segmentation"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:Distance a skos:Concept, dlo:Task ;
+    skos:prefLabel "Distance"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:RetrievalRanking a skos:Concept, dlo:Task ;
+    skos:prefLabel "Retrieval/ranking"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:Imagenet2012Classification a skos:Concept, dlo:Task ;
+    skos:prefLabel "Imagenet 2012 Classification"@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:Evaluation a skos:Concept, dlo:Task ;
+    skos:prefLabel "Evaluation"@en ;
+    skos:definition "A collection of values that evaluates an LLM's ability to consistently generate a certain domain of output."@en ;
+    skos:topConceptOf dlt:TaskScheme ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:MultilingualAndCrossLingualCapabilities a skos:Concept, dlo:Task ;
+    skos:prefLabel "Multilingual And Cross Lingual Capabilities"@en ;
+    skos:broader dlt:Evaluation ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:GeneralKnowledgeAndReasoning a skos:Concept, dlo:Task ;
+    skos:prefLabel "General Knowledge And Reasoning"@en ;
+    skos:broader dlt:Evaluation ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:Coding a skos:Concept, dlo:Task ;
+    skos:prefLabel "Coding"@en ;
+    skos:broader dlt:Evaluation ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:FactualityAndGrounding a skos:Concept, dlo:Task ;
+    skos:prefLabel "Factuality And Grounding"@en ;
+    skos:broader dlt:Evaluation ;
+    skos:inScheme dlt:TaskScheme .
+
+dlt:Math a skos:Concept, dlo:Task ;
+    skos:prefLabel "Math"@en ;
+    skos:broader dlt:Evaluation ;
+    skos:inScheme dlt:TaskScheme .

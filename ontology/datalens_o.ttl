@@ -9,17 +9,19 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix mls: <http://www.w3.org/ns/mls#> .
+@prefix mlso: <http://w3id.org/mlso#> .
 
 @prefix dlo: <http://ns.inria.fr/datalens/ontology/> .
 
 
 dlo: a owl:Ontology ;
     dcterms:title "Datalens Ontology"@en ;
-    dcterms:creator "Aline MENIN", "Zachari ARNAUD" ;
-    dcterms:modified "2026-06-22" ;
-    dcterms:description "The Datalens Ontology defines concepts and relationships for datasets and machine learning models."@en ;
+    dcterms:creator "Aline Menin", "Zachari Arnaud", "Catherine Faron", "Anaïs Ollagnier" ;
+    dcterms:modified "2026-07-16" ;
+    dcterms:description "The Datalens Ontology defines concepts and relationships for describing datasets and machine learning models."@en ;
     owl:versionInfo "1.0" ;
-    dcat:landingPage <https://github.com/amenin/datalens> ;
+    dcat:landingPage <https://github.com/Wimmics/datalens> ;
     dcterms:license  <https://www.apache.org/licenses/LICENSE-2.0> ;
     dcterms:created "2026"^^xsd:gYear ;
     dcterms:publisher "Inria", "University Côte d'Azur", "CNRS" .
@@ -28,13 +30,13 @@ dlo: a owl:Ontology ;
 # Class MLResource
 
 dlo:MLResource a owl:Class ;
-    rdfs:label "Resource"@en ;
+    rdfs:label "Machine Learning Resource"@en ;
     rdfs:comment "A resource like a dataset or a machine learning model."@en ;
     rdfs:subClassOf prov:Entity .
 
 ## Classes related to Resource
 dlo:SubTask a owl:Class ;
-    rdfs:label "Machine Learning Sub-task"@en ;
+    rdfs:label "Subtask"@en ;
     rdfs:comment "A specific sub-task or problem that a machine learning model is designed to solve."@en .
 
 dlo:Task a owl:Class ;
@@ -69,7 +71,7 @@ dlo:hasModality a owl:ObjectProperty ;
     rdfs:range dlo:Modality .
 
 dlo:hasSubTask a owl:ObjectProperty ;
-    rdfs:label "has ML sub-task"@en ;
+    rdfs:label "has ML subtask"@en ;
     rdfs:comment "Relates a resource to a specific sub-task."@en ;
     rdfs:domain  dlo:MLResource;
     rdfs:range dlo:SubTask .
@@ -137,13 +139,6 @@ dlo:hasAnnotation a owl:ObjectProperty ;
     rdfs:domain dlo:Dataset ;
     rdfs:range dlo:Annotation .
 
-dlo:hasSourceDataset a owl:ObjectProperty ;
-    rdfs:subPropertyOf prov:wasDerivedFrom ;
-    rdfs:label "has source dataset"@en ;
-    rdfs:comment "Relates a dataset to another dataset used as one of its sources."@en ;
-    rdfs:domain dlo:Dataset ;
-    rdfs:range dlo:Dataset .
-
 dlo:hasSize a owl:ObjectProperty ;
     rdfs:label "has size"@en ;
     rdfs:comment "Relates a dataset to a size category"@en ;
@@ -154,7 +149,7 @@ dlo:hasSize a owl:ObjectProperty ;
 # Class Model
 
 dlo:Model a owl:Class ;
-    rdfs:label "Machine Learning Model"@en ;
+    rdfs:label "Model"@en ;
     rdfs:comment "A machine learning model published on a platform such as Hugging Face."@en ;
     rdfs:subClassOf schema:SoftwareSourceCode ;
     rdfs:subClassOf dlo:MLResource .
@@ -165,23 +160,13 @@ dlo:Transformation a owl:Class ;
     rdfs:label "Model Transformation"@en ;
     rdfs:comment "A transformation or modification applied to a machine learning model."@en .
 
-dlo:ModelConfiguration a owl:Class ;
-    rdfs:label "Model Configuration"@en ;
-    rdfs:comment "The configuration of a machine learning model."@en .
-
-### Properties for model configuration
-
-dlo:hasModelArchitecture a owl:DatatypeProperty ;
-    rdfs:label "model architecture"@en ;
-    rdfs:comment "The architecture of the model, such as BERTForSequenceClassification, Qwen3ForCausalLM, etc."@en ;
-    rdfs:domain dlo:ModelConfiguration ;
-    rdfs:range rdfs:Literal .
-
-dlo:isModelType a owl:DatatypeProperty ;
-    rdfs:label "is model type"@en ;
-    rdfs:comment "The type of the model, such as BERT, Qwen3, etc."@en ;
-    rdfs:domain dlo:ModelConfiguration ;
-    rdfs:range rdfs:Literal .
+dlo:Implementation a owl:Class ;
+    rdfs:label "Implementation"@en ;
+    rdfs:comment "The implementation of a machine learning model."@en .
+    
+dlo:ModelFamily a owl:Class ;
+    rdfs:label "Model Family"@en ;
+    rdfs:comment "A family or category of machine learning models."@en .
 
 ## Properties for models
 dlo:wasTrainedOn a owl:ObjectProperty ;
@@ -191,11 +176,17 @@ dlo:wasTrainedOn a owl:ObjectProperty ;
     rdfs:domain dlo:Model ;
     rdfs:range dlo:Dataset .
 
-dlo:hasModelConfiguration a owl:ObjectProperty ;
-    rdfs:label "has model configuration"@en ;
-    rdfs:comment "The configuration of the model."@en ;
+dlo:hasModelFamily a owl:ObjectProperty ;
+    rdfs:label "has model family"@en ;
+    rdfs:comment "Relates a machine learning model to its family."@en ;
     rdfs:domain dlo:Model ;
-    rdfs:range dlo:ModelConfiguration .
+    rdfs:range dlo:ModelFamily .
+
+dlo:hasImplementation a owl:ObjectProperty ;
+    rdfs:label "has implementation"@en ;
+    rdfs:comment "Relates a machine learning model to its implementation."@en ;
+    rdfs:domain dlo:Model ;
+    rdfs:range dlo:Implementation .
 
 # Class alignments
 
@@ -208,5 +199,5 @@ dlo:Modality rdfs:subClassOf mlso:DataModality .
 # Property alignments
 
 dlo:wasTrainedOn rdfs:subPropertyOf mlso:trainedOn .
-dlo:hasAcademicArticle rdf:closeMatch mlso:hasScientificReference .
+dlo:hasAcademicArticle rdfs:subPropertyOf mlso:hasScientificReference .
 dlo:hasModality rdfs:subPropertyOf mlso:hasModality .

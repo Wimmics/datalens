@@ -15,7 +15,7 @@ DB_DIR = BASE_DIR / "db"
 RESOURCES_DIR = BASE_DIR.parent / "processing" / "resources"
 STATUS_FILE = BASE_DIR / "state" / "status.json"
 
-DEFAULT_BATCH_SIZE = 150000
+DEFAULT_BATCH_SIZE = 100000
 RATE_LIMIT_DELAY = 120
 SORT_KEY = "created_at"
 
