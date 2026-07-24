@@ -1,0 +1,833 @@
+websites	subject > science and technology > internet > websites
+research	subject > science and technology > research
+search engines	subject > science and technology > internet > search engines
+universities and colleges	subject > people and society > education > universities and colleges
+culture and humanities	subject > culture and humanities
+languages	subject > culture and humanities > languages
+popular culture	subject > culture and humanities > popular culture
+alcohol	subject > health and fitness > food > alcohol
+arts and entertainment	subject > arts and entertainment
+celebrities	subject > arts and entertainment > celebrities
+literature	subject > arts and entertainment > literature
+museums	subject > arts and entertainment > museums
+dance	subject > arts and entertainment > dance
+movies and tv shows	subject > arts and entertainment > movies and tv shows
+music	subject > arts and entertainment > music
+art	subject > arts and entertainment > art
+games	subject > culture and humanities > games
+board games	subject > culture and humanities > games > board games
+card games	subject > culture and humanities > games > card games
+puzzles	subject > culture and humanities > games > puzzles
+video games	subject > culture and humanities > games > video games
+football	subject > health and fitness > exercise > sports > football
+auto racing	subject > health and fitness > exercise > sports > auto racing
+baseball	subject > health and fitness > exercise > sports > baseball
+basketball	subject > health and fitness > exercise > sports > basketball
+cricket	subject > health and fitness > exercise > sports > cricket
+golf	subject > health and fitness > exercise > sports > golf
+gymnastics	health and fitness > self care > exercise > sports > individual sports > gymnastics
+hockey	subject > health and fitness > exercise > sports > hockey
+tennis	subject > health and fitness > exercise > sports > tennis
+water sports	subject > health and fitness > exercise > sports > water sports
+geography and places	geography and places
+water bodies	subject > earth and nature > environment > water bodies
+cities and urban areas	subject > earth and nature > environment > cities and urban areas
+global	geography and places > global
+deserts	subject > earth and nature > environment > deserts
+mountains	subject > earth and nature > environment > mountains
+united states	geography and places > north america > united states
+india	geography and places > asia > india
+china	geography and places > asia > china
+brazil	geography and places > south america > brazil
+europe	geography and places > europe
+north america	geography and places > north america
+south america	geography and places > south america
+africa	geography and places > africa
+australia	geography and places > oceania > australia
+asia	geography and places > asia
+russia	geography and places > asia > russia
+antarctica	geography and places > antarctica
+health and fitness	subject > health and fitness
+exercise	subject > health and fitness > exercise
+running	subject > health and fitness > exercise > running
+sports	subject > health and fitness > exercise > sports
+mental health	subject > health and fitness > health > health conditions > mental health
+healthcare	subject > health and fitness > health > healthcare
+diseases	subject > health and fitness > health > health conditions > diseases
+nutrition	subject > health and fitness > health > nutrition
+public health	subject > health and fitness > health > public health
+genetics	subject > earth and nature > biology > genetics
+dentistry	subject > health and fitness > health > healthcare > dentistry
+bayesian statistics	technique > bayesian statistics
+categorical	data type > categorical
+sampling	technique > sampling
+earth and nature	subject > earth and nature
+biology	subject > earth and nature > biology
+neuroscience	subject > health and fitness > health > neuroscience
+earth science	subject > earth and nature > earth science
+atmospheric science	subject > earth and nature > earth science > atmospheric science
+geography	subject > earth and nature > earth science > geography
+geology	subject > earth and nature > earth science > geology
+animals	subject > earth and nature > animals
+environment	subject > earth and nature > environment
+plants	subject > earth and nature > plants
+pollution	subject > earth and nature > environment > pollution
+physical science	subject > earth and nature > physical science
+astronomy	subject > earth and nature > physical science > astronomy
+chemistry	subject > earth and nature > physical science > chemistry
+physics	subject > earth and nature > physical science > physics
+natural disasters	subject > earth and nature > environment > natural disasters
+weather and climate	subject > earth and nature > environment > weather and climate
+people	subject > people and society > people
+gender	subject > people and society > people > gender
+clothing and accessories	subject > people and society > people > clothing and accessories
+employment	subject > people and society > jobs and career > employment
+income	subject > people and society > jobs and career > income
+housing	subject > people and society > business > real estate > housing
+philosophy	subject > arts and entertainment > philosophy
+history	subject > people and society > social science > history
+religion and belief systems	subject > people and society > religion and belief systems
+people and society	subject > people and society
+business	subject > people and society > business
+crime	subject > people and society > law > government > crime
+education	subject > people and society > education
+finance	subject > people and society > business > finance
+government	subject > people and society > law > government
+health	subject > health and fitness > health
+law	subject > people and society > law
+military	subject > people and society > law > government > military
+politics	subject > people and society > social science > politics
+real estate	subject > people and society > business > real estate
+lending	subject > people and society > business > finance > lending
+banking	subject > people and society > business > finance > banking
+crowdfunding	subject > people and society > business > finance > crowdfunding
+social science	subject > people and society > social science
+demographics	subject > people and society > social science > demographics
+economics	subject > people and society > social science > economics
+international relations	subject > people and society > social science > international relations
+linguistics	subject > people and society > social science > linguistics
+psychology	subject > people and society > social science > psychology
+mortality	subject > people and society > social science > demographics > mortality
+science and technology	subject > science and technology
+agriculture	subject > earth and nature > environment > agriculture
+biotechnology	subject > science and technology > biotechnology
+energy	subject > science and technology > energy
+forestry	subject > earth and nature > environment > forestry
+manufacturing	subject > science and technology > engineering > manufacturing
+marketing	subject > people and society > business > marketing
+medicine	subject > health and fitness > health > medicine
+robotics	subject > science and technology > engineering > robotics
+renewable energy	subject > science and technology > energy > renewable energy
+artificial intelligence	subject > science and technology > computer science > artificial intelligence
+computer science	subject > science and technology > computer science
+internet	subject > science and technology > internet
+mobile and wireless	subject > science and technology > internet > mobile and wireless
+programming	subject > science and technology > computer science > programming
+software	subject > science and technology > computer science > software
+electronics	subject > science and technology > electronics
+engineering	subject > science and technology > engineering
+transportation	subject > science and technology > transportation
+automobiles and vehicles	subject > science and technology > transportation > automobiles and vehicles
+aviation	subject > science and technology > transportation > aviation
+cycling	subject > science and technology > transportation > cycling
+rail transport	subject > science and technology > transportation > rail transport
+water transport	subject > science and technology > transportation > water transport
+audience	audience
+beginner	audience > beginner
+intermediate	audience > intermediate
+advanced	audience > advanced
+technique	technique
+exploratory data analysis	technique > exploratory data analysis
+data cleaning	analysis > data cleaning
+signal processing	analysis > signal processing
+nlp	analysis > nlp
+text mining	analysis > text mining
+geospatial analysis	analysis > geospatial analysis
+computer vision	technique > computer vision
+data visualization	technique > data visualization
+time series analysis	technique > time series analysis
+statistical analysis	analysis > statistical analysis
+survey analysis	analysis > survey analysis
+data analytics	technique > data analytics
+classification	task > classification
+clustering	task > clustering
+ensembling	technique > ensembling
+feature engineering	technique > feature engineering
+outlier analysis	technique > outlier analysis
+dimensionality reduction	technique > dimensionality reduction
+deep learning	technique > deep learning
+recommender systems	technique > recommender systems
+reinforcement learning	task > reinforcement-learning
+model comparison	technique > model comparison
+gradient boosting	technique > gradient boosting
+random forest	technique > random forest
+xgboost	packages > xgboost
+logistic regression	task > logistic regression
+linear regression	task > linear regression
+naive bayes	technique > naive bayes
+neural networks	technique > neural networks
+k-means	technique > k-means
+pca	technique > pca
+lstm	technique > neural networks > lstm
+svm	technique > svm
+hmm	algorithms > hmm
+gan	technique > neural networks > gan
+dnn	technique > neural networks > dnn
+cnn	technique > neural networks > cnn
+rnn	technique > neural networks > rnn
+decision tree	technique > decision tree
+data type	data type
+tabular	data type > tabular
+image	data type > image
+text	data type > text
+video	data type > video data
+bigquery	data type > bigquery
+binary classification	task > binary-classification
+multiclass classification	task > multiclass classification
+regression	task > regression
+adversarial learning	technique > adversarial learning
+transfer learning	technique > transfer learning
+initiatives	admin > initiatives
+dailychallenge	admin > initiatives > dailychallenge
+optimization	technique > optimization
+socrata	admin > initiatives > socrata
+task curation	admin > task curation
+task reviewed	admin > task curation > task reviewed
+task needs description	admin > task curation > task needs description
+task needs submission format	admin > task curation > task needs submission format
+task needs evaluation criteria	admin > task curation > task needs evaluation criteria
+task under construction	admin > task curation > under construction
+admin	admin
+learn	admin > learn course
+spaCy	packages > spaCy
+japan	geography and places > asia > japan
+model explainability	technique > model explainability
+auto-updating data	admin > auto-updating data
+audio	data type > audio
+utility script	admin > utility script
+cooking and recipes	subject > health and fitness > food > cooking and recipes
+food	subject > health and fitness > food
+restaurants	subject > health and fitness > food > restaurants
+gambling	subject > culture and humanities > games > gambling
+simulations	subject > culture and humanities > games > video games > simulations
+comics and animation	subject > arts and entertainment > comics and animation
+anime and manga	subject > arts and entertainment > comics and animation > anime and manga
+martial arts	subject > health and fitness > exercise > sports > martial arts
+volleyball	subject > health and fitness > exercise > sports > volleyball
+make-up and cosmetics	subject > people and society > people > make-up and cosmetics
+drugs and medications	subject > health and fitness > health > healthcare > drugs and medications
+fish and aquaria	subject > earth and nature > animals > fish and aquaria
+holidays and cultural events	subject > people and society > people > holidays and cultural events
+retail and shopping	subject > people and society > people > retail and shopping
+ratings and reviews	subject > people and society > business > ratings and reviews
+e-commerce services	subject > people and society > business > e-commerce services
+insurance	subject > people and society > business > finance > insurance
+investing	subject > people and society > business > finance > investing
+currencies and foreign exchange	subject > people and society > business > finance > currencies and foreign exchange
+health conditions	subject > health and fitness > health > health conditions
+cancer	subject > health and fitness > health > health conditions > cancer
+diabetes	subject > health and fitness > health > health conditions > diabetes
+heart conditions	subject > health and fitness > health > health conditions > heart conditions
+eyes and vision	subject > health and fitness > health > eyes and vision
+primary and secondary schools	subject > people and society > education > primary and secondary schools
+standardized testing	subject > people and society > education > standardized testing
+jobs and career	subject > people and society > jobs and career
+news	subject > people and society > news
+public safety	subject > people and society > law > government > public safety
+social issues and advocacy	subject > people and society > social issues and advocacy
+human rights	subject > people and society > social issues and advocacy > human rights
+travel	subject > people and society > business > travel
+hotels and accommodations	subject > people and society > business > travel > hotels and accommodations
+email and messaging	subject > science and technology > internet > email and messaging
+online communities	subject > science and technology > internet > online communities
+social networks	subject > science and technology > internet > online communities > social networks
+electricity	subject > science and technology > energy > electricity
+oil and gas	subject > science and technology > energy > oil and gas
+hospitals and treatment centers	subject > health and fitness > health > healthcare > hospitals and treatment centers
+Two Sigma x Kaggle Finance Data Repo	admin > initiatives > Two Sigma x Kaggle Finance Data Repo
+tpu	subject > science and technology > computer science > accelerators > tpu
+covid19	subject > health and fitness > health > health conditions > diseases > covid19
+accelerators	subject > science and technology > computer science > accelerators
+gpu	subject > science and technology > computer science > accelerators > gpu
+korea	geography and places > asia > korea
+canada	geography and places > north america > canada
+mexico	geography and places > north america > mexico
+packages	packages
+caret	packages > caret
+corrplot	packages > corrplot
+cv2	packages > cv2
+datetime	packages > datetime
+doParallel	packages > doParallel
+dplyr	packages > dplyr
+forcats	packages > forcats
+foreach	packages > foreach
+gc	packages > gc
+ggplot2	packages > ggplot2
+ggthemes	packages > ggthemes
+glob	packages > glob
+gridExtra	packages > gridExtra
+IPython	packages > IPython
+json	packages > json
+jsonlite	packages > jsonlite
+keras	packages > keras
+knitr	packages > knitr
+leaflet	packages > leaflet
+lightgbm	packages > lightgbm
+lubridate	packages > lubridate
+matplotlib	packages > matplotlib
+nltk	packages > nltk
+numpy	packages > numpy
+os	packages > os
+pandas	packages > pandas
+pathlib	packages > pathlib
+PIL	packages > PIL
+plotly	packages > plotly
+plyr	packages > plyr
+randomForest	packages > randomForest
+RColorBrewer	packages > RColorBrewer
+re	packages > re
+readr	packages > readr
+reshape2	packages > reshape2
+rpart	packages > rpart
+scipy	packages > scipy
+seaborn	packages > seaborn
+sklearn	packages > sklearn
+stringr	packages > stringr
+sys	packages > sys
+tensorflow	packages > tensorflow
+tibble	packages > tibble
+tidyr	packages > tidyr
+tidyverse	packages > tidyverse
+pytorch	packages > pytorch
+torchvision	packages > torchvision
+tqdm	packages > tqdm
+transformers	packages > transformers
+automl	technique > automl
+multilabel classification	task > multilabel-classification
+subject	subject
+urban planning	subject > people and society > social science > urban planning
+python	subject > science and technology > computer science > programming > python
+r	subject > science and technology > computer science > programming > r
+sql	subject > science and technology > computer science > programming > sql
+racial equity	subject > people and society > social issues and advocacy > racial equity
+ml ethics	subject > people and society > social issues and advocacy > ml ethics
+middle east	geography and places > middle east
+oceania	geography and places > oceania
+greenland	geography and places > north america > greenland
+scheduled	admin > scheduled
+pre-trained model	admin > pre-trained model
+synced dataset	admin > synced dataset
+competition metric	admin > competition metric
+task	task
+language	language
+architecture	architecture
+audio command detection	task > audio-command-detection
+audio synthesis	task > audio-synthesis
+audio-to-audio	task > audio-to-audio
+automatic speech recognition	task > automatic-speech-recognition
+audio classification	task > audio-classification
+audio event classification	task > audio-event-classification
+image classification	task > image-classification
+image classification logits	task > image-classification-logits
+multitask classification	task > multitask-classification
+paralinguistic classification	task > paralinguistic-classification
+tabular classification	task > tabular-classification
+text classification	task > text-classification
+token classification	task > token-classification
+zero-shot text classification	task > zero-shot-text-classification
+feature extraction	task > feature-extraction
+text fill-mask	task > text-fill-mask
+text generation	task > text-generation
+video generation	task > video-generation
+image augmentation	task > image-augmentation
+image depth estimation	task > image-depth-estimation
+image extrapolation	task > image-extrapolation
+image feature vector	task > image-feature-vector
+image generator	task > image-generator
+image style transfer	task > image-style-transfer
+image super resolution	task > image-super-resolution
+image text detection	task > image-text-detection
+image text recognition	task > image-text-recognition
+image-to-image	task > image-to-image
+text-to-image	task > text-to-image
+text-to-speech	task > text-to-speech
+text-to-text generation	task > text-to-text-generation
+pitch extraction	task > pitch-extraction
+pose detection	task > pose-detection
+text pre-processing	task > text-pre-processing
+question answering	task > question-answering
+retrieval question answering	task > retrieval-question-answering
+image segmentation	task > image-segmentation
+text segmentation	task > text-segmentation
+sentence similarity	task > sentence-similarity
+speech synthesis	task > speech-synthesis
+speech-to-text	task > speech-to-text
+summarization	task > summarization
+text conversation	task > text-conversation
+text sequence alignment	task > text-sequence-alignment
+text-to-mel	task > text-to-mel
+translation	task > translation
+video audio text	task > video-audio-text
+video text	task > video-text
+amoebanet-a (n=18, f=448)	architecture > amoebanet-a-n18-f448
+bert	architecture > bert
+big transfer	architecture > big-transfer
+bigan	architecture > bigan
+bigbigan	architecture > bigbigan
+biggan	architecture > biggan
+biggan-deep	architecture > biggan-deep
+cait	architecture > cait
+centernet	architecture > centernet
+conformer	architecture > conformer
+convmixer	architecture > convmixer
+convnext	architecture > convnext
+dan	architecture > dan
+deeplab (mobilenetv2_ade20k_train)	architecture > deeplab-mobilenetv2-ade20k-train
+deeplab (mobilenetv2_coco_voc_trainval)	architecture > deeplab-mobilenetv2-coco-voc-trainval
+deeplab (mobilenetv2_dm05_coco_voc_trainval)	architecture > deeplab-mobilenetv2-dm05-coco-voc-trainval
+deeplab (mobilenetv3_large_cityscapes_trainfine)	architecture > deeplab-mobilenetv3-large-cityscapes-trainfine
+deeplab (xception65_ade20k_train)	architecture > deeplab-xception65-ade20k-train
+deeplab (xception65_cityscapes_trainfine)	architecture > deeplab-xception65-cityscapes-trainfine
+deeplab (xception65_coco_voc_trainaug)	architecture > deeplab-xception65-coco-voc-trainaug
+deit	architecture > deit
+delf	architecture > delf
+efficientdet	architecture > efficientdet
+efficientnet v2	architecture > efficientnet-v2
+efficientnet-b0	architecture > efficientnet-b0
+efficientnet-b1	architecture > efficientnet-b1
+efficientnet-b2	architecture > efficientnet-b2
+efficientnet-b3	architecture > efficientnet-b3
+efficientnet-b4	architecture > efficientnet-b4
+efficientnet-b5	architecture > efficientnet-b5
+efficientnet-b6	architecture > efficientnet-b6
+efficientnet-b7	architecture > efficientnet-b7
+elmo	architecture > elmo
+fastdepth	architecture > fastdepth
+faster r-cnn	architecture > faster-r-cnn
+fcos	architecture > fcos
+fsaf	architecture > fsaf
+i3d	architecture > i3d
+inception resnet v2	architecture > inception-resnet-v2
+inception v1	architecture > inception-v1
+inception v2	architecture > inception-v2
+inception v3	architecture > inception-v3
+inception v4	architecture > inception-v4
+keywordspottingnet	architecture > keywordspottingnet
+mask r-cnn	architecture > mask-r-cnn
+midas	architecture > midas
+mlp-mixer	architecture > mlp-mixer
+mobilebert	architecture > mobilebert
+mobilebert edgetpu small	architecture > mobilebert-edgetpu-small
+mobilebert uncased_l-24_h-128_b-512_a-4_f-4_opt	architecture > mobilebert-uncased-l-24-h-128-b-512-a-4-f-4-opt
+mobilenet	architecture > mobilenet
+mobilenet v1	architecture > mobilenet-v1
+mobilenet v2	architecture > mobilenet-v2
+mobilenet v3	architecture > mobilenet-v3
+movinet	architecture > movinet
+multi-band melgan	architecture > multi-band-melgan
+nasnet-a (large)	architecture > nasnet-a-large
+nasnet-a (mobile)	architecture > nasnet-a-mobile
+nnclr	architecture > nnclr
+nnlm	architecture > nnlm
+other	task > other
+pnasnet-5 (large)	architecture > pnasnet-5-large
+progressive gan	architecture > progressive-gan
+regnetx	architecture > regnetx
+regnety	architecture > regnety
+reqa	architecture > reqa
+resnet	architecture > resnet
+resnet cifar	architecture > resnet-cifar
+resnet v1 101	architecture > resnet-v1-101
+resnet v1 152	architecture > resnet-v1-152
+resnet v1 200	architecture > resnet-v1-200
+resnet v1 50	architecture > resnet-v1-50
+resnet v2 101	architecture > resnet-v2-101
+resnet v2 152	architecture > resnet-v2-152
+resnet v2 50	architecture > resnet-v2-50
+resnet-152	architecture > resnet-152
+resnet101-v2	architecture > resnet101-v2
+resnet101x3-v2	architecture > resnet101x3-v2
+resnet152x4-v2	architecture > resnet152x4-v2
+resnet19	architecture > resnet19
+resnet50-v2	architecture > resnet50-v2
+resnet50x3-v2	architecture > resnet50x3-v2
+retinanet	architecture > retinanet
+s3d	architecture > s3d
+s3d-g	architecture > s3d-g
+silero-stt	architecture > silero-stt
+ssd	architecture > ssd
+ssd mobilenet v1	architecture > ssd-mobilenet-v1
+ssd mobilenet v2	architecture > ssd-mobilenet-v2
+ssd mobilenet v2 fpn	architecture > ssd-mobilenet-v2-fpn
+ssd spaghettinet edgetpu large	architecture > ssd-spaghettinet-edgetpu-large
+swin transformer	architecture > swin-transformer
+swivel	architecture > swivel
+tacotron 2	architecture > tacotron-2
+transformer	architecture > transformer
+transformer in transformer	architecture > transformer-in-transformer
+transformer xl	architecture > transformer-xl
+tridentnet	architecture > tridentnet
+tsm resnet50	architecture > tsm-resnet50
+tsm resnet50x2	architecture > tsm-resnet50x2
+tvn-1	architecture > tvn-1
+tvn-2	architecture > tvn-2
+tvn-3	architecture > tvn-3
+tvn-mobile-1	architecture > tvn-mobile-1
+ulmfit	architecture > ulmfit
+unet	architecture > unet
+vae	architecture > vae
+vgg-style	architecture > vgg-style
+videoflow	architecture > videoflow
+vision transformer	architecture > vision-transformer
+wae	architecture > wae
+wav2vec2	architecture > wav2vec2
+wide-resnet-40-8	architecture > wide-resnet-40-8
+word2vec skip-gram	architecture > word2vec-skip-gram
+wrn-106	architecture > wrn-106
+xcit	architecture > xcit
+yolo	architecture > yolo
+yolov5	architecture > yolov5
+abkhazian	language > abkhazian
+afar	language > afar
+afrikaans	language > afrikaans
+akan	language > akan
+albanian	language > albanian
+amharic	language > amharic
+arabic	language > arabic
+aragonese	language > aragonese
+armenian	language > armenian
+assamese	language > assamese
+avaric	language > avaric
+avestan	language > avestan
+aymara	language > aymara
+azerbaijani	language > azerbaijani
+bambara	language > bambara
+bashkir	language > bashkir
+basque	language > basque
+belarusian	language > belarusian
+bengali	language > bengali
+bislama	language > bislama
+bosnian	language > bosnian
+breton	language > breton
+bulgarian	language > bulgarian
+burmese	language > burmese
+catalan	language > catalan
+valencian	language > valencian
+chamorro	language > chamorro
+chechen	language > chechen
+chichewa	language > chichewa
+chewa	language > chewa
+nyanja	language > nyanja
+chinese	language > chinese
+church slavic	language > church-slavic
+old bulgarian	language > old-bulgarian
+chuvash	language > chuvash
+cornish	language > cornish
+corsican	language > corsican
+cree	language > cree
+croatian	language > croatian
+czech	language > czech
+danish	language > danish
+divehi	language > divehi
+dhivehi	language > dhivehi
+maldivian	language > maldivian
+dutch	language > dutch
+flemish	language > flemish
+dzongkha	language > dzongkha
+english	language > english
+esperanto	language > esperanto
+estonian	language > estonian
+ewe	language > ewe
+faroese	language > faroese
+fijian	language > fijian
+finnish	language > finnish
+french	language > french
+western frisian	language > western-frisian
+fulah	language > fulah
+gaelic	language > gaelic
+scottish gaelic	language > scottish-gaelic
+galician	language > galician
+ganda	language > ganda
+georgian	language > georgian
+german	language > german
+greek	language > greek
+kalaallisut	language > kalaallisut
+greenlandic	language > greenlandic
+guarani	language > guarani
+gujarati	language > gujarati
+haitian	language > haitian
+haitian creole	language > haitian-creole
+hausa	language > hausa
+hebrew	language > hebrew
+herero	language > herero
+hindi	language > hindi
+hiri motu	language > hiri-motu
+hungarian	language > hungarian
+icelandic	language > icelandic
+ido	language > ido
+igbo	language > igbo
+indonesian	language > indonesian
+interlingua	language > interlingua
+interlingue, occidental	language > interlingue-occidental
+inuktitut	language > inuktitut
+inupiaq	language > inupiaq
+irish	language > irish
+italian	language > italian
+japanese	language > japanese
+javanese	language > javanese
+kannada	language > kannada
+kanuri	language > kanuri
+kashmiri	language > kashmiri
+kazakh	language > kazakh
+central khmer	language > central-khmer
+kikuyu	language > kikuyu
+gikuyu	language > gikuyu
+kinyarwanda	language > kinyarwanda
+kirghiz	language > kirghiz
+kyrgyz	language > kyrgyz
+komi	language > komi
+kongo	language > kongo
+korean	language > korean
+kuanyama	language > kuanyama
+kwanyama	language > kwanyama
+kurdish	language > kurdish
+lao	language > lao
+latin	language > latin
+latvian	language > latvian
+limburgan	language > limburgan
+limburgish	language > limburgish
+limburger	language > limburger
+lingala	language > lingala
+lithuanian	language > lithuanian
+luba-katanga	language > luba-katanga
+luxembourgish	language > luxembourgish
+letzeburgesch	language > letzeburgesch
+macedonian	language > macedonian
+malagasy	language > malagasy
+malay	language > malay
+malayalam	language > malayalam
+maltese	language > maltese
+manx	language > manx
+maori	language > maori
+marathi	language > marathi
+marshallese	language > marshallese
+mongolian	language > mongolian
+nauru	language > nauru
+navajo	language > navajo
+navaho	language > navaho
+north ndebele	language > north-ndebele
+south ndebele	language > south-ndebele
+ndonga	language > ndonga
+nepali	language > nepali
+norwegian	language > norwegian
+norwegian bokmål	language > norwegian-bokmål
+norwegian nynorsk	language > norwegian-nynorsk
+sichuan yi	language > sichuan-yi
+nuosu	language > nuosu
+occitan	language > occitan
+ojibwa	language > ojibwa
+oriya	language > oriya
+oromo	language > oromo
+ossetian	language > ossetian
+ossetic	language > ossetic
+pali	language > pali
+pashto, pushto	language > pashto-pushto
+persian	language > persian
+polish	language > polish
+portuguese	language > portuguese
+punjabi	language > punjabi
+panjabi	language > panjabi
+quechua	language > quechua
+romanian	language > romanian
+moldovan	language > moldovan
+moldavian	language > moldavian
+romansh	language > romansh
+rundi	language > rundi
+russian	language > russian
+northern sami	language > northern-sami
+samoan	language > samoan
+sango	language > sango
+sanskrit	language > sanskrit
+sardinian	language > sardinian
+serbian	language > serbian
+shona	language > shona
+sindhi	language > sindhi
+sinhala	language > sinhala
+sinhalese	language > sinhalese
+slovak	language > slovak
+slovenian	language > slovenian
+somali	language > somali
+southern sotho	language > southern-sotho
+spanish	language > spanish
+castilian	language > castilian
+sundanese	language > sundanese
+swahili	language > swahili
+swati	language > swati
+swedish	language > swedish
+tagalog	language > tagalog
+tahitian	language > tahitian
+tajik	language > tajik
+tamil	language > tamil
+tatar	language > tatar
+telugu	language > telugu
+thai	language > thai
+tibetan	language > tibetan
+tigrinya	language > tigrinya
+tonga	language > tonga
+tsonga	language > tsonga
+tswana	language > tswana
+turkish	language > turkish
+turkmen	language > turkmen
+twi	language > twi
+uighur	language > uighur
+uyghur	language > uyghur
+ukrainian	language > ukrainian
+urdu	language > urdu
+uzbek	language > uzbek
+venda	language > venda
+vietnamese	language > vietnamese
+volapük	language > volapük
+walloon	language > walloon
+welsh	language > welsh
+wolof	language > wolof
+xhosa	language > xhosa
+yiddish	language > yiddish
+yoruba	language > yoruba
+zhuang	language > zhuang
+chuang	language > chuang
+zulu	language > zulu
+chinese (taiwan)	language > chinese-taiwan
+multilingual	language > multilingual
+bit	architecture > bit
+efficientnet	architecture > efficientnet
+hrnet-v2-w48	architecture > hrnet-v2-w48
+maxim	architecture > maxim
+mobilevit	architecture > mobilevit
+mosaic	architecture > mosaic
+multiple	architecture > multiple
+tnt	architecture > tnt
+video-swin-transformer	architecture > video-swin-transformer
+vit	architecture > vit
+aesthetic quality	task > aesthetic-quality
+deblurring	task > deblurring
+dehazing	task > dehazing
+denoising	task > denoising
+frame interpolation	task > frame-interpolation
+object detection	task > object-detection
+video classification	task > video-classification
+data storytelling	technique > data storytelling
+hugging face	packages > hugging face
+wandb	packages > wandb
+d3js	packages > d3js
+rapids	packages > rapids
+multimodal	data type > multimodal data
+knn	technique > knn
+1x1 convolution	architecture > 1x1-convolution
+anti-alias downsampling	architecture > anti-alias-downsampling
+attention dropout	architecture > attention-dropout
+auxiliary classifier	architecture > auxiliary-classifier
+average pooling	architecture > average-pooling
+batch normalization	architecture > batch-normalization
+blur pooling	architecture > blur-pooling
+bottleneck residual block	architecture > bottleneck-residual-block
+condconv	architecture > condconv
+convolution	architecture > convolution
+dla bottleneck residual block	architecture > dla-bottleneck-residual-block
+dla residual block	architecture > dla-residual-block
+dpn block	architecture > dpn-block
+dense block	architecture > dense-block
+dense connections	architecture > dense-connections
+depthwise separable convolution	architecture > depthwise-separable-convolution
+dropout	architecture > dropout
+efficient channel attention	architecture > efficient-channel-attention
+fbnet block	architecture > fbnet-block
+gelu	architecture > gelu
+global average pooling	architecture > global-average-pooling
+group normalization	architecture > group-normalization
+grouped convolution	architecture > grouped-convolution
+hard swish	architecture > hard-swish
+inplace-abn	architecture > inplace-abn
+inception-a	architecture > inception-a
+inception-b	architecture > inception-b
+inception-c	architecture > inception-c
+inception-resnet-v2-a	architecture > inception-resnet-v2-a
+inception-resnet-v2-b	architecture > inception-resnet-v2-b
+inception-resnet-v2-c	architecture > inception-resnet-v2-c
+inception-v3 module	architecture > inception-v3-module
+inverted residual block	architecture > inverted-residual-block
+layer normalization	architecture > layer-normalization
+leaky relu	architecture > leaky-relu
+max pooling	architecture > max-pooling
+mish	architecture > mish
+mixconv	architecture > mixconv
+multi-head attention	architecture > multi-head-attention
+one-shot aggregation	architecture > one-shot-aggregation
+relu6	architecture > relu6
+relu	architecture > relu
+reduction-a	architecture > reduction-a
+reduction-b	architecture > reduction-b
+res2next block	architecture > res2next-block
+res2net block	architecture > res2net-block
+resnext block	architecture > resnext-block
+residual block	architecture > residual-block
+residual connection	architecture > residual-connection
+scaled dot-product attention	architecture > scaled-dot-product-attention
+selecsls block	architecture > selecsls-block
+selective kernel	architecture > selective-kernel
+softmax	architecture > softmax
+split attention	architecture > split-attention
+squeeze-and-excitation block	architecture > squeeze-and-excitation-block
+swish	architecture > swish
+tanh activation	architecture > tanh-activation
+weight standardization	architecture > weight-standardization
+wide residual block	architecture > wide-residual-block
+image-to-text	task > image-to-text
+segmentation	task > segmentation
+distance	task > distance
+retrieval/ranking	task > retrieval/ranking
+graph	data type > graph
+graph neural network	technique > graph neural network
+albert	architecture > albert
+deberta-v3	architecture > deberta-v3
+distilbert	architecture > distilbert
+fnet	architecture > fnet
+gpt2	architecture > gpt2
+opt	architecture > opt
+roberta	architecture > roberta
+xlm-roberta	architecture > xlm-roberta
+cspdarknet	architecture > cspdarknet
+densenet	architecture > densenet
+efficientnetv2	architecture > efficientnetv2
+mobilenetv3	architecture > mobilenetv3
+resnetv1	architecture > resnetv1
+resnetv2	architecture > resnetv2
+yolov8	architecture > yolov8
+mit	architecture > mit
+imagenet 2012 classification	task > imagenet-2012-classification
+bart	architecture > bart
+t5	architecture > t5
+whisper	architecture > whisper
+deeplabv3plus	architecture > deeplabv3plus
+vitdet	architecture > vitdet
+segformer	architecture > segformer
+sam	architecture > sam
+mathematics	subject > mathematics
+cyber security	subject > cyber security
+catboost	packages > catboost
+benchmark dataset	admin > benchmark dataset
+benchmark	technique > benchmark
+synthetic	data type > synthetic
+competition gateway	admin > competition gateway
+package	admin > package
+ears and hearing	subject > health and fitness > health > ears and hearing
+personal benchmark	admin > personal benchmark
+personal benchmark published	admin > personal benchmark > published
+evaluation	task > evaluation
+multilingual and cross-lingual capabilities	task > evaluation > multilingual-and-cross-lingual-capabilities
+general knowledge and reasoning	task > evaluation > general-knowledge-and-reasoning
+coding	task > evaluation > coding
+factuality and grounding	task > evaluation > factuality-and-grounding
+math	task > evaluation > math
+docker proxy	admin > docker proxy
+game arena	admin > game arena
+TabPFN	packages > tabpfn

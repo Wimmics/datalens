@@ -1,0 +1,121 @@
+multilinguality
+===============
+monolingual : 9240
+multilingual : 3047
+translation : 330
+translated : 145
+unknown : 40
+
+diffusers
+=========
+Aucune occurrence
+
+template
+========
+sd-lora : 3
+diffusion-lora : 3
+
+deploy
+======
+Aucune occurrence
+
+loss
+====
+Aucune occurrence
+
+dataset_size
+============
+Aucune occurrence
+
+BaseLM
+======
+Aucune occurrence
+
+adapterhub
+==========
+Aucune occurrence
+
+trackio
+=======
+Aucune occurrence
+
+model-type
+==========
+Aucune occurrence
+
+tissue
+======
+Aucune occurrence
+
+model
+=====
+Aucune occurrence
+
+object
+======
+Aucune occurrence
+
+tags
+====
+   - nutrition   - german   - coaching   - dietetics   - personal-training   - healthcare   - nlp   - llm   - education   - fitness   - gesundheit   - deutschland   - schweiz   - dach   - online-ausbildung   - snfa   - qualicert   - curriculum   - markdown : 1
+
+repo_name
+=========
+Aucune occurrence
+
+file_name
+=========
+Aucune occurrence
+
+pruning_style
+=============
+Aucune occurrence
+
+community
+=========
+Aucune occurrence
+
+pruning_ratio
+=============
+Aucune occurrence
+
+dataset_label
+=============
+Aucune occurrence
+
+sparsity_ratio
+==============
+Aucune occurrence
+
+finetune
+========
+Aucune occurrence
+
+modules_size
+============
+Aucune occurrence
+
+modules
+=======
+Aucune occurrence
+
+rank
+====
+Aucune occurrence
+
+model_cls_name
+==============
+Aucune occurrence
+
+annotated
+=========
+Aucune occurrence
+
+anndata_version
+===============
+Aucune occurrence
+
+scvi_version
+============
+Aucune occurrence
+

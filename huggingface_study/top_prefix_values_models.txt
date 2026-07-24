@@ -1,0 +1,204 @@
+multilinguality
+===============
+Aucune occurrence
+
+diffusers
+=========
+StableDiffusionPipeline : 15550
+StableDiffusionXLPipeline : 12547
+DDPMPipeline : 4185
+FluxPipeline : 537
+StableDiffusionInstructPix2PixPipeline : 513
+
+template
+========
+sd-lora : 14365
+diffusion-lora : 11729
+sdxl-lora : 358
+sd-sae : 8
+illustrious-xl : 4
+
+deploy
+======
+azure : 10603
+
+loss
+====
+MultipleNegativesRankingLoss : 3333
+MatryoshkaLoss : 1171
+TripletLoss : 1041
+CosineSimilarityLoss : 609
+CoSENTLoss : 332
+
+dataset_size
+============
+6300 : 139
+557850 : 111
+99000 : 89
+156 : 89
+10000 : 67
+
+BaseLM
+======
+bert-base-multilingual-uncased : 1509
+google-bert/bert-base-uncased : 2
+bert-base-cased : 1
+
+adapterhub
+==========
+sentiment/amazon : 64
+self-explanations : 48
+nli/multinli : 33
+argument/quality : 23
+pico_ner : 17
+
+trackio
+=======
+https://huggingface.co/spaces/fernando-machina/trackio : 36
+https://huggingface.co/spaces/sahilmob/trackio : 7
+https://huggingface.co/spaces/ciphertext/trackio : 7
+https://huggingface.co/spaces/wheattoast11/trackio : 7
+https://huggingface.co/spaces/akseljoonas/trackio : 6
+
+model-type
+==========
+honest : 277
+obfuscated-activations : 103
+obfuscated-policy : 68
+blatant-deception : 20
+
+tissue
+======
+various : 112
+ diverse : 6
+ thymus : 5
+ tongue : 5
+ limb muscle : 5
+
+model
+=====
+ llama : 66
+ llama_chat : 60
+ vicuna : 60
+yolov11-nano : 42
+yolov8n : 14
+
+object
+======
+person : 32
+car : 9
+truck : 7
+motorcycle : 6
+bus : 4
+
+tags
+====
+ ['model: llama', 'repo_name: llama_block_0_tracking_shuffled_objects_All', 'file_name: llama_block_0_tracking_shuffled_objects_All_5000_5.pt', 'base_model: meta-llama/Llama-2-7b-hf', 'pruning_style: block', 'community: 0', 'pruning_ratio: 20', 'dataset_label: tracking_shuffled_objects', 'sparsity_ratio: 20', "dataset: ['tasksource/bigbench', 'tracking_shuffled_objects']", 'finetune: All', 'modules_size: 27', "modules: ['11_attn.q', '13_attn.o', '13_attn.q', '14_attn.k', '14_attn.v', '16_attn.q', '18_attn.k', '20_attn.o', '21_attn.k', '23_attn.k', '23_attn.o', '23_attn.v', '25_attn.o', '25_attn.v', '26_attn.k', '27_attn.o', '28_attn.o', '29_attn.k', '30_attn.o', '30_attn.v', '3_attn.o', '3_attn.q', '5_attn.q', '6_attn.o', '7_attn.q', '8_attn.o', '8_attn.q']", 'rank: 2'] : 1
+ ['model: llama', 'repo_name: llama_block_0_tracking_shuffled_objects_Community', 'file_name: llama_block_0_tracking_shuffled_objects_Community_5000_5.pt', 'base_model: meta-llama/Llama-2-7b-hf', 'pruning_style: block', 'community: 0', 'pruning_ratio: 20', 'dataset_label: tracking_shuffled_objects', 'sparsity_ratio: 20', "dataset: ['tasksource/bigbench', 'tracking_shuffled_objects']", 'finetune: Community', 'modules_size: 27', "modules: ['11_attn.q', '13_attn.o', '13_attn.q', '14_attn.k', '14_attn.v', '16_attn.q', '18_attn.k', '20_attn.o', '21_attn.k', '23_attn.k', '23_attn.o', '23_attn.v', '25_attn.o', '25_attn.v', '26_attn.k', '27_attn.o', '28_attn.o', '29_attn.k', '30_attn.o', '30_attn.v', '3_attn.o', '3_attn.q', '5_attn.q', '6_attn.o', '7_attn.q', '8_attn.o', '8_attn.q']", 'rank: 2'] : 1
+ ['model: llama', 'repo_name: llama_block_0_tracking_shuffled_objects_Complete Random', 'file_name: llama_block_0_tracking_shuffled_objects_Complete Random_5000_5.pt', 'base_model: meta-llama/Llama-2-7b-hf', 'pruning_style: block', 'community: 0', 'pruning_ratio: 20', 'dataset_label: tracking_shuffled_objects', 'sparsity_ratio: 20', "dataset: ['tasksource/bigbench', 'tracking_shuffled_objects']", 'finetune: Complete Random', 'modules_size: 27', "modules: ['8_attn.k', '13_attn.v', '25_gate', '23_gate', '9_mlp.up', '26_mlp.down', '5_mlp.up', '6_attn.v', '27_attn.q', '11_gate', '10_attn.q', '27_attn.v', '20_gate', '10_mlp.down', '10_attn.o', '3_attn.k', '19_mlp.down', '8_attn.v', '19_mlp.up', '21_attn.o', '24_attn.k', '6_attn.q', '13_gate', '17_attn.k', '7_attn.k', '18_mlp.down', '17_attn.v']", 'rank: 2'] : 1
+ ['model: llama', 'repo_name: llama_block_0_disambiguation_qa_Community', 'file_name: llama_block_0_disambiguation_qa_Community_5000_5.pt', 'base_model: meta-llama/Llama-2-7b-hf', 'pruning_style: block', 'community: 0', 'pruning_ratio: 20', 'dataset_label: disambiguation_qa', 'sparsity_ratio: 20', "dataset: ['tasksource/bigbench', 'disambiguation_qa']", 'finetune: Community', 'modules_size: 27', "modules: ['11_attn.q', '13_attn.o', '13_attn.q', '14_attn.k', '14_attn.v', '16_attn.q', '18_attn.k', '20_attn.o', '21_attn.k', '23_attn.k', '23_attn.o', '23_attn.v', '25_attn.o', '25_attn.v', '26_attn.k', '27_attn.o', '28_attn.o', '29_attn.k', '30_attn.o', '30_attn.v', '3_attn.o', '3_attn.q', '5_attn.q', '6_attn.o', '7_attn.q', '8_attn.o', '8_attn.q']", 'rank: 3'] : 1
+ ['model: llama', 'repo_name: llama_block_0_disambiguation_qa_All', 'file_name: llama_block_0_disambiguation_qa_All_5000_5.pt', 'base_model: meta-llama/Llama-2-7b-hf', 'pruning_style: block', 'community: 0', 'pruning_ratio: 20', 'dataset_label: disambiguation_qa', 'sparsity_ratio: 20', "dataset: ['tasksource/bigbench', 'disambiguation_qa']", 'finetune: All', 'modules_size: 27', "modules: ['11_attn.q', '13_attn.o', '13_attn.q', '14_attn.k', '14_attn.v', '16_attn.q', '18_attn.k', '20_attn.o', '21_attn.k', '23_attn.k', '23_attn.o', '23_attn.v', '25_attn.o', '25_attn.v', '26_attn.k', '27_attn.o', '28_attn.o', '29_attn.k', '30_attn.o', '30_attn.v', '3_attn.o', '3_attn.q', '5_attn.q', '6_attn.o', '7_attn.q', '8_attn.o', '8_attn.q']", 'rank: 3'] : 1
+
+repo_name
+=========
+ llama_block_0_tracking_shuffled_objects_All : 1
+ llama_block_0_tracking_shuffled_objects_Community : 1
+ llama_block_0_tracking_shuffled_objects_Complete Random : 1
+ llama_block_0_disambiguation_qa_Community : 1
+ llama_block_0_disambiguation_qa_All : 1
+
+file_name
+=========
+ llama_block_0_tracking_shuffled_objects_All_5000_5.pt : 1
+ llama_block_0_tracking_shuffled_objects_Community_5000_5.pt : 1
+ llama_block_0_tracking_shuffled_objects_Complete Random_5000_5.pt : 1
+ llama_block_0_disambiguation_qa_Community_5000_5.pt : 1
+ llama_block_0_disambiguation_qa_All_5000_5.pt : 1
+
+pruning_style
+=============
+ channel : 96
+ block : 90
+
+community
+=========
+ 0 : 36
+ 1 : 36
+ 2 : 36
+ 3 : 36
+ 4 : 30
+
+pruning_ratio
+=============
+ 20 : 186
+
+dataset_label
+=============
+ language_identification : 9
+ english_russian_proverbs : 6
+ swedish_to_german_proverbs : 6
+ virology : 6
+ high_school_chemistry : 6
+
+sparsity_ratio
+==============
+ 20 : 186
+
+finetune
+========
+ All : 62
+ Community : 62
+ Complete Random : 62
+
+modules_size
+============
+ 27 : 18
+ 30 : 12
+ 17 : 12
+ 33 : 12
+ 23 : 12
+
+modules
+=======
+ ['11_attn.q', '13_attn.o', '13_attn.q', '14_attn.k', '14_attn.v', '16_attn.q', '18_attn.k', '20_attn.o', '21_attn.k', '23_attn.k', '23_attn.o', '23_attn.v', '25_attn.o', '25_attn.v', '26_attn.k', '27_attn.o', '28_attn.o', '29_attn.k', '30_attn.o', '30_attn.v', '3_attn.o', '3_attn.q', '5_attn.q', '6_attn.o', '7_attn.q', '8_attn.o', '8_attn.q'] : 4
+ ['10_attn.v', '12_attn.q', '12_attn.v', '14_attn.q', '16_attn.k', '17_attn.q', '17_attn.v', '18_attn.o', '20_attn.k', '21_attn.o', '22_attn.k', '22_attn.o', '24_attn.q', '26_attn.q', '28_attn.k', '28_attn.q', '28_attn.v', '29_attn.q', '30_attn.k', '3_attn.k', '3_attn.v', '4_attn.o', '6_attn.k', '6_attn.v', '7_attn.o', '9_attn.k', '9_attn.v'] : 4
+ ['11_attn.o', '11_attn.v', '12_attn.k', '12_attn.o', '13_attn.v', '15_attn.q', '17_attn.o', '18_attn.v', '19_attn.k', '19_attn.o', '19_attn.q', '21_attn.q', '23_attn.q', '24_attn.v', '25_attn.q', '26_attn.o', '26_attn.v', '27_attn.q', '27_attn.v', '29_attn.v', '4_attn.q', '4_attn.v', '5_attn.k', '5_attn.o', '5_attn.v', '8_attn.k', '9_attn.o', '9_attn.q'] : 4
+ ['10_attn.k', '10_attn.o', '11_attn.k', '14_attn.o', '15_attn.o', '15_attn.v', '16_attn.o', '17_attn.k', '19_attn.v', '20_attn.q', '22_attn.v', '24_attn.k', '25_attn.k', '27_attn.k', '30_attn.q', '4_attn.k', '7_attn.k', '8_attn.v'] : 4
+ ['10_attn.q', '13_attn.k', '15_attn.k', '16_attn.v', '18_attn.q', '21_attn.v', '24_attn.o', '29_attn.o', '6_attn.q', '7_attn.v'] : 4
+
+rank
+====
+ 2 : 87
+ 1 : 84
+ 3 : 12
+ 4 : 3
+
+model_cls_name
+==============
+SCVI : 37
+SCANVI : 32
+CondSCVI : 28
+RNAStereoscope : 28
+TOTALVI : 3
+
+annotated
+=========
+True : 122
+False : 7
+
+anndata_version
+===============
+0.12.7 : 116
+0.12.11 : 3
+0.11.1 : 3
+0.8.0 : 2
+0.12.2 : 2
+
+scvi_version
+============
+1.4.2 : 119
+0.20.3 : 2
+1.2.0 : 2
+0.20.0 : 1
+1.0.4 : 1
+
