@@ -110,242 +110,244 @@ FAMILY_CANONICAL = {
   "lfm2_moe": "LFM2Moe",
   "llama": "Llama",
   "llama2": "Llama2",
-  "longcat_flash": "LongcatFlash",
+  "llama3": "Llama3",
+  "longcat_flash": "LongCatFlash",
   "longformer": "Longformer",
-  "longt5": "Longt5",
-  "luke": "Luke",
+  "longt5": "LongT5",
+  "luke": "LUKE",
   "m2m_100": "M2M100",
-  "madlad-400": "Madlad400",
+  "madlad-400": "MADLAD400",
   "mamba": "Mamba",
   "mamba2": "Mamba2",
-  "marian": "Marian",
-  "markuplm": "Markuplm",
-  "mbart": "Mbart",
-  "megatron-bert": "MegatronBert",
-  "megatron_gpt2": "MegatronGpt2",
+  "marian": "MarianMT",
+  "markuplm": "MarkupLM",
+  "mbart": "MBART",
+  "megatron-bert": "MegatronBERT",
+  "megatron_gpt2": "MegatronGPT2",
   "mellum": "Mellum",
-  "mimo_v2_flash": "MimoV2Flash",
-  "minicpm3": "Minicpm3",
-  "minimax": "Minimax",
-  "minimax_m2": "MinimaxM2",
-  "minimax_m3_vl": "MinimaxM3Vl",
+  "mimo_v2_flash": "MiMoV2Flash",
+  "minicpm3": "MiniCPM3",
+  "minimax": "MiniMax",
+  "minimax_m2": "MiniMaxM2",
+  "minimax_m3_vl": "MiniMaxM3VL",
   "ministral": "Ministral",
   "ministral3": "Ministral3",
   "mistral": "Mistral",
   "mixtral": "Mixtral",
-  "mluke": "Mluke",
-  "mobilebert": "Mobilebert",
-  "modernbert": "Modernbert",
-  "modernbert-decoder": "ModernbertDecoder",
-  "modernvbert": "Modernvbert",
-  "mpnet": "Mpnet",
-  "mpt": "Mpt",
-  "mra": "Mra",
-  "mt5": "Mt5",
-  "mvp": "Mvp",
-  "myt5": "Myt5",
-  "nanochat": "Nanochat",
+  "mluke": "MLUKE",
+  "mobilebert": "MobileBERT",
+  "modernbert": "ModernBERT",
+  "modernbert-decoder": "ModernBERTDecoder",
+  "modernvbert": "ModernVBert",
+  "mpnet": "MPNet",
+  "mpt": "MPT",
+  "mra": "MRA",
+  "mt5": "MT5",
+  "mvp": "MVP",
+  "myt5": "MyT5",
+  "nanochat": "NanoChat",
   "nemotron": "Nemotron",
   "nemotron_h": "NemotronH",
-  "nllb": "Nllb",
-  "nllb-moe": "NllbMoe",
-  "nomic_bert": "NomicBert",
+  "nllb": "NLLB",
+  "nllb-moe": "NLLBMoe",
+  "nomic_bert": "NomicBERT",
   "nystromformer": "Nystromformer",
-  "olmo": "Olmo",
-  "olmo2": "Olmo2",
-  "olmo3": "Olmo3",
-  "olmoe": "Olmoe",
-  "olmo_hybrid": "OlmoHybrid",
-  "openai_privacy_filter": "OpenaiPrivacyFilter",
-  "opt": "Opt",
+  "olmo": "OLMo",
+  "olmo2": "OLMo2",
+  "olmo3": "OLMo3",
+  "olmoe": "OLMoE",
+  "olmo_hybrid": "OLMoHybrid",
+  "openai_privacy_filter": "OpenAIPrivacyFilter",
+  "opt": "OPT",
   "pegasus": "Pegasus",
   "pegasus_x": "PegasusX",
   "persimmon": "Persimmon",
   "phi": "Phi",
   "phi3": "Phi3",
-  "phimoe": "Phimoe",
-  "phobert": "Phobert",
-  "plbart": "Plbart",
-  "prophetnet": "Prophetnet",
+  "phimoe": "PhiMoE",
+  "phobert": "PhoBERT",
+  "plbart": "PLBART",
+  "prophetnet": "ProphetNet",
   "qwen2": "Qwen2",
-  "qwen2_moe": "Qwen2Moe",
+  "qwen2_moe": "Qwen2MoE",
   "qwen3": "Qwen3",
   "qwen3_5": "Qwen35",
-  "qwen3_moe": "Qwen3Moe",
-  "rag": "Rag",
+  "qwen3_moe": "Qwen3MoE",
+  "rag": "RAG",
   "recurrent_gemma": "RecurrentGemma",
   "reformer": "Reformer",
-  "rembert": "Rembert",
-  "roberta": "Roberta",
-  "roberta-prelayernorm": "RobertaPrelayernorm",
-  "roc_bert": "RocBert",
+  "rembert": "RemBERT",
+  "roberta": "RoBERTa",
+  "roberta-prelayernorm": "RoBERTaPrelayernorm",
+  "roc_bert": "RoCBert",
   "roformer": "Roformer",
-  "rwkv": "Rwkv",
+  "rwkv": "RWKV",
   "seed_oss": "SeedOss",
-  "smollm3": "Smollm3",
+  "smollm3": "SmolLM3",
   "solar_open": "SolarOpen",
   "splinter": "Splinter",
-  "squeezebert": "Squeezebert",
-  "stablelm": "Stablelm",
+  "squeezebert": "SqueezeBERT",
+  "stablelm": "StableLM",
   "starcoder2": "Starcoder2",
   "switch_transformers": "SwitchTransformers",
   "t5": "T5",
   "t5gemma": "T5Gemma",
   "t5gemma2": "T5Gemma2",
   "t5v1": "T5V1",
-  "ul2": "Ul2",
-  "umt5": "Umt5",
-  "vaultgemma": "Vaultgemma",
-  "xmod": "Xmod",
-  "xglm": "Xglm",
-  "xlm": "Xlm",
-  "xlm-roberta": "XlmRoberta",
-  "xlm-roberta-xl": "XlmRobertaXl",
-  "xlm-v": "XlmV",
-  "xlnet": "Xlnet",
-  "xlstm": "Xlstm",
-  "yoso": "Yoso",
+  "ul2": "UL2",
+  "umt5": "UMT5",
+  "vaultgemma": "VaultGemma",
+  "xmod": "XMOD",
+  "xglm": "XGLM",
+  "xlm": "XLM",
+  "xlm-roberta": "XLMRoBERTa",
+  "xlm-roberta-xl": "XLMRoBERTaXL",
+  "xlm-v": "XLMV",
+  "xlnet": "XLNet",
+  "xlstm": "XLSTM",
+  "yoso": "YOSO",
   "youtu": "Youtu",
   "zamba": "Zamba",
   "zamba2": "Zamba2",
-  "zaya": "Zaya",
-  "aimv2": "Aimv2",
-  "beit": "Beit",
-  "bit": "Bit",
-  "chmv2": "Chmv2",
-  "conditional_detr": "ConditionalDetr",
-  "convnext": "Convnext",
-  "convnextv2": "Convnextv2",
-  "cvt": "Cvt",
-  "d_fine": "DFine",
-  "dab-detr": "DabDetr",
-  "deformable_detr": "DeformableDetr",
-  "deimv2": "Deimv2",
-  "deit": "Deit",
+  "zaya": "ZAYA",
+  "aimv2": "AIMv2",
+  "beit": "BEiT",
+  "bit": "BiT",
+  "chmv2": "CHMv2",
+  "conditional_detr": "ConditionalDETR",
+  "convnext": "ConvNeXT",
+  "convnextv2": "ConvNeXtV2",
+  "cvt": "CvT",
+  "d_fine": "DFINE",
+  "dab-detr": "DABDETR",
+  "deformable_detr": "DeformableDETR",
+  "deimv2": "DEIMv2",
+  "deit": "DeiT",
   "depth_anything": "DepthAnything",
   "depth_anything_v2": "DepthAnythingV2",
   "depth_pro": "DepthPro",
-  "detr": "Detr",
-  "dinat": "Dinat",
-  "dinov2": "Dinov2",
-  "dinov2_with_registers": "Dinov2WithRegisters",
-  "dinov3": "Dinov3",
-  "dit": "Dit",
-  "dpt": "Dpt",
-  "efficientloftr": "Efficientloftr",
-  "efficientnet": "Efficientnet",
-  "eomt": "Eomt",
-  "eomt_dinov3": "EomtDinov3",
-  "focalnet": "Focalnet",
-  "glpn": "Glpn",
-  "hgnet_v2": "HgnetV2",
+  "detr": "DETR",
+  "dinat": "DiNAT",
+  "dinov2": "DINOv2",
+  "dinov2_with_registers": "DINOv2WithRegisters",
+  "dinov3": "DINOv3",
+  "dit": "DiT",
+  "dpt": "DPT",
+  "efficientloftr": "EfficientLoFTR",
+  "efficientnet": "EfficientNet",
+  "eomt": "EoMT",
+  "eomt_dinov3": "EoMTDINOv3",
+  "focalnet": "FocalNet",
+  "glpn": "GLPN",
+  "hgnet_v2": "HGNetV2",
   "hiera": "Hiera",
-  "ijepa": "Ijepa",
-  "imagegpt": "Imagegpt",
-  "levit": "Levit",
-  "lightglue": "Lightglue",
-  "lw_detr": "LwDetr",
+  "ijepa": "IJEPA",
+  "imagegpt": "ImageGPT",
+  "levit": "LeViT",
+  "lightglue": "LightGlue",
+  "lw_detr": "LWDETR",
   "mask2former": "Mask2Former",
-  "maskformer": "Maskformer",
-  "mlcd": "Mlcd",
-  "mobilenet_v1": "MobilenetV1",
-  "mobilenet_v2": "MobilenetV2",
-  "mobilevit": "Mobilevit",
-  "mobilevitv2": "Mobilevitv2",
+  "maskformer": "MaskFormer",
+  "mlcd": "MLCD",
+  "mobilenet_v1": "MobileNetV1",
+  "mobilenet_v2": "MobileNetV2",
+  "mobilevit": "MobileViT",
+  "mobilevitv2": "MobileViTV2",
   "pixio": "Pixio",
-  "poolformer": "Poolformer",
+  "poolformer": "PoolFormer",
   "prompt_depth_anything": "PromptDepthAnything",
-  "pvt": "Pvt",
-  "pvt_v2": "PvtV2",
-  "radio": "Radio",
-  "regnet": "Regnet",
-  "resnet": "Resnet",
-  "rf_detr": "RfDetr",
-  "rt_detr": "RtDetr",
-  "rt_detr_v2": "RtDetrV2",
-  "sam2": "Sam2",
-  "sam3_tracker": "Sam3Tracker",
+  "pvt": "PVT",
+  "pvt_v2": "PVTV2",
+  "radio": "RADIO",
+  "regnet": "RegNet",
+  "resnet": "ResNet",
+  "rf_detr": "RFDETR",
+  "rt_detr": "RTDETR",
+  "rt_detr_v2": "RTDETRV2",
+  "sam2": "SAM2",
+  "sam3_tracker": "SAM3Tracker",
   "sapiens2": "Sapiens2",
-  "segformer": "Segformer",
-  "seggpt": "Seggpt",
-  "sam": "Sam",
-  "sam_hq": "SamHq",
-  "superglue": "Superglue",
-  "superpoint": "Superpoint",
-  "swiftformer": "Swiftformer",
-  "swin": "Swin",
-  "swinv2": "Swinv2",
-  "swin2sr": "Swin2Sr",
+  "segformer": "SegFormer",
+  "seggpt": "SegGPT",
+  "sam": "SAM",
+  "sam_hq": "SAMHQ",
+  "superglue": "SuperGlue",
+  "superpoint": "SuperPoint",
+  "swiftformer": "SwiftFormer",
+  "swin": "SwinTransformer",
+  "swin_transformer": "SwinTransformer",
+  "swinv2": "SwinTransformerV2",
+  "swin2sr": "Swin2SR",
   "table-transformer": "TableTransformer",
   "textnet": "Textnet",
   "timm_wrapper": "TimmWrapper",
-  "upernet": "Upernet",
-  "uvdoc": "Uvdoc",
-  "videomt": "Videomt",
-  "vit": "Vit",
-  "vitdet": "Vitdet",
-  "vit_mae": "VitMae",
-  "vitmatte": "Vitmatte",
-  "vit_msn": "VitMsn",
-  "vitpose": "Vitpose",
-  "yolos": "Yolos",
-  "zoedepth": "Zoedepth",
+  "upernet": "UPerNet",
+  "uvdoc": "UVDoc",
+  "videomt": "VidEoMT",
+  "vit": "ViT",
+  "vitdet": "ViTDet",
+  "vit_mae": "ViTMAE",
+  "vitmatte": "ViTMatte",
+  "vit_msn": "ViTMSN",
+  "vitpose": "ViTPose",
+  "yolos": "YOLOS",
+  "zoedepth": "ZoeDepth",
   "audio-spectrogram-transformer": "AudioSpectrogramTransformer",
   "bark": "Bark",
-  "clap": "Clap",
-  "csm": "Csm",
-  "dac": "Dac",
+  "clap": "CLAP",
+  "csm": "CSM",
+  "dac": "DAC",
   "dia": "Dia",
-  "encodec": "Encodec",
-  "fastspeech2_conformer": "Fastspeech2Conformer",
+  "encodec": "EnCodec",
+  "fastspeech2_conformer": "FastSpeech2Conformer",
   "glmasr": "Glmasr",
   "granite_speech": "GraniteSpeech",
   "granite_speech_plus": "GraniteSpeechPlus",
   "higgs_audio_v2": "HiggsAudioV2",
   "higgs_audio_v2_tokenizer": "HiggsAudioV2Tokenizer",
-  "hubert": "Hubert",
+  "hubert": "HuBERT",
   "kyutai_speech_to_text": "KyutaiSpeechToText",
-  "lasr": "Lasr",
+  "lasr": "LASR",
   "mimi": "Mimi",
-  "mms": "Mms",
+  "mms": "MMS",
   "moonshine": "Moonshine",
   "moonshine_streaming": "MoonshineStreaming",
   "moshi": "Moshi",
-  "musicgen": "Musicgen",
-  "musicgen_melody": "MusicgenMelody",
-  "nemotron3_5_asr": "Nemotron35Asr",
-  "pe_audio": "PeAudio",
-  "qwen3_asr": "Qwen3Asr",
+  "musicgen": "MusicGen",
+  "musicgen_melody": "MusicGenMelody",
+  "nemotron3_5_asr": "Nemotron35ASR",
+  "pe_audio": "PEAudio",
+  "qwen3_asr": "Qwen3ASR",
   "seamless_m4t": "SeamlessM4T",
   "seamless_m4t_v2": "SeamlessM4TV2",
-  "sew": "Sew",
-  "sew-d": "SewD",
-  "speech_to_text": "SpeechToText",
-  "speecht5": "Speecht5",
-  "unispeech": "Unispeech",
-  "unispeech-sat": "UnispeechSat",
-  "univnet": "Univnet",
-  "vibevoice_acoustic_tokenizer": "VibevoiceAcousticTokenizer",
-  "vibevoice_asr": "VibevoiceAsr",
-  "vits": "Vits",
+  "sew": "SEW",
+  "sew-d": "SEWD",
+  "speech_to_text": "Speech2Text",
+  "speecht5": "SpeechT5",
+  "unispeech": "UniSpeech",
+  "unispeech-sat": "UniSpeechSAT",
+  "univnet": "UnivNet",
+  "vibevoice_acoustic_tokenizer": "VibeVoiceAcousticTokenizer",
+  "vibevoice_asr": "VibeVoiceASR",
+  "vits": "VITS",
   "wav2vec2": "Wav2Vec2",
-  "wav2vec2-bert": "Wav2Vec2Bert",
+  "wav2vec2-bert": "Wav2Vec2BERT",
   "wav2vec2-conformer": "Wav2Vec2Conformer",
   "wav2vec2_phoneme": "Wav2Vec2Phoneme",
-  "wavlm": "Wavlm",
+  "wavlm": "WavLM",
   "whisper": "Whisper",
-  "xcodec": "Xcodec",
-  "xcodec2": "Xcodec2",
-  "xls_r": "XlsR",
-  "xlsr_wav2vec2": "XlsrWav2Vec2",
-  "pe_video": "PeVideo",
-  "sam2_video": "Sam2Video",
-  "sam3_tracker_video": "Sam3TrackerVideo",
-  "timesformer": "Timesformer",
-  "vjepa2": "Vjepa2",
-  "videomae": "Videomae",
-  "videoprism": "Videoprism",
-  "vivit": "Vivit",
+  "xcodec": "XCodec",
+  "xcodec2": "XCodec2",
+  "xls_r": "XLSR",
+  "xlsr_wav2vec2": "XLSRWav2Vec2",
+  "pe_video": "PEVideo",
+  "sam2_video": "SAM2Video",
+  "sam3_tracker_video": "SAM3TrackerVideo",
+  "timesformer": "TimeSformer",
+  "vjepa2": "VJEPA2",
+  "videomae": "VideoMAE",
+  "videoprism": "VideoPrism",
+  "vivit": "ViViT",
   "align": "Align",
   "altclip": "Altclip",
   "aria": "Aria",
@@ -472,8 +474,8 @@ FAMILY_CANONICAL = {
   "sam3_video": "Sam3Video",
   "sam3_lite_text": "Sam3LiteText",
   "shieldgemma2": "Shieldgemma2",
-  "siglip": "Siglip",
-  "siglip2": "Siglip2",
+  "siglip": "SigLIP",
+  "siglip2": "SigLIP2",
   "slanet": "Slanet",
   "slanext": "Slanext",
   "smolvlm": "Smolvlm",
@@ -496,15 +498,142 @@ FAMILY_CANONICAL = {
   "decision_transformer": "DecisionTransformer",
   "autoformer": "Autoformer",
   "informer": "Informer",
-  "patchtsmixer": "Patchtsmixer",
-  "patchtst": "Patchtst",
+  "patchtsmixer": "PatchTSMixer",
+  "patchtst": "PatchTST",
   "time_series_transformer": "TimeSeriesTransformer",
-  "timesfm": "Timesfm",
-  "timesfm2_5": "Timesfm25",
-  "AutoModel": "AutoModel",
-  "BertModel": "BertModel2",
-  "EvollaModel": "EvollaModel",
-  "GPT2LMHeadModel": "GPT2LMHeadModel",
-  "LlamaForCausalLM": "LlamaForCausalLM",
-  "SegformerForSemanticSegmentation": "SegformerForSemanticSegmentation"
+  "timesfm": "TimesFM",
+  "timesfm2_5": "TimesFM25",
 }
+
+
+
+
+
+
+
+apertus
+bertjapanese
+bitnet
+blender
+blenderbot small
+blt
+codegen
+convbert
+cpm
+cpmant
+ctrl
+deepseekv2
+deepseekv3
+diffllama
+dpt
+esm
+falconh1
+flant5
+Flaubert
+fnet
+fsmt
+funnel
+Fuyu
+glm4
+glm4-0414
+glm-4.5
+glmmoedsa
+gptneox
+gptj
+gptbigcode
+gptsw3
+granitemoe
+granitemoeshared
+helium
+ibert
+laguna
+lfm2
+llama3
+m2m100
+madlad400
+markuplm
+megatronbert
+megatrongpt2
+minicpm3
+minimax
+ministral3
+mixtral
+mluke
+mpnet
+mpt
+mra
+mvp
+nemotron
+nllbmoe
+nomicbert
+nystromformer
+olmo3
+phi3
+phimoe
+phobert
+qwen3next
+recurrentgemma
+reformer
+Rembert
+robertaprelayernorm
+rwkv
+solaropen
+t5v1
+ul2
+umt5
+xglm
+xlmv
+youtu
+
+aimv2
+beit
+bit
+chmv2
+convnext
+convnext2
+dfine
+deimv2
+deit
+dinat
+dinov2 with registers
+efficientnet
+eomt
+hiera
+maskformer
+poolformer
+promptdepthanything
+regnet
+resnet
+sam2
+sam
+swiftformer
+table transformer
+upernet
+uvdoc
+vitmsn
+
+bark
+encodec
+fastspeech2conformer
+mms
+musicgen melody
+seamlessm4t
+sew
+sewd
+speecht5
+unispeech
+unispeechsat
+wav2vec2
+wav2vec2bert
+wav2vec2conformer
+wav2vec2phoneme
+wavlm
+xlsr
+
+timesformer
+vivit
+
+sam3tracker
+sam3tracker video
+
+decision transformer

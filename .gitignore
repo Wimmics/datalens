@@ -326,6 +326,7 @@ ontology/used-vocabularies/**
 
 # Ignore all JSON
 *.json
+*.csv
 # Except package.json
 !package.json
 !vis/package-lock.json
