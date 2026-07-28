@@ -340,7 +340,7 @@ dlt:Ernie45Moe a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Ernie 4.5 Moe"@en ;
     skos:definition "The Ernie 4.5 Moe model was released in the Ernie 4.5 Model Family release by baidu. This family of models contains multiple different architectures and model sizes. This model in specific targets the base text model with mixture of experts (moe) - one with 21B total, 3B active parameters and another one with 300B total, 47B active parameters. It uses the standard Llama at its core combined with a specialized MoE based on Mixtral with additional shared experts."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/ernie4_5_moe> ;
-    skos:related dlt:ERNIE ;
+    skos:related dlt:Ernie45 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:ESM a skos:Concept, dlo:ModelFamily ;
@@ -2241,16 +2241,18 @@ dlt:ViViT a skos:Concept, dlo:ModelFamily ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/vivit> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Align a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Align"@en ;
+dlt:ALIGN a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "ALIGN"@en ;
     skos:definition "ALIGN is pretrained on a noisy 1.8 billion alt‑text and image pair dataset to show that scale can make up for the noise. It uses a dual‑encoder architecture, EfficientNet for images and BERT for text, and a contrastive loss to align similar image–text embeddings together while pushing different embeddings apart. Once trained, ALIGN can encode any image and candidate captions into a shared vector space for zero‑shot retrieval or classification without requiring extra labels. This scale‑first approach reduces dataset curation costs and powers state‑of‑the‑art image–text retrieval and zero‑shot ImageNet classification."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/align> ;
+    skos:related dlt:EfficientNet, dlt:BERT ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Altclip a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Altclip"@en ;
+dlt:AltCLIP a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "AltCLIP"@en ;
     skos:definition "AltCLIP replaces the CLIP text encoder with a multilingual XLM-R encoder and aligns image and text representations with teacher learning and contrastive learning."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/altclip> ;
+    skos:related dlt:CLIP, dlt:XLMRoBERTa ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Aria a skos:Concept, dlo:ModelFamily ;
@@ -2259,8 +2261,8 @@ dlt:Aria a skos:Concept, dlo:ModelFamily ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/aria> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Audioflamingo3 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Audioflamingo3"@en ;
+dlt:AudioFlamingo3 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "AudioFlamingo3"@en ;
     skos:definition "Audio Flamingo 3 (AF3) is a fully open large audio–language model designed for robust understanding and reasoning over speech, environmental sounds, and music. AF3 pairs a Whisper-style audio encoder with a causal language model and performs replace-in-place audio–text fusion: the processor aligns post-pool audio frames to a dedicated placeholder token and the model replaces those token slots with projected audio embeddings during the forward pass."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/audioflamingo3> ;
     skos:inScheme dlt:ModelFamilyScheme .
@@ -2269,18 +2271,20 @@ dlt:AyaVision a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Aya Vision"@en ;
     skos:definition "Aya Vision is a family of open-weight multimodal vision-language models from Cohere Labs. It is trained with a synthetic annotation framework that generates high-quality multilingual image captions, improving Aya Vision's generated responses. In addition, a cross-modal model merging technique is used to prevent the model from losing its text capabilities after adding vision capabilities. The model combines a CommandR-7B language model with a SigLIP vision encoder."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/aya_vision> ;
+    skos:related dlt:Cohere, dlt:SigLIP ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Blip a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Blip"@en ;
+dlt:BLIP a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "BLIP"@en ;
     skos:definition "BLIP (Bootstrapped Language-Image Pretraining) is a vision-language pretraining (VLP) framework designed for both understanding and generation tasks. Most existing pretrained models are only good at one or the other. It uses a captioner to generate captions and a filter to remove the noisy captions. This increases training data quality and more effectively uses the messy web data."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/blip> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Blip2 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Blip 2"@en ;
-    skos:definition "The BLIP-2 model was proposed in BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models by Junnan Li, Dongxu Li, Silvio Savarese, Steven Hoi. BLIP-2 leverages frozen pre-trained image encoders and large language models (LLMs) by training a lightweight, 12-layer Transformer encoder in between them, achieving state-of-the-art performance on various vision-language tasks. Most notably, BLIP-2 improves upon Flamingo, an 80 billion parameter model, by 8.7% on zero-shot VQAv2 with 54x fewer trainable parameters."@en ;
+dlt:BLIP2 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "BLIP-2"@en ;
+    skos:definition "BLIP-2 leverages frozen pre-trained image encoders and large language models (LLMs) by training a lightweight, 12-layer Transformer encoder in between them, achieving state-of-the-art performance on various vision-language tasks. Most notably, BLIP-2 improves upon Flamingo, an 80 billion parameter model, by 8.7% on zero-shot VQAv2 with 54x fewer trainable parameters."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/blip-2> ;
+    skos:related dlt:BLIP ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Bridgetower a skos:Concept, dlo:ModelFamily ;
@@ -2289,236 +2293,255 @@ dlt:Bridgetower a skos:Concept, dlo:ModelFamily ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/bridgetower> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Bros a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Bros"@en ;
-    skos:definition "The BROS model was proposed in BROS: A Pre-trained Language Model Focusing on Text and Layout for Better Key Information Extraction from Documents by Teakgyu Hong, Donghyun Kim, Mingi Ji, Wonseok Hwang, Daehyun Nam, Sungrae Park."@en ;
+dlt:BROS a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "BROS"@en ;
+    skos:definition "BROS stands for BERT Relying On Spatiality. It is an encoder-only Transformer model that takes a sequence of tokens and their bounding boxes as inputs and outputs a sequence of hidden states. BROS encode relative spatial information instead of using absolute spatial information."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/bros> ;
+    skos:related dlt:BERT ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Chameleon a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Chameleon"@en ;
-    skos:definition "The Chameleon model was proposed in Chameleon: Mixed-Modal Early-Fusion Foundation Models by META AI Chameleon Team. Chameleon is a Vision-Language Model that use vector quantization to tokenize images which enables the model to generate multimodal output. The model takes images and texts as input, including an interleaved format, and generates textual response. Image generation module is not released yet."@en ;
+    skos:definition "Chameleon is a Vision-Language Model that use vector quantization to tokenize images which enables the model to generate multimodal output. The model takes images and texts as input, including an interleaved format, and generates textual response."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/chameleon> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:ChineseClip a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Chinese Clip"@en ;
-    skos:definition "The Chinese-CLIP model was proposed in Chinese CLIP: Contrastive Vision-Language Pretraining in Chinese by An Yang, Junshu Pan, Junyang Lin, Rui Men, Yichang Zhang, Jingren Zhou, Chang Zhou. Chinese-CLIP is an implementation of CLIP (Radford et al., 2021) on a large-scale dataset of Chinese image-text pairs. It is capable of performing cross-modal retrieval and also playing as a vision backbone for vision tasks like zero-shot image classification, open-domain object detection, etc. The original Chinese-CLIP code is released at this link."@en ;
+dlt:ChineseCLIP a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Chinese-CLIP"@en ;
+    skos:definition "Chinese-CLIP is an implementation of CLIP on a large-scale dataset of Chinese image-text pairs. It is capable of performing cross-modal retrieval and also playing as a vision backbone for vision tasks like zero-shot image classification, open-domain object detection, etc."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/chinese_clip> ;
+    skos:related dlt:CLIP ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Clip a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Clip"@en ;
+dlt:CLIP a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "CLIP"@en ;
     skos:definition "CLIP is a is a multimodal vision and language model motivated by overcoming the fixed number of object categories when training a computer vision model. CLIP learns about images directly from raw text by jointly training on 400M (image, text) pairs. Pretraining on this scale enables zero-shot transfer to downstream tasks. CLIP uses an image encoder and text encoder to get visual features and text features. Both features are projected to a latent space with the same number of dimensions and their dot product gives a similarity score."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/clip> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Clipseg a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Clipseg"@en ;
+dlt:CLIPseg a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "CLIPseg"@en ;
     skos:definition "The CLIPSeg model was proposed in Image Segmentation Using Text and Image Prompts by Timo Lüddecke and Alexander Ecker. CLIPSeg adds a minimal decoder on top of a frozen CLIP model for zero-shot and one-shot image segmentation."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/clipseg> ;
+    skos:related dlt:CLIP ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Clvp a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Clvp"@en ;
+dlt:CLVP a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "CLVP"@en ;
     skos:definition "The CLVP (Contrastive Language-Voice Pretrained Transformer) model was proposed in Better speech synthesis through scaling by James Betker."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/clvp> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Cwm a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Cwm"@en ;
-    skos:definition "The Code World Model (CWM) model was proposed in CWM: An Open-Weights LLM for Research on Code Generation with World Models by Meta FAIR CodeGen Team. CWM is an LLM for code generation and reasoning about code that has, in particular, been trained to better represent and reason about how code and commands affect the state of a program or system. Specifically, we mid-trained CWM on a large number of observation-action trajectories from Python execution traces and agentic interactions in containerized environments. We post-trained with extensive multi-task RL in verifiable coding, math, and multi-turn software engineering environments."@en ;
+dlt:CWM a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "CWM"@en ;
+    skos:definition "CWM is an LLM for code generation and reasoning about code that has, in particular, been trained to better represent and reason about how code and commands affect the state of a program or system. Specifically, we mid-trained CWM on a large number of observation-action trajectories from Python execution traces and agentic interactions in containerized environments. We post-trained with extensive multi-task RL in verifiable coding, math, and multi-turn software engineering environments."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/cwm> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Cohere2Vision a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Cohere2 Vision"@en ;
-    skos:definition "Command A Vision (blog post) is a state-of-the-art multimodal model designed to seamlessly integrate visual and textual information for a wide range of applications. By combining advanced computer vision techniques with natural language processing capabilities, Command A Vision enables users to analyze, understand, and generate insights from both visual and textual data."@en ;
+    skos:definition "Command A Vision is a state-of-the-art multimodal model designed to seamlessly integrate visual and textual information for a wide range of applications. By combining advanced computer vision techniques with natural language processing capabilities, Command A Vision enables users to analyze, understand, and generate insights from both visual and textual data."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/cohere2_vision> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Colmodernvbert a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Colmodernvbert"@en ;
+dlt:ColModernVBERT a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "ColModernVBert"@en ;
     skos:definition "ColModernVBert is a model for efficient visual document retrieval. It leverages ModernVBert to construct multi-vector embeddings directly from document images, following the ColPali approach."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/colmodernvbert> ;
+    skos:related dlt:ColPali, dlt:ModernVBert ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Colpali a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Colpali"@en ;
+dlt:ColPali a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "ColPali"@en ;
     skos:definition "ColPali is a model designed to retrieve documents by analyzing their visual features. Unlike traditional systems that rely heavily on text extraction and OCR, ColPali treats each page as an image. It uses Paligemma-3B to capture not only text, but also the layout, tables, charts, and other visual elements to create detailed multi-vector embeddings that can be used for retrieval by computing pairwise late interaction similarity scores. This offers a more comprehensive understanding of documents and enables more efficient and accurate retrieval."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/colpali> ;
+    skos:related dlt:PaliGemma ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Colqwen2 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Colqwen2"@en ;
+dlt:ColQwen2 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "ColQwen2"@en ;
     skos:definition "ColQwen2 is a variant of the ColPali model designed to retrieve documents by analyzing their visual features. Unlike traditional systems that rely heavily on text extraction and OCR, ColQwen2 treats each page as an image. It uses the Qwen2-VL backbone to capture not only text, but also the layout, tables, charts, and other visual elements to create detailed multi-vector embeddings that can be used for retrieval by computing pairwise late interaction similarity scores. This offers a more comprehensive understanding of documents and enables more efficient and accurate retrieval."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/colqwen2> ;
+    skos:related dlt:Qwen2VL, dlt:ColPali ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Cosmos3Edge a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Cosmos3 Edge"@en ;
-    skos:definition "Cosmos3 Edge is NVIDIA's multimodal reasoning model from the Cosmos3 family. Transformers integrates the Reasoner tower only; the checkpoint's diffusion Generator, VAE, scheduler, and other generation components remain Diffusers components."@en ;
+    skos:definition "Cosmos3 Edge is NVIDIA's multimodal reasoning model from the Cosmos3 family. Transformers integrates the Reasoner tower only; the checkpoint's diffusion Generator, VAE, scheduler, and other generation components remain Diffusers components. The reasoner uses a dense, Llama-compatible language tower with 28 decoder blocks, each containing attention and an MLP. Its SigLIP2 vision encoder accepts packed variable-resolution patches, uses sequence boundaries to keep images and video frames independent during vision attention, groups patches spatially in 2×2 blocks, and projects them into the language model. Image and video inputs use multimodal rotary position IDs; video prompts are expanded into one timestamped vision span per sampled frame."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/cosmos3_edge> ;
+    skos:related dlt:Cosmos3 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Cosmos3Omni a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Cosmos3 Omni"@en ;
+dlt:Cosmos3 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Cosmos3"@en ;
     skos:definition "Cosmos3 is a mixture-of-transformers (MoT) Vision Foundation Model from NVIDIA, composed of a Reasoner tower and a Generator tower. The two towers share the same input embedding and visual encoder but use disjoint MoT experts for understanding vs. generation, plus cross-modal adapters (proj_out, audio_proj_out, action_proj_out, etc.) that connect the language model to image / audio / action heads."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/cosmos3_omni> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Data2Vec a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Data2vec"@en ;
-    skos:definition "The Data2Vec model was proposed in data2vec: A General Framework for Self-supervised Learning in Speech, Vision and Language by Alexei Baevski, Wei-Ning Hsu, Qiantong Xu, Arun Babu, Jiatao Gu and Michael Auli. Data2Vec proposes a unified framework for self-supervised learning across different data modalities - text, audio and images. Importantly, predicted targets for pre-training are contextualized latent representations of the inputs, rather than modality-specific, context-independent targets."@en ;
+    skos:prefLabel "Data2Vec"@en ;
+    skos:definition "Data2Vec proposes a unified framework for self-supervised learning across different data modalities - text, audio and images. Importantly, predicted targets for pre-training are contextualized latent representations of the inputs, rather than modality-specific, context-independent targets."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/data2vec> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:DeepseekVl a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Deepseek Vl"@en ;
-    skos:definition "Deepseek-VL was introduced by the DeepSeek AI team. It is a vision-language model (VLM) designed to process both text and images for generating contextually relevant responses. The model leverages LLaMA as its text encoder, while SigLip is used for encoding images."@en ;
+dlt:DeepseekVL a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Deepseek-VL"@en ;
+    skos:definition "Deepseek-VL is a vision-language model (VLM) designed to process both text and images for generating contextually relevant responses. The model leverages LLaMA as its text encoder, while SigLip is used for encoding images."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/deepseek_vl> ;
+    skos:related dlt:LLaMA, dlt:SigLIP ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:DeepseekVlHybrid a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Deepseek Vl Hybrid"@en ;
+dlt:DeepseekVLHybrid a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Deepseek-VL-Hybrid"@en ;
     skos:definition "Deepseek-VL-Hybrid was introduced by the DeepSeek AI team. It is a vision-language model (VLM) designed to process both text and images for generating contextually relevant responses. The model leverages LLaMA as its text encoder, while SigLip is used for encoding low-resolution images and SAM (Segment Anything Model) is incorporated to handle high-resolution image encoding, enhancing the model's ability to process fine-grained visual details. Deepseek-VL-Hybrid is a variant of Deepseek-VL that uses SAM (Segment Anything Model) to handle high-resolution image encoding."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/deepseek_vl_hybrid> ;
+    skos:related dlt:DeepseekVL, dlt:SAM ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Deplot a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Deplot"@en ;
+dlt:DePlot a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "DePlot"@en ;
     skos:definition "DePlot was proposed in the paper DePlot: One-shot visual language reasoning by plot-to-table translation from Fangyu Liu, Julian Martin Eisenschlos, Francesco Piccinno, Syrine Krichene, Chenxi Pang, Kenton Lee, Mandar Joshi, Wenhu Chen, Nigel Collier, Yasemin Altun."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/deplot> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:DiffusionGemma a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Diffusion Gemma"@en ;
-    skos:definition "DiffusionGemma is engineered to reduce the sequential bottlenecks of standard causal language models. It employs an encoder-decoder architecture specifically optimized for inference speed."@en ;
+    skos:prefLabel "DiffusionGemma"@en ;
+    skos:definition "DiffusionGemma is engineered to reduce the sequential bottlenecks of standard causal language models. It employs an encoder-decoder architecture specifically optimized for inference speed. The encoder operates in a prefill capacity, processing the initial prompt and generating the KV cache. The decoder then utilizes bidirectional attention to process an input block (a ‘canvas’) of tokens, accessing the cached context via cross-attention."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/diffusion_gemma> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Donut a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Donut"@en ;
-    skos:definition "Donut (Document Understanding Transformer) is a visual document understanding model that doesn't require an Optical Character Recognition (OCR) engine. Unlike traditional approaches that extract text using OCR before processing, Donut employs an end-to-end Transformer-based architecture to directly analyze document images. This eliminates OCR-related inefficiencies making it more accurate and adaptable to diverse languages and formats."@en ;
+    skos:definition "Donut (Document Understanding Transformer) is a visual document understanding model that doesn't require an Optical Character Recognition (OCR) engine. Unlike traditional approaches that extract text using OCR before processing, Donut employs an end-to-end Transformer-based architecture to directly analyze document images. This eliminates OCR-related inefficiencies making it more accurate and adaptable to diverse languages and formats. Donut features vision encoder (Swin) and a text decoder (BART). Swin converts document images into embeddings and BART processes them into meaningful text sequences."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/donut> ;
+    skos:related dlt:SwinTransformer, dlt:BART ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Edgetam a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Edgetam"@en ;
-    skos:definition "The EdgeTAM model was proposed in EdgeTAM: On-Device Track Anything Model Chong Zhou, Chenchen Zhu, Yunyang Xiong, Saksham Suri, Fanyi Xiao, Lemeng Wu, Raghuraman Krishnamoorthi, Bo Dai, Chen Change Loy, Vikas Chandra, Bilge Soran."@en ;
+dlt:EdgeTAM a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "EdgeTAM"@en ;
+    skos:definition "EdgeTAM is an efficient adaptation of SAM 2 that introduces a 2D Spatial Perceiver architecture to optimize memory attention mechanisms for real-time video segmentation on mobile devices."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/edgetam> ;
+    skos:related dlt:SAM2 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:EdgetamVideo a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Edgetam Video"@en ;
-    skos:definition "The EdgeTAM model was proposed in EdgeTAM: On-Device Track Anything Model Chong Zhou, Chenchen Zhu, Yunyang Xiong, Saksham Suri, Fanyi Xiao, Lemeng Wu, Raghuraman Krishnamoorthi, Bo Dai, Chen Change Loy, Vikas Chandra, Bilge Soran."@en ;
+dlt:EdgeTAMVideo a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "EdgeTAM Video"@en ;
+    skos:definition "EdgeTAM Video is an extension of EdgeTAM designed for video segmentation tasks."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/edgetam_video> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Emu3 a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Emu3"@en ;
-    skos:definition "The Emu3 model was proposed in Emu3: Next-Token Prediction is All You Need by Xinlong Wang, Xiaosong Zhang, Zhengxiong Luo, Quan Sun, Yufeng Cui, Jinsheng Wang, Fan Zhang, Yueze Wang, Zhen Li, Qiying Yu, Yingli Zhao, Yulong Ao, Xuebin Min, Tao Li, Boya Wu, Bo Zhao, Bowen Zhang, Liangdong Wang, Guang Liu, Zheqi He, Xi Yang, Jingjing Liu, Yonghua Lin, Tiejun Huang, Zhongyuan Wang."@en ;
+    skos:definition "Emu3 is a multimodal LLM that uses vector quantization to tokenize images into discrete tokens. Discretized image tokens are later fused with text token ids for image and text generation. The model can additionally generate images by predicting image token ids."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/emu3> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Ernie45VlMoe a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Ernie4.5 Vl Moe"@en ;
-    skos:definition "The Ernie 4.5 VL MoE model was released in the Ernie 4.5 Model Family release by baidu. This family of models contains multiple different architectures and model sizes. The Vision-Language series in specific is composed of a novel multimodal heterogeneous structure, sharing parameters across modalities and dedicating parameters to specific modalities. This becomes especially apparent in the Mixture of Expert (MoE) which is composed of"@en ;
+dlt:Ernie45VLMoE a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Ernie 4.5 VL MoE"@en ;
+    skos:definition "The Ernie 4.5 VL MoE model was released in the Ernie 4.5 Model Family release by baidu. This family of models contains multiple different architectures and model sizes. The Vision-Language series in specific is composed of a novel multimodal heterogeneous structure, sharing parameters across modalities and dedicating parameters to specific modalities. This becomes especially apparent in the Mixture of Expert (MoE) which is composed of Dedicated Text Experts, Dedicated Vision Experts, Shared Experts. This architecture has the advantage to enhance multimodal understanding without compromising, and even improving, performance on text-related tasks. "@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/ernie4_5_vl_moe> ;
+    skos:related dlt:Ernie45 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Evolla a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Evolla"@en ;
-    skos:definition "The Evolla model was proposed in Decoding the Molecular Language of Proteins with Evolla by Zhou et al.."@en ;
+    skos:definition "Evolla is an advanced 80-billion-parameter protein-language generative model designed to decode the molecular language of proteins. It integrates information from protein sequences, structures, and user queries to generate precise and contextually nuanced insights into protein function. Trained on an unprecedented AI-generated dataset of 546 million protein question-answer pairs and 150 billion word tokens, Evolla significantly advances research in proteomics and functional genomics, providing expert-level insights and shedding light on the molecular logic encoded in proteins."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/evolla> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:FastVlm a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Fast Vlm"@en ;
+dlt:FastVLM a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "FastVLM"@en ;
     skos:definition "FastVLM is an open-source vision-language model featuring a novel hybrid vision encoder, FastViTHD. Leveraging reparameterizable convolutional layers, scaled input resolution, and a reduced number of visual tokens, FastVLM delivers high accuracy with exceptional efficiency. Its optimized architecture enables deployment even on edge devices, achieving ultra-low TTFT (time to first token) without sacrificing performance."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/fast_vlm> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Flava a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Flava"@en ;
+dlt:FLAVA a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "FLAVA"@en ;
     skos:definition "The FLAVA model was proposed in FLAVA: A Foundational Language And Vision Alignment Model by Amanpreet Singh, Ronghang Hu, Vedanuj Goswami, Guillaume Couairon, Wojciech Galuba, Marcus Rohrbach, and Douwe Kiela and is accepted at CVPR 2022."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/flava> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Florence2 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Florence2"@en ;
+    skos:prefLabel "Florence-2"@en ;
     skos:definition "Florence-2 is an advanced vision foundation model that uses a prompt-based approach to handle a wide range of vision and vision-language tasks. Florence-2 can interpret simple text prompts to perform tasks like captioning, object detection, and segmentation. It leverages the FLD-5B dataset, containing 5.4 billion annotations across 126 million images, to master multi-task learning. The model's sequence-to-sequence architecture enables it to excel in both zero-shot and fine-tuned settings, proving to be a competitive vision foundation model."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/florence2> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Gemma4Assistant a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Gemma4 Assistant"@en ;
+    skos:prefLabel "Gemma 4 Assistant"@en ;
     skos:definition "Gemma 4 Assistant is a small, text-only model that enables speculative decoding with for Gemma 4 models using the Multi-Token Prediction (MTP) method and associated candidate generator. Pre-trained models are provided for the IT variants of the Gemma 4 E2B, E4B, 31B and 26B-A4B (MoE) models."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/gemma4_assistant> ;
+    skos:related dlt:Gemma4 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Gemma4UnifiedAssistant a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Gemma4 Unified Assistant"@en ;
+    skos:prefLabel "Gemma 4 Unified Assistant"@en ;
     skos:definition "Gemma 4 Unified Assistant is a small, text-only model that enables speculative decoding with for Gemma 4 Unified models using the Multi-Token Prediction (MTP) method and associated candidate generator. Pre-trained models are provided for the IT variants of the Gemma 4 12B model."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/gemma4_unified_assistant> ;
+    skos:related dlt:Gemma4Unified ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Gemma3 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Gemma3"@en ;
+    skos:prefLabel "Gemma 3"@en ;
     skos:definition "Gemma 3 is a multimodal model with pretrained and instruction-tuned variants, available in 1B, 13B, and 27B parameters. The architecture is mostly the same as the previous Gemma versions. The key differences are alternating 5 local sliding window self-attention layers for every global self-attention layer, support for a longer context length of 128K tokens, and a SigLip encoder that can \"pan & scan\" high-resolution images to prevent information from disappearing in high resolution images or images with non-square aspect ratios."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/gemma3> ;
+    skos:related dlt:Gemma2, dlt:SigLIP ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Gemma3N a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Gemma3n"@en ;
     skos:definition "Gemma3n is a multimodal model with pretrained and instruction-tuned variants, available in E4B and E2B sizes. While large portions of the language model architecture are shared with prior Gemma releases, there are many new additions in this model, including [Alternating Updates][altup] (AltUp), [Learned Augmented Residual Layer][laurel] (LAuReL), [MatFormer][matformer], Per-Layer Embeddings (PLE), [Activation Sparsity with Statistical Top-k][spark-transformer], and KV cache sharing. The language model uses a similar attention pattern to Gemma 3 with alternating 4 local sliding window self-attention layers for every global self-attention layer with a maximum context length of 32k tokens. Gemma 3n introduces MobileNet v5 as the vision encoder, using a default resolution of 768x768 pixels, and adds a newly trained audio encoder based on the [Universal Speech Model][usm] (USM) architecture."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/gemma3n> ;
+    skos:related dlt:Gemma3 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Gemma4 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Gemma4"@en ;
-    skos:definition "Gemma 4 is a multimodal model with pretrained and instruction-tuned variants, available in E2B, E4B, 31B and 26B-A4B (MoE) parameter sizes. Gemma 4 models provide the following capabilities: - Reasoning: All models in the family are designed as highly capable reasoners, with configurable thinking modes. - Extended Multimodalities: Processes Text, Image with variable aspect ratio and resolution support (all models), Video, and Audio (featured natively on the E2B and E4B models). - Increased Context Window: Small models feature a 128K context window, while the other models support 256K. - Enhanced Coding & Agentic Capabilities: Achieves notable improvements in coding benchmarks alongside built-in function-calling support, powering highly capable autonomous agents. - Native System Prompt Support: Gemma 4 introduces built-in support for the system role, enabling more structured and controllable conversations."@en ;
+    skos:prefLabel "Gemma 4"@en ;
+    skos:definition "Gemma 4 is a multimodal model with pretrained and instruction-tuned variants, available in E2B, E4B, 31B and 26B-A4B (MoE) parameter sizes. The key difference from previous Gemma releases for vision is the new design to process images of different sizes using a fixed-budget number of tokens. Unlike many models that squash every image into a fixed square (like 224×224), Gemma 4 keeps the image’s natural aspect ratio while making it the right size."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/gemma4> ;
+    skos:related dlt:Gemma3;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Gemma4Unified a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Gemma4 Unified"@en ;
+    skos:prefLabel "Gemma 4 Unified"@en ;
     skos:definition "Gemma 4 12B Unified is an encoder-free multimodal model with pretrained and instruction-tuned variants. Unlike standard Gemma 4, which uses dedicated encoder towers, Gemma 4 12B Unified projects raw inputs directly into the language model's embedding space through lightweight linear pipelines. This results in a simpler architecture while maintaining strong multimodal performance."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/gemma4_unified> ;
+    skos:related dlt:Gemma4 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Git a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Git"@en ;
-    skos:definition "The GIT model was proposed in GIT: A Generative Image-to-text Transformer for Vision and Language by Jianfeng Wang, Zhengyuan Yang, Xiaowei Hu, Linjie Li, Kevin Lin, Zhe Gan, Zicheng Liu, Ce Liu, Lijuan Wang. GIT is a decoder-only Transformer that leverages CLIP's vision encoder to condition the model on vision inputs besides text. The model obtains state-of-the-art results on image captioning and visual question answering benchmarks."@en ;
+dlt:GIT a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "GIT"@en ;
+    skos:definition "GIT is a decoder-only Transformer that leverages CLIP's vision encoder to condition the model on vision inputs besides text."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/git> ;
+    skos:related dlt:CLIP ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Glm46V a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Glm46v"@en ;
+dlt:GLM46V a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "GLM46V"@en ;
     skos:definition "The GLM-V model was proposed in GLM-4.5V and GLM-4.1V-Thinking: Towards Versatile Multimodal Reasoning with Scalable Reinforcement Learning."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/glm46v> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Glm4V a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Glm4v"@en ;
+dlt:GLM4V a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "GLM4V"@en ;
     skos:definition "The GLM-V model was proposed in GLM-4.5V and GLM-4.1V-Thinking: Towards Versatile Multimodal Reasoning with Scalable Reinforcement Learning."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/glm4v> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Glm4VMoe a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Glm4v Moe"@en ;
+dlt:GLM4VMoe a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "GLM4VMoe"@en ;
     skos:definition "The GLM-V model was proposed in GLM-4.5V and GLM-4.1V-Thinking: Towards Versatile Multimodal Reasoning with Scalable Reinforcement Learning."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/glm4v_moe> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Glmga a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Glmga"@en ;
-    skos:definition "The Glmga model was proposed in by ."@en ;
+dlt:GLMga a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "GLMga"@en ;
+    skos:definition "The GLMga model was proposed in by ."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/glmga> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:GlmOcr a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Glm Ocr"@en ;
+dlt:GLMOCR a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "GLM-OCR"@en ;
     skos:definition "GLM-OCR is a multimodal OCR (Optical Character Recognition) model designed for complex document understanding from Z.ai. The model combines a CogViT visual encoder (pre-trained on large-scale image-text data), a lightweight cross-modal connector with efficient token downsampling, and a GLM-0.5B language decoder."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/glm_ocr> ;
     skos:inScheme dlt:ModelFamilyScheme .
@@ -2530,45 +2553,48 @@ dlt:GotOcr2 a skos:Concept, dlo:ModelFamily ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Granite4Vision a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Granite4 Vision"@en ;
+    skos:prefLabel "Granite Vision 4.1"@en ;
     skos:definition "Granite Vision 4.1 is a vision-language model from IBM Research designed for enterprise-grade document data extraction. It specializes in chart extraction (Chart2CSV, Chart2Summary, Chart2Code), table extraction (JSON, HTML, OTSL), and semantic key-value pair extraction."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/granite4_vision> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Granitevision a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Granitevision"@en ;
+dlt:GraniteVision a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Granite Vision"@en ;
     skos:definition "The Granite Vision model is a variant of LLaVA-NeXT, leveraging a Granite language model alongside a SigLIP visual encoder. It utilizes multiple concatenated vision hidden states as its image features, similar to VipLlava. It also uses a larger set of image grid pinpoints than the original LlaVa-NeXT models to support additional aspect ratios."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/granitevision> ;
+    skos:related dlt:LLaVA, dlt:SigLIP, dlt:VipLlava, dlt:Granite ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:GroundingDino a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Grounding Dino"@en ;
-    skos:definition "The Grounding DINO model was proposed in Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection by Shilong Liu, Zhaoyang Zeng, Tianhe Ren, Feng Li, Hao Zhang, Jie Yang, Chunyuan Li, Jianwei Yang, Hang Su, Jun Zhu, Lei Zhang. Grounding DINO extends a closed-set object detection model with a text encoder, enabling open-set object detection. The model achieves remarkable results, such as 52.5 AP on COCO zero-shot."@en ;
+dlt:GroundingDINO a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Grounding DINO"@en ;
+    skos:definition "Grounding DINO extends a closed-set object detection model (DINO) with a text encoder, enabling open-set object detection. The model achieves remarkable results, such as 52.5 AP on COCO zero-shot."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/grounding-dino> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Groupvit a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Groupvit"@en ;
+dlt:GroupViT a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "GroupViT"@en ;
     skos:definition "The GroupViT model was proposed in GroupViT: Semantic Segmentation Emerges from Text Supervision by Jiarui Xu, Shalini De Mello, Sifei Liu, Wonmin Byeon, Thomas Breuel, Jan Kautz, Xiaolong Wang. Inspired by CLIP, GroupViT is a vision-language model that can perform zero-shot semantic segmentation on any given vocabulary categories."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/groupvit> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Idefics a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Idefics"@en ;
+dlt:IDEFICS a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "IDEFICS"@en ;
     skos:definition "The IDEFICS model was proposed in OBELICS: An Open Web-Scale Filtered Dataset of Interleaved Image-Text Documents by Hugo Laurençon, Lucile Saulnier, Léo Tronchon, Stas Bekman, Amanpreet Singh, Anton Lozhkov, Thomas Wang, Siddharth Karamcheti, Alexander M. Rush, Douwe Kiela, Matthieu Cord, Victor Sanh"@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/idefics> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Idefics2 a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Idefics2"@en ;
-    skos:definition "The Idefics2 model was proposed in What matters when building vision-language models? by Léo Tronchon, Hugo Laurencon, Victor Sanh. The accompanying blog post can be found here."@en ;
+    skos:definition "Idefics2 is an open multimodal model that accepts arbitrary sequences of image and text inputs and produces text outputs. The model can answer questions about images, describe visual content, create stories grounded on multiple images, or simply behave as a pure language model without visual inputs. It improves upon IDEFICS-1, notably on document understanding, OCR, or visual reasoning. Idefics2 is lightweight (8 billion parameters) and treats images in their native aspect ratio and resolution, which allows for varying inference efficiency."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/idefics2> ;
+    skos:related dlt:IDEFICS ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Idefics3 a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Idefics3"@en ;
-    skos:definition "The Idefics3 model was proposed in Building and better understanding vision-language models: insights and future directions by Hugo Laurençon, Andrés Marafioti, Victor Sanh, and Léo Tronchon."@en ;
+    skos:definition "Idefics3 is an adaptation of the Idefics2 model with three main differences : it uses Llama3 for the text model, it uses an updated processing logic for the images and it removes the perceiver."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/idefics3> ;
+    skos:related dlt:Idefics2, dlt:Llama3 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Inkling a skos:Concept, dlo:ModelFamily ;
@@ -2577,20 +2603,22 @@ dlt:Inkling a skos:Concept, dlo:ModelFamily ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/inkling> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Instructblip a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Instructblip"@en ;
-    skos:definition "The InstructBLIP model was proposed in InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning by Wenliang Dai, Junnan Li, Dongxu Li, Anthony Meng Huat Tiong, Junqi Zhao, Weisheng Wang, Boyang Li, Pascale Fung, Steven Hoi. InstructBLIP leverages the BLIP-2 architecture for visual instruction tuning."@en ;
+dlt:InstructBLIP a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "InstructBLIP"@en ;
+    skos:definition "InstructBLIP leverages the BLIP-2 architecture for visual instruction tuning."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/instructblip> ;
+    skos:related dlt:BLIP2 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Instructblipvideo a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Instructblipvideo"@en ;
-    skos:definition "The InstructBLIPVideo is an extension of the models proposed in InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning by Wenliang Dai, Junnan Li, Dongxu Li, Anthony Meng Huat Tiong, Junqi Zhao, Weisheng Wang, Boyang Li, Pascale Fung, Steven Hoi. InstructBLIPVideo uses the same architecture as InstructBLIP and works with the same checkpoints as InstructBLIP. The only difference is the ability to process videos."@en ;
+dlt:InstructBLIPVideo a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "InstructBLIPVideo"@en ;
+    skos:definition "InstructBLIPVideo uses the same architecture as InstructBLIP and works with the same checkpoints as InstructBLIP. The only difference is the ability to process videos."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/instructblipvideo> ;
+    skos:related dlt:InstructBLIP ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Internvl a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Internvl"@en ;
+dlt:InternVL a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "InternVL"@en ;
     skos:definition "The InternVL3 family of Visual Language Models was introduced in InternVL3: Exploring Advanced Training and Test-Time Recipes for Open-Source Multimodal Models."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/internvl> ;
     skos:inScheme dlt:ModelFamilyScheme .
@@ -2602,170 +2630,190 @@ dlt:Janus a skos:Concept, dlo:ModelFamily ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:KimiK25 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Kimi K25"@en ;
+    skos:prefLabel "Kimi K2.5"@en ;
     skos:definition "Kimi K2.5 is an open-source, native multimodal agentic model that advances practical capabilities in long-horizon coding, coding-driven design, proactive autonomous execution, and swarm-based task orchestration. The model was proposed in Kimi K2.5: Visual Agentic Intelligence and further improved in Kimi K2.6: Advancing Open-Source Coding."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/kimi_k25> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Kosmos2 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Kosmos 2"@en ;
-    skos:definition "The KOSMOS-2 model was proposed in Kosmos-2: Grounding Multimodal Large Language Models to the World by Zhiliang Peng, Wenhui Wang, Li Dong, Yaru Hao, Shaohan Huang, Shuming Ma, Furu Wei."@en ;
+dlt:KOSMOS2 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "KOSMOS-2"@en ;
+    skos:definition "KOSMOS-2 is a Transformer-based causal language model and is trained using the next-word prediction task on a web-scale dataset of grounded image-text pairs GRIT. The spatial coordinates of the bounding boxes in the dataset are converted to a sequence of location tokens, which are appended to their respective entity text spans (for example, a snowman followed by <patch_index_0044><patch_index_0863>). The data format is similar to “hyperlinks” that connect the object regions in an image to their text span in the corresponding caption."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/kosmos-2> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Kosmos25 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Kosmos2.5"@en ;
+dlt:KOSMOS25 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Kosmos-2.5"@en ;
     skos:definition "The Kosmos-2.5 model was proposed in KOSMOS-2.5: A Multimodal Literate Model by Microsoft."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/kosmos2_5> ;
+    skos:related dlt:KOSMOS2 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Layoutlm a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Layoutlm"@en ;
+dlt:LayoutLM a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "LayoutLM"@en ;
     skos:definition "LayoutLM jointly learns text and the document layout rather than focusing only on text. It incorporates positional layout information and visual features of words from the document images."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/layoutlm> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Layoutlmv2 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Layoutlmv2"@en ;
-    skos:definition "The LayoutLMV2 model was proposed in LayoutLMv2: Multi-modal Pre-training for Visually-Rich Document Understanding by Yang Xu, Yiheng Xu, Tengchao Lv, Lei Cui, Furu Wei, Guoxin Wang, Yijuan Lu, Dinei Florencio, Cha Zhang, Wanxiang Che, Min Zhang, Lidong Zhou. LayoutLMV2 improves LayoutLM to obtain state-of-the-art results across several document image understanding benchmarks:"@en ;
+dlt:LayoutLMV2 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "LayoutLMV2"@en ;
+    skos:definition "LayoutLMV2 improves LayoutLM. The main difference between LayoutLMv1 and LayoutLMv2 is that the latter incorporates visual embeddings during pre-training (while LayoutLMv1 only adds visual embeddings during fine-tuning). LayoutLMv2 adds both a relative 1D attention bias as well as a spatial 2D attention bias to the attention scores in the self-attention layers."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/layoutlmv2> ;
+    skos:related dlt:LayoutLM ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Layoutlmv3 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Layoutlmv3"@en ;
-    skos:definition "The LayoutLMv3 model was proposed in LayoutLMv3: Pre-training for Document AI with Unified Text and Image Masking by Yupan Huang, Tengchao Lv, Lei Cui, Yutong Lu, Furu Wei. LayoutLMv3 simplifies LayoutLMv2 by using patch embeddings (as in ViT) instead of leveraging a CNN backbone, and pre-trains the model on 3 objectives: masked language modeling (MLM), masked image modeling (MIM) and word-patch alignment (WPA)."@en ;
+dlt:LayoutLMV3 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "LayoutLMV3"@en ;
+    skos:definition "LayoutLMv3 simplifies LayoutLMv2 by using patch embeddings (as in ViT) instead of leveraging a CNN backbone, and pre-trains the model on 3 objectives: masked language modeling (MLM), masked image modeling (MIM) and word-patch alignment (WPA)."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/layoutlmv3> ;
+    skos:related dlt:LayoutLMV2 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Layoutxlm a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Layoutxlm"@en ;
-    skos:definition "LayoutXLM was proposed in LayoutXLM: Multimodal Pre-training for Multilingual Visually-rich Document Understanding by Yiheng Xu, Tengchao Lv, Lei Cui, Guoxin Wang, Yijuan Lu, Dinei Florencio, Cha Zhang, Furu Wei. It's a multilingual extension of the LayoutLMv2 model trained on 53 languages."@en ;
+dlt:LayoutXLM a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "LayoutXLM"@en ;
+    skos:definition "LayoutXLM is a multilingual extension of the LayoutLMv2 model trained on 53 languages."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/layoutxlm> ;
+    skos:related dlt:LayoutLMV2 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Lfm2Vl a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Lfm2 Vl"@en ;
-    skos:definition "LFM2-VL first series of vision-language foundation models developed by Liquid AI. These multimodal models are designed for low-latency and device-aware deployment. LFM2-VL extends the LFM2 family of open-weight Liquid Foundation Models (LFMs) into the vision-language space, supporting both text and image inputs with variable resolutions."@en ;
+dlt:LFM2VL a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "LFM2-VL"@en ;
+    skos:definition "LFM2-VL extends the LFM2 family of open-weight Liquid Foundation Models (LFMs) into the vision-language space, supporting both text and image inputs with variable resolutions. LFM2-VL consists of three main components: a language model backbone, a vision encoder, and a multimodal projector. LFM2-VL builds upon the LFM2 backbone, inheriting from either LFM2-1.2B (for LFM2-VL-1.6B) or LFM2-350M (for LFM2-VL-450M). For the vision tower, LFM2-VL uses SigLIP2 NaFlex encoders to convert input images into token sequences. LFM2-VL consists of three main components: a language model backbone, a vision encoder, and a multimodal projector. LFM2-VL builds upon the LFM2 backbone, inheriting from either LFM2-1.2B (for LFM2-VL-1.6B) or LFM2-350M (for LFM2-VL-450M). For the vision tower, LFM2-VL uses SigLIP2 NaFlex encoders to convert input images into token sequences."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/lfm2_vl> ;
+    skos:related dlt:LFM2, dlt:SigLIP2 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:LightonOcr a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Lighton Ocr"@en ;
-    skos:definition "LightOnOcr is a compact, end-to-end vision–language model for Optical Character Recognition (OCR) and document understanding. It achieves state-of-the-art accuracy in its weight class while being several times faster and cheaper than larger general-purpose VLMs."@en ;
+dlt:LightOnOcr a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "LightOnOcr"@en ;
+    skos:definition "LightOnOcr is a compact, end-to-end vision–language model for Optical Character Recognition (OCR) and document understanding. LightOnOcr combines a Vision Transformer encoder (Pixtral-based) with a lightweight text decoder (Qwen3-based) distilled from high-quality open VLMs. It is optimized for document parsing tasks, producing accurate, layout-aware text extraction from high-resolution pages."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/lighton_ocr> ;
+    skos:related dlt:Pixtral, dlt:Qwen3 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Lilt a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Lilt"@en ;
-    skos:definition "The LiLT model was proposed in LiLT: A Simple yet Effective Language-Independent Layout Transformer for Structured Document Understanding by Jiapeng Wang, Lianwen Jin, Kai Ding. LiLT allows to combine any pre-trained RoBERTa text encoder with a lightweight Layout Transformer, to enable LayoutLM-like document understanding for many languages."@en ;
+dlt:LiLT a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "LiLT"@en ;
+    skos:definition "LiLT allows to combine any pre-trained RoBERTa text encoder with a lightweight Layout Transformer, to enable LayoutLM-like document understanding for many languages."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/lilt> ;
+    skos:related dlt:RoBERTa, dlt:LayoutLM ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Llama4 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Llama4"@en ;
+    skos:prefLabel "Llama 4"@en ;
     skos:definition "Llama 4, developed by Meta, introduces a new auto-regressive Mixture-of-Experts (MoE) architecture. This generation includes two models:"@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/llama4> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Llava a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Llava"@en ;
-    skos:definition "LLaVa is an open-source chatbot trained by fine-tuning LlamA/Vicuna on GPT-generated multimodal instruction-following data. It is an auto-regressive language model, based on the transformer architecture. In other words, it is an multi-modal version of LLMs fine-tuned for chat / instructions."@en ;
+dlt:LLaVA a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "LLaVA"@en ;
+    skos:definition "LLaVA is an open-source chatbot trained by fine-tuning LlamA/Vicuna on GPT-generated multimodal instruction-following data. It is an auto-regressive language model, based on the transformer architecture. In other words, it is an multi-modal version of LLMs fine-tuned for chat / instructions."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/llava> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:LlavaNext a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Llava Next"@en ;
+dlt:LLaVANeXT a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "LLaVA‑NeXT"@en ;
     skos:definition "LLaVA‑NeXT improves on Llava by increasing the input image resolution by 4x more pixels and supporting 3 aspect ratios (up to 672x672, 336x1344, 1344x336) to better grasp visual details. It is also trained on an improved visual instruction tuning dataset covering more scenarios and applications to improve OCR and common sense reasoning."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/llava_next> ;
+    skos:related dlt:LLaVA ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:LlavaNextVideo a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Llava Next Video"@en ;
-    skos:definition "The LLaVa-NeXT-Video model was proposed in LLaVA-NeXT: A Strong Zero-shot Video Understanding Model by Yuanhan Zhang, Bo Li, Haotian Liu, Yong Jae Lee, Liangke Gui, Di Fu, Jiashi Feng, Ziwei Liu, Chunyuan Li. LLaVa-NeXT-Video improves upon LLaVa-NeXT by fine-tuning on a mix if video and image dataset thus increasing the model's performance on videos."@en ;
+dlt:LLaVANextVideo a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "LLaVA-NeXT-Video"@en ;
+    skos:definition "LLaVa-NeXT-Video improves upon LLaVa-NeXT by fine-tuning on a mix if video and image dataset thus increasing the model's performance on videos."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/llava_next_video> ;
+    skos:related dlt:LLaVANeXT ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:LlavaOnevision a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Llava Onevision"@en ;
-    skos:definition "The LLaVA-OneVision model was proposed in LLaVA-OneVision: Easy Visual Task Transfer by <Bo Li, Yuanhan Zhang, Dong Guo, Renrui Zhang, Feng Li, Hao Zhang, Kaichen Zhang, Yanwei Li, Ziwei Liu, Chunyuan Li"@en ;
+dlt:LLaVAOneVision a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "LLaVA-OneVision"@en ;
+    skos:definition "LLaVA-OneVision is a Vision-Language Model that can generate text conditioned on one or several images/videos. The model consists of SigLIP vision encoder and a Qwen2 language backbone. The images are processed with anyres-9 technique where the image is split into 9 patches to better process high resolution images and capture as much details as possible. However, videos are pooled to a total sequence length of 196 tokens each frame for more memory efficient computation. LLaVA-OneVision is available in three sizes: 0.5B, 7B and 72B and achieves remarkable performance on benchmark evaluations."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/llava_onevision> ;
+    skos:related dlt:LLaVA, dlt:SigLIP, dlt:Qwen2 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Lxmert a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Lxmert"@en ;
-    skos:definition "The LXMERT model was proposed in LXMERT: Learning Cross-Modality Encoder Representations from Transformers by Hao Tan & Mohit Bansal. It is a series of bidirectional transformer encoders (one for the vision modality, one for the language modality, and then one to fuse both modalities) pretrained using a combination of masked language modeling, visual-language text alignment, ROI-feature regression, masked visual-attribute modeling, masked visual-object modeling, and visual-question answering objectives. The pretraining consists of multiple multi-modal datasets: MSCOCO, Visual-Genome + Visual-Genome Question Answering, VQA 2.0, and GQA."@en ;
+dlt:LXMERT a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "LXMERT"@en ;
+    skos:definition "The LXMERT model is a series of bidirectional transformer encoders (one for the vision modality, one for the language modality, and then one to fuse both modalities) pretrained using a combination of masked language modeling, visual-language text alignment, ROI-feature regression, masked visual-attribute modeling, masked visual-object modeling, and visual-question answering objectives. The pretraining consists of multiple multi-modal datasets: MSCOCO, Visual-Genome + Visual-Genome Question Answering, VQA 2.0, and GQA."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/lxmert> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Matcha a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Matcha"@en ;
+dlt:MatCha a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "MatCha"@en ;
     skos:definition "MatCha has been proposed in the paper MatCha: Enhancing Visual Language Pretraining with Math Reasoning and Chart Derendering, from Fangyu Liu, Francesco Piccinno, Syrine Krichene, Chenxi Pang, Kenton Lee, Mandar Joshi, Yasemin Altun, Nigel Collier, Julian Martin Eisenschlos."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/matcha> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Metaclip2 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Metaclip 2"@en ;
+dlt:MetaCLIP2 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "MetaCLIP 2"@en ;
     skos:definition "MetaCLIP 2 is a replication of the original CLIP model trained on 300+ languages. It achieves state-of-the-art (SOTA) results on multilingual benchmarks (e.g., XM3600, CVQA, Babel‑ImageNet), surpassing previous SOTA such as mSigLIP and SigLIP‑2. The authors show that English and non-English worlds can mutually benefit and elevate each other."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/metaclip_2> ;
+    skos:related dlt:CLIP ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:MgpStr a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Mgp Str"@en ;
-    skos:definition "The MGP-STR model was proposed in Multi-Granularity Prediction for Scene Text Recognition by Peng Wang, Cheng Da, and Cong Yao. MGP-STR is a conceptually simple yet powerful vision Scene Text Recognition (STR) model, which is built upon the Vision Transformer (ViT). To integrate linguistic knowledge, Multi-Granularity Prediction (MGP) strategy is proposed to inject information from the language modality into the model in an implicit way."@en ;
+dlt:MGPSTR a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "MGP-STR"@en ;
+    skos:definition "MGP-STR is a conceptually simple yet powerful vision Scene Text Recognition (STR) model, which is built upon the Vision Transformer (ViT). To integrate linguistic knowledge, Multi-Granularity Prediction (MGP) strategy is proposed to inject information from the language modality into the model in an implicit way."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/mgp-str> ;
+    skos:related dlt:ViT ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Minicpmv46 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Minicpmv4.6"@en ;
+dlt:MiniCPMV a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "MiniCPM-V"@en ;
     skos:definition "MiniCPM-V is a series of efficient multimodal large language models developed by OpenBMB. The MiniCPM-V 4.6 architecture uses a SigLIP vision encoder with a window-attention merger and a Qwen3.5 language model backbone, supporting both 4x and 16x visual downsampling modes."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/minicpmv4_6> ;
+    skos:related dlt:SigLIP, dlt:Qwen35 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Mistral3 a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Mistral3"@en ;
     skos:definition "Mistral 3 is a latency optimized model with a lot fewer layers to reduce the time per forward pass. This model adds vision understanding and supports long context lengths of up to 128K tokens without compromising performance."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/mistral3> ;
+    skos:related dlt:Mistral ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Mistral4 a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Mistral4"@en ;
     skos:definition "Mistral 4 is a powerful hybrid model with the capability of acting as both a general instruction model and a reasoning model. It unifies the capabilities of three different model families - Instruct, Reasoning ( previous called Magistral ), and Devstral - into a single, unified model."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/mistral4> ;
+    skos:related dlt:Mistral3 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Mllama a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Mllama"@en ;
-    skos:definition "The Llama 3.2-Vision collection of multimodal large language models (LLMs) is a collection of pretrained and instruction-tuned image reasoning generative models in 11B and 90B sizes (text \\+ images in / text out). The Llama 3.2-Vision instruction-tuned models are optimized for visual recognition, image reasoning, captioning, and answering general questions about an image."@en ;
+    skos:definition "The Llama 3.2-Vision collection of multimodal large language models (LLMs) is a collection of pretrained and instruction-tuned image reasoning generative models in 11B and 90B sizes (text \\+ images in / text out). The Llama 3.2-Vision instruction-tuned models are optimized for visual recognition, image reasoning, captioning, and answering general questions about an image. Llama 3.2-Vision is built on top of Llama 3.1 text-only model, which is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align with human preferences for helpfulness and safety. To support image recognition tasks, the Llama 3.2-Vision model uses a separately trained vision adapter that integrates with the pre-trained Llama 3.1 language model. The adapter consists of a series of cross-attention layers that feed image encoder representations into the core LLM."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/mllama> ;
+    skos:related dlt:Llama3 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:MmGroundingDino a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Mm Grounding Dino"@en ;
-    skos:definition "MM Grounding DINO model was proposed in An Open and Comprehensive Pipeline for Unified Object Grounding and Detection by Xiangyu Zhao, Yicheng Chen, Shilin Xu, Xiangtai Li, Xinjiang Wang, Yining Li, Haian Huang>."@en ;
+dlt:MMGroundingDINO a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "MM Grounding DINO"@en ;
+    skos:definition "MM Grounding DINO improves upon the Grounding DINO by improving the contrastive class head and removing the parameter sharing in the decoder, improving zero-shot detection performance on both COCO (50.6(+2.2) AP) and LVIS (31.9(+11.8) val AP and 41.4(+12.6) minival AP)."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/mm-grounding-dino> ;
+    skos:related dlt:GroundingDINO ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Musicflamingo a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Musicflamingo"@en ;
+dlt:MusicFlamingo a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Music Flamingo"@en ;
     skos:definition "Music Flamingo is a fully open large audio–language model designed for robust understanding and reasoning over music. It builds upon the Audio Flamingo 3 architecture by including Rotary Time Embeddings (RoTE), which injects temporal position information to enable the model to handle audio sequences up to 20 minutes (1200 seconds)."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/musicflamingo> ;
+    skos:related dlt:AudioFlamingo3 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Nougat a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Nougat"@en ;
-    skos:definition "The Nougat model was proposed in Nougat: Neural Optical Understanding for Academic Documents by Lukas Blecher, Guillem Cucurull, Thomas Scialom, Robert Stojnic. Nougat uses the same architecture as Donut, meaning an image Transformer encoder and an autoregressive text Transformer decoder to translate scientific PDFs to markdown, enabling easier access to them."@en ;
+    skos:definition "Nougat uses the same architecture as Donut, meaning an image Transformer encoder and an autoregressive text Transformer decoder to translate scientific PDFs to markdown, enabling easier access to them."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/nougat> ;
+    skos:related dlt:Donut ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:OmdetTurbo a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Omdet Turbo"@en ;
-    skos:definition "The OmDet-Turbo model was proposed in Real-time Transformer-based Open-Vocabulary Detection with Efficient Fusion Head by Tiancheng Zhao, Peng Liu, Xuan He, Lu Zhang, Kyusong Lee. OmDet-Turbo incorporates components from RT-DETR and introduces a swift multimodal fusion module to achieve real-time open-vocabulary object detection capabilities while maintaining high accuracy. The base model achieves performance of up to 100.2 FPS and 53.4 AP on COCO zero-shot."@en ;
+dlt:OmDetTurbo a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "OmDet-Turbo"@en ;
+    skos:definition "OmDet-Turbo incorporates components from RT-DETR and introduces a swift multimodal fusion module to achieve real-time open-vocabulary object detection capabilities while maintaining high accuracy. The base model achieves performance of up to 100.2 FPS and 53.4 AP on COCO zero-shot."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/omdet-turbo> ;
+    skos:related dlt:RTDETR ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Oneformer a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Oneformer"@en ;
-    skos:definition "The OneFormer model was proposed in OneFormer: One Transformer to Rule Universal Image Segmentation by Jitesh Jain, Jiachen Li, MangTik Chiu, Ali Hassani, Nikita Orlov, Humphrey Shi. OneFormer is a universal image segmentation framework that can be trained on a single panoptic dataset to perform semantic, instance, and panoptic segmentation tasks. OneFormer uses a task token to condition the model on the task in focus, making the architecture task-guided for training, and task-dynamic for inference."@en ;
+dlt:OneFormer a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "OneFormer"@en ;
+    skos:definition "OneFormer is a universal image segmentation framework that can be trained on a single panoptic dataset to perform semantic, instance, and panoptic segmentation tasks. OneFormer uses a task token to condition the model on the task in focus, making the architecture task-guided for training, and task-dynamic for inference."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/oneformer> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
@@ -2775,56 +2823,66 @@ dlt:Ovis2 a skos:Concept, dlo:ModelFamily ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/ovis2> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Owlvit a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Owlvit"@en ;
-    skos:definition "The OWL-ViT (short for Vision Transformer for Open-World Localization) was proposed in Simple Open-Vocabulary Object Detection with Vision Transformers by Matthias Minderer, Alexey Gritsenko, Austin Stone, Maxim Neumann, Dirk Weissenborn, Alexey Dosovitskiy, Aravindh Mahendran, Anurag Arnab, Mostafa Dehghani, Zhuoran Shen, Xiao Wang, Xiaohua Zhai, Thomas Kipf, and Neil Houlsby. OWL-ViT is an open-vocabulary object detection network trained on a variety of (image, text) pairs. It can be used to query an image with one or multiple text queries to search for and detect target objects described in text."@en ;
+dlt:OWLViT a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "OWL-ViT"@en ;
+    skos:definition "OWL-ViT is an open-vocabulary object detection network trained on a variety of (image, text) pairs. It can be used to query an image with one or multiple text queries to search for and detect target objects described in text. OWL-ViT is a zero-shot text-conditioned object detection model. OWL-ViT uses CLIP as its multi-modal backbone, with a ViT-like Transformer to get visual features and a causal language model to get the text features. To use CLIP for detection, OWL-ViT removes the final token pooling layer of the vision model and attaches a lightweight classification and box head to each transformer output token. Open-vocabulary classification is enabled by replacing the fixed classification layer weights with the class-name embeddings obtained from the text model."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/owlvit> ;
+    skos:related dlt:CLIP, dlt:ViT ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Owlv2 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Owlv2"@en ;
-    skos:definition "OWLv2 was proposed in Scaling Open-Vocabulary Object Detection by Matthias Minderer, Alexey Gritsenko, Neil Houlsby. OWLv2 scales up OWL-ViT using self-training, which uses an existing detector to generate pseudo-box annotations on image-text pairs. This results in large gains over the previous state-of-the-art for zero-shot object detection."@en ;
+dlt:OWLv2 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "OWLv2"@en ;
+    skos:definition "OWLv2 scales up OWL-ViT using self-training, which uses an existing detector to generate pseudo-box annotations on image-text pairs. This results in large gains over the previous state-of-the-art for zero-shot object detection."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/owlv2> ;
+    skos:related dlt:OWLViT ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PaddleocrVl a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Paddleocr Vl"@en ;
-    skos:definition "Huggingface Hub: PaddleOCR-VL | Github Repo: PaddleOCR"@en ;
+dlt:PaddleOCRVL a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PaddleOCR-VL"@en ;
+    skos:definition "PaddleOCR-VL is a SOTA and resource-efficient model tailored for document parsing. Its core component is PaddleOCR-VL-0.9B, a compact yet powerful vision-language model (VLM) that integrates a NaViT-style dynamic resolution visual encoder with the ERNIE-4.5-0.3B language model to enable accurate element recognition. This innovative model efficiently supports 109 languages and excels in recognizing complex elements (e.g., text, tables, formulas, and charts), while maintaining minimal resource consumption."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/paddleocr_vl> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Paligemma a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Paligemma"@en ;
+dlt:PaliGemma a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PaliGemma"@en ;
     skos:definition "PaliGemma is a family of vision-language models (VLMs), combining SigLIP with the Gemma 2B model. PaliGemma is available in 3B, 10B, and 28B parameters. The main purpose of PaliGemma is to provide an adaptable base VLM that is easy to transfer to other tasks. The SigLIP vision encoder is a \"shape optimized\" contrastively pretrained ViT that converts an image into a sequence of tokens and prepended to an optional prompt. The Gemma 2B model is used as the decoder. PaliGemma uses full attention on all image and text tokens to maximize its capacity."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/paligemma> ;
+    skos:related dlt:SigLIP, dlt:Gemma, dlt:ViT ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PeAudioVideo a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pe Audio Video"@en ;
+dlt:PEAudioVideo a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PE Audio Video"@en ;
     skos:definition "PE Audio Video is the joint audio–video branch of Meta's Perception Encoder family. It encodes audio and video streams together with a shared text tower, producing contrastive embeddings for every pairwise combination, audio-text, video-text, audio-video, and audio+text-video, from a single forward pass."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pe_audio_video> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Perceiver a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Perceiver"@en ;
-    skos:definition "The Perceiver IO model was proposed in Perceiver IO: A General Architecture for Structured Inputs & Outputs by Andrew Jaegle, Sebastian Borgeaud, Jean-Baptiste Alayrac, Carl Doersch, Catalin Ionescu, David Ding, Skanda Koppula, Daniel Zoran, Andrew Brock, Evan Shelhamer, Olivier Hénaff, Matthew M. Botvinick, Andrew Zisserman, Oriol Vinyals, João Carreira."@en ;
+    skos:definition "Perceiver IO is a generalization of Perceiver to handle arbitrary outputs in addition to arbitrary inputs. The original Perceiver only produced a single classification label. In addition to classification labels, Perceiver IO can produce (for example) language, optical flow, and multimodal videos with audio. This is done using the same building blocks as the original Perceiver. The computational complexity of Perceiver IO is linear in the input and output size and the bulk of the processing occurs in the latent space, allowing us to process inputs and outputs that are much larger than can be handled by standard Transformers. This means, for example, Perceiver IO can do BERT-style masked language modeling directly using bytes instead of tokenized inputs."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/perceiver> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PerceptionLm a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Perception Lm"@en ;
-    skos:definition "The PerceptionLM model was proposed in PerceptionLM: Open-Access Data and Models for Detailed Visual Understanding by Jang Hyun Cho et al. It's a fully open, reproducible model for transparent research in image and video understanding. PLM consists of a vision encoder with a small scale (<8B parameters) LLM decoder."@en ;
+dlt:PerceptionLM a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PerceptionLM"@en ;
+    skos:definition "The PerceptionLM model is a fully open, reproducible model for transparent research in image and video understanding. PLM consists of a vision encoder with a small scale (<8B parameters) LLM decoder."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/perception_lm> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Pi0 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pi0"@en ;
+dlt:Phi4Multimodal a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Phi4 Multimodal"@en ;
+    skos:definition "Phi4 Multimodal is a multimodal model capable of text, image, and speech and audio inputs or any combination of these. It features a mixture of LoRA adapters for handling different inputs, and each input is routed to the appropriate encoder."@en ;
+    skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/phi4_multimodal> ;
+    skos:related dlt:Phi ;
+    skos:inScheme dlt:ModelFamilyScheme .
+
+dlt:PI0 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PI0"@en ;
     skos:definition "PI0 is a vision-language-action model for robotics manipulation. It jointly processes visual observations and language instructions to generate robot actions."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pi0> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Pix2Struct a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pix2struct"@en ;
+    skos:prefLabel "Pix2Struct"@en ;
     skos:definition "The Pix2Struct model was proposed in Pix2Struct: Screenshot Parsing as Pretraining for Visual Language Understanding by Kenton Lee, Mandar Joshi, Iulia Turc, Hexiang Hu, Fangyu Liu, Julian Eisenschlos, Urvashi Khandelwal, Peter Shaw, Ming-Wei Chang, Kristina Toutanova."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pix2struct> ;
     skos:inScheme dlt:ModelFamilyScheme .
@@ -2835,197 +2893,212 @@ dlt:Pixtral a skos:Concept, dlo:ModelFamily ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pixtral> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PpDoclayoutV2 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pp Doclayout V2"@en ;
-    skos:definition "PP-DocLayoutV2 is a dedicated lightweight model for layout analysis, focusing specifically on element detection, classification, and reading order prediction."@en ;
+dlt:PPDocLayoutV2 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PP-DocLayoutV2"@en ;
+    skos:definition "PP-DocLayoutV2 is a dedicated lightweight model for layout analysis, focusing specifically on element detection, classification, and reading order prediction. PP-DocLayoutV2 is composed of two sequentially connected networks. The first is an RT-DETR-based detection model that performs layout element detection and classification. The detected bounding boxes and class labels are then passed to a subsequent pointer network, which is responsible for ordering these layout elements."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pp_doclayout_v2> ;
+    skos:related dlt:RTDETR ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PpDoclayoutV3 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pp Doclayout V3"@en ;
-    skos:definition "PP-DocLayoutV3 is a unified and high-efficiency model designed for comprehensive layout analysis. It addresses the challenges of complex physical distortions—such as skewing, curving, and adverse lighting—by integrating instance segmentation and reading order prediction into a single, end-to-end framework."@en ;
+dlt:PPDocLayoutV3 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PP-DocLayoutV3"@en ;
+    skos:definition "PP-DocLayoutV3 is a unified and high-efficiency model designed for comprehensive layout analysis. It addresses the challenges of complex physical distortions—such as skewing, curving, and adverse lighting—by integrating instance segmentation and reading order prediction into a single, end-to-end framework. P-DocLayoutV3 evolves from a traditional detection-based approach to a robust instance segmentation architecture built upon the RT-DETR framework. Instead of simple bounding boxes, it utilizes a mask-based detection head to predict pixel-accurate segments for layout elements. Unlike its predecessor, PP-DocLayoutV3 eliminates decoupled stages by embedding a Global Pointer Mechanism directly within the Transformer decoder layers. This allows the model to concurrently output classification labels, precise masks, and logical reading orders in a single forward pass, significantly reducing latency while enhancing parsing precision on complex document layouts."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pp_doclayout_v3> ;
+    skos:related dlt:PPDocLayoutV2 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PpFormulanet a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pp Formulanet"@en ;
+dlt:PPFormulaNet a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PP-FormulaNet"@en ;
     skos:definition "PP-FormulaNet-L and PP-FormulaNet_plus-L are part of a series of dedicated lightweight models for table structure recognition, focusing on accurately recognizing table structures in documents and natural scenes. For more details about the SLANet series model, please refer to the official documentation."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pp_formulanet> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PpOcrv5MobileDet a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pp Ocrv5 Mobile Det"@en ;
+dlt:PPOCRv5MobileDet a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PP-OCRv5_mobile_det"@en ;
     skos:definition "PP-OCRv5_mobile_det is a dedicated lightweight model for text detection, focusing specifically on efficient detection and understanding of text elements in multi-language documents and natural scenes."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pp_ocrv5_mobile_det> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PpOcrv5MobileRec a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pp Ocrv5 Mobile Rec"@en ;
+dlt:PPOCRv5MobileRec a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PP-OCRv5_mobile_rec"@en ;
     skos:definition "PP-OCRv5_mobile_rec is a dedicated lightweight model for text recognition, focusing specifically on efficient recognition and understanding of text elements in multi-language documents and natural scenes."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pp_ocrv5_mobile_rec> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PpOcrv5ServerDet a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pp Ocrv5 Server Det"@en ;
+dlt:PPOCRv5ServerDet a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PP-OCRv5_server_det"@en ;
     skos:definition "PP-OCRv5_server_det is a high-performance text detection model optimized for server-side applications, focusing on accurate detection of multi-language text in documents and natural scenes."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pp_ocrv5_server_det> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PpOcrv5ServerRec a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pp Ocrv5 Server Rec"@en ;
+dlt:PPOCRv5ServerRec a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PP-OCRv5_server_rec"@en ;
     skos:definition "PP-OCRv5_server_rec is a dedicated lightweight model for text recognition, focusing specifically on efficient recognition and understanding of text elements in multi-language documents and natural scenes."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pp_ocrv5_server_rec> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PpOcrv6MediumDet a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pp Ocrv6 Medium Det"@en ;
+dlt:PPOCRv6MediumDet a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PP-OCRv6_medium_det"@en ;
     skos:definition "PP-OCRv6_medium_det is the largest model in the PP-OCRv6 detection series developed by the PaddleOCR team. It uses LCNetV4 as the backbone and RepLKFPN as the feature pyramid neck, providing accurate text localization across diverse scenarios including handwritten, printed, rotated, curved, and artistic text in multiple languages. The model contains 15.5M parameters."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pp_ocrv6_medium_det> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PpOcrv6SmallDet a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pp Ocrv6 Small Det"@en ;
+dlt:PPOCRv6SmallDet a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PP-OCRv6_small_det"@en ;
     skos:definition "PP-OCRv6_small_det is the small model in the PP-OCRv6 detection series developed by the PaddleOCR team. It uses LCNetV4 as the backbone and RepLKFPN as the feature pyramid neck, providing accurate text localization across diverse scenarios including handwritten, printed, rotated, curved, and artistic text in multiple languages. The model contains 2.48M parameters."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pp_ocrv6_small_det> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PpOcrv6SmallRec a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pp Ocrv6 Small Rec"@en ;
+dlt:PPOCRv6SmallRec a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PP-OCRv6_small_rec"@en ;
     skos:definition "PP-OCRv6_small_rec is the mid-tier recognition model in the PP-OCRv6 series. It uses LCNetV4 as the backbone and EncoderWithLightSVTR as the recognition neck, with a CTC+NRTR multi-head decoder. The model supports 50 languages and contains 5.2M parameters."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pp_ocrv6_small_rec> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PpOcrv6TinyRec a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pp Ocrv6 Tiny Rec"@en ;
+dlt:PPOCRv6TinyRec a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PP-OCRv6_tiny_rec"@en ;
     skos:definition "PP-OCRv6_tiny_rec is the most lightweight recognition model in the PP-OCRv6 series. It uses LCNetV4 as the backbone with a direct reshape projection instead of an encoder neck, and a CTC+NRTR multi-head decoder. The model supports 49 languages and contains 1.1M parameters."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pp_ocrv6_tiny_rec> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PpChart2Table a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pp Chart2table"@en ;
-    skos:definition "PP-Chart2Table is a SOTA multimodal model developed by the PaddlePaddle team, specializing in chart parsing for both Chinese and English. Its high performance is driven by a novel \"Shuffled Chart Data Retrieval\" training task, which, combined with a refined token masking strategy, significantly improves its efficiency in converting charts to data tables. The model is further strengthened by an advanced data synthesis pipeline that uses high-quality seed data, RAG, and LLMs persona design to create a richer, more diverse training set. To address the challenge of large-scale unlabeled, out-of-distribution (OOD) data, the team implemented a two-stage distillation process, ensuring robust adaptability and generalization on real-world data."@en ;
+dlt:PPChart2Table a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PP-Chart2Table"@en ;
+    skos:definition "PP-Chart2Table is a SOTA multimodal model developed by the PaddlePaddle team, specializing in chart parsing for both Chinese and English. Its high performance is driven by a novel \"Shuffled Chart Data Retrieval\" training task, which, combined with a refined token masking strategy, significantly improves its efficiency in converting charts to data tables. The model is further strengthened by an advanced data synthesis pipeline that uses high-quality seed data, RAG, and LLMs persona design to create a richer, more diverse training set. To address the challenge of large-scale unlabeled, out-of-distribution (OOD) data, the team implemented a two-stage distillation process, ensuring robust adaptability and generalization on real-world data. PP-Chart2Table adopts a multimodal fusion architecture that combines a vision tower for chart feature extraction and a language model for table structure generation, enabling end-to-end chart-to-table conversion."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pp_chart2table> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PpLcnet a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pp Lcnet"@en ;
+dlt:PPLCNet a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PP-LCNet"@en ;
     skos:definition "PP-LCNet PP-LCNet is a family of efficient, lightweight convolutional neural networks designed for real-world document understanding and OCR tasks. It balances accuracy, speed, and model size, making it ideal for both server-side and edge deployment. To address different document processing requirements, PP-LCNet has three main variants, each optimized for a specific task."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pp_lcnet> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PpLcnetV3 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pp Lcnet V3"@en ;
+dlt:PPLCNetV3 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PP-LCNetV3"@en ;
     skos:definition "PPLCNetV3 is a lightweight CPU-optimized convolutional backbone designed for efficient image classification and downstream vision tasks. It builds on the PP-LCNet architecture with improved training strategies and structural refinements for better accuracy-latency tradeoffs on CPU hardware."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pp_lcnet_v3> ;
+    skos:related dlt:PPLCNet ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:PpLcnetV4 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Pp Lcnet V4"@en ;
+dlt:PPLCNetV4 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "PP-LCNetV4"@en ;
     skos:definition "PPLCNetV4 is provided as a backbone network only. No pre-trained image classification checkpoint has been officially released."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/pp_lcnet_v4> ;
+    skos:related dlt:PPLCNetV3 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:QianfanOcr a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Qianfan Ocr"@en ;
-    skos:definition "Qianfan-OCR is a 4B-parameter end-to-end document intelligence model developed by the Baidu Qianfan Team. It was proposed in Qianfan-OCR: A Unified End-to-End Model for Document Intelligence by Daxiang Dong et al."@en ;
+dlt:QianfanOCR a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Qianfan-OCR"@en ;
+    skos:definition "Qianfan-OCR is a 4B-parameter end-to-end document intelligence model. Unlike traditional multi-stage OCR pipelines, Qianfan-OCR performs direct image-to-text conversion and supports a broad range of prompt-driven tasks — from structured document parsing and table extraction to chart understanding, document question answering, and key information extraction — all within one model. The model adopts a multimodal bridging architecture consisting of three components: Qianfan-ViT for the Vision Encoder, Qwen3-4B for the Language Model and 2-layer MLP with GELU activation for the Cross-Modal Adapter."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/qianfan_ocr> ;
+    skos:related dlt:Qwen3, dlt:ViT ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Qwen25Omni a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Qwen2.5 Omni"@en ;
+    skos:prefLabel "Qwen2.5-Omni"@en ;
     skos:definition "The Qwen2.5-Omni model is a unified multiple modalities model proposed in Qwen2.5-Omni Technical Report from Qwen team, Alibaba Group."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/qwen2_5_omni> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Qwen25Vl a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Qwen2.5 Vl"@en ;
+dlt:Qwen25VL a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Qwen2.5-VL"@en ;
     skos:definition "Qwen2.5-VL is a multimodal vision-language model, available in 3B, 7B, and 72B parameters, pretrained on 4.1T tokens. The model introduces window attention in the ViT encoder to accelerate training and inference, dynamic FPS sampling on the spatial and temporal dimensions for better video understanding across different sampling rates, and an upgraded MRoPE (multi-resolutional rotary positional encoding) mechanism to better capture and learn temporal dynamics."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/qwen2_5_vl> ;
+    skos:related dlt:Qwen2VL, dlt:ViT ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Qwen2Audio a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Qwen2 Audio"@en ;
+    skos:prefLabel "Qwen2-Audio"@en ;
     skos:definition "The Qwen2-Audio is the new model series of large audio-language models from the Qwen team. Qwen2-Audio is capable of accepting various audio signal inputs and performing audio analysis or direct textual responses with regard to speech instructions. We introduce two distinct audio interaction modes:"@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/qwen2_audio> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Qwen2Vl a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Qwen2 Vl"@en ;
+dlt:Qwen2VL a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Qwen2-VL"@en ;
     skos:definition "The Qwen2-VL (blog post) model is a major update to Qwen-VL from the Qwen team at Alibaba Research."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/qwen2_vl> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Qwen3OmniMoe a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Qwen3 Omni Moe"@en ;
+dlt:Qwen3OmniMoE a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Qwen3-Omni-MOE"@en ;
     skos:definition "The Qwen3-Omni-MOE model is a unified multiple modalities model proposed in Qwen3-Omni Technical Report from Qwen team, Alibaba Group."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/qwen3_omni_moe> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Qwen3Vl a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Qwen3 Vl"@en ;
+dlt:Qwen3VL a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Qwen3-VL"@en ;
     skos:definition "Qwen3-VL is a multimodal vision-language model series, encompassing both dense and MoE variants, as well as Instruct and Thinking versions. Building upon its predecessors, Qwen3-VL delivers significant improvements in visual understanding while maintaining strong pure text capabilities. Key architectural advancements include: enhanced MRope with interleaved layout for better spatial-temporal modeling, DeepStack integration to effectively leverage multi-level features from the Vision Transformer (ViT), and improved video understanding through text-based time alignment—evolving from T-RoPE to text timestamp alignment for more precise temporal grounding. These innovations collectively enable Qwen3-VL to achieve superior performance in complex multimodal tasks."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/qwen3_vl> ;
+    skos:related dlt:Qwen25VL ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Qwen3VlMoe a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Qwen3 Vl Moe"@en ;
+dlt:Qwen3VLMoE a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Qwen3-VL MoE"@en ;
     skos:definition "Qwen3-VL is a multimodal vision-language model series, encompassing both dense and MoE variants, as well as Instruct and Thinking versions. Building upon its predecessors, Qwen3-VL delivers significant improvements in visual understanding while maintaining strong pure text capabilities. Key architectural advancements include: enhanced MRope with interleaved layout for better spatial-temporal modeling, DeepStack integration to effectively leverage multi-level features from the Vision Transformer (ViT), and improved video understanding through text-based time alignment—evolving from T-RoPE to text timestamp alignment for more precise temporal grounding. These innovations collectively enable Qwen3-VL to achieve superior performance in complex multimodal tasks."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/qwen3_vl_moe> ;
+    skos:related dlt:Qwen3VL ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Sam3 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Sam3"@en ;
-    skos:definition "SAM3 (Segment Anything Model 3) was introduced in SAM 3: Segment Anything with Concepts."@en ;
+dlt:SAM3 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "SAM3"@en ;
+    skos:definition "SAM3 performs Promptable Concept Segmentation (PCS) on images. PCS takes text and/or image exemplars as input (e.g., “yellow school bus”), and predicts instance and semantic masks for every single object matching the concept."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/sam3> ;
+    skos:related dlt:SAM2 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Sam3Video a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Sam3 Video"@en ;
-    skos:definition "SAM3 (Segment Anything Model 3) was introduced in SAM 3: Segment Anything with Concepts."@en ;
+dlt:SAM3Video a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "SAM3 Video"@en ;
+    skos:definition "SAM3 Video performs Promptable Concept Segmentation (PCS) on videos. PCS takes text as input (e.g., “yellow school bus”), and predicts instance and semantic masks for every single object matching the concept, while preserving object identities across video frames. The model combines a detection module (SAM3) with a tracking module (SAM2-style tracker) to enable robust object tracking across video frames using text prompts."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/sam3_video> ;
+    skos:related dlt:SAM3, dlt:SAM2 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Sam3LiteText a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Sam3 Lite Text"@en ;
-    skos:definition "SAM3-LiteText was proposed in SAM3-LiteText: An Anatomical Study of the SAM3 Text Encoder for Efficient Vision-Language Segmentation by Chengxi Zeng, Yuxuan Jiang, Ge Gao, Shuai Wang, Duolikun Danier, Bin Zhu, Stevan Rudinac, David Bull, and Fan Zhang."@en ;
+dlt:SAM3LiteText a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "SAM3-LiteText"@en ;
+    skos:definition "SAM3-LiteText is a lightweight variant of SAM3 that replaces the heavy SAM3 text encoder (353M parameters) with a compact MobileCLIP-based text encoder optimized through knowledge distillation. The SAM3 ViT-H image encoder is kept intact. This reduces text encoder parameters by up to 88% while maintaining segmentation performance comparable to the original model."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/sam3_lite_text> ;
+    skos:related dlt:SAM3 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Shieldgemma2 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Shieldgemma2"@en ;
-    skos:definition "The ShieldGemma 2 model was proposed in a technical report by Google. ShieldGemma 2, built on Gemma 3, is a 4 billion (4B) parameter model that checks the safety of both synthetic and natural images against key categories to help you build robust datasets and models. With this addition to the Gemma family of models, researchers and developers can now easily minimize the risk of harmful content in their models across key areas of harm as defined below:"@en ;
+dlt:ShieldGemma2 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "ShieldGemma2"@en ;
+    skos:definition "ShieldGemma 2, built on Gemma 3, is a 4 billion (4B) parameter model that checks the safety of both synthetic and natural images against key categories (e.g., sexually explicit content, dangerous content, violence/gore content) to help you build robust datasets and models."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/shieldgemma2> ;
+    skos:related dlt:Gemma3 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:SigLIP a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "SigLIP"@en ;
-    skos:definition "SigLIP is a multimodal image-text model similar to CLIP. It uses separate image and text encoders to generate representations for both modalities."@en ;
+    skos:definition "SigLIP is a multimodal image-text model similar to CLIP. It uses separate image and text encoders to generate representations for both modalities. Unlike CLIP, SigLIP employs a pairwise sigmoid loss on image-text pairs during training. This training loss eliminates the need for a global view of all pairwise similarities between images and texts within a batch. Consequently, it enables more efficient scaling to larger batch sizes while also delivering superior performance with smaller batch sizes."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/siglip> ;
+    skos:related dlt:CLIP ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:SigLIP2 a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "SigLIP2"@en ;
-    skos:definition "SigLIP2 is a family of multilingual vision-language encoders that builds on the SigLIP training recipe. It includes decoder-based pretraining, self-distillation, and masked prediction to improve dense prediction tasks (segmentation, depth estimation, etc.). This model is available in two variants:"@en ;
+    skos:definition "SigLIP2 is a family of multilingual vision-language encoders that builds on the SigLIP training recipe. It includes decoder-based pretraining, self-distillation, and masked prediction to improve dense prediction tasks (segmentation, depth estimation, etc.)."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/siglip2> ;
     skos:related dlt:SigLIP ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Slanet a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Slanet"@en ;
-    skos:definition "SLANet and SLANet_plus are part of a series of dedicated lightweight models for table structure recognition, focusing on accurately recognizing table structures in documents and natural scenes. For more details about the SLANet series model, please refer to the official documentation."@en ;
+dlt:SLANet a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "SLANet"@en ;
+    skos:definition "SLANet is a table structure recognition model developed by Baidu PaddlePaddle Vision Team. The model significantly improves the accuracy and inference speed of table structure recognition by adopting a CPU-friendly lightweight backbone network PP-LCNet, a high-low-level feature fusion module CSP-PAN, and a feature decoding module SLA Head that aligns structural and positional information."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/slanet> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Slanext a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Slanext"@en ;
-    skos:definition "SLANeXt_wired and SLANeXt_wireless are part of a series of dedicated lightweight models for table structure recognition, focusing on accurately recognizing table structures in documents and natural scenes. For more details about the SLANeXt series model, please refer to the official documentation."@en ;
+dlt:SLANeXt a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "SLANeXt"@en ;
+    skos:definition "The SLANeXt series is a new generation of table structure recognition models independently developed by the Baidu PaddlePaddle Vision Team. SLANeXt focuses on table structure recognition, and trains dedicated weights for wired and wireless tables separately. The recognition ability for all types of tables has been significantly improved, especially for wired tables."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/slanext> ;
+    skos:related dlt:SLANet ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Smolvlm a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Smolvlm"@en ;
-    skos:definition "SmolVLM2 (blog post) is an adaptation of the Idefics3 model with two main differences:"@en ;
+dlt:SmolVLM a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "SmolVLM"@en ;
+    skos:definition "SmolVLM2 is an adaptation of the Idefics3 model with two main differences: it uses SmolLM2 for the text model and it supports multi-image and video inputs."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/smolvlm> ;
+    skos:related dlt:Idefics3 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:SpeechEncoderDecoder a skos:Concept, dlo:ModelFamily ;
@@ -3034,64 +3107,68 @@ dlt:SpeechEncoderDecoder a skos:Concept, dlo:ModelFamily ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/speech-encoder-decoder> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Tapas a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Tapas"@en ;
-    skos:definition "The TAPAS model was proposed in TAPAS: Weakly Supervised Table Parsing via Pre-training by Jonathan Herzig, Paweł Krzysztof Nowak, Thomas Müller, Francesco Piccinno and Julian Martin Eisenschlos. It's a BERT-based model specifically designed (and pre-trained) for answering questions about tabular data. Compared to BERT, TAPAS uses relative position embeddings and has 7 token types that encode tabular structure. TAPAS is pre-trained on the masked language modeling (MLM) objective on a large dataset comprising millions of tables from English Wikipedia and corresponding texts."@en ;
+dlt:TAPAS a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "TAPAS"@en ;
+    skos:definition "The TAPAS model is a BERT-based model specifically designed (and pre-trained) for answering questions about tabular data. Compared to BERT, TAPAS uses relative position embeddings and has 7 token types that encode tabular structure. TAPAS is pre-trained on the masked language modeling (MLM) objective on a large dataset comprising millions of tables from English Wikipedia and corresponding texts."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/tapas> ;
+    skos:related dlt:BERT ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Tipsv2 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Tipsv2"@en ;
+dlt:TIPSv2 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "TIPSv2"@en ;
     skos:definition "TIPSv2 (Text-Image Pre-training with Spatial awareness) is a family of contrastive vision-language encoders proposed in TIPSv2: Advancing Vision-Language Pretraining with Enhanced Patch-Text Alignment) by Bingyi Cao, Koert Chen, Kevis-Kokitsi Maninis, Kaifeng Chen, Arjun Karpur, Ye Xia, Sahil Dua, Tanmaya Dabral, Guangxing Han, Bohyung Han, Joshua Ainslie, Alex Bewley, Mithun Jacob, René Wagner, Washington Ramos, Krzysztof Choromanski, Mojtaba Seyedhosseini, Howard Zhou, André Araujo."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/tipsv2> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Tipsv2Dpt a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Tipsv2 Dpt"@en ;
-    skos:definition "TIPSv2 with dense prediction transformer head (DPT), see the TIPSv2 documentation for more information."@en ;
+dlt:TIPSv2DPT a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "TIPSv2 DPT"@en ;
+    skos:definition "TIPSv2 DPT is a varient of the TIPSv2 model with a dense prediction transformer head (DPT)."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/tipsv2_dpt> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Trocr a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Trocr"@en ;
+dlt:TrOCR a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "TrOCR"@en ;
     skos:definition "TrOCR is a text recognition model for both image understanding and text generation. It doesn't require separate models for image processing or character generation. TrOCR is a simple single end-to-end system that uses a transformer to handle visual understanding and text generation."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/trocr> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Tvp a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Tvp"@en ;
+dlt:TVP a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "TVP"@en ;
     skos:definition "The text-visual prompting (TVP) framework was proposed in the paper Text-Visual Prompting for Efficient 2D Temporal Video Grounding by Yimeng Zhang, Xin Chen, Jinghan Jia, Sijia Liu, Ke Ding."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/tvp> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Udop a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Udop"@en ;
-    skos:definition "The UDOP model was proposed in Unifying Vision, Text, and Layout for Universal Document Processing by Zineng Tang, Ziyi Yang, Guoxin Wang, Yuwei Fang, Yang Liu, Chenguang Zhu, Michael Zeng, Cha Zhang, Mohit Bansal. UDOP adopts an encoder-decoder Transformer architecture based on T5 for document AI tasks like document image classification, document parsing and document visual question answering."@en ;
+dlt:UDOP a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "UDOP"@en ;
+    skos:definition "UDOP (Universal Document Processing) adopts an encoder-decoder Transformer architecture based on T5 for document AI tasks like document image classification, document parsing and document visual question answering."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/udop> ;
+    skos:related dlt:T5 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:VideoLlama3 a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Video Llama 3"@en ;
+dlt:VideoLLaMA3 a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Video LLaMA 3"@en ;
     skos:definition "The VideoLLaMA3 model is a major update to VideoLLaMA2 from Alibaba DAMO Academy."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/video_llama_3> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:VideoLlava a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Video Llava"@en ;
+dlt:VideoLLaVa a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Video-LLaVa"@en ;
     skos:definition "Video-LLaVa is an open-source multimodal LLM trained by fine-tuning LlamA/Vicuna on multimodal instruction-following data generated by Llava1.5 and VideChat. It is an auto-regressive language model, based on the transformer architecture. Video-LLaVa unifies visual representations to the language feature space, and enables an LLM to perform visual reasoning capabilities on both images and videos simultaneously."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/video_llava> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Vilt a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Vilt"@en ;
-    skos:definition "The ViLT model was proposed in ViLT: Vision-and-Language Transformer Without Convolution or Region Supervision by Wonjae Kim, Bokyung Son, Ildoo Kim. ViLT incorporates text embeddings into a Vision Transformer (ViT), allowing it to have a minimal design for Vision-and-Language Pre-training (VLP)."@en ;
+dlt:ViLT a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "ViLT"@en ;
+    skos:definition "ViLT incorporates text embeddings into a Vision Transformer (ViT), allowing it to have a minimal design for Vision-and-Language Pre-training (VLP)."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/vilt> ;
+    skos:related dlt:ViT ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Vipllava a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Vipllava"@en ;
-    skos:definition "The VipLlava model was proposed in Making Large Multimodal Models Understand Arbitrary Visual Prompts by Mu Cai, Haotian Liu, Siva Karthik Mustikovela, Gregory P. Meyer, Yuning Chai, Dennis Park, Yong Jae Lee."@en ;
+dlt:VipLlava a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "VipLlava"@en ;
+    skos:definition "VipLlava enhances the training protocol of Llava by marking images and interact with the model using natural cues like a “red bounding box” or “pointed arrow” during training."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/vipllava> ;
+    skos:related dlt:LLaVA ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:VisionEncoderDecoder a skos:Concept, dlo:ModelFamily ;
@@ -3106,22 +3183,32 @@ dlt:VisionTextDualEncoder a skos:Concept, dlo:ModelFamily ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/vision-text-dual-encoder> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:VisualBert a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Visual Bert"@en ;
+dlt:VisualBERT a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "VisualBERT"@en ;
     skos:definition "VisualBERT is a vision-and-language model. It uses an approach called \"early fusion\", where inputs are fed together into a single Transformer stack initialized from BERT. Self-attention implicitly aligns words with their corresponding image objects. It processes text with visual features from object-detector regions instead of raw pixels."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/visual_bert> ;
+    skos:related dlt:BERT ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Voxtral a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Voxtral"@en ;
     skos:definition "Voxtral is an upgrade of Ministral 3B and Mistral Small 3B, extending its language capabilities with audio input support. It is designed to handle tasks such as speech transcription, translation, and audio understanding."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/voxtral> ;
+    skos:related dlt:Mistral, dlt:Ministral ;
     skos:inScheme dlt:ModelFamilyScheme .
 
-dlt:Xclip a skos:Concept, dlo:ModelFamily ;
-    skos:prefLabel "Xclip"@en ;
-    skos:definition "The X-CLIP model was proposed in Expanding Language-Image Pretrained Models for General Video Recognition by Bolin Ni, Houwen Peng, Minghao Chen, Songyang Zhang, Gaofeng Meng, Jianlong Fu, Shiming Xiang, Haibin Ling. X-CLIP is a minimal extension of CLIP for video. The model consists of a text encoder, a cross-frame vision encoder, a multi-frame integration Transformer, and a video-specific prompt generator."@en ;
+dlt:VoxtralRealtime a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "Voxtral Realtime"@en ;
+    skos:definition "Voxtral Realtime is an optimized version of Voxtral, designed for real-time audio processing and understanding."@en ;
+    skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/voxtral_realtime> ;
+    skos:related dlt:Voxtral ;
+    skos:inScheme dlt:ModelFamilyScheme .
+
+dlt:XCLIP a skos:Concept, dlo:ModelFamily ;
+    skos:prefLabel "X-CLIP"@en ;
+    skos:definition "X-CLIP is a minimal extension of CLIP for video. The model consists of a text encoder, a cross-frame vision encoder, a multi-frame integration Transformer, and a video-specific prompt generator."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/xclip> ;
+    skos:related dlt:CLIP ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:DecisionTransformer a skos:Concept, dlo:ModelFamily ;
