@@ -89,6 +89,10 @@
         rr:predicate dlo:hasSize; 
         rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.size_categories[*]}"; rr:termType rr:IRI ]; 
     ];
+    rr:predicateObjectMap [ 
+        rr:predicate dlo:hasMultilinguality; 
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.multilinguality[*]}"; rr:termType rr:IRI ]; 
+    ];
 
     rr:predicateObjectMap [
         rr:predicate dlo:hasSourceDataset;

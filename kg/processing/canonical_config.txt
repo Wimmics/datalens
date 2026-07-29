@@ -1,0 +1,167 @@
+apertus
+bertjapanese
+bitnet
+blender
+blenderbot small
+blt
+codegen
+convbert
+cpm
+cpmant
+ctrl
+deepseekv2
+deepseekv3
+diffllama
+dpt
+esm
+falconh1
+flant5
+Flaubert
+fnet
+fsmt
+funnel
+Fuyu
+glm4
+glm4-0414
+glm-4.5
+glmmoedsa
+gptneox
+gptj
+gptbigcode
+gptsw3
+granitemoe
+granitemoeshared
+helium
+ibert
+laguna
+lfm2
+llama3
+m2m100
+madlad400
+markuplm
+megatronbert
+megatrongpt2
+minicpm3
+minimax
+ministral3
+mixtral
+mluke
+mpnet
+mpt
+mra
+mvp
+nemotron
+nllbmoe
+nomicbert
+nystromformer
+olmo3
+phi3
+phimoe
+phobert
+qwen3next
+recurrentgemma
+reformer
+Rembert
+robertaprelayernorm
+rwkv
+solaropen
+t5v1
+ul2
+umt5
+xglm
+xlmv
+youtu
+
+aimv2
+beit
+bit
+chmv2
+convnext
+convnext2
+dfine
+deimv2
+deit
+dinat
+dinov2 with registers
+efficientnet
+eomt
+hiera
+maskformer
+poolformer
+promptdepthanything
+regnet
+resnet
+sam2
+sam
+swiftformer
+table transformer
+upernet
+uvdoc
+vitmsn
+
+bark
+encodec
+fastspeech2conformer
+mms
+musicgen melody
+seamlessm4t
+sew
+sewd
+speecht5
+unispeech
+unispeechsat
+wav2vec2
+wav2vec2bert
+wav2vec2conformer
+wav2vec2phoneme
+wavlm
+xlsr
+
+timesformer
+vivit
+
+sam3tracker
+sam3tracker video
+
+bridgetower
+clvp
+cohere2vision
+deplot
+edgetamvideo
+flava
+glm family
+granite 4 vision
+group vit
+idefics
+inkling
+internvl
+janus
+kimik25
+kosmos2.5
+llama4
+matcha
+ovis2
+pix2struct
+ppformulanet
+ppocrv6 family
+qwen family
+tipsv2
+tvp
+videollama3
+
+decision transformer
+
+Pas de page :
+cohere asr 
+nemotron_asr_streaming
+parakeet
+pop2piano
+voxtral realtime
+
+encoderdecoder ?
+timmwrapper ?
+speechencoderdecodermodel ?
+visionencoderdecodermodel ?
+visontextdualencoder ?
+
+cohere, cohere 2 et cohere2Moe et cohere2vision et mllama et perceiver io et smolvlm, le nom ?

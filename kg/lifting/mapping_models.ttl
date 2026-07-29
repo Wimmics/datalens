@@ -72,6 +72,22 @@
         rr:predicate dlo:hasModality; 
         rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.modalities[*]}"; rr:termType rr:IRI ]; 
     ];
+    rr:predicateObjectMap [ 
+        rr:predicate dlo:hasDiffusers; 
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.diffusers[*]}"; rr:termType rr:IRI ]; 
+    ];
+    rr:predicateObjectMap [ 
+        rr:predicate dlo:hasLoss; 
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.loss[*]}"; rr:termType rr:IRI ]; 
+    ];
+    rr:predicateObjectMap [ 
+        rr:predicate dlo:hasImplementation; 
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.implementations[*]}"; rr:termType rr:IRI ]; 
+    ];
+    rr:predicateObjectMap [ 
+        rr:predicate dlo:hasModelFamily; 
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.model_family[*]}"; rr:termType rr:IRI ]; 
+    ];
     rr:predicateObjectMap [
         rr:predicate dlo:hasLibrary;
         rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.thesaurus_libraries[*]}"; rr:termType rr:IRI ];
@@ -102,11 +118,6 @@
     rr:predicateObjectMap [
         rr:predicate prov:qualifiedDerivation;
         rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data/derivation/{$.source_models[*].derivation_hash16}"; rr:termType rr:IRI ];
-    ];
-
-    rr:predicateObjectMap [
-        rr:predicate dlo:hasModelConfiguration;
-        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/data/configuration/{$.config_hash16}"; rr:termType rr:IRI ];
     ];
 
     rr:predicateObjectMap [
@@ -311,26 +322,6 @@
     rr:predicateObjectMap [
         rr:predicate dcterms:identifier;
         rr:objectMap [ xrr:reference "$.model_label" ];
-    ];
-    .
-
-<#Configuration>
-    a rr:TriplesMap;
-    xrr:logicalSource [
-        xrr:query "db.{{collection}}.find({config:{$exists:true,$ne:null}})";
-    ];
-    rr:subjectMap [
-        rr:template "http://ns.inria.fr/datalens/data/configuration/{$.config_hash16}";
-        rr:termType rr:IRI;
-        rr:class dlo:ModelConfiguration;
-    ];
-    rr:predicateObjectMap [
-        rr:predicate dlo:hasModelType;
-        rr:objectMap [ xrr:reference "$.config.model_type"; rr:termType rr:Literal ];
-    ];
-    rr:predicateObjectMap [
-        rr:predicate dlo:hasModelArchitecture;
-        rr:objectMap [ xrr:reference "$.config.architectures[*]"; rr:termType rr:Literal ];
     ];
     .
 

@@ -48,6 +48,7 @@ def parse(json_obj: dict[str, Any]) -> dict[str, Any]:
     parsed["libraries"] = canonicalize(get_tag_with_prefix(tags, "library:") + get_canonical_tag_alone(tags, "dataset_library"), "dataset_library")
     parsed["size_categories"] = canonicalize(get_tag_with_prefix(tags, "size_categories:") + get_canonical_tag_alone(tags, "size_category"), "size_category")
     parsed["formats"] = canonicalize(get_tag_with_prefix(tags, "format:") + get_canonical_tag_alone(tags, "format"), "format")
+    parsed["multilinguality"] = canonicalize(get_tag_with_prefix(tags, "multilinguality:") + get_canonical_tag_alone(tags, "multilinguality"), "multilinguality")
 
     doi_ids = get_tag_with_prefix(tags, "doi:")
     arxiv_ids = get_tag_with_prefix(tags, "arxiv:")

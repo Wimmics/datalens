@@ -64,6 +64,18 @@ dlo:likesCount a owl:DatatypeProperty ;
     rdfs:domain  dlo:MLResource;    
     rdfs:range xsd:integer .
 
+dlo:viewCount a owl:DatatypeProperty ;
+    rdfs:label "view count"@en ;
+    rdfs:comment "The number of times a resource has been viewed."@en ;
+    rdfs:domain  dlo:MLResource;    
+    rdfs:range xsd:integer .
+
+dlo:kernelCount a owl:DatatypeProperty ;
+    rdfs:label "kernel count"@en ;
+    rdfs:comment "The number of times a resource has been used in a kernel."@en ;
+    rdfs:domain  dlo:MLResource;    
+    rdfs:range xsd:integer .
+
 dlo:hasModality a owl:ObjectProperty ;
     rdfs:label "has modality"@en ;
     rdfs:comment "Relates a dataset to a specific modality or type of data used in the context of machine learning."@en ;
@@ -114,6 +126,10 @@ dlo:SizeCategory a owl:Class ;
     rdfs:label "Size Category"@en ;
     rdfs:comment "Categories for the size of a dataset, according to HuggingFace definition."@en .
 
+dlo:Multilinguality a owl:Class ;
+    rdfs:label "Multilinguality"@en ;
+    rdfs:comment "A classification of datasets based on the number of languages they cover."@en .
+
 dlo:Annotation a owl:Class ;
     rdfs:subClassOf oa:Annotation ;
     rdfs:label "Annotation"@en ;
@@ -145,6 +161,24 @@ dlo:hasSize a owl:ObjectProperty ;
     rdfs:domain dlo:Dataset ;
     rdfs:range dlo:SizeCategory .
 
+dlo:hasSizeCompressed a owl:DatatypeProperty ;
+    rdfs:label "has size compressed"@en ;
+    rdfs:comment "Relates a dataset to its compressed size in bytes."@en ;
+    rdfs:domain dlo:Dataset ;
+    rdfs:range xsd:integer .
+
+dlo:hasSizeUncompressed a owl:DatatypeProperty ;
+    rdfs:label "has size uncompressed"@en ;
+    rdfs:comment "Relates a dataset to its uncompressed size in bytes."@en ;
+    rdfs:domain dlo:Dataset ;
+    rdfs:range xsd:integer .
+
+dlo:hasMultilinguality a owl:ObjectProperty ;
+    rdfs:label "has multilinguality"@en ;
+    rdfs:comment "Relates a dataset to its multilinguality classification."@en ;
+    rdfs:domain dlo:Dataset ;
+    rdfs:range dlo:Multilinguality .
+
 
 # Class Model
 
@@ -159,6 +193,15 @@ dlo:Transformation a owl:Class ;
     rdfs:subClassOf prov:Activity ;
     rdfs:label "Model Transformation"@en ;
     rdfs:comment "A transformation or modification applied to a machine learning model."@en .
+
+dlo:Diffuser a owl:Class ;
+    rdfs:subClassOf prov:Activity ;
+    rdfs:label "Diffuser"@en ;
+    rdfs:comment "A process or activity that diffuses or distributes a machine learning model."@en .
+
+dlo:Loss a owl:Class ;
+    rdfs:label "Loss"@en ;
+    rdfs:comment "A loss function used in the training or evaluation of a machine learning model."@en .
 
 dlo:Implementation a owl:Class ;
     rdfs:label "Implementation"@en ;
@@ -187,6 +230,18 @@ dlo:hasImplementation a owl:ObjectProperty ;
     rdfs:comment "Relates a machine learning model to its implementation."@en ;
     rdfs:domain dlo:Model ;
     rdfs:range dlo:Implementation .
+
+dlo:hasLoss a owl:ObjectProperty ;
+    rdfs:label "has loss"@en ;
+    rdfs:comment "Relates a machine learning model to its loss function."@en ;
+    rdfs:domain dlo:Model ;
+    rdfs:range dlo:Loss .
+
+dlo:hasDiffuser a owl:ObjectProperty ;
+    rdfs:label "has diffuser"@en ;
+    rdfs:comment "Relates a machine learning model to its diffuser."@en ;
+    rdfs:domain dlo:Model ;
+    rdfs:range dlo:Diffuser .
 
 # Class alignments
 

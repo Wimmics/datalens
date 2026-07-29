@@ -1,9 +1,0 @@
-Comparaison des tags de la catégorie algorithms avec ModelFamilyScheme
-Nombre de tags : 1
-Nombre de concepts : 7236
-Nombre de tags correspondants : 1
-Couverture des tags : 100.0%
-Correspondances
-hmm -> HMM
-
-Tags absents

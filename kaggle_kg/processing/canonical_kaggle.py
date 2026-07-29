@@ -1,4 +1,4 @@
-ARCHITECTURE_CANONICAL= {
+ARCHITECTURE_CANONICAL = {
  "1x1-convolution": "1X1Convolution",
   "albert": "Albert",
   "amoebanet-a-n18-f448": "AmoebanetAN18F448",
@@ -210,7 +210,7 @@ ARCHITECTURE_CANONICAL= {
   "yolov8": "Yolov8"
 }
 
-MODALITY_CANONICAL = {
+MODALITY_KAGGLE_CANONICAL = {
     "audio": "Audio",
     "bigquery": "Bigquery",
     "categorical": "Categorical",
@@ -229,7 +229,7 @@ AUDIENCE_CANONICAL = {
     "intermediate": "Intermediate"
 }
 
-LIBRARY_CANONICAL = {
+LIBRARY_KAGGLE_CANONICAL = {
     "caret": "Caret",
     "catboost": "Catboost",
     "corrplot": "Corrplot",
@@ -461,7 +461,7 @@ SUBJECT_CANONICAL = {
     "water transport": "WaterTransport"
 }
 
-TASK_CANONICAL = {
+TASK_KAGGLE_CANONICAL = {
    "aesthetic-quality": "AestheticQuality",
     "audio-classification": "AudioClassification",
     "audio-command-detection": "AudioCommandDetection",
