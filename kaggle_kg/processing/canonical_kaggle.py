@@ -212,15 +212,17 @@ ARCHITECTURE_CANONICAL = {
 
 MODALITY_KAGGLE_CANONICAL = {
     "audio": "Audio",
-    "bigquery": "Bigquery",
-    "categorical": "Categorical",
     "graph": "Graph",
     "image": "Image",
-    "multimodal data": "MultimodalData",
-    "synthetic": "Synthetic",
+    "multimodal data": "Multimodal",
     "tabular": "Tabular",
     "text": "Text",
-    "video data": "VideoData"
+    "video data": "Video",
+     
+    # Types of data 
+    "bigquery": "Bigquery",
+    "categorical": "Categorical",
+    "synthetic": "Synthetic",
 }
 
 AUDIENCE_CANONICAL = {
@@ -230,10 +232,34 @@ AUDIENCE_CANONICAL = {
 }
 
 LIBRARY_KAGGLE_CANONICAL = {
+    "hugging face": "HuggingFace",
+    "keras": "Keras",
+    "pytorch": "Pytorch",
+    "randomForest": "RandomForest",
+    "sklearn": "Sklearn",
+    "transformers": "Transformers",
+    "torchvision": "Torchvision",
+    "tensorflow": "Tensorflow",
+    "xgboost": "Xgboost",
+    "spaCy": "SpaCy",
+    "lightgbm": "Lightgbm",
+    "nltk": "Nltk",
     "caret": "Caret",
     "catboost": "Catboost",
-    "corrplot": "Corrplot",
     "cv2": "Cv2",
+    "rapids": "Rapids",
+    "rpart": "Rpart",
+    "tabpfn": "Tabpfn",
+    "wandb": "Wandb", 
+    
+    # Librairies de données
+    "numpy": "Numpy", 
+    "pandas": "Pandas",
+    "scipy": "Scipy",
+    "seaborn": "Seaborn",   
+    
+    # Librairies générales
+    "corrplot": "Corrplot",
     "d3js": "D3Js",
     "datetime": "Datetime",
     "doParallel": "DoParallel",
@@ -245,48 +271,28 @@ LIBRARY_KAGGLE_CANONICAL = {
     "ggthemes": "Ggthemes",
     "glob": "Glob",
     "gridExtra": "GridExtra",
-    "hugging face": "HuggingFace",
     "IPython": "IPython",
     "json": "Json",
     "jsonlite": "Jsonlite",
-    "keras": "Keras",
     "knitr": "Knitr",
     "leaflet": "Leaflet",
-    "lightgbm": "Lightgbm",
     "lubridate": "Lubridate",
     "matplotlib": "Matplotlib",
-    "nltk": "Nltk",
-    "numpy": "Numpy",
     "os": "Os",
-    "pandas": "Pandas",
     "pathlib": "Pathlib",
     "PIL": "PIL",
     "plotly": "Plotly",
     "plyr": "Plyr",
-    "pytorch": "Pytorch",
-    "randomForest": "RandomForest",
-    "rapids": "Rapids",
     "RColorBrewer": "RColorBrewer",
     "re": "Re",
     "readr": "Readr",
     "reshape2": "Reshape2",
-    "rpart": "Rpart",
-    "scipy": "Scipy",
-    "seaborn": "Seaborn",
-    "sklearn": "Sklearn",
-    "spaCy": "SpaCy",
     "stringr": "Stringr",
     "sys": "Sys",
-    "tabpfn": "Tabpfn",
-    "tensorflow": "Tensorflow",
     "tibble": "Tibble",
     "tidyr": "Tidyr",
     "tidyverse": "Tidyverse",
-    "torchvision": "Torchvision",
     "tqdm": "Tqdm",
-    "transformers": "Transformers",
-    "wandb": "Wandb",
-    "xgboost": "Xgboost"
 }
 
 SUBJECT_CANONICAL = {
@@ -462,7 +468,7 @@ SUBJECT_CANONICAL = {
 }
 
 TASK_KAGGLE_CANONICAL = {
-   "aesthetic-quality": "AestheticQuality",
+    "aesthetic-quality": "AestheticQuality",
     "audio-classification": "AudioClassification",
     "audio-command-detection": "AudioCommandDetection",
     "audio-event-classification": "AudioEventClassification",
@@ -541,11 +547,18 @@ TASK_KAGGLE_CANONICAL = {
 }
 
 TECHNIQUE_CANONICAL = {
+    # Architectures
+    "cnn": "Cnn",
+    "dnn": "Dnn",
+    "gan": "Gan",
+    "lstm": "Lstm",
+    "rnn": "Rnn",
+    
+    # Methods
     "adversarial learning": "AdversarialLearning",
     "automl": "Automl",
     "bayesian statistics": "BayesianStatistics",
     "benchmark": "Benchmark",
-    "computer vision": "ComputerVision",
     "data analytics": "DataAnalytics",
     "data storytelling": "DataStorytelling",
     "data visualization": "DataVisualization",
@@ -563,11 +576,6 @@ TECHNIQUE_CANONICAL = {
     "model explainability": "ModelExplainability",
     "naive bayes": "NaiveBayes",
     "neural networks": "NeuralNetworks",
-    "cnn": "Cnn",
-    "dnn": "Dnn",
-    "gan": "Gan",
-    "lstm": "Lstm",
-    "rnn": "Rnn",
     "optimization": "Optimization",
     "outlier analysis": "OutlierAnalysis",
     "pca": "Pca",
@@ -576,15 +584,23 @@ TECHNIQUE_CANONICAL = {
     "sampling": "Sampling",
     "svm": "Svm",
     "time series analysis": "TimeSeriesAnalysis",
-    "transfer learning": "TransferLearning"
+    "transfer learning": "TransferLearning",   
+    
+    # Tasks
+    "computer vision": "ComputerVision",
 }
 
-ANALYSIS_CANONICAL = {
-    "data cleaning": "DataCleaning",
+ANALYSIS_CANONICAL = {  
+    # Subjects                    
     "geospatial analysis": "GeospatialAnalysis",
-    "nlp": "Nlp",
     "signal processing": "SignalProcessing",
+
+    # Methods
+    "data cleaning": "DataCleaning",
     "statistical analysis": "StatisticalAnalysis",
     "survey analysis": "SurveyAnalysis",
-    "text mining": "TextMining"
+    "text mining": "TextMining",        
+    
+    # Tasks
+    "nlp": "Nlp",
 }
