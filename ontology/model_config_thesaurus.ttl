@@ -75,7 +75,7 @@ dlt:BertGeneration a skos:Concept, dlo:ModelFamily ;
 
 dlt:BertJapanese a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "BertJapanese"@en ;
-    skos:definition "- Tokenize with MeCab and WordPiece. This requires some extra dependencies, fugashi which is a wrapper around MeCab. - Tokenize into characters."@en ;
+    skos:definition "BERTJapanese is a varient of the BERT model trained on Japanese text."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/bert-japanese> ;
     skos:related dlt:BERT ;
     skos:inScheme dlt:ModelFamilyScheme .
@@ -109,7 +109,7 @@ dlt:BioGPT a skos:Concept, dlo:ModelFamily ;
 
 dlt:BitNet a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "BitNet"@en ;
-    skos:definition "Trained on a corpus of 4 trillion tokens, this model demonstrates that native 1-bit LLMs can achieve performance comparable to leading open-weight, full-precision models of similar size, while offering substantial advantages in computational efficiency (memory, energy, latency)."@en ;
+    skos:definition "BitNet is an open-source, native 1-bit Large Language Model (LLM) with 2 billions parameters. BitNet is transformer-based, modified with BitLinear layers (BitNet framework). It uses Rotary Position Embeddings (RoPE), squared ReLU (ReLU²) activation in FFN layers and employs subln normalization."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/bitnet> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
@@ -121,7 +121,7 @@ dlt:Blenderbot a skos:Concept, dlo:ModelFamily ;
 
 dlt:BlenderbotSmall a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Blenderbot Small"@en ;
-    skos:definition "Note that [BlenderbotSmallModel] and [BlenderbotSmallForConditionalGeneration] are only used in combination with the checkpoint facebook/blenderbot-90M. Larger Blenderbot checkpoints should instead be used with [BlenderbotModel] and [BlenderbotForConditionalGeneration]"@en ;
+    skos:definition "Blenderbot Small is a smaller variant (in numbers of parameters) of the Blanderbot model."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/blenderbot-small> ;
     skos:related dlt:Blenderbot ;
     skos:inScheme dlt:ModelFamilyScheme .
@@ -135,7 +135,7 @@ dlt:BLOOM a skos:Concept, dlo:ModelFamily ;
 
 dlt:BLT a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "BLT"@en ;
-    skos:definition "The BLT model was proposed in Byte Latent Transformer: Patches Scale Better Than Tokens by Artidoro Pagnoni, Ram Pasunuru, Pedro Rodriguez, John Nguyen, Benjamin Muller, Margaret Li1, Chunting Zhou, Lili Yu, Jason Weston, Luke Zettlemoyer, Gargi Ghosh, Mike Lewis, Ari Holtzman†, Srinivasan Iyer. BLT is a byte-level LLM that achieves tokenization-level performance through entropy-based dynamic patching."@en ;
+    skos:definition "BLT is a byte-level LLM that achieves tokenization-level performance through entropy-based dynamic patching."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/blt> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
@@ -161,7 +161,7 @@ dlt:CANINE a skos:Concept, dlo:ModelFamily ;
 
 dlt:CodeGen a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "CodeGen"@en ;
-    skos:definition "The CodeGen model was proposed in A Conversational Paradigm for Program Synthesis by Erik Nijkamp, Bo Pang, Hiroaki Hayashi, Lifu Tu, Huan Wang, Yingbo Zhou, Silvio Savarese, and Caiming Xiong."@en ;
+    skos:definition "CodeGen is an autoregressive language model for program synthesis trained sequentially on The Pile, BigQuery, and BigPython."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/codegen> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
@@ -194,7 +194,7 @@ dlt:Cohere2Moe a skos:Concept, dlo:ModelFamily ;
 
 dlt:ConvBERT a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "ConvBERT"@en ;
-    skos:definition "The ConvBERT model was proposed in ConvBERT: Improving BERT with Span-based Dynamic Convolution by Zihang Jiang, Weihao Yu, Daquan Zhou, Yunpeng Chen, Jiashi Feng, Shuicheng Yan."@en ;
+    skos:definition "ConvBERT is a variant of the BERT model that combines self-attention with dynamic convolution. Instead of using self-attention for every part of the input, ConvBERT replaces some attention heads with convolution layers to better capture local context (nearby words)."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/convbert> ;
     skos:related dlt:BERT ;
     skos:inScheme dlt:ModelFamilyScheme .
@@ -214,7 +214,7 @@ dlt:CPMAnt a skos:Concept, dlo:ModelFamily ;
 
 dlt:CTRL a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "CTRL"@en ;
-    skos:definition "CTRL model was proposed in CTRL: A Conditional Transformer Language Model for Controllable Generation by Nitish Shirish Keskar, Bryan McCann, Lav R. Varshney, Caiming Xiong and Richard Socher. It's a causal (unidirectional) transformer pre-trained using language modeling on a very large corpus of ~140 GB of text data with the first token reserved as a control code (such as Links, Books, Wikipedia etc.)."@en ;
+    skos:definition "CTRL is a causal (unidirectional) transformer pre-trained using language modeling on a very large corpus of ~140 GB of text data with the first token reserved as a control code (such as Links, Books, Wikipedia etc.)."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/ctrl> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
@@ -281,7 +281,7 @@ dlt:DialoGPT a skos:Concept, dlo:ModelFamily ;
 
 dlt:DiffLlama a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "DiffLlama"@en ;
-    skos:definition "The DiffLlama model was proposed in Differential Transformer by Kazuma Matsumoto and . This model is combine Llama model and Differential Transformer's Attention."@en ;
+    skos:definition "DiffLlama is a variant of the Llama language model that integrates the Differential Transformer attention mechanism."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/diffllama> ;
     skos:related dlt:Llama ;
     skos:inScheme dlt:ModelFamilyScheme .
@@ -307,7 +307,7 @@ dlt:Dots1 a skos:Concept, dlo:ModelFamily ;
 
 dlt:DPR a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "DPR"@en ;
-    skos:definition "Dense Passage Retrieval (DPR) is a set of tools and models for state-of-the-art open-domain Q&A research. It was introduced in Dense Passage Retrieval for Open-Domain Question Answering by Vladimir Karpukhin, Barlas Oğuz, Sewon Min, Patrick Lewis, Ledell Wu, Sergey Edunov, Danqi Chen, Wen-tau Yih."@en ;
+    skos:definition "Dense Passage Retrieval (DPR) is a set of tools and models for question-answering. DPR consists in three models: a Question encoder that encodes questions as vectors, a Context encoder that encodes contexts as vectors and a Reader that extracts the answer of the questions inside retrieved contexts, along with a relevance score (high if the inferred span actually answers the question)."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/dpr> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
@@ -345,7 +345,7 @@ dlt:Ernie45Moe a skos:Concept, dlo:ModelFamily ;
 
 dlt:ESM a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "ESM"@en ;
-    skos:definition "This page provides code and pre-trained weights for Transformer protein language models from Meta AI's Fundamental AI Research Team, providing the state-of-the-art ESMFold and ESM-2, and the previously released ESM-1b and ESM-1v. Transformer protein language models were introduced in the paper Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences by Alexander Rives, Joshua Meier, Tom Sercu, Siddharth Goyal, Zeming Lin, Jason Liu, Demi Guo, Myle Ott, C. Lawrence Zitnick, Jerry Ma, and Rob Fergus. The first version of this paper was preprinted in 2019."@en ;
+    skos:definition "ESM (Evolutionary Scale Modeling) is a family of transformer-based protein language models trained on large-scale protein sequence data using self-supervised learning. ESM models learn rich representations of protein sequences that can be used for tasks such as protein structure prediction, function prediction, and mutation effect prediction. The ESM family includes ESM-1, ESM-2, and ESMFold, with ESMFold enabling fast and accurate prediction of 3D protein structures directly from amino acid sequences."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/esm> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
@@ -404,7 +404,7 @@ dlt:FalconMamba a skos:Concept, dlo:ModelFamily ;
 
 dlt:FLANT5 a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "FLAN-T5"@en ;
-    skos:definition "FLAN-T5 was released in the paper Scaling Instruction-Finetuned Language Models - it is an enhanced version of T5 that has been finetuned in a mixture of tasks."@en ;
+    skos:definition "FLAN-T5 is an instruction-tuned version of the T5 model that is fine-tuned in a mixture of tasks."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/flan-t5> ;
     skos:related dlt:T5 ;
     skos:inScheme dlt:ModelFamilyScheme .
@@ -418,7 +418,7 @@ dlt:FLANUL2 a skos:Concept, dlo:ModelFamily ;
 
 dlt:FlauBERT a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "FlauBERT"@en ;
-    skos:definition "The FlauBERT model was proposed in the paper FlauBERT: Unsupervised Language Model Pre-training for French by Hang Le et al. It's a transformer model pretrained using a masked language modeling (MLM) objective (like BERT)."@en ;
+    skos:definition "FlauBERT is a French transformer-based language model based on the BERT architecture and pre-trained on a large-scale French corpus using masked language modeling."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/flaubert> ;
     skos:related dlt:BERT ;
     skos:inScheme dlt:ModelFamilyScheme .
@@ -1232,7 +1232,7 @@ dlt:SwitchTransformers a skos:Concept, dlo:ModelFamily ;
 
 dlt:T5 a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "T5"@en ;
-    skos:definition "T5 is a encoder-decoder transformer available in a range of sizes from 60M to 11B parameters. It is designed to handle a wide range of NLP tasks by treating them all as text-to-text problems. This eliminates the need for task-specific architectures because T5 converts every NLP task into a text generation task."@en ;
+    skos:definition "T5 (Text-to-Text Transfer Transformer) is a encoder-decoder transformer available in a range of sizes from 60M to 11B parameters. It is designed to handle a wide range of NLP tasks by treating them all as text-to-text problems. This eliminates the need for task-specific architectures because T5 converts every NLP task into a text generation task."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/t5> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
@@ -1715,14 +1715,14 @@ dlt:RTDETRV2 a skos:Concept, dlo:ModelFamily ;
 
 dlt:SAM2 a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "SAM2"@en ;
-    skos:definition "SAM2 (Segment Anything Model 2) was proposed in Segment Anything in Images and Videos by Nikhila Ravi, Valentin Gabeur, Yuan-Ting Hu, Ronghang Hu, Chaitanya Ryali, Tengyu Ma, Haitham Khedr, Roman Rädle, Chloe Rolland, Laura Gustafson, Eric Mintun, Junting Pan, Kalyan Vasudev Alwala, Nicolas Carion, Chao-Yuan Wu, Ross Girshick, Piotr Dollár, Christoph Feichtenhofer."@en ;
+    skos:definition "SAM2 (Segment Anything Model 2) is an advanced foundation model for image and video segmentation that extends SAM. SAM2 natively supports batch processing and seamless video segmentation, while original SAM is designed for static images and simpler one-image-at-a-time workflows. SAM2 shows improved segmentation quality, robustness, and zero-shot generalization to new domains compared to the original SAM, especially with mixed prompts."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/sam2> ;
     skos:related dlt:SAM ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:SAM3Tracker a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "SAM3 Tracker"@en ;
-    skos:definition "SAM3Tracker performs Promptable Visual Segmentation (PVS) on images. PVS takes interactive visual prompts (points, boxes, masks) or text inputs to segment a specific object instance per prompt. This is the task that SAM 1 and SAM 2 focused on, and SAM 3 improves upon it."@en ;
+    skos:definition "SAM 3 Tracker is a video object tracking model built on top of SAM 3 that focuses on maintaining object identity and segmentation consistency across video frames."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/sam3_tracker> ;
     skos:related dlt:SAM3 ;
     skos:inScheme dlt:ModelFamilyScheme .
@@ -1747,7 +1747,7 @@ dlt:SegGPT a skos:Concept, dlo:ModelFamily ;
 
 dlt:SAM a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "SAM"@en ;
-    skos:definition "SAM (Segment Anything Model) was proposed in Segment Anything by Alexander Kirillov, Eric Mintun, Nikhila Ravi, Hanzi Mao, Chloe Rolland, Laura Gustafson, Tete Xiao, Spencer Whitehead, Alex Berg, Wan-Yen Lo, Piotr Dollar, Ross Girshick."@en ;
+    skos:definition "SAM (Segment Anything Model) is a foundation model for image segmentation developed to to predict segmentation masks of any object of interest given an input image."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/sam> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
@@ -1896,7 +1896,7 @@ dlt:AudioSpectrogramTransformer a skos:Concept, dlo:ModelFamily ;
 
 dlt:Bark a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Bark"@en ;
-    skos:definition "Bark is a transformer-based text-to-speech model proposed by Suno AI in suno-ai/bark."@en ;
+    skos:definition "Bark is a transformer-based text-to-speech (TTS) model developed by Suno AI that generates realistic speech and audio from text inputs. It uses a multi-stage architecture composed of semantic, coarse acoustic, and fine acoustic transformer models to progressively convert text into audio representations before decoding them into speech. Bark supports speaker conditioning through voice embeddings and can generate expressive speech with variations in tone, style, and vocal characteristics."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/bark> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
@@ -2029,7 +2029,7 @@ dlt:MusicGen a skos:Concept, dlo:ModelFamily ;
 
 dlt:MusicGenMelody a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "MusicGen Melody"@en ;
-    skos:definition "The MusicGen Melody model was proposed in Simple and Controllable Music Generation by Jade Copet, Felix Kreuk, Itai Gat, Tal Remez, David Kant, Gabriel Synnaeve, Yossi Adi and Alexandre Défossez."@en ;
+    skos:definition "MusicGen Melody extends the MusicGen architecture to generate music based on both textual descriptions and reference melodies."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/musicgen_melody> ;
     skos:related dlt:MusicGen ;
     skos:inScheme dlt:ModelFamilyScheme .
@@ -2068,13 +2068,14 @@ dlt:SeamlessM4TV2 a skos:Concept, dlo:ModelFamily ;
 
 dlt:SEW a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "SEW"@en ;
-    skos:definition "SEW (Squeezed and Efficient Wav2Vec) was proposed in Performance-Efficiency Trade-offs in Unsupervised Pre-training for Speech Recognition by Felix Wu, Kwangyoun Kim, Jing Pan, Kyu Han, Kilian Q. Weinberger, Yoav Artzi."@en ;
+    skos:definition "SEW (Squeezed and Efficient Wav2Vec) is a self-supervised speech representation learning model that improves upon wav2vec 2.0 by introducing a squeezed feature encoder and an efficient transformer architecture."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/sew> ;
+    skos:related dlt:Wav2Vec2 ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:SEWD a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "SEW-D"@en ;
-    skos:definition "SEW-D (Squeezed and Efficient Wav2Vec with Disentangled attention) was proposed in Performance-Efficiency Trade-offs in Unsupervised Pre-training for Speech Recognition by Felix Wu, Kwangyoun Kim, Jing Pan, Kyu Han, Kilian Q. Weinberger, Yoav Artzi."@en ;
+    skos:definition "SEW-D (Squeezed and Efficient Wav2Vec with Disentangled Attention) is an enhanced version of SEW that incorporates disentangled attention mechanisms into the transformer layers."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/sew-d> ;
     skos:related dlt:SEW ;
     skos:inScheme dlt:ModelFamilyScheme .
@@ -2130,27 +2131,27 @@ dlt:VITS a skos:Concept, dlo:ModelFamily ;
 
 dlt:Wav2Vec2 a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Wav2vec2"@en ;
-    skos:definition "The Wav2Vec2 model was proposed in wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations by Alexei Baevski, Henry Zhou, Abdelrahman Mohamed, Michael Auli."@en ;
+    skos:definition "The Wav2Vec2 model is a self-supervised speech representation learning model that learns powerful audio representations directly from raw speech waveforms."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/wav2vec2> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Wav2Vec2BERT a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Wav2Vec2-BERT"@en ;
-    skos:definition "The Wav2Vec2-BERT model was proposed in Seamless: Multilingual Expressive and Streaming Speech Translation by the Seamless Communication team from Meta AI."@en ;
+    skos:definition "The Wav2Vec2-BERT model is a variant of wav2vec 2.0 that combines self-supervised speech learning with BERT-style masked prediction objectives."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/wav2vec2-bert> ;
     skos:related dlt:Wav2Vec2, dlt:BERT ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Wav2Vec2Conformer a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Wav2Vec2-Conformer"@en ;
-    skos:definition "The Wav2Vec2-Conformer was added to an updated version of fairseq S2T: Fast Speech-to-Text Modeling with fairseq by Changhan Wang, Yun Tang, Xutai Ma, Anne Wu, Sravya Popuri, Dmytro Okhonko, Juan Pino."@en ;
+    skos:definition "The Wav2Vec2-Conformer model is a variant of wav2vec 2.0 that replaces the standard transformer encoder with a Conformer architecture."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/wav2vec2-conformer> ;
     skos:related dlt:Wav2Vec2, dlt:Conformer ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:Wav2Vec2Phoneme a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Wav2Vec2-Phoneme"@en ;
-    skos:definition "The Wav2Vec2Phoneme model was proposed in Simple and Effective Zero-shot Cross-lingual Phoneme Recognition (Xu et al., 2021) by Qiantong Xu, Alexei Baevski, Michael Auli."@en ;
+    skos:definition "The Wav2Vec2Phoneme model is a wav2vec 2.0-based speech model designed to learn phoneme-level representations."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/wav2vec2_phoneme> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
@@ -2181,13 +2182,13 @@ dlt:XCodec2 a skos:Concept, dlo:ModelFamily ;
 
 dlt:XLSR a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "XLS-R"@en ;
-    skos:definition "The XLS-R model was proposed in XLS-R: Self-supervised Cross-lingual Speech Representation Learning at Scale by Arun Babu, Changhan Wang, Andros Tjandra, Kushal Lakhotia, Qiantong Xu, Naman Goyal, Kritika Singh, Patrick von Platen, Yatharth Saraf, Juan Pino, Alexei Baevski, Alexis Conneau, Michael Auli."@en ;
+    skos:definition "XLS-R (Cross-lingual Speech Representation Learning) is a family of multilingual self-supervised speech representation models trained on large-scale unlabeled speech data from many languages."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/xls_r> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:XLSRWav2Vec2 a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "XLSR-Wav2Vec2"@en ;
-    skos:definition "The XLSR-Wav2Vec2 model was proposed in Unsupervised Cross-Lingual Representation Learning For Speech Recognition by Alexis Conneau, Alexei Baevski, Ronan Collobert, Abdelrahman Mohamed, Michael Auli."@en ;
+    skos:definition "XLS-R-wav2vec2 is a multilingual implementation of the wav2vec 2.0 architecture belonging to the XLS-R model family. It extends wav2vec 2.0 by training the model on multilingual speech corpora to learn shared speech representations across languages."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/xlsr_wav2vec2> ;
     skos:related dlt:XLSR, dlt:Wav2Vec2 ;
     skos:inScheme dlt:ModelFamilyScheme .
@@ -2200,21 +2201,22 @@ dlt:PEVideo a skos:Concept, dlo:ModelFamily ;
 
 dlt:SAM2Video a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "SAM2 Video"@en ;
-    skos:definition "SAM2 (Segment Anything Model 2) was proposed in Segment Anything in Images and Videos by Nikhila Ravi, Valentin Gabeur, Yuan-Ting Hu, Ronghang Hu, Chaitanya Ryali, Tengyu Ma, Haitham Khedr, Roman Rädle, Chloe Rolland, Laura Gustafson, Eric Mintun, Junting Pan, Kalyan Vasudev Alwala, Nicolas Carion, Chao-Yuan Wu, Ross Girshick, Piotr Dollár, Christoph Feichtenhofer."@en ;
+    skos:definition "SAM 2 Video is the video segmentation component of SAM 2 designed for tracking and segmenting objects across video sequences."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/sam2_video> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:SAM3TrackerVideo a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "SAM3 Tracker Video"@en ;
-    skos:definition "Sam3TrackerVideo performs Promptable Visual Segmentation (PVS) on videos. PVS takes interactive visual prompts (points, boxes, masks) or text inputs to track a specific object instance per prompt across video frames."@en ;
+    skos:definition "Sam3TrackerVideo is the video tracking component of SAM3Tracker."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/sam3_tracker_video> ;
     skos:related dlt:SAM3Tracker ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:TimeSformer a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "TimeSformer"@en ;
-    skos:definition "The TimeSformer model was proposed in TimeSformer: Is Space-Time Attention All You Need for Video Understanding? by Facebook Research. This work is a milestone in action-recognition field being the first video transformer. It inspired many transformer based video understanding and classification papers."@en ;
-    skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/timesformer> ;
+    skos:definition "TimeSformer (Time-Space Transformer) applies the Vision Transformer (ViT) architecture to video understanding by incorporating different strategies for modeling temporal relationships across video frames. The model divides input videos into sequences of patches, processes them through transformer blocks, and classifies them using self-attention mechanisms specifically designed to capture spatial and temporal relationships."@en ;
+    skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/timesformer>, <https://deepwiki.com/facebookresearch/TimeSformer/2-model-architecture>;
+    skos:related dlt:ViT ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:VJEPA2 a skos:Concept, dlo:ModelFamily ;
@@ -2237,8 +2239,9 @@ dlt:VideoPrism a skos:Concept, dlo:ModelFamily ;
 
 dlt:ViViT a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "ViViT"@en ;
-    skos:definition "The Vivit model was proposed in ViViT: A Video Vision Transformer by Anurag Arnab, Mostafa Dehghani, Georg Heigold, Chen Sun, Mario Lučić, Cordelia Schmid. The paper proposes one of the first successful pure-transformer based set of models for video understanding."@en ;
+    skos:definition "ViViT (Video Vision Transformer) is a transformer-based video understanding model that extends the Vision Transformer (ViT) architecture to handle video data. It divides videos into spatio-temporal tokens and applies transformer layers to capture both spatial appearance and temporal dynamics, enabling effective video representation learning for tasks such as action recognition and video classification."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/vivit> ;
+    skos:related dlt:ViT ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:ALIGN a skos:Concept, dlo:ModelFamily ;
@@ -2289,7 +2292,7 @@ dlt:BLIP2 a skos:Concept, dlo:ModelFamily ;
 
 dlt:Bridgetower a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Bridgetower"@en ;
-    skos:definition "The BridgeTower model was proposed in BridgeTower: Building Bridges Between Encoders in Vision-Language Representative Learning by Xiao Xu, Chenfei Wu, Shachar Rosenman, Vasudev Lal, Wanxiang Che, Nan Duan. The goal of this model is to build a bridge between each uni-modal encoder and the cross-modal encoder to enable comprehensive and detailed interaction at each layer of the cross-modal encoder thus achieving remarkable performance on various downstream tasks with almost negligible additional performance and computational costs."@en ;
+    skos:definition "BridgeTower consists of a visual encoder, a textual encoder and cross-modal encoder with multiple lightweight bridge layers. The goal of this approach was to build a bridge between each uni-modal encoder and the cross-modal encoder to enable comprehensive and detailed interaction at each layer of the cross-modal encoder. In principle, one can apply any visual, textual or cross-modal encoder in the proposed architecture."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/bridgetower> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
@@ -2328,7 +2331,7 @@ dlt:CLIPseg a skos:Concept, dlo:ModelFamily ;
 
 dlt:CLVP a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "CLVP"@en ;
-    skos:definition "The CLVP (Contrastive Language-Voice Pretrained Transformer) model was proposed in Better speech synthesis through scaling by James Betker."@en ;
+    skos:definition "CLVP (Contrastive Language–Voice Pretraining) is a multimodal model that jointly learns representations of text and speech using contrastive learning."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/clvp> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
@@ -2340,7 +2343,7 @@ dlt:CWM a skos:Concept, dlo:ModelFamily ;
 
 dlt:Cohere2Vision a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "Cohere2 Vision"@en ;
-    skos:definition "Command A Vision is a state-of-the-art multimodal model designed to seamlessly integrate visual and textual information for a wide range of applications. By combining advanced computer vision techniques with natural language processing capabilities, Command A Vision enables users to analyze, understand, and generate insights from both visual and textual data."@en ;
+    skos:definition "Command A Vision is a multimodal large language model developed by Cohere that extends the Cohere 2 architecture with vision capabilities."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/cohere2_vision> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
@@ -2400,7 +2403,7 @@ dlt:DeepseekVLHybrid a skos:Concept, dlo:ModelFamily ;
 
 dlt:DePlot a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "DePlot"@en ;
-    skos:definition "DePlot was proposed in the paper DePlot: One-shot visual language reasoning by plot-to-table translation from Fangyu Liu, Julian Martin Eisenschlos, Francesco Piccinno, Syrine Krichene, Chenxi Pang, Kenton Lee, Mandar Joshi, Wenhu Chen, Nigel Collier, Yasemin Altun."@en ;
+    skos:definition "DePlot is a vision-language model designed to convert charts and plots into structured tables."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/deplot> ;
     skos:inScheme dlt:ModelFamilyScheme .
 
@@ -2573,8 +2576,9 @@ dlt:GroundingDINO a skos:Concept, dlo:ModelFamily ;
 
 dlt:GroupViT a skos:Concept, dlo:ModelFamily ;
     skos:prefLabel "GroupViT"@en ;
-    skos:definition "The GroupViT model was proposed in GroupViT: Semantic Segmentation Emerges from Text Supervision by Jiarui Xu, Shalini De Mello, Sifei Liu, Wonmin Byeon, Thomas Breuel, Jan Kautz, Xiaolong Wang. Inspired by CLIP, GroupViT is a vision-language model that can perform zero-shot semantic segmentation on any given vocabulary categories."@en ;
+    skos:definition "Inspired by CLIP, GroupViT is a vision-language model that can perform zero-shot semantic segmentation on any given vocabulary categories."@en ;
     skos:seeAlso <https://huggingface.co/docs/transformers/model_doc/groupvit> ;
+    skos:related dlt:CLIP ;
     skos:inScheme dlt:ModelFamilyScheme .
 
 dlt:IDEFICS a skos:Concept, dlo:ModelFamily ;

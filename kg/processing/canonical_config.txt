@@ -1,21 +1,10 @@
 apertus
-bertjapanese
-bitnet
 blender
-blenderbot small
-blt
-codegen
-convbert
 cpm
 cpmant
-ctrl
 deepseekv2
 deepseekv3
-diffllama
-dpt
-esm
 falconh1
-flant5
 Flaubert
 fnet
 fsmt
@@ -91,47 +80,23 @@ poolformer
 promptdepthanything
 regnet
 resnet
-sam2
-sam
 swiftformer
 table transformer
 upernet
 uvdoc
 vitmsn
 
-bark
 encodec
 fastspeech2conformer
 mms
-musicgen melody
 seamlessm4t
-sew
-sewd
 speecht5
 unispeech
 unispeechsat
-wav2vec2
-wav2vec2bert
-wav2vec2conformer
-wav2vec2phoneme
 wavlm
-xlsr
 
-timesformer
-vivit
-
-sam3tracker
-sam3tracker video
-
-bridgetower
-clvp
-cohere2vision
-deplot
-edgetamvideo
 flava
 glm family
-granite 4 vision
-group vit
 idefics
 inkling
 internvl
