@@ -1,8 +1,5 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: process.env.VITE_BASE_PATH || "./",
-  server: {
-    hmr: false,
-  }
+  base: process.env.VITE_BASE_PATH || "./"
 });

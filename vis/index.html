@@ -42,6 +42,7 @@
   </nav>
 
   <main class="container-fluid dashboard-container py-4">
+    <div class="query-info">Queries are executed on a large knowledge graph and may take a few moments to complete.</div>
     <div class="row g-4">
       <section class="col-12 col-lg-6">
         <div class="venus-panel bg-white border rounded-2 p-3">
@@ -207,6 +208,11 @@
 
       queryModalTitle.textContent = button.dataset.queryTitle;
       queryModalCode.textContent = venusElement?.sparqlQuery?.trim() || "Query not available yet.";
+    });
+
+
+    document.querySelectorAll('.query-button').forEach(btn => {
+      btn.title = 'Click to view the SPARQL query.';
     });
   </script>
   

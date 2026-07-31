@@ -6,7 +6,7 @@ const venusChart = document.querySelector("#cq4-venus");
 venusChart.sparqlQuery = sparqlQuery
 
 venusChart.encoding = {
-	"title": "ML Resources Popularity",
+	"title": "Which datasets and models are the most widely used or popular according to usage indicators?",
 	"x": {
 		"field": "likes",
 		"axis": {

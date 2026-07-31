@@ -5,7 +5,7 @@ import sparqlQuery from "../../sparql-examples/cq2.rq?raw";
 const venusChart = document.querySelector("#cq2-venus");
 venusChart.sparqlQuery = sparqlQuery
 venusChart.encoding = {
-	"title": "ML Task Ecossystem",
+	"title": "Which datasets, models, libraries, and publications constitute the ecosystem surrounding a given ML task?",
 	"nodes": {
 		"source": {
 			"field": "resourceName",

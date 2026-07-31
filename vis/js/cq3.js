@@ -7,7 +7,7 @@ const venusChart = document.querySelector("#cq3-venus");
 venusChart.sparqlQuery = sparqlQuery
 	
 venusChart.encoding = {
-	"title": "Provenance relationship between ML resources.",
+	"title": "Which and how existing ML resources are used to support the construction of other datasets and models?",
 	"nodes": {
 		source: {
 			field: "model",
