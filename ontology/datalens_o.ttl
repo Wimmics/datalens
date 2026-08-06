@@ -47,40 +47,61 @@ dlo:Modality a owl:Class ;
     rdfs:label "Modality"@en ;
     rdfs:comment "A type of data modality used in the context of machine learning."@en .
 
+dlo:DataType a owl:Class ;
+    rdfs:label "Data Type"@en ;
+    rdfs:comment "A type of data organization used in the context of machine learning."@en .
+    
 dlo:Library a owl:Class ;
     rdfs:label "Library"@en ;
     rdfs:comment "A machine learning library."@en .
 
 ## Properties for Resource
-dlo:downloadCount a owl:DatatypeProperty ;
-    rdfs:label "download count"@en ;
-    rdfs:comment "The number of times a resource has been downloaded."@en ;
+
+dlo:hasPopularityMeasure a owl:DatatypeProperty ;
+    rdfs:label "has popularity measure"@en ;
+    rdfs:comment "A measure of the popularity of a resource."@en ;
     rdfs:domain  dlo:MLResource;
     rdfs:range xsd:integer .
 
-dlo:likesCount a owl:DatatypeProperty ;
-    rdfs:label "likes count"@en ;
+dlo:downloadCount a owl:DatatypeProperty ;
+    rdfs:label "download count"@en ;
+    rdfs:comment "The number of times a resource has been downloaded."@en ;
+    rdfs:subPropertyOf dlo:hasPopularityMeasure ;
+    rdfs:domain  dlo:MLResource;
+    rdfs:range xsd:integer .
+
+dlo:likeCount a owl:DatatypeProperty ;
+    rdfs:label "like count"@en ;
     rdfs:comment "The number of likes or positive feedback a resource has received."@en ;
+    rdfs:subPropertyOf dlo:hasPopularityMeasure ;
     rdfs:domain  dlo:MLResource;    
     rdfs:range xsd:integer .
 
 dlo:viewCount a owl:DatatypeProperty ;
     rdfs:label "view count"@en ;
     rdfs:comment "The number of times a resource has been viewed."@en ;
+    rdfs:subPropertyOf dlo:hasPopularityMeasure ;
     rdfs:domain  dlo:MLResource;    
     rdfs:range xsd:integer .
 
 dlo:kernelCount a owl:DatatypeProperty ;
     rdfs:label "kernel count"@en ;
     rdfs:comment "The number of times a resource has been used in a kernel."@en ;
+    rdfs:subPropertyOf dlo:hasPopularityMeasure ;
     rdfs:domain  dlo:MLResource;    
     rdfs:range xsd:integer .
 
 dlo:hasModality a owl:ObjectProperty ;
     rdfs:label "has modality"@en ;
-    rdfs:comment "Relates a dataset to a specific modality or type of data used in the context of machine learning."@en ;
+    rdfs:comment "Relates a dataset to a specific modality used in the context of machine learning."@en ;
     rdfs:domain  dlo:MLResource;
     rdfs:range dlo:Modality .
+
+dlo:hasDataType a owl:ObjectProperty ;
+    rdfs:label "has data type"@en ;
+    rdfs:comment "Relates a dataset to a specific data type used in the context of machine learning."@en ;
+    rdfs:domain  dlo:MLResource;
+    rdfs:range dlo:DataType .
 
 dlo:hasSubTask a owl:ObjectProperty ;
     rdfs:label "has ML subtask"@en ;
@@ -155,21 +176,29 @@ dlo:hasAnnotation a owl:ObjectProperty ;
     rdfs:domain dlo:Dataset ;
     rdfs:range dlo:Annotation .
 
-dlo:hasSize a owl:ObjectProperty ;
+dlo:hasSize a rdf:Property ;
+    rdfs:label "has size"@en ;
+    rdfs:comment "Relates a dataset to its size."@en ;
+    rdfs:domain dlo:Dataset .
+
+dlo:hasRecordSize a owl:ObjectProperty ;
     rdfs:label "has size"@en ;
     rdfs:comment "Relates a dataset to a size category"@en ;
+    rdfs:subPropertyOf dlo:hasSize ;
     rdfs:domain dlo:Dataset ;
     rdfs:range dlo:SizeCategory .
 
-dlo:hasSizeCompressed a owl:DatatypeProperty ;
+dlo:hasDownloadByteSize a owl:DatatypeProperty ;
     rdfs:label "has size compressed"@en ;
     rdfs:comment "Relates a dataset to its compressed size in bytes."@en ;
+    rdfs:subPropertyOf dlo:hasSize ;
     rdfs:domain dlo:Dataset ;
     rdfs:range xsd:integer .
 
-dlo:hasSizeUncompressed a owl:DatatypeProperty ;
+dlo:hasByteSize a owl:DatatypeProperty ;
     rdfs:label "has size uncompressed"@en ;
     rdfs:comment "Relates a dataset to its uncompressed size in bytes."@en ;
+    rdfs:subPropertyOf dlo:hasSize ;
     rdfs:domain dlo:Dataset ;
     rdfs:range xsd:integer .
 
@@ -178,6 +207,12 @@ dlo:hasMultilinguality a owl:ObjectProperty ;
     rdfs:comment "Relates a dataset to its multilinguality classification."@en ;
     rdfs:domain dlo:Dataset ;
     rdfs:range dlo:Multilinguality .
+
+dlo:isSynthetic a owl:DatatypeProperty ;
+    rdfs:label "is synthetic"@en ;
+    rdfs:comment "Indicates whether the dataset consists entirely or predominantly of synthetically generated data rather than data collected from real-world observations or measurements."@en ;
+    rdfs:domain dlo:Dataset ;
+    rdfs:range xsd:boolean .
 
 
 # Class Model
@@ -194,10 +229,10 @@ dlo:Transformation a owl:Class ;
     rdfs:label "Model Transformation"@en ;
     rdfs:comment "A transformation or modification applied to a machine learning model."@en .
 
-dlo:Diffuser a owl:Class ;
+dlo:DiffusersPipeline a owl:Class ;
     rdfs:subClassOf prov:Activity ;
-    rdfs:label "Diffuser"@en ;
-    rdfs:comment "A process or activity that diffuses or distributes a machine learning model."@en .
+    rdfs:label "Diffusers pipeline"@en ;
+    rdfs:comment "A pipeline class from the Hugging Face Diffusers library that defines how one or more diffusion model components are assembled and executed to perform a specific generation or transformation task."@en .
 
 dlo:Loss a owl:Class ;
     rdfs:label "Loss"@en ;
@@ -237,11 +272,11 @@ dlo:hasLoss a owl:ObjectProperty ;
     rdfs:domain dlo:Model ;
     rdfs:range dlo:Loss .
 
-dlo:hasDiffuser a owl:ObjectProperty ;
-    rdfs:label "has diffuser"@en ;
-    rdfs:comment "Relates a machine learning model to its diffuser."@en ;
+dlo:hasDiffusersPipeline a owl:ObjectProperty ;
+    rdfs:label "has Diffusers pipeline"@en ;
+    rdfs:comment "Relates a machine learning model to the Diffusers pipeline class used to load and execute it."@en ;
     rdfs:domain dlo:Model ;
-    rdfs:range dlo:Diffuser .
+    rdfs:range dlo:DiffusersPipeline .
 
 # Class alignments
 

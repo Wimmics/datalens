@@ -123,22 +123,39 @@ def get_api():
     return api
 
 
-def filter_available(api):
-    """Détermine les fichiers à télécharger :
-    - les tables fixes de FIXED_RELEVANT_TABLES qui existent réellement,
-    - + toute table dont le nom contient à la fois "Variation" et
-      "Version" (historique des versions de variation, nom non garanti).
+def filter_available(api, download_dir=None):
+    """Détermine les fichiers à télécharger.
+
+    La logique priorise les fichiers déjà présents localement dans le dossier de
+    téléchargement. Si l’API Kaggle ne les expose pas, on s’appuie quand même
+    sur le stockage local pour éviter l’échec total du flux.
     """
     log(f"Vérification des fichiers disponibles dans {METAKAGGLE_REF} ...")
-    file_list = api.dataset_list_files(METAKAGGLE_REF)
-    all_names = {f.name for f in file_list.files}
 
-    fixed = [n for n in FIXED_RELEVANT_TABLES if n in all_names]
-    missing_fixed = [n for n in FIXED_RELEVANT_TABLES if n in all_names]
+    local_names = []
+    if download_dir is not None:
+        local_dir = Path(download_dir)
+        if local_dir.exists():
+            local_names = [p.name for p in local_dir.iterdir() if p.is_file() and p.suffix.lower() == ".csv"]
+
+    api_names = set()
+    try:
+        file_list = api.dataset_list_files(METAKAGGLE_REF)
+        api_names = {f.name for f in file_list.files}
+    except Exception as exc:
+        log(f"ATTENTION : impossible d'interroger l'API Kaggle ({exc}), fallback sur les fichiers locaux.")
+
+    available_names = set(local_names) | api_names
+
+    fixed = [n for n in FIXED_RELEVANT_TABLES if n in available_names]
+    missing_fixed = [n for n in FIXED_RELEVANT_TABLES if n not in available_names]
     if missing_fixed:
-        log(f"ATTENTION : absents du dataset Meta Kaggle actuel, ignorés : {missing_fixed}")
+        log(f"ATTENTION : absents du dataset Meta Kaggle actuel ou du cache local, ignorés : {missing_fixed}")
 
-    variation_version_files = ["ModelVariationVersions.csv"]
+    variation_version_files = sorted(
+        n for n in available_names
+        if n.endswith(".csv") and "variation" in n.lower() and "version" in n.lower()
+    )
     if not variation_version_files:
         log("ATTENTION : aucune table 'historique des versions de variation' trouvée (nom contenant "
             "'Variation' et 'Version') ; licence/framework par variation ne seront pas ajoutés.")
@@ -146,9 +163,9 @@ def filter_available(api):
         log(f"ATTENTION : plusieurs tables candidates pour l'historique des versions de variation "
             f"{variation_version_files}, seule la première sera utilisée.")
 
-    available = sorted(set(FIXED_RELEVANT_TABLES + variation_version_files))
+    available = sorted(set(fixed + variation_version_files))
     log(f"Tables à télécharger ({len(available)}) : {available}")
-    return FIXED_RELEVANT_TABLES, variation_version_files
+    return available, variation_version_files
 
 
 
@@ -187,6 +204,25 @@ def latest_by_group(df, group_col, order_col_candidates=("VersionNumber", "Creat
     if order_col:
         df = df.sort_values(order_col)
     return df.drop_duplicates(group_col, keep="last")
+
+
+def prefix_variation_version_columns(df, key_col):
+    """Renomme les colonnes de version de variation en 'Version_*' pour expliciter
+    qu'elles dépendent de la variation, pas du modèle parent."""
+    version_columns = [
+        "VariationOverview",
+        "VariationUsage",
+        "FineTunable",
+        "SourceUrl",
+        "SourceOrganizationName",
+    ]
+    rename_map = {}
+    for col in version_columns:
+        if col in df.columns:
+            rename_map[col] = f"Version_{col}"
+    if not rename_map:
+        return df
+    return df.rename(columns=rename_map)
 
 
 # --- Niveau MODÈLE : reproduit le même enrichissement que pour les datasets ---
@@ -250,16 +286,26 @@ def merge_owner(main_df, files):
         log("Fusion des organisations d'appartenance du propriétaire (UserOrganizations.csv) ...")
         uorgs = pd.read_csv(files["UserOrganizations.csv"], low_memory=False)
         orgs = pd.read_csv(files["Organizations.csv"], low_memory=False)
-        org_name_col = next((c for c in ("Name", "Slug") if c in orgs.columns), None)
-        if {"UserId", "OrganizationId"}.issubset(uorgs.columns) and org_name_col and "Id" in orgs.columns:
-            uorgs = uorgs.merge(orgs[["Id", org_name_col]], left_on="OrganizationId", right_on="Id", how="left")
+        name_col = "Name" if "Name" in orgs.columns else None
+        slug_col = "Slug" if "Slug" in orgs.columns else None
+        if {"UserId", "OrganizationId"}.issubset(uorgs.columns) and "Id" in orgs.columns and (name_col or slug_col):
+            org_cols = [c for c in ("Id", name_col, slug_col) if c]
+            uorgs = uorgs.merge(orgs[org_cols], left_on="OrganizationId", right_on="Id", how="left")
+            display_col = name_col or slug_col
             orgs_by_user = (
-                uorgs.groupby("UserId")[org_name_col]
+                uorgs.groupby("UserId")[display_col]
                 .apply(lambda names: ", ".join(sorted(set(n for n in names if pd.notna(n)))))
                 .rename("Owner_Organizations")
             )
             main_df = main_df.merge(orgs_by_user, left_on=owner_col, right_index=True, how="left")
-            log("  -> colonne 'Owner_Organizations' ajoutée.")
+            if slug_col:
+                org_slugs_by_user = (
+                    uorgs.groupby("UserId")[slug_col]
+                    .apply(lambda slugs: ", ".join(sorted(set(s for s in slugs if pd.notna(s)))))
+                    .rename("Owner_Organization_Slugs")
+                )
+                main_df = main_df.merge(org_slugs_by_user, left_on=owner_col, right_index=True, how="left")
+            log("  -> colonnes 'Owner_Organizations' et 'Owner_Organization_Slugs' ajoutées.")
         else:
             log("  -> colonnes attendues introuvables, ignoré.")
     return main_df
@@ -270,14 +316,21 @@ def merge_owning_organization(main_df, files):
         return main_df
     log("Fusion de l'organisation propriétaire directe (Organizations.csv, via 'OwnerOrganizationId') ...")
     orgs = pd.read_csv(files["Organizations.csv"], low_memory=False)
-    name_col = next((c for c in ("Name", "Slug") if c in orgs.columns), None)
-    if "Id" not in orgs.columns or name_col is None:
+    name_col = "Name" if "Name" in orgs.columns else None
+    slug_col = "Slug" if "Slug" in orgs.columns else None
+    if "Id" not in orgs.columns or not (name_col or slug_col):
         log("  -> colonnes attendues introuvables, ignoré.")
         return main_df
-    o = orgs[["Id", name_col]].add_prefix("Organization_")
+
+    org_cols = [c for c in ("Id", name_col, slug_col) if c]
+    o = orgs[org_cols].rename(columns={"Id": "Organization_Id"})
+    if name_col:
+        o = o.rename(columns={name_col: "Organization_Name"})
+    if slug_col:
+        o = o.rename(columns={slug_col: "Organization_Slug"})
     main_df = main_df.merge(o, left_on="OwnerOrganizationId", right_on="Organization_Id", how="left")
     main_df = main_df.drop(columns=["Organization_Id"])  # doublon exact de OwnerOrganizationId
-    log(f"  -> colonne 'Organization_{name_col}' ajoutée.")
+    log("  -> colonnes 'Organization_Name' et 'Organization_Slug' ajoutées.")
     return main_df
 
 
@@ -322,11 +375,12 @@ def build_variations_table(files, variation_version_files):
         return variations
 
     latest = latest_by_group(versions, key_col)
-    latest = latest.add_prefix("Latest_").rename(columns={f"Latest_{key_col}": key_col})
+    latest = prefix_variation_version_columns(latest, key_col)
     variations = variations.merge(latest, left_on="VariationId", right_on=key_col, how="left")
     if key_col != "VariationId":
         variations = variations.drop(columns=[key_col])  # doublon exact de VariationId, inutile
-    log(f"  -> {len(latest.columns) - 1} colonnes ajoutées (préfixe 'Latest_').")
+    added_columns = [c for c in latest.columns if c != key_col]
+    log(f"  -> {len(added_columns)} colonnes ajoutées ({', '.join(added_columns[:5])}{'...' if len(added_columns) > 5 else ''}).")
     return variations
 
 
@@ -380,7 +434,7 @@ def main():
     args = parser.parse_args()
 
     api = get_api()
-    filenames, variation_version_files = filter_available(api)
+    filenames, variation_version_files = filter_available(api, args.download_dir)
     files = download_files(api, filenames, Path(args.download_dir))
 
     models_df = build_models_table(files)

@@ -46,7 +46,7 @@
         rr:objectMap [ xrr:reference "$.downloads"; rr:datatype xsd:integer ];
     ];
     rr:predicateObjectMap [
-        rr:predicate dlo:likesCount;
+        rr:predicate dlo:likeCount;
         rr:objectMap [ xrr:reference "$.likes"; rr:datatype xsd:integer ];
     ];
     rr:predicateObjectMap [ 
@@ -86,7 +86,11 @@
         rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.modalities[*]}"; rr:termType rr:IRI ]; 
     ];
     rr:predicateObjectMap [ 
-        rr:predicate dlo:hasSize; 
+        rr:predicate dlo:hasDataType; 
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.types[*]}"; rr:termType rr:IRI ]; 
+    ];
+    rr:predicateObjectMap [ 
+        rr:predicate dlo:hasRecordSize; 
         rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.size_categories[*]}"; rr:termType rr:IRI ]; 
     ];
     rr:predicateObjectMap [ 

@@ -46,7 +46,7 @@
         rr:objectMap [ xrr:reference "$.downloads"; rr:datatype xsd:integer ];
     ];
     rr:predicateObjectMap [
-        rr:predicate dlo:likesCount;
+        rr:predicate dlo:likeCount;
         rr:objectMap [ xrr:reference "$.likes"; rr:datatype xsd:integer ];
     ];
     rr:predicateObjectMap [
@@ -54,17 +54,23 @@
         rr:objectMap [ xrr:reference "$.views"; rr:datatype xsd:integer ];
     ];
     rr:predicateObjectMap [
-        rr:predicate dlo:kernelsCount;
+        rr:predicate dlo:kernelCount;
         rr:objectMap [ xrr:reference "$.kernels"; rr:datatype xsd:integer ];
     ];
     rr:predicateObjectMap [
-        rr:predicate dlo:hasSizeCompressed;
+        rr:predicate dlo:hasDownloadByteSize;
         rr:objectMap [ xrr:reference "$.size_compressed"; rr:datatype xsd:integer ];
     ];
     rr:predicateObjectMap [
-        rr:predicate dlo:hasSizeUncompressed;
+        rr:predicate dlo:hasByteSize;
         rr:objectMap [ xrr:reference "$.size_uncompressed"; rr:datatype xsd:integer ];
     ];
+    rr:predicateObjectMap [ 
+        rr:predicate dcat:keyword; 
+        rr:objectMap [ xrr:reference "$.tags[*]"; rr:termType rr:Literal ]; 
+    ];
+
+
 
     # Thesaurus externes
     rr:predicateObjectMap [
@@ -90,6 +96,10 @@
         rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.modalities[*]}"; rr:termType rr:IRI ]; 
     ];
     rr:predicateObjectMap [ 
+        rr:predicate dlo:hasDataType; 
+        rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.types[*]}"; rr:termType rr:IRI ]; 
+    ];
+    rr:predicateObjectMap [ 
         rr:predicate dlo:hasAudience; 
         rr:objectMap [ rr:template "http://ns.inria.fr/datalens/thesaurus/{$.audiences[*]}"; rr:termType rr:IRI ]; 
     ];
@@ -108,7 +118,7 @@
 
     rr:predicateObjectMap [
         rr:predicate dcat:landingPage;
-        rr:objectMap [ rr:template "https://www.kaggle.com/datasets/{$.id}"; rr:termType rr:IRI ];
+        rr:objectMap [ rr:template "https://www.kaggle.com/datasets/{$.landing_page}"; rr:termType rr:IRI ];
     ];
 
 
@@ -128,6 +138,22 @@
     rr:predicateObjectMap [
         rr:predicate dcterms:publisher;
         rr:objectMap [ rr:constant "http://ns.inria.fr/datalens/data/publisher/Kaggle"; rr:termType rr:IRI ];
+    ];
+    .
+
+<#isSynthetic>
+    a rr:TriplesMap;
+    xrr:logicalSource [
+        xrr:query "db.{{collection}}.find({id:{$exists:true,$ne:null}, is_synthetic:{$exists:true,$ne:null}})";
+    ];
+    rr:subjectMap [
+        rr:template "http://ns.inria.fr/datalens/data/dataset/{$.dataset_hash16}";
+        rr:termType rr:IRI;
+        rr:class dlo:Dataset;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate dlo:isSynthetic;
+        rr:objectMap [ xrr:reference "$.is_synthetic"; rr:datatype xsd:boolean ];
     ];
     .
 

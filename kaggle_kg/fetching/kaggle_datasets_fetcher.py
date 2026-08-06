@@ -79,6 +79,8 @@ except ImportError:
         "Installe-les avec : pip install -U kaggle pandas"
     )
 
+BASE_FETCH_DIR = Path(__file__).parent / "input"
+
 METAKAGGLE_REF = "kaggle/meta-kaggle"
 MAIN_TABLE = "Datasets.csv"
 MAIN_KEY = "Id"
@@ -220,16 +222,26 @@ def merge_owner(main_df, files):
         log("Fusion des organisations d'appartenance du propriétaire (UserOrganizations.csv) ...")
         uorgs = pd.read_csv(files["UserOrganizations.csv"], low_memory=False)
         orgs = pd.read_csv(files["Organizations.csv"], low_memory=False)
-        org_name_col = next((c for c in ("Name", "Slug") if c in orgs.columns), None)
-        if {"UserId", "OrganizationId"}.issubset(uorgs.columns) and org_name_col and "Id" in orgs.columns:
-            uorgs = uorgs.merge(orgs[["Id", org_name_col]], left_on="OrganizationId", right_on="Id", how="left")
+        name_col = "Name" if "Name" in orgs.columns else None
+        slug_col = "Slug" if "Slug" in orgs.columns else None
+        if {"UserId", "OrganizationId"}.issubset(uorgs.columns) and "Id" in orgs.columns and (name_col or slug_col):
+            org_cols = [c for c in ("Id", name_col, slug_col) if c]
+            uorgs = uorgs.merge(orgs[org_cols], left_on="OrganizationId", right_on="Id", how="left")
+            display_col = name_col or slug_col
             orgs_by_user = (
-                uorgs.groupby("UserId")[org_name_col]
+                uorgs.groupby("UserId")[display_col]
                 .apply(lambda names: ", ".join(sorted(set(n for n in names if pd.notna(n)))))
                 .rename("Owner_Organizations")
             )
             main_df = main_df.merge(orgs_by_user, left_on=owner_col, right_index=True, how="left")
-            log("  -> colonne 'Owner_Organizations' ajoutée.")
+            if slug_col:
+                org_slugs_by_user = (
+                    uorgs.groupby("UserId")[slug_col]
+                    .apply(lambda slugs: ", ".join(sorted(set(s for s in slugs if pd.notna(s)))))
+                    .rename("Owner_Organization_Slugs")
+                )
+                main_df = main_df.merge(org_slugs_by_user, left_on=owner_col, right_index=True, how="left")
+            log("  -> colonnes 'Owner_Organizations' et 'Owner_Organization_Slugs' ajoutées.")
         else:
             log("  -> colonnes attendues introuvables, ignoré.")
     return main_df
@@ -240,14 +252,21 @@ def merge_owning_organization(main_df, files):
         return main_df
     log("Fusion de l'organisation propriétaire directe (Organizations.csv, via 'OwnerOrganizationId') ...")
     orgs = pd.read_csv(files["Organizations.csv"], low_memory=False)
-    name_col = next((c for c in ("Name", "Slug") if c in orgs.columns), None)
-    if "Id" not in orgs.columns or name_col is None:
+    name_col = "Name" if "Name" in orgs.columns else None
+    slug_col = "Slug" if "Slug" in orgs.columns else None
+    if "Id" not in orgs.columns or not (name_col or slug_col):
         log("  -> colonnes attendues introuvables, ignoré.")
         return main_df
-    o = orgs[["Id", name_col]].add_prefix("Organization_")
+
+    org_cols = [c for c in ("Id", name_col, slug_col) if c]
+    o = orgs[org_cols].rename(columns={"Id": "Organization_Id"})
+    if name_col:
+        o = o.rename(columns={name_col: "Organization_Name"})
+    if slug_col:
+        o = o.rename(columns={slug_col: "Organization_Slug"})
     main_df = main_df.merge(o, left_on="OwnerOrganizationId", right_on="Organization_Id", how="left")
     main_df = main_df.drop(columns=["Organization_Id"])  # doublon exact de OwnerOrganizationId
-    log(f"  -> colonne 'Organization_{name_col}' ajoutée.")
+    log("  -> colonnes 'Organization_Name' et 'Organization_Slug' ajoutées.")
     return main_df
 
 
@@ -284,7 +303,7 @@ def main():
         description="Récupère les métadonnées utiles de tous les datasets Kaggle via Meta Kaggle "
                      "(une seule sortie : une ligne par dataset, dernière version + propriétaire)."
     )
-    parser.add_argument("--out", default="all_datasets", help="Préfixe du fichier de sortie")
+    parser.add_argument("--out", default=BASE_FETCH_DIR / "all_datasets", help="Préfixe du fichier de sortie")
     parser.add_argument("--format", choices=["json", "csv", "both"], default="both")
     parser.add_argument("--download-dir", default="./meta_kaggle_raw",
                          help="Dossier où stocker les CSV Meta Kaggle bruts (réutilisés si déjà présents)")

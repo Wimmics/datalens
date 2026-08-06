@@ -2,26 +2,53 @@ import argparse
 import json
 from pathlib import Path
 from typing import Any
-from .canonical_thesaurus import canonicalize, get_canonical_tag_alone
-from .parser_tools import (
-    build_uris, dedupe, get_tag_alone, get_tag_with_prefix, hash16, normalize_string,
-)
+
+try : 
+    from .canonical_thesaurus import canonicalize, get_canonical_tag_alone # type: ignore
+    from .parser_tools import ( # type: ignore
+    build_uris,
+    dedupe,
+    get_tag_alone,
+    get_tag_with_prefix,
+    hash16,
+    normalize_string,
+    normalize_url,
+    )
+except ImportError:
+    from .canonical_thesaurus import canonicalize, get_canonical_tag_alone # type: ignore
+    from .parser_tools import ( # type: ignore
+    build_uris,
+    dedupe,
+    get_tag_alone,
+    get_tag_with_prefix,
+    hash16,
+    normalize_string,
+    normalize_url,
+    )
 
 
 def parse(json_obj: dict[str, Any]) -> dict[str, Any]:
     parsed = dict(json_obj)
 
-    slug = normalize_string(parsed.get("CurrentVariationSlug")) or ""
+    slug = normalize_string(parsed.get("Model_CurrentSlug")) or ""
+
+    slug_variation = normalize_string(parsed.get("CurrentVariationSlug")) or ""
 
     if parsed.get("Model_Owner_UserName"):
         parsed["authorUser"] = normalize_string(parsed.get("Model_Owner_UserName")) or ""
         parsed["authorOrganization"] = normalize_string(parsed.get("Model_Owner_Organizations")) or ""
-        parsed["id"] = normalize_string(parsed.get("authorUser") + "/" + slug)
+        parsed["model_id"] = normalize_string(parsed.get("authorUser") + "/" + slug)
+        parsed["id"] = normalize_string(parsed.get("model_id") + "/" + slug_variation)
     else:
         parsed["authorOrganization"] = normalize_string(parsed.get("Model_Organization_Name")) or ""
-        parsed["id"] = normalize_string(parsed.get("authorOrganization") + "/" + slug)
+        parsed["organizationSlug"] = normalize_string(parsed.get("Model_Organization_Slug")) or ""
+        parsed["model_id"] = normalize_string(parsed.get("organizationSlug") + "/" + slug)
+        parsed["id"] = normalize_string(parsed.get("model_id") + "/" + slug_variation)
 
-    parsed["description"] = normalize_string(parsed.get("Model_Latest_Subtitle"))
+    parsed["landing_page"] = normalize_url(parsed["model_id"])
+
+    parsed["description"] = normalize_string(parsed.get("Version_VariationOverview"))
+    parsed["model_description"] = normalize_string(parsed.get("Model_Latest_Subtitle"))
     parsed["created_at"] = normalize_string(parsed.get("Model_CreationDate"))
     parsed["downloads"] = normalize_string(parsed.get("Model_TotalDownloads"))
     parsed["likes"] = normalize_string(parsed.get("Model_TotalVotes"))
@@ -37,17 +64,21 @@ def parse(json_obj: dict[str, Any]) -> dict[str, Any]:
 
     parsed["region_uris"] = build_uris(region_tokens, "region")
     parsed["language_uris"] = build_uris(language_tokens, "language")
-    parsed["license_uris"] = build_uris(license_tokens, "license")
+    parsed["license_uris"] = build_uris([license_tokens], "license")
 
     # Thesaurus
     parsed["model_families"] = canonicalize(get_canonical_tag_alone(tags, "architecture"), "architecture")
-    parsed["modalities"] = canonicalize(get_canonical_tag_alone(tags, "kaggle_modality"), "modality")
+    parsed["modalities"] = canonicalize(get_canonical_tag_alone(tags, "modality"), "modality")
+    parsed["types"] = canonicalize(get_canonical_tag_alone(tags, "type"), "type")
     parsed["audiences"] = canonicalize(get_canonical_tag_alone(tags, "audience"), "audience")
     parsed["libraries"] = canonicalize(get_canonical_tag_alone(tags, "library"), "library")
     parsed["subjects"] = canonicalize(get_canonical_tag_alone(tags, "subject"), "subject")
-    parsed["tasks"] = canonicalize(get_canonical_tag_alone(tags, "kaggle_task"), "kaggle_task")
+    parsed["tasks"] = canonicalize(get_canonical_tag_alone(tags, "task"), "task")
 
-    parsed["dataset_hash16"] = hash16(parsed.get('id')) if parsed.get("id") else None
+    parsed["tags"] = tags
+
+    parsed["model_hash16"] = hash16(parsed.get('model_id')) if parsed.get("model_id") else None
+    parsed["variation_hash16"] = hash16(parsed.get('id')) if parsed.get("id") else None
     parsed["creator_user_hash16"] = hash16(parsed.get('authorUser')) if parsed.get("authorUser") else None
     parsed["creator_organization_hash16"] = hash16(parsed.get('authorOrganization')) if parsed.get("authorOrganization") else None
 

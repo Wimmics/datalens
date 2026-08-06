@@ -2,10 +2,31 @@ import argparse
 import json
 from pathlib import Path
 from typing import Any
-from .canonical_thesaurus import canonicalize, get_canonical_tag_alone
-from .parser_tools import (
-    build_uris, dedupe, get_tag_alone, get_tag_with_prefix, hash16, normalize_string,
-)
+ 
+try : 
+    from .canonical_thesaurus import canonicalize, get_canonical_tag_alone # type: ignore
+    from .parser_tools import ( # type: ignore
+    build_uris,
+    dedupe,
+    extract_unique_tag,
+    get_tag_alone,
+    get_tag_with_prefix,
+    hash16,
+    normalize_string,
+    normalize_url,
+    )
+except ImportError:
+    from .canonical_thesaurus import canonicalize, get_canonical_tag_alone # type: ignore
+    from .parser_tools import ( # type: ignore
+    build_uris,
+    dedupe,
+    extract_unique_tag,
+    get_tag_alone,
+    get_tag_with_prefix,
+    hash16,
+    normalize_string,
+    normalize_url,
+    )
 
 
 def parse(json_obj: dict[str, Any]) -> dict[str, Any]:
@@ -19,7 +40,10 @@ def parse(json_obj: dict[str, Any]) -> dict[str, Any]:
         parsed["id"] = normalize_string(parsed.get("authorUser") + "/" + slug)
     else:
         parsed["authorOrganization"] = normalize_string(parsed.get("Organization_Name")) or ""
-        parsed["id"] = normalize_string(parsed.get("authorOrganization") + "/" + slug)
+        parsed["organizationSlug"] = normalize_string(parsed.get("Organization_Slug")) or ""
+        parsed["id"] = normalize_string(parsed.get("organizationSlug") + "/" + slug)
+
+    parsed["landing_page"] = normalize_url(parsed["id"])
 
     subtitle = normalize_string(parsed.get("Latest_Subtitle")) or ""
     description = normalize_string(parsed.get("Latest_Description")) or ""
@@ -36,21 +60,27 @@ def parse(json_obj: dict[str, Any]) -> dict[str, Any]:
     tags_raw = parsed.get("Tags", "") or ""
     tags = dedupe([tag.strip() for tag in tags_raw.split(",") if tag.strip()])
 
+    if extract_unique_tag(tags, "synthetic"):
+        parsed["is_synthetic"] = True
+
     region_tokens = get_tag_with_prefix(tags, "region:")
     language_tokens = get_tag_with_prefix(tags, "language:") + get_tag_alone(tags, "language")
     license_tokens = normalize_string(parsed.get("Latest_LicenseName")) or ""
 
     parsed["region_uris"] = build_uris(region_tokens, "region")
     parsed["language_uris"] = build_uris(language_tokens, "language")
-    parsed["license_uris"] = build_uris(license_tokens, "license")
+    parsed["license_uris"] = build_uris([license_tokens], "license")
 
     # Thesaurus
     parsed["model_families"] = canonicalize(get_canonical_tag_alone(tags, "architecture"), "architecture")
-    parsed["modalities"] = canonicalize(get_canonical_tag_alone(tags, "kaggle_modality"), "kaggle_modality")
+    parsed["modalities"] = canonicalize(get_canonical_tag_alone(tags, "modality"), "modality")
+    parsed["types"] = canonicalize(get_canonical_tag_alone(tags, "type"), "type")
     parsed["audiences"] = canonicalize(get_canonical_tag_alone(tags, "audience"), "audience")
     parsed["libraries"] = canonicalize(get_canonical_tag_alone(tags, "library"), "library")
     parsed["subjects"] = canonicalize(get_canonical_tag_alone(tags, "subject"), "subject")
-    parsed["tasks"] = canonicalize(get_canonical_tag_alone(tags, "kaggle_task"), "kaggle_task")
+    parsed["tasks"] = canonicalize(get_canonical_tag_alone(tags, "task"), "task")
+
+    parsed["tags"] = tags
 
     parsed["dataset_hash16"] = hash16(parsed.get('id')) if parsed.get("id") else None
     parsed["creator_user_hash16"] = hash16(parsed.get('authorUser')) if parsed.get("authorUser") else None

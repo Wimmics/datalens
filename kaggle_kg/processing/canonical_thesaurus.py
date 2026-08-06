@@ -3,17 +3,33 @@ from typing import Any
 from .parser_tools import dedupe, hash16, normalize_string
 
 MODALITY_CANONICAL = {
-    '3d': '3D',
     'audio': 'Audio',
-    'document': 'Document',
-    'geospatial': 'Geospatial',
     'image': 'Image',
-    'tabular': 'Tabular',
     'text': 'Text',
+    'video': 'Video',
+
+    # Kaggle    
+    "video data": "Video",
+    "multimodal data": "Multimodal",
+}
+
+DATA_TYPE_CANONICAL = {
+    '3d': '3D',    
+    'document': 'Document',  
+    'geospatial': 'Geospatial',   
+    'tabular': 'Tabular',    
     'timeseries': 'TimeSeries',
     'time_series': 'TimeSeries',
     'time-series': 'TimeSeries',
-    'video': 'Video',
+
+    # Kaggle    
+    "graph": "Graph",
+}
+
+AUDIENCE_CANONICAL = {
+    "advanced": "Advanced",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate"
 }
 
 FORMAT_CANONICAL = {
@@ -58,7 +74,7 @@ SIZE_CATEGORY_CANONICAL = {
     'size-gt-1t': '1t',
 }
 
-DATASET_LIBRARY_CANONICAL = {
+LIBRARY_CANONICAL = {
     'datadesigner': 'DataDesigner',
     'lance': 'Lance',
     'datasets': 'Datasets',
@@ -70,9 +86,6 @@ DATASET_LIBRARY_CANONICAL = {
     'distilabel': 'Distilabel',
     'mlcroissant': 'MLCroissant',
     'argilla': 'Argilla',
-}
-
-MODEL_LIBRARY_CANONICAL = {
     'pytorch': 'Pytorch',
     'sklearn': 'Sklearn',
     'transformers.js': 'TransformersJS',
@@ -116,7 +129,6 @@ MODEL_LIBRARY_CANONICAL = {
     'llamafile': 'LlamaFile',
     'sample-factory': 'SampleFactory',
     'fairseq': 'Fairseq',
-    'timm': 'Timm',
     'paddlepaddle': 'PaddlePaddle',
     'ml-agents': 'MLAgents',
     'fastai': 'FastAI',
@@ -300,7 +312,7 @@ MODEL_FAMILY_CANONICAL = {
     "code_llama": "CodeLlama",
     "cohere": "Cohere",
     "cohere2": "Cohere2",
-    "cohere2_moe": "Cohere2Moe",
+    "cohere2_moe": "Cohere2MoE",
     "convbert": "ConvBERT",
     "cpm": "CPM",
     "cpmant": "CPMAnt",
@@ -320,15 +332,14 @@ MODEL_FAMILY_CANONICAL = {
     "dots1": "Dots1",
     "dpr": "DPR",
     "electra": "ELECTRA",
-    "encoder-decoder": "EncoderDecoder",
     "ernie": "ERNIE",
     "ernie4_5": "Ernie45",
-    "ernie4_5_moe": "Ernie45Moe",
+    "ernie4_5_moe": "Ernie45MoE",
     "esm": "ESM",
     "eurobert": "EuroBERT",
     "exaone4": "EXAONE4",
     "exaone4_5": "EXAONE45",
-    "exaone_moe": "EXAONEMoe",
+    "exaone_moe": "EXAONEMoE",
     "falcon": "Falcon",
     "falcon3": "Falcon3",
     "falcon_h1": "FalconH1",
@@ -343,12 +354,12 @@ MODEL_FAMILY_CANONICAL = {
     "fuyu": "Fuyu",
     "gemma": "Gemma",
     "gemma2": "Gemma2",
-    "glm": "Glm",
-    "glm4": "Glm4",
-    "glm4_moe": "Glm4Moe",
-    "glm4_moe_lite": "Glm4MoeLite",
-    "glm_image": "GlmImage",
-    "glm_moe_dsa": "GlmMoeDsa",
+    "glm": "GLM4",
+    "glm4": "GLM4",
+    "glm4_moe": "GLM4MoE",
+    "glm4_moe_lite": "GLM4MoELite",
+    "glm_image": "GLM4Image",
+    "glm_moe_dsa": "GLM4MoEDSA",
     "openai-gpt": "GPT",
     "gpt": "GPT",
     "GPT": "GPT",
@@ -362,9 +373,9 @@ MODEL_FAMILY_CANONICAL = {
     "gpt_oss": "GPTOss",
     "gpt-sw3": "GPTSw3",
     "granite": "Granite",
-    "granitemoe": "GraniteMoe",
-    "granitemoehybrid": "GraniteMoeHybrid",
-    "granitemoeshared": "GraniteMoeShared",
+    "granitemoe": "GraniteMoE",
+    "granitemoehybrid": "GraniteMoEHybrid",
+    "granitemoeshared": "GraniteMoEShared",
     "helium": "Helium",
     "herbert": "HerBERT",
     "hrm_text": "HRMText",
@@ -381,7 +392,7 @@ MODEL_FAMILY_CANONICAL = {
     "laguna": "Laguna",
     "led": "LED",
     "lfm2": "LFM2",
-    "lfm2_moe": "LFM2Moe",
+    "lfm2_moe": "LFM2MoE",
     "llama": "Llama",
     "llama2": "Llama2",
     "llama3": "Llama3",
@@ -423,7 +434,7 @@ MODEL_FAMILY_CANONICAL = {
     "nemotron": "Nemotron",
     "nemotron_h": "NemotronH",
     "nllb": "NLLB",
-    "nllb-moe": "NLLBMoe",
+    "nllb-moe": "NLLBMoE",
     "nomic_bert": "NomicBERT",
     "nystromformer": "Nystromformer",
     "olmo": "OLMo",
@@ -527,6 +538,7 @@ MODEL_FAMILY_CANONICAL = {
     "mobilenet_v2": "MobileNetV2",
     "mobilevit": "MobileViT",
     "mobilevitv2": "MobileViTV2",
+    "nat": "NAT",
     "pixio": "Pixio",
     "poolformer": "PoolFormer",
     "prompt_depth_anything": "PromptDepthAnything",
@@ -666,10 +678,10 @@ MODEL_FAMILY_CANONICAL = {
     "git": "GIT",
     "glm46v": "GLM46V",
     "glm4v": "GLM4V",
-    "glm4v_moe": "GLM4VMoe",
-    "glmga": "GLMga",
+    "glm4v_moe": "GLM4VMoE",
+    "glmga": "GLMGA",
     "glm_ocr": "GLMOCR",
-    "got_ocr2": "GotOcr2",
+    "got_ocr2": "GOTOCR2",
     "granite4_vision": "Granite4Vision",
     "granitevision": "Granitevision",
     "grounding-dino": "GroundingDINO",
@@ -756,7 +768,6 @@ MODEL_FAMILY_CANONICAL = {
     "slanet": "SLANet",
     "slanext": "SLANeXt",
     "smolvlm": "SmolVLM",
-    "speech-encoder-decoder": "SpeechEncoderDecoder",
     "tapas": "TAPAS",
     "tipsv2": "TIPSv2",
     "tipsv2_dpt": "TIPSv2DPT",
@@ -767,8 +778,6 @@ MODEL_FAMILY_CANONICAL = {
     "video_llava": "VideoLLaVa",
     "vilt": "ViLT",
     "vipllava": "VipLlava",
-    "vision-encoder-decoder": "VisionEncoderDecoder",
-    "vision-text-dual-encoder": "VisionTextDualEncoder",
     "visual_bert": "VisualBERT",
     "voxtral": "Voxtral",
     "voxtral_realtime": "VoxtralRealtime",
@@ -783,28 +792,190 @@ MODEL_FAMILY_CANONICAL = {
     "timesfm2_5": "TimesFM25",
 }
 
-from .canonical_kaggle import (ARCHITECTURE_CANONICAL, MODALITY_KAGGLE_CANONICAL, AUDIENCE_CANONICAL, LIBRARY_KAGGLE_CANONICAL, SUBJECT_CANONICAL, TASK_KAGGLE_CANONICAL, TECHNIQUE_CANONICAL, ANALYSIS_CANONICAL)   
-
+SUBJECT_CANONICAL = {
+    "arts and entertainment": "ArtsAndEntertainment",
+    "art": "Art",
+    "celebrities": "Celebrities",
+    "comics and animation": "ComicsAndAnimation",
+    "anime and manga": "AnimeAndManga",
+    "dance": "Dance",
+    "literature": "Literature",
+    "movies and tv shows": "MoviesAndTvShows",
+    "museums": "Museums",
+    "music": "Music",
+    "philosophy": "Philosophy",
+    "culture and humanities": "CultureAndHumanities",
+    "games": "Games",
+    "board games": "BoardGames",
+    "card games": "CardGames",
+    "gambling": "Gambling",
+    "puzzles": "Puzzles",
+    "video games": "VideoGames",
+    "simulations": "Simulations",
+    "languages": "Languages",
+    "popular culture": "PopularCulture",
+    "cyber security": "CyberSecurity",
+    "earth and nature": "EarthAndNature",
+    "animals": "Animals",
+    "fish and aquaria": "FishAndAquaria",
+    "biology": "Biology",
+    "genetics": "Genetics",
+    "earth science": "EarthScience",
+    "atmospheric science": "AtmosphericScience",
+    "geography": "Geography",
+    "geology": "Geology",
+    "environment": "Environment",
+    "agriculture": "Agriculture",
+    "cities and urban areas": "CitiesAndUrbanAreas",
+    "deserts": "Deserts",
+    "forestry": "Forestry",
+    "mountains": "Mountains",
+    "natural disasters": "NaturalDisasters",
+    "pollution": "Pollution",
+    "water bodies": "WaterBodies",
+    "weather and climate": "WeatherAndClimate",
+    "physical science": "PhysicalScience",
+    "astronomy": "Astronomy",
+    "chemistry": "Chemistry",
+    "physics": "Physics",
+    "plants": "Plants",
+    "health and fitness": "HealthAndFitness",
+    "exercise": "Exercise",
+    "running": "Running",
+    "sports": "Sports",
+    "auto racing": "AutoRacing",
+    "baseball": "Baseball",
+    "basketball": "Basketball",
+    "cricket": "Cricket",
+    "football": "Football",
+    "golf": "Golf",
+    "hockey": "Hockey",
+    "martial arts": "MartialArts",
+    "tennis": "Tennis",
+    "volleyball": "Volleyball",
+    "water sports": "WaterSports",
+    "food": "Food",
+    "alcohol": "Alcohol",
+    "cooking and recipes": "CookingAndRecipes",
+    "restaurants": "Restaurants",
+    "health": "Health",
+    "ears and hearing": "EarsAndHearing",
+    "eyes and vision": "EyesAndVision",
+    "health conditions": "HealthConditions",
+    "cancer": "Cancer",
+    "diabetes": "Diabetes",
+    "diseases": "Diseases",
+    "covid19": "Covid19",
+    "heart conditions": "HeartConditions",
+    "mental health": "MentalHealth",
+    "healthcare": "Healthcare",
+    "dentistry": "Dentistry",
+    "drugs and medications": "DrugsAndMedications",
+    "hospitals and treatment centers": "HospitalsAndTreatmentCenters",
+    "medicine": "Medicine",
+    "neuroscience": "Neuroscience",
+    "nutrition": "Nutrition",
+    "public health": "PublicHealth",
+    "mathematics": "Mathematics",
+    "people and society": "PeopleAndSociety",
+    "business": "Business",
+    "e-commerce services": "ECommerceServices",
+    "finance": "Finance",
+    "banking": "Banking",
+    "crowdfunding": "Crowdfunding",
+    "currencies and foreign exchange": "CurrenciesAndForeignExchange",
+    "insurance": "Insurance",
+    "investing": "Investing",
+    "lending": "Lending",
+    "marketing": "Marketing",
+    "ratings and reviews": "RatingsAndReviews",
+    "real estate": "RealEstate",
+    "housing": "Housing",
+    "travel": "Travel",
+    "hotels and accommodations": "HotelsAndAccommodations",
+    "education": "Education",
+    "primary and secondary schools": "PrimaryAndSecondarySchools",
+    "standardized testing": "StandardizedTesting",
+    "universities and colleges": "UniversitiesAndColleges",
+    "jobs and career": "JobsAndCareer",
+    "employment": "Employment",
+    "income": "Income",
+    "law": "Law",
+    "government": "Government",
+    "crime": "Crime",
+    "military": "Military",
+    "public safety": "PublicSafety",
+    "news": "News",
+    "people": "People",
+    "clothing and accessories": "ClothingAndAccessories",
+    "gender": "Gender",
+    "holidays and cultural events": "HolidaysAndCulturalEvents",
+    "make-up and cosmetics": "MakeUpAndCosmetics",
+    "retail and shopping": "RetailAndShopping",
+    "religion and belief systems": "ReligionAndBeliefSystems",
+    "social issues and advocacy": "SocialIssuesAndAdvocacy",
+    "human rights": "HumanRights",
+    "ml ethics": "MlEthics",
+    "racial equity": "RacialEquity",
+    "social science": "SocialScience",
+    "demographics": "Demographics",
+    "mortality": "Mortality",
+    "economics": "Economics",
+    "history": "History",
+    "international relations": "InternationalRelations",
+    "linguistics": "Linguistics",
+    "politics": "Politics",
+    "psychology": "Psychology",
+    "urban planning": "UrbanPlanning",
+    "science and technology": "ScienceAndTechnology",
+    "biotechnology": "Biotechnology",
+    "computer science": "ComputerScience",
+    "accelerators": "Accelerators",
+    "gpu": "Gpu",
+    "tpu": "Tpu",
+    "artificial intelligence": "ArtificialIntelligence",
+    "programming": "Programming",
+    "python": "Python",
+    "r": "R",
+    "sql": "Sql",
+    "software": "Software",
+    "electronics": "Electronics",
+    "energy": "Energy",
+    "electricity": "Electricity",
+    "oil and gas": "OilAndGas",
+    "renewable energy": "RenewableEnergy",
+    "engineering": "Engineering",
+    "manufacturing": "Manufacturing",
+    "robotics": "Robotics",
+    "internet": "Internet",
+    "email and messaging": "EmailAndMessaging",
+    "mobile and wireless": "MobileAndWireless",
+    "online communities": "OnlineCommunities",
+    "social networks": "SocialNetworks",
+    "search engines": "SearchEngines",
+    "websites": "Websites",
+    "research": "Research",
+    "transportation": "Transportation",
+    "automobiles and vehicles": "AutomobilesAndVehicles",
+    "aviation": "Aviation",
+    "cycling": "Cycling",
+    "rail transport": "RailTransport",
+    "water transport": "WaterTransport",
+    "gymnastics": "Gymnastics"
+}
 
 CANONICALS = {
-    "modality": MODALITY_CANONICAL,
+    "modality": MODALITY_CANONICAL, 
+    "type": DATA_TYPE_CANONICAL,  
+    "audience": AUDIENCE_CANONICAL,
     "format": FORMAT_CANONICAL,
     "size_category": SIZE_CATEGORY_CANONICAL,
-    "dataset_library": DATASET_LIBRARY_CANONICAL,
-    "model_library": MODEL_LIBRARY_CANONICAL,
+    "library": LIBRARY_CANONICAL,
     "task": TASK_CANONICAL,
     "subtask": SUBTASK_CANONICAL,
     "multilinguality": MULTILINGUARITY_CANONICAL,
     "model_family": MODEL_FAMILY_CANONICAL,
-
-    "architecture": ARCHITECTURE_CANONICAL,
-    "kaggle_modality": MODALITY_KAGGLE_CANONICAL,
-    "audience": AUDIENCE_CANONICAL,
-    "library": LIBRARY_KAGGLE_CANONICAL,
     "subject": SUBJECT_CANONICAL,    
-    "kaggle_task": TASK_KAGGLE_CANONICAL,
-    "technique": TECHNIQUE_CANONICAL,
-    "analysis": ANALYSIS_CANONICAL,
 }
 
 
@@ -825,35 +996,44 @@ def _canonical_lookup(value: str, canonical: str) -> str | None:
     camel_key = camel_hyphen.replace("_", "-").lower()
     return mapping.get(camel_key) or mapping.get(re.sub(r"[-_\s]", "", camel_key))
 
-def pascal_case(value: str) -> str:
-    """Generate PascalCase Turtle local names."""
-
-    value = value.replace("_", " ").replace("-", " ")
-    value = re.sub(r"(?<=[a-z0-9])(?=[A-Z])", " ", value)
-    value = re.sub(r"(?<=[A-Za-z])(?=[0-9])", " ", value)
-    value = re.sub(r"(?<=[0-9])(?=[A-Za-z])", " ", value)
-
-    words = re.findall(r"[A-Za-z0-9]+", value)
-    if not words:
-        return "Item"
-
-    return "".join(word[:1].upper() + word[1:] for word in words)
-
-def canonicalize(values: list[str], canonical: str | None = None, fallback: bool = False) -> list[str]:
+def canonicalize(
+    values: list[str],
+    canonical: str,
+    fallback: bool = False,
+) -> tuple[list[str], list[dict[str, Any]]]:
     output: list[str] = []
-    values = values or []
+    fallback_values: list[dict[str, Any]] = []
+    seen_hashes: set[str] = set()
+
     for value in values:
-        canonical_localname = _canonical_lookup(value, canonical)
+        token = normalize_string(value)
+        if not token:
+            continue
+
+        canonical_localname = _canonical_lookup(token, canonical)
 
         if canonical_localname:
             output.append(canonical_localname)
             continue
 
-        if fallback and value:
-            output.append(pascal_case(value))
-        else:
-            output.append(value)
+        if not fallback:
+            continue
 
+        value_hash = hash16(token.lower())
+        if not value_hash or value_hash in seen_hashes:
+            continue
+
+        seen_hashes.add(value_hash)
+
+        fallback_values.append(
+            {
+                f"hash16": value_hash,
+                f"label": token,
+            }
+        )
+        
+    if fallback:
+        return dedupe(output), fallback_values
     return dedupe(output)
 
 def get_canonical_tag_alone(tags: list[str], canonical: str) -> list[str]:
@@ -884,39 +1064,3 @@ def get_canonical_tag_alone(tags: list[str], canonical: str) -> list[str]:
 
     return dedupe(values)
 
-def fallback_model_libraries(values: list[str]) -> tuple[list[str], list[dict[str, Any]]]:
-    thesaurus_libraries: list[str] = []
-    fallback_instances: list[dict[str, Any]] = []
-    seen_fallback_hashes: set[str] = set()
-    mapping = CANONICALS.get("model_library", {})
-    if not mapping:
-        return []
-
-    known_keys = set(mapping.keys())
-    
-    if not isinstance(values, list):
-        return [], []
-    
-    for value in values:
-        token = normalize_string(value)
-        if not token:
-            continue
-
-        normalized = token.lower()
-        if normalized in known_keys:
-            thesaurus_libraries.append(normalized)
-            continue
-
-        library_hash = hash16(normalized)
-        if not library_hash or library_hash in seen_fallback_hashes:
-            continue
-
-        seen_fallback_hashes.add(library_hash)
-        fallback_instances.append(
-            {
-                "library_hash16": library_hash,
-                "library_label": token,
-            }
-        )
-
-    return dedupe(thesaurus_libraries), fallback_instances

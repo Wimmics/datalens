@@ -2,8 +2,8 @@ import argparse
 import json
 from pathlib import Path
 from typing import Any
-from .canonical_thesaurus import canonicalize, get_canonical_tag_alone
-from .parser_tools import (
+from ...kaggle_kg.processing.canonical_thesaurus import canonicalize, get_canonical_tag_alone
+from ...kaggle_kg.processing.parser_tools import (
     build_uris, dedupe, get_tag_alone, get_tag_with_prefix, hash16,
     normalize_boolean, normalize_string, paper_url, split_hf_values
 )
@@ -41,11 +41,14 @@ def parse(json_obj: dict[str, Any]) -> dict[str, Any]:
         if hash16(source_dataset_label)
     ]
 
+    modalities = get_tag_with_prefix(tags, "modality:")
+
     # Thesaurus
     parsed["task_categories"] = canonicalize(get_tag_with_prefix(tags, "task_categories:") + get_canonical_tag_alone(tags, "task"), "task")
     parsed["task_ids"] = canonicalize(get_tag_with_prefix(tags, "task_ids:") + get_canonical_tag_alone(tags, "subtask"), "subtask")
-    parsed["modalities"] = canonicalize(get_tag_with_prefix(tags, "modality:") + get_canonical_tag_alone(tags, "modality"), "modality")
-    parsed["libraries"] = canonicalize(get_tag_with_prefix(tags, "library:") + get_canonical_tag_alone(tags, "dataset_library"), "dataset_library")
+    parsed["modalities"] = canonicalize(modalities + get_canonical_tag_alone(tags, "modality"), "modality")    
+    parsed["types"] = canonicalize(modalities + get_canonical_tag_alone(tags, "type"), "type")
+    parsed["libraries"] = canonicalize(get_tag_with_prefix(tags, "library:") + get_canonical_tag_alone(tags, "library"), "library")
     parsed["size_categories"] = canonicalize(get_tag_with_prefix(tags, "size_categories:") + get_canonical_tag_alone(tags, "size_category"), "size_category")
     parsed["formats"] = canonicalize(get_tag_with_prefix(tags, "format:") + get_canonical_tag_alone(tags, "format"), "format")
     parsed["multilinguality"] = canonicalize(get_tag_with_prefix(tags, "multilinguality:") + get_canonical_tag_alone(tags, "multilinguality"), "multilinguality")

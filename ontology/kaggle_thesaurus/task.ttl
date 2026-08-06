@@ -12,11 +12,6 @@ dlt:Clustering a skos:Concept, dlo:Task ;
     skos:topConceptOf dlt:TaskScheme ;
     skos:inScheme dlt:TaskScheme .
 
-dlt:ReinforcementLearning a skos:Concept, dlo:Task ;
-    skos:prefLabel "Reinforcement Learning"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
 dlt:LogisticRegression a skos:Concept, dlo:Task ;
     skos:prefLabel "Logistic Regression"@en ;
     skos:topConceptOf dlt:TaskScheme ;
@@ -32,18 +27,8 @@ dlt:BinaryClassification a skos:Concept, dlo:Task ;
     skos:topConceptOf dlt:TaskScheme ;
     skos:inScheme dlt:TaskScheme .
 
-dlt:MulticlassClassification a skos:Concept, dlo:Task ;
-    skos:prefLabel "Multiclass Classification"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
 dlt:Regression a skos:Concept, dlo:Task ;
     skos:prefLabel "Regression"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
-dlt:MultilabelClassification a skos:Concept, dlo:Task ;
-    skos:prefLabel "Multilabel Classification"@en ;
     skos:topConceptOf dlt:TaskScheme ;
     skos:inScheme dlt:TaskScheme .
 
@@ -57,28 +42,8 @@ dlt:AudioSynthesis a skos:Concept, dlo:Task ;
     skos:topConceptOf dlt:TaskScheme ;
     skos:inScheme dlt:TaskScheme .
 
-dlt:AudioToAudio a skos:Concept, dlo:Task ;
-    skos:prefLabel "Audio To Audio"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
-dlt:AutomaticSpeechRecognition a skos:Concept, dlo:Task ;
-    skos:prefLabel "Automatic Speech Recognition"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
-dlt:AudioClassification a skos:Concept, dlo:Task ;
-    skos:prefLabel "Audio Classification"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
 dlt:AudioEventClassification a skos:Concept, dlo:Task ;
     skos:prefLabel "Audio Event Classification"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
-dlt:ImageClassification a skos:Concept, dlo:Task ;
-    skos:prefLabel "Image Classification"@en ;
     skos:topConceptOf dlt:TaskScheme ;
     skos:inScheme dlt:TaskScheme .
 
@@ -97,38 +62,13 @@ dlt:ParalinguisticClassification a skos:Concept, dlo:Task ;
     skos:topConceptOf dlt:TaskScheme ;
     skos:inScheme dlt:TaskScheme .
 
-dlt:TabularClassification a skos:Concept, dlo:Task ;
-    skos:prefLabel "Tabular Classification"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
-dlt:TextClassification a skos:Concept, dlo:Task ;
-    skos:prefLabel "Text Classification"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
-dlt:TokenClassification a skos:Concept, dlo:Task ;
-    skos:prefLabel "Token Classification"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
 dlt:ZeroShotTextClassification a skos:Concept, dlo:Task ;
     skos:prefLabel "Zero Shot Text Classification"@en ;
     skos:topConceptOf dlt:TaskScheme ;
     skos:inScheme dlt:TaskScheme .
 
-dlt:FeatureExtraction a skos:Concept, dlo:Task ;
-    skos:prefLabel "Feature Extraction"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
 dlt:TextFillMask a skos:Concept, dlo:Task ;
     skos:prefLabel "Text Fill Mask"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
-dlt:TextGeneration a skos:Concept, dlo:Task ;
-    skos:prefLabel "Text Generation"@en ;
     skos:topConceptOf dlt:TaskScheme ;
     skos:inScheme dlt:TaskScheme .
 
@@ -182,21 +122,6 @@ dlt:ImageTextRecognition a skos:Concept, dlo:Task ;
     skos:topConceptOf dlt:TaskScheme ;
     skos:inScheme dlt:TaskScheme .
 
-dlt:ImageToImage a skos:Concept, dlo:Task ;
-    skos:prefLabel "Image To Image"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
-dlt:TextToImage a skos:Concept, dlo:Task ;
-    skos:prefLabel "Text To Image"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
-dlt:TextToSpeech a skos:Concept, dlo:Task ;
-    skos:prefLabel "Text To Speech"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
 dlt:TextToTextGeneration a skos:Concept, dlo:Task ;
     skos:prefLabel "Text To Text Generation"@en ;
     skos:topConceptOf dlt:TaskScheme ;
@@ -217,28 +142,13 @@ dlt:TextPreProcessing a skos:Concept, dlo:Task ;
     skos:topConceptOf dlt:TaskScheme ;
     skos:inScheme dlt:TaskScheme .
 
-dlt:QuestionAnswering a skos:Concept, dlo:Task ;
-    skos:prefLabel "Question Answering"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
 dlt:RetrievalQuestionAnswering a skos:Concept, dlo:Task ;
     skos:prefLabel "Retrieval Question Answering"@en ;
     skos:topConceptOf dlt:TaskScheme ;
     skos:inScheme dlt:TaskScheme .
 
-dlt:ImageSegmentation a skos:Concept, dlo:Task ;
-    skos:prefLabel "Image Segmentation"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
 dlt:TextSegmentation a skos:Concept, dlo:Task ;
     skos:prefLabel "Text Segmentation"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
-dlt:SentenceSimilarity a skos:Concept, dlo:Task ;
-    skos:prefLabel "Sentence Similarity"@en ;
     skos:topConceptOf dlt:TaskScheme ;
     skos:inScheme dlt:TaskScheme .
 
@@ -249,11 +159,6 @@ dlt:SpeechSynthesis a skos:Concept, dlo:Task ;
 
 dlt:SpeechToText a skos:Concept, dlo:Task ;
     skos:prefLabel "Speech To Text"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
-dlt:Summarization a skos:Concept, dlo:Task ;
-    skos:prefLabel "Summarization"@en ;
     skos:topConceptOf dlt:TaskScheme ;
     skos:inScheme dlt:TaskScheme .
 
@@ -269,11 +174,6 @@ dlt:TextSequenceAlignment a skos:Concept, dlo:Task ;
 
 dlt:TextToMel a skos:Concept, dlo:Task ;
     skos:prefLabel "Text To Mel"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
-dlt:Translation a skos:Concept, dlo:Task ;
-    skos:prefLabel "Translation"@en ;
     skos:topConceptOf dlt:TaskScheme ;
     skos:inScheme dlt:TaskScheme .
 
@@ -314,21 +214,6 @@ dlt:Denoising a skos:Concept, dlo:Task ;
 
 dlt:FrameInterpolation a skos:Concept, dlo:Task ;
     skos:prefLabel "Frame Interpolation"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
-dlt:ObjectDetection a skos:Concept, dlo:Task ;
-    skos:prefLabel "Object Detection"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
-dlt:VideoClassification a skos:Concept, dlo:Task ;
-    skos:prefLabel "Video Classification"@en ;
-    skos:topConceptOf dlt:TaskScheme ;
-    skos:inScheme dlt:TaskScheme .
-
-dlt:ImageToText a skos:Concept, dlo:Task ;
-    skos:prefLabel "Image To Text"@en ;
     skos:topConceptOf dlt:TaskScheme ;
     skos:inScheme dlt:TaskScheme .
 

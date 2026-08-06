@@ -1,0 +1,307 @@
+dlt:AestheticQuality
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:ImageClassification ;
+      skos:definition "Aesthetic quality assessment is the task of predicting a numerical score that reflects the visual or aesthetic appeal of an image."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Aesthetic Quality"@en .
+
+dlt:AudioCommandDetection
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:AudioClassification ;
+      skos:definition "Audio command detection is the task of recognizing a spoken command, keyword or trigger phrase from a short audio clip."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Audio Command Detection"@en .
+
+dlt:AudioEventClassification
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:AudioClassification ;
+      skos:definition "Audio event classification is the task of assigning a label to a sound event occurring in an audio clip, such as a siren, applause or footsteps."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Audio Event Classification"@en .
+
+dlt:AudioSynthesis
+      a       dlo:Task , skos:Concept ;
+      skos:narrower dlt:SpeechSynthesis , dlt:TextToMel ;
+      skos:definition "Audio synthesis is the task of generating audio signals, such as speech or music, typically from text, symbolic or other conditioning input."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Audio Synthesis"@en .
+
+dlt:BinaryClassification
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:Classification ;
+      skos:definition "Binary classification is the task of assigning an input to one of exactly two classes."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Binary Classification"@en .
+
+dlt:Classification
+      a       dlo:Task , skos:Concept ;
+      skos:narrower dlt:TextClassification , dlt:ImageClassification , dlt:AudioClassification , dlt:TabularClassification , dlt:VideoClassification , dlt:BinaryClassification , dlt:MultitaskClassification , dlt:ZeroShotTextClassification , dlt:ParalinguisticClassification , dlt:LogisticRegression ;
+      skos:definition "Classification is the task of assigning a discrete label to an input, spanning text, image, audio, video or tabular data."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Classification"@en .
+
+dlt:Clustering
+      a       dlo:Task , skos:Concept ;
+      skos:narrower dlt:Distance ;
+      skos:definition "Clustering is the task of grouping a set of items so that items in the same group are more similar to each other than to those in other groups."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Clustering"@en .
+
+dlt:Deblurring
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:ImageToImage ;
+      skos:definition "Deblurring is the task of removing blur from an image to recover a sharper version."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Deblurring"@en .
+
+dlt:Dehazing
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:ImageToImage ;
+      skos:definition "Dehazing is the task of removing haze, fog or smoke effects from an image to restore visibility."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Dehazing"@en .
+
+dlt:Denoising
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:ImageToImage ;
+      skos:definition "Denoising is the task of removing noise from an image to recover a cleaner version."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Denoising"@en .
+
+dlt:FactualityAndGrounding
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:Evaluation ;
+      skos:definition "Factuality and grounding is the task of evaluating whether a model's output is factually accurate and properly grounded in supporting evidence."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Factuality and Grounding"@en .
+
+dlt:FrameInterpolation
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:VideoToVideo ;
+      skos:definition "Frame interpolation is the task of generating intermediate frames between existing video frames to increase frame rate or produce smooth motion."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Frame Interpolation"@en .
+
+dlt:ImageAugmentation
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:ImageToImage ;
+      skos:definition "Image augmentation is the task of applying transformations to an image, such as cropping, flipping or color jittering, to generate variations of the original image."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Image Augmentation"@en .
+
+dlt:ImageClassificationLogits
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:ImageClassification ;
+      skos:definition "Image classification logits is the task of producing the raw, unnormalized prediction scores of an image classification model prior to applying an activation function."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Image Classification Logits"@en .
+
+dlt:ImageDepthEstimation
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:DepthEstimation ;
+      skos:definition "Image depth estimation is the task of predicting the depth of objects present in a single image."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Image Depth Estimation"@en .
+
+dlt:ImageExtrapolation
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:ImageToImage ;
+      skos:definition "Image extrapolation is the task of extending an image beyond its original borders by generating plausible new content."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Image Extrapolation"@en .
+
+dlt:ImageFeatureVector
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:ImageFeatureExtraction ;
+      skos:definition "Image feature vector is the task of producing a fixed-length numerical representation, or embedding, of an image."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Image Feature Vector"@en .
+
+dlt:ImageGenerator
+      a       dlo:Task , skos:Concept ;
+      skos:narrower dlt:TextToImage , dlt:UnconditionalImageGeneration , dlt:ImageToImage ;
+      skos:definition "Image generator covers tasks that produce new images, whether unconditionally or from a text or image prompt."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Image Generator"@en .
+
+dlt:ImageStyleTransfer
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:ImageToImage ;
+      skos:definition "Image style transfer is the task of applying the visual style of one image to the content of another."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Image Style Transfer"@en .
+
+dlt:ImageSuperResolution
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:ImageToImage, dlt:SuperResolution ;
+      skos:definition "Image super resolution is the task of reconstructing a high-resolution image from a low-resolution input."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Image Super Resolution"@en .
+
+dlt:ImageTextDetection
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:ObjectDetection ;
+      skos:definition "Image text detection is the task of localizing regions in an image that contain text, without decoding their content."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Image Text Detection"@en .
+
+dlt:ImageTextRecognition
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:ImageToText ;
+      skos:definition "Image text recognition is the task of recognizing and transcribing text content found in an image, also known as optical character recognition."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Image Text Recognition"@en .
+
+dlt:LinearRegression
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:Regression ;
+      skos:definition "Linear regression is the task of predicting a continuous numerical value as a linear combination of input features."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Linear Regression"@en .
+
+dlt:LogisticRegression
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:Regression ;
+      skos:definition "Logistic regression is a statistical model that estimates the probability of a class label using a logistic function, commonly used for binary classification."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Logistic Regression"@en .
+
+dlt:MultilingualAndCrossLingualCapabilities
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:Evaluation ;
+      skos:definition "Multilingual and cross-lingual capabilities is the task of evaluating a model's performance across multiple languages and its ability to transfer knowledge between them."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Multilingual and Cross-Lingual Capabilities"@en .
+
+dlt:MultitaskClassification
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:Classification ;
+      skos:definition "Multitask classification is the task of predicting multiple, potentially unrelated, classification labels for the same input simultaneously."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Multitask Classification"@en .
+
+dlt:ParalinguisticClassification
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:AudioClassification ;
+      skos:definition "Paralinguistic classification is the task of classifying non-verbal aspects of speech, such as emotion, age or speaker traits, from audio."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Paralinguistic Classification"@en .
+
+dlt:PitchExtraction
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:FeatureExtraction ;
+      skos:definition "Pitch extraction is the task of estimating the fundamental frequency of an audio signal over time."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Pitch Extraction"@en .
+
+dlt:PoseDetection
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:PoseEstimation ;
+      skos:definition "Pose detection is the task of detecting and localizing keypoints on a human body, hand or face in an image."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Pose Detection"@en .
+
+dlt:Regression
+      a       dlo:Task , skos:Concept ;
+      skos:narrower dlt:TabularRegression , dlt:TabularSingleColumnRegression , dlt:AestheticQuality , dlt:LinearRegression ;
+      skos:definition "Regression is the task of predicting a continuous numerical value from a set of input features."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Regression"@en .
+
+dlt:RetrievalQuestionAnswering
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:QuestionAnswering , dlt:TextRetrieval ;
+      skos:definition "Retrieval question answering is the task of answering a question by first retrieving relevant supporting passages from a large corpus."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Retrieval Question Answering"@en .
+
+dlt:RetrievalRanking
+      a       dlo:Task , skos:Concept ;
+      skos:narrower dlt:TextRetrieval , dlt:TextRanking , dlt:DocumentRetrieval ;
+      skos:definition "Retrieval/Ranking covers tasks that find and order items, such as documents or passages, by relevance to a query."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Retrieval/Ranking"@en .
+
+dlt:Segmentation
+      a       dlo:Task , skos:Concept ;
+      skos:narrower dlt:ImageSegmentation , dlt:SemanticSegmentation , dlt:InstanceSegmentation , dlt:PanopticSegmentation , dlt:TextSegmentation ;
+      skos:definition "Segmentation is the task of partitioning an input, such as an image or a text, into meaningful segments."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Segmentation"@en .
+
+dlt:SpeechSynthesis
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:AudioSynthesis, dlt:TextToSpeech ;
+      skos:definition "Speech synthesis is the task of generating spoken audio, typically from text."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Speech Synthesis"@en .
+
+dlt:SpeechToText
+      a       dlo:Task , skos:Concept ;
+      skos:related dlt:TextToSpeech ;
+      skos:definition "Speech to text is the task of transcribing spoken audio into written text."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Speech to Text"@en .
+
+dlt:TextConversation
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:Conversational ;
+      skos:definition "Text conversation is the task of generating conversational text responses within a dialogue, as performed by chatbots or virtual agents."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Text Conversation"@en .
+
+dlt:TextFillMask
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:FillMask ;
+      skos:definition "Text fill mask is the task of predicting the missing or masked tokens in a piece of text."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Text Fill Mask"@en .
+
+dlt:TextSegmentation
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:Segmentation ;
+      skos:definition "Text segmentation is the task of dividing a text into meaningful units, such as sentences, topics or sections."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Text Segmentation"@en .
+
+dlt:TextSequenceAlignment
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:SentenceSimilarity ;
+      skos:definition "Text sequence alignment is the task of aligning corresponding units, such as words or sentences, between two related pieces of text."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Text Sequence Alignment"@en .
+
+dlt:TextToMel
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:AudioSynthesis ;
+      skos:definition "Text-to-Mel is the task of generating a mel-spectrogram representation of speech from input text, typically as an intermediate step before waveform synthesis."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Text-to-Mel"@en .
+
+dlt:VideoAudioText
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:VideoTextToText , dlt:AudioTextToText ;
+      skos:definition "Video-Audio-Text covers tasks that jointly process video, audio and text modalities."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Video-Audio-Text"@en .
+
+dlt:VideoGeneration
+      a       dlo:Task , skos:Concept ;
+      skos:narrower dlt:TextToVideo , dlt:ImageToVideo , dlt:VideoToVideo ;
+      skos:definition "Video generation covers tasks that produce video content, whether from text, an image or another video."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Video Generation"@en .
+
+dlt:VideoText
+      a       dlo:Task , skos:Concept ;
+      skos:braoder dlt:VideoTextToText ;
+      skos:definition "Video-Text covers tasks that jointly process video and text modalities."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Video-Text"@en .
+
+dlt:ZeroShotTextClassification
+      a       skos:Concept , dlo:SubTask ;
+      skos:broader dlt:ZeroShotClassification , dlt:TextClassification ;
+      skos:definition "Zero-shot text classification is the task of classifying text into categories that were not seen during training."@en ;
+      skos:inScheme dlt:TaskScheme ;
+      skos:prefLabel "Zero-Shot Text Classification"@en .

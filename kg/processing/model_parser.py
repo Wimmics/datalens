@@ -2,8 +2,8 @@ import argparse
 import json
 from pathlib import Path
 from typing import Any
-from .canonical_thesaurus import canonicalize, get_canonical_tag_alone, fallback_model_libraries
-from .parser_tools import (
+from ...kaggle_kg.processing.canonical_thesaurus import canonicalize, get_canonical_tag_alone
+from ...kaggle_kg.processing.parser_tools import (
     build_uris, dedupe, get_tag_alone, get_tag_with_prefix, hash16,
     normalize_boolean, normalize_string, paper_url, split_hf_values
 )
@@ -114,16 +114,19 @@ def parse(json_obj: dict[str, Any]) -> dict[str, Any]:
     parsed["language_uris"] = build_uris(language_tokens, "language")
     parsed["license_uris"] = build_uris(license_tokens, "license")
 
+    config = parsed.get("config", {}) or {}
+    modalities = get_tag_with_prefix(tags, "modality:")
+
     # Thesaurus
     parsed["task_categories"] = canonicalize(get_canonical_tag_alone(tags, "task") + [parsed.get("pipeline_tag")], "task")
-    parsed["modalities"] = canonicalize(get_tag_with_prefix(tags, "modality:") + get_canonical_tag_alone(tags, "modality"), "modality")
-    (parsed["thesaurus_libraries"],parsed["fallback_instances"]) = fallback_model_libraries([parsed.get("library_name")] + get_tag_with_prefix(tags, "library:") + get_canonical_tag_alone(tags, "model_library"))
+    parsed["modalities"] = canonicalize(modalities + get_canonical_tag_alone(tags, "modality"), "modality")    
+    parsed["types"] = canonicalize(modalities + get_canonical_tag_alone(tags, "type"), "type")
     parsed["formats"] = canonicalize(get_tag_with_prefix(tags, "format:") + get_canonical_tag_alone(tags, "format"), "format")
-    parsed["diffusers"] = canonicalize(get_tag_with_prefix(tags, "diffusers:"), fallback=True)
-    parsed["loss"] = canonicalize(get_tag_with_prefix(tags, "loss:"), fallback=True)
-    config = parsed.get("config", {}) or {}
-    parsed["implementations"] = canonicalize(config.get("architectures", []), fallback=True)
-    parsed["model_family"] = canonicalize([config.get("model_type")], "model_family", fallback=True)
+    (parsed["libraries"],parsed["libraries_fallback"]) = canonicalize([parsed.get("library_name")] + get_tag_with_prefix(tags, "library:") + get_canonical_tag_alone(tags, "library"), "library", fallback=True)
+    (parsed["model_family"],parsed["model_family_fallback"]) = canonicalize([config.get("model_type")], "model_family", fallback=True)
+    (_,parsed["diffusers"]) = canonicalize(get_tag_with_prefix(tags, "diffusers:"), "diffusers", fallback=True)
+    (_,parsed["loss"]) = canonicalize(get_tag_with_prefix(tags, "loss:"), "loss", fallback=True)
+    (_,parsed["implementations"]) = canonicalize(config.get("architectures", []), "implementation", fallback=True)
 
     doi_ids = get_tag_with_prefix(tags, "doi:")
     arxiv_ids = get_tag_with_prefix(tags, "arxiv:")

@@ -1,72 +1,112 @@
-# Datalens OWL Ontology
+# Datalens Ontology
 
-An OWL ontology designed to represent machine learning resources (datasets and models).
+The Datalens ontology suite models machine learning resources, their metadata, and the controlled vocabularies used to describe them.
 
-Refer to the [`datalens_o.ttl`](datalens_o.ttl) file for the complete ontology definition.
+## Files
 
-## MLResource
+- [`datalens_o.ttl`](datalens_o.ttl): OWL ontology for datasets, models, tasks, provenance, and resource-level properties.
+- [`datalens_th.ttl`](datalens_th.ttl): SKOS thesaurus for modalities, data types, formats, sizes, libraries, and tasks.
+- [`model_family_thesaurus.ttl`](model_family_thesaurus.ttl): SKOS thesaurus for model family names and architectural lineages.
+- [`ontology.rdf`](ontology.rdf): RDF serialization of the ontology package.
 
-The `dlo:MLResource` class is the parent class representing any machine learning resource published on platforms like Hugging Face. It serves as the foundation for both datasets and models, enabling shared properties and relationships such as download counts, and connections to tasks and libraries.
+## Datalens OWL Ontology
 
-- **Common Properties**: `dlo:downloadCount`, `dlo:likesCount`
-- **Relationships**: Links to tasks, modalities, libraries, and scholarly articles via BIBO vocabulary
-- **Subclasses**: `dlo:Dataset`, `dlo:Model`
+The OWL ontology defines `dlo:MLResource` as the shared parent class for machine learning resources published on platforms such as Hugging Face. It supports common popularity measures and links to tasks, modalities, libraries, scholarly articles, and provenance relations.
 
-## Datasets
+### MLResource
 
-The `dlo:Dataset` class extends both `dcat:Dataset` and `dlo:MLResource`, representing datasets published on machine learning platforms. Datasets are characterized by their modalities, formats, size categories, and annotations.
+The `dlo:MLResource` class is the parent class for any machine learning resource.
 
-## Models
+- **Common properties**: `dlo:downloadCount`, `dlo:likeCount`, `dlo:viewCount`, `dlo:kernelCount`
+- **Relationships**: tasks, subtasks, modalities, data types, libraries, and academic articles
+- **Superclass**: `prov:Entity`
 
-The `dlo:Model` class extends both `schema:SoftwareSourceCode` and `dlo:MLResource`, representing machine learning models. Models capture specific tasks, with relationships to training data, architectures, and transformations.
+### Datasets
 
-## Tasks
+The `dlo:Dataset` class extends both `dcat:Dataset` and `dlo:MLResource`. It is used for datasets published on machine learning platforms and can be described with modalities, data types, size categories, multilinguality, and annotations.
 
-The `dlo:Task` and `dlo:SubTask` classes represent machine learning problems and their granular specializations.
+### Models
 
-## Relationships and Provenance
+The `dlo:Model` class extends both `schema:SoftwareSourceCode` and `dlo:MLResource`. It captures model-specific metadata such as tasks, training data, architectures, model families, and transformations.
 
-The ontology uses PROV-O foundations to establish provenance chains:
-- **`dlo:wasTrainedOn`**: Models linked to training datasets
-- **Transformations**: Model derivations tracked as provenance activities
+### Tasks
 
-## Integration with SKOS Thesaurus
+The `dlo:Task` and `dlo:SubTask` classes represent machine learning problems and their more specific specializations.
 
-The OWL ontology references concepts from the `datalens_th.ttl` SKOS thesaurus:
-- Modality, Format, and Size Category concepts populate the ontology's controlled vocabulary
-- Task hierarchies in the thesaurus provide semantic structure for `dlo:Task` and `dlo:SubTask` instances
+### Relationships and Provenance
 
+The ontology uses PROV-O to represent provenance chains and model derivations.
 
-# Datalens SKOS Thesaurus
+- `dlo:wasTrainedOn`: links models to training datasets
+- transformation activities: track how models are derived or adapted
 
-A SKOS thesaurus providing controlled vocabularies to describe machine learning resources. The thesaurus enables standardized annotation and discovery by organizing concepts into concept schemes.
+### Integration with SKOS Thesauri
 
-Refer to the [`datalens_th.ttl`](datalens_th.ttl) file for the complete thesaurus definition.
+The OWL ontology references concepts from the SKOS thesauri in this folder.
 
-## Modality Scheme
+- `datalens_th.ttl` provides the controlled vocabulary for modalities, formats, size categories, libraries, and tasks
+- `model_family_thesaurus.ttl` provides the controlled vocabulary for model families and architecture lineages
 
-The `datalens_th:ModalityScheme` organizes concepts representing types of data modalities used in machine learning contexts, such as `Text`, `Image`, `Audio`, `Video`, `Tabular`, `TimeSeries`, `3D`, and `Geospatial`.
+## Datalens SKOS Thesaurus
 
-## Format Scheme
+The SKOS thesaurus provides controlled vocabularies for describing machine learning resources in a standardized way.
 
-The `datalens_th:FormatScheme` groups concepts for data serialization and storage formats, including `JSON`, `CSV`, `Parquet`, `Arrow`, `WebDataset`, `ImageFolder`, `AudioFolder`, and others.
+### Modality Scheme
 
-## Size Category Scheme
+The `dlt:ModalityScheme` organizes data modality concepts such as `Text`, `Image`, `Audio`, `Video`, `Tabular`, `TimeSeries`, `3D`, and `Geospatial`.
 
-The `datalens_th:DatasetSizeScheme` defines concepts for dataset magnitude based on record count ranges (e.g., `< 1K`, `1K - 10K`, `100K - 1M`, `> 1T`).
+### Data Type Scheme
 
-## Dataset Library Scheme
+The `dlt:DataTypeScheme` organizes data type concepts such as `Document`, `Geometry`, `Graph`, `Tabular`, `TimeSeries`, `3D`, and `Geospatial`.
 
-The `datalens_th:DatasetLibraryScheme` catalogs libraries and frameworks for dataset access and manipulation, such as `Pandas`, `Polars`, `Datasets`, `WebDataset`, `Dask`, `FiftyOne`, and others.
+### Format Scheme
 
-## Model Library Scheme
+The `dlt:FormatScheme` groups serialization and storage formats such as `JSON`, `CSV`, `Parquet`, `Arrow`, `WebDataset`, `ImageFolder`, and `AudioFolder`.
 
-The `datalens_th:ModelLibraryScheme` organizes concepts for machine learning libraries and frameworks, including `PyTorch`, `Transformers`, `Scikit-learn`, `TensorFlow`, `JAX`, `Keras`, and many specialized libraries.
+### Size Category Scheme
 
-## Task Scheme
+The `dlt:DatasetSizeScheme` defines dataset magnitude ranges based on record counts.
 
-The `datalens_th:TaskScheme` provides hierarchical organization of machine learning tasks with two levels:
+### Dataset Library Scheme
 
-- **Task**: Broad task of machine learning (e.g., Text Classification, Text Generation, Object Detection)
-- **Sub Tasks**: Specific task with `skos:broader` links to their parent categories (e.g., Sentiment Classification under Text Classification)
-- **Task Examples**: Enriched with examples from Hugging Face metadata
+The `dlt:DatasetLibraryScheme` catalogs dataset access and manipulation libraries such as `Pandas`, `Polars`, `Datasets`, `WebDataset`, `Dask`, and `FiftyOne`.
+
+### Model Library Scheme
+
+The `dlt:ModelLibraryScheme` organizes machine learning libraries and frameworks such as `PyTorch`, `Transformers`, `Scikit-learn`, `TensorFlow`, `JAX`, and `Keras`.
+
+### Task Scheme
+
+The `dlt:TaskScheme` provides a hierarchical organization of machine learning tasks.
+
+- **Task**: broad tasks such as text classification, text generation, and object detection
+- **SubTask**: more specific tasks linked to their parent concepts through `skos:broader`
+- **Task examples**: enriched with examples from Hugging Face metadata
+
+## Model Family Thesaurus
+
+The `model_family_thesaurus.ttl` file extends the thesaurus layer with a controlled vocabulary for model families and related architectural groupings.
+
+## Limitations and next steps
+
+The thesauri derived from Hugging Face metadata are now synchronized and up to date.
+
+For Kaggle, we can exploit **eight tag categories**: architecture, modality, audience, package, subject, task, technique, and analysis.
+
+The current parsers already retrieve:
+
+- all tags that are already covered by the Hugging Face thesauri;
+- the Kaggle tags belonging to the **modality**, **audience**, and **subject** categories.
+
+### Current coverage
+
+- **Modality** and **audience** thesauri are already complete.
+- The **subject** thesaurus still needs additional definitions.
+
+### Remaining work
+
+For the following categories, the tags are either reused from the existing Hugging Face thesauri or left as free tags for now:
+
+- **Package**: we still need to filter the tags to keep only those related to machine learning and add them to the library thesaurus.
+- **Task**: the task thesaurus is hierarchical, so Kaggle task tags still need to be integrated into this hierarchy. A first draft is available in `task_hierarchy.ttll`, but the definitions generated by ChatGPT still need to be reviewed and validated. The hierarchy is based on the generated definitions and the task names, since Kaggle does not provide more detailed information. The goal is to preserve the structure already built for Hugging Face tasks.
+- **Architecture, technique, and analysis**: these tags are not yet properly categorized and may need to be distributed across multiple thesauri, including the model family thesaurus.

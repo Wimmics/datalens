@@ -4,6 +4,7 @@ import re
 from functools import lru_cache
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote
 
 MULTI_SPACE = re.compile(r"\s+")
 
@@ -27,6 +28,14 @@ def normalize_boolean(value: Any) -> bool:
         if lowered in {"false", "0", "no", "n", "", "none", "null"}:
             return False
     return False
+
+
+def normalize_url(value: Any) -> str | None:
+    text = normalize_string(value)
+    if not text:
+        return None
+    return quote(text, safe="/-_.~")
+
 
 def to_list(value: Any) -> list[str]:
     if value is None:
@@ -90,6 +99,11 @@ def paper_url(paperids: list[str]) -> list[str]:
             urls.append(f"https://paperswithcode.com/dataset/{pwc_id}")
     return dedupe(urls)
 
+def extract_unique_tag(tags: list[str], tag: str) -> bool | None:
+    if tag in tags:
+        tags.remove(tag)
+        return True
+    return False
 
 # Resource existence checks
 
@@ -212,6 +226,7 @@ LANGUAGE_BCP47 = re.compile(r"^[a-z]{2,3}(?:[-_][a-z0-9]{2,8})*$")
 REGION_ALPHA2 = re.compile(r"^[a-z]{2}$")
 
 SPDX_CANONICAL_IDS = {
+    # Hugging Face
     "apache-2.0": "Apache-2.0",
     "afl-3.0": "AFL-3.0",
     "agpl-3.0": "AGPL-3.0-only",
@@ -254,9 +269,24 @@ SPDX_CANONICAL_IDS = {
     "unlicense": "Unlicense",
     "wtfpl": "WTFPL",
     "zlib": "Zlib",
+
+    # Kaggle
+    "Apache 2.0": "Apache-2.0",
+    "MIT": "MIT",
+    "GPL 2": "GPL-2.0-only",
+    "GPL 3": "GPL-3.0-only",
+    "GNU Affero General Public License 3.0": "AGPL-3.0-only",
+    "GNU Lesser General Public License 3.0": "LGPL-3.0-only",
+    "GNU Free Documentation License 1.3": "GFDL-1.3-or-later",
+    "BSD-3-Clause": "BSD-3-Clause",
+    "ODC Attribution License (ODC-By)": "ODC-By-1.0",
+    "ODC Public Domain Dedication and Licence (PDDL)": "PDDL-1.0",
+    "Community Data License Agreement - Permissive - Version 1.0": "CDLA-Permissive-1.0",
+    "Community Data License Agreement - Sharing - Version 1.0": "CDLA-Sharing-1.0",
 }
 
 CC_LICENSE_URIS = {
+    # Hugging Face
     "cc0-1.0": "http://creativecommons.org/publicdomain/zero/1.0/",
     "cc-by-2.0": "http://creativecommons.org/licenses/by/2.0/",
     "cc-by-2.5": "http://creativecommons.org/licenses/by/2.5/",
@@ -273,6 +303,88 @@ CC_LICENSE_URIS = {
     "cc-by-nc-nd-3.0": "http://creativecommons.org/licenses/by-nc-nd/3.0/",
     "cc-by-nc-nd-4.0": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
     "cc-by-nd-4.0": "http://creativecommons.org/licenses/by-nd/4.0/",
+
+    # Kaggle
+    "CC0: Public Domain":
+        "https://creativecommons.org/publicdomain/zero/1.0/",
+
+    "Attribution 4.0 International (CC BY 4.0)":
+        "https://creativecommons.org/licenses/by/4.0/",
+
+    "CC BY-SA 4.0":
+        "https://creativecommons.org/licenses/by-sa/4.0/",
+
+    "CC BY-SA 3.0":
+        "https://creativecommons.org/licenses/by-sa/3.0/",
+
+    "Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)":
+        "https://creativecommons.org/licenses/by-nc/4.0/",
+
+    "Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)":
+        "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+
+    "Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)":
+        "https://creativecommons.org/licenses/by-nd/4.0/",
+
+    "Attribution 3.0 Unported (CC BY 3.0)":
+        "https://creativecommons.org/licenses/by/3.0/",
+}
+
+OTHER_LICENSE_URIS = {
+    # Kaggle
+    "Llama 2 Community License":
+        "https://ai.meta.com/llama/license/",
+
+    "Llama 3 Community License":
+        "https://www.llama.com/llama3/license/",
+
+    "Llama 3.1 Community License":
+        "https://www.llama.com/llama3_1/license/",
+
+    "Llama 3.2 Community License":
+        "https://www.llama.com/llama3_2/license/",
+
+    "Llama 3.2 (Vision) Community License":
+        "https://www.llama.com/llama3_2/license/",
+
+    "Llama 3.3 Community License":
+        "https://www.llama.com/llama3_3/license/",
+
+    "Gemma":
+        "https://ai.google.dev/gemma/terms",
+
+    "BigScience Open RAIL-M License":
+        "https://huggingface.co/spaces/bigscience/license",
+
+    "AI Pubs Open RAIL-M License":
+        "https://huggingface.co/spaces/AIpubs/Open-RAIL-M",
+
+    "AI Pubs Research-Use RAIL-M License":
+        "https://huggingface.co/spaces/AIpubs/Research-RAIL-M",
+
+    "World Bank Dataset Terms of Use":
+        "https://www.worldbank.org/en/about/legal/terms-of-use-for-datasets",
+
+    "EU ODP Legal Notice":
+        "https://data.europa.eu/eli/reg_impl/2023/138/oj",
+
+    "Reddit API Terms":
+        "https://www.redditinc.com/policies/data-api-terms",
+
+    "U.S. Government Works":
+        "https://www.usa.gov/government-works",
+
+    "Database: Open Database, Contents: © Original Authors":
+        None,
+
+    "Database: Open Database, Contents: Database Contents":
+        None,
+
+    "Data files © Original Authors":
+        None,
+
+    "RAIL (specified in description)":
+        None,
 }
 
 CONTINENTS = {
@@ -285,6 +397,34 @@ CONTINENTS = {
     "an": "6255152",  # Antarctica
 }
 
+REGION_TAGS = {
+    # Continents
+    "africa": "af",
+    "antarctica": "an",
+    "asia": "as",
+    "europe": "eu",
+    "north america": "na",
+    "south america": "sa",
+    "oceania": "oc",
+
+    # Pays
+    "australia": "au",
+    "brazil": "br",
+    "canada": "ca",
+    "china": "cn",
+    "greenland": "gl",
+    "india": "in",
+    "japan": "jp",
+    "mexico": "mx",
+    "russia": "ru",
+    "united states": "us",
+
+    # Régions non ISO / non GeoNames countryInfo
+    "global": None,
+    "korea": None,
+    "middle east": None,
+}
+
 AMBIGUOUS_LANGUAGE_TAGS = {
     "eu",   # Europe / basque
     "id",   # identifier / indonesian
@@ -292,7 +432,6 @@ AMBIGUOUS_LANGUAGE_TAGS = {
 
 NS_LEXVO_ISO639_1 = "https://lexvo.org/id/iso639-1/"
 NS_LEXVO_ISO639_3 = "https://lexvo.org/id/iso639-3/"
-NS_ISO3166 = "https://www.iso.org/obp/ui/#iso:code:3166:"
 NS_SPDX_LICENSES = "https://spdx.org/licenses/"
 NS_GEONAMES = "http://sws.geonames.org/"
 
@@ -351,11 +490,71 @@ def geonames_codes() -> dict[str, str]:
 
     return mapping
 
+
+@cache
+def language_tags() -> dict[str, str]:
+    mapping: dict[str, str] = {}
+
+    for lang in pycountry.languages:
+        if not hasattr(lang, "name"):
+            continue
+
+        code = getattr(lang, "alpha_2", None) or getattr(lang, "alpha_3", None)
+        if not code:
+            continue
+
+        key = (
+            lang.name.lower()
+            .replace(", ", "-")
+            .replace(",", "-")
+            .replace(" ", "-")
+        )
+
+        mapping[key] = code.lower()
+
+    # Synonymes fréquents (Kaggle/HuggingFace)
+    mapping.update({
+        "castilian": "es",
+        "flemish": "nl",
+        "greenlandic": "kl",
+        "kalaallisut": "kl",
+        "maldivian": "dv",
+        "divehi": "dv",
+        "moldavian": "ro",
+        "moldovan": "ro",
+        "kirghiz": "ky",
+        "kyrgyz": "ky",
+        "kwanyama": "kj",
+        "kuanyama": "kj",
+        "gaelic": "gd",
+        "scottish-gaelic": "gd",
+        "church-slavic": "cu",
+        "old-bulgarian": "cu",
+        "chichewa": "ny",
+        "chewa": "ny",
+        "nyanja": "ny",
+        "chuang": "za",
+        "zhuang": "za",
+        "uighur": "ug",
+        "uyghur": "ug",
+        "pashto-pushto": "ps",
+        "sinhalese": "si",
+        "central-khmer": "km",
+        "nuosu": "iii",
+        "norwegian-bokmål": "nb",
+        "norwegian-nynorsk": "nn",
+        "interlingue-occidental": "ie",
+        "valencian": "ca",
+        "multilingual": None,
+    })
+
+    return mapping
+
 def get_tag_alone(tags: list[str], kind) -> list[str]:
     tokens: list[str] = []
 
     if kind == "language":
-        test = test = (iso639_1_codes() | iso639_3_codes()) - AMBIGUOUS_LANGUAGE_TAGS
+        test = (iso639_1_codes() | iso639_3_codes()) - AMBIGUOUS_LANGUAGE_TAGS
     elif kind == "license":
         test = SPDX_CANONICAL_IDS.keys() | CC_LICENSE_URIS.keys()
     else:
@@ -373,39 +572,52 @@ def get_tag_alone(tags: list[str], kind) -> list[str]:
 
 
 def region_uri(token: str) -> str | None:
-    token = token.strip().lower()
+    return geonames_codes().get(
+        REGION_TAGS.get(token.strip().lower())
+    )
 
-    if token in {"unknown", "other"}:
+
+# def language_uri(token: str) -> str | None:
+#     token = token.strip().lower().replace("_", "-")
+
+#     if not LANGUAGE_BCP47.fullmatch(token):
+#         return None
+
+#     primary = token.split("-", 1)[0]
+
+#     if len(primary) == 2 and primary in iso639_1_codes():
+#         return f"{NS_LEXVO_ISO639_1}{primary}"
+
+#     if len(primary) == 3 and primary in iso639_3_codes():
+#         return f"{NS_LEXVO_ISO639_3}{primary}"
+
+#     return None
+
+def language_uri(tag: str) -> str | None:
+    code = language_tags().get(tag.lower())
+    if not code:
         return None
 
-    return geonames_codes().get(token)
+    if code in iso639_1_codes():
+        return f"{NS_LEXVO_ISO639_1}{code}"
 
-
-def language_uri(token: str) -> str | None:
-    token = token.strip().lower().replace("_", "-")
-
-    if not LANGUAGE_BCP47.fullmatch(token):
-        return None
-
-    primary = token.split("-", 1)[0]
-
-    if len(primary) == 2 and primary in iso639_1_codes():
-        return f"{NS_LEXVO_ISO639_1}{primary}"
-
-    if len(primary) == 3 and primary in iso639_3_codes():
-        return f"{NS_LEXVO_ISO639_3}{primary}"
+    if code in iso639_3_codes():
+        return f"{NS_LEXVO_ISO639_3}{code}"
 
     return None
 
 
 def license_uri(token: str) -> str | None:
-    token = token.strip().lower()
+    # token = token.strip().lower()
 
     if token in {"unknown", "other"}:
         return None
 
     if token in CC_LICENSE_URIS:
         return CC_LICENSE_URIS[token]
+
+    if token in OTHER_LICENSE_URIS:
+        return OTHER_LICENSE_URIS[token]
 
     spdx_id = SPDX_CANONICAL_IDS.get(token)
 
